@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="Shift_JIS"?>
+<!-- MapID:217-SF002013 旧校舎 2階 -->
+<field>
+	<!-- メイイェン -->
+	<npc id="200" shell="41" x="60" y="63" dir="5" init="init"/>
+</field>

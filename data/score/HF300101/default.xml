@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="Shift_JIS"?>
+<!-- MapID:408-HF300101 エスティバー地下水路 -->
+<field>
+
+	<warpgate id="2" x="1550" y="16999" shell="14" idCli="231" dir="0" idDestField="27" xDest="51" yDest="84"/>
+	<warpgate id="3" x="8250" y="12449" shell="14" idCli="232" dir="0" idDestField="410" xDest="23" yDest="57"/>
+	<generator>
+		<point x="27" y="170"/>
+		<point x="36" y="168"/>
+		<point x="47" y="170"/>
+		<point x="58" y="169"/>
+		<point x="66" y="170"/>
+		<point x="68" y="158"/>
+		<point x="58" y="156"/>
+		<point x="48" y="153"/>
+		<point x="50" y="143"/>
+		<point x="41" y="140"/>
+		<point x="39" y="150"/>
+		<point x="38" y="159"/>
+		<point x="30" y="138"/>
+		<point x="20" y="139"/>
+		<point x="68" y="142"/>
+		<point x="66" y="130"/>
+		<point x="69" y="120"/>
+		<point x="80" y="118"/>
+
+		<monster type="110" count="48">		<!-- ﾘﾄﾙｸﾛｺ -->
+		</monster>
+		<monster type="111" count="48">		<!-- ｸﾞﾛｰﾋﾞｰ -->
+		</monster>
+	</generator>
+</field>

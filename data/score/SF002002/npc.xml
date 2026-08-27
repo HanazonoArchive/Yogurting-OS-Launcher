@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="Shift_JIS"?>
+<!-- MapID:91 裏庭 聖堂周辺 -->
+<field>
+	<!-- 水蓮 -->
+	<npc id="176" shell="39" x="163" y="81" dir="5" init="init"/>
+	<!-- 火蓮 -->
+	<npc id="175" shell="40" x="192" y="73" dir="6" init="init"/>
+	<!-- バーモント神父 -->
+	<npc id="174" shell="38" x="112" y="126" dir="4" init="init"/>
+</field>

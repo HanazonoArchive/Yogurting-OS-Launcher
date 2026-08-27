@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="Shift_JIS"?>
+<!-- MapID:389-HF100204 メカドロシーの部屋 -->
+<field>
+	<!-- メカドロシーの部屋→世界樹の根の迷路 -->
+	<warpgate id="2" x="4500" y="749" shell="5" idCli="39" dir="0" idDestField="388" xDest="35" yDest="7"/>
+
+	<generator>
+		<point x="44" y="19"/>
+		<point x="45" y="34"/>
+		<point x="34" y="41"/>
+		<point x="27" y="50"/>
+		<point x="27" y="61"/>
+		<point x="33" y="71"/>
+		<point x="44" y="75"/>
+		<point x="56" y="71"/>
+		<point x="62" y="61"/>
+		<point x="62" y="50"/>
+		<point x="55" y="41"/>
+		<point x="44" y="47"/>
+		<point x="34" y="52"/>
+		<point x="40" y="63"/>
+		<point x="50" y="61"/>
+		<point x="53" y="52"/>
+
+		<monster type="9" count="43">			<!-- テディ7 -->
+		</monster>
+		<monster type="10" count="43">			<!-- ｸﾞﾚｺﾞﾘｰⅡ世8 -->
+		</monster>
+		<monster type="11" count="43">			<!-- ボボカン9 -->
+		</monster>
+	</generator>
+</field>

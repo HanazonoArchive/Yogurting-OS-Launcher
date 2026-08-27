@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="Shift_JIS"?>
+<!-- MapID:391-HF100206 ほこりだらけの図書館 -->
+<field>
+	<!-- ほこりだらけの図書館→世界樹の根の迷路 -->
+	<warpgate id="2" x="4700" y="849" shell="13" idCli="243" dir="0" idDestField="388" xDest="23" yDest="60"/>
+
+	<generator>
+		<point x="43" y="14"/>
+		<point x="51" y="14"/>
+		<point x="44" y="26"/>
+		<point x="49" y="26"/>
+		<point x="40" y="37"/>
+		<point x="29" y="29"/>
+		<point x="29" y="47"/>
+		<point x="39" y="47"/>
+		<point x="41" y="57"/>
+		<point x="47" y="65"/>
+		<point x="51" y="56"/>
+		<point x="54" y="47"/>
+		<point x="52" y="36"/>
+		<point x="63" y="30"/>
+		<point x="66" y="48"/>
+
+		<monster type="15" count="60">		<!-- ソソ☆7 -->
+		</monster>
+		<monster type="16" count="60">		<!-- ボンボ7 -->
+		</monster>
+	</generator>
+</field>

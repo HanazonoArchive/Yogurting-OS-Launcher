@@ -1,0 +1,701 @@
+<?xml version="1.0" encoding="Shift_JIS"?>
+<productlist>
+	<product>
+		<id>3202804</id>
+		<price>5000</price>
+		<dp_option>0</dp_option>
+		<pricetype>0</pricetype>
+		<items>
+			<item id="3202814" count="1"/>
+			<item id="3202824" count="1"/>
+			<item id="3202834" count="1"/>
+			<item id="3202844" count="1"/>
+		</items>
+	</product>
+	<product>
+		<id>3202704</id>
+		<price>5000</price>
+		<dp_option>0</dp_option>
+		<pricetype>0</pricetype>
+		<items>
+			<item id="3202714" count="1"/>
+			<item id="3202724" count="1"/>
+			<item id="3202734" count="1"/>
+			<item id="3202744" count="1"/>
+		</items>
+	</product>
+	<product>
+		<id>3102804</id>
+		<price>5000</price>
+		<dp_option>0</dp_option>
+		<pricetype>0</pricetype>
+		<items>
+			<item id="3102814" count="1"/>
+			<item id="3102824" count="1"/>
+			<item id="3102834" count="1"/>
+			<item id="3102844" count="1"/>
+		</items>
+	</product>
+	<product>
+		<id>3102704</id>
+		<price>5000</price>
+		<dp_option>0</dp_option>
+		<pricetype>0</pricetype>
+		<items>
+			<item id="3102714" count="1"/>
+			<item id="3102724" count="1"/>
+			<item id="3102734" count="1"/>
+			<item id="3102744" count="1"/>
+		</items>
+	</product>
+	<product>
+		<id>1400214</id>
+		<price>7800</price>
+		<dp_option>2</dp_option>
+		<pricetype>0</pricetype>
+		<items>
+			<item id="1400214" count="1"/>
+		</items>
+	</product>
+	<product>
+		<id>1400164</id>
+		<price>7800</price>
+		<dp_option>0</dp_option>
+		<pricetype>0</pricetype>
+		<items>
+			<item id="1400164" count="1"/>
+		</items>
+	</product>
+	<product>
+		<id>1400094</id>
+		<price>7800</price>
+		<dp_option>0</dp_option>
+		<pricetype>0</pricetype>
+		<items>
+			<item id="1400094" count="1"/>
+		</items>
+	</product>
+	<product>
+		<id>1400044</id>
+		<price>7800</price>
+		<dp_option>0</dp_option>
+		<pricetype>0</pricetype>
+		<items>
+			<item id="1400044" count="1"/>
+		</items>
+	</product>
+	<product>
+		<id>1300234</id>
+		<price>7800</price>
+		<dp_option>2</dp_option>
+		<pricetype>0</pricetype>
+		<items>
+			<item id="1300234" count="1"/>
+		</items>
+	</product>
+	<product>
+		<id>1300214</id>
+		<price>7800</price>
+		<dp_option>0</dp_option>
+		<pricetype>0</pricetype>
+		<items>
+			<item id="1300214" count="1"/>
+		</items>
+	</product>
+	<product>
+		<id>1300174</id>
+		<price>7800</price>
+		<dp_option>0</dp_option>
+		<pricetype>0</pricetype>
+		<items>
+			<item id="1300174" count="1"/>
+		</items>
+	</product>
+	<product>
+		<id>1300044</id>
+		<price>7800</price>
+		<dp_option>0</dp_option>
+		<pricetype>0</pricetype>
+		<items>
+			<item id="1300044" count="1"/>
+		</items>
+	</product>
+	<product>
+		<id>1200174</id>
+		<price>7800</price>
+		<dp_option>2</dp_option>
+		<pricetype>0</pricetype>
+		<items>
+			<item id="1200174" count="1"/>
+		</items>
+	</product>
+	<product>
+		<id>1200134</id>
+		<price>7800</price>
+		<dp_option>0</dp_option>
+		<pricetype>0</pricetype>
+		<items>
+			<item id="1200134" count="1"/>
+		</items>
+	</product>
+	<product>
+		<id>1200064</id>
+		<price>7800</price>
+		<dp_option>0</dp_option>
+		<pricetype>0</pricetype>
+		<items>
+			<item id="1200064" count="1"/>
+		</items>
+	</product>
+	<product>
+		<id>1200054</id>
+		<price>7800</price>
+		<dp_option>0</dp_option>
+		<pricetype>0</pricetype>
+		<items>
+			<item id="1200054" count="1"/>
+		</items>
+	</product>
+	<product>
+		<id>1100244</id>
+		<price>7800</price>
+		<dp_option>2</dp_option>
+		<pricetype>0</pricetype>
+		<items>
+			<item id="1100244" count="1"/>
+		</items>
+	</product>
+	<product>
+		<id>1100234</id>
+		<price>7800</price>
+		<dp_option>0</dp_option>
+		<pricetype>0</pricetype>
+		<items>
+			<item id="1100234" count="1"/>
+		</items>
+	</product>
+	<product>
+		<id>1100214</id>
+		<price>7800</price>
+		<dp_option>0</dp_option>
+		<pricetype>0</pricetype>
+		<items>
+			<item id="1100214" count="1"/>
+		</items>
+	</product>
+	<product>
+		<id>1100204</id>
+		<price>7800</price>
+		<dp_option>0</dp_option>
+		<pricetype>0</pricetype>
+		<items>
+			<item id="1100204" count="1"/>
+		</items>
+	</product>
+	<product>
+		<id>345</id>
+		<price>3000</price>
+		<dp_option>0</dp_option>
+		<pricetype>0</pricetype>
+		<items>
+			<item id="2201914" count="1"/>
+			<item id="2201924" count="1"/>
+			<item id="2201934" count="1"/>
+		</items>
+	</product>
+	<product>
+		<id>344</id>
+		<price>3000</price>
+		<dp_option>0</dp_option>
+		<pricetype>0</pricetype>
+		<items>
+			<item id="2101914" count="1"/>
+			<item id="2101924" count="1"/>
+			<item id="2101934" count="1"/>
+			<item id="2101944" count="1"/>
+		</items>
+	</product>
+	<product>
+		<id>343</id>
+		<price>3000</price>
+		<dp_option>0</dp_option>
+		<pricetype>0</pricetype>
+		<items>
+			<item id="1202614" count="1"/>
+			<item id="1202624" count="1"/>
+			<item id="1202634" count="1"/>
+		</items>
+	</product>
+	<product>
+		<id>342</id>
+		<price>3000</price>
+		<dp_option>0</dp_option>
+		<pricetype>0</pricetype>
+		<items>
+			<item id="1102614" count="1"/>
+			<item id="1102624" count="1"/>
+			<item id="1102634" count="1"/>
+		</items>
+	</product>
+	<product>
+		<id>220</id>
+		<price>24800</price>
+		<dp_option>1</dp_option>
+		<pricetype>0</pricetype>
+		<items>
+			<item id="7304" count="1"/>
+			<item id="7404" count="1"/>
+			<item id="7004" count="1"/>
+		</items>
+	</product>
+	<product>
+		<id>219</id>
+		<price>24800</price>
+		<dp_option>1</dp_option>
+		<pricetype>0</pricetype>
+		<items>
+			<item id="7104" count="1"/>
+			<item id="7204" count="1"/>
+			<item id="7504" count="1"/>
+		</items>
+	</product>
+	<product>
+		<id>218</id>
+		<price>3000</price>
+		<dp_option>0</dp_option>
+		<pricetype>0</pricetype>
+		<items>
+			<item id="2202411" count="1"/>
+			<item id="2202421" count="1"/>
+			<item id="2202431" count="1"/>
+		</items>
+	</product>
+	<product>
+		<id>217</id>
+		<price>3000</price>
+		<dp_option>0</dp_option>
+		<pricetype>0</pricetype>
+		<items>
+			<item id="2102411" count="1"/>
+			<item id="2102421" count="1"/>
+			<item id="2102431" count="1"/>
+			<item id="2102441" count="1"/>
+		</items>
+	</product>
+	<product>
+		<id>216</id>
+		<price>3000</price>
+		<dp_option>0</dp_option>
+		<pricetype>0</pricetype>
+		<items>
+			<item id="1202411" count="1"/>
+			<item id="1202421" count="1"/>
+			<item id="1202431" count="1"/>
+		</items>
+	</product>
+	<product>
+		<id>215</id>
+		<price>3000</price>
+		<dp_option>0</dp_option>
+		<pricetype>0</pricetype>
+		<items>
+			<item id="1102411" count="1"/>
+			<item id="1102421" count="1"/>
+			<item id="1102431" count="1"/>
+			<item id="1102441" count="1"/>
+		</items>
+	</product>
+	<product>
+		<id>214</id>
+		<price>3000</price>
+		<dp_option>0</dp_option>
+		<pricetype>0</pricetype>
+		<items>
+			<item id="2202911" count="1"/>
+			<item id="2202921" count="1"/>
+			<item id="2202931" count="1"/>
+			<item id="2202941" count="1"/>
+			<item id="2202951" count="1"/>
+			<item id="2202961" count="1"/>
+		</items>
+	</product>
+	<product>
+		<id>213</id>
+		<price>3000</price>
+		<dp_option>0</dp_option>
+		<pricetype>0</pricetype>
+		<items>
+			<item id="2102911" count="1"/>
+			<item id="2102921" count="1"/>
+			<item id="2102931" count="1"/>
+			<item id="2102941" count="1"/>
+			<item id="2102951" count="1"/>
+			<item id="2102961" count="1"/>
+		</items>
+	</product>
+	<product>
+		<id>212</id>
+		<price>3000</price>
+		<dp_option>0</dp_option>
+		<pricetype>0</pricetype>
+		<items>
+			<item id="1202211" count="1"/>
+			<item id="1202221" count="1"/>
+			<item id="1202231" count="1"/>
+		</items>
+	</product>
+	<product>
+		<id>211</id>
+		<price>3000</price>
+		<dp_option>0</dp_option>
+		<pricetype>0</pricetype>
+		<items>
+			<item id="1102211" count="1"/>
+			<item id="1102221" count="1"/>
+			<item id="1102231" count="1"/>
+			<item id="1102241" count="1"/>
+		</items>
+	</product>
+	<product>
+		<id>210</id>
+		<price>6800</price>
+		<dp_option>1</dp_option>
+		<pricetype>0</pricetype>
+		<items>
+			<item id="7303" count="1"/>
+			<item id="7403" count="1"/>
+			<item id="7003" count="1"/>
+		</items>
+	</product>
+	<product>
+		<id>209</id>
+		<price>8800</price>
+		<dp_option>1</dp_option>
+		<pricetype>0</pricetype>
+		<items>
+			<item id="7103" count="1"/>
+			<item id="7203" count="1"/>
+			<item id="7503" count="1"/>
+		</items>
+	</product>
+	<product>
+		<id>208</id>
+		<price>4500</price>
+		<dp_option>2</dp_option>
+		<pricetype>0</pricetype>
+		<items>
+			<item id="6202" count="1"/>
+			<item id="4102" count="1"/>
+			<item id="4201" count="1"/>
+			<item id="4202" count="1"/>
+			<item id="4203" count="1"/>
+			<item id="4204" count="1"/>
+			<item id="4205" count="1"/>
+			<item id="4206" count="1"/>
+			<item id="4207" count="1"/>
+			<item id="7002" count="1"/>
+			<item id="7202" count="1"/>
+		</items>
+	</product>
+	<product>
+		<id>207</id>
+		<price>24800</price>
+		<dp_option>1</dp_option>
+		<pricetype>0</pricetype>
+		<items>
+			<item id="6202" count="3"/>
+			<item id="4102" count="1"/>
+			<item id="4201" count="1"/>
+			<item id="4202" count="1"/>
+			<item id="4203" count="1"/>
+			<item id="4204" count="1"/>
+			<item id="4205" count="1"/>
+			<item id="4206" count="1"/>
+			<item id="4207" count="1"/>
+			<item id="4503" count="1"/>
+			<item id="6103" count="1"/>
+			<item id="4304" count="1"/>
+			<item id="2103" count="1"/>
+			<item id="7004" count="1"/>
+		</items>
+	</product>
+	<product>
+		<id>206</id>
+		<price>14800</price>
+		<dp_option>1</dp_option>
+		<pricetype>0</pricetype>
+		<items>
+			<item id="6202" count="2"/>
+			<item id="4102" count="1"/>
+			<item id="4503" count="1"/>
+			<item id="6103" count="1"/>
+			<item id="7003" count="2"/>
+		</items>
+	</product>
+	<product>
+		<id>205</id>
+		<price>7800</price>
+		<dp_option>1</dp_option>
+		<pricetype>0</pricetype>
+		<items>
+			<item id="6202" count="1"/>
+			<item id="4503" count="1"/>
+			<item id="7003" count="1"/>
+		</items>
+	</product>
+	<product>
+		<id>196</id>
+		<price>9800</price>
+		<dp_option>0</dp_option>
+		<pricetype>0</pricetype>
+		<items>
+			<item id="7504" count="1"/>
+		</items>
+	</product>
+	<product>
+		<id>195</id>
+		<price>3500</price>
+		<dp_option>0</dp_option>
+		<pricetype>0</pricetype>
+		<items>
+			<item id="7503" count="1"/>
+		</items>
+	</product>
+	<product>
+		<id>189</id>
+		<price>7800</price>
+		<dp_option>0</dp_option>
+		<pricetype>0</pricetype>
+		<items>
+			<item id="7404" count="1"/>
+		</items>
+	</product>
+	<product>
+		<id>188</id>
+		<price>2100</price>
+		<dp_option>0</dp_option>
+		<pricetype>0</pricetype>
+		<items>
+			<item id="7403" count="1"/>
+		</items>
+	</product>
+	<product>
+		<id>182</id>
+		<price>7800</price>
+		<dp_option>0</dp_option>
+		<pricetype>0</pricetype>
+		<items>
+			<item id="7304" count="1"/>
+		</items>
+	</product>
+	<product>
+		<id>181</id>
+		<price>2100</price>
+		<dp_option>0</dp_option>
+		<pricetype>0</pricetype>
+		<items>
+			<item id="7303" count="1"/>
+		</items>
+	</product>
+	<product>
+		<id>175</id>
+		<price>9800</price>
+		<dp_option>0</dp_option>
+		<pricetype>0</pricetype>
+		<items>
+			<item id="7204" count="1"/>
+		</items>
+	</product>
+	<product>
+		<id>174</id>
+		<price>2800</price>
+		<dp_option>0</dp_option>
+		<pricetype>0</pricetype>
+		<items>
+			<item id="7203" count="1"/>
+		</items>
+	</product>
+	<product>
+		<id>168</id>
+		<price>9800</price>
+		<dp_option>0</dp_option>
+		<pricetype>0</pricetype>
+		<items>
+			<item id="7104" count="1"/>
+		</items>
+	</product>
+	<product>
+		<id>167</id>
+		<price>2800</price>
+		<dp_option>0</dp_option>
+		<pricetype>0</pricetype>
+		<items>
+			<item id="7103" count="1"/>
+		</items>
+	</product>
+	<product>
+		<id>154</id>
+		<price>3000</price>
+		<dp_option>0</dp_option>
+		<pricetype>0</pricetype>
+		<items>
+			<item id="2203211" count="1"/>
+			<item id="2203221" count="1"/>
+			<item id="2203231" count="1"/>
+			<item id="2203241" count="1"/>
+		</items>
+	</product>
+	<product>
+		<id>147</id>
+		<price>3000</price>
+		<dp_option>0</dp_option>
+		<pricetype>0</pricetype>
+		<items>
+			<item id="2103211" count="1"/>
+			<item id="2103221" count="1"/>
+			<item id="2103231" count="1"/>
+			<item id="2103241" count="1"/>
+		</items>
+	</product>
+	<product>
+		<id>140</id>
+		<price>3000</price>
+		<dp_option>0</dp_option>
+		<pricetype>0</pricetype>
+		<items>
+			<item id="1203211" count="1"/>
+			<item id="1203221" count="1"/>
+			<item id="1203231" count="1"/>
+			<item id="1203241" count="1"/>
+		</items>
+	</product>
+	<product>
+		<id>133</id>
+		<price>3000</price>
+		<dp_option>0</dp_option>
+		<pricetype>0</pricetype>
+		<items>
+			<item id="1103211" count="1"/>
+			<item id="1103221" count="1"/>
+			<item id="1103231" count="1"/>
+			<item id="1103241" count="1"/>
+		</items>
+	</product>
+	<product>
+		<id>126</id>
+		<price>3000</price>
+		<dp_option>0</dp_option>
+		<pricetype>0</pricetype>
+		<items>
+			<item id="2203111" count="1"/>
+			<item id="2203121" count="1"/>
+			<item id="2203131" count="1"/>
+			<item id="2203141" count="1"/>
+		</items>
+	</product>
+	<product>
+		<id>119</id>
+		<price>3000</price>
+		<dp_option>0</dp_option>
+		<pricetype>0</pricetype>
+		<items>
+			<item id="2103111" count="1"/>
+			<item id="2103121" count="1"/>
+			<item id="2103131" count="1"/>
+			<item id="2103141" count="1"/>
+		</items>
+	</product>
+	<product>
+		<id>112</id>
+		<price>3000</price>
+		<dp_option>0</dp_option>
+		<pricetype>0</pricetype>
+		<items>
+			<item id="1203111" count="1"/>
+			<item id="1203121" count="1"/>
+			<item id="1203131" count="1"/>
+			<item id="1203141" count="1"/>
+		</items>
+	</product>
+	<product>
+		<id>105</id>
+		<price>3000</price>
+		<dp_option>0</dp_option>
+		<pricetype>0</pricetype>
+		<items>
+			<item id="1103111" count="1"/>
+			<item id="1103121" count="1"/>
+			<item id="1103131" count="1"/>
+			<item id="1103141" count="1"/>
+		</items>
+	</product>
+	<product>
+		<id>70</id>
+		<price>2000</price>
+		<dp_option>0</dp_option>
+		<pricetype>0</pricetype>
+		<items>
+			<item id="6202" count="1"/>
+		</items>
+	</product>
+	<product>
+		<id>54</id>
+		<price>1500</price>
+		<dp_option>0</dp_option>
+		<pricetype>0</pricetype>
+		<items>
+			<item id="6103" count="1"/>
+		</items>
+	</product>
+	<product>
+		<id>48</id>
+		<price>3000</price>
+		<dp_option>0</dp_option>
+		<pricetype>0</pricetype>
+		<items>
+			<item id="4304" count="1"/>
+		</items>
+	</product>
+	<product>
+		<id>44</id>
+		<price>1000</price>
+		<dp_option>0</dp_option>
+		<pricetype>0</pricetype>
+		<items>
+			<item id="4201" count="1"/>
+			<item id="4202" count="1"/>
+			<item id="4203" count="1"/>
+			<item id="4204" count="1"/>
+			<item id="4205" count="1"/>
+			<item id="4206" count="1"/>
+			<item id="4207" count="1"/>
+		</items>
+	</product>
+	<product>
+		<id>31</id>
+		<price>2000</price>
+		<dp_option>0</dp_option>
+		<pricetype>0</pricetype>
+		<items>
+			<item id="4102" count="1"/>
+		</items>
+	</product>
+	<product>
+		<id>27</id>
+		<price>2000</price>
+		<dp_option>0</dp_option>
+		<pricetype>0</pricetype>
+		<items>
+			<item id="4503" count="1"/>
+		</items>
+	</product>
+	<product>
+		<id>23</id>
+		<price>1000</price>
+		<dp_option>0</dp_option>
+		<pricetype>0</pricetype>
+		<items>
+			<item id="2103" count="1"/>
+		</items>
+	</product>
+</productlist>

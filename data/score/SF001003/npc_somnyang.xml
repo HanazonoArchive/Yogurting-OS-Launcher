@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="Shift_JIS"?>
+<!-- MapID:3 エスティバー 2階 -->
+<field>
+	<!-- ソムンヤン -->
+	<npc id="12" shell="11" x="71" y="109" dir="0" init="init" >
+		<script name="init">
+			<call name="peke.get.info" />
+			<call name="peke.get.epi"/>
+
+			<ifeq varname="local.school" value="1">
+				<ifge varname="peke.epi.es" value="4">
+						<jump label="somnyang_es4"/>
+				</ifge>
+				<ifge varname="peke.epi.es" value="3">
+						<jump label="somnyang_es3"/>
+				</ifge>
+				<ifge varname="peke.epi.es" value="1">
+						<jump label="somnyang_es2"/>
+				</ifge>
+				<ifge varname="peke.epi.es" value="0">
+						<jump label="somnyang_es1"/>
+				</ifge>
+			</ifeq>
+			<ifge varname="peke.epi.es" value="4">
+					<jump label="somnyang_yoi3"/>
+			</ifge>
+			<ifge varname="peke.epi.es" value="3">
+					<jump label="somnyang_yoi2"/>
+			</ifge>
+			<ifge varname="peke.epi.es" value="0">
+					<jump label="somnyang_yoi1"/>
+			</ifge>
+		</script>
+
+		<!-- ▼エス生セリフ -->
+		<dialog name="somnyang_es1" cutin="0" closebutton="1">
+			<text><![CDATA[
+				Freshmanのみなさま、御入学をお祝い申し上げます。<br>
+				御入学なさったばかりですから、手始めに<font color="00FFBD">Libraryのモンスター退治や</font><br>
+				<font color="00FFBD">廊下いっぱいの箱</font>Episodeをなさってみて下さいませ。
+			]]></text>
+			<selection next="somnyang_quest_no" text="新しいクエスト表示" />
+			<selection next="somnyang_quest_miss" text="クエスト達成を報告する" />
+		</dialog>
+
+		<dialog name="somnyang_es2" cutin="0" closebutton="1">
+			<text><![CDATA[
+					EpisodeClearをお祝い申し上げます。この後はワープポイントを通じて<br>
+					1Fに降り、School Building前にいらっしゃる<font color="00FFBD">Prof. Ben</font>にお会いしてみて<br>
+下さいませ。いろいろな事柄を教えて下さるはずですわ。
+			]]></text>
+			<selection next="somnyang_quest_no" text="新しいクエスト表示" />
+			<selection next="somnyang_quest_miss" text="クエスト達成を報告する" />
+		</dialog>
+
+		<dialog name="somnyang_es3" cutin="0" closebutton="1">
+			<text><![CDATA[
+				ああ…学校にLatchuが出るだなんて…
+			]]></text>
+			<selection next="somnyang_quest_no" text="新しいクエスト表示" />
+			<selection next="somnyang_quest_miss" text="クエスト達成を報告する" />
+		</dialog>
+
+		<dialog name="somnyang_es4" cutin="0" closebutton="1">
+			<text><![CDATA[
+				Latchuを退治して下さって、Thank youございます。今後ともよろしくお願い申し上げます。
+			]]></text>
+			<selection next="somnyang_quest_no" text="新しいクエスト表示" />
+			<selection next="somnyang_quest_miss" text="クエスト達成を報告する" />
+		</dialog>
+
+		<!-- ▼宵生セリフ -->
+		<dialog name="somnyang_yoi1" cutin="0" closebutton="1">
+			<text><![CDATA[
+				ご機嫌いかがでしょうか。EstivaでStudentを指導しております、Somunyangと申します。Estivaにはどのような御用でいらっしゃったのですか。
+			]]></text>
+			<selection next="somnyang_quest_no" text="新しいクエスト表示" />
+			<selection next="somnyang_quest_miss" text="クエスト達成を報告する" />
+		</dialog>
+
+		<dialog name="somnyang_yoi2" cutin="0" closebutton="1">
+			<text><![CDATA[
+				ああ…学校にLatchuが出るだなんて…なんと汚らわしいのかしら…
+			]]></text>
+			<selection next="somnyang_quest_no" text="新しいクエスト表示" />
+			<selection next="somnyang_quest_miss" text="クエスト達成を報告する" />
+		</dialog>
+
+		<dialog name="somnyang_yoi3" cutin="0" closebutton="1">
+			<text><![CDATA[
+				Latchuを退治して下さって、Thank youございます。<br>
+				今後ともよろしくお願い申し上げます。
+			]]></text>
+			<selection next="somnyang_quest_no" text="新しいクエスト表示" />
+			<selection next="somnyang_quest_miss" text="クエスト達成を報告する" />
+		</dialog>
+
+		<!-- ▼クエスト -->
+		<dialog name="somnyang_quest_no" cutin="0" closebutton="1">
+			<text><![CDATA[
+				今は、手を貸していただくようなことはございませんわ。
+
+			]]></text>
+			<selection text="そうですか、失礼します" />
+		</dialog>
+
+		<dialog name="somnyang_quest_miss" cutin="0" closebutton="1">
+			<text><![CDATA[
+				わたくし、何もお願いしてYesないと思うのですけれど、いかがでしょう？
+			]]></text>
+			<selection text="そうでした、すみません" />
+		</dialog>
+	</npc>
+</field>

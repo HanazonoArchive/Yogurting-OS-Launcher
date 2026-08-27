@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="Shift_JIS"?>
+<!-- MapID:433-HF200404 地下墓地 深層 -->
+<field>
+	<!-- 地下墓地 深層→地下墓地 -->
+	<warpgate id="2" x="1350" y="849" shell="34" idCli="874" dir="0" idDestField="432" xDest="92" yDest="6"/>
+	<!-- 地下墓地 深層→地下墓地 秘密の門 -->
+	<warpgate id="3" x="9000" y="1249" shell="34" idCli="875" dir="0" idDestField="434" xDest="14" yDest="50"/>
+	<generator>
+		<!--
+			type: HuntMon.txtのtypeMonster
+			count: フィールド全体での数
+			※フィールド全体で200体以下にすること
+		-->
+		<monster type="184" count="19"/>
+		<monster type="185" count="39"/>
+		<monster type="186" count="39"/>
+		<monster type="190" count="03"/>
+		
+		<!--
+			x, y: ジェネレータの位置
+		-->
+		<point x="16" y="09"/>
+		
+		<point x="09" y="18"/>
+		<point x="19" y="18"/>
+		<point x="16" y="25"/>
+
+		<point x="13" y="34"/>
+		<point x="05" y="35"/>
+		<point x="08" y="44"/>
+		<point x="21" y="44"/>
+		<point x="29" y="43"/>
+
+		<point x="34" y="53"/>
+		<point x="27" y="52"/>
+		<point x="17" y="54"/>
+		<point x="06" y="53"/>
+		
+		<point x="42" y="56"/>
+		<point x="42" y="46"/>
+		<point x="53" y="56"/>
+		<point x="53" y="46"/>
+
+		<point x="37" y="68"/>
+		<point x="37" y="75"/>
+		
+		<point x="27" y="82"/>
+		<point x="27" y="66"/>
+		<point x="11" y="65"/>
+		<point x="11" y="73"/>
+		
+		<point x="18" y="76"/>
+		<point x="04" y="78"/>
+		<point x="12" y="88"/>
+		
+		<point x="64" y="47"/>
+		<point x="66" y="40"/>
+		<point x="87" y="39"/>
+		<point x="88" y="49"/>
+		<point x="73" y="52"/>
+		<point x="79" y="58"/>
+		<point x="90" y="64"/>
+		<point x="86" y="80"/>
+		
+		<point x="68" y="72"/>
+		<point x="78" y="82"/>
+		
+		<point x="50" y="39"/>
+		<point x="42" y="36"/>
+		<point x="29" y="35"/>
+		<point x="29" y="30"/>
+
+		<point x="32" y="20"/>
+		<point x="33" y="06"/>
+		<point x="45" y="11"/>
+		<point x="56" y="11"/>
+		<point x="54" y="21"/>
+		<point x="34" y="26"/>
+		<point x="45" y="26"/>
+		<point x="58" y="26"/>
+
+		<point x="68" y="29"/>
+		<point x="69" y="19"/>
+		<point x="77" y="23"/>
+		
+		<!--
+			type: CoItemType.txtのid
+			rate: 入手率
+			※入手率はアイテム数*1000を分母とした際の分子とする
+			(例えば50と100のアイテムがあった場合、それぞれ50/2000、100/2000の確率)
+		-->
+		<rare type="71374" rate="10"/><!-- 5B8SS -->
+		<rare type="71372" rate="20"/><!-- 5B8A+ -->
+		<rare type="71371" rate="30"/><!-- 5B8A -->
+		<rare type="71370" rate="40"/><!-- 5B8A- -->
+		<rare type="71369" rate="100"/><!-- 5B8B+ -->
+		<rare type="71368" rate="100"/><!-- 5B8B -->
+		<rare type="71367" rate="200"/><!-- 5B8B- -->
+		<rare type="72374" rate="10"/><!-- 5G8SS -->
+		<rare type="72372" rate="20"/><!-- 5G8A+ -->
+		<rare type="72371" rate="30"/><!-- 5G8A -->
+		<rare type="72370" rate="40"/><!-- 5G8A- -->
+		<rare type="72369" rate="100"/><!-- 5G8B+ -->
+		<rare type="72368" rate="100"/><!-- 5G8B -->
+		<rare type="72367" rate="200"/><!-- 5G8B- -->
+		<rare type="73374" rate="10"/><!-- 5M8SS -->
+		<rare type="73372" rate="20"/><!-- 5M8A+ -->
+		<rare type="73371" rate="30"/><!-- 5M8A -->
+		<rare type="73370" rate="40"/><!-- 5M8A- -->
+		<rare type="73369" rate="100"/><!-- 5M8B+ -->
+		<rare type="73368" rate="100"/><!-- 5M8B -->
+		<rare type="73367" rate="200"/><!-- 5M8B- -->
+		<rare type="74374" rate="10"/><!-- 5S8SS -->
+		<rare type="74372" rate="20"/><!-- 5S8A+ -->
+		<rare type="74371" rate="30"/><!-- 5S8A -->
+		<rare type="74370" rate="40"/><!-- 5S8A- -->
+		<rare type="74369" rate="100"/><!-- 5S8B+ -->
+		<rare type="74368" rate="100"/><!-- 5S8B -->
+		<rare type="74367" rate="200"/><!-- 5SG8B- -->
+	</generator>
+</field>

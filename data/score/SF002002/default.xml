@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="Shift_JIS"?>
+<!-- MapID:91 裏庭 聖堂周辺 -->
+<field>
+	<!-- 裏庭→グラウンド -->
+	<warpgate id="1" x="10750" y="3350" shell="60" idCli="1371" dir="6" idDestField="90" xDest="76" yDest="175"/>
+	<!-- 裏庭→聖堂 -->
+	<warpgate id="3" x="11100" y="12499" shell="60" idCli="230" dir="0" idDestField="424" xDest="44" yDest="31"/>
+	<!-- 裏庭→分かれ道 -->
+	<warpgate id="5" x="22350" y="10249" shell="60" idCli="277" dir="0" idDestField="399" xDest="58" yDest="17"/>
+	
+	<!-- 宵月2年生EP -->
+<!--	<episodegate subid="20004" idCli="659" shell="62" x="166.499969482422" y="80.4986953735352" dir="0" visible="1" usable="1">-->
+<!--		<episode id="41" grade="2"/>-->	<!-- 私の三角定規を返して！ -->
+<!--		<episode id="73" grade="2"/>-->	<!-- 月夜の大魔術 -->
+<!--		<episode id="74" grade="2"/>-->	<!-- ヒトダマ事件 -->
+<!--		<episode id="47" grade="2"/>-->	<!-- ハロウィーン・トリック -->
+<!--		<episode id="75" grade="2"/>-->	<!-- 宝物を返して -->
+<!--		<episode id="39" grade="2"/>-->	<!-- 未知との遭遇 -->
+<!--		<episode id="46" grade="2"/>-->	<!-- Fly High! -->
+<!--		<episode id="36" grade="2"/>-->	<!-- 火蓮の家出 -->
+<!--		<episode id="72" grade="2"/>-->	<!-- 新世界をめざして -->
+<!--		<episode id="48" grade="2"/>-->	<!-- 神父様と狐の姉妹 -->
+<!--		<episode id="78" grade="2"/>-->	<!-- 世界樹の幽霊 -->
+<!--	</episodegate>-->
+</field>

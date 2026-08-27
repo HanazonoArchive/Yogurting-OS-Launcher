@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="Shift_JIS"?>
+<!-- MapID:419-HF300112 クロコの部屋 -->
+<field>
+	<warpgate id="2" x="5650" y="11250" shell="16" idCli="316" dir="6" idDestField="412" xDest="69" yDest="42"/>
+	<warpgate id="3" x="10150" y="17149" shell="16" idCli="305" dir="0" idDestField="420" xDest="18" yDest="93"/>
+	<warpgate id="5" x="9650" y="11949" shell="16" idCli="318" dir="0" idDestField="421" xDest="22" yDest="63"/>
+	<generator>
+		<point x="65" y="114"/>
+		<point x="65" y="128"/>
+		<point x="51" y="131"/>
+		<point x="48" y="148"/>
+		<point x="48" y="160"/>
+		<point x="47" y="169"/>
+		<point x="56" y="165"/>
+		<point x="65" y="169"/>
+		<point x="65" y="158"/>
+		<point x="61" y="147"/>
+		<point x="82" y="161"/>
+		<point x="96" y="164"/>
+		<point x="97" y="148"/>
+		<point x="93" y="136"/>
+		<point x="96" y="126"/>
+		<point x="84" y="130"/>
+		<point x="84" y="143"/>
+
+		<monster type="137" count="58">		<!-- 怒ったﾐｭﾛﾋﾞｰ -->
+		</monster>
+		<monster type="138" count="58">		<!-- 影入道 -->
+		</monster>
+		<monster type="139" count="58">		<!-- ｼｬﾄﾞｳﾋﾞｰｽﾄ -->
+		</monster>
+	</generator>
+</field>

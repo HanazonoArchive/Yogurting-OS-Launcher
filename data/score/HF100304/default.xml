@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="Shift_JIS"?>
+<!-- MapID:395-HF100304 ハイバラウスの森 -->
+<field>
+	<!-- ハイバラウスの森→ミュータントフラワー -->
+	<warpgate id="2" x="13550" y="5749" shell="38" idCli="347" dir="0" idDestField="394" xDest="27" yDest="65"/>
+
+	<generator>
+		<point x="110" y="53"/>
+		<point x="94" y="50"/>
+		<point x="91" y="28"/>
+		<point x="80" y="69"/>
+		<point x="68" y="81"/>
+		<point x="54" y="51"/>
+		<point x="33" y="24"/>
+		<point x="24" y="60"/>
+		<point x="26" y="81"/>
+		<point x="44" y="105"/>
+		<point x="62" y="118"/>
+		<point x="82" y="114"/>
+		<point x="100" y="103"/>
+
+		<monster type="26" count="48">		<!-- バラウス11 -->
+		</monster>
+		<monster type="28" count="48">		<!-- ウッド9 -->
+		</monster>
+	</generator>
+</field>

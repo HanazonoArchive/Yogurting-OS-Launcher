@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="Shift_JIS"?>
+<!-- MapID:91 裏庭 聖堂周辺 -->
+<field>
+	<!-- 水蓮 -->
+	<npc id="176" shell="39" x="163" y="81" dir="5" init="init">
+		<script name="init">
+			<call name="peke.get.info" />
+			<call name="peke.get.epi"/>
+
+			<ifeq varname="local.school" value="2">
+				<ifge varname="peke.epi.yoi" value="9">
+						<jump label="suiren_yoi6"/>
+				</ifge>
+				<ifge varname="peke.epi.yoi" value="8">
+						<jump label="suiren_yoi5"/>
+				</ifge>
+				<ifge varname="peke.epi.yoi" value="6">
+						<jump label="suiren_yoi4"/>
+				</ifge>
+				<ifge varname="peke.epi.yoi" value="5">
+						<jump label="suiren_yoi3"/>
+				</ifge>
+				<ifge varname="peke.epi.yoi" value="1">
+						<jump label="suiren_yoi2"/>
+				</ifge>
+				<ifge varname="peke.epi.yoi" value="0">
+						<jump label="suiren_yoi1"/>
+				</ifge>
+			</ifeq>
+			<ifge varname="peke.epi.yoi" value="9">
+					<jump label="suiren_es4"/>
+			</ifge>
+			<ifge varname="peke.epi.yoi" value="8">
+					<jump label="suiren_es3"/>
+			</ifge>
+			<ifge varname="peke.epi.yoi" value="6">
+					<jump label="suiren_yoi4"/>
+			</ifge>
+			<ifge varname="peke.epi.yoi" value="5">
+					<jump label="suiren_es2"/>
+			</ifge>
+			<ifge varname="peke.epi.yoi" value="0">
+					<jump label="suiren_es1"/>
+			</ifge>
+		</script>
+
+		<!-- ▼宵生セリフ -->
+		<dialog name="suiren_yoi1" cutin="0" closebutton="1">
+			<text><![CDATA[
+				ご入学をお祝い申し上げます。Episodeはなさってみましたか？<br>
+				まず、School Building前にいらっしゃる<font color="00FFBD">SamTeacher</font>のそばの<font color="00FFBD">Episodeゲート</font>に入って、<br>
+				<font color="00FFBD">箱でいっぱいの廊下</font>に行ってみてYesかがですか。
+			]]></text>
+			<selection next="suiren_quest_no" text="新しいクエスト表示" />
+			<selection next="suiren_quest_miss" text="クエスト達成を報告する" />
+		</dialog>
+
+		<dialog name="suiren_yoi2" cutin="0" closebutton="1">
+			<text><![CDATA[
+				EpisodeClear、お祝い申し上げます。この後は、<font color="00FFBD">ミニマップ</font>左下にある<br>
+<font color="00FFBD">ワープポイント</font>で学校へいらっしゃって、<font color="00FFBD">Sam</font>Teacherに会ってみて下さい。<br>
+他の基本的なことについて教えて下さいますよ。
+				]]></text>
+			<selection next="suiren_quest_no" text="新しいクエスト表示" />
+			<selection next="suiren_quest_miss" text="クエスト達成を報告する" />
+		</dialog>
+
+		<dialog name="suiren_yoi3" cutin="0" closebutton="1">
+			<text><![CDATA[
+				かわいそうな動物の霊たちは、なぜ苦しんでいるのでしょうか？
+				]]></text>
+			<selection next="suiren_quest_no" text="新しいクエスト表示" />
+			<selection next="suiren_quest_miss" text="クエスト達成を報告する" />
+		</dialog>
+
+		<dialog name="suiren_yoi4" cutin="0" closebutton="1">
+			<text><![CDATA[
+				火蓮も意地を張らないで、神父様が作って下さるお弁当を食べてくれればよいのですが…
+				]]></text>
+			<selection next="suiren_quest_no" text="新しいクエスト表示" />
+			<selection next="suiren_quest_miss" text="クエスト達成を報告する" />
+		</dialog>
+
+		<dialog name="suiren_yoi5" cutin="0" closebutton="1">
+			<text><![CDATA[
+				Hello。今日はどのようなご用でしょうか？
+				]]></text>
+			<selection next="suiren_quest_no" text="新しいクエスト表示" />
+			<selection next="suiren_quest_miss" text="クエスト達成を報告する" />
+		</dialog>
+
+		<dialog name="suiren_yoi6" cutin="0" closebutton="1">
+			<text><![CDATA[
+				お弁当のことでしたら、どうぞお気づかいなく。<br>
+				そういえば、StudentたちがSchool Groundsに集まって競技をしてましたが、一緒に楽しんでみてYesかがでしょう？
+				]]></text>
+			<selection next="suiren_quest_no" text="新しいクエスト表示" />
+			<selection next="suiren_quest_miss" text="クエスト達成を報告する" />
+		</dialog>
+
+		<!-- ▼エス生セリフ -->
+		<dialog name="suiren_es1" cutin="0" closebutton="1">
+			<text><![CDATA[
+				はじめまして。<br>
+				わたくしは水蓮と申します。<br>
+				聖堂の神父様の仕事をお手伝いしています。
+			]]></text>
+			<selection next="suiren_quest_no" text="新しいクエスト表示" />
+			<selection next="suiren_quest_miss" text="クエスト達成を報告する" />
+		</dialog>
+
+		<dialog name="suiren_es2" cutin="0" closebutton="1">
+			<text><![CDATA[
+				誰かが、かわいそうな動物の霊たちを苦しめているのでしょうか？
+			]]></text>
+			<selection next="suiren_quest_no" text="新しいクエスト表示" />
+			<selection next="suiren_quest_miss" text="クエスト達成を報告する" />
+		</dialog>
+
+		<dialog name="suiren_es3" cutin="0" closebutton="1">
+			<text><![CDATA[
+				ようこそ。今日は何のご用でしょうか？
+			]]></text>
+			<selection next="suiren_quest_no" text="新しいクエスト表示" />
+			<selection next="suiren_quest_miss" text="クエスト達成を報告する" />
+		</dialog>
+
+		<dialog name="suiren_es4" cutin="0" closebutton="1">
+			<text><![CDATA[
+				お弁当のことでしたら、どうぞお気づかいなく。<br>
+				そういえばStudentたちがSchool Groundsに集まって競技をしてましたが、一緒に楽しんでみてYesかがですか？
+			]]></text>
+			<selection next="suiren_quest_no" text="新しいクエスト表示" />
+			<selection next="suiren_quest_miss" text="クエスト達成を報告する" />
+		</dialog>
+
+		<!-- ▼クエスト -->
+		<dialog name="suiren_quest_no" cutin="0" closebutton="1">
+			<text><![CDATA[
+				Thank youございます、今は特に助けが必要なことはないです。
+			]]></text>
+			<selection text="そう？　またね" />
+		</dialog>
+
+		<dialog name="suiren_quest_miss" cutin="0" closebutton="1">
+			<text><![CDATA[
+				Yes？　何を終わらせたのですか？
+			]]></text>
+			<selection text="ううん、またね" />
+		</dialog>
+	</npc>
+</field>

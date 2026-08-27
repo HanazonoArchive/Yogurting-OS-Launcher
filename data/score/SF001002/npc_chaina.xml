@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="Shift_JIS"?>
+<!-- MapID:2 エスティバー 1階 -->
+<field>
+	<!-- チャイナ -->
+	<npc id="39" shell="32" x="69" y="112" dir="7" init="init" >
+		<script name="init">
+			<call name="peke.get.info" />
+			<call name="peke.get.epi"/>
+
+			<ifeq varname="local.school" value="1">
+				<ifge varname="peke.epi.es" value="10">
+						<jump label="chaina_es3"/>
+				</ifge>
+				<ifge varname="peke.epi.es" value="9">
+						<jump label="chaina_es2"/>
+				</ifge>
+				<ifge varname="peke.epi.es" value="0">
+						<jump label="chaina_es1"/>
+				</ifge>
+			</ifeq>
+			<ifge varname="peke.epi.es" value="10">
+					<jump label="chaina_es3"/>
+			</ifge>
+			<ifge varname="peke.epi.es" value="9">
+					<jump label="chaina_es2"/>
+			</ifge>
+			<ifge varname="peke.epi.es" value="0">
+					<jump label="chaina_yoi1"/>
+			</ifge>
+		</script>
+
+		<!-- ▼エス生セリフ -->
+		<dialog name="chaina_es1" cutin="0" closebutton="1">
+			<text><![CDATA[
+				今度のFreshmanの数が…<br>
+				So-il学院にも先に連絡しないと、あっ！　書類も整理しなくちゃ。
+			]]></text>
+			<selection next="chaina_doukou" text="同好会のことで来ました" />
+			<selection next="chaina_quest_no" text="新しいクエスト表示" />
+			<selection next="chaina_quest_miss" text="クエスト達成を報告する" />
+		</dialog>
+
+		<dialog name="chaina_es2" cutin="0" closebutton="1">
+			<text><![CDATA[
+				モンスターに、ロボット研究部に、ワルグマーたちだけでも大変なのに、地震まで起きるなんて。Studentの安全のために、早く調査しないといけないわね。
+
+			]]></text>
+			<selection next="chaina_doukou" text="同好会のことで来ました" />
+			<selection next="chaina_quest_no" text="新しいクエスト表示" />
+			<selection next="chaina_quest_miss" text="クエスト達成を報告する" />
+		</dialog>
+
+		<dialog name="chaina_es3" cutin="0" closebutton="1">
+			<text><![CDATA[
+				今年の新規同好会に予算を支給すると、ううん…ホントにぎりぎりね。Gray先輩がポケットマネーでまかなってる費用も多いし、やっぱり活動実績のない同好会は…
+			]]></text>
+			<selection next="chaina_doukou" text="同好会のことで来ました" />
+			<selection next="chaina_quest_no" text="新しいクエスト表示" />
+			<selection next="chaina_quest_miss" text="クエスト達成を報告する" />
+		</dialog>
+
+		<!-- ▼宵生セリフ -->
+		<dialog name="chaina_yoi1" cutin="0" closebutton="1">
+			<text><![CDATA[
+				あっ、So-il学院から来たのね。<br>
+				今度、EstivaのFreshmanと一緒に、So-il学院を訪問する事になったんだけど、一緒に行かない？
+			]]></text>
+			<selection next="chaina_quest_no" text="新しいクエスト表示" />
+			<selection next="chaina_quest_miss" text="クエスト達成を報告する" />
+		</dialog>
+
+		<!-- ▼クエスト -->
+		<dialog name="chaina_quest_no" cutin="0" closebutton="1">
+			<text><![CDATA[
+				Thank you。でもこの仕事はわたし一人で大丈夫よ。
+			]]></text>
+			<selection text="そうですか、失礼します" />
+		</dialog>
+
+		<dialog name="chaina_quest_miss" cutin="0" closebutton="1">
+			<text><![CDATA[
+				えっ？　何も頼んでないけど…？
+			]]></text>
+			<selection text="そうでした、すみません" />
+		</dialog>
+
+		<!-- ▼同好会 -->
+		<dialog name="chaina_doukou" cutin="0" closebutton="1">
+			<text><![CDATA[
+				同好会のことで、何か聞きたいことある？
+			]]></text>
+			<selection next="chaina_doukou_make1" text="同好会開設" />
+			<selection next="chaina_doukou_setumei1" text="同好会について" />
+		</dialog>
+
+		<dialog name="chaina_doukou_setumei1" cutin="0" closebutton="1">
+			<text><![CDATA[
+				同好会っていうのは、友達同士の、お互いに仲良くするための集まりのことをいうの。
+			]]></text>
+			<selection next="chaina_doukou_setumei2" text="そうですか" />
+		</dialog>
+
+		<dialog name="chaina_doukou_setumei2" cutin="0" closebutton="1">
+			<text><![CDATA[
+				同好会には会長と会員がいるわ。会長は同好会を開設した人で、同好会を運営する責任があるの。
+			]]></text>
+			<selection next="chaina_doukou_setumei3" text="そうですか" />
+		</dialog>
+
+		<dialog name="chaina_doukou_setumei3" cutin="0" closebutton="1">
+			<text><![CDATA[
+				それから、同好会は同好会レベルによって、使える機能が違うの。高いレベルになるたびに、もっとたくさんの事が出来るようになるから、がんばって活動してみてね。ファイト！
+			]]></text>
+			<selection next="chaina_doukou_make1" text="そうですか" />
+		</dialog>
+
+		<dialog name="chaina_doukou_make1" cutin="0" closebutton="1">
+			<text><![CDATA[
+				新しい同好会を作るのね？
+			]]></text>
+			<selection next="chaina_doukou_make99" text="Yes" />
+			<selection text="No" />
+		</dialog>
+
+		<dialog name="chaina_doukou_make2" cutin="0" closebutton="1">
+			<text><![CDATA[
+				同好会の開設をやめるのね？
+			]]></text>
+			<selection text="Yes" />
+			<selection next="chaina_doukou_make1" text="No" />
+		</dialog>
+
+		<dialog name="chaina_doukou_make99" cutin="0" closebutton="1">
+			<text><![CDATA[
+				ごめん…　よくわからない問題が起こったみたいなの…。
+			]]></text>
+			<selection text="わかりました" />
+		</dialog>
+	</npc>
+</field>

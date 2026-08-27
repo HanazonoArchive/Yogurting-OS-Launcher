@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="Shift_JIS"?>
+<!-- MapID:417-HF300110 秘密の近道 -->
+<field>
+	<warpgate id="2" x="650" y="5849" shell="16" idCli="249" dir="0" idDestField="410" xDest="38" yDest="15"/>
+	<warpgate id="3" x="6050" y="1849" shell="16" idCli="255" dir="0" idDestField="418" xDest="30" yDest="39"/>
+	<generator>
+		<point x="11" y="48"/>
+		<point x="23" y="53"/>
+		<point x="17" y="61"/>
+		<point x="10" y="34"/>
+		<point x="22" y="34"/>
+		<point x="11" y="21"/>
+		<point x="9" y="6"/>
+		<point x="24" y="6"/>
+		<point x="39" y="8"/>
+		<point x="53" y="6"/>
+		<point x="49" y="19"/>
+		<point x="25" y="22"/>
+		<point x="35" y="28"/>
+		<point x="47" y="35"/>
+		<point x="51" y="51"/>
+		<point x="59" y="61"/>
+		<point x="41" y="61"/>
+		<point x="38" y="47"/>
+
+		<monster type="132" count="36">		<!-- ﾐｭﾛﾋﾞｰ -->
+		</monster>
+		<monster type="133" count="36">		<!-- 怒ったﾐｭﾛﾋﾞｰ -->
+		</monster>
+		<monster type="134" count="36">		<!-- 影入道 -->
+		</monster>
+	</generator>
+</field>

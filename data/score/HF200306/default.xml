@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="Shift_JIS"?>
+<!-- MapID:407-HF200306 暗黒の回廊 -->
+<field>
+	<warpgate id="2" x="550" y="4599" shell="78" idCli="274" dir="0" idDestField="406" xDest="64" yDest="39"/>
+
+	<generator>
+		<point x="19" y="49"/>
+		<point x="23" y="58"/>
+		<point x="25" y="72"/>
+		<point x="37" y="68"/>
+		<point x="38" y="53"/>
+		<point x="37" y="37"/>
+		<point x="25" y="23"/>
+		<point x="31" y="16"/>
+		<point x="52" y="54"/>
+		<point x="50" y="63"/>
+		<point x="53" y="72"/>
+		<point x="56" y="42"/>
+		<point x="51" y="35"/>
+		<point x="70" y="40"/>
+		<point x="72" y="26"/>
+		<point x="66" y="21"/>
+		<point x="72" y="11"/>
+		<point x="75" y="11"/>
+		<point x="78" y="20"/>
+		<point x="82" y="49"/>
+		<point x="91" y="54"/>
+		<point x="86" y="61"/>
+
+		<monster type="67" count="58">		<!-- 忍者10 -->
+		</monster>
+		<monster type="68" count="58">		<!-- ﾎｷﾞｰﾊﾟﾍﾟｯﾄ10 -->
+		</monster>
+		<monster type="68" count="58">		<!-- ﾌﾟﾘｽﾞﾅｰ11 -->
+		</monster>
+	</generator>
+</field>

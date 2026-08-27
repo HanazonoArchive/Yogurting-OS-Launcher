@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="Shift_JIS"?>
+<!-- MapID:402-HF200301 旧校舎 前庭 -->
+<field>
+	<!-- 旧校舎 前庭→旧校舎1F(左) -->
+	<warpgate id="2" x="3680" y="7131" shell="50" idCli="1787" dir="0" idDestField="166" xDest="11" yDest="55"/>
+	<!-- 旧校舎 前庭→旧校舎1F(右) -->
+	<warpgate id="3" x="5267" y="7275" shell="50" idCli="1788" dir="0" idDestField="166" xDest="59" yDest="56"/>
+	<!-- 旧校舎 前庭→グラウンド -->
+	<warpgate id="4" x="4039" y="2560" shell="50" idCli="1786" dir="6" idDestField="90" xDest="201" yDest="148"/>
+</field>

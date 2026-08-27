@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="Shift_JIS"?>
+<!-- MapID:24 エスティバー 3階 -->
+<field>
+	<!-- グレイ -->
+	<npc id="37" shell="22" x="90" y="118" dir="5" init="init" >
+		<script name="init">
+			<call name="peke.get.info" />
+			<call name="peke.get.epi"/>
+
+			<ifeq varname="local.school" value="1">
+				<ifge varname="peke.epi.es" value="10">
+						<jump label="glay_es4"/>
+				</ifge>
+				<ifge varname="peke.epi.es" value="9">
+						<jump label="glay_es3"/>
+				</ifge>
+				<ifge varname="peke.epi.es" value="1">
+						<jump label="glay_es2"/>
+				</ifge>
+				<ifge varname="peke.epi.es" value="0">
+						<jump label="glay_es1"/>
+				</ifge>
+			</ifeq>
+			<ifge varname="peke.epi.es" value="10">
+					<jump label="glay_yoi2"/>
+			</ifge>
+			<ifge varname="peke.epi.es" value="9">
+					<jump label="glay_es3"/>
+			</ifge>
+			<ifge varname="peke.epi.es" value="0">
+					<jump label="glay_yoi1"/>
+			</ifge>
+		</script>
+
+		<!-- ▼エス生セリフ -->
+		<dialog name="glay_es1" cutin="0" closebutton="1">
+			<text><![CDATA[
+				入学おめでとう。入学したばかりですから、まずは一番基本的な <font color="00FFBD">Episode</font>をやってみるといいですよ。School Building前にいるProf. Benのそばの<font color="00FFBD">Episodeゲート</font>に入って、<font color="00FFBD">「廊下いっぱいの箱」</font>Episodeを一度やってみて下さい。
+			]]></text>
+			<selection text="Yes、Episodeをやってみます" />
+		</dialog>
+
+		<dialog name="glay_es2" cutin="0" closebutton="1">
+			<text><![CDATA[
+				もう、<font color="00FFBD">Episode</font>のやり方はわかりましたよね？<br>
+				それでは、階段にある<font color="00FFBD">ワープポイント</font>を利用して下の階に降り、School Buildingの外に出て<font color="00FFBD">Prof. Ben</font>に会ってみて下さい。
+
+			]]></text>
+			<selection next="glay_quest_no" text="新しいクエスト表示" />
+			<selection next="glay_quest_miss" text="クエスト達成を報告する" />
+		</dialog>
+
+		<dialog name="glay_es3" cutin="0" closebutton="1">
+			<text><![CDATA[
+				う～ん、変ですね。<br>
+				Estivaは地質学的に地震が起こりにくい場所なのに…一度、Student会レベルで詳しく調査してみないといけませんね。
+			]]></text>
+			<selection next="glay_quest_no" text="新しいクエスト表示" />
+			<selection next="glay_quest_miss" text="クエスト達成を報告する" />
+		</dialog>
+
+		<dialog name="glay_es4" cutin="0" closebutton="1">
+			<text><![CDATA[
+				EstivaのBasementは老朽化してるから、いろいろ危険な事故が起こることがあります。出来るだけBasementには入らないようにして下さいね。
+			]]></text>
+			<selection next="glay_quest_no" text="新しいクエスト表示" />
+			<selection next="glay_quest_miss" text="クエスト達成を報告する" />
+		</dialog>
+
+		<!-- ▼宵生セリフ -->
+		<dialog name="glay_yoi1" cutin="0" closebutton="1">
+			<text><![CDATA[
+				僕は、EstivaStudent会実行委員長のGrayです。<br>
+				Estivaへの訪問を歓迎します。他の学校のStudentでも、何か助けが必要な時は、遠慮せずにいつでも相談に来て下さい。
+			]]></text>
+			<selection next="glay_quest_no" text="新しいクエスト表示" />
+			<selection next="glay_quest_miss" text="クエスト達成を報告する" />
+		</dialog>
+
+		<dialog name="glay_yoi2" cutin="0" closebutton="1">
+			<text><![CDATA[
+				EstivaのBasementは老朽化してるから、危険な事故が起こることがあります。出来るだけBasementには入らないようにして下さいね。
+			]]></text>
+			<selection next="glay_quest_no" text="新しいクエスト表示" />
+			<selection next="glay_quest_miss" text="クエスト達成を報告する" />
+		</dialog>
+
+		<!-- ▼クエスト -->
+		<dialog name="glay_quest_no" cutin="0" closebutton="1">
+			<text><![CDATA[
+				う～ん、ありがたいですが、今はこれといって頼める事がないですね。<br>
+				またそのうち来てくれると助かります。
+			]]></text>
+			<selection text="そうですか、失礼します" />
+		</dialog>
+
+		<dialog name="glay_quest_miss" cutin="0" closebutton="1">
+			<text><![CDATA[
+				何も頼んでませんけど…<br>
+				もしかしてスーチョンが、何か変な頼みでもしましたか？
+			]]></text>
+			<selection text="そうでした、すみません" />
+		</dialog>
+	</npc>
+</field>

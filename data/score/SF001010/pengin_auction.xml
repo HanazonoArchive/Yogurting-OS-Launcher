@@ -1,0 +1,422 @@
+<?xml version="1.0" encoding="tis-620"?>
+<!-- MapID:339 GXeBo[ w” -->
+<field>
+	<!-- OE“hw”จฮฟแ๑iACe€j -->
+	<npc id="434" shell="3" x="31" y="38" dir="4" init="init">
+		<dialog name="init"
+				cutin="0"
+				text="buyboy"
+				timeout="0"
+				choiceontimeout="0"
+				closebutton="1"
+				bgframeclick="0">
+			<selection next="buy" text="buy" />
+			<selection next="sell" text="Sell" />
+			<selection next="cancel" text="out" />
+		</dialog>
+		<buy name="buy">
+
+			<!-- GXeBo[’jqง• -->
+				<beitem type="150107" price="100"/>
+				<beitem type="150117" price="100"/>
+			<!-- ง•oG[V“ -->
+				<beitem type="150127" price="100"/>
+				<beitem type="150128" price="100"/>
+				<beitem type="150129" price="100"/>
+			<!-- …j•” -->
+				<beitem type="150125" price="100"/>
+			<!-- g[j“OEFA -->
+				<beitem type="150109" price="100"/>
+				<beitem type="150110" price="100"/>
+				<beitem type="150113" price="100"/>
+				<beitem type="150114" price="100"/>
+			<!-- oXPbg{[•” -->
+				<beitem type="150101" price="100"/>
+				<beitem type="150102" price="100"/>
+				<beitem type="150103" price="100"/>
+			<!-- ถ“k๏ -->
+				<beitem type="150119" price="100"/>
+				<beitem type="150120" price="100"/>
+				<beitem type="150121" price="100"/>
+			<!-- ล์•” -->
+				<beitem type="150034" price="100"/>
+				<beitem type="150018" price="100"/>
+				<beitem type="150019" price="100"/>
+				<beitem type="150020" price="100"/>
+				<beitem type="150021" price="100"/>
+				<beitem type="150022" price="100"/>
+			<!-- ่|•” -->
+				<beitem type="150027" price="100"/>
+				<beitem type="150028" price="100"/>
+				<beitem type="150029" price="100"/>
+			<!-- ”็•” -->
+				<beitem type="150044" price="100"/>
+				<beitem type="150042" price="100"/>
+				<beitem type="150043" price="100"/>
+			<!-- w”AoCg -->
+				<beitem type="150055" price="100"/>
+				<beitem type="150056" price="100"/>
+			<!-- —ฟ—•” -->
+				<beitem type="150151" price="100"/>
+				<beitem type="150149" price="100"/>
+				<beitem type="150150" price="100"/>
+				<beitem type="150152" price="100"/>
+			<!-- i“ฌ•” -->
+				<beitem type="150142" price="100"/>
+				<beitem type="150139" price="100"/>
+				<beitem type="150140" price="100"/>
+				<beitem type="150141" price="100"/>
+				<beitem type="150143" price="100"/>
+			<!-- •” -->
+				<beitem type="150157" price="100"/>
+				<beitem type="150158" price="100"/>
+				<beitem type="150159" price="100"/>
+				<beitem type="150160" price="100"/>
+			<!-- ศw•” -->
+				<beitem type="150030" price="100"/>
+				<beitem type="150031" price="100"/>
+			<!-- ’T•” -->
+				<beitem type="150052" price="100"/>
+				<beitem type="150049" price="100"/>
+				<beitem type="150050" price="100"/>
+				<beitem type="150051" price="100"/>
+			<!-- ”üp•” -->
+				<beitem type="150244" price="100"/>
+			<!-- ejX•” -->
+			<!-- ROCK•” -->
+			<!-- {bgค•” -->
+				<beitem type="150282" price="100"/>
+				<beitem type="150283" price="100"/>
+				<beitem type="150285" price="100"/>
+				<beitem type="150284" price="100"/>
+			<!-- M“u•” -->
+				<beitem type="150133" price="100"/>
+				<beitem type="150134" price="100"/>
+				<beitem type="150135" price="100"/>
+			<!-- eB[^C€•” -->
+				<beitem type="150169" price="100"/>
+				<beitem type="150167" price="100"/>
+				<beitem type="150168" price="100"/>
+				<beitem type="150170" price="100"/>
+			<!-- R[X•” -->
+				<beitem type="150311" price="100"/>
+				<beitem type="150312" price="100"/>
+				<beitem type="150313" price="100"/>
+
+
+		</buy>
+		<sell name="sell" />
+		<dialog name="cancel"
+				cutin="0"
+				text="bye"
+				timeout="0"
+				choiceontimeout="0"
+				closebutton="1"
+				bgframeclick="1">
+			<selection text="bye" />
+		</dialog>
+	</npc>
+	
+	<!-- IN‘Ow”จฮฟแ๑iACe€j -->
+	<npc id="27" shell="3" x="36" y="38" dir="4" init="init">
+		<dialog name="init"
+				cutin="0"
+				text="buygirl"
+				timeout="0"
+				choiceontimeout="0"
+				closebutton="1"
+				bgframeclick="0">
+			<selection next="buy" text="buy" />
+			<selection next="sell" text="Sell" />
+			<selection next="cancel" text="out" />
+		</dialog>
+		<buy name="buy">
+
+			<!-- GXeBo[—qง• -->
+				<beitem type="150108" price="100"/>
+				<beitem type="150118" price="100"/>
+			<!-- ง•oG[V“ -->
+				<beitem type="150130" price="100"/>
+				<beitem type="150131" price="100"/>
+				<beitem type="150132" price="100"/>
+			<!-- …j•” -->
+				<beitem type="150126" price="100"/>
+			<!-- g[j“OEFA -->
+				<beitem type="150111" price="100"/>
+				<beitem type="150112" price="100"/>
+				<beitem type="150115" price="100"/>
+				<beitem type="150116" price="100"/>
+			<!-- oXPbg{[•” -->
+				<beitem type="150104" price="100"/>
+				<beitem type="150105" price="100"/>
+				<beitem type="150106" price="100"/>
+			<!-- ถ“k๏ -->
+				<beitem type="150122" price="100"/>
+				<beitem type="150124" price="100"/>
+			<!-- ล์•” -->
+				<beitem type="150014" price="100"/>
+				<beitem type="150013" price="100"/>
+				<beitem type="150015" price="100"/>
+				<beitem type="150016" price="100"/>
+				<beitem type="150017" price="100"/>
+			<!-- ่|•” -->
+				<beitem type="150023" price="100"/>
+				<beitem type="150024" price="100"/>
+				<beitem type="150025" price="100"/>
+			<!-- ”็•” -->
+				<beitem type="150041" price="100"/>
+				<beitem type="150039" price="100"/>
+				<beitem type="150040" price="100"/>
+			<!-- w”AoCg -->
+				<beitem type="150059" price="100"/>
+				<beitem type="150057" price="100"/>
+				<beitem type="150058" price="100"/>
+			<!-- —ฟ—•” -->
+				<beitem type="150155" price="100"/>
+				<beitem type="150153" price="100"/>
+				<beitem type="150154" price="100"/>
+				<beitem type="150156" price="100"/>
+				<beitem type="150273" price="100"/>
+			<!-- i“ฌ•” -->
+				<beitem type="150147" price="100"/>
+				<beitem type="150144" price="100"/>
+				<beitem type="150145" price="100"/>
+				<beitem type="150146" price="100"/>
+				<beitem type="150148" price="100"/>
+			<!-- •” -->
+				<beitem type="150162" price="100"/>
+				<beitem type="150163" price="100"/>
+				<beitem type="150165" price="100"/>
+			<!-- ศw•” -->
+				<beitem type="150032" price="100"/>
+				<beitem type="150033" price="100"/>
+			<!-- ’T•” -->
+				<beitem type="150048" price="100"/>
+				<beitem type="150045" price="100"/>
+				<beitem type="150046" price="100"/>
+				<beitem type="150047" price="100"/>
+			<!-- ”üp•” -->
+				<beitem type="150245" price="100"/>
+			<!-- ejX•” -->
+			<!-- ROCK•” -->
+			<!-- {bgค•” -->
+				<beitem type="150286" price="100"/>
+				<beitem type="150288" price="100"/>
+				<beitem type="150287" price="100"/>
+			<!-- M“u•” -->
+				<beitem type="150136" price="100"/>
+				<beitem type="150137" price="100"/>
+				<beitem type="150138" price="100"/>
+			<!-- eB[^C€•” -->
+				<beitem type="150172" price="100"/>
+				<beitem type="150171" price="100"/>
+				<beitem type="150173" price="100"/>
+				<beitem type="150174" price="100"/>
+			<!-- R[X•” -->
+				<beitem type="150314" price="100"/>
+				<beitem type="150315" price="100"/>
+				<beitem type="150316" price="100"/>
+		</buy>
+
+		<sell name="sell" />
+		<dialog name="cancel"
+				cutin="0"
+				text="bye"
+				timeout="0"
+				choiceontimeout="0"
+				closebutton="1"
+				bgframeclick="1">
+			<selection text="bye" />
+		</dialog>
+	</npc>
+	<!-- IN‘Ow”จฮฟแ๑ -->
+	<npc id="4" shell="3" x="34" y="41" dir="4" init="init" >
+		<dialog name="init"
+				cutin="0"
+				text="buyitem"
+				timeout="0"
+				choiceontimeout="0"
+				closebutton="1"
+				bgframeclick="0">
+			<selection next="buy" text="buy" />
+			<selection next="sell" text="Sell" />
+			<selection next="cancel" text="out" />
+		</dialog>
+		<buy name="buy">
+
+				<!-- –ุ“ -->
+				<beitem type="110006" price="100"/>
+			<!-- o\[h -->
+				<beitem type="110002" price="100"/>
+			<!-- XeB“K[ -->
+				<beitem type="110001" price="1500"/>
+			<!-- CsA”@C“ -->
+				<beitem type="110004" price="1500"/>
+			<!-- \jbNu[h -->
+				<beitem type="110011" price="31000"/>
+			<!-- XN…[hCo[ -->
+				<beitem type="110019" price="31000"/>
+			<!-- u“K[ -->
+				<beitem type="110021" price="430000"/>
+			<!-- V[EB[h -->
+				<beitem type="110022" price="430000"/>
+			<!-- }WJXg“p[ -->
+				<beitem type="110012" price="500000"/>
+			<!-- CguCJ[ -->
+				<beitem type="110023" price="930000"/>
+			<!-- ”@[~I“GbW -->
+				<beitem type="110020" price="930000"/>
+			<!-- XeB“K[uCY -->
+				<beitem type="110024" price="1100000"/>
+			<!-- “Bobg -->
+				<beitem type="110007" price="1100000"/>
+			<!-- Cuj“OX^[ -->
+				<beitem type="110009" price="1100000"/>
+		
+
+			<!-- —L”๕–ณณ -->
+				<beitem type="120001" price="100"/>
+			<!-- U“SrtBXg -->
+				<beitem type="120003" price="100"/>
+			<!-- _‘R”VC -->
+				<beitem type="120002" price="1500"/>
+			<!-- M“un“h -->
+				<beitem type="120007" price="1500"/>
+			<!-- ”@Cp[ibN -->
+				<beitem type="120015" price="31000"/>
+			<!-- W[ฬo“e[W -->
+				<beitem type="120021" price="31000"/>
+			<!-- tFm[^[MA -->
+				<beitem type="120019" price="430000"/>
+			<!-- C“{[tBXg -->
+				<beitem type="120005" price="430000"/>
+			<!-- “V•๛’nฒ -->
+				<beitem type="120009" price="500000"/>
+			<!-- CAbgMA -->
+				<beitem type="120022" price="930000"/>
+			<!-- }LV}K“gbg -->
+				<beitem type="120006" price="1100000"/>
+			<!-- ^EXMA -->
+				<beitem type="120017" price="1100000"/>
+
+
+			<!-- p“t[g -->
+				<beitem type="130006" price="100"/>
+			<!-- h[“ -->
+				<beitem type="130001" price="100"/>
+			<!-- Nlbg -->
+				<beitem type="130011" price="1500"/>
+			<!-- V“o“ -->
+				<beitem type="130007" price="1500"/>
+			<!-- V[}“{“S -->
+				<beitem type="130002" price="31000"/>
+			<!-- The DJ -->
+				<beitem type="130004" price="31000"/>
+			<!-- oCI[m -->
+				<beitem type="130008" price="430000"/>
+			<!-- ^€^€}t[ -->
+				<beitem type="130019" price="430000"/>
+			<!-- sAjI -->
+				<beitem type="130009" price="500000"/>
+			<!-- EMEM -->
+				<beitem type="130012" price="930000"/>
+			<!-- E^“J -->
+				<beitem type="130021" price="1100000"/>
+			<!-- s“NT[y“g -->
+				<beitem type="130023" price="1100000"/>
+
+
+			<!-- ANA}“ -->
+				<beitem type="140001" price="100"/>
+			<!-- T}“_[ -->
+				<beitem type="140002" price="100"/>
+			<!-- RuobO -->
+				<beitem type="140003" price="1500"/>
+			<!-- ”FXp -->
+				<beitem type="140005" price="1500"/>
+			<!-- ^[gv[g -->
+				<beitem type="140019" price="31000"/>
+			<!-- –้ณ’๑“” -->
+				<beitem type="140010" price="310000"/>
+			<!-- {“o[EB“O -->
+				<beitem type="140008" price="430000"/>
+			<!-- GN\gp[Y -->
+				<beitem type="140020" price="430000"/>
+			<!-- ZtB€z“ -->
+				<beitem type="140014" price="500000"/>>
+			<!-- K•ืฉฮ๑ -->
+				<beitem type="140012" price="930000"/>
+			<!-- Apb` -->
+				<beitem type="140016" price="1100000"/>
+			<!-- WFmTCh -->
+				<beitem type="140021" price="1100000"/>
+		</buy>
+                                 
+                                <sell name="sell" />
+		<dialog name="cancel"
+				cutin="0"
+				text="bye"
+				timeout="0"
+				choiceontimeout="0"
+				closebutton="1"
+				bgframeclick="1">
+			<selection text="bye" />
+		</dialog>
+
+
+	</npc>
+
+	<!-- OE“hw”จฮฟแ๑ -->
+	<npc id="433" shell="3" x="24" y="19" dir="9" init="init" >
+		<dialog name="init"
+				cutin="0"
+				text="buydance"
+				timeout="0"
+				choiceontimeout="0"
+				closebutton="1"
+				bgframeclick="0">
+			<selection next="buy" text="buy" />
+			<selection next="sell" text="Sell" />
+			<selection next="cancel" text="out" />
+		</dialog>
+		<buy name="buy">
+			<coitem type="60001" price="1"/>	<!-- Stand001 -->
+			<coitem type="60006" price="1"/>	<!-- Stand002 -->
+			<coitem type="60007" price="1"/>	<!-- Stand003 -->
+			<coitem type="60018" price="1"/>	<!-- Stand004 -->
+			<coitem type="60021" price="1"/>	<!-- Stand005 -->
+			<coitem type="60002" price="1"/>	<!-- Basic001 -->
+			<coitem type="60003" price="1"/>	<!-- Basic002 -->
+			<coitem type="60004" price="1"/>	<!-- Basic003 -->
+			<coitem type="60005" price="1"/>	<!-- Basic004 -->
+			<coitem type="60024" price="1"/>	<!-- Basic005 -->
+			<coitem type="60008" price="1"/>	<!-- Act001 -->
+			<coitem type="60009" price="1"/>	<!-- Act002 -->
+			<coitem type="60022" price="1"/>	<!-- Act003 -->
+			<coitem type="60023" price="1"/>	<!-- Act004 -->
+			<coitem type="60025" price="1"/>	<!-- Act005 -->
+			<coitem type="60010" price="1"/>	<!-- Act011 -->
+			<coitem type="60011" price="1"/>	<!-- Act012 -->
+			<coitem type="60012" price="1"/>	<!-- Act013 -->
+			<coitem type="60013" price="1"/>	<!-- Act014 -->
+			<coitem type="60014" price="1"/>	<!-- Act021 -->
+			<coitem type="60015" price="1"/>	<!-- Act022 -->
+			<coitem type="60016" price="1"/>	<!-- Act023 -->
+			<coitem type="60017" price="1"/>	<!-- Act024 -->
+			<coitem type="60019" price="1"/>	<!-- Special001 -->
+			<coitem type="60020" price="1"/>	<!-- Special002 -->
+			<coitem type="60026" price="1"/>	<!-- Special003 -->
+			<coitem type="60027" price="1"/>	<!-- Special004 -->
+		</buy>
+		<sell name="sell" />
+		<dialog name="cancel"
+				cutin="0"
+				text="bye"
+				timeout="0"
+				choiceontimeout="0"
+				closebutton="1"
+				bgframeclick="1">
+			<selection text="bye" />
+		</dialog>
+	</npc>
+</field>

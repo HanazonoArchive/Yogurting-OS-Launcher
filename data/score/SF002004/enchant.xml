@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="Shift_JIS"?>
+<!-- MapID:93 宵月学院 2階 -->
+<field>
+	<!-- 購買おばちゃん(強化) -->
+	<npc id="167" shell="3" x="27" y="43" dir="3" init="init">
+		<dialog name="init"
+				cutin="0"
+				text="なんか用っすか？"
+				timeout="0"
+				choiceontimeout="0"
+				closebutton="1"
+				bgframeclick="0">
+			<selection next="enchant" text="アイテム強化したいっす" />
+			<selection next="crystal" text="結晶を精製、みたいな" />
+			<selection next="cancel" text="やっぱやめます" />
+		</dialog>
+		<dialog name="enchant"
+				cutin="0"
+				timeout="0"
+				choiceontimeout="0"
+				closebutton="1"
+				bgframeclick="0">
+			<text><![CDATA[
+				アイテム強化っすか。<br>
+				何するんすか？
+			]]></text>
+			<selection next="attach" text="Origin Stoneを装着するっす" />
+			<selection next="detach" text="Origin Stoneを取り外すっす" />
+			<selection next="break" text="Origin Stoneをぶっ壊すっす" />
+		</dialog>
+		<attachstone name="attach" />
+		<detachstone name="detach" />
+		<breakstone name="break" />
+		<crystal name="crystal" />
+		<dialog name="cancel"
+				cutin="0"
+				text="……。"
+				timeout="0"
+				choiceontimeout="0"
+				closebutton="1"
+				bgframeclick="1">
+			<selection text="すいません" />
+		</dialog>
+	</npc>
+</field>

@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="Shift_JIS"?>
+<!-- MapID:27 エスティバー バス停 -->
+<field>
+	<!-- カルテ -->
+	<npc id="324" shell="34" x="61" y="66" dir="4" init="init" >
+		<script name="init">
+			<call name="peke.get.info" />
+			<call name="peke.get.epi"/>
+
+			<ifeq varname="local.school" value="1">
+				<ifge varname="peke.epi.es" value="0">
+						<jump label="karte_es1"/>
+				</ifge>
+			</ifeq>
+			<ifge varname="peke.epi.es" value="0">
+					<jump label="karte_yoi1"/>
+			</ifge>
+		</script>
+
+		<!-- ▼エス生セリフ -->
+		<dialog name="karte_es1" cutin="0" closebutton="1">
+			<text><![CDATA[
+				Hello、私はKarte！　Estiva学園看護部の部員よ。<br>
+				もし <font color="00FFBD">5色のカラーボール</font>を見つけたら、私のところに持ってきてね。<br>
+				プレゼントと交換してあげるから！
+			]]></text>
+			<selection next="karte_ball_menu" text="カラーボール？" />
+			<selection next="karte_quest_no" text="新しいクエスト表示" />
+			<selection next="karte_quest_miss" text="クエスト達成を報告する" />
+		</dialog>
+
+		<!-- ▼宵生セリフ -->
+		<dialog name="karte_yoi1" cutin="0" closebutton="1">
+			<text><![CDATA[
+				Estivaにようこそ！　私はKarte、Estiva学園の看護部員よ。<br>
+				もし <font color="00FFBD">5色のカラーボール</font>を見つけたら、私のところに持ってきてね。<br>
+				プレゼントと交換してあげるから！
+			]]></text>
+			<selection next="karte_ball_menu" text="カラーボール？" />
+			<selection next="karte_quest_no" text="新しいクエスト表示" />
+			<selection next="karte_quest_miss" text="クエスト達成を報告する" />
+		</dialog>
+
+		<!-- ▼クエスト -->
+		<dialog name="karte_quest_no" cutin="0" closebutton="1">
+			<text><![CDATA[
+				ううん、特に無いわね。
+			]]></text>
+			<selection text="うん、じゃね" />
+		</dialog>
+
+		<dialog name="karte_quest_miss" cutin="0" closebutton="1">
+			<text><![CDATA[
+				えっ、何も頼んでないわよね？
+			]]></text>
+			<selection text="ごめん、勘違い" />
+		</dialog>
+
+		<!-- ▼カラーボール -->
+		<dialog name="karte_ball_menu" cutin="0" closebutton="1">
+			<text><![CDATA[
+				看護部では<font color="00FFBD">「ヨ」「ー」「グ」「ル」「！」</font>の 5色のボールを集めてきた人に、<br>
+				わくわくドキドキのヨーグル！ボックスをプレゼントしてるの。<br>
+				ステキなアイテムが手に入るかもしれないから、探してみてね！
+			]]></text>
+			<selection next="karte_ball3" text="カラーボールを 5色集めてきたよ！" />
+			<selection next="karte_ball2" text="カラーボールはどこで手に入るの？" />
+		</dialog>
+
+		<dialog name="karte_ball2" cutin="0" closebutton="1">
+			<text><![CDATA[
+				<font color="00FFBD">｢ヨ｣｢ー｣｢グ｣｢ル｣｢！｣</font>の 5色のボールは、EpisodeをClearすると<br>
+				手に入るわよ。Episodeによって手に入るボールが違うらしいから、<br>
+				いろんなEpisodeにチャレンジしてみるといいわよ！
+			]]></text>
+			<selection text="うん、わかった！" />
+		</dialog>
+
+		<dialog name="karte_ball3" cutin="0" closebutton="1">
+			<text><![CDATA[
+				あれっ、足りないボールがあるみたいよ？<br>
+				Prof. Biancaの命令で、5色セットじゃないと交換できない決まりなの、<br>
+				ゴメンね！　足りないボールを見つけて揃えられたら、また来てね！
+			]]></text>
+			<selection text="わかった、また来るね" />
+			<selection next="karte_ball2" text="カラーボールはどこで手に入るの？" />
+		</dialog>
+
+		<dialog name="karte_ball90" cutin="0" closebutton="1">
+			<text><![CDATA[
+				あっ、カラーボールが 5色集まったのね？<br>
+				それじゃ、ヨーグル！ボックスをプレゼントするわね！
+			]]></text>
+			<selection next="karte_ball4" text="うん、よろしく～" />
+		</dialog>
+
+		<dialog name="karte_ball91" cutin="0" closebutton="1">
+			<text><![CDATA[
+				Yes！　1st Year用のヨーグル！ボックスよ！<br>
+				もしかしたらレアアイテムが出るかも？<br>
+				いいものが入ってるといいわね！
+			]]></text>
+			<selection text="Thank you!" />
+		</dialog>
+	</npc>
+</field>

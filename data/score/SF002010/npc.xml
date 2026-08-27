@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="Shift_JIS"?>
+<!-- MapID:166 旧校舎 1階 -->
+<field>
+	<!-- ホヤン -->
+	<npc id="199" shell="42" x="21" y="62" dir="4" init="init"/>
+</field>

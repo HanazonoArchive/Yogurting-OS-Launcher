@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="Shift_JIS"?>
+<!-- MapID:3 エスティバー 2階 -->
+<field>
+	<!-- 2F→1F -->
+	<warpgate id="1" x="6150" y="13049" shell="64" idCli="957" dir="0" idDestField="2" xDest="70" yDest="126"/>
+	<!-- 2F→3F -->
+	<warpgate id="2" x="7052" y="12849" shell="64" idCli="7" dir="0" idDestField="24" xDest="61" yDest="128"/>
+	<!-- 2F→裏庭 -->
+	<warpgate id="3" x="6600" y="13249" shell="64" idCli="536" dir="0" idDestField="26" xDest="65" yDest="49"/>
+	
+	<!-- エスティバー4年生EP -->
+<!--	<episodegate subid="10004" idCli="292" shell="71" x="68.4999694824219" y="105.498695373535" dir="0" visible="1" usable="1">-->
+<!--		<episode id="60" grade="4"/>-->	<!-- 排水口には危険がいっぱい -->
+<!--		<episode id="53" grade="4"/>-->	<!-- 走れ！走れ！生徒たち -->
+<!--		<episode id="98" grade="4"/>-->	<!-- 炎の保健室 -->
+<!--		<episode id="19" grade="4"/>-->	<!-- 温室を守って -->
+<!--		<episode id="12" grade="4"/>-->	<!-- 愛しのフランソワ -->
+<!--		<episode id="107" grade="4"/>-->	<!-- 迷子の迷子のジョニーちゃん -->
+<!--		<episode id="28" grade="4"/>-->	<!-- やつらが温室にやってきた -->
+<!--		<episode id="21" grade="4"/>-->	<!-- 変熊文庫 -->
+<!--		<episode id="58" grade="4"/>-->	<!-- オオカミたちの夜 -->
+<!--		<episode id="91" grade="4"/>-->	<!-- 特命生徒会・完全版 -->
+<!--		<episode id="99" grade="4"/>-->	<!-- 一途な心 -->
+<!--		<episode id="144" grade="4"/>-->	<!-- 妖艶先生の特別授業 -->
+<!--		<episode id="100" grade="4"/>-->	<!-- ワルグマーカジノで大儲け？ -->
+<!--		<episode id="136" grade="4"/>-->	<!-- フルメタル執事 -->
+<!--	</episodegate>-->
+</field>

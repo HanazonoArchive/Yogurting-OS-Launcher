@@ -1,0 +1,41 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31903.59
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{4281DB5E-CA84-4850-AA78-3AB2E41EC981}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Yogurting.Core", "src\Yogurting.Core\Yogurting.Core.csproj", "{106B0ABA-201B-44AF-9A38-D2B4811E395F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Yogurting.Data", "src\Yogurting.Data\Yogurting.Data.csproj", "{8C64342F-B38A-4233-8B89-36C5918E34B4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Yogurting.Server", "src\Yogurting.Server\Yogurting.Server.csproj", "{97496B15-B2F2-4432-9549-149865BBE386}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{106B0ABA-201B-44AF-9A38-D2B4811E395F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{106B0ABA-201B-44AF-9A38-D2B4811E395F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{106B0ABA-201B-44AF-9A38-D2B4811E395F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{106B0ABA-201B-44AF-9A38-D2B4811E395F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8C64342F-B38A-4233-8B89-36C5918E34B4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8C64342F-B38A-4233-8B89-36C5918E34B4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8C64342F-B38A-4233-8B89-36C5918E34B4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8C64342F-B38A-4233-8B89-36C5918E34B4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{97496B15-B2F2-4432-9549-149865BBE386}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{97496B15-B2F2-4432-9549-149865BBE386}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{97496B15-B2F2-4432-9549-149865BBE386}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{97496B15-B2F2-4432-9549-149865BBE386}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{106B0ABA-201B-44AF-9A38-D2B4811E395F} = {4281DB5E-CA84-4850-AA78-3AB2E41EC981}
+		{8C64342F-B38A-4233-8B89-36C5918E34B4} = {4281DB5E-CA84-4850-AA78-3AB2E41EC981}
+		{97496B15-B2F2-4432-9549-149865BBE386} = {4281DB5E-CA84-4850-AA78-3AB2E41EC981}
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="Shift_JIS"?>
+<!-- MapID:1 エスティバー 屋外 -->
+<field>
+	<!-- モカ -->
+	<npc id="38" shell="24" x="115" y="108" dir="7" init="init" >
+		<script name="init">
+			<call name="peke.get.info" />
+			<call name="peke.get.epi"/>
+
+			<ifeq varname="local.school" value="1">
+				<ifge varname="peke.epi.es" value="10">
+						<jump label="mocha_es7"/>
+				</ifge>
+				<ifge varname="peke.epi.es" value="9">
+						<jump label="mocha_es6"/>
+				</ifge>
+				<ifge varname="peke.epi.es" value="6">
+						<jump label="mocha_es5"/>
+				</ifge>
+				<ifge varname="peke.epi.es" value="5">
+						<jump label="mocha_es4"/>
+				</ifge>
+				<ifge varname="peke.epi.es" value="3">
+						<jump label="mocha_es3"/>
+				</ifge>
+				<ifge varname="peke.epi.es" value="2">
+						<jump label="mocha_es2"/>
+				</ifge>
+				<ifge varname="peke.epi.es" value="0">
+						<jump label="mocha_es1"/>
+				</ifge>
+			</ifeq>
+
+			<ifge varname="peke.epi.es" value="10">
+					<jump label="mocha_yoi5"/>
+			</ifge>
+			<ifge varname="peke.epi.es" value="9">
+					<jump label="mocha_es6"/>
+			</ifge>
+			<ifge varname="peke.epi.es" value="6">
+					<jump label="mocha_yoi4"/>
+			</ifge>
+			<ifge varname="peke.epi.es" value="5">
+					<jump label="mocha_yoi3"/>
+			</ifge>
+			<ifge varname="peke.epi.es" value="3">
+					<jump label="mocha_yoi2"/>
+			</ifge>
+			<ifge varname="peke.epi.es" value="2">
+					<jump label="mocha_es2"/>
+			</ifge>
+			<ifge varname="peke.epi.es" value="0">
+					<jump label="mocha_yoi1"/>
+			</ifge>
+		</script>
+
+		<!-- ▼エス生セリフ -->
+		<dialog name="mocha_es1" cutin="0" closebutton="1">
+			<text><![CDATA[
+				Hello…<br>
+				え～と…Estivaにご入学おめでとうございます～
+			]]></text>
+			<selection next="mocha_quest_no" text="新しいクエスト表示" />
+			<selection next="mocha_quest_miss" text="クエスト達成を報告する" />
+		</dialog>
+
+		<dialog name="mocha_es2" cutin="0" closebutton="1">
+			<text><![CDATA[
+				あうう…わたしも虫は嫌いなのに…どうしよう…
+			]]></text>
+			<selection next="mocha_quest_no" text="新しいクエスト表示" />
+			<selection next="mocha_quest_miss" text="クエスト達成を報告する" />
+		</dialog>
+
+		<dialog name="mocha_es3" cutin="0" closebutton="1">
+			<text><![CDATA[
+				あの、虫を退治して下さって、本当にThank youございます…
+			]]></text>
+			<selection next="mocha_quest_no" text="新しいクエスト表示" />
+			<selection next="mocha_quest_miss" text="クエスト達成を報告する" />
+		</dialog>
+
+		<dialog name="mocha_es4" cutin="0" closebutton="1">
+			<text><![CDATA[
+				あ～…どうしよう、プリントを全部、羊たちが…どうしよう～
+			]]></text>
+			<selection next="mocha_quest_no" text="新しいクエスト表示" />
+			<selection next="mocha_quest_miss" text="クエスト達成を報告する" />
+		</dialog>
+
+		<dialog name="mocha_es5" cutin="0" closebutton="1">
+			<text><![CDATA[
+				あの、Hello…この前は、プリントを拾うのを手伝っていただいて…本当にThank youございます。
+			]]></text>
+			<selection next="mocha_quest_no" text="新しいクエスト表示" />
+			<selection next="mocha_quest_miss" text="クエスト達成を報告する" />
+		</dialog>
+
+		<dialog name="mocha_es6" cutin="0" closebutton="1">
+			<text><![CDATA[
+				あっ…地震のことですか？　え～と、どうなんでしょう…<br>
+				スーチョン先輩は、モネラが原因だっておっしゃってますけど…う～ん…
+			]]></text>
+			<selection next="mocha_quest_no" text="新しいクエスト表示" />
+			<selection next="mocha_quest_miss" text="クエスト達成を報告する" />
+		</dialog>
+
+		<dialog name="mocha_es7" cutin="0" closebutton="1">
+			<text><![CDATA[
+				Hello…学校生活はうまくいってますか？<br>
+				わたしじゃ頼りないでしょうけど、…でも、Student会の一員として、一生懸命働きますので、何か困った事があったら言って下さい。
+			]]></text>
+			<selection next="mocha_quest_no" text="新しいクエスト表示" />
+			<selection next="mocha_quest_miss" text="クエスト達成を報告する" />
+		</dialog>
+
+		<!-- ▼宵生セリフ -->
+		<dialog name="mocha_yoi1" cutin="0" closebutton="1">
+			<text><![CDATA[
+				Hello…<br>
+				あの、EstivaStudent会の書記を務めております、モカと申します…<br>
+				よろしくお願いします…
+			]]></text>
+			<selection next="mocha_quest_no" text="新しいクエスト表示" />
+			<selection next="mocha_quest_miss" text="クエスト達成を報告する" />
+		</dialog>
+
+		<dialog name="mocha_yoi2" cutin="0" closebutton="1">
+			<text><![CDATA[
+				あの…虫を退治して下さって本当にThank you。
+			]]></text>
+			<selection next="mocha_quest_no" text="新しいクエスト表示" />
+			<selection next="mocha_quest_miss" text="クエスト達成を報告する" />
+		</dialog>
+
+		<dialog name="mocha_yoi3" cutin="0" closebutton="1">
+			<text><![CDATA[
+				あの…他の学校のStudentさんに…こんなお願いをするのは…大変申し訳ないんですけど…<br>
+				どうか、裏山でプリントを拾うのを手伝って下さいませんか？
+			]]></text>
+			<selection next="mocha_quest_no" text="新しいクエスト表示" />
+			<selection next="mocha_quest_miss" text="クエスト達成を報告する" />
+		</dialog>
+
+		<dialog name="mocha_yoi4" cutin="0" closebutton="1">
+			<text><![CDATA[
+				プリントを拾うのを手伝っていただいて、本当にThank youございます。
+			]]></text>
+			<selection next="mocha_quest_no" text="新しいクエスト表示" />
+			<selection next="mocha_quest_miss" text="クエスト達成を報告する" />
+		</dialog>
+
+		<dialog name="mocha_yoi5" cutin="0" closebutton="1">
+			<text><![CDATA[
+				あの…Student会の一員として一生懸命働きますので、何か困った事があったら言って下さい。<br>
+				全力でお手伝い致しますから…
+			]]></text>
+			<selection next="mocha_quest_no" text="新しいクエスト表示" />
+			<selection next="mocha_quest_miss" text="クエスト達成を報告する" />
+		</dialog>
+
+
+		<!-- ▼クエスト -->
+		<dialog name="mocha_quest_no" cutin="0" closebutton="1">
+			<text><![CDATA[
+				え…　あのっ、これといって何も…<br>
+				わたし、困ってるように見えますか？
+			]]></text>
+			<selection text="ううん、ごめんね" />
+		</dialog>
+
+		<dialog name="mocha_quest_miss" cutin="0" closebutton="1">
+			<text><![CDATA[
+				えーっ？　わたし、何かお願いしてましたっけ？<br>
+				あうう、すみません、すみません！　それで、あの…何をお願いしましたっけ？
+			]]></text>
+			<selection text="ごめん、なんでもない" />
+		</dialog>
+	</npc>
+</field>

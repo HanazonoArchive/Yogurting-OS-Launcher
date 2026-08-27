@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="Shift_JIS"?>
+<!-- MapID:412-HF300105 迷いの地下水路 -->
+<field>
+
+	<warpgate id="2" x="5550" y="7449" shell="11" idCli="322" dir="0" idDestField="411" xDest="65" yDest="10"/>
+	<warpgate id="3" x="7150" y="4249" shell="11" idCli="324" dir="0" idDestField="419" xDest="58" yDest="111"/>
+	<warpgate id="5" x="7050" y="1249" shell="11" idCli="326" dir="0" idDestField="413" xDest="88" yDest="132"/>
+	<generator>
+		<point x="44" y="67"/>
+		<point x="46" y="54"/>
+		<point x="59" y="44"/>
+		<point x="58" y="56"/>
+		<point x="69" y="53"/>
+		<point x="67" y="74"/>
+		<point x="39" y="43"/>
+		<point x="36" y="31"/>
+		<point x="51" y="34"/>
+		<point x="62" y="28"/>
+		<point x="61" y="14"/>
+		<point x="49" y="13"/>
+		<point x="52" y="24"/>
+		<point x="37" y="20"/>
+		<point x="20" y="21"/>
+		<point x="34" y="40"/>
+		<point x="23" y="34"/>
+		<point x="20" y="45"/>
+		<point x="19" y="58"/>
+		<point x="32" y="55"/>
+		<point x="32" y="68"/>
+		<point x="20" y="69"/>
+
+		<monster type="120" count="66">		<!-- クロコｰ -->
+		</monster>
+		<monster type="121" count="66">		<!-- ｽﾊﾟｰﾋﾞｰ -->
+		</monster>
+	</generator>
+</field>

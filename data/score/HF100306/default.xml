@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="Shift_JIS"?>
+<!-- MapID:397-HF100306 オオカミの森 -->
+<field>
+	<!-- オオカミの森→災厄の森 -->
+	<warpgate id="2" x="6050" y="6649" shell="32" idCli="616" dir="0" idDestField="396" xDest="74" yDest="74"/>
+
+	<generator>
+		<point x="57" y="58"/>
+		<point x="51" y="38"/>
+		<point x="51" y="28"/>
+		<point x="60" y="26"/>
+		<point x="31" y="27"/>
+		<point x="21" y="21"/>
+		<point x="25" y="51"/>
+		<point x="36" y="55"/>
+
+		<monster type="33" count="32">		<!-- ハイバラウス12 -->
+		</monster>
+		<monster type="34" count="32">		<!-- ステディ10 -->
+		</monster>
+	</generator>
+</field>

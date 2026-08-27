@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="Shift_JIS"?>
+<!-- MapID:166 旧校舎 1階 -->
+<field>
+	<!-- 1F→旧校舎前庭(左) -->
+	<warpgate id="1" x="1170" y="5550" shell="16" idCli="200" dir="6" idDestField="402" xDest="33" yDest="70"/>
+	<!-- 1F→旧校舎前庭(右) -->
+	<warpgate id="2" x="5950" y="5459" shell="16" idCli="216" dir="0" idDestField="402" xDest="52" yDest="69"/>
+	<!-- 1F→2F -->
+	<warpgate id="3" x="6752" y="6121" shell="16" idCli="217" dir="0" idDestField="217" xDest="64" yDest="67"/>
+	<!-- 1F→地下の秘密通路 -->
+	<warpgate id="7" x="6450" y="6549" shell="16" idCli="260" dir="0" idDestField="405" xDest="52" yDest="38"/>
+</field>

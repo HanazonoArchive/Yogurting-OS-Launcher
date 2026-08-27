@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="Shift_JIS"?>
+<!-- MapID:2 エスティバー 1階 -->
+<field>
+	<!-- ページ -->
+	<npc id="1" shell="1" x="33" y="111" dir="4" init="init" >
+		<script name="init">
+			<call name="peke.get.info" />
+			<call name="peke.get.epi"/>
+
+			<ifeq varname="local.school" value="1">
+				<ifge varname="peke.epi.es" value="12">
+						<jump label="page_es6"/>
+				</ifge>
+
+				<ifge varname="peke.epi.es" value="11">
+						<jump label="page_es5"/>
+				</ifge>
+
+				<ifge varname="peke.epi.es" value="10">
+						<jump label="page_es4"/>
+				</ifge>
+
+				<ifge varname="peke.epi.es" value="5">
+						<jump label="page_es3"/>
+				</ifge>
+
+				<ifge varname="peke.epi.es" value="4">
+						<jump label="page_es2"/>
+				</ifge>
+
+				<ifge varname="peke.epi.es" value="0">
+						<jump label="page_es1"/>
+				</ifge>
+			</ifeq>
+			<ifge varname="peke.epi.es" value="12">
+					<jump label="page_yoi6"/>
+			</ifge>
+
+			<ifge varname="peke.epi.es" value="11">
+					<jump label="page_yoi5"/>
+			</ifge>
+
+			<ifge varname="peke.epi.es" value="10">
+					<jump label="page_yoi4"/>
+			</ifge>
+
+			<ifge varname="peke.epi.es" value="5">
+					<jump label="page_yoi3"/>
+			</ifge>
+
+			<ifge varname="peke.epi.es" value="4">
+					<jump label="page_yoi2"/>
+			</ifge>
+
+			<ifge varname="peke.epi.es" value="0">
+					<jump label="page_yoi1"/>
+			</ifge>
+		</script>
+
+
+		<!-- ▼エス生セリフ -->
+		<dialog name="page_es1" cutin="0" closebutton="1">
+			<text><![CDATA[
+				EstivaLibraryにようこそ。<br>
+				どんな本をお探しですか？
+			]]></text>
+			<selection next="page_quest_no" text="新しいクエスト表示" />
+			<selection next="page_quest_miss" text="クエスト達成を報告する" />
+		</dialog>
+
+		<dialog name="page_es2" cutin="0" closebutton="1">
+			<text><![CDATA[
+				変ね…最近、Marcheがやたらと…一体どうして…<br>
+				あ、ようこそおいで下さいました。今日はどんなご用事でしょうか？
+			]]></text>
+			<selection next="page_quest_no" text="新しいクエスト表示" />
+			<selection next="page_quest_miss" text="クエスト達成を報告する" />
+		</dialog>
+
+		<dialog name="page_es3" cutin="0" closebutton="1">
+			<text><![CDATA[
+				この前はLibraryのMarcheを退治して下さって、Thank youございました。<br>
+				今日はどんな本をお探しですか？
+			]]></text>
+			<selection next="page_quest_no" text="新しいクエスト表示" />
+			<selection next="page_quest_miss" text="クエスト達成を報告する" />
+		</dialog>
+
+		<dialog name="page_es4" cutin="0" closebutton="1">
+			<text><![CDATA[
+				あ…ようこそおいで下さいました。実は皆さんに、お願いしたいことがありまして…。<br>
+				この頃、Libraryで大きなロボットを見たというStudentが多いのですが、時間があったら一度調査して下さいませんか？
+			]]></text>
+			<selection next="page_quest_no" text="新しいクエスト表示" />
+			<selection next="page_quest_miss" text="クエスト達成を報告する" />
+		</dialog>
+
+		<dialog name="page_es5" cutin="0" closebutton="1">
+			<text><![CDATA[
+				ロボット研究会が作ったロボットがLibraryに隠れていたのですね。調べて下さって、Thank youございます。<br>
+				この頃、LibraryBasementについての変なうわさが流れていましたが…大問題ですね。
+			]]></text>
+			<selection next="page_quest_no" text="新しいクエスト表示" />
+			<selection next="page_quest_miss" text="クエスト達成を報告する" />
+		</dialog>
+
+		<dialog name="page_es6" cutin="0" closebutton="1">
+			<text><![CDATA[
+				アリーナはこの前の楽器で満足していましたか？<br>
+				ですが、LibraryBasementはとても危険ですから、入らないようにして下さい。
+			]]></text>
+			<selection next="page_quest_no" text="新しいクエスト表示" />
+			<selection next="page_quest_miss" text="クエスト達成を報告する" />
+		</dialog>
+
+
+		<!-- ▼宵生セリフ -->
+		<dialog name="page_yoi1" cutin="0" closebutton="1">
+			<text><![CDATA[
+				…So-ilからいらっしゃったのですね。EstivaのLibrary司書を務めているPageです。Libraryは常時開館されているので、何か本を読みたい時は、いつでもおいで下さい。
+			]]></text>
+			<selection next="page_quest_no" text="新しいクエスト表示" />
+			<selection next="page_quest_miss" text="クエスト達成を報告する" />
+		</dialog>
+
+		<dialog name="page_yoi2" cutin="0" closebutton="1">
+			<text><![CDATA[
+				変ね…最近、Marcheがやたらと…<br>
+				あ、ようこそおいで下さいました。今日はどんなご用事でしょうか？
+			]]></text>
+			<selection next="page_quest_no" text="新しいクエスト表示" />
+			<selection next="page_quest_miss" text="クエスト達成を報告する" />
+		</dialog>
+
+		<dialog name="page_yoi3" cutin="0" closebutton="1">
+			<text><![CDATA[
+				この前はLibraryのMarcheを退治して下さって、Thank you。<br>
+				今日はどんな本をお探しですか？
+			]]></text>
+			<selection next="page_quest_no" text="新しいクエスト表示" />
+			<selection next="page_quest_miss" text="クエスト達成を報告する" />
+		</dialog>
+
+		<dialog name="page_yoi4" cutin="0" closebutton="1">
+			<text><![CDATA[
+				ようこそ。この頃Libraryによくおいでですね。<br>
+				今日はどんな本をお探しですか？　あ、最近Libraryに巨大ロボットが出没するという噂があるので、気を付けて下さい。
+			]]></text>
+			<selection next="page_quest_no" text="新しいクエスト表示" />
+			<selection next="page_quest_miss" text="クエスト達成を報告する" />
+		</dialog>
+
+		<dialog name="page_yoi5" cutin="0" closebutton="1">
+			<text><![CDATA[
+				そうですか。ロボット研究会が作ったロボットがLibraryに隠されていたなんて…　ただでさえ、Libraryの変なうわさが流れていて困っているのに…
+			]]></text>
+			<selection next="page_quest_no" text="新しいクエスト表示" />
+			<selection next="page_quest_miss" text="クエスト達成を報告する" />
+		</dialog>
+
+		<dialog name="page_yoi6" cutin="0" closebutton="1">
+			<text><![CDATA[
+				この前、LibraryのBasementで会った方ですね。<br>
+				EstivaLibraryのBasementは古くなっていて、危険ですから入らないようにして下さい。
+			]]></text>
+			<selection next="page_quest_no" text="新しいクエスト表示" />
+			<selection next="page_quest_miss" text="クエスト達成を報告する" />
+		</dialog>
+
+
+		<!-- ▼クエスト -->
+		<dialog name="page_quest_no" cutin="0" closebutton="1">
+			<text><![CDATA[
+				今は特に、お願いしたい事はありません。
+			]]></text>
+			<selection text="そうですか、失礼します" />
+		</dialog>
+
+		<dialog name="page_quest_miss" cutin="0" closebutton="1">
+			<text><![CDATA[
+				何もお願いしていませんが。<br>
+				何か誤解があるようですね。
+			]]></text>
+			<selection text="そうでした、すみません" />
+		</dialog>
+	</npc>
+</field>

@@ -1,0 +1,235 @@
+<?xml version="1.0" encoding="Shift_JIS"?>
+<!-- MapID:92 宵月学院 1階 -->
+<field>
+	<!-- シンソヒョン -->
+	<npc id="172" shell="43" x="34" y="41" dir="3" init="init">
+		<script name="init">
+			<call name="peke.get.info" />
+			<call name="peke.get.epi"/>
+
+			<ifeq varname="local.school" value="2">
+				<ifge varname="peke.epi.yoi" value="12">
+						<jump label="sinsohyon_yoi8"/>
+				</ifge>
+				<ifge varname="peke.epi.yoi" value="11">
+						<jump label="sinsohyon_yoi7"/>
+				</ifge>
+				<ifge varname="peke.epi.yoi" value="10">
+						<jump label="sinsohyon_yoi6"/>
+				</ifge>
+				<ifge varname="peke.epi.yoi" value="5">
+						<jump label="sinsohyon_yoi5"/>
+				</ifge>
+				<ifge varname="peke.epi.yoi" value="4">
+						<jump label="sinsohyon_yoi4"/>
+				</ifge>
+				<ifge varname="peke.epi.yoi" value="2">
+						<jump label="sinsohyon_yoi3"/>
+				</ifge>
+				<ifge varname="peke.epi.yoi" value="1">
+						<jump label="sinsohyon_yoi2"/>
+				</ifge>
+				<ifge varname="peke.epi.yoi" value="0">
+						<jump label="sinsohyon_yoi1"/>
+				</ifge>
+			</ifeq>
+			<ifge varname="peke.epi.yoi" value="11">
+					<jump label="sinsohyon_es3"/>
+			</ifge>
+			<ifge varname="peke.epi.yoi" value="10">
+					<jump label="sinsohyon_yoi6"/>
+			</ifge>
+			<ifge varname="peke.epi.yoi" value="5">
+					<jump label="sinsohyon_yoi5"/>
+			</ifge>
+			<ifge varname="peke.epi.yoi" value="4">
+					<jump label="sinsohyon_yoi4"/>
+			</ifge>
+			<ifge varname="peke.epi.yoi" value="2">
+					<jump label="sinsohyon_es2"/>
+			</ifge>
+			<ifge varname="peke.epi.yoi" value="0">
+					<jump label="sinsohyon_es1"/>
+			</ifge>
+		</script>
+
+		<!-- ▼宵生セリフ -->
+		<dialog name="sinsohyon_yoi1" cutin="0" closebutton="1">
+			<text><![CDATA[
+				Freshmanの皆さん、ご入学をお祝い申し上げます。<br>
+				まずは、<font color="00FFBD">Public Cemeteryのモンスター退治</font>や、School Building前の<font color="00FFBD">Episodeゲート</font>から<br>
+				<font color="00FFBD">箱でいっぱいの廊下</font>Episodeをなさってみて下さい。
+			]]></text>
+			<selection next="sinsohyon_doukou" text="同好会のことで来ました" />
+			<selection next="sinsohyon_quest_no" text="新しいクエスト表示" />
+			<selection next="sinsohyon_quest_miss" text="クエスト達成を報告する" />
+		</dialog>
+
+		<dialog name="sinsohyon_yoi2" cutin="0" closebutton="1">
+			<text><![CDATA[
+				Episodeをプレイする方法はもうわかりましたね？　それでは、<br>
+				<font color="00FFBD">ワープポイント</font>を通じてSchool Buildingを出て、<font color="00FFBD">Sam</font>Teacherに会ってみて下さい。<br>
+				<font color="00FFBD">クエストと基本的なこと</font>について教えて下さるでしょう。
+			]]></text>
+			<selection next="sinsohyon_doukou" text="同好会のことで来ました" />
+			<selection next="sinsohyon_quest_no" text="新しいクエスト表示" />
+			<selection next="sinsohyon_quest_miss" text="クエスト達成を報告する" />
+		</dialog>
+
+		<dialog name="sinsohyon_yoi3" cutin="0" closebutton="1">
+			<text><![CDATA[
+				ようこそ。今日はどのような御用でしょうか？				
+			]]></text>
+			<selection next="sinsohyon_doukou" text="同好会のことで来ました" />
+			<selection next="sinsohyon_quest_no" text="新しいクエスト表示" />
+			<selection next="sinsohyon_quest_miss" text="クエスト達成を報告する" />
+		</dialog>
+
+		<dialog name="sinsohyon_yoi4" cutin="0" closebutton="1">
+			<text><![CDATA[
+				申し訳ありません。今は少々手が放せないんです。<br>
+				後でまた訪ねて来て下さいませんか？
+			]]></text>
+			<selection next="sinsohyon_doukou" text="同好会のことで来ました" />
+			<selection next="sinsohyon_quest_no" text="新しいクエスト表示" />
+			<selection next="sinsohyon_quest_miss" text="クエスト達成を報告する" />
+		</dialog>
+
+		<dialog name="sinsohyon_yoi5" cutin="0" closebutton="1">
+			<text><![CDATA[
+				Estivaから来るFreshmanと、So-ilから行くFreshmanとの行事を、問題なく進行するには…<br>
+あ、申し訳ありません。何かお困りですか？				
+			]]></text>
+			<selection next="sinsohyon_doukou" text="同好会のことで来ました" />
+			<selection next="sinsohyon_quest_no" text="新しいクエスト表示" />
+			<selection next="sinsohyon_quest_miss" text="クエスト達成を報告する" />
+		</dialog>
+
+		<dialog name="sinsohyon_yoi6" cutin="0" closebutton="1">
+			<text><![CDATA[
+				しばらく静かだったのに、また何か企んでいるようね…<br>
+				やはり何らかの措置を取らなければならないわ。
+			]]></text>
+			<selection next="sinsohyon_doukou" text="同好会のことで来ました" />
+			<selection next="sinsohyon_quest_no" text="新しいクエスト表示" />
+			<selection next="sinsohyon_quest_miss" text="クエスト達成を報告する" />
+		</dialog>
+
+		<dialog name="sinsohyon_yoi7" cutin="0" closebutton="1">
+			<text><![CDATA[
+				この前の呪いの御札事件でも分かったでしょうが、オカルト研究部はSo-il学院で最も問題が多く、怪しい同好会です。<br>
+				出来るだけ関わらないよう、気を付けて下さい。				
+			]]></text>
+			<selection next="sinsohyon_doukou" text="同好会のことで来ました" />
+			<selection next="sinsohyon_quest_no" text="新しいクエスト表示" />
+			<selection next="sinsohyon_quest_miss" text="クエスト達成を報告する" />
+		</dialog>
+
+		<dialog name="sinsohyon_yoi8" cutin="0" closebutton="1">
+			<text><![CDATA[
+				Hello。この前は、ファントムの楽譜の回収を手伝って下さって、Thank youございます。<br>
+今後とも、Student会へのご協力をお願い致します。				
+			]]></text>
+			<selection next="sinsohyon_doukou" text="同好会のことで来ました" />
+			<selection next="sinsohyon_quest_no" text="新しいクエスト表示" />
+			<selection next="sinsohyon_quest_miss" text="クエスト達成を報告する" />
+		</dialog>
+
+		<!-- ▼エス生セリフ -->
+		<dialog name="sinsohyon_es1" cutin="0" closebutton="1">
+			<text><![CDATA[
+				EstivaのStudentの皆様ですね、わたくしはSo-il学院のStudent会副会長を努めている、Sinsohyonです。<br>
+				So-il学院へようこそ。
+			]]></text>
+			<selection next="sinsohyon_quest_no" text="新しいクエスト表示" />
+			<selection next="sinsohyon_quest_miss" text="クエスト達成を報告する" />
+		</dialog>
+
+		<dialog name="sinsohyon_es2" cutin="0" closebutton="1">
+			<text><![CDATA[
+				ようこそ。<br>
+				何かお困りですか？
+			]]></text>
+			<selection next="sinsohyon_quest_no" text="新しいクエスト表示" />
+			<selection next="sinsohyon_quest_miss" text="クエスト達成を報告する" />
+		</dialog>
+
+		<dialog name="sinsohyon_es3" cutin="0" closebutton="1">
+			<text><![CDATA[
+				オカルト研究部…この前は呪いの御札を学校中に貼っていましたが、今度は何を企んでいるんでしょうか？<br>
+人手が足りないので、怪しいとわかっていても、全て事前に対処するのは難しいですね。
+			]]></text>
+			<selection next="sinsohyon_quest_no" text="新しいクエスト表示" />
+			<selection next="sinsohyon_quest_miss" text="クエスト達成を報告する" />
+		</dialog>
+
+		<!-- ▼クエスト -->
+		<dialog name="sinsohyon_quest_no" cutin="0" closebutton="1">
+			<text><![CDATA[
+				お気持ちはありがたいですが、今は皆さんに協力していただく案件はありませんね。<br>
+				またいずれ、訪ねて来て下さいますか？
+			]]></text>
+			<selection text="そうですか、失礼します" />
+		</dialog>
+
+		<dialog name="sinsohyon_quest_miss" cutin="0" closebutton="1">
+			<text><![CDATA[
+				何のことでしょうか？
+			]]></text>
+			<selection text="すみません、失礼します" />
+		</dialog>
+
+		<!-- ▼同好会 -->
+		<dialog name="sinsohyon_doukou" cutin="0" closebutton="1">
+			<text><![CDATA[
+				同好会に関して、どんな手続きをしましょうか？
+			]]></text>
+			<selection next="sinsohyon_doukou_make1" text="同好会開設" />
+			<selection next="sinsohyon_doukou_setumei1" text="同好会について" />
+		</dialog>
+
+		<dialog name="sinsohyon_doukou_setumei1" cutin="0" closebutton="1">
+			<text><![CDATA[
+				友達が集まって、互いに親睦を深めるための集団を、「同好会」と呼びます。
+			]]></text>
+			<selection next="sinsohyon_doukou_setumei2" text="そうですか" />
+		</dialog>
+
+		<dialog name="sinsohyon_doukou_setumei2" cutin="0" closebutton="1">
+			<text><![CDATA[
+				同好会には会長と会員がいて、会長が同好会の責任者となります。
+			]]></text>
+			<selection next="sinsohyon_doukou_setumei3" text="そうですか" />
+		</dialog>
+
+		<dialog name="sinsohyon_doukou_setumei3" cutin="0" closebutton="1">
+			<text><![CDATA[
+				同好会は、同好会レベルによって利用出来る機能が変わるので、レベルを上げることが重要です。レベルが高ければ高いほど、出来ることが増えていきます。
+			]]></text>
+			<selection next="sinsohyon_doukou_make1" text="そうですか" />
+		</dialog>
+
+		<dialog name="sinsohyon_doukou_make1" cutin="0" closebutton="1">
+			<text><![CDATA[
+				同好会を開設しますか？
+			]]></text>
+			<selection next="sinsohyon_doukou_make99" text="Yes" />
+			<selection text="No" />
+		</dialog>
+
+		<dialog name="sinsohyon_doukou_make2" cutin="0" closebutton="1">
+			<text><![CDATA[
+				同好会開設を取り消しますか？
+			]]></text>
+			<selection text="Yes" />
+			<selection next="sinsohyon_doukou_make1" text="No" />
+		</dialog>
+
+		<dialog name="sinsohyon_doukou_make99" cutin="0" closebutton="1">
+			<text><![CDATA[
+				申し訳ありません。原因不明のエラーが起きました。
+			]]></text>
+			<selection text="Yes" />
+		</dialog>
+	</npc>
+</field>

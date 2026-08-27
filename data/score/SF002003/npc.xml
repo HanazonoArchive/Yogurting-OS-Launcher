@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="Shift_JIS"?>
+<!-- MapID:92 宵月学院 1階 -->
+<field>
+	<!-- 妖艶 -->
+	<npc id="173" shell="46" x="81" y="23" dir="7" init="init" />
+	
+	<!-- シンソヒョン -->
+	<npc id="172" shell="43" x="34" y="41" dir="3" init="init">
+		<dialog name="init"
+				cutin="0"
+				text="ちょっと表に出ろ。"
+				timeout="0"
+				choiceontimeout="0"
+				closebutton="0"
+				bgframeclick="1">
+			<selection next="bus" text="望むところだ" />
+			<selection next="bus" text="かかってこい" />
+			<!--selection next="guild" text="あの…同好会…" /-->
+		</dialog>
+		<warp name="warp" idDestField="90" xDest="127" yDest="166" />
+		<bus name="bus" school="2" idDestField="90" xDest="127" yDest="166" />
+		
+<!--
+		<dialog name="guild"
+				cutin="0"
+				text="同好会に関して、どんな手続きをしましょうか？"
+				timeout="0"
+				choiceontimeout="0"
+				closebutton="1"
+				bgframeclick="1">
+			<selection next="select_guild" text="同好会開設" />
+			<selection next="select_about" text="同好会について" />
+		</dialog>
+		
+		<dialog name="about_1"
+				cutin="0"
+				text="友達が集まって、互いに親睦を深めるための集団を、「同好会」と呼びます。"
+				timeout="0"
+				choiceontimeout="0"
+				closebutton="1"
+				bgframeclick="1">
+			<selection next="about_2" text="なんと！" />
+		</dialog>
+		
+		<dialog name="about_2"
+				cutin="0"
+				text="同好会には会長と会員がいて、会長が同好会の責任者となります。"
+				timeout="0"
+				choiceontimeout="0"
+				closebutton="1"
+				bgframeclick="1">
+			<selection next="about_3" text="なんだってー！" />
+		</dialog>
+		
+		<dialog name="about_3"
+				cutin="0"
+				timeout="0"
+				choiceontimeout="0"
+				closebutton="1"
+				bgframeclick="1">
+			<text><![CDATA[
+				同好会は、同好会レベルによって利用出来る機能が変わるので、レベルを上げることが重要です。<br>
+				レベルが高ければ高いほど、出来ることが増えていきます。
+			]]></text>
+			<selection next="about_3" text="またまたー（笑）" />
+		</dialog>
+		
+		<dialog name="guild"
+				cutin="0"
+				text="同好会を開設しますか？"
+				timeout="0"
+				choiceontimeout="0"
+				closebutton="1"
+				bgframeclick="1">
+			<selection next="makeguild_yes" text="Yes" />
+			<selection next="makeguild_no" text="No" />
+		</dialog>
+		
+		<makeguild name="makeguild_yes" failed="guild_failed" />
+		
+		<dialog name="guild_failed"
+				cutin="0"
+				timeout="0"
+				choiceontimeout="0"
+				closebutton="1"
+				bgframeclick="1">
+			<text><![CDATA[
+				申し訳ありませんが、同好会を脱退してから<font color="00FFC0">一週間</font>経たないと、同好会の開設が出来ません。
+			]]></text>
+			<selection text="そうですか" />
+		</dialog>
+-->
+	</npc>
+</field>

@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="Shift_JIS"?>
+<!-- MapID:25 エスティバー 地下 -->
+<field>
+	<!-- ラミン -->
+	<npc id="35" shell="20" x="83" y="127" dir="5" init="init"/>
+	
+	<!-- 購買おばちゃん(強化) -->
+	<npc id="166" shell="3" x="55" y="127" dir="4" init="init">
+		<dialog name="init"
+				cutin="0"
+				text="なんか用っすか？"
+				timeout="0"
+				choiceontimeout="0"
+				closebutton="1"
+				bgframeclick="0">
+			<selection next="enchant" text="アイテム強化したいっす" />
+			<selection next="crystal" text="結晶を精製、みたいな" />
+			<selection next="cancel" text="やっぱやめます" />
+		</dialog>
+		<dialog name="enchant"
+				cutin="0"
+				text=""
+				timeout="0"
+				choiceontimeout="0"
+				closebutton="1"
+				bgframeclick="0">
+			<text><![CDATA[
+				アイテム強化っすか。<br>
+				何するんすか？
+			]]></text>
+			<selection next="attach" text="Origin Stoneを装着するっす" />
+			<selection next="break" text="Origin Stoneをぶっ壊すっす" />
+			<selection next="cancel" text="やっぱやめます" />
+		</dialog>
+		<attachstone name="attach" />
+		<detachstone name="detach" />
+		<breakstone name="break" />
+		<crystal name="crystal" />
+		<dialog name="cancel"
+				cutin="0"
+				text="……。"
+				timeout="0"
+				choiceontimeout="0"
+				closebutton="1"
+				bgframeclick="1">
+			<selection text="すいません" />
+		</dialog>
+	</npc>
+</field>

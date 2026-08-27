@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="Shift_JIS"?>
+<!-- MapID:398-HF200101 世界樹 -->
+<field>
+	<!-- 世界樹→グラウンド -->
+	<warpgate id="1" x="3250" y="2149" shell="40" idCli="1315" dir="0" idDestField="90" xDest="44" yDest="105"/>
+</field>

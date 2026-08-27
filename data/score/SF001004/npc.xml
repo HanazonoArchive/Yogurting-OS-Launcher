@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="Shift_JIS"?>
+<!-- MapID:24 エスティバー 3階 -->
+<field>
+	<!-- グレイ -->
+	<npc id="37" shell="22" x="90" y="118" dir="5" init="init" />
+</field>

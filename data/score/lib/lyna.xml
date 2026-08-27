@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="Shift_JIS"?>
+<library>
+	<!-- ジャンケン戦績初期化 -->
+	<function name="nana.janken.init">
+		<ifndef varname="lyna.nana.win">
+			<set varname="lyna.nana.win" value="0"/>
+		</ifndef>
+		<ifndef varname="lyna.nana.lose">
+			<set varname="lyna.nana.lose" value="0"/>
+		</ifndef>
+		<ifndef varname="lyna.nana.draw">
+			<set varname="lyna.nana.draw" value="0"/>
+		</ifndef>
+	</function>
+	
+	<!-- ジャンケン判定 -->
+	<function name="nana.janken.judge">
+		<rnd varname="temp" value="3"/>
+		<sub varname="temp" value="${hand}"/>
+		<add varname="temp" value="3"/>
+		<mod varname="temp" value="3"/>
+		<switch varname="temp">
+			<case value="0">
+				<set varname="lyna.nana.cutin" value="0"/>
+				<set varname="lyna.nana.msg">
+					<value><![CDATA[
+						ふ～ん、あいこかぁ。
+					]]></value>
+				</set>
+				<set varname="lyna.nana.select" value="勝負はまた今度ね"/>
+				<inc varname="lyna.nana.draw"/>
+			</case>
+			<case value="1">
+				<set varname="lyna.nana.cutin" value="2"/>
+				<set varname="lyna.nana.msg">
+					<value><![CDATA[
+						I lost... sniff.<br>
+						But next time, I'm definitely going to win!
+					]]></value>
+				</set>
+				<set varname="lyna.nana.select" value="うん、次はナナが勝つかもね"/>
+				<inc varname="lyna.nana.lose"/>
+			</case>
+			<case value="2">
+				<set varname="lyna.nana.cutin" value="1"/>
+				<set varname="lyna.nana.msg">
+					<value><![CDATA[
+						Yay! I win!<br>
+						That's my true skill!
+					]]></value>
+				</set>
+				<set varname="lyna.nana.select" value="つ、次は本気出すよ！"/>
+				<inc varname="lyna.nana.win"/>
+			</case>
+		</switch>
+	</function>
+</library>

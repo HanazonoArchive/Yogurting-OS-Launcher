@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="Shift_JIS"?>
+<!-- MapID:424 聖堂 -->
+<field>
+	<!-- 聖堂→聖堂周辺 -->
+	<warpgate id="2" x="4400" y="2949" shell="55" idCli="135" dir="0" idDestField="91" xDest="113" yDest="122"/>
+	<!-- 聖堂→聖堂地下倉庫 -->
+	<warpgate id="3" x="3850" y="7649" shell="55" idCli="133" dir="0" idDestField="430" xDest="31" yDest="6"/>
+</field>

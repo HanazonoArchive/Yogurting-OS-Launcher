@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="Shift_JIS"?>
+<!-- MapID:25 エスティバー 地下 -->
+<field>
+	<!-- ラミン -->
+	<npc id="35" shell="20" x="83" y="127" dir="5" init="init" >
+		<script name="init">
+			<call name="peke.get.info" />
+			<call name="peke.get.epi"/>
+
+			<ifge varname="peke.epi.es" value="0">
+					<jump label="ramin1"/>
+			</ifge>
+		</script>
+
+		<dialog name="ramin1" cutin="0" closebutton="1">
+			<text><![CDATA[
+				ミャオ～オウ。ミャオオオオン！　ミャオオウ！<br>
+				ミャ～～～！<br>
+				（何か言ってるみたいだけど分からない）
+			]]></text>
+			<selection next="ramin_quest_no" text="新しいクエスト表示" />
+			<selection next="ramin_quest_miss" text="クエスト達成を報告する" />
+		</dialog>
+
+		<!-- ▼クエスト -->
+		<dialog name="ramin_quest_no" cutin="0" closebutton="1">
+			<text><![CDATA[
+				ミャミャミャミャン！
+			]]></text>
+			<selection text="？？？？？？？" />
+		</dialog>
+
+		<dialog name="ramin_quest_miss" cutin="0" closebutton="1">
+			<text><![CDATA[
+				zZZ zZZ
+			]]></text>
+			<selection text="…寝てるみたい" />
+		</dialog>
+	</npc>
+</field>

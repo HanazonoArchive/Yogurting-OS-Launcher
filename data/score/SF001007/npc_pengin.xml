@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="Shift_JIS"?>
+<!-- MapID:27 エスティバー バス停 -->
+<field>
+	<!-- バスおばちゃん -->
+	<npc id="178" shell="3" x="107" y="60" dir="0" init="init">
+		<script name="init">
+			<call name="peke.get.info" />
+			<call name="peke.get.epi"/>
+
+			<ifeq varname="local.school" value="1">
+				<ifge varname="peke.epi.es" value="0">
+						<jump label="pengin_es1"/>
+				</ifge>
+			</ifeq>
+			<ifge varname="peke.epi.es" value="0">
+					<jump label="pengin_yoi1"/>
+			</ifge>
+		</script>
+
+		<!-- ▼エス生セリフ -->
+		<dialog name="pengin_es1" cutin="0" closebutton="1">
+			<text><![CDATA[				
+				いらっしゃい、今日はどないしたん？
+			]]></text>
+			<selection next="busYOI" text="So-il学院に行きたい" />
+			<selection next="pengin_quest_no" text="新しいクエスト表示" />
+			<selection next="pengin_quest_miss" text="クエスト達成を報告する" />
+		</dialog>
+
+		<!-- ▼宵生セリフ -->
+		<dialog name="pengin_yoi1" cutin="0" closebutton="1">
+			<text><![CDATA[
+				お～、So-il学院のStudentさんが遊びに来たんやね、うれしいなぁ。
+			]]></text>
+			<selection next="busYOI" text="So-il学院に行きたい" />
+			<selection next="pengin_quest_no" text="新しいクエスト表示" />
+			<selection next="pengin_quest_miss" text="クエスト達成を報告する" />
+		</dialog>
+
+		<!-- ▼クエスト -->
+		<dialog name="pengin_quest_no" cutin="0" closebutton="1">
+			<text><![CDATA[
+				せやなぁ…今はバイトは必要あらへんな。
+			]]></text>
+			<selection text="そうですか、それじゃまた" />
+		</dialog>
+
+		<dialog name="pengin_quest_miss" cutin="0" closebutton="1">
+			<text><![CDATA[
+				んん？　アンタたちは雇ってへんで？
+			]]></text>
+			<selection text="そうでした、すみません" />
+		</dialog>
+
+		<!-- STバスで宵へ -->
+		<bus name="busYOI" school="1" idDestField="162" xDest="87" yDest="55" />
+	</npc>
+</field>

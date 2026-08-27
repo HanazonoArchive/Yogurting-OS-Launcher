@@ -1,0 +1,596 @@
+{
+  "AccountId": "test",
+  "CharacterName": "Hanazono",
+  "PasswordHash": "098f6bcd4621d373cade4e832627b4f6",
+  "TelNumber": "4522",
+  "AuthType": "none",
+  "HasCharacter": true,
+  "CharaId": 256,
+  "CharacterId": 256,
+  "SessionKey": 282953,
+  "School": 1,
+  "Gender": 2,
+  "FaceId": 42,
+  "HairId": 102,
+  "SkinTone": 2000,
+  "BirthMonth": 5,
+  "BirthDay": 29,
+  "BloodType": 3,
+  "NametagColor": 0,
+  "Level": 1,
+  "Grade": 1,
+  "DexLevel": 1,
+  "DexExp": 4,
+  "DexLevels": [
+    0,
+    1,
+    1,
+    1,
+    4
+  ],
+  "DexExps": [
+    0,
+    0,
+    0,
+    0,
+    1
+  ],
+  "ComboCount": 98,
+  "LastAttackTime": 8161671,
+  "ChargePoint": 3,
+  "Defense": 10,
+  "CurrentExp": 0,
+  "Exp": 0,
+  "MaxExp": 8,
+  "CurrentHp": 260,
+  "Hp": 260,
+  "MaxHp": 260,
+  "CurrentMp": 195,
+  "Sp": 195,
+  "MaxMp": 195,
+  "MaxSp": 195,
+  "Money": 10000,
+  "StarPoints": 0,
+  "TaffPoints": 0,
+  "FieldId": 399,
+  "Position": {
+    "X": 58,
+    "Y": 17,
+    "Z": 0,
+    "Heading": 0
+  },
+  "SaveFieldId": 91,
+  "SavePosition": {
+    "X": 220,
+    "Y": 99,
+    "Z": 0,
+    "Heading": 0
+  },
+  "EquippedSlotUids": [
+    0,
+    512,
+    0,
+    0,
+    1,
+    503,
+    0,
+    501,
+    0,
+    502
+  ],
+  "EquippedSlotIsStar": [
+    false,
+    true,
+    false,
+    false,
+    false,
+    true,
+    false,
+    true,
+    false,
+    true
+  ],
+  "Equips": [],
+  "Inventory": [
+    {
+      "Id": 1,
+      "ItemId": 140001,
+      "TypeId": 140001,
+      "Name": "Starter Estiva Blue Glove",
+      "SlotIndex": 4,
+      "SlotType": 1,
+      "SerialId": 0,
+      "Quantity": 1,
+      "EnchantLevel": 0,
+      "IsEquipped": true,
+      "SocketSlots": [
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "Id": 2,
+      "ItemId": 150004,
+      "TypeId": 150004,
+      "Name": "Estiva Winter Top (F)",
+      "SlotIndex": 7,
+      "SlotType": 0,
+      "SerialId": 0,
+      "Quantity": 1,
+      "EnchantLevel": 0,
+      "IsEquipped": false,
+      "SocketSlots": [
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "Id": 3,
+      "ItemId": 150005,
+      "TypeId": 150005,
+      "Name": "Estiva Winter Bottom (F)",
+      "SlotIndex": 8,
+      "SlotType": 0,
+      "SerialId": 0,
+      "Quantity": 1,
+      "EnchantLevel": 0,
+      "IsEquipped": false,
+      "SocketSlots": [
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "Id": 4,
+      "ItemId": 150006,
+      "TypeId": 150006,
+      "Name": "Estiva Winter Shoes (F)",
+      "SlotIndex": 9,
+      "SlotType": 0,
+      "SerialId": 0,
+      "Quantity": 1,
+      "EnchantLevel": 0,
+      "IsEquipped": false,
+      "SocketSlots": [
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "Id": 5,
+      "ItemId": 150010,
+      "TypeId": 150010,
+      "Name": "Estiva Summer Top (F)",
+      "SlotIndex": 7,
+      "SlotType": 0,
+      "SerialId": 0,
+      "Quantity": 1,
+      "EnchantLevel": 0,
+      "IsEquipped": false,
+      "SocketSlots": [
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "Id": 6,
+      "ItemId": 150011,
+      "TypeId": 150011,
+      "Name": "Estiva Summer Bottom (F)",
+      "SlotIndex": 8,
+      "SlotType": 0,
+      "SerialId": 0,
+      "Quantity": 1,
+      "EnchantLevel": 0,
+      "IsEquipped": false,
+      "SocketSlots": [
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "Id": 7,
+      "ItemId": 150012,
+      "TypeId": 150012,
+      "Name": "Estiva Summer Shoes (F)",
+      "SlotIndex": 9,
+      "SlotType": 0,
+      "SerialId": 0,
+      "Quantity": 1,
+      "EnchantLevel": 0,
+      "IsEquipped": false,
+      "SocketSlots": [
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "Id": 8,
+      "ItemId": 200001,
+      "TypeId": 200001,
+      "Name": "Beginner Bread",
+      "SlotIndex": 7,
+      "SlotType": 3,
+      "SerialId": 0,
+      "Quantity": 20,
+      "EnchantLevel": 0,
+      "IsEquipped": false,
+      "SocketSlots": [
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    }
+  ],
+  "StarBeItems": [
+    {
+      "Id": 501,
+      "ItemId": 1202211,
+      "TypeId": 1202211,
+      "Name": "Robot Club Dress",
+      "SlotIndex": 7,
+      "SlotType": 1,
+      "SerialId": 501,
+      "Quantity": 1,
+      "EnchantLevel": 0,
+      "IsEquipped": true,
+      "SocketSlots": [
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "Id": 502,
+      "ItemId": 1202221,
+      "TypeId": 1202221,
+      "Name": "Robot Club Shoes",
+      "SlotIndex": 9,
+      "SlotType": 1,
+      "SerialId": 502,
+      "Quantity": 1,
+      "EnchantLevel": 0,
+      "IsEquipped": true,
+      "SocketSlots": [
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "Id": 503,
+      "ItemId": 1202231,
+      "TypeId": 1202231,
+      "Name": "Robot Club Gloves",
+      "SlotIndex": 5,
+      "SlotType": 1,
+      "SerialId": 503,
+      "Quantity": 1,
+      "EnchantLevel": 0,
+      "IsEquipped": true,
+      "SocketSlots": [
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "Id": 504,
+      "ItemId": 1100244,
+      "TypeId": 1100244,
+      "Name": "\u7E67\uFF79\u7E5D\u30FB\u3045\u7E5D\uFF73\u7E67\uFF6C\u7E5D\uFF7C\u7E5D\u60B6\u039E\u7E67\uFF64\u7E67\uFF7A",
+      "SlotIndex": 4,
+      "SlotType": 0,
+      "SerialId": 504,
+      "Quantity": 1,
+      "EnchantLevel": 0,
+      "IsEquipped": false,
+      "SocketSlots": [
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "Id": 505,
+      "ItemId": 1400044,
+      "TypeId": 1400044,
+      "Name": "\u7E67\uFF62\u7E5D\uFF73\u7E5D\u0080\u7E5D\uFF7C\u7E5D\u30FB\u3046\u7E67\uFF6B\u7E5D\uFF7C",
+      "SlotIndex": 4,
+      "SlotType": 0,
+      "SerialId": 505,
+      "Quantity": 1,
+      "EnchantLevel": 0,
+      "IsEquipped": false,
+      "SocketSlots": [
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "Id": 506,
+      "ItemId": 3202804,
+      "TypeId": 3202804,
+      "Name": "Product 3202804",
+      "SlotIndex": 43,
+      "SlotType": 0,
+      "SerialId": 506,
+      "Quantity": 1,
+      "EnchantLevel": 0,
+      "IsEquipped": false,
+      "SocketSlots": [
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "Id": 507,
+      "ItemId": 3202704,
+      "TypeId": 3202704,
+      "Name": "Product 3202704",
+      "SlotIndex": 44,
+      "SlotType": 0,
+      "SerialId": 507,
+      "Quantity": 1,
+      "EnchantLevel": 0,
+      "IsEquipped": false,
+      "SocketSlots": [
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "Id": 508,
+      "ItemId": 1202611,
+      "TypeId": 1202611,
+      "Name": "\u7E67\uFF6E\u7E5D\uFF63\u7E5D\uFF73\u7E5D\u60B6\u039B\u7E5D\uFF7C\u7E67\uFF78\u7E5D\uFF63\u7E67\uFF71\u7E5D\u30FB\u30E8",
+      "SlotIndex": 7,
+      "SlotType": 1,
+      "SerialId": 508,
+      "Quantity": 1,
+      "EnchantLevel": 0,
+      "IsEquipped": true,
+      "SocketSlots": [
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "Id": 509,
+      "ItemId": 1202621,
+      "TypeId": 1202621,
+      "Name": "\u7E67\uFF6E\u7E5D\uFF63\u7E5D\uFF73\u7E5D\u60B6\u039B\u7E5D\uFF7CSkirt",
+      "SlotIndex": 8,
+      "SlotType": 1,
+      "SerialId": 509,
+      "Quantity": 1,
+      "EnchantLevel": 0,
+      "IsEquipped": true,
+      "SocketSlots": [
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "Id": 510,
+      "ItemId": 1202631,
+      "TypeId": 1202631,
+      "Name": "\u7E67\uFF6E\u7E5D\uFF63\u7E5D\uFF73\u7E5D\u60B6\u039B\u7E5D\uFF7CShoes",
+      "SlotIndex": 9,
+      "SlotType": 1,
+      "SerialId": 510,
+      "Quantity": 1,
+      "EnchantLevel": 0,
+      "IsEquipped": true,
+      "SocketSlots": [
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "Id": 511,
+      "ItemId": 1202411,
+      "TypeId": 1202411,
+      "Name": "\u7E5D\u69ED\u30E9\u7E5D\uFF62\u7E5D\uFF6F\u7E67\uFF7C\u7E5D\uFF6B\u7E5D\u5CE8\u039E\u7E67\uFF79",
+      "SlotIndex": 7,
+      "SlotType": 1,
+      "SerialId": 511,
+      "Quantity": 1,
+      "EnchantLevel": 0,
+      "IsEquipped": true,
+      "SocketSlots": [
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "Id": 512,
+      "ItemId": 1202421,
+      "TypeId": 1202421,
+      "Name": "\u7E5D\u69ED\u30E9\u7E5D\uFF62\u7E5D\uFF6F\u7E67\uFF7C\u7E5D\uFF6B\u7E5D\u4E0A\u30E3\u7E5D\u30FBEstiva Academy\u7E5D\u30FB\u3045\u7E5D\uFF7C\u7E67\uFF7F\u7E67\uFF64\u7E5D\uF8F0\u9A5B\uFF68\u7E3A\uFF6EHat\u7E32\u3087\uFF65\uFF73\u9015\u6EB7\uFF7E\u5824\u7551\u003Cbr\u003E(1\u8B4C\uFF65\u9AE2\u8B0E\uFF7D\uFF7F\u9015\uFF68\u30FB\u4E57\u6084\u9AE2\u7058\uFF7B\uFF76\u9ADF\uFF77)",
+      "SlotIndex": 1,
+      "SlotType": 1,
+      "SerialId": 512,
+      "Quantity": 1,
+      "EnchantLevel": 0,
+      "IsEquipped": true,
+      "SocketSlots": [
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "Id": 513,
+      "ItemId": 1202431,
+      "TypeId": 1202431,
+      "Name": "\u7E5D\u69ED\u30E9\u7E5D\uFF62\u7E5D\uFF6F\u7E67\uFF7C\u7E5D\uFF6BShoes",
+      "SlotIndex": 9,
+      "SlotType": 1,
+      "SerialId": 513,
+      "Quantity": 1,
+      "EnchantLevel": 0,
+      "IsEquipped": true,
+      "SocketSlots": [
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "Id": 514,
+      "ItemId": 3202814,
+      "TypeId": 3202814,
+      "Name": "\u30B9\u30AF\u30FC\u30EB\u30B8\u30E3\u30B1\u30C3\u30C8\u30FB\u30D4\u30F3\u30AF",
+      "SlotIndex": 7,
+      "SlotType": 0,
+      "SerialId": 514,
+      "Quantity": 1,
+      "EnchantLevel": 0,
+      "IsEquipped": false,
+      "SocketSlots": [
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "Id": 515,
+      "ItemId": 3202824,
+      "TypeId": 3202824,
+      "Name": "\u30B9\u30AF\u30FC\u30EBSkirt\u30FB\u30D1\u30FC\u30D7\u30EB",
+      "SlotIndex": 8,
+      "SlotType": 0,
+      "SerialId": 515,
+      "Quantity": 1,
+      "EnchantLevel": 0,
+      "IsEquipped": false,
+      "SocketSlots": [
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "Id": 516,
+      "ItemId": 3202834,
+      "TypeId": 3202834,
+      "Name": "\u30B9\u30AF\u30FC\u30EBShoes\u30FB\u30D4\u30F3\u30AF",
+      "SlotIndex": 9,
+      "SlotType": 0,
+      "SerialId": 516,
+      "Quantity": 1,
+      "EnchantLevel": 0,
+      "IsEquipped": false,
+      "SocketSlots": [
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "Id": 517,
+      "ItemId": 3202844,
+      "TypeId": 3202844,
+      "Name": "\u30B9\u30AF\u30FC\u30EB\u30CF\u30C3\u30C8\u30FB\u30D4\u30F3\u30AF",
+      "SlotIndex": 1,
+      "SlotType": 0,
+      "SerialId": 517,
+      "Quantity": 1,
+      "EnchantLevel": 0,
+      "IsEquipped": false,
+      "SocketSlots": [
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    }
+  ],
+  "LearnedSkills": [],
+  "CompletedEpisodes": [],
+  "UnlockedTitles": [],
+  "ActiveBuffs": [
+    {
+      "EffectType": 7300,
+      "DurationSeconds": 2592000,
+      "ActivatedAt": "2026-08-26T23:43:06.1444261Z",
+      "RemainingSeconds": 2544993
+    },
+    {
+      "EffectType": 7400,
+      "DurationSeconds": 2592000,
+      "ActivatedAt": "2026-08-26T23:43:12.4274453Z",
+      "RemainingSeconds": 2545000
+    },
+    {
+      "EffectType": 7000,
+      "DurationSeconds": 2592000,
+      "ActivatedAt": "2026-08-26T23:43:14.5546298Z",
+      "RemainingSeconds": 2545002
+    }
+  ]
+}

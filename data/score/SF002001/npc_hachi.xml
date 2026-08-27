@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="Shift_JIS"?>
+<!-- MapID:90 宵月学院 グラウンド -->
+<field>
+	<!-- ハチ -->
+	<npc id="557" shell="76" x="189" y="188" dir="4" init="init">
+		<script name="init">
+			<call name="peke.get.info" />
+			<call name="peke.get.epi"/>
+
+			<ifge varname="peke.epi.yoi" value="0">
+				<jump label="hachi1"/>
+			</ifge>
+		</script>
+
+		<!-- ▼セリフ -->
+		<dialog name="hachi1" cutin="0" closebutton="1">
+			<text><![CDATA[
+				ヤッホー！　私はHachi！　So-ilの飼育部員なんだ～！<br>
+				あ、GloveのSkillのことなら私に任せて！
+			]]></text>
+			<selection next="hachi_quest_no" text="新しいクエスト表示" />
+			<selection next="hachi_quest_miss" text="クエスト達成を報告する" />
+			<selection text="Skillを習う" />
+		</dialog>
+
+		<!-- ▼クエスト -->
+		<dialog name="hachi_quest_no" cutin="0" closebutton="1">
+			<text><![CDATA[
+				う～ん、今は特に…また今度、お願い！
+			]]></text>
+			<selection text="うん、じゃね" />
+		</dialog>
+
+		<dialog name="hachi_quest_miss" cutin="0" closebutton="1">
+			<text><![CDATA[
+				えっ、何も頼んでないよね？
+			]]></text>
+			<selection text="ごめん、勘違い" />
+		</dialog>
+	</npc>
+</field>

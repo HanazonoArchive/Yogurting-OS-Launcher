@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="Shift_JIS"?>
+<!-- MapID:27 エスティバー バス停 -->
+<field>
+	<!-- カルテ -->
+	<npc id="324" shell="34" x="61" y="66" dir="4" init="init" />
+	<!-- ドワルグマー -->
+	<npc id="42" shell="37" x="116" y="62" dir="5" init="init" />
+	<!-- 変熊 -->
+	<npc id="15" shell="8" x="75" y="63" dir="1" init="init" />
+	<!-- ワルグマー -->
+	<npc id="41" shell="36" x="100" y="57" dir="7" init="init" />
+	<!-- 購買おばちゃん -->
+	<npc id="178" shell="3" x="107" y="60" dir="0" init="init">
+			<dialog name="init"
+				cutin="0"
+				text="宵月学院に行くっすか？"
+				timeout="0"
+				choiceontimeout="0"
+				closebutton="1"
+				bgframeclick="0">
+			<selection next="busYOI" text="行くよ！" />
+			<selection text="今は行かないよ" />
+		</dialog>
+		<!-- STバスで宵へ -->
+		<bus name="busYOI" school="1" idDestField="162" xDest="87" yDest="55" />
+	</npc>
+</field>

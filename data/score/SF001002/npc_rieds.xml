@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="Shift_JIS"?>
+<!-- MapID:2 エスティバー 1階 -->
+<field>
+	<!-- リエズ -->
+	<npc id="11" shell="10" x="48" y="124" dir="3" init="init" >
+		<script name="init">
+			<call name="peke.get.info" />
+			<call name="peke.get.epi"/>
+
+			<ifeq varname="local.school" value="1">
+				<ifge varname="peke.epi.es" value="8">
+						<jump label="rieds_es4"/>
+				</ifge>
+				<ifge varname="peke.epi.es" value="7">
+						<jump label="rieds_es3"/>
+				</ifge>
+				<ifge varname="peke.epi.es" value="1">
+						<jump label="rieds_es2"/>
+				</ifge>
+				<ifge varname="peke.epi.es" value="0">
+						<jump label="rieds_es1"/>
+				</ifge>
+			</ifeq>
+			<ifge varname="peke.epi.es" value="8">
+					<jump label="rieds_es4"/>
+			</ifge>
+			<ifge varname="peke.epi.es" value="7">
+					<jump label="rieds_es3"/>
+			</ifge>
+			<ifge varname="peke.epi.es" value="0">
+					<jump label="rieds_yoi1"/>
+			</ifge>
+		</script>
+
+		<!-- ▼エス生セリフ -->
+		<dialog name="rieds_es1" cutin="0" closebutton="1">
+			<text><![CDATA[
+				おっ、よく来たなFreshman！　Estivaに入学おめでとう。<br>
+				まだ右も左も分からないだろうから、<font color="00FFBD">Libraryのモンスター退治</font>とか、<br>
+				<font color="00FFBD">Episode</font>をやってみたらどうだ？　詳しくはSchool Building前のBenに聞くといい。
+			]]></text>
+			<selection next="rieds_quest_no" text="新しいクエスト表示" />
+			<selection next="rieds_quest_miss" text="クエスト達成を報告する" />
+		</dialog>
+
+		<dialog name="rieds_es2" cutin="0" closebutton="1">
+			<text><![CDATA[
+				Episodeはどうだった？　簡単だったろ？　それじゃ、今度は<font color="00FFBD">クエスト</font>や、学校のことを学んでみよう。昇降口の前の<font color="00FFBD">ワープポイント</font>でSchool Buildingの外に出て<font color="00FFBD">Ben</font>に会ってみてごらん。
+			]]></text>
+			<selection next="rieds_quest_no" text="新しいクエスト表示" />
+			<selection next="rieds_quest_miss" text="クエスト達成を報告する" />
+		</dialog>
+
+		<dialog name="rieds_es3" cutin="0" closebutton="1">
+			<text><![CDATA[
+				うーん、今日配達が来るはずだが何で来ないんだ？<br>
+				No.2に電話しないとな…
+			]]></text>
+			<selection next="rieds_quest_no" text="新しいクエスト表示" />
+			<selection next="rieds_quest_miss" text="クエスト達成を報告する" />
+		</dialog>
+
+		<dialog name="rieds_es4" cutin="0" closebutton="1">
+			<text><![CDATA[
+				ああ、この前配達に来たStudentだな。世話になったな。<br>
+				バイトもがんばれよ。
+			]]></text>
+			<selection next="rieds_quest_no" text="新しいクエスト表示" />
+			<selection next="rieds_quest_miss" text="クエスト達成を報告する" />
+		</dialog>
+
+
+		<!-- ▼宵生セリフ -->
+		<dialog name="rieds_yoi1" cutin="0" closebutton="1">
+			<text><![CDATA[
+				あたしはRiez。EstivaのStudentたちを指導してる。お前たちはSo-il学院のStudentのようだが、友達に会いに来たのか？<br>
+				ケンカせず、仲良くしなよ。
+			]]></text>
+			<selection next="rieds_quest_no" text="新しいクエスト表示" />
+			<selection next="rieds_quest_miss" text="クエスト達成を報告する" />
+		</dialog>
+
+
+		<!-- ▼クエスト -->
+		<dialog name="rieds_quest_no" cutin="0" closebutton="1">
+			<text><![CDATA[
+				ん、今んとこ、お前たちに頼みはないな。
+			]]></text>
+			<selection text="そうですか、失礼します" />
+		</dialog>
+
+		<dialog name="rieds_quest_miss" cutin="0" closebutton="1">
+			<text><![CDATA[
+				お前たちには何も頼んでないぞ、何の話だ？
+			]]></text>
+			<selection text="すみません、失礼します" />
+		</dialog>
+	</npc>
+</field>

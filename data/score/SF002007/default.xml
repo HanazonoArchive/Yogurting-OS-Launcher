@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="Shift_JIS"?>
+<!-- MapID:162 宵月学院 停留場 -->
+<field>
+	<!-- 停留場→グラウンド -->
+	<warpgate id="1" x="6550" y="8649" shell="45" idCli="683" dir="0" idDestField="90" xDest="157" yDest="78"/>
+	<!-- 停留場→宵月地下水路 -->
+	<warpgate id="5" x="3700" y="8449" shell="45" idCli="371" dir="0" idDestField="409" xDest="65" yDest="172"/>
+	
+	<!-- 宵月5年生EP -->
+<!--	<episodegate subid="20201" idCli="367" shell="49" x="52.4999694824219" y="82.4986953735352" dir="0" visible="1" usable="1">-->
+<!--		<episode id="145" grade="5"/>-->	<!-- 秘密結社"P" -->
+<!--		<episode id="147" grade="5"/>-->	<!-- 理由ある反抗 -->
+<!--		<episode id="149" grade="5"/>-->	<!-- おいでませ！狐の洞窟 -->
+<!--		<episode id="151" grade="5"/>-->	<!-- 許されざる物 -->
+<!--		<episode id="153" grade="5"/>-->	<!-- オカルト研究部へようこそ -->
+<!--		<episode id="157" grade="5"/>-->	<!-- 邂逅の傀儡 -->
+<!--		<episode id="155" grade="5"/>-->	<!-- 秘密いっぱいの箱 -->
+<!--		<episode id="156" grade="5"/>-->	<!-- 犯人は何人？ -->
+<!--	</episodegate>-->
+</field>

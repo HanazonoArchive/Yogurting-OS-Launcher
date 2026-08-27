@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="Shift_JIS"?>
+<!-- MapID:421-HF300114 暗黒の水路 -->
+<field>
+	<warpgate id="2" x="2050" y="6349" shell="6" idCli="55" dir="0" idDestField="419" xDest="96" yDest="121"/>
+	<warpgate id="3" x="2550" y="1549" shell="6" idCli="145" dir="0" idDestField="422" xDest="55" yDest="119"/>
+	<generator>
+		<point x="25" y="58"/>
+		<point x="29" y="48"/>
+		<point x="38" y="42"/>
+		<point x="42" y="53"/>
+		<point x="38" y="63"/>
+		<point x="49" y="64"/>
+		<point x="50" y="41"/>
+		<point x="61" y="36"/>
+		<point x="53" y="51"/>
+		<point x="62" y="51"/>
+		<point x="61" y="60"/>
+		<point x="60" y="71"/>
+		<point x="30" y="33"/>
+		<point x="19" y="30"/>
+		<point x="14" y="27"/>
+		<point x="14" y="41"/>
+		<point x="12" y="55"/>
+		<point x="35" y="25"/>
+		<point x="33" y="16"/>
+		<point x="43" y="11"/>
+		<point x="53" y="14"/>
+		<point x="52" y="25"/>
+		<point x="65" y="6"/>
+
+		<monster type="142" count="38">		<!-- 影入道 -->
+		</monster>
+		<monster type="143" count="38">		<!-- ｼｬﾄﾞｳﾋﾞｰｽﾄ -->
+		</monster>
+		<monster type="144" count="38">		<!-- ﾊﾟﾄﾛﾎﾞ -->
+		</monster>
+	</generator>
+</field>

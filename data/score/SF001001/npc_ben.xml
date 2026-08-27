@@ -1,0 +1,330 @@
+<?xml version="1.0" encoding="Shift_JIS"?>
+<!-- MapID:1 エスティバー 屋外 -->
+<field>
+	<!-- ベン -->
+	<npc id="5" shell="4" x="66" y="102" dir="3" init="init" >
+		<script name="init">
+			<call name="peke.get.info" />
+			<call name="peke.get.epi"/>
+
+			<ifndef varname="peke.ben.f001">
+				<set varname="peke.ben.f001" value="1"/>
+			</ifndef>
+
+			<ifeq varname="local.school" value="1">
+				<ifge varname="peke.epi.es" value="2">
+						<jump label="ben_es3"/>
+				</ifge>
+
+				<ifge varname="peke.epi.es" value="1">
+						<jump label="ben_es2"/>
+				</ifge>
+
+				<ifge varname="peke.epi.es" value="0">
+						<jump label="ben_es1"/>
+				</ifge>
+			</ifeq>
+
+			<ifge varname="peke.epi.es" value="2">
+					<jump label="ben_yoi3"/>
+			</ifge>
+			<ifge varname="peke.epi.es" value="1">
+					<jump label="ben_yoi2"/>
+			</ifge>
+			<ifge varname="peke.epi.es" value="0">
+					<jump label="ben_yoi1"/>
+			</ifge>
+		</script>
+
+		<!-- ▼エス生セリフ -->
+		<dialog name="ben_es1" cutin="0" closebutton="1">
+			<text><![CDATA[
+				Estivaに入学おめでとう。まだ入学したばかりだし、まずは<br>
+				<font color="00FFBD">Libraryのモンスター退治</font>とか、ワタクシのそばにある<font color="00FFBD">Episodeゲート</font>に入って、廊下いっぱいの箱Episodeをやってみてごらん。
+			]]></text>
+			<selection next="ben_guide" text="学校について教えて下さい" />
+			<selection text="Yes、Episodeをやってみます" />
+		</dialog>
+
+		<dialog name="ben_es2" cutin="0" closebutton="1">
+			<text><![CDATA[
+				Episodeのことはわかったね？　それじゃ今度は<font color="00FFBD">クエスト</font>に挑戦してみよう。ワタクシから<font color="00FFBD">Sosoの大発生</font>クエストを受けて、<font color="00FFBD">廊下いっぱいの箱</font>でアイテムを集めた後、また来てごらん。
+			]]></text>
+			<selection next="ben_guide" text="学校について教えて下さい" />
+			<selection next="ben_quesr_no" text="新しいクエスト表示" />
+			<selection next="ben_quest_miss" text="クエスト達成を報告をする" />
+		</dialog>
+
+		<dialog name="ben_es3" cutin="0" closebutton="1">
+			<text><![CDATA[
+				ふぅ～、FreshmanのためとYesえ、働き過ぎかなぁ…<br>
+				あ、よく来たね。諸君がSosoを退治してくれて本当に助かったよ。Thank you。それじゃ、楽しい学校生活を過ごすといいよ。
+			]]></text>
+			<selection next="ben_guide" text="教えて欲しいことがあります" />
+			<selection next="ben_quesr_no" text="新しいクエスト表示" />
+			<selection next="ben_quest_miss" text="クエスト達成を報告をする" />
+		</dialog>
+
+		<!-- ▼宵生セリフ -->
+		<dialog name="ben_yoi1" cutin="0" closebutton="1">
+			<text><![CDATA[
+				So-il学院から遊びに来たようだね。Estivaにようこそ。えっ、ワタクシと似ている人がSo-ilにもいるって？<br>
+				この着ぐるみは見習い教師の制服だから似ていて当然だよ。<br>
+				楽しく遊んでいくといいよ。
+			]]></text>
+			<selection next="ben_guide" text="教えて欲しいことがあります" />
+			<selection next="ben_quest_no" text="新しいクエスト表示" />
+			<selection next="ben_quest_miss" text="クエスト達成を報告する" />
+		</dialog>
+
+		<dialog name="ben_yoi2" cutin="0" closebutton="1">
+			<text><![CDATA[
+				ああ、 1Fだけじゃなくて、 2FでもSosoが出るなんて…<br>
+				あ、諸君も気を付けるんだよ。
+			]]></text>
+			<selection next="ben_guide" text="教えて欲しいことがあります" />
+			<selection next="ben_quest_no" text="新しいクエスト表示" />
+			<selection next="ben_quest_miss" text="クエスト達成を報告する" />
+		</dialog>
+
+		<dialog name="ben_yoi3" cutin="0" closebutton="1">
+			<text><![CDATA[
+				おお、よく来たね。<br>
+				諸君がSosoを退治してくれて本当に助かったよ。<br>
+				Thank you。それじゃ、友達と楽しく遊んでいくといいよ。
+			]]></text>
+			<selection next="ben_guide" text="教えて欲しいことがあります" />
+			<selection next="ben_quest_no" text="新しいクエスト表示" />
+			<selection next="ben_quest_miss" text="クエスト達成を報告する" />
+		</dialog>
+
+		<!-- ▼クエスト -->
+		<dialog name="ben_quest_no" cutin="0" closebutton="1">
+			<text><![CDATA[
+				今はこれといって助けは必要ないよ。
+			]]></text>
+			<selection text="そうですか、失礼します" />
+		</dialog>
+
+		<dialog name="ben_quest_miss" cutin="0" closebutton="1">
+			<text><![CDATA[
+				あれ？　ワタクシ、諸君に何か頼んでいたっけ？
+			]]></text>
+			<selection text="すみません、失礼します" />
+		</dialog>
+
+		<!-- ▼学校案内 -->
+		<dialog name="ben_guide" cutin="0" closebutton="1">
+			<text><![CDATA[
+				何について知りたいのかな？
+			]]></text>
+			<selection next="ben_guide_quest1" text="クエストについて教えて下さい" />
+			<selection next="ben_guide_road1" text="道を教えて下さい" />
+		</dialog>
+
+		<dialog name="ben_guide_quest1" cutin="0" closebutton="1">
+			<text><![CDATA[
+				クエストっていうのは、いろんな人から依頼される、特別な「頼みごと」の事なんだ。クエストを引き受けて、やり遂げた後には何がしかのお礼をもらえるよ。お礼には、クエストでしか手に入らない、特殊なものもあるんだ。
+			]]></text>
+			<selection next="ben_guide_quest2" text="クエストをくれる人はどうやって探すんですか？" />
+			<selection next="ben_guide" text="他の事を教えて下さい" />
+		</dialog>
+
+		<dialog name="ben_guide_quest2" cutin="0" closebutton="1">
+			<text><![CDATA[
+				クエストをくれる人を探すのは簡単だよ。学校のあちこちにある<font color="00FFBD">案内板</font>をクリックして、クエストに関する情報を見てごらん。どこの誰が助けを求めてるか、知ることが出来るんだ。
+			]]></text>
+			<selection next="ben_guide_quest3" text="クエストはどうすれば受けられますか？" />
+			<selection next="ben_guide_quest4" text="クエストはどんな風に進行するんですか？" />
+			<selection next="ben_guide_quest6" text="クエストはどんな風に終わらせるんですか？" />
+		</dialog>
+
+		<dialog name="ben_guide_quest3" cutin="0" closebutton="1">
+			<text><![CDATA[
+				クエストを持ってる人に会って<font color="00FFBD">新しいクエスト表示</font">を選べば、諸君が受けられるクエストのリストが出るよ。リストの中から一つを選んで、手伝ってあげると言えばいいんだ。
+			]]></text>
+			<selection next="ben_guide_quest4" text="クエストはどんな風に進行するんですか？" />
+			<selection next="ben_guide_quest6" text="クエストはどんな風に終わらせるんですか？" />
+			<selection next="ben_guide" text="他のことを教えて下さい" />
+		</dialog>
+
+		<dialog name="ben_guide_quest4" cutin="0" closebutton="1">
+			<text><![CDATA[
+				普通は、クエストを依頼してきた人から頼まれたことをすればいいんだ。誰々と話して来てとか、何かを集めて来てとか頼んでくるから。<br>
+				それでも分からなかったら、簡単に分かる方法もあるよ。
+			]]></text>
+			<selection next="ben_guide_quest5" text="どんな方法ですか？" />
+		</dialog>
+
+		<dialog name="ben_guide_quest5" cutin="0" closebutton="1">
+			<text><![CDATA[
+				<font color="00FFBD">クエストメニュー</font>(ＸキーまたはＪキー)で、進行中のクエストの詳細な説明を見られるんだ。それを見れば、どのEpisodeでどのアイテムをいくつ集めればいいか分かるよ。
+			]]></text>
+			<selection next="ben_guide_quest6" text="わかりました" />
+		</dialog>
+
+		<dialog name="ben_guide_quest6" cutin="0" closebutton="1">
+			<text><![CDATA[
+				何をすればいいかわかったら、後は該当するEpisodeをプレイしたりして、クエストの目標条件を満たせばいいんだ。手に入れたクエストアイテムは、<font color="00FFBD">もちもの(ＣキーまたはＩキー)</font>メニューのクエストタブでも確かめられるよ。
+			]]></text>
+			<selection next="ben_guide_quest7" text="クエストはどんな風に終わらせるんですか？" />
+			<selection next="ben_guide" text="他のことを教えてください" />
+		</dialog>
+
+		<dialog name="ben_guide_quest7" cutin="0" closebutton="1">
+			<text><![CDATA[
+				やるべきことを全部終わらせたら、後はクエストの依頼者に会って、<font color="00FFBD">クエスト達成を報告する</font>を選択すれば、クエストは完了だよ。
+			]]></text>
+			<selection next="ben_guide_quest8" text="依頼者に報告すればいいんですね？" />
+		</dialog>
+
+		<dialog name="ben_guide_quest8" cutin="0" closebutton="1">
+			<text><![CDATA[
+				普通はクエストをくれた人が依頼者なんだけど、たまに、クエストをくれた人と依頼者が別にいることもあるんだ。でも、安心してね。クエストをくれた人が、誰に会えばいいかちゃんと教えてくれるから。
+			]]></text>
+			<selection text="Thank youございます" />
+			<selection next="ben_guide" text="他のことを教えて下さい" />
+		</dialog>
+
+		<dialog name="ben_guide_road1" cutin="0" closebutton="1">
+			<text><![CDATA[
+				そう、どこに行きたいのかな？
+			]]></text>
+			<selection next="ben_guide_road2" text="モンスターはどこに出ますか？" />
+			<selection next="ben_guide_road3" text="アイテムを強化する場所はどこですか？" />
+			<selection next="ben_guide_road1_2" text="次のPageを表示" />
+		</dialog>
+
+		<dialog name="ben_guide_road1_2" cutin="0" closebutton="1">
+			<text><![CDATA[
+				そう、どこに行きたいのかな？
+			]]></text>
+			<selection next="ben_guide_road4" text="Staff Room、Library、Infirmaryはどこですか？" />
+			<selection next="ben_guide_road5" text="Storeと講堂はどこですか？" />
+			<selection next="ben_guide_road1_3" text="次のPageを表示" />
+		</dialog>
+
+		<dialog name="ben_guide_road1_3" cutin="0" closebutton="1">
+			<text><![CDATA[
+				そう、どこに行きたいのかな？
+			]]></text>
+			<selection next="ben_guide_road6" text="修行部屋とStudent指導室はどこですか？" />
+			<selection next="ben_guide_road7" text="Greenhouseと飼育場はどこですか？" />
+			<selection next="ben_guide_road1_4" text="次のPageを表示" />
+		</dialog>
+
+		<dialog name="ben_guide_road1_4" cutin="0" closebutton="1">
+			<text><![CDATA[
+				そう、どこに行きたいのかな？
+			]]></text>
+			<selection next="ben_guide_road8" text="献血車とバス停はどこですか？" />
+			<selection next="ben_guide_road9" text="科学室はどこですか？" />
+			<selection next="ben_guide_road1" text="最初のPageを表示" />
+		</dialog>
+
+		<dialog name="ben_guide_road2" cutin="0" closebutton="1">
+			<text><![CDATA[
+				ここにはモンスターは出ないよ、ありがたいことにね。<br>
+				ワープポイントを使うと別のフィールドに移動出来るけど、<br>
+				モンスターがいる場所に出るかもしれないから、気をつけるんだよ。
+			]]></text>
+			<selection text="Thank youございます" />
+			<selection next="ben_guide_road1" text="他の場所について教えて下さい" />
+			<selection next="ben_guide" text="他の事を教えて下さい" />
+		</dialog>
+
+		<dialog name="ben_guide_road3" cutin="0" closebutton="1">
+			<text><![CDATA[
+				アイテムを強化するには、<font color="00FFBD">School BuildingBasement</font>にいる<font color="00FFBD">No. 386</font>に会うといいよ。
+			]]></text>
+			<selection text="Thank youございます" />
+			<selection next="ben_guide_road1" text="他の場所について教えて下さい" />
+			<selection next="ben_guide" text="他のことを教えて下さい" />
+		</dialog>
+
+		<dialog name="ben_guide_road4" cutin="0" closebutton="1">
+			<text><![CDATA[
+				Staff Room、Library、Infirmaryは、みんなSchool Buildingの 1Fにあるんだ。西から順に、Library、Staff Room、Infirmaryだよ。ワタクシのそばにある、School Buildingの玄関のワープポイントから行けるよ。
+			]]></text>
+			<selection text="Thank youございます" />
+			<selection next="ben_guide_road1_2" text="他の場所について教えて下さい" />
+			<selection next="ben_guide" text="他のことを教えて下さい" />
+		</dialog>
+
+		<dialog name="ben_guide_road5" cutin="0" closebutton="1">
+			<text><![CDATA[
+				StoreはSchool Groundsの東の方にあるよ。ミニマップで見ると、School Groundsの右だな。講堂は、Storeの北の方にある。<br>
+				StoreにはＮｏ．2さんが、講堂のそばにはモカ君がいるよ。
+				]]></text>
+			<selection text="Thank youございます" />
+			<selection next="ben_guide_road1_2" text="他の場所について教えて下さい" />
+			<selection next="ben_guide" text="他のことを教えて下さい" />
+		</dialog>
+
+		<dialog name="ben_guide_road6" cutin="0" closebutton="1">
+			<text><![CDATA[
+				修行部屋とStudent指導室はSchool BuildingのBasementにあるよ。Basementには、 1Fにあるワープポイントから行けるんだ。そこにはNo.386がいて、武器の強化をしてくれるよ。
+			]]></text>
+			<selection text="Thank youございます" />
+			<selection next="ben_guide_road1_3" text="他の場所について教えて下さい" />
+			<selection next="ben_guide" text="他のことを教えて下さい" />
+		</dialog>
+
+		<dialog name="ben_guide_road7" cutin="0" closebutton="1">
+			<text><![CDATA[
+				Greenhouseと飼育場は、Estivaの北にあるよ。北西の方、つまりミニマップの左上にあるワープポイントから行けるんだ。そこには、Hyonran君、Yochimaruさん、Johnnyさん、Mayちゃんがいるよ。
+			]]></text>
+			<selection text="Thank youございます" />
+			<selection next="ben_guide_road1_3" text="他の場所について教えて下さい" />
+			<selection next="ben_guide" text="他のことを教えて下さい" />
+		</dialog>
+
+		<dialog name="ben_guide_road8" cutin="0" closebutton="1">
+			<text><![CDATA[
+				献血車とバス停留所は、School Gateの前にある。School Grounds南側のワープポイントから行けるよ。
+			]]></text>
+			<selection text="Thank youございます" />
+			<selection next="ben_guide_road1_4" text="他の場所について教えて下さい" />
+			<selection next="ben_guide" text="他のことを教えて下さい" />
+		</dialog>
+
+		<dialog name="ben_guide_road9" cutin="0" closebutton="1">
+			<text><![CDATA[
+				科学室はSchool Buildingの 2Fにあるよ。階段のすぐ側だ。ミニマップで見て、階段の左側だな。科学室では、Mao＝シャオピンTeacherがいつも実験をしていらっしゃるよ。
+			]]></text>
+			<selection text="Thank youございます" />
+			<selection next="ben_guide_road1_4" text="他の場所について教えて下さい" />
+			<selection next="ben_guide" text="他のことを教えて下さい" />
+		</dialog>
+
+		<dialog name="ben_guide2" cutin="0" closebutton="1">
+			<text><![CDATA[
+				<font color="00FFBD">Episode</font>と<font color="00FFBD">クエスト</font>についてはこれでわかったね。それじゃ、他の<font color="00FFBD">Episode</font>や<font color="00FFBD">クエスト</font>もやってみたらどうだい？　新しく出来ることがわからなかったら、学校のあちこちにある<font color="00FFBD">案内板</font>を見るといいよ。
+			]]></text>
+			<selection next="ben_annai" text="案内板って何ですか？" />
+			<selection next="ben_quesr_no" text="新しいクエスト表示" />
+			<selection next="ben_quest_miss" text="クエスト達成を報告をする" />
+		</dialog>
+
+		<dialog name="ben_annai" cutin="0" closebutton="1">
+			<text><![CDATA[
+				<font color="00FFBD">案内板</font>はミニマップ上では<font color="00FFBD">本</font>の形で表示されてるもので、学校のあちこちにあるよ。案内板を見れば、今プレイ出来る<font color="00FFBD">Episode</font>と<font color="00FFBD">クエスト</font>についてわかるんだ。
+			]]></text>
+			<selection next="ben_annai2" text="そうなんですか？" />
+		</dialog>
+
+		<dialog name="ben_annai2" cutin="0" closebutton="1">
+			<text><![CDATA[
+				そうそう。案内板をクリックすると、まず<font color="00FFBD">Episode</font>についての情報が表示される。<font color="00FFBD">案内板</font>左側にある<font color="00FFBD">クエストタブ</font>を押せば、<font color="00FFBD">クエスト</font>に関する情報が見られるんだよ。
+			]]></text>
+			<selection next="ben_annai3" text="それは便利ですね！" />
+		</dialog>
+
+		<dialog name="ben_annai3" cutin="0" closebutton="1">
+			<text><![CDATA[
+				そうだね。学校で何をすればいいかわからなくなった時に見てみれば、きっと役に立つよ。それじゃ、実際に<font color="00FFBD">案内板</font>を見てみて、次へ何が出来るのかConfirmしてみてごらん。
+			]]></text>
+			<selection text="わかりました～" />
+		</dialog>
+	</npc>
+</field>

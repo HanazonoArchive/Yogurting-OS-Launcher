@@ -1,0 +1,596 @@
+<?xml version="1.0" encoding="tis-620"?>
+<!-- MapID:92 ชw@ 1K -->
+<field>
+	<!-- —d -->
+	<npc id="173" shell="46" x="81" y="23" dir="7" init="init">
+		<script name="init">
+			<getcharinfo varname="local.name" type="name"/>
+			<getcharinfo varname="local.exp" type="exp"/>
+			<getcharinfo varname="local.maxexp" type="maxexp"/>
+			<getcharinfo varname="local.level" type="level"/>
+			<getcharinfo varname="local.grade" type="grade"/>
+			<debug>
+				<text><![CDATA[
+Check Grade 2
+Name   : ${local.name}
+Level  : ${local.level}
+Exp    : ${local.exp}
+MaxExp : ${local.maxexp}
+Grade : ${local.grade}
+				]]></text>
+			</debug>
+			<sub varname="local.maxexp" value="${local.exp}"/>
+			<ifle varname="local.grade" value="1">
+				<jump label="init20"/>
+			</ifle>
+			<jump label="init3"/>
+		</script>
+
+		<script name="init3">
+			<getcharinfo varname="local.name" type="name"/>
+			<getcharinfo varname="local.exp" type="exp"/>
+			<getcharinfo varname="local.maxexp" type="maxexp"/>
+			<getcharinfo varname="local.level" type="level"/>
+			<getcharinfo varname="local.grade" type="grade"/>
+			<debug>
+				<text><![CDATA[
+Check Grade 2
+Name   : ${local.name}
+Level  : ${local.level}
+Exp    : ${local.exp}
+MaxExp : ${local.maxexp}
+Grade : ${local.grade}
+				]]></text>
+			</debug>
+			<sub varname="local.maxexp" value="${local.exp}"/>
+			<ifle varname="local.grade" value="2">
+				<jump label="init30"/>
+			</ifle>
+			<jump label="init4"/>
+		</script>
+
+		<script name="init4">
+			<getcharinfo varname="local.name" type="name"/>
+			<getcharinfo varname="local.exp" type="exp"/>
+			<getcharinfo varname="local.maxexp" type="maxexp"/>
+			<getcharinfo varname="local.level" type="level"/>
+			<getcharinfo varname="local.grade" type="grade"/>
+			<debug>
+				<text><![CDATA[
+Check Grade 2
+Name   : ${local.name}
+Level  : ${local.level}
+Exp    : ${local.exp}
+MaxExp : ${local.maxexp}
+Grade : ${local.grade}
+				]]></text>
+			</debug>
+			<sub varname="local.maxexp" value="${local.exp}"/>
+			<ifle varname="local.grade" value="3">
+				<jump label="init40"/>
+			</ifle>
+			<jump label="init5"/>
+		</script>
+
+		<script name="init5">
+			<getcharinfo varname="local.name" type="name"/>
+			<getcharinfo varname="local.exp" type="exp"/>
+			<getcharinfo varname="local.maxexp" type="maxexp"/>
+			<getcharinfo varname="local.level" type="level"/>
+			<getcharinfo varname="local.grade" type="grade"/>
+			<debug>
+				<text><![CDATA[
+Check Grade 2
+Name   : ${local.name}
+Level  : ${local.level}
+Exp    : ${local.exp}
+MaxExp : ${local.maxexp}
+Grade : ${local.grade}
+				]]></text>
+			</debug>
+			<sub varname="local.maxexp" value="${local.exp}"/>
+			<ifle varname="local.grade" value="4">
+				<jump label="init50"/>
+			</ifle>
+			<jump label="init6"/>
+		</script>
+
+
+
+		<script name="init6">
+			<getcharinfo varname="local.name" type="name"/>
+			<getcharinfo varname="local.exp" type="exp"/>
+			<getcharinfo varname="local.maxexp" type="maxexp"/>
+			<getcharinfo varname="local.level" type="level"/>
+			<getcharinfo varname="local.grade" type="grade"/>
+			<debug>
+				<text><![CDATA[
+Check Grade 2
+Name   : ${local.name}
+Level  : ${local.level}
+Exp    : ${local.exp}
+MaxExp : ${local.maxexp}
+Grade : ${local.grade}
+				]]></text>
+			</debug>
+			<sub varname="local.maxexp" value="${local.exp}"/>
+			<ifle varname="local.grade" value="5">
+				<jump label="init60"/>
+			</ifle>
+			<jump label="init7"/>
+		</script>
+
+
+
+		<script name="init7">
+			<getcharinfo varname="local.name" type="name"/>
+			<getcharinfo varname="local.exp" type="exp"/>
+			<getcharinfo varname="local.maxexp" type="maxexp"/>
+			<getcharinfo varname="local.level" type="level"/>
+			<getcharinfo varname="local.grade" type="grade"/>
+			<debug>
+				<text><![CDATA[
+Check Grade 2
+Name   : ${local.name}
+Level  : ${local.level}
+Exp    : ${local.exp}
+MaxExp : ${local.maxexp}
+Grade : ${local.grade}
+				]]></text>
+			</debug>
+			<sub varname="local.maxexp" value="${local.exp}"/>
+			<ifle varname="local.grade" value="6">
+				<jump label="init70"/>
+			</ifle>
+			<jump label="init80"/>
+		</script>
+
+
+
+
+		<dialog name="init20"
+				cutin="0"
+				text="upgrade2??"
+				timeout="0"
+				choiceontimeout="0"
+				closebutton="0"
+				bgframeclick="1">
+			<selection next="expcheck2" text="yesupgrade2" />
+			<selection next="no" text="noupgrade" />
+		</dialog>
+
+		<dialog name="init30"
+				cutin="0"
+				text="upgrade3??"
+				timeout="0"
+				choiceontimeout="0"
+				closebutton="0"
+				bgframeclick="1">
+			<selection next="expcheck3" text="yesupgrade3" />
+			<selection next="no" text="noupgrade " />
+		</dialog>
+		<dialog name="init40"
+				cutin="0"
+				text="upgrade4??"
+				timeout="0"
+				choiceontimeout="0"
+				closebutton="0"
+				bgframeclick="1">
+			<selection next="expcheck4" text="yesupgrade4" />
+			<selection next="no" text="noupgrade " />
+		</dialog>
+		<dialog name="init50"
+				cutin="0"
+				text="upgrade5??"
+				timeout="0"
+				choiceontimeout="0"
+				closebutton="0"
+				bgframeclick="1">
+			<selection next="expcheck5" text="yesupgrade5" />
+			<selection next="no" text="noupgrade " />
+		</dialog>
+
+
+		<dialog name="init60"
+				cutin="0"
+				text="upgrade6??"
+				timeout="0"
+				choiceontimeout="0"
+				closebutton="0"
+				bgframeclick="1">
+			<selection next="expcheck6" text="yesupgrade6" />
+			<selection next="no" text="noupgrade" />
+		</dialog>
+
+		<dialog name="init70"
+				cutin="0"
+				text="hi?"
+				timeout="0"
+				choiceontimeout="0"
+				closebutton="0"
+				bgframeclick="1">
+			<selection next="no" text="hi " />
+		</dialog>
+
+
+		<dialog name="init80"
+				cutin="0"
+				text="hi?"
+				timeout="0"
+				choiceontimeout="0"
+				closebutton="0"
+				bgframeclick="1">
+			<selection next="no" text="hi " />
+		</dialog>
+
+
+
+		<script name="expcheck2">
+			<getcharinfo varname="local.name" type="name"/>
+			<getcharinfo varname="local.exp" type="exp"/>
+			<getcharinfo varname="local.maxexp" type="maxexp"/>
+			<getcharinfo varname="local.level" type="level"/>
+			<getcharinfo varname="local.grade" type="grade"/>
+			<debug>
+				<text><![CDATA[
+Upgrade 2 to 3
+Name   : ${local.name}
+Level  : ${local.level}
+Exp    : ${local.exp}
+MaxExp : ${local.maxexp}
+Grade : ${local.grade}
+				]]></text>
+			</debug>
+			<sub varname="local.maxexp" value="${local.exp}"/>
+			<ifle varname="local.level" value="19">
+				<jump label="nana_exp_info"/>
+			</ifle>
+			<jump label="expacpt2"/>
+		</script>
+
+		<script name="expcheck3">
+			<getcharinfo varname="local.name" type="name"/>
+			<getcharinfo varname="local.exp" type="exp"/>
+			<getcharinfo varname="local.maxexp" type="maxexp"/>
+			<getcharinfo varname="local.level" type="level"/>
+			<getcharinfo varname="local.grade" type="grade"/>
+			<debug>
+				<text><![CDATA[
+Upgrade 2 to 3
+Name   : ${local.name}
+Level  : ${local.level}
+Exp    : ${local.exp}
+MaxExp : ${local.maxexp}
+Grade : ${local.grade}
+				]]></text>
+			</debug>
+			<sub varname="local.maxexp" value="${local.exp}"/>
+			<ifle varname="local.level" value="49">
+				<jump label="nana_exp_info"/>
+			</ifle>
+			<jump label="expacpt3"/>
+		</script>
+
+
+		<script name="expcheck4">
+			<getcharinfo varname="local.name" type="name"/>
+			<getcharinfo varname="local.exp" type="exp"/>
+			<getcharinfo varname="local.maxexp" type="maxexp"/>
+			<getcharinfo varname="local.level" type="level"/>
+			<getcharinfo varname="local.grade" type="grade"/>
+			<debug>
+				<text><![CDATA[
+Upgrade 2 to 3
+Name   : ${local.name}
+Level  : ${local.level}
+Exp    : ${local.exp}
+MaxExp : ${local.maxexp}
+Grade : ${local.grade}
+				]]></text>
+			</debug>
+			<sub varname="local.maxexp" value="${local.exp}"/>
+			<ifle varname="local.level" value="99">
+				<jump label="nana_exp_info"/>
+			</ifle>
+			<jump label="expacpt4"/>
+		</script>
+
+
+
+		<script name="expcheck5">
+			<getcharinfo varname="local.name" type="name"/>
+			<getcharinfo varname="local.exp" type="exp"/>
+			<getcharinfo varname="local.maxexp" type="maxexp"/>
+			<getcharinfo varname="local.level" type="level"/>
+			<getcharinfo varname="local.grade" type="grade"/>
+			<debug>
+				<text><![CDATA[
+Upgrade 2 to 3
+Name   : ${local.name}
+Level  : ${local.level}
+Exp    : ${local.exp}
+MaxExp : ${local.maxexp}
+Grade : ${local.grade}
+				]]></text>
+			</debug>
+			<sub varname="local.maxexp" value="${local.exp}"/>
+			<ifle varname="local.level" value="149">
+				<jump label="nana_exp_info"/>
+			</ifle>
+			<jump label="expacpt5"/>
+		</script>
+
+
+
+		<script name="expcheck6">
+			<getcharinfo varname="local.name" type="name"/>
+			<getcharinfo varname="local.exp" type="exp"/>
+			<getcharinfo varname="local.maxexp" type="maxexp"/>
+			<getcharinfo varname="local.level" type="level"/>
+			<getcharinfo varname="local.grade" type="grade"/>
+			<debug>
+				<text><![CDATA[
+Upgrade 2 to 3
+Name   : ${local.name}
+Level  : ${local.level}
+Exp    : ${local.exp}
+MaxExp : ${local.maxexp}
+Grade : ${local.grade}
+				]]></text>
+			</debug>
+			<sub varname="local.maxexp" value="${local.exp}"/>
+			<ifle varname="local.level" value="199">
+				<jump label="nana_exp_info"/>
+			</ifle>
+			<jump label="expacpt6"/>
+		</script>
+
+
+		<script name="expacpt2">
+		<setcharinfo type="grade" value="2"/>
+			<debug>
+				<text><![CDATA[
+Name   : ${local.name}
+Level  : ${local.level}
+Exp    : ${local.exp}
+MaxExp : ${local.maxexp}
+Grade : ${local.grade}
+				]]></text>
+			</debug>
+			<sub varname="local.maxexp" value="${local.exp}"/>
+			<ifle varname="local.level" value="40">
+				<jump label="congra2"/>
+			</ifle>
+			<jump label="congra2"/>
+		</script>
+
+
+		<script name="expacpt3">
+		<setcharinfo type="grade" value="3"/>
+			<debug>
+				<text><![CDATA[
+Name   : ${local.name}
+Level  : ${local.level}
+Exp    : ${local.exp}
+MaxExp : ${local.maxexp}
+Grade : ${local.grade}
+				]]></text>
+			</debug>
+			<sub varname="local.maxexp" value="${local.exp}"/>
+			<ifle varname="local.level" value="40">
+				<jump label="congra3"/>
+			</ifle>
+			<jump label="congra3"/>
+		</script>
+
+		<script name="expacpt4">
+		<setcharinfo type="grade" value="4"/>
+			<debug>
+				<text><![CDATA[
+Name   : ${local.name}
+Level  : ${local.level}
+Exp    : ${local.exp}
+MaxExp : ${local.maxexp}
+Grade : ${local.grade}
+				]]></text>
+			</debug>
+			<sub varname="local.maxexp" value="${local.exp}"/>
+			<ifle varname="local.level" value="40">
+				<jump label="congra4"/>
+			</ifle>
+			<jump label="congra4"/>
+		</script>
+
+
+		<script name="expacpt5">
+		<setcharinfo type="grade" value="5"/>
+			<debug>
+				<text><![CDATA[
+Name   : ${local.name}
+Level  : ${local.level}
+Exp    : ${local.exp}
+MaxExp : ${local.maxexp}
+Grade : ${local.grade}
+				]]></text>
+			</debug>
+			<sub varname="local.maxexp" value="${local.exp}"/>
+			<ifle varname="local.level" value="40">
+				<jump label="congra5"/>
+			</ifle>
+			<jump label="congra5"/>
+		</script>
+
+
+
+
+		<script name="expacpt6">
+		<setcharinfo type="grade" value="6"/>
+			<debug>
+				<text><![CDATA[
+Name   : ${local.name}
+Level  : ${local.level}
+Exp    : ${local.exp}
+MaxExp : ${local.maxexp}
+Grade : ${local.grade}
+				]]></text>
+			</debug>
+			<sub varname="local.maxexp" value="${local.exp}"/>
+			<ifle varname="local.level" value="40">
+				<jump label="congra6"/>
+			</ifle>
+			<jump label="congra6"/>
+		</script>
+
+
+
+
+		<dialog name="congra2"
+				cutin="0"
+				text="congratulation!! "
+				timeout="0"
+				choiceontimeout="0"
+				closebutton="0"
+				bgframeclick="0">
+			<selection next="2blade" text="thank you very much" />
+		</dialog>
+
+		<dialog name="congra3"
+				cutin="0"
+				text="congratulation!! "
+				timeout="0"
+				choiceontimeout="0"
+				closebutton="0"
+				bgframeclick="0">
+			<selection next="3blade" text="thank you very much" />
+		</dialog>
+
+		<dialog name="congra4"
+				cutin="0"
+				text="congratulation!! "
+				timeout="0"
+				choiceontimeout="0"
+				closebutton="0"
+				bgframeclick="0">
+			<selection next="4blade" text="thank you very much" />
+		</dialog>
+
+
+		<dialog name="congra5"
+				cutin="0"
+				text="congratulation!!"
+				timeout="0"
+				choiceontimeout="0"
+				closebutton="0"
+				bgframeclick="0">
+			<selection next="5blade" text="thank you very much" />
+		</dialog>
+
+
+
+
+		<dialog name="congra6"
+				cutin="0"
+				text="congratulation!!"
+				timeout="0"
+				choiceontimeout="0"
+				closebutton="0"
+				bgframeclick="0">
+			<selection next="5blade" text="thank you very much" />
+		</dialog>
+
+
+
+		<dialog name="nana_exp_info" cutin="0" closebutton="1">
+			<text><![CDATA[
+				${local.grade}<br>
+				เวลแค? ${local.level} .! Level down!!!
+			]]></text>
+			<selection text="OK" />
+		</dialog>
+
+
+
+		<script name="2blade">
+
+			<addbeitem type="110019" Slot0="71154" Slot1="0" Slot2="0" Slot3="0" Slot4="0"/>
+			<addbeitem type="120021" Slot0="72165" Slot1="0" Slot2="0" Slot3="0" Slot4="0"/>
+			<addbeitem type="130004" Slot0="73154" Slot1="0" Slot2="0" Slot3="0" Slot4="0"/>
+			<addbeitem type="140010" Slot0="74154" Slot1="0" Slot2="0" Slot3="0" Slot4="0"/>
+
+			<addcoitem type="71154" amount="1"/>
+			<addcoitem type="72154" amount="1"/>
+			<addcoitem type="73154" amount="1"/>
+			<addcoitem type="74154" amount="1"/>
+
+
+		</script>
+
+
+		<script name="3blade">
+
+			<addbeitem type="120013" Slot0="72198" Slot1="0" Slot2="0" Slot3="0" Slot4="0"/>
+			<addbeitem type="130019" Slot0="73198" Slot1="0" Slot2="0" Slot3="0" Slot4="0"/>
+			<addbeitem type="110016" Slot0="71198" Slot1="0" Slot2="0" Slot3="0" Slot4="0"/>
+			<addbeitem type="140004" Slot0="74198" Slot1="0" Slot2="0" Slot3="0" Slot4="0"/>
+
+			<addcoitem type="72198" amount="1"/>
+			<addcoitem type="73198" amount="1"/>
+			<addcoitem type="71198" amount="1"/>
+			<addcoitem type="74198" amount="1"/>
+
+
+		</script>
+
+
+
+		<script name="4blade">
+
+			<addbeitem type="140013" Slot0="74242" Slot1="0" Slot2="0" Slot3="0" Slot4="0"/>
+			<addbeitem type="130017" Slot0="73242" Slot1="0" Slot2="0" Slot3="0" Slot4="0"/>
+			<addbeitem type="110003" Slot0="71242" Slot1="0" Slot2="0" Slot3="0" Slot4="0"/>
+			<addbeitem type="120008" Slot0="72242" Slot1="0" Slot2="0" Slot3="0" Slot4="0"/>
+
+			<addcoitem type="74242" amount="1"/>
+			<addcoitem type="73242" amount="1"/>
+			<addcoitem type="71242" amount="1"/>
+			<addcoitem type="72242" amount="1"/>
+
+
+		</script>
+
+
+		<script name="5blade">
+			<addbeitem type="120011" Slot0="72297" Slot1="0" Slot2="0" Slot3="0" Slot4="0"/>
+			<addbeitem type="130010" Slot0="73297" Slot1="0" Slot2="0" Slot3="0" Slot4="0"/>
+			<addbeitem type="140012" Slot0="74297" Slot1="0" Slot2="0" Slot3="0" Slot4="0"/>
+			<addbeitem type="110008" Slot0="71297" Slot1="0" Slot2="0" Slot3="0" Slot4="0"/>
+
+			<addcoitem type="72297" amount="1"/>
+			<addcoitem type="73297" amount="1"/>
+			<addcoitem type="74297" amount="1"/>
+			<addcoitem type="71297" amount="1"/>
+
+
+
+		</script>
+
+
+		<script name="6blade">
+	
+
+			<addbeitem type="120010" Slot0="72385" Slot1="0" Slot2="0" Slot3="0" Slot4="0"/>
+			<addbeitem type="110009" Slot0="71385" Slot1="0" Slot2="0" Slot3="0" Slot4="0"/>
+			<addbeitem type="130021" Slot0="73385" Slot1="0" Slot2="0" Slot3="0" Slot4="0"/>
+			<addbeitem type="140018" Slot0="74385" Slot1="0" Slot2="0" Slot3="0" Slot4="0"/>
+
+
+			<addcoitem type="72385" amount="1"/>
+			<addcoitem type="71385" amount="1"/>
+			<addcoitem type="73385" amount="1"/>
+			<addcoitem type="74385" amount="1"/>
+
+		</script>
+
+
+	</npc>
+</field>

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="Shift_JIS"?>
+<!-- MapID:24 エスティバー 3階 -->
+<field>
+	<!-- 3F→2F -->
+	<warpgate id="1" x="6150" y="13049" shell="71" idCli="542" dir="0" idDestField="3" xDest="70" yDest="126"/>
+	<!-- 3F→4次元教室 -->
+	<warpgate id="3" x="9450" y="12549" shell="71" idCli="309" dir="0" idDestField="425" xDest="26" yDest="121"/>
+</field>

@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="Shift_JIS"?>
+<!-- MapID:217-SF002013 旧校舎 2階 -->
+<field>
+	<!-- メイイェン -->
+	<npc id="200" shell="41" x="60" y="63" dir="5" init="init">
+		<script name="init">
+			<call name="peke.get.info" />
+			<call name="peke.get.epi"/>
+
+			<ifge varname="peke.epi.yoi" value="0">
+				<jump label="meiyen1"/>
+			</ifge>
+		</script>
+
+		<!-- ▼セリフ -->
+		<dialog name="meiyen1" cutin="0" closebutton="1">
+			<text><![CDATA[
+				いつまで一人でいなければならないの…
+			]]></text>
+			<selection next="meiyen_quest_no" text="新しいクエスト表示" />
+			<selection next="meiyen_quest_miss" text="クエスト達成を報告する" />
+		</dialog>
+
+		<!-- ▼クエスト -->
+		<dialog name="meiyen_quest_no" cutin="0" closebutton="1">
+			<text><![CDATA[
+				Thank you、でも今は特に頼みたいことはないわ。
+			]]></text>
+			<selection text="そう？　またね" />
+		</dialog>
+
+		<dialog name="meiyen_quest_miss" cutin="0" closebutton="1">
+			<text><![CDATA[
+				頼みって、何のこと？
+			]]></text>
+			<selection text="No、お元気で" />
+		</dialog>
+	</npc>
+</field>

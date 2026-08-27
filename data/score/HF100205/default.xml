@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="Shift_JIS"?>
+<!-- MapID:390-HF100205 試練の部屋 -->
+<field>
+	<!-- 試練の部屋→世界樹の根の迷路 -->
+	<warpgate id="2" x="5000" y="1849" shell="9" idCli="45" dir="0" idDestField="388" xDest="6" yDest="4"/>
+
+	<generator>
+		<point x="42" y="57"/>
+		<point x="52" y="27"/>
+		<point x="47" y="39"/>
+		<point x="52" y="39"/>
+		<point x="45" y="49"/>
+		<point x="54" y="49"/>
+		<point x="46" y="60"/>
+		<point x="39" y="59"/>
+		<point x="60" y="59"/>
+		<point x="58" y="72"/>
+		<point x="40" y="72"/>
+		<point x="50" y="70"/>
+
+		<monster type="14" count="32">		<!-- ソソ☆7 -->
+		</monster>
+		<monster type="13" count="32">		<!-- ｸﾞﾚｺﾞﾘｰⅡ世7 -->
+		</monster>
+		<monster type="12" count="32">		<!-- ボボカン5 -->
+		</monster>
+	</generator>
+</field>

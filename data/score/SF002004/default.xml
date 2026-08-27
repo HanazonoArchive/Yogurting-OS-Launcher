@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="Shift_JIS"?>
+<!-- MapID:93 宵月学院 2階 -->
+<field>
+	<!-- 2F→1F -->
+	<warpgate id="1" x="5150" y="4949" shell="87" idCli="1216" dir="0" idDestField="92" xDest="60" yDest="45"/>
+	<!-- 2F→3F -->
+	<warpgate id="2" x="6050" y="4749" shell="87" idCli="232" dir="0" idDestField="94" xDest="52" yDest="44"/>
+	
+	<!-- 宵月4年生EP -->
+<!--	<episodegate subid="20702" idCli="234" shell="96" x="72.4999694824219" y="69.4986953735352" dir="0" visible="1" usable="1">-->
+<!--		<episode id="83" grade="4"/>-->	<!-- オルガンの音 -->
+<!--		<episode id="84" grade="4"/>-->	<!-- 愛の詩 -->
+<!--		<episode id="94" grade="4"/>-->	<!-- 逃走の果てに -->
+<!--		<episode id="106" grade="4"/>-->	<!-- 人形紛失事件 -->
+<!--		<episode id="85" grade="4"/>-->	<!-- 失踪 -->
+<!--		<episode id="109" grade="4"/>-->	<!-- 消えたオルガンペダル -->
+<!--		<episode id="143" grade="4"/>-->	<!-- ワシが校則だ！ -->
+<!--		<episode id="86" grade="4"/>-->	<!-- ロストメモリーズ -->
+<!--		<episode id="133" grade="4"/>-->	<!-- 旧校舎最後の日 -->
+<!--		<episode id="103" grade="4"/>-->	<!-- Shall We clean? -->
+<!--		<episode id="102" grade="4"/>-->	<!-- のどかな午後とオルゴール -->
+<!--		<episode id="87" grade="4"/>-->	<!-- 操り人形の主 -->
+<!--		<episode id="137" grade="4"/>-->	<!-- キツネの行水 -->
+<!--		<episode id="117" grade="4"/>-->	<!-- 特命生徒会・外伝 -->
+<!--	</episodegate>-->
+</field>

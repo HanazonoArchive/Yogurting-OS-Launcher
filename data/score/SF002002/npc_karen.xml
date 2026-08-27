@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="Shift_JIS"?>
+<!-- MapID:91 裏庭 聖堂周辺 -->
+<field>
+	<!-- 火蓮 -->
+	<npc id="175" shell="40" x="192" y="73" dir="6" init="init">
+		<script name="init">
+			<call name="peke.get.info" />
+			<call name="peke.get.epi"/>
+
+			<ifge varname="peke.epi.yoi" value="0">
+					<jump label="karen1"/>
+			</ifge>
+		</script>
+
+		<!-- ▼セリフ -->
+		<dialog name="karen1" cutin="0" closebutton="1">
+			<text><![CDATA[
+				何よアンタたち。<br>
+				また、ヤな人間たちが増えたのね。<br>
+				あっち行け！
+			]]></text>
+			<selection next="karen_quest_no" text="新しいクエスト表示" />
+			<selection next="karen_quest_miss" text="クエスト達成を報告する" />
+		</dialog>
+
+		<!-- ▼クエスト -->
+		<dialog name="karen_quest_no" cutin="0" closebutton="1">
+			<text><![CDATA[
+				アンタたちに用はないよ。
+			]]></text>
+			<selection text="…またね" />
+		</dialog>
+
+		<dialog name="karen_quest_miss" cutin="0" closebutton="1">
+			<text><![CDATA[
+					ふざけんな！　どっか行け！
+			]]></text>
+			<selection text="…ごめんね" />
+		</dialog>
+	</npc>
+</field>

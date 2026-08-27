@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="Shift_JIS"?>
+<!-- MapID:27 エスティバー バス停 -->
+<field>
+	<!-- バス停→屋外 -->
+	<warpgate id="1" x="8047" y="8449" shell="49" idCli="489" dir="0" idDestField="1" xDest="76" yDest="11"/>
+	<!-- バス停→エスティバー地下水路 -->
+	<warpgate id="5" x="5100" y="8649" shell="49" idCli="503" dir="0" idDestField="408" xDest="17" yDest="170"/>
+
+	<!-- エスティバー5年生EP -->
+<!--	<episodegate subid="10201" idCli="497" shell="52" x="67.4999694824219" y="85.4986953735352" dir="0" visible="1" usable="1">-->
+<!--		<episode id="146" grade="5"/>-->	<!-- 追跡者"K" -->
+<!--		<episode id="148" grade="5"/>-->	<!-- 特命生徒会・完結編 -->
+<!--		<episode id="150" grade="5"/>-->	<!-- 封印の守護者 -->
+<!--		<episode id="152" grade="5"/>-->	<!-- 食いしんぼう侍・八竜伝 -->
+<!--		<episode id="154" grade="5"/>-->	<!-- 復活！ 姐さん伝説！ -->
+<!--		<episode id="158" grade="5"/>-->	<!-- 特命生徒会・新たなる闘い -->
+<!--		<episode id="155" grade="5"/>-->	<!-- 秘密いっぱいの箱 -->
+<!--		<episode id="156" grade="5"/>-->	<!-- 犯人は何人？ -->
+<!--	</episodegate>-->
+</field>

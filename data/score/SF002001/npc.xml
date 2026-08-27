@@ -1,0 +1,290 @@
+<?xml version="1.0" encoding="Shift_JIS"?>
+<!-- MapID:90 宵月学院 グラウンド -->
+<field>
+	<!-- 暗田 -->
+	<npc id="169" shell="48" x="73" y="157" dir="1" init="init"/>
+	<!-- サム -->
+	<npc id="171" shell="51" x="115" y="169" dir="3" init="init">
+		<dialog name="init"
+				cutin="0"
+				timeout="0"
+				choiceontimeout="0"
+				closebutton="1"
+				bgframeclick="0">
+			<text><![CDATA[
+				エミュはどうやってやるのか分かったかな？<br>
+				うん、それじゃ、楽しい学校生活をね。
+			]]></text>
+			<selection next="command1_1" text="コマンドについて教えて下さい" />
+			<selection next="exitem_first" text="アイテムを交換して下さい" />
+			<selection text="Goodbye" />
+		</dialog>
+		<script name="command1_1">
+			<set varname="lyna.sam.first" value="1"/>
+			<jump label="command1_2"/>
+		</script>
+		<dialog name="command1_2"
+				cutin="0"
+				timeout="0"
+				choiceontimeout="0"
+				closebutton="1"
+				bgframeclick="0">
+			<text><![CDATA[
+				コマンドはチャット欄で使うんだよ。<br>
+				試しに<font color="FF0000">/list</font>と打ってみるといいね。
+			]]></text>
+			<selection text="Thank youございました" />
+		</dialog>
+		
+		<!-- アイテム交換 -->
+		<dialog name="exitem_first" cutin="0" closebutton="1">
+			<text><![CDATA[
+				<font color="00FFFF">Freshman牛乳 5 個</font> と <font color="00FFFF">スティンガー</font> を交換する？
+			]]></text>
+			<selection next="exitem_check" text="お願いします" />
+			<selection next="exitem_cancel" text="やっぱりいいです" />
+		</dialog>
+		<script name="exitem_check">
+			<ifcoitem type="10005" amount="5">
+				<addbeitem type="110001"/>
+				<delcoitem type="10005" amount="5"/>
+				<jump label="exitem_succeeded"/>
+			</ifcoitem>
+			<jump label="exitem_failed"/>
+		</script>
+		<dialog name="exitem_succeeded" cutin="0" closebutton="1">
+			<text><![CDATA[
+				Yes、<font color="00FFFF">スティンガー</font> ね。
+			]]></text>
+			<selection text="Thank youございました" />
+		</dialog>
+		<dialog name="exitem_failed" cutin="0" closebutton="1">
+			<text><![CDATA[
+				アイテムが足りないようだね。
+			]]></text>
+			<selection text="分かりました" />
+		</dialog>
+		<dialog name="exitem_cancel" cutin="0" closebutton="1">
+			<text><![CDATA[
+				交換したくなったらいつでも言ってね。
+			]]></text>
+			<selection text="分かりました" />
+		</dialog>
+	</npc>
+	<!-- ルーベン -->
+	<npc id="170" shell="45" x="58" y="103" dir="2" init="init"/>
+	<!-- ハチ -->
+	<npc id="557" shell="76" x="189" y="188" dir="4" init="hachi1">
+		<dialog name="hachi1" cutin="0" closebutton="1">
+			<text><![CDATA[
+				ヤッホー！　私はHachi！　So-ilの飼育部員なんだ～！<br>あ、GloveのSkillのことなら私に任せて！
+			]]></text>
+			<selection next="hachi_showquest" text="新しいクエストを表示" />
+			<selection next="hachi_report" text="クエスト達成を報告する" />
+			<selection next="hachi_skill" text="Skillを習う" />
+		</dialog>
+		<dialog name="hachi_showquest" cutin="0" closebutton="1">
+			<text><![CDATA[
+				う～ん、今は特に…また今度、お願い！
+			]]></text>
+			<selection text="うん、じゃね" />
+		</dialog>
+		<dialog name="hachi_report" cutin="0" closebutton="1">
+			<text><![CDATA[
+				えっ、何も頼んでないよね？
+			]]></text>
+			<selection text="ごめん、勘違い" />
+		</dialog>
+		<buyskill name="hachi_skill">
+			<skill type="41001" price="50" />
+			<skill type="41011" price="5000" />
+			<skill type="41021" price="90000" />
+			<skill type="41031" price="200" />
+			<skill type="41041" price="7000" />
+			<skill type="41051" price="95000" />
+			<skill type="41091" price="50" />
+			<skill type="41101" price="500" />
+			<skill type="41111" price="1200" />
+		</buyskill>
+	</npc>
+	
+	<!-- ナナ -->
+	<npc id="366" shell="111" x="127" y="167" dir="4" init="init">
+		<!-- 初回 -->
+		<script name="init">
+			<ifndef varname="lyna.nana.first">
+				<jump label="nana1_1"/>
+			</ifndef>
+			<else>
+				<ifndef varname="lyna.sam.first">
+					<jump label="nana2"/>
+				</ifndef>
+				<else>
+					<jump label="nana3_1"/>
+				</else>
+			</else>
+		</script>
+		<dialog name="nana1_1" cutin="0" closebutton="1">
+			<text><![CDATA[
+				はじめまして！ボクは<font color="00FFFF">Nana</font>。<br>
+				エミュに繋ぐのは初めてかな。
+			]]></text>
+			<selection next="nana1_2" text="はじめまして！" />
+		</dialog>
+		<script name="nana1_2">
+			<set varname="lyna.nana.first" value="1"/>
+			<jump label="nana1_3"/>
+		</script>
+		<dialog name="nana1_3" cutin="0" closebutton="1">
+			<text><![CDATA[
+				じゃあまず<font color="00FFFF">SamTeacher</font>に話しかけてみて！<br>
+			]]></text>
+			<selection next="nana1_4" text="わかった！" />
+		</dialog>
+		<message name="nana1_4" text="サム先生に話しかけよう！"/>
+		
+		<!-- サム先生に話しかけてない -->
+		<dialog name="nana2" cutin="0" closebutton="1">
+			<text><![CDATA[
+				SamTeacherはすぐそこにいるよ。<br>
+				じゃあ、また後でね！
+			]]></text>
+			<selection text="うん、また後で" />
+		</dialog>
+		
+		<!-- サム先生に話しかけた直後 -->
+		<script name="nana3_1">
+			<ifdef varname="lyna.nana.samok">
+				<jump label="nana4"/>
+			</ifdef>
+			<set varname="lyna.nana.samok" value="1"/>
+			<jump label="nana3_2"/>
+		</script>
+		<dialog name="nana3_2" cutin="0" closebutton="1">
+			<text><![CDATA[
+				SamTeacherに<font color="00FFFF">コマンド</font>の使い方を教えてもらったみたいだね。<br>
+				それじゃあ、エミュを楽しんでね！
+			]]></text>
+			<selection text="Thank you!" />
+		</dialog>
+		
+		<!-- サム先生に話しかけた後2回目以降 -->
+		<dialog name="nana4" cutin="0" closebutton="1">
+			<text><![CDATA[
+				ヨーグルティング<font color="00FFFF">３がっき</font>はじまるよー！<br>
+			]]></text>
+			<selection next="nana_janken_init" text="磯野！ジャンケンしようぜ！" />
+			<selection next="nana_exp_check" text="おつげをきく" />
+			<selection next="nana_next_menu" text="Next" />
+		</dialog>
+		
+		<!-- おつげをきく -->
+		<script name="nana_exp_check">
+			<getcharinfo varname="local.name" type="name"/>
+			<getcharinfo varname="local.exp" type="exp"/>
+			<getcharinfo varname="local.maxexp" type="maxexp"/>
+			<getcharinfo varname="local.level" type="level"/>
+			<debug>
+				<text><![CDATA[
+Name   : ${local.name}
+Level  : ${local.level}
+Exp    : ${local.exp}
+MaxExp : ${local.maxexp}]]></text>
+			</debug>
+			<sub varname="local.maxexp" value="${local.exp}"/>
+			<ifle varname="local.level" value="299">
+				<jump label="nana_exp_info"/>
+			</ifle>
+			<jump label="nana_exp_over"/>
+		</script>
+		<dialog name="nana_exp_info" cutin="0" closebutton="1">
+			<text><![CDATA[
+				${local.name}が つぎのレベルになるには<br>
+				あと${local.maxexp}の けいけんが ひつようだよ！
+			]]></text>
+			<selection text="Thank you!" />
+		</dialog>
+		<dialog name="nana_exp_over" cutin="0" closebutton="1">
+			<text><![CDATA[
+				${local.name}は もうじゅうぶんに つよいよ！
+			]]></text>
+			<selection text="Thank you!" />
+		</dialog>
+		
+		<!-- ジャンケン -->
+		<script name="nana_janken_init">
+			<call name="lyna.nana.janken.init"/>
+			<jump label="nana_janken_select"/>
+		</script>
+		<dialog name="nana_janken_select" cutin="0" closebutton="1">
+			<text><![CDATA[
+				これまでの成績はボクの${lyna.nana.win}勝${lyna.nana.lose}敗${lyna.nana.draw}分けだね。<br>
+				Here we go! Rock, Paper, Scissors... Shoot!<br>
+			]]></text>
+			<selection next="nana_janken_judge" text="Rock!" op="set" varname="hand" value="0" />
+			<selection next="nana_janken_judge" text="Scissors!" op="set" varname="hand" value="1" />
+			<selection next="nana_janken_judge" text="Paper!" op="set" varname="hand" value="2" />
+		</dialog>
+		<script name="nana_janken_judge">
+			<call name="lyna.nana.janken.judge"/>
+			<jump label="nana_janken_result"/>
+		</script>
+		<dialog name="nana_janken_result" cutin="${lyna.nana.cutin}" text="${lyna.nana.msg}" closebutton="1">
+			<selection text="${lyna.nana.select}" />
+		</dialog>
+		
+		<dialog name="nana_next_menu" cutin="0" closebutton="1">
+			<text><![CDATA[
+				どうする？<br>
+			]]></text>
+			<selection next="nana_change_bgm" text="BGM変えて" />
+			<selection next="nana_change_se" text="SE鳴らして" />
+			<selection next="nana_gradeup" text="進級させて" />
+		</dialog>
+		<script name="nana_change_bgm">
+			<bgm value="13"/>
+		</script>
+		<script name="nana_change_se">
+			<se value="4122"/>
+		</script>
+		
+		<!-- 進級テスト -->
+		<script name="nana_gradeup">
+			<getcharinfo varname="local.grade" type="grade" />
+			<ifge varname="local.grade" value="6">
+				<jump label="nana_gradeup_fail" />
+			</ifge>
+			<add varname="local.grade" value="1" />
+			<setcharinfo type="grade" value="${local.grade}" />
+			<jump label="nana_gradeup_succ" />
+		</script>
+		<dialog name="nana_gradeup_succ" cutin="0" closebutton="1">
+			<text><![CDATA[
+				進級おめでとう！<br>
+			]]></text>
+			<selection text="Thank you!" />
+		</dialog>
+		<dialog name="nana_gradeup_fail" cutin="0" closebutton="1">
+			<text><![CDATA[
+				これ以上は進級できないよ！<br>
+			]]></text>
+			<selection text="さーせん" />
+		</dialog>
+	</npc>
+	
+	<!-- メガデス -->
+	<npc id="118" shell="56" x="130" y="167" dir="4" init="mega1">
+		<dialog name="mega1" cutin="0" closebutton="1">
+			<text><![CDATA[
+				　はじめまして！ボクは<font color="00FFFF">メガデス</font>。
+			]]></text>
+			<selection next="mega2" text="はじめまして！" />
+		</dialog>
+		<dialog npcid="519" name="mega2" cutin="0" closebutton="1">
+			<text><![CDATA[
+				素顔ならまかせろー。
+			]]></text>
+			<selection text="バリバリ" />
+		</dialog>
+	</npc>
+</field>

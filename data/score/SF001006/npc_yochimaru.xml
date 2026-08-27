@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="Shift_JIS"?>
+<!-- MapID:26 エスティバー 裏庭 -->
+<field>
+	<!-- 四刀丸 -->
+	<npc id="10" shell="9" x="102" y="101" dir="4" init="init" >
+		<script name="init">
+			<call name="peke.get.info" />
+			<call name="peke.get.epi"/>
+
+			<ifeq varname="local.school" value="1">
+				<ifge varname="peke.epi.es" value="9">
+						<jump label="yochimaru_es3"/>
+				</ifge>
+				<ifge varname="peke.epi.es" value="8">
+						<jump label="yochimaru_es2"/>
+				</ifge>
+				<ifge varname="peke.epi.es" value="0">
+						<jump label="yochimaru_es1"/>
+				</ifge>
+			</ifeq>
+			<ifge varname="peke.epi.es" value="9">
+					<jump label="yochimaru_es3"/>
+			</ifge>
+			<ifge varname="peke.epi.es" value="8">
+					<jump label="yochimaru_es2"/>
+			</ifge>
+			<ifge varname="peke.epi.es" value="0">
+					<jump label="yochimaru_yoi1"/>
+			</ifge>
+		</script>
+
+		<!-- ▼エス生セリフ -->
+		<dialog name="yochimaru_es1" cutin="0" closebutton="1">
+			<text><![CDATA[
+				うーむ…何か画期的にうまいものがどこかにないか？
+			]]></text>
+			<selection next="yochimaru_quest_no" text="新しいクエスト表示" />
+			<selection next="yochimaru_quest_miss" text="クエスト達成を報告する" />
+		</dialog>
+
+		<dialog name="yochimaru_es2" cutin="0" closebutton="1">
+			<text><![CDATA[
+				おお、よく来たな。最近はどうしておった。<br>
+				この頃は羊たちも育ち盛りで、丸々太って食いでがありそうだ。<br>
+				ジンギスカンパーティとしゃれ込んでみぬか？
+			]]></text>
+			<selection next="yochimaru_quest_no" text="新しいクエスト表示" />
+			<selection next="yochimaru_quest_miss" text="クエスト達成を報告する" />
+		</dialog>
+
+		<dialog name="yochimaru_es3" cutin="0" closebutton="1">
+			<text><![CDATA[
+				ハハハ、本当に惜しかったな。よりによって、ちょうどパーティを始める瞬間にモンスターが出るとは。そうだな、いずれ機会があったら今一度、ジンギスカンパーティを開こうぞ。
+			]]></text>
+			<selection next="yochimaru_quest_no" text="新しいクエスト表示" />
+			<selection next="yochimaru_quest_miss" text="クエスト達成を報告する" />
+		</dialog>
+
+		<!-- ▼宵生セリフ -->
+		<dialog name="yochimaru_yoi1" cutin="0" closebutton="1">
+			<text><![CDATA[
+				むむ、制服が違うところを見ると、他の学校のStudentのようだな。拙者はYochimaru(よちまる)と申す。これからよろしく頼むぞ。いずれ時間があれば、古今東西の食生活について共に話そうぞ。
+			]]></text>
+			<selection next="yochimaru_quest_no" text="新しいクエスト表示" />
+			<selection next="yochimaru_quest_miss" text="クエスト達成を報告する" />
+		</dialog>
+
+		<!-- ▼クエスト -->
+		<dialog name="yochimaru_quest_no" cutin="0" closebutton="1">
+			<text><![CDATA[
+				う～む。後でまた来てくれぬか？
+			]]></text>
+			<selection text="そうですか、失礼します" />
+		</dialog>
+
+		<dialog name="yochimaru_quest_miss" cutin="0" closebutton="1">
+			<text><![CDATA[
+				ううむ…<br>
+				お主らには何も頼んでいないと思うのだが、拙者の勘違いか？
+			]]></text>
+			<selection text="すみません、失礼します" />
+		</dialog>
+
+		<!-- ▼スキル -->
+		<dialog name="skill" cutin="0" closebutton="1">
+			<text><![CDATA[
+				おお、お主、Skillを学びに来たのだな？<br>
+				ではまず、お主のこれまでの経験にふさわしい熟練度にして進ぜよう。
+			]]></text>
+			<selection next="skill2" text="熟練度？" />
+		</dialog>
+
+		<dialog name="skill2" cutin="0" closebutton="1">
+			<text><![CDATA[
+				4種類の武器にはそれぞれ<font color="00FFBD">熟練度</font>というものがある。<br>
+				熟練度が上がれば多様なSkillを学べるし、命中率も上がるのだ。<br>
+				お主の得意な武器を <font color="00FFBD">2種類</font>選んでくれ。
+			]]></text>
+			<selection text="わかりました！" />
+		</dialog>
+	</npc>
+</field>

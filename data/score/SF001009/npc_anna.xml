@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="Shift_JIS"?>
+<!-- エスティバー 世界樹 -->
+<field>
+	<npc id="365" shell="78" x="66" y="77" dir="6" init="init">
+		<dialog name="init" cutin="0" closebutton="1">
+			<text><![CDATA[
+				やっほー！　わたしは <font color="00FFBD">Anna</font>！<br>
+				<font color="00FFBD">Estiva</font>に入学おめでとう！
+			]]></text>
+			<selection next="talk2" text="やっほ～！" />
+		</dialog>
+
+		<dialog name="talk2" cutin="0" closebutton="1">
+			<text><![CDATA[
+				ヨーグルティングをプレイするのに必要な、<font color="00FFBD">Episodeゲート</font>のことを<br>
+				教えてあげるね！
+			]]></text>
+			<selection next="talk3" text="Episodeゲート？" />
+		</dialog>
+
+		<dialog name="talk3" cutin="0" closebutton="1">
+			<text><![CDATA[
+				<font color="00FFBD">Episodeゲート</font>は、<font color="00FFBD">ヨーグルティング</font>で一番の特徴になってる<br>
+				 <font color="00FFBD">Episode</font>をプレイするために、ぜ～ったい必要なの。<br>
+				使い方は簡単だから、よ～く聞いて覚えてね。
+			]]></text>
+			<selection next="talk4" text="うん。" />
+		</dialog>
+
+		<dialog name="talk4" cutin="0" closebutton="1">
+			<text><![CDATA[
+				まず、Episodeゲートをクリック～！　<font color="00FFBD">ルームを作る</font>ボタンをクリック～！<br>
+				Episodeを選んで<font color="00FFBD">Confirm</font>を押すと待機室！<br>
+				準備OKならEpisodeを<font color="00FFBD">スタート</font>！　簡単でしょ、ラララ～！
+			]]></text>
+			<selection next="talk5" text="ルームを作る、選ぶ、スタート。だね？" />
+		</dialog>
+
+		<dialog name="talk5" cutin="0" closebutton="1">
+			<text><![CDATA[
+				その通り！　それと、大勢でプレイした方がアイテムもたくさん出るから、<br>
+				みんなで力を合わせて楽しんでみてね！<br>
+				その他のことは、実際に<font color="00FFBD">Episode</font>をやればわかるようになってるよ！
+			]]></text>
+			<selection next="talk6" text="わかった、それじゃEpisodeゲートをクリックしてみるね！" />
+		</dialog>
+
+		<dialog name="talk6" cutin="0" closebutton="1">
+			<text><![CDATA[
+				一つ一つ順番にこなしていけば、ゼッタイうまくいくから！<br>
+				がんばって～！<br>
+				それじゃ学校で会おうね！
+			]]></text>
+			<selection text="うん！　Thank you！" />
+		</dialog>
+	</npc>
+</field>

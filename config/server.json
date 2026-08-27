@@ -1,0 +1,27 @@
+{
+  "Server": {
+    "Name": "Yogurting Online English Revival",
+    "Motd": "Welcome to Yogurting Modern English Server! Enjoy your school life!",
+    "Language": "en",
+    "MaxPlayers": 500
+  },
+  "Network": {
+    "BindAddress": "0.0.0.0",
+    "LoginPort": 10000,
+    "FieldPort": 10002,
+    "EpisodePort": 10003,
+    "CommPort": 10004,
+    "AdminPort": 10010
+  },
+  "Paths": {
+    "DbDirectory": "data/db",
+    "ScoreDirectory": "data/score",
+    "SaveDirectory": "data/save"
+  },
+  "Gameplay": {
+    "DefaultExpRate": 1.0,
+    "DefaultDropRate": 1.0,
+    "DefaultMoneyRate": 1.0,
+    "AutoSaveIntervalSeconds": 60
+  }
+}

@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="Shift_JIS"?>
+<!-- MapID:92 宵月学院 1階 -->
+<field>
+	<!-- 1F→グラウンド -->
+	<warpgate id="1" x="5549" y="2650" shell="115" idCli="1057" dir="4" idDestField="90" xDest="124" yDest="165"/>
+	<!-- 1F→2F -->
+	<warpgate id="2" x="6050" y="4749" shell="115" idCli="1056" dir="0" idDestField="93" xDest="52" yDest="47"/>
+	
+	<!-- 宵月3年生EP -->
+<!--	<episodegate subid="20402" idCli="252" shell="123" x="26.4999713897705" y="29.4986934661865" dir="0" visible="1" usable="1">-->
+<!--		<episode id="92" grade="3"/>-->	<!-- ムジナ守衛 -->
+<!--		<episode id="93" grade="3"/>-->	<!-- 切り裂き魔の夜 -->
+<!--		<episode id="35" grade="3"/>-->	<!-- クロコがいる風景 -->
+<!--		<episode id="38" grade="3"/>-->	<!-- トイレのエミリーちゃん -->
+<!--		<episode id="134" grade="3"/>-->	<!-- ハラペコおおかみ -->
+<!--		<episode id="131" grade="3"/>-->	<!-- 旧校舎の記憶 -->
+<!--		<episode id="130" grade="3"/>-->	<!-- カレーなる日々 -->
+<!--		<episode id="135" grade="3"/>-->	<!-- 学校の中心で愛を煮込む -->
+<!--		<episode id="101" grade="3"/>-->	<!-- 洪水警報 -->
+<!--		<episode id="140" grade="3"/>-->	<!-- あの御方のために -->
+<!--		<episode id="139" grade="3"/>-->	<!-- コッコーを守れ -->
+<!--		<episode id="141" grade="3"/>-->	<!-- 宵月大事典 -->
+<!--		<episode id="96" grade="3"/>-->	<!-- 妖艶先生のお願い -->
+<!--		<episode id="54" grade="3"/>-->	<!-- 神父様の真実 -->
+<!--	</episodegate>-->
+</field>

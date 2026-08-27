@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="Shift_JIS"?>
+<!-- MapID:422-HF300115 煙幕水路 -->
+<field>
+	<warpgate id="2" x="5550" y="12149" shell="15" idCli="185" dir="0" idDestField="421" xDest="27" yDest="15"/>
+	<warpgate id="3" x="2450" y="2949" shell="15" idCli="186" dir="0" idDestField="423" xDest="67" yDest="77"/>
+	<generator>
+		<point x="57" y="111"/>
+		<point x="55" y="99"/>
+		<point x="56" y="87"/>
+		<point x="71" y="99"/>
+		<point x="77" y="109"/>
+		<point x="71" y="117"/>
+		<point x="86" y="116"/>
+		<point x="91" y="106"/>
+		<point x="82" y="100"/>
+		<point x="71" y="86"/>
+		<point x="68" y="71"/>
+		<point x="59" y="69"/>
+		<point x="68" y="53"/>
+		<point x="58" y="51"/>
+		<point x="48" y="54"/>
+		<point x="55" y="41"/>
+		<point x="69" y="40"/>
+		<point x="81" y="55"/>
+		<point x="85" y="68"/>
+		<point x="84" y="82"/>
+		<point x="97" y="79"/>
+		<point x="96" y="67"/>
+		<point x="99" y="52"/>
+		<point x="40" y="99"/>
+		<point x="32" y="106"/>
+		<point x="41" y="114"/>
+		<point x="31" y="118"/>
+		<point x="23" y="114"/>
+		<point x="25" y="100"/>
+		<point x="41" y="84"/>
+		<point x="31" y="83"/>
+		<point x="41" y="71"/>
+		<point x="29" y="67"/>
+		<point x="31" y="55"/>
+		<point x="28" y="44"/>
+		<point x="29" y="31"/>
+
+		<monster type="145" count="70">		<!-- ｼｬﾄﾞｳﾋﾞｰｽﾄ -->
+			<coitem type="30016" rate="6000"/>	<!-- 布切れ -->
+			<enitem type="00002" rate="6000"/>	<!-- 赤の色鉛筆 -->
+		</monster>
+		<monster type="146" count="70">		<!-- ﾊﾟﾄﾛﾎﾞ -->
+			<coitem type="30016" rate="6000"/>	<!-- 布切れ -->
+			<enitem type="00002" rate="6000"/>	<!-- 赤の色鉛筆 -->
+		</monster>
+	</generator>
+</field>

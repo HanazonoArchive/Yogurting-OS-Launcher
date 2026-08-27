@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="Shift_JIS"?>
+<!-- MapID:409-HF300102 宵月地下水路 -->
+<field>
+
+	<warpgate id="2" x="6550" y="17449" shell="14" idCli="292" dir="0" idDestField="162" xDest="39" yDest="84"/>
+	<warpgate id="3" x="1650" y="12449" shell="14" idCli="294" dir="0" idDestField="410" xDest="52" yDest="59"/>
+	<generator>
+		<point x="9" y="171"/>
+		<point x="23" y="170"/>
+		<point x="36" y="170"/>
+		<point x="51" y="171"/>
+		<point x="67" y="161"/>
+		<point x="69" y="147"/>
+		<point x="58" y="139"/>
+		<point x="42" y="139"/>
+		<point x="32" y="140"/>
+		<point x="22" y="143"/>
+		<point x="20" y="153"/>
+		<point x="35" y="155"/>
+		<point x="55" y="125"/>
+		<point x="41" y="123"/>
+		<point x="27" y="126"/>
+
+		<monster type="112" count="60">		<!-- ﾘﾄﾙｸﾛｺ -->
+		</monster>
+		<monster type="113" count="60">		<!-- ｸﾞﾛｰﾋﾞｰ -->
+		</monster>
+	</generator>
+</field>

@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="Shift_JIS"?>
+<!-- MapID:93 宵月学院 2階 -->
+<field>	
+	<!-- 購買おばちゃんNo.486(強化) -->
+	<npc id="166" shell="3" x="27" y="43" dir="2" init="init">
+		<script name="init">
+			<call name="peke.get.info" />
+			<call name="peke.get.epi"/>
+
+			<ifeq varname="local.school" value="2">
+				<ifge varname="peke.epi.yoi" value="0">
+					<jump label="pengin486_yoi1"/>
+				</ifge>
+			</ifeq>
+			<ifge varname="peke.epi.yoi" value="0">
+				<jump label="pengin486_es1"/>
+			</ifge>
+		</script>
+
+		<!-- ▼宵生セリフ -->
+		<dialog name="pengin486_yoi1" cutin="0" closebutton="1">
+			<text><![CDATA[
+				お～、Freshmanやね、いらっしゃ～い！<br>
+				ほんで、なに手伝おか～？
+			]]></text>
+			<selection next="enchant_menu" text="アイテムを強化したい" />
+			<selection next="crystal" text="結晶を精製したい" />
+			<selection next="next_menu" text="次のPageを表示" />
+		</dialog>
+
+		<!-- ▼エス生セリフ -->
+		<dialog name="pengin486_es1" cutin="0" closebutton="1">
+			<text><![CDATA[
+				Estivaからよう来たなぁ。<br>
+				で、なに手伝おか～？
+			]]></text>
+			<selection next="enchant_menu" text="アイテムを強化したい" />
+			<selection next="crystal" text="結晶を精製したい" />
+			<selection next="next_menu" text="次のPageを表示" />
+		</dialog>
+
+		<!-- ▼クエスト -->
+		<dialog name="next_menu" cutin="0" closebutton="1">
+			<text><![CDATA[
+				あ、ちょうど今、割のええバイトがあるで。
+			]]></text>
+			<selection next="pengin486_quest_no" text="新しいクエスト表示" />
+			<selection next="pengin486_quest_miss" text="クエスト達成を報告する" />
+		</dialog>
+
+		<dialog name="pengin486_quest_no" cutin="0" closebutton="1">
+			<text><![CDATA[
+				せやなぁ…今はバイトは必要あらへんな。
+			]]></text>
+			<selection text="そうですか、それじゃまた" />
+		</dialog>
+
+		<dialog name="pengin486_quest_miss" cutin="0" closebutton="1">
+			<text><![CDATA[
+				んん？　アンタたちは雇ってへんで？
+			]]></text>
+			<selection text="そうでした、すみません" />
+		</dialog>
+
+		<!-- ▼強化 -->
+		<dialog name="enchant_menu" cutin="0" timeout="0" choiceontimeout="0" closebutton="1" bgframeclick="0">
+			<text><![CDATA[
+				アイテム強化やね、ほな何しよか？<BR>
+				選んでや～
+			]]></text>
+			<selection next="attach" text="アイテムにOrigin Stoneを装着したい" />
+			<selection next="break" text="装着されたOrigin Stoneを外したい" />
+			<selection next="enchant_help1" text="アイテム強化について教えて下さい" />
+		</dialog>
+
+		<dialog name="enchant_help1" cutin="0" timeout="0" choiceontimeout="0" closebutton="1" bgframeclick="0">
+			<text><![CDATA[
+				武器とか制服に<font color="00FFBD">Origin Stone</font>を装着して、アイテムを強力にするのが、<BR>
+				アイテム強化やで～
+			]]></text>
+			<selection next="enchant_help1_2" text="なるほど！" />
+		</dialog>
+
+		<dialog name="enchant_help1_2" cutin="0" timeout="0" choiceontimeout="0" closebutton="1" bgframeclick="0">
+			<text><![CDATA[
+				アイテムにOrigin Stoneを装着した後、もっとええOrigin Stone見つかったら、<BR>
+				装着し直せるさかい、ドンドン強化したってや～！
+			]]></text>
+			<selection next="enchant_help1_3" text="強化には何が必要ですか？" />
+		</dialog>
+
+		<dialog name="enchant_help1_3" cutin="0" timeout="0" choiceontimeout="0" closebutton="1" bgframeclick="0">
+			<text><![CDATA[
+				アイテム強化に必要なのは、<BR>
+				<font color="00FFBD">強化スロットがあるアイテム</font>と、<font color="00FFBD">Origin Stone</font>と、<font color="00FFBD">参考書</font>や。
+			]]></text>
+			<selection next="enchant_help1_4" text="強化スロットがあるアイテム？"/>
+			<selection next="enchant_help2" text="参考書？"/>
+		</dialog>
+
+		<dialog name="enchant_help1_4" cutin="0" timeout="0" choiceontimeout="0" closebutton="1" bgframeclick="0">
+			<text><![CDATA[
+				武器とか制服には、強化スロットがあるアイテムがあるんや。<BR>
+				アイテム情報ウィンドウの一番下を見れば、<BR>
+				スロットがあるかどうかわかるで～
+			]]></text>
+			<selection next="enchant_help1_5" text="なるほど！"/>
+		</dialog>
+
+		<dialog name="enchant_help1_5" cutin="0" timeout="0" choiceontimeout="0" closebutton="1" bgframeclick="0">
+			<text><![CDATA[
+				強化できるアイテムが見つかったら、持ってくるんやで。<BR>
+				あと、参考書も忘れたらあかんで～？
+			]]></text>
+			<selection next="enchant_help2" text="参考書？"/>
+		</dialog>
+
+		<dialog name="enchant_help2" cutin="0" timeout="0" choiceontimeout="0" closebutton="1" bgframeclick="0">
+			<text><![CDATA[
+				Origin Stone装着するには参考書が必要や。<BR>
+				参考書の学年は、Origin Stoneの学年制限以上やないとあかんで。
+			]]></text>
+			<selection next="enchant_help2_2" text="どこで手に入りますか？"/>
+		</dialog>
+
+		<dialog name="enchant_help2_2" cutin="0" timeout="0" choiceontimeout="0" closebutton="1" bgframeclick="0">
+			<text><![CDATA[
+				StoreにおるNo.2が売っとるで。<BR>
+				アタシそっくりやけど、アタシやないから間違えんといてや～
+			]]></text>
+			<selection text="わかりました"/>
+		</dialog>
+
+		<attachstone name="attach" />
+		<detachstone name="detach" />
+		<breakstone name="break" />
+		<crystal name="crystal" />
+	</npc>
+</field>

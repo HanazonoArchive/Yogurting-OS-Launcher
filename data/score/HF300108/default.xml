@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="Shift_JIS"?>
+<!-- MapID:415-HF300108 秘密の地下水路 -->
+<field>
+
+	<warpgate id="2" x="1350" y="6249" shell="19" idCli="337" dir="0" idDestField="414" xDest="97" yDest="56"/>
+	<warpgate id="3" x="5550" y="1049" shell="19" idCli="334" dir="0" idDestField="416" xDest="57" yDest="80"/>
+	<generator>
+		<point x="19" y="59"/>
+		<point x="18" y="45"/>
+		<point x="18" y="25"/>
+		<point x="7" y="22"/>
+		<point x="6" y="10"/>
+		<point x="20" y="13"/>
+		<point x="30" y="17"/>
+		<point x="32" y="13"/>
+		<point x="29" y="44"/>
+		<point x="31" y="59"/>
+		<point x="42" y="61"/>
+		<point x="44" y="49"/>
+		<point x="41" y="34"/>
+		<point x="42" y="17"/>
+		<point x="56" y="16"/>
+		<point x="54" y="27"/>
+		<point x="55" y="39"/>
+		<point x="53" y="48"/>
+		<point x="58" y="56"/>
+
+		<monster type="127" count="57">		<!-- ｽﾊﾟｰﾋﾞｰ -->
+		</monster>
+		<monster type="128" count="57">		<!-- ﾐｭﾛﾋﾞｰ -->
+		</monster>
+	</generator>
+</field>

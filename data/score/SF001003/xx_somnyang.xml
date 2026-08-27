@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="Shift_JIS"?>
+<!-- MapID:1 エスティバー 屋外 -->
+<field>
+	<!-- 絶対知識の書 -->
+	<npc id="600" shell="96" x="70" y="109" dir="0" init="init" >
+		<script name="init">
+			<call name="peke.get.info" />
+			<call name="peke.get.epi" />
+			<jump label="menu"/>
+		</script>
+
+		<dialog name="menu" cutin="0" closebutton="1">
+			<text><![CDATA[
+				<font color="FFBB55">∬</font> Episode進行度 <font color="FFBB55">∬</font>
+			]]></text>
+			<selection next="epi_es" text="Estivaエピ" />
+			<selection next="epi_yoi" text="So-il学院エピ" />
+			<selection next="look" text="現在の状態を見る" />
+		</dialog>
+
+		<dialog name="epi_es" cutin="0" closebutton="1">
+			<text><![CDATA[
+				<font color="FFBB55">∬</font> Estiva　Episode進行度 <font color="FFBB55">∬</font>
+			]]></text>
+			<selection next="epi_es_up" text="1つ 進める" />
+			<selection next="epi_es_down" text="1つ Return" />
+			<selection next="epi_es_reset" text="0にリセット" />
+		</dialog>
+
+		<script name="epi_es_up">
+			<inc varname="peke.epi.es"/>
+			<jump label="look"/>
+		</script>
+
+		<script name="epi_es_down">
+			<dec varname="peke.epi.es"/>
+			<ifle varname="peke.epi.es" value="0">
+				<set varname="peke.epi.es" value="0"/>
+			</ifle>
+			<jump label="look"/>
+		</script>
+
+		<script name="epi_es_reset">
+			<set varname="peke.epi.es" value="0"/>
+			<jump label="look"/>
+		</script>
+
+		<dialog name="epi_yoi" cutin="0" closebutton="1">
+			<text><![CDATA[
+				<font color="FFBB55">∬</font> So-il　Episode進行度 <font color="FFBB55">∬</font>
+			]]></text>
+			<selection next="epi_yoi_up" text="1つ 進める" />
+			<selection next="epi_yoi_down" text="1つ Return" />
+			<selection next="epi_yoi_reset" text="0にリセット" />
+		</dialog>
+
+		<script name="epi_yoi_up">
+			<inc varname="peke.epi.yoi"/>
+			<jump label="look"/>
+		</script>
+
+		<script name="epi_yoi_down">
+			<dec varname="peke.epi.yoi"/>
+			<ifle varname="peke.epi.yoi" value="0">
+				<set varname="peke.epi.yoi" value="0"/>
+			</ifle>
+			<jump label="look"/>
+		</script>
+
+		<script name="epi_yoi_reset">
+			<set varname="peke.epi.yoi" value="0"/>
+			<jump label="look"/>
+		</script>
+
+		<script name="look">
+			<call name="peke.get.epi" />
+			<jump label="look2"/>
+		</script>
+
+		<dialog name="look2" cutin="0" closebutton="1">
+			<text><![CDATA[
+				現在　<font color="00FFBD">${local.grade}</font>年生<br>
+				　Estiva 第 <font color="00FFBD">${peke.epi.es}</font>エピ　<font color="00FFBD">${peke.temp}</font> Clear<br>
+				　So-il学院　第 <font color="00FFBD">${peke.epi.yoi}</font>エピ　<font color="00FFBD">${peke.temp2}</font> Clear
+			]]></text>
+			<selection next="menu" text="続ける" />
+			<selection text="終わる" />
+		</dialog>
+	</npc>
+</field>

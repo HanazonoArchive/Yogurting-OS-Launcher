@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="Shift_JIS"?>
+<library>
+	<!-- ジャンケン判定 -->
+	<!--	cutin	00通常　01喜び　02悲しみ　11チョキ　12グー　13パー
+		判定	00チョキ　01グー　02パー
+		((ＮＰＣ手－プレイヤー手－) + 3) mod 3＝00引き分け　01プレイヤー負け　02プレイヤー勝ち
+	-->
+	<function name="janken.judge">
+		<rnd varname="peke.temp2" value="3"/>
+		<set varname="peke.temp3" value="${peke.temp2}" />
+		<add varname="peke.temp3" value="11" />
+		<sub varname="peke.temp2" value="${peke.temp}"/>
+		<add varname="peke.temp2" value="3"/>
+		<mod varname="peke.temp2" value="3"/>
+		<switch varname="peke.temp">
+			<case value="1">
+				<set varname="peke.temp" value="グー"/>
+			</case>
+			<case value="0">
+				<set varname="peke.temp" value="チョキ"/>
+			</case>
+			<case value="2">
+				<set varname="peke.temp" value="パー"/>
+			</case>
+		</switch>
+	</function>
+
+	<!-- プレイヤー情報取得 -->
+	<function name="get.info">
+		<getcharinfo varname="local.name " type="name"/>
+		<getcharinfo varname="local.sex" type="sex"/>
+		<getcharinfo varname="local.school" type="school"/>
+		<getcharinfo varname="local.grade" type="grade"/>
+		<getcharinfo varname="local.level" type="level"/>
+		<getcharinfo varname="local.taff" type="taff"/>
+	</function>
+
+	<!-- エピ情報 -->
+	<function name="get.epi">
+		<ifndef varname="peke.epi.es">
+			<set varname="peke.epi.es" value="0"/>
+		</ifndef>
+		<ifndef varname="peke.epi.yoi">
+			<set varname="peke.epi.yoi" value="0"/>
+		</ifndef>
+
+		<set varname="peke.temp" value="エスティバー学園へようこそ！"/>
+		<set varname="peke.temp2" value="宵月学院にようこそ！"/>
+
+		<switch varname="peke.epi.es">
+			<case value="1">
+				<set varname="peke.temp" value="廊下いっぱいの箱"/>
+			</case>
+			<case value="2">
+				<set varname="peke.temp" value="廊下いっぱいの箱＠２階"/>
+			</case>
+			<case value="3">
+				<set varname="peke.temp" value="ゲトー大行進！"/>
+			</case>
+			<case value="4">
+				<set varname="peke.temp" value="ラッチュー撲滅作戦"/>
+			</case>
+			<case value="5">
+				<set varname="peke.temp" value="マルシュ・アタック！"/>
+			</case>
+			<case value="6">
+				<set varname="peke.temp" value="羊たちの食欲"/>
+			</case>
+			<case value="7">
+				<set varname="peke.temp" value="特命生徒会"/>
+			</case>
+			<case value="8">
+				<set varname="peke.temp" value="ペンギンマークの宅配便"/>
+			</case>
+			<case value="9">
+				<set varname="peke.temp" value="ジンギスカンの夕べ"/>
+			</case>
+			<case value="10">
+				<set varname="peke.temp" value="ロボガスバクハツ"/>
+			</case>
+			<case value="11">
+				<set varname="peke.temp" value="オズの魔法使い"/>
+			</case>
+			<case value="12">
+				<set varname="peke.temp" value="図書館の秘密"/>
+			</case>
+		</switch>
+	
+		<switch varname="peke.epi.yoi">
+			<case value="1">
+				<set varname="peke.temp2" value="箱でいっぱいの廊下"/>
+			</case>
+			<case value="2">
+				<set varname="peke.temp2" value="職員室いっぱいの箱"/>
+			</case>
+			<case value="3">
+				<set varname="peke.temp2" value="怖がりサム先生"/>
+			</case>
+			<case value="4">
+				<set varname="peke.temp2" value="オカルトボックス"/>
+			</case>
+			<case value="5">
+				<set varname="peke.temp2" value="彼と彼女の生徒会"/>
+			</case>
+			<case value="6">
+				<set varname="peke.temp2" value="食い物の恨み"/>
+			</case>
+			<case value="7">
+				<set varname="peke.temp2" value="幽霊にお札"/>
+			</case>
+			<case value="8">
+				<set varname="peke.temp2" value="宵月清掃大作戦"/>
+			</case>
+			<case value="9">
+				<set varname="peke.temp2" value="奪われたお弁当"/>
+			</case>
+			<case value="10">
+				<set varname="peke.temp2" value="サム先生のお願い"/>
+			</case>
+			<case value="11">
+				<set varname="peke.temp2" value="オカルト研究部入部案内"/>
+			</case>
+			<case value="12">
+				<set varname="peke.temp2" value="ファントムオブオペラ"/>
+			</case>
+		</switch>
+	</function>
+</library>

@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="Shift_JIS"?>
+<!-- MapID:2 エスティバー 1階 -->
+<field>
+	<!-- アリーナ -->
+	<npc id="40" shell="33" x="112" y="134" dir="3" init="init" >
+		<script name="init">
+			<call name="peke.get.info" />
+			<call name="peke.get.epi"/>
+
+			<ifeq varname="local.school" value="1">
+				<ifge varname="peke.epi.es" value="12">
+						<jump label="arena_es3"/>
+				</ifge>
+				<ifge varname="peke.epi.es" value="11">
+						<jump label="arena_es2"/>
+				</ifge>
+				<ifge varname="peke.epi.es" value="0">
+						<jump label="arena_es1"/>
+				</ifge>
+			</ifeq>
+			<ifge varname="peke.epi.es" value="12">
+					<jump label="arena_yoi2"/>
+			</ifge>
+			<ifge varname="peke.epi.es" value="11">
+					<jump label="arena_es2"/>
+			</ifge>
+			<ifge varname="peke.epi.es" value="0">
+					<jump label="arena_yoi1"/>
+			</ifge>
+		</script>
+
+		<!-- ▼エス生セリフ -->
+		<dialog name="arena_es1" cutin="0" closebutton="1">
+			<text><![CDATA[
+				フ～ン、フフ～ン、うん？　音楽聞いてんだから、ジャマしないでくんない？
+			]]></text>
+			<selection next="arena_quest_no" text="新しいクエスト表示" />
+			<selection next="arena_quest_miss" text="クエスト達成を報告する" />
+			<selection text="Skillを習う" />
+		</dialog>
+
+		<dialog name="arena_es2" cutin="0" closebutton="1">
+			<text><![CDATA[
+				LibraryBasementに隠されてる女神の楽器…<br>
+				たとえ手に入らなくっても、一回でいいから聞いてみたいんだ、ゼッタイ！
+			]]></text>
+			<selection next="arena_quest_no" text="新しいクエスト表示" />
+			<selection next="arena_quest_miss" text="クエスト達成を報告する" />
+			<selection text="Skillを習う" />
+		</dialog>
+
+		<dialog name="arena_es3" cutin="0" closebutton="1">
+			<text><![CDATA[
+				フン、フフ～ン、フンフン～<br>
+				あ、この前は手伝ってくれてアリガトー！
+			]]></text>
+			<selection next="arena_quest_no" text="新しいクエスト表示" />
+			<selection next="arena_quest_miss" text="クエスト達成を報告する" />
+			<selection text="Skillを習う" />
+		</dialog>
+
+		<!-- ▼宵生セリフ -->
+		<dialog name="arena_yoi1" cutin="0" closebutton="1">
+			<text><![CDATA[
+				フ～ン、フフ～ン、うん？　なんか用？
+			]]></text>
+			<selection next="arena_quest_no" text="新しいクエスト表示" />
+			<selection next="arena_quest_miss" text="クエスト達成を報告する" />
+			<selection text="Skillを習う" />
+		</dialog>
+
+		<dialog name="arena_yoi2" cutin="0" closebutton="1">
+			<text><![CDATA[
+				フン、フフ～ン、フンフン～<br>
+				あ、やっほ～、この前は手伝ってくれてアリガトー！
+			]]></text>
+			<selection next="arena_quest_no" text="新しいクエスト表示" />
+			<selection next="arena_quest_miss" text="クエスト達成を報告する" />
+			<selection text="Skillを習う" />
+		</dialog>
+
+		<!-- ▼クエスト -->
+		<dialog name="arena_quest_no" cutin="0" closebutton="1">
+			<text><![CDATA[
+				ううん、別に…
+			]]></text>
+			<selection text="そう？　またね" />
+		</dialog>
+
+		<dialog name="arena_quest_miss" cutin="0" closebutton="1">
+			<text><![CDATA[
+				ん？　何だって？
+			]]></text>
+			<selection text="なんでもない、またね" />
+		</dialog>
+
+		<dialog name="skill" cutin="0" closebutton="1">
+			<text><![CDATA[
+				フフ～ン、フン、ダダン！<br>
+				えっ？　Skill？<br>
+				あ～、んじゃまず、熟練度をアップしなきゃ！
+			]]></text>
+			<selection next="skill2" text="熟練度？" />
+		</dialog>
+
+		<dialog name="skill2" cutin="0" closebutton="1">
+			<text><![CDATA[
+				4種類の武器に、それぞれ<font color="00FFBD">熟練度</font>ってのがあるんだよ。<br>
+				熟練度がアップすればいろんなSkillを覚えられるし、命中率もアップ！<br>
+				んじゃ、好きな武器を <font color="00FFBD">2種類</font>選んで！
+			]]></text>
+			<selection text="わかった！" />
+		</dialog>
+	</npc>
+</field>

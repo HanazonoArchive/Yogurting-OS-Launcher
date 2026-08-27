@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="Shift_JIS"?>
+<!-- MapID:404-HF200303 奇妙な旧校舎 1階 -->
+<field>
+
+	<warpgate id="2" x="6850" y="6149" shell="2" idCli="114" dir="0" idDestField="403" xDest="66" yDest="67"/>
+
+	<generator>
+		<point x="66" y="56"/>
+		<point x="52" y="56"/>
+		<point x="42" y="55"/>
+		<point x="31" y="55"/>
+		<point x="16" y="55"/>
+		<point x="14" y="63"/>
+		<point x="21" y="61"/>
+		<point x="25" y="63"/>
+		<point x="34" y="61"/>
+		<point x="40" y="63"/>
+		<point x="45" y="66"/>
+		<point x="59" y="61"/>
+		<point x="53" y="65"/>
+
+		<monster type="57" count="34">		<!-- ﾆｰﾅ8 -->
+		</monster>
+		<monster type="58" count="34">		<!-- ﾆｰﾉ8 -->
+		</monster>
+		<monster type="69" count="34">		<!-- エミリー9 -->
+		</monster>
+	</generator>
+</field>

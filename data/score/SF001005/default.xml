@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="Shift_JIS"?>
+<!-- MapID:25 エスティバー 地下 -->
+<field>
+	<!-- 地下→1F -->
+	<warpgate id="1" x="7050" y="12850" shell="68" idCli="424" dir="0" idDestField="2" xDest="61" yDest="128"/>
+</field>

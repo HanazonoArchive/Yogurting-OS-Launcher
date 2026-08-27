@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="Shift_JIS"?>
+<!-- MapID:393-HF100302 中心部に続く道 -->
+<field>
+	<!-- 中心部に続く道→温室入口 -->
+	<warpgate id="2" x="7550" y="2649" shell="42" idCli="318" dir="0" idDestField="392" xDest="68" yDest="90"/>
+	<!-- 中心部に続く道→ミュータントフラワー -->
+	<warpgate id="3" x="8050" y="14049" shell="42" idCli="36" dir="0" idDestField="394" xDest="55" yDest="35"/>
+
+	<generator>
+		<point x="107" y="55"/>
+		<point x="95" y="48"/>
+		<point x="75" y="67"/>
+		<point x="60" y="56"/>
+		<point x="76" y="81"/>
+		<point x="82" y="96"/>
+		<point x="69" y="95"/>
+		<point x="70" y="107"/>
+		<point x="83" y="109"/>
+		<point x="78" y="131"/>
+
+		<monster type="21" count="40">			<!-- 子ﾔﾝﾔﾝ9 -->
+		</monster>
+		<monster type="22" count="40">			<!-- ヤンヤン9 -->
+		</monster>
+	</generator>
+</field>

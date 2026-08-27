@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="Shift_JIS"?>
+<!-- MapID:90 宵月学院 グラウンド -->
+<field>
+	<!-- 暗田 -->
+	<npc id="169" shell="48" x="73" y="157" dir="1" init="init">
+		<script name="init">
+			<call name="peke.get.info" />
+			<call name="peke.get.epi"/>
+
+			<ifeq varname="local.school" value="2">
+				<ifge varname="peke.epi.yoi" value="12">
+						<jump label="kurata_yoi8"/>
+				</ifge>
+				<ifge varname="peke.epi.yoi" value="11">
+						<jump label="kurata_yoi7"/>
+				</ifge>
+				<ifge varname="peke.epi.yoi" value="10">
+						<jump label="kurata_yoi6"/>
+				</ifge>
+				<ifge varname="peke.epi.yoi" value="7">
+						<jump label="kurata_yoi5"/>
+				</ifge>
+				<ifge varname="peke.epi.yoi" value="6">
+						<jump label="kurata_yoi4"/>
+				</ifge>
+				<ifge varname="peke.epi.yoi" value="4">
+						<jump label="kurata_yoi3"/>
+				</ifge>
+				<ifge varname="peke.epi.yoi" value="3">
+						<jump label="kurata_yoi2"/>
+				</ifge>
+				<ifge varname="peke.epi.yoi" value="0">
+						<jump label="kurata_yoi1"/>
+				</ifge>
+			</ifeq>
+			<ifge varname="peke.epi.yoi" value="12">
+					<jump label="kurata_es3"/>
+			</ifge>
+			<ifge varname="peke.epi.yoi" value="11">
+					<jump label="kurata_yoi7"/>
+			</ifge>
+			<ifge varname="peke.epi.yoi" value="7">
+					<jump label="kurata_yoi5"/>
+			</ifge>
+			<ifge varname="peke.epi.yoi" value="6">
+					<jump label="kurata_es2"/>
+			</ifge>
+			<ifge varname="peke.epi.yoi" value="4">
+					<jump label="kurata_yoi3"/>
+			</ifge>
+			<ifge varname="peke.epi.yoi" value="3">
+					<jump label="kurata_yoi2"/>
+			</ifge>
+			<ifge varname="peke.epi.yoi" value="0">
+					<jump label="kurata_es1"/>
+			</ifge>
+		</script>
+
+
+		<!-- ▼宵生セリフ -->
+		<dialog name="kurata_yoi1" cutin="0" closebutton="1">
+			<text><![CDATA[
+				さぁ、Freshmanの皆さぁん～<br>
+				So-il学院で最高の同好会である、オカルト研究部ですよ～　クックック…
+			]]></text>
+			<selection next="kurata_quest_no" text="新しいクエスト表示" />
+			<selection next="kurata_quest_miss" text="クエスト達成を報告する" />
+		</dialog>
+
+		<dialog name="kurata_yoi2" cutin="0" closebutton="1">
+			<text><![CDATA[
+				あれをいつ、全部運ぶか…そうだ…クックック。<br>
+				皆さん！　バラ色の学園生活には、この暗田特製の恋愛成就の御札が必要なのではないですか？　でしたら急いで、桜並木にいらっしゃって下さい～
+			]]></text>
+			<selection next="kurata_quest_no" text="新しいクエスト表示" />
+			<selection next="kurata_quest_miss" text="クエスト達成を報告する" />
+		</dialog>
+
+		<dialog name="kurata_yoi3" cutin="0" closebutton="1">
+			<text><![CDATA[
+				お疲れさまでした。<br>
+				それでは今後ともよろしくお願いしますねぇ～、ククク。
+			]]></text>
+			<selection next="kurata_quest_no" text="新しいクエスト表示" />
+			<selection next="kurata_quest_miss" text="クエスト達成を報告する" />
+		</dialog>
+
+		<dialog name="kurata_yoi4" cutin="0" closebutton="1">
+			<text><![CDATA[
+				ああ、やはり大衆は、時代の先駆者を理解することが出来ないんですねぇ。<br>
+				これさえあれば、何も問題は無くなるというのに…
+			]]></text>
+			<selection next="kurata_quest_no" text="新しいクエスト表示" />
+			<selection next="kurata_quest_miss" text="クエスト達成を報告する" />
+		</dialog>
+
+		<dialog name="kurata_yoi5" cutin="0" closebutton="1">
+			<text><![CDATA[
+				さあ、早く、多くの人々に幽霊退治の御札を宣伝しに行って下さいよぉ。
+			]]></text>
+			<selection next="kurata_quest_no" text="新しいクエスト表示" />
+			<selection next="kurata_quest_miss" text="クエスト達成を報告する" />
+		</dialog>
+
+		<dialog name="kurata_yoi6" cutin="0" closebutton="1">
+			<text><![CDATA[
+				どうです、オカルト研究部に入部する気はありませんか？　僕を手伝ってくれたら特別に入部させてあげますよぉ。<br>
+				早く講堂前に集まって下さいねぇ～、ククク。
+			]]></text>
+			<selection next="kurata_quest_no" text="新しいクエスト表示" />
+			<selection next="kurata_quest_miss" text="クエスト達成を報告する" />
+		</dialog>
+
+		<dialog name="kurata_yoi7" cutin="0" closebutton="1">
+			<text><![CDATA[
+				… 2人だけのクセに、いつもいつも邪魔ばかり…。<br>
+				ですが今回は、この暗田様の仕事を邪魔出来ませんよ…絶対にねぇ。ククク。
+			]]></text>
+			<selection next="kurata_quest_no" text="新しいクエスト表示" />
+			<selection next="kurata_quest_miss" text="クエスト達成を報告する" />
+		</dialog>
+
+		<dialog name="kurata_yoi8" cutin="0" closebutton="1">
+			<text><![CDATA[
+				皆さん何をするんですか！！！<br>
+				オカルト研究部の仕事を邪魔して、あの御方を怒らせたら大変なことになりますよぉ！
+			]]></text>
+			<selection next="kurata_quest_no" text="新しいクエスト表示" />
+			<selection next="kurata_quest_miss" text="クエスト達成を報告する" />
+		</dialog>
+
+		<!-- ▼エス生セリフ -->
+		<dialog name="kurata_es1" cutin="0" closebutton="1">
+			<text><![CDATA[
+				このSo-il学院まで何の御用でいらっしゃったんです？<br>
+				僕は、オカルト研究部の暗田と申します。<br>
+				どうぞお見知りおきを、ククク。
+			]]></text>
+			<selection next="kurata_quest_no" text="新しいクエスト表示" />
+			<selection next="kurata_quest_miss" text="クエスト達成を報告する" />
+		</dialog>
+
+		<dialog name="kurata_es2" cutin="0" closebutton="1">
+			<text><![CDATA[
+				もうこれ以上幽霊を恐がることはありません！<br>
+				この、幽霊退治の御札！<br>
+				これさえあれば幽霊はみんなイチコロですよぉ～
+			]]></text>
+			<selection next="kurata_quest_no" text="新しいクエスト表示" />
+			<selection next="kurata_quest_miss" text="クエスト達成を報告する" />
+		</dialog>
+
+		<dialog name="kurata_es3" cutin="0" closebutton="1">
+			<text><![CDATA[
+				皆さん何をするんですか！！！　オカルト研究部の仕事を邪魔するなんて！<br>
+				いくら他の学校のStudentでも、あの御方を怒らせたら大変なことになりますよぉ！
+			]]></text>
+			<selection next="kurata_quest_no" text="新しいクエスト表示" />
+			<selection next="kurata_quest_miss" text="クエスト達成を報告する" />
+		</dialog>
+
+
+		<!-- ▼クエスト -->
+		<dialog name="kurata_quest_no" cutin="0" closebutton="1">
+			<text><![CDATA[
+				ククク。もうちょっと待ってて下さいよ…。
+			]]></text>
+			<selection text="そう？　またね" />
+		</dialog>
+
+		<dialog name="kurata_quest_miss" cutin="0" closebutton="1">
+			<text><![CDATA[
+				いったい何の話ですか…？
+			]]></text>
+			<selection text="そうだった、ごめん" />
+		</dialog>
+	</npc>
+</field>

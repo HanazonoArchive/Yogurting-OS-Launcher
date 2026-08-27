@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="Shift_JIS"?>
+<!-- MapID:413-HF300106 カタツムリの水路 -->
+<field>
+
+	<warpgate id="2" x="9050" y="13299" shell="15" idCli="423" dir="0" idDestField="412" xDest="68" yDest="12"/>
+	<warpgate id="3" x="3850" y="5349" shell="15" idCli="458" dir="0" idDestField="414" xDest="28" yDest="29"/>
+	<generator>
+		<point x="76" y="131"/>
+		<point x="73" y="118"/>
+		<point x="76" y="102"/>
+		<point x="88" y="99"/>
+		<point x="89" y="112"/>
+		<point x="87" y="84"/>
+		<point x="88" y="68"/>
+		<point x="89" y="51"/>
+		<point x="75" y="70"/>
+		<point x="76" y="57"/>
+		<point x="65" y="74"/>
+		<point x="66" y="86"/>
+		<point x="53" y="84"/>
+		<point x="38" y="85"/>
+		<point x="36" y="72"/>
+		<point x="47" y="70"/>
+		<point x="52" y="58"/>
+		<point x="42" y="66"/>
+		<point x="28" y="57"/>
+		<point x="17" y="54"/>
+		<point x="6" y="62"/>
+		<point x="20" y="95"/>
+		<point x="35" y="95"/>
+		<point x="54" y="97"/>
+		<point x="55" y="110"/>
+		<point x="43" y="108"/>
+		<point x="33" y="104"/>
+		<point x="20" y="107"/>
+		<point x="13" y="114"/>
+		<point x="16" y="127"/>
+
+		<monster type="122" count="60">		<!-- クロコｰ -->
+		</monster>
+		<monster type="123" count="60">		<!-- ｽﾊﾟｰﾋﾞｰ -->
+		</monster>
+		<monster type="124" count="60">		<!-- ﾐｭﾛﾋﾞｰ -->
+		</monster>
+	</generator>
+</field>

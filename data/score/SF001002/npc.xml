@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="Shift_JIS"?>
+<!-- MapID:2 エスティバー 1階 -->
+<field>
+	<!-- ページ -->
+	<npc id="1" shell="1" x="33" y="111" dir="4" init="init" />
+	<!-- リエズ -->
+	<npc id="11" shell="10" x="48" y="124" dir="3" init="init" />
+	<!-- チャイナ -->
+	<npc id="39" shell="32" x="69" y="112" dir="7" init="init" />
+	<!-- ビアンカ -->
+	<npc id="8" shell="7" x="84" y="125" dir="5" init="init" />
+	<!-- アリーナ -->
+	<npc id="40" shell="33" x="112" y="134" dir="3" init="init" />
+</field>

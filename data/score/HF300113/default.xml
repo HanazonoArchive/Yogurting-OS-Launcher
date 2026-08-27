@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="Shift_JIS"?>
+<!-- MapID:420-HF300113 開かずの水路 -->
+<field>
+	<warpgate id="2" x="1650" y="9349" shell="15" idCli="450" dir="0" idDestField="419" xDest="99" yDest="171"/>
+	<generator>
+		<point x="24" y="92"/>
+		<point x="35" y="94"/>
+		<point x="48" y="93"/>
+		<point x="56" y="91"/>
+		<point x="53" y="76"/>
+		<point x="42" y="73"/>
+		<point x="39" y="62"/>
+		<point x="51" y="60"/>
+		<point x="26" y="64"/>
+		<point x="20" y="53"/>
+		<point x="25" y="47"/>
+		<point x="49" y="49"/>
+		<point x="46" y="38"/>
+		<point x="61" y="66"/>
+		<point x="71" y="59"/>
+		<point x="81" y="58"/>
+		<point x="93" y="53"/>
+		<point x="90" y="64"/>
+		<point x="90" y="78"/>
+		<point x="83" y="87"/>
+		<point x="98" y="84"/>
+		<point x="70" y="42"/>
+		<point x="81" y="40"/>
+		<point x="91" y="40"/>
+		<point x="95" y="32"/>
+
+		<monster type="140" count="74">		<!-- 影入道 -->
+		</monster>
+		<monster type="141" count="74">		<!-- ｼｬﾄﾞｳﾋﾞｰｽﾄ -->
+		</monster>
+	</generator>
+</field>

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="Shift_JIS"?>
+<!-- MapID:1 エスティバー 屋外 -->
+<field>
+	<!-- グラウンド購買おばちゃんNo.1 -->
+	<npc id="433" shell="3" x="59" y="78" dir="3" init="init" >
+		<dialog name="init" cutin="0" closebutton="1">
+			<text><![CDATA[
+				Welcome~<br>
+				What would you like to buy today?
+			]]></text>
+			<selection next="buy" text="Buy Items" />
+			<selection next="sell" text="Sell Items" />
+		</dialog>
+		<buy name="buy">
+			<coitem type="10001" price="50" />	<!-- 三角牛乳 -->
+			<coitem type="10006" price="100" />	<!-- 高級三角牛乳 -->
+			<coitem type="10002" price="160" />	<!-- パック牛乳 -->
+			<coitem type="10007" price="220" />	<!-- 高級パック牛乳 -->
+			<coitem type="20001" price="100" />	<!-- ガンバミン101 -->
+			<coitem type="30216" price="150" />	<!-- エスティバー乗車券 -->
+			<beitem type="110006" price="100" />	<!-- 木刀 -->
+			<beitem type="120001" price="100" />	<!-- 有備無患 -->
+			<beitem type="130006" price="100" />	<!-- パンフルート -->
+			<beitem type="140001" price="100" />	<!-- アクアマリン -->
+			<enitem type="10001" price="500" />	<!-- 1年生強化参考書 -->
+			<coitem type="40003" price="2000" />	<!-- 武器源石ボックス[1年生] -->
+			<coitem type="40026" price="2000" />	<!-- 制服源石ボックス[1年生] -->
+		</buy>
+		<sell name="sell" />
+	</npc>
+</field>

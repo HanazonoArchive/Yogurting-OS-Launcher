@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="Shift_JIS"?>
+<!-- MapID:406-HF200305 闇の部屋 -->
+<field>
+
+	<warpgate id="2" x="1850" y="1349" shell="54" idCli="231" dir="0" idDestField="405" xDest="16" yDest="9"/>
+	<warpgate id="3" x="6650" y="3949" shell="54" idCli="322" dir="0" idDestField="407" xDest="7" yDest="45"/>
+
+	<generator>
+		<point x="17" y="22"/>
+		<point x="20" y="30"/>
+		<point x="17" y="37"/>
+		<point x="20" y="44"/>
+		<point x="30" y="40"/>
+		<point x="37" y="46"/>
+		<point x="33" y="53"/>
+		<point x="23" y="51"/>
+		<point x="17" y="54"/>
+		<point x="45" y="46"/>
+		<point x="53" y="46"/>
+		<point x="57" y="38"/>
+		<point x="50" y="34"/>
+		<point x="39" y="33"/>
+		<point x="30" y="30"/>
+
+		<monster type="64" count="40">		<!-- ﾊﾟﾍﾟｯﾄ8 -->
+		</monster>
+		<monster type="65" count="40">		<!-- トホホ7 -->
+		</monster>
+		<monster type="66" count="40">		<!-- 忍者8 -->
+		</monster>
+	</generator>
+</field>

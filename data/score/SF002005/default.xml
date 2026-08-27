@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="Shift_JIS"?>
+<!-- MapID:94 宵月学院 3階 -->
+<field>
+	<!-- 3F→2F -->
+	<warpgate id="1" x="5150" y="4649" shell="68" idCli="1006" dir="0" idDestField="93" xDest="60" yDest="45"/>
+</field>

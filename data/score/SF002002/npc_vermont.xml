@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="Shift_JIS"?>
+<!-- MapID:91 裏庭 聖堂周辺 -->
+<field>
+	<!-- バーモント神父 -->
+	<npc id="174" shell="38" x="112" y="126" dir="4" init="init">
+		<script name="init">
+			<call name="peke.get.info" />
+			<call name="peke.get.epi"/>
+
+			<ifeq varname="local.school" value="2">
+				<ifge varname="peke.epi.yoi" value="12">
+						<jump label="vermont_yoi7"/>
+				</ifge>
+				<ifge varname="peke.epi.yoi" value="10">
+						<jump label="vermont_yoi6"/>
+				</ifge>
+				<ifge varname="peke.epi.yoi" value="9">
+						<jump label="vermont_yoi5"/>
+				</ifge>
+				<ifge varname="peke.epi.yoi" value="8">
+						<jump label="vermont_yoi4"/>
+				</ifge>
+				<ifge varname="peke.epi.yoi" value="6">
+						<jump label="vermont_yoi3"/>
+				</ifge>
+				<ifge varname="peke.epi.yoi" value="1">
+						<jump label="vermont_yoi2"/>
+				</ifge>
+				<ifge varname="peke.epi.yoi" value="0">
+						<jump label="vermont_yoi1"/>
+				</ifge>
+			</ifeq>
+			<ifge varname="peke.epi.yoi" value="12">
+					<jump label="vermont_yoi7"/>
+			</ifge>
+			<ifge varname="peke.epi.yoi" value="10">
+					<jump label="vermont_yoi6"/>
+			</ifge>
+			<ifge varname="peke.epi.yoi" value="9">
+					<jump label="vermont_es2"/>
+			</ifge>
+			<ifge varname="peke.epi.yoi" value="8">
+					<jump label="vermont_yoi4"/>
+			</ifge>
+			<ifge varname="peke.epi.yoi" value="6">
+					<jump label="vermont_yoi3"/>
+			</ifge>
+			<ifge varname="peke.epi.yoi" value="0">
+					<jump label="vermont_es1"/>
+			</ifge>
+		</script>
+
+		<!-- ▼宵生セリフ -->
+		<dialog name="vermont_yoi1" cutin="0" closebutton="1">
+			<text><![CDATA[
+				So-ilに入学おめでとう。君たちはまだ入学したばかりだから、<br>
+				<font color="00FFBD">Episode</font>をやってみるか、<font color="00FFBD">ミニマップの右</font>に見えるワープポイントを<br>
+				通じて<font color="00FFBD">Public Cemeteryのモンスター退治</font>をしに行ってみるといい。
+
+			]]></text>
+			<selection next="vermont_quest_no" text="新しいクエスト表示" />
+			<selection next="vermont_quest_miss" text="クエスト達成を報告する" />
+			<selection text="Skillを習う" />
+		</dialog>
+
+		<dialog name="vermont_yoi2" cutin="0" closebutton="1">
+			<text><![CDATA[
+				Episodeは一人でも出来るけど、大勢でやればもっと面白いはずだよ。<br>
+				それでは、今度は<font color="00FFBD">ミニマップ</font>の左下に見えるワープポイントから<br>
+学校へ行って、<font color="00FFBD">SamTeacher</font>にお会いしてみてごらん。
+			]]></text>
+			<selection next="vermont_quest_no" text="新しいクエスト表示" />
+			<selection next="vermont_quest_miss" text="クエスト達成を報告する" />
+			<selection text="Skillを習う" />
+		</dialog>
+
+		<dialog name="vermont_yoi3" cutin="0" closebutton="1">
+			<text><![CDATA[
+				火蓮は、言葉は乱暴だけど本当にいい子なんだ。<br>
+				うちの水蓮、火蓮と仲良くしてあげてね。
+			]]></text>
+			<selection next="vermont_quest_no" text="新しいクエスト表示" />
+			<selection next="vermont_quest_miss" text="クエスト達成を報告する" />
+			<selection text="Skillを習う" />
+		</dialog>
+
+		<dialog name="vermont_yoi4" cutin="0" closebutton="1">
+			<text><![CDATA[
+				ううむ…水蓮にお弁当を渡さないといかんのだが…
+			]]></text>
+			<selection next="vermont_quest_no" text="新しいクエスト表示" />
+			<selection next="vermont_quest_miss" text="クエスト達成を報告する" />
+			<selection text="Skillを習う" />
+		</dialog>
+
+		<dialog name="vermont_yoi5" cutin="0" closebutton="1">
+			<text><![CDATA[
+				この前はThank you。<br>
+				今日はどんな用事かな？
+			]]></text>
+			<selection next="vermont_quest_no" text="新しいクエスト表示" />
+			<selection next="vermont_quest_miss" text="クエスト達成を報告する" />
+			<selection text="Skillを習う" />
+		</dialog>
+
+		<dialog name="vermont_yoi6" cutin="0" closebutton="1">
+			<text><![CDATA[
+				ううむ…<br>
+				友達と遊ぶのYesいんだが、Cemeteryで遊ぶのは危険だということは、承知しておきなさい…
+			]]></text>
+			<selection next="vermont_quest_no" text="新しいクエスト表示" />
+			<selection next="vermont_quest_miss" text="クエスト達成を報告する" />
+			<selection text="Skillを習う" />
+		</dialog>
+
+		<dialog name="vermont_yoi7" cutin="0" closebutton="1">
+			<text><![CDATA[
+				神のご加護が共にあらんことを。いつも健やかでありなさい。
+			]]></text>
+			<selection next="vermont_quest_no" text="新しいクエスト表示" />
+			<selection next="vermont_quest_miss" text="クエスト達成を報告する" />
+			<selection text="Skillを習う" />
+		</dialog>
+
+		<!-- ▼エス生セリフ -->
+		<dialog name="vermont_es1" cutin="0" closebutton="1">
+			<text><![CDATA[
+				遠くからSo-il学院まで遊びに来たようだね。<br>
+				私はVermont、この聖堂とCemeteryの管理を担当している。<br>
+				楽しく過ごすといいよ。
+			]]></text>
+			<selection next="vermont_quest_no" text="新しいクエスト表示" />
+			<selection next="vermont_quest_miss" text="クエスト達成を報告する" />
+			<selection text="Skillを習う" />
+		</dialog>
+
+		<dialog name="vermont_es2" cutin="0" closebutton="1">
+			<text><![CDATA[
+				よく来たね。<br>
+				So-ilには友達に会いに来たの？
+			]]></text>
+			<selection next="vermont_quest_no" text="新しいクエスト表示" />
+			<selection next="vermont_quest_miss" text="クエスト達成を報告する" />
+			<selection text="Skillを習う" />
+		</dialog>
+
+		<!-- ▼クエスト -->
+		<dialog name="vermont_quest_no" cutin="0" closebutton="1">
+			<text><![CDATA[
+				今はお願いしたいことはないよ。
+			]]></text>
+			<selection text="そうですか、失礼します" />
+		</dialog>
+
+		<dialog name="vermont_quest_miss" cutin="0" closebutton="1">
+			<text><![CDATA[
+				君たちに頼み事はしてないと思うんだが、何のことかな？
+			]]></text>
+			<selection text="すみません、失礼します" />
+		</dialog>
+	</npc>
+</field>

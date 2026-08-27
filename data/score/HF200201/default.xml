@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="Shift_JIS"?>
+<!-- 分かれ道 -->
+<field>
+	<!-- 分かれ道→聖堂 周辺 -->
+	<warpgate id="2" x="5800" y="1449" shell="44" idCli="2150" dir="0" idDestField="91" xDest="220" yDest="99"/>
+	<!-- 分かれ道→火葬場 -->
+	<warpgate id="3" x="2950" y="6449" shell="44" idCli="2151" dir="0" idDestField="400" xDest="58" yDest="26"/>
+	<!-- 分かれ道→納骨堂 -->
+	<warpgate id="5" x="9450" y="13199" shell="44" idCli="2152" dir="0" idDestField="401" xDest="54" yDest="56"/>
+	<!-- 分かれ道→グラウンド -->
+	<warpgate id="7" x="10650" y="7349" shell="44" idCli="1000" dir="0" idDestField="90" xDest="167" yDest="202"/>
+
+	<generator>
+		<point x="64" y="36"/>
+		<point x="80" y="32"/>
+		<point x="90" y="43"/>
+		<point x="82" y="59"/>
+		<point x="66" y="53"/>
+		<point x="49" y="65"/>
+		<point x="48" y="73"/>
+		<point x="68" y="69"/>
+		<point x="82" y="59"/>
+		<point x="83" y="72"/>
+		<point x="93" y="85"/>
+		<point x="73" y="86"/>
+		<point x="82" y="107"/>
+		<point x="62" y="103"/>
+		<point x="53" y="93"/>
+		<point x="48" y="78"/>
+
+		<monster type="36" count="42">		<!-- ｿｿｽｹﾙﾄﾝ7 -->
+		</monster>
+		<monster type="37" count="42">		<!-- ﾊﾛｳｨｰﾝ6 -->
+		</monster>
+		<monster type="45" count="42">		<!-- ｾﾞﾛｾﾌﾞﾝ6 -->
+		</monster>
+	</generator>
+</field>

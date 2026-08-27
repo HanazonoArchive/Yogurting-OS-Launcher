@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="Shift_JIS"?>
+<!-- MapID:26 エスティバー 裏庭 -->
+<field>
+	<!-- メイ -->
+	<npc id="7" shell="6" x="50" y="118" dir="4" init="init" >
+		<script name="init">
+			<call name="peke.get.info" />
+			<call name="peke.get.epi"/>
+
+			<ifeq varname="local.school" value="1">
+				<ifge varname="peke.epi.es" value="0">
+						<jump label="may_es1"/>
+				</ifge>
+			</ifeq>
+			<ifge varname="peke.epi.es" value="0">
+					<jump label="may_yoi1"/>
+			</ifge>
+		</script>
+
+		<!-- ▼エス生セリフ -->
+		<dialog name="may_es1" cutin="0" closebutton="1">
+			<text><![CDATA[
+				あたしはMay！　Johnnyを助けてるGreenhouse管理補佐だよ！　Freshmanみたいだけど、Greenhouseに何の用？
+			]]></text>
+			<selection next="may_quest_no" text="新しいクエスト表示" />
+			<selection next="may_quest_miss" text="クエスト達成を報告する" />
+		</dialog>
+
+		<!-- ▼宵生セリフ -->
+		<dialog name="may_yoi1" cutin="0" closebutton="1">
+			<text><![CDATA[
+				あたしはMay！　EstivaのGreenhouse管理補佐をしてるの。<br>
+				So-ilからEstivaまで何しに来たの？　まさか…盗み食いに来たんじゃないでしょうね！
+			]]></text>
+			<selection next="may_quest_no" text="新しいクエスト表示" />
+			<selection next="may_quest_miss" text="クエスト達成を報告する" />
+		</dialog>
+
+		<!-- ▼クエスト -->
+		<dialog name="may_quest_no" cutin="0" closebutton="1">
+			<text><![CDATA[
+				んー、今は特に頼みたいことってないよ。
+			]]></text>
+			<selection text="そう？　またね" />
+		</dialog>
+
+		<dialog name="may_quest_miss" cutin="0" closebutton="1">
+			<text><![CDATA[
+				何のこと？<br>
+				あたし、何も頼んでないよ？
+			]]></text>
+			<selection text="そうだった、ごめん" />
+		</dialog>
+	</npc>
+</field>

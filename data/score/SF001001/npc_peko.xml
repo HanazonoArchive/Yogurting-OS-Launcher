@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="Shift_JIS"?>
+<!-- MapID:1 エスティバー 屋外 -->
+<field>
+	<!-- ペコー -->
+	<npc id="34" shell="19" x="94" y="105" dir="5" init="init" >
+		<script name="init">
+			<call name="peke.get.info" />
+			<call name="peke.get.epi"/>
+
+			<ifeq varname="local.school" value="1">
+				<ifge varname="peke.epi.es" value="0">
+						<jump label="peko_es1"/>
+				</ifge>
+			</ifeq>
+			<ifge varname="peke.epi.es" value="0">
+					<jump label="peko_es1"/>
+			</ifge>
+		</script>
+
+		<!-- ▼エス生セリフ -->
+		<dialog name="peko_es1" cutin="0" closebutton="1">
+			<text><![CDATA[
+				ニャ～～　ニャアアオオン～<br>
+				（うざがってるようだ。）
+			]]></text>
+			<selection next="peko_quest_no" text="新しいクエスト表示" />
+			<selection next="peko_quest_miss" text="クエスト達成を報告する" />
+		</dialog>
+
+		<!-- ▼クエスト -->
+		<dialog name="peko_quest_no" cutin="0" closebutton="1">
+			<text><![CDATA[
+				ウニャ～<br>
+				zZZ～　zZZ～
+			]]></text>
+			<selection text="寝てるね…" />
+		</dialog>
+		<dialog name="peko_quest_miss" cutin="0" closebutton="1">
+			<text><![CDATA[
+				zZZ zZZZZZ
+			]]></text>
+			<selection text="…" />
+		</dialog>
+	</npc>
+</field>

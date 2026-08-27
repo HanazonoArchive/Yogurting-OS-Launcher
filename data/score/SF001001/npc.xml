@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="Shift_JIS"?>
+<!-- MapID:1 エスティバー 屋外 -->
+<field>
+	<!-- ペコー -->
+	<npc id="34" shell="19" x="94" y="105" dir="5" init="init" />
+	<!-- ベン -->
+	<npc id="5" shell="4" x="66" y="102" dir="3" init="init" />
+	<!-- モカ -->
+	<npc id="38" shell="24" x="115" y="108" dir="7" init="init" />
+	<!-- スーチョン -->
+	<npc id="36" shell="21" x="80" y="79" dir="3" init="init" />
+	
+	<!-- アンナ -->
+	<npc id="365" shell="78" x="72" y="68" dir="6" init="init"/>
+</field>

@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="Shift_JIS"?>
+<!-- MapID:162 宵月学院 停留場 -->
+<field>
+	<!-- インジェクト -->
+	<npc id="325" shell="73" x="44" y="64" dir="4" init="init">
+		<script name="init">
+			<call name="peke.get.info" />
+			<call name="peke.get.epi"/>
+
+			<ifeq varname="local.school" value="2">
+				<ifge varname="peke.epi.yoi" value="0">
+					<jump label="inject_yoi1"/>
+				</ifge>
+			</ifeq>
+			<ifge varname="peke.epi.yoi" value="0">
+				<jump label="inject_es1"/>
+			</ifge>
+		</script>
+
+		<!-- ▼宵生セリフ -->
+		<dialog name="inject_yoi1" cutin="0" closebutton="1">
+			<text><![CDATA[
+				私はInject。看護部員として妖艶Teacherのお手伝いをしています。<br>
+				看護部では、 <font color="00FFBD">5色のカラーボール</font>を集めて下さった方に、<br>
+				プレゼントを配布しております。
+			]]></text>
+			<selection next="inject_ball_menu" text="カラーボール？" />
+			<selection next="inject_quest_no" text="新しいクエスト表示" />
+			<selection next="inject_quest_miss" text="クエスト達成を報告する" />
+		</dialog>
+
+		<!-- ▼エス生セリフ -->
+		<dialog name="inject_es1" cutin="0" closebutton="1">
+			<text><![CDATA[
+				So-il学院へようこそ。私はInject、So-il学院看護部員です。<br>
+				看護部では、<font color="00FFBD">5色のカラーボール</font>を集めて下さった方に、<br>
+				プレゼントを配布しております。
+			]]></text>
+			<selection next="inject_ball_menu" text="カラーボール？" />
+			<selection next="inject_quest_no" text="新しいクエスト表示" />
+			<selection next="inject_quest_miss" text="クエスト達成を報告する" />
+		</dialog>
+
+		<!-- ▼クエスト -->
+		<dialog name="inject_quest_no" cutin="0" closebutton="1">
+			<text><![CDATA[
+				いえ、問題ありません。
+			]]></text>
+			<selection text="うん、じゃね" />
+		</dialog>
+
+		<dialog name="inject_quest_miss" cutin="0" closebutton="1">
+			<text><![CDATA[
+				何も頼んでいませんが。
+			]]></text>
+			<selection text="ごめん、勘違い" />
+		</dialog>
+
+		<!-- ▼カラーボール -->
+		<dialog name="inject_ball_menu" cutin="0" closebutton="1">
+			<text><![CDATA[
+				こちらでは<font color="00FFBD">「ヨ」「ー」「グ」「ル」「！」</font>の 5色のボールを集めてきた方に、<br>
+				ヨーグル！ボックスをプレゼントしております。
+				素敵なアイテムが手に入るかも……
+			]]></text>
+			<selection next="inject_ball3" text="カラーボールを 5色集めました！" />
+			<selection next="inject_ball2" text="カラーボールはどこで手に入りますか？" />
+		</dialog>
+
+		<dialog name="inject_ball2" cutin="0" closebutton="1">
+			<text><![CDATA[
+				<font color="00FFBD">｢ヨ｣｢ー｣｢グ｣｢ル｣｢！｣</font>の 5色のボールは、EpisodeをClearすると<br>
+				手に入るそうです。Episodeによって手に入るボールが違うと…
+				色々なEpisodeを調べてみて下さい。
+			]]></text>
+			<selection text="わかりました！" />
+		</dialog>
+
+		<dialog name="inject_ball3" cutin="0" closebutton="1">
+			<text><![CDATA[
+				…5色そろっていませんね。<br>
+				妖艶Teacherは、5色をセットで集めるようご希望なさってますので…<br>
+				申し訳ありませんが、足りないボールを手に入れてから、もう一度…
+			]]></text>
+			<selection text="わかりました、また来ます" />
+			<selection next="inject_ball2" text="カラーボールはどこで手りますか？" />
+		</dialog>
+
+		<dialog name="inject_ball90" cutin="0" closebutton="1">
+			<text><![CDATA[
+				カラーボールを 5色集めて下さったのですね。<br>
+				では、ヨーグル！ボックスを……
+			]]></text>
+			<selection next="inject_ball4" text="よろしくお願いします" />
+		</dialog>
+
+		<dialog name="inject_ball91" cutin="0" closebutton="1">
+			<text><![CDATA[
+				1st Year用のヨーグル！ボックスです。<br>
+				どうか、素敵なアイテムが出ますよう……
+			]]></text>
+			<selection text="Thank you!" />
+		</dialog>
+	</npc>
+</field>

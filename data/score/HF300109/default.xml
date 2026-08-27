@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="Shift_JIS"?>
+<!-- MapID:416-HF300109 ごみ処理場 -->
+<field>
+	<warpgate id="2" x="5650" y="8249" shell="13" idCli="260" dir="0" idDestField="415" xDest="55" yDest="12"/>
+	<generator>
+		<point x="56" y="68"/>
+		<point x="68" y="66"/>
+		<point x="81" y="66"/>
+		<point x="80" y="54"/>
+		<point x="68" y="48"/>
+		<point x="65" y="31"/>
+		<point x="65" y="19"/>
+		<point x="55" y="16"/>
+		<point x="51" y="29"/>
+		<point x="48" y="44"/>
+		<point x="31" y="46"/>
+		<point x="21" y="48"/>
+		<point x="51" y="62"/>
+		<point x="37" y="64"/>
+		<point x="21" y="62"/>
+		<point x="6" y="61"/>
+		<point x="3" y="49"/>
+		<point x="6" y="38"/>
+		<point x="8" y="27"/>
+		<point x="21" y="30"/>
+		<point x="35" y="28"/>
+
+		<monster type="129" count="56">		<!-- 怒ったﾐｭﾛﾋﾞｰ -->
+		</monster>
+		<monster type="130" count="56">		<!-- ﾐｭﾛﾋﾞｰ -->
+		</monster>
+		<monster type="131" count="56">		<!-- 怒ったﾐｭﾛﾋﾞｰ -->
+		</monster>
+	</generator>
+</field>

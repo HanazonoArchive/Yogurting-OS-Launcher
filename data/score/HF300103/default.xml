@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="Shift_JIS"?>
+<!-- MapID:410-HF300103 地下水路入口 -->
+<field>
+
+	<warpgate id="2" x="2350" y="5949" shell="26" idCli="248" dir="0" idDestField="408" xDest="82" yDest="122"/>
+	<warpgate id="3" x="5250" y="5949" shell="26" idCli="519" dir="0" idDestField="409" xDest="18" yDest="124"/>
+	<warpgate id="5" x="3850" y="1349" shell="26" idCli="521" dir="0" idDestField="417" xDest="6" yDest="56"/>
+	<warpgate id="7" x="1150" y="3349" shell="26" idCli="523" dir="0" idDestField="411" xDest="65" yDest="97"/>
+	<generator>
+		<point x="40" y="51"/>
+		<point x="25" y="43"/>
+		<point x="37" y="43"/>
+		<point x="17" y="33"/>
+		<point x="61" y="43"/>
+		<point x="64" y="29"/>
+		<point x="42" y="33"/>
+		<point x="62" y="18"/>
+		<point x="40" y="24"/>
+		<point x="36" y="33"/>
+		<point x="50" y="32"/>
+
+		<monster type="115" count="40">		<!-- ｸﾞﾛｰﾋﾞｰ -->
+		</monster>
+		<monster type="116" count="40">		<!-- クロコ -->
+		</monster>
+	</generator>
+</field>

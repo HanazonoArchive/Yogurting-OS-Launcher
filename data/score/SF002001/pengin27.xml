@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="Shift_JIS"?>
+<!-- MapID:1 エスティバー 屋外 -->
+<field>
+	<!-- オク前購買おばちゃんNo.27 -->
+	<npc id="27" shell="3" x="83" y="197" dir="4" init="init">
+		<script name="init">
+			<call name="peke.get.info" />
+			<call name="peke.get.epi"/>
+
+			<ifeq varname="local.school" value="2">
+				<ifge varname="peke.epi.yoi" value="0">
+						<jump label="pengin27_yoi1"/>
+				</ifge>
+			</ifeq>
+			<ifge varname="peke.epi.yoi" value="0">
+					<jump label="pengin27_es1"/>
+			</ifge>
+		</script>
+
+		<!-- ▼宵生セリフ -->
+		<dialog name="pengin27_yoi1" cutin="0" closebutton="1">
+			<text><![CDATA[
+				お～、Freshman！　いらっしゃい。牛乳は新鮮やし、武器もきれいな新品やで！　これからちょくちょく寄ってって～　値引き以外は何でもあるで～！
+			]]></text>
+			<selection next="buy" text="Buy Items" />
+			<selection next="sell" text="Sell Items" />
+			<selection next="next_menu" text="次のPageを表示" />
+		</dialog>
+
+		<!-- ▼エス生セリフ -->
+		<dialog name="pengin27_es1" cutin="0" closebutton="1">
+			<text><![CDATA[
+				なあ～、寄っといで～！　新鮮な牛乳～、きれいな新しい武器～、何が欲しいんや？　値引きはせえへんけど品ぞろいは豊富やで～！
+			]]></text>
+			<selection next="buy" text="Buy Items" />
+			<selection next="sell" text="Sell Items" />
+			<selection next="next_menu" text="次のPageを表示" />
+		</dialog>
+
+		<!-- ▼クエスト -->
+		<dialog name="next_menu" cutin="0" closebutton="1">
+			<text><![CDATA[
+				あ、ちょうど今、割のええバイトがあるで。
+			]]></text>
+			<selection next="pengin27_quest_no" text="新しいクエスト表示" />
+			<selection next="pengin27_quest_miss" text="クエスト達成を報告する" />
+		</dialog>
+
+		<dialog name="pengin27_quest_no" cutin="0" closebutton="1">
+			<text><![CDATA[
+				せやなぁ…今はバイトは必要あらへんな。
+			]]></text>
+			<selection text="そうですか、それじゃまた" />
+		</dialog>
+
+		<dialog name="pengin27_quest_miss" cutin="0" closebutton="1">
+			<text><![CDATA[
+				んん？　アンタたちは雇ってへんで？
+			]]></text>
+			<selection text="そうでした、すみません" />
+		</dialog>
+
+		<buy name="buy">
+			<coitem type="10001" price="50" />	<!-- 三角牛乳 -->
+			<coitem type="10006" price="100" />	<!-- 高級三角牛乳 -->
+			<coitem type="10002" price="160" />	<!-- パック牛乳 -->
+			<coitem type="10007" price="220" />	<!-- 高級パック牛乳 -->
+			<coitem type="10003" price="330" />	<!-- 瓶牛乳 -->
+			<coitem type="10008" price="420" />	<!-- 高級瓶牛乳 -->
+			<coitem type="10004" price="600" />	<!-- 大瓶牛乳 -->
+			<coitem type="10009" price="730" />	<!-- 高級大瓶牛乳 -->
+			<coitem type="10010" price="900" />	<!-- PETボトル牛乳 -->
+			<coitem type="10011" price="1050" />	<!-- 高級PETボトル牛乳 -->
+			<coitem type="20001" price="100" />	<!-- ガンバミン101 -->
+			<coitem type="20003" price="330" />	<!-- ガンバミン202 -->
+			<coitem type="20002" price="900" />	<!-- ガンバミン404 -->
+			<coitem type="30217" price="150" />	<!-- 宵月乗車券 -->
+			<beitem type="110006" price="100" />	<!-- 木刀 -->
+			<beitem type="120001" price="100" />	<!-- 有備無患 -->
+			<beitem type="130006" price="100" />	<!-- パンフルート -->
+			<beitem type="140001" price="100" />	<!-- アクアマリン -->
+			<coitem type="30128" price="5000" />	<!-- 友情の石(開設) -->
+			<coitem type="30129" price="30000" />	<!-- 友情の石(LvUP) -->
+			<coitem type="30131" price="8000" />	<!-- 友情の石(名前変更) -->
+			<enitem type="10001" price="500" />	<!-- 1年生強化参考書 -->
+			<enitem type="10002" price="2000" />	<!-- 2年生強化参考書 -->
+			<enitem type="10003" price="8000" />	<!-- 3年生強化参考書 -->
+			<enitem type="10004" price="32000" />	<!-- 4年生強化参考書 -->
+			<enitem type="10005" price="128000" />	<!-- 5年生強化参考書 -->
+			<enitem type="10006" price="512000" />	<!-- 6年生強化参考書 -->
+			<coitem type="40003" price="2000" />	<!-- 武器源石ボックス[1年生] -->
+			<coitem type="40004" price="8000" />	<!-- 武器源石ボックス[2年生] -->
+			<coitem type="40005" price="32000" />	<!-- 武器源石ボックス[3年生] -->
+			<coitem type="40006" price="128000" />	<!-- 武器源石ボックス[4年生] -->
+			<coitem type="40007" price="512000" />	<!-- 武器源石ボックス[5年生] -->
+			<coitem type="40026" price="2000" />	<!-- 制服源石ボックス[1年生] -->
+			<coitem type="40027" price="8000" />	<!-- 制服源石ボックス[2年生] -->
+			<coitem type="40028" price="32000" />	<!-- 制服源石ボックス[3年生] -->
+			<coitem type="40029" price="128000" />	<!-- 制服源石ボックス[4年生] -->
+			<coitem type="40030" price="512000" />	<!-- 制服源石ボックス[5年生] -->
+		</buy>
+		<sell name="sell" />
+	</npc>
+</field>

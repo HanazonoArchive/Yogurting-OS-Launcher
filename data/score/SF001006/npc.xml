@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="Shift_JIS"?>
+<!-- MapID:26 エスティバー 裏庭 -->
+<field>
+	<!-- ジョニー -->
+	<npc id="6" shell="5" x="38" y="105" dir="3" init="init"/>
+	
+	<!-- メイ -->
+	<npc id="7" shell="6" x="50" y="118" dir="4" init="init"/>
+	
+	<!-- 四刀丸 -->
+	<npc id="10" shell="9" x="102" y="101" dir="4" init="init"/>
+	
+	<!-- ヒョンラン -->
+	<npc id="33" shell="14" x="106" y="61" dir="7" init="init"/>
+</field>

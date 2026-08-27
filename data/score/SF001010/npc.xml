@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="Shift_JIS"?>
+<!-- MapID:339 エスティバー 購買 -->
+<field>
+	<!-- 購買おばちゃん(左) -->
+	<npc id="479" shell="3" x="31" y="38" dir="4" init="init"/>
+	
+	<!-- 購買おばちゃん(真ん中) -->
+	<npc id="478" shell="3" x="34" y="41" dir="4" init="init"/>
+	
+	<!-- 購買おばちゃん(右) -->
+	<npc id="477" shell="3" x="36" y="38" dir="4" init="init"/>
+</field>

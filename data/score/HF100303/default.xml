@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="Shift_JIS"?>
+<!-- MapID:394-HF100303 ミュータントフラワー -->
+<field>
+	<!-- ミュータントフラワー→中心部に続く道 -->
+	<warpgate id="2" x="5600" y="3349" shell="40" idCli="283" dir="0" idDestField="393" xDest="80" yDest="137"/>
+	<!-- ミュータントフラワー→災厄の森 -->
+	<warpgate id="3" x="8550" y="6250" shell="40" idCli="282" dir="6" idDestField="396" xDest="35" yDest="61"/>
+	<!-- ミュータントフラワー→ハイバラウスの森 -->
+	<warpgate id="5" x="2550" y="6600" shell="40" idCli="108" dir="6" idDestField="395" xDest="132" yDest="57"/>
+
+	<generator>
+		<point x="48" y="48"/>
+		<point x="48" y="58"/>
+		<point x="37" y="62"/>
+		<point x="48" y="72"/>
+		<point x="71" y="68"/>
+		<point x="66" y="59"/>
+		<point x="56" y="67"/>
+		<point x="62" y="83"/>
+
+		<monster type="23" count="32">		<!-- ヤンヤン9 -->
+		</monster>
+		<monster type="25" count="32">		<!-- バラウス8 -->
+		</monster>
+	</generator>
+</field>

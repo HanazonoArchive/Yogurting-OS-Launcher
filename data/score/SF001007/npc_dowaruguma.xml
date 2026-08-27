@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="Shift_JIS"?>
+<!-- MapID:27 エスティバー バス停 -->
+<field>
+	<!-- ドワルグマー -->
+	<npc id="42" shell="37" x="116" y="62" dir="5" init="init" >
+		<script name="init">
+			<call name="peke.get.info" />
+			<call name="peke.get.epi"/>
+
+			<ifeq varname="local.school" value="1">
+				<ifge varname="peke.epi.es" value="0">
+						<jump label="dowaruguma_es1"/>
+				</ifge>
+			</ifeq>
+			<ifge varname="peke.epi.es" value="0">
+					<jump label="dowaruguma_yoi1"/>
+			</ifge>
+		</script>
+
+		<!-- ▼エス生セリフ -->
+		<dialog name="dowaruguma_es1" cutin="0" closebutton="1">
+			<text><![CDATA[
+				ん？　何じゃワレ？<br>
+				どうやら何も分からんで来たみたいじゃけぇ、今日んとこは見逃したるけぇ、とっとと帰んな。
+			]]></text>
+			<selection next="dowaruguma_quest_no" text="新しいクエスト表示" />
+			<selection next="dowaruguma_quest_miss" text="クエスト達成を報告する" />
+		</dialog>
+
+		<!-- ▼宵生セリフ -->
+		<dialog name="dowaruguma_yoi1" cutin="0" closebutton="1">
+			<text><![CDATA[
+				ん？　何じゃワレ？<br>
+				どうやら何も分からんで来たみたいじゃけぇ、今日んとこは見逃したるさかい、とっとと帰んな。
+			]]></text>
+			<selection next="dowaruguma_quest_no" text="新しいクエスト表示" />
+			<selection next="dowaruguma_quest_miss" text="クエスト達成を報告する" />
+		</dialog>
+
+		<!-- ▼クエスト -->
+		<dialog name="dowaruguma_quest_no" cutin="0" closebutton="1">
+			<text><![CDATA[
+				オンドリャあ、<br>
+				ワシにケンカ売っとるんか？
+			]]></text>
+			<selection text="…すみません" />
+		</dialog>
+
+		<dialog name="dowaruguma_quest_miss" cutin="0" closebutton="1">
+			<text><![CDATA[
+				ナニ寝言ぬかしとんじゃワレ！
+			]]></text>
+			<selection text="すみません、失礼します" />
+		</dialog>
+	</npc>
+</field>

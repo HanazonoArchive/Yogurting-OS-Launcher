@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="Shift_JIS"?>
+<library>
+	<!-- ログイン時 -->
+	<function name="onlogin">
+		<getcharinfo varname="local.name" type="name"/>
+		<sysmsg text="${local.name}さんこんにちは."/>
+	</function>
+
+	<!-- キャラ作成時 -->
+	<function name="onmakechar">
+		<!-- 初期武器 -->
+		<getcharinfo varname="local.blood" type="blood"/>
+		<switch varname="local.blood">
+			<case value="1">
+				<addbeitem type="110001" equip="true"/>
+			</case>
+			<case value="2">
+				<addbeitem type="120001" equip="true"/>
+			</case>
+			<case value="3">
+				<addbeitem type="130001" equip="true"/>
+			</case>
+			<case value="4">
+				<addbeitem type="140001" equip="true"/>
+			</case>
+		</switch>
+		
+		<!-- 初期位置・装備 -->
+		<getcharinfo varname="local.school" type="school"/>
+		<getcharinfo varname="local.sex" type="sex"/>
+		<switch varname="local.school">
+			<!-- エスティバー -->
+			<case value="1">
+				<move field="1" x="76" y="104"/>
+				<switch varname="local.sex">
+					<case value="1">
+						<addbeitem type="150001" equip="true"/>
+						<addbeitem type="150002" equip="true"/>
+						<addbeitem type="150003" equip="true"/>
+						<addbeitem type="150007"/>
+						<addbeitem type="150008"/>
+						<addbeitem type="150009"/>
+					</case>
+					<case value="2">
+						<addbeitem type="150004" equip="true"/>
+						<addbeitem type="150005" equip="true"/>
+						<addbeitem type="150006" equip="true"/>
+						<addbeitem type="150010"/>
+						<addbeitem type="150011"/>
+						<addbeitem type="150012"/>
+					</case>
+				</switch>
+			</case>
+			
+			<!-- 宵月 -->
+			<case value="2">
+				<move field="90" x="124" y="165"/>
+				<switch varname="local.sex">
+					<case value="1">
+						<addbeitem type="150060" equip="true"/>
+						<addbeitem type="150061" equip="true"/>
+						<addbeitem type="150062" equip="true"/>
+						<addbeitem type="150066"/>
+						<addbeitem type="150067"/>
+						<addbeitem type="150068"/>
+					</case>
+					<case value="2">
+						<addbeitem type="150063" equip="true"/>
+						<addbeitem type="150064" equip="true"/>
+						<addbeitem type="150065" equip="true"/>
+						<addbeitem type="150069"/>
+						<addbeitem type="150070"/>
+					</case>
+				</switch>
+			</case>
+		</switch>
+		
+		<!-- 消費アイテム・お金 -->
+		<addcoitem type="10005" amount="20"/>
+		<setcharinfo type="taff" value="10000"/>
+		
+		<getcharinfo varname="local.name" type="name"/>
+		<debug text="「${local.name}」さんが入学しました."/>
+	</function>
+</library>

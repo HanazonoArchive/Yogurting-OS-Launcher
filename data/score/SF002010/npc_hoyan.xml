@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="Shift_JIS"?>
+<!-- MapID:166 旧校舎 1階 -->
+<field>
+	<!-- ホヤン -->
+	<npc id="199" shell="42" x="21" y="62" dir="4" init="init">
+		<script name="init">
+			<call name="peke.get.info" />
+			<call name="peke.get.epi"/>
+
+			<ifge varname="peke.epi.yoi" value="0">
+				<jump label="hoyan1"/>
+			</ifge>
+		</script>
+
+		<!-- ▼セリフ -->
+		<dialog name="hoyan1" cutin="0" closebutton="1">
+			<text><![CDATA[
+				ああ…会いに行くことが出来るなら…
+			]]></text>
+			<selection next="hoyan_quest_no" text="新しいクエスト表示" />
+			<selection next="hoyan_quest_miss" text="クエスト達成を報告する" />
+		</dialog>
+
+		<!-- ▼クエスト -->
+		<dialog name="hoyan_quest_no" cutin="0" closebutton="1">
+			<text><![CDATA[
+				頼みたい事？　ないなぁ…
+			]]></text>
+			<selection text="そう？　またね" />
+		</dialog>
+
+		<dialog name="hoyan_quest_miss" cutin="0" closebutton="1">
+			<text><![CDATA[
+				何のこと？　僕は、何も頼んでないけど？
+			]]></text>
+			<selection text="そうだった、ごめん" />
+		</dialog>
+	</npc>
+</field>

@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="Shift_JIS"?>
+<!-- MapID:26 エスティバー 裏庭 -->
+<field>
+	<!-- ヒョンラン -->
+	<npc id="33" shell="14" x="106" y="61" dir="7" init="init">
+		<script name="init">
+			<call name="peke.get.info" />
+			<call name="peke.get.epi"/>
+
+			<ifeq varname="local.school" value="1">
+				<ifge varname="peke.epi.es" value="9">
+						<jump label="hyonran_es3"/>
+				</ifge>
+				<ifge varname="peke.epi.es" value="8">
+						<jump label="hyonran_es2"/>
+				</ifge>
+				<ifge varname="peke.epi.es" value="0">
+						<jump label="hyonran_es1"/>
+				</ifge>
+			</ifeq>
+			<ifge varname="peke.epi.es" value="9">
+					<jump label="hyonran_es3"/>
+			</ifge>
+			<ifge varname="peke.epi.es" value="8">
+					<jump label="hyonran_yoi2"/>
+			</ifge>
+			<ifge varname="peke.epi.es" value="0">
+					<jump label="hyonran_yoi1"/>
+			</ifge>
+		</script>
+
+		<!-- ▼エス生セリフ -->
+		<dialog name="hyonran_es1" cutin="0" closebutton="1">
+			<text><![CDATA[
+				やあ…<br>
+				可愛い羊たちと…仲良くして…
+			]]></text>
+			<selection next="hyonran_quest_no" text="新しいクエスト表示" />
+			<selection next="hyonran_quest_miss" text="クエスト達成を報告する" />
+		</dialog>
+
+		<dialog name="hyonran_es2" cutin="0" closebutton="1">
+			<text><![CDATA[
+				うーん…誰かに、留守を頼まなきゃ…
+			]]></text>
+			<selection next="hyonran_quest_no" text="新しいクエスト表示" />
+			<selection next="hyonran_quest_miss" text="クエスト達成を報告する" />
+		</dialog>
+
+		<dialog name="hyonran_es3" cutin="0" closebutton="1">
+			<text><![CDATA[
+				羊が一匹消えた…Yochimaruさんの話だと…<br>
+				僕がいない時にモンスターが出たんで…<br>
+				羊たちを飼育場に連れ戻してくれたそうだけど…<br>
+				一匹足りない…
+			]]></text>
+			<selection next="hyonran_quest_no" text="新しいクエスト表示" />
+			<selection next="hyonran_quest_miss" text="クエスト達成を報告する" />
+		</dialog>
+
+		<!-- ▼宵生セリフ -->
+		<dialog name="hyonran_yoi1" cutin="0" closebutton="1">
+			<text><![CDATA[
+				…ここは飼育場で、僕はHyonran…。
+			]]></text>
+			<selection next="hyonran_quest_no" text="新しいクエスト表示" />
+			<selection next="hyonran_quest_miss" text="クエスト達成を報告する" />
+		</dialog>
+
+		<dialog name="hyonran_yoi2" cutin="0" closebutton="1">
+			<text><![CDATA[
+				頼みが、あって…<br>
+				僕が留守の間、羊たちの世話をして欲しくて…
+			]]></text>
+			<selection next="hyonran_quest_no" text="新しいクエスト表示" />
+			<selection next="hyonran_quest_miss" text="クエスト達成を報告する" />
+		</dialog>
+
+		<!-- ▼クエスト -->
+		<dialog name="hyonran_quest_no" cutin="0" closebutton="1">
+			<text><![CDATA[
+				うん…　うれしいけど…　今は別に…
+			]]></text>
+			<selection text="そう？　またね" />
+		</dialog>
+
+		<dialog name="hyonran_quest_miss" cutin="0" closebutton="1">
+			<text><![CDATA[
+				…ぼく…何か頼んだ？
+			]]></text>
+			<selection text="ごめん…" />
+		</dialog>
+	</npc>
+</field>

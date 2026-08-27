@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="Shift_JIS"?>
+<!-- MapID:90 宵月学院 グラウンド -->
+<field>
+	<!-- ルーベン -->
+	<npc id="170" shell="45" x="58" y="103" dir="2" init="init">
+		<script name="init">
+			<call name="peke.get.info" />
+			<call name="peke.get.epi"/>
+
+			<ifge varname="peke.epi.yoi" value="0">
+					<jump label="ruben1"/>
+			</ifge>
+		</script>
+
+		<!-- ▼セリフ -->
+		<dialog name="ruben1" cutin="0" closebutton="1">
+			<text><![CDATA[
+				あ…ふむ。<br>
+				Welcom…
+			]]></text>
+			<selection next="ruben_quest_no" text="新しいクエスト表示" />
+			<selection next="ruben_quest_miss" text="クエスト達成を報告する" />
+		</dialog>
+
+		<!-- ▼クエスト -->
+		<dialog name="ruben_quest_no" cutin="0" closebutton="1">
+			<text><![CDATA[
+				Hm…　Nothing
+			]]></text>
+			<selection text="…失礼します" />
+		</dialog>
+
+		<dialog name="ruben_quest_miss" cutin="0" closebutton="1">
+			<text><![CDATA[
+				…？
+			]]></text>
+			<selection text="すみません、失礼します" />
+		</dialog>
+	</npc>
+</field>

@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="Shift_JIS"?>
+<!-- MapID:90 宵月学院 グラウンド -->
+<field>
+	<!-- グラウンド→宵校舎1F -->
+	<warpgate id="1" x="12400" y="17249" shell="96" idCli="2727" dir="0" idDestField="92" xDest="55" yDest="28"/>
+	<!-- グラウンド→停留所 -->
+	<warpgate id="2" x="15450" y="7900" shell="96" idCli="2726" dir="6" idDestField="162" xDest="65" yDest="85"/>
+	<!-- グラウンド→裏庭 聖堂周辺 -->
+	<warpgate id="3" x="6750" y="17550" shell="96" idCli="617" dir="6" idDestField="91" xDest="109" yDest="33"/>
+	<!-- グラウンド→宵購買 -->
+	<warpgate id="5" x="9589" y="17749" shell="96" idCli="2816" dir="2" idDestField="153" xDest="44" yDest="44"/>
+	<!-- グラウンド→旧校舎 前庭 -->
+	<warpgate id="6" x="20449" y="14849" shell="96" idCli="2851" dir="2" idDestField="402" xDest="42" yDest="25"/>
+	<!-- グラウンド→世界樹 -->
+	<warpgate id="7" x="4150" y="10550" shell="96" idCli="61" dir="6" idDestField="398" xDest="32" yDest="21"/>
+	<!-- グラウンド→分かれ道 -->
+	<warpgate id="14" x="17250" y="20349" shell="96" idCli="651" dir="0" idDestField="399" xDest="103" yDest="74"/>
+	
+	<!-- 宵月PVP -->
+	<episodegate subid="20101" idCli="945" shell="99" x="93.5" y="150.5" dir="2" visible="1" usable="1">
+		<episode id="69" grade="1" name="エクストリーム・ボールバトル"/>
+		<episode id="49" grade="2" name="墓石競争"/>
+		<episode id="37" grade="3" name="オマエの部屋はオレの部屋"/>
+		<episode id="104" grade="3" name="赤いソソ、青いソソ"/>
+	</episodegate>
+	
+	<!-- 宵月1年生EP -->
+	<episodegate subid="20001" idCli="622" shell="99" x="111.5" y="169.5" dir="0" visible="1" usable="1">
+		<episode id="61" grade="1" name="箱でいっぱいの廊下"/>
+		<episode id="80" grade="1" name="職員室いっぱいの箱"/>
+		<episode id="33" grade="1" name="怖がりサム先生"/>
+		<episode id="68" grade="1" name="オカルトボックス"/>
+		<episode id="44" grade="1" name="彼と彼女の生徒会"/>
+		<episode id="32" grade="1" name="食い物の恨み"/>
+		<episode id="34" grade="1" name="幽霊に御札"/>
+		<episode id="70" grade="1" name="宵月清掃大作戦"/>
+		<episode id="31" grade="1" name="奪われたお弁当"/>
+		<episode id="77" grade="1" name="サム先生のお願い"/>
+		<episode id="71" grade="1" name="オカルト研究部入部案内"/>
+		<episode id="56" grade="1" name="ファントム オブ オペラ"/>
+		<!-- test -->
+		<episode id="41" grade="2" name="私の三角定規を返して！"/>
+		<episode id="73" grade="2" name="月夜の大魔術！"/>
+		<episode id="74" grade="2" name="ヒトダマ事件"/>
+		<episode id="47" grade="2" name="ハロウィーン・トリック"/>
+		<episode id="75" grade="2" name="宝物を返して"/>
+		<episode id="39" grade="2" name="未知との遭遇"/>
+		<episode id="46" grade="2" name="Fly High!"/>
+		<episode id="36" grade="2" name="火蓮の家出"/>
+		<episode id="72" grade="2" name="新世界をめざして"/>
+		<episode id="48" grade="2" name="神父様と狐の姉妹"/>
+		<episode id="78" grade="2" name="世界樹の幽霊"/>
+		<episode id="1" grade="1" name="オズの魔法使い"/>
+	</episodegate>
+	
+	<hairdresser subid="324" idCli="324" shell="101" x="89" y="198" dir="2" visible="1" usable="1"/>
+</field>

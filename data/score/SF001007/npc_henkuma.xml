@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="Shift_JIS"?>
+<!-- MapID:27 エスティバー バス停 -->
+<field>
+	<!-- 変熊 -->
+	<npc id="15" shell="8" x="75" y="63" dir="1" init="init" >
+		<script name="init">
+			<call name="peke.get.info" />
+			<call name="peke.get.epi"/>
+
+			<ifeq varname="local.school" value="1">
+				<ifge varname="peke.epi.es" value="0">
+						<jump label="henkuma_es1"/>
+				</ifge>
+			</ifeq>
+			<ifge varname="peke.epi.es" value="0">
+					<jump label="henkuma_es1"/>
+			</ifge>
+		</script>
+
+		<!-- ▼エス生セリフ -->
+		<dialog name="henkuma_es1" cutin="0" closebutton="1">
+			<text><![CDATA[
+				あらあらカワイイ子！　まだちっちゃいクセにどうしてこんなとこに来たの。ママにお尻をぶたれないうちに、100メートルほど遠ぉ～くに離れなさいね。お子ちゃまに用はないのよ～ん★
+			]]></text>
+			<selection next="henkuma_quest_no" text="新しいクエスト表示" />
+			<selection next="henkuma_quest_miss" text="クエスト達成を報告する" />
+		</dialog>
+
+		<!-- ▼宵生セリフ -->
+		<!-- ▼クエスト -->
+		<dialog name="henkuma_quest_no" cutin="0" closebutton="1">
+			<text><![CDATA[
+				今はアンタ達の手を借りるほどの仕事はないわよ～。<br>
+				また来てちょうだいね～。
+			]]></text>
+			<selection text="はあ…そうですか" />
+		</dialog>
+
+		<dialog name="henkuma_quest_miss" cutin="0" closebutton="1">
+			<text><![CDATA[
+				ふふ～ん？　何のお話～？<br>
+				アンタたちには何もお願いしてないわよ～。
+			]]></text>
+			<selection text="そうでした、すみません			" />
+		</dialog>
+	</npc>
+</field>

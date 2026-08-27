@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="Shift_JIS"?>
+<!-- MapID:1 エスティバー 屋外 -->
+<field>
+	<!-- グラウンド購買おばちゃん -->
+	<npc id="433" shell="3" x="59" y="78" dir="3" init="init" >
+		<dialog name="init"
+				cutin="0"
+				text="なんか用っすか？"
+				timeout="0"
+				choiceontimeout="0"
+				closebutton="1"
+				bgframeclick="0">
+			<selection next="buy" text="アイテム買いたいんだけど" />
+			<selection next="sell" text="アイテム売りたいんだけど" />
+			<selection next="cancel" text="やっぱやめます" />
+		</dialog>
+		<buy name="buy">
+			<coitem type="10001" price="50" />		<!-- 三角牛乳 -->
+			<coitem type="10006" price="100" />		<!-- 高級三角牛乳 -->
+			<coitem type="10002" price="160" />		<!-- パック牛乳 -->
+			<coitem type="10007" price="220" />		<!-- 高級パック牛乳 -->
+			<coitem type="10003" price="330" />		<!-- 瓶牛乳 -->
+			<coitem type="10008" price="420" />		<!-- 高級瓶牛乳 -->
+			<coitem type="10004" price="600" />		<!-- 大瓶牛乳 -->
+			<coitem type="10009" price="730" />		<!-- 高級大瓶牛乳 -->
+			<coitem type="10010" price="900" />		<!-- PETボトル牛乳 -->
+			<coitem type="10011" price="1050" />	<!-- 高級PETボトル牛乳 -->
+			<coitem type="20001" price="100" />		<!-- ガンバミン101 -->
+			<coitem type="20003" price="330" />		<!-- ガンバミン202 -->
+			<coitem type="20002" price="900" />		<!-- ガンバミン404 -->
+			<coitem type="30217" price="150" />		<!-- 宵月乗車券 -->
+			<beitem type="110006" price="100" />	<!-- 木刀 -->
+			<beitem type="120001" price="100" />	<!-- 有備無患 -->
+			<beitem type="130006" price="100" />	<!-- パンフルート -->
+			<beitem type="140001" price="100" />	<!-- アクアマリン -->
+			<coitem type="30128" price="5000" />	<!-- 友情の石(開設) -->
+			<coitem type="30129" price="30000" />	<!-- 友情の石(LvUP) -->
+			<coitem type="30131" price="8000" />	<!-- 友情の石(名前変更) -->
+			<enitem type="10001" price="500" />		<!-- 1年生強化参考書 -->
+			<enitem type="10002" price="2000" />	<!-- 2年生強化参考書 -->
+			<enitem type="10003" price="8000" />	<!-- 3年生強化参考書 -->
+			<enitem type="10004" price="32000" />	<!-- 4年生強化参考書 -->
+			<enitem type="10005" price="128000" />	<!-- 5年生強化参考書 -->
+			<enitem type="10006" price="512000" />	<!-- 6年生強化参考書 -->
+			<coitem type="40003" price="2000" />	<!-- 武器源石ボックス[1年生] -->
+			<coitem type="40004" price="8000" />	<!-- 武器源石ボックス[2年生] -->
+			<coitem type="40005" price="32000" />	<!-- 武器源石ボックス[3年生] -->
+			<coitem type="40006" price="128000" />	<!-- 武器源石ボックス[4年生] -->
+			<coitem type="40007" price="512000" />	<!-- 武器源石ボックス[5年生] -->
+			<coitem type="40026" price="2000" />	<!-- 制服源石ボックス[1年生] -->
+			<coitem type="40027" price="8000" />	<!-- 制服源石ボックス[2年生] -->
+			<coitem type="40028" price="32000" />	<!-- 制服源石ボックス[3年生] -->
+			<coitem type="40029" price="128000" />	<!-- 制服源石ボックス[4年生] -->
+			<coitem type="40030" price="512000" />	<!-- 制服源石ボックス[5年生] -->
+		</buy>
+		<sell name="sell" />
+		<dialog name="cancel"
+				cutin="0"
+				text="……。"
+				timeout="0"
+				choiceontimeout="0"
+				closebutton="1"
+				bgframeclick="1">
+			<selection text="すいません" />
+		</dialog>
+	</npc>
+	
+	<!-- オク前購買おばちゃん -->
+	<npc id="4" shell="3" x="120" y="47" dir="7" init="init" >
+		<dialog name="init"
+				cutin="0"
+				text="なんか用っすか？"
+				timeout="0"
+				choiceontimeout="0"
+				closebutton="1"
+				bgframeclick="0">
+			<selection next="buy" text="アイテム買いたいんだけど" />
+			<selection next="sell" text="アイテム売りたいんだけど" />
+			<selection next="cancel" text="やっぱやめます" />
+		</dialog>
+		<buy name="buy">
+			<coitem type="10001" price="50" />		<!-- 三角牛乳 -->
+			<coitem type="10006" price="100" />		<!-- 高級三角牛乳 -->
+			<coitem type="10002" price="160" />		<!-- パック牛乳 -->
+			<coitem type="10007" price="220" />		<!-- 高級パック牛乳 -->
+			<coitem type="10003" price="330" />		<!-- 瓶牛乳 -->
+			<coitem type="10008" price="420" />		<!-- 高級瓶牛乳 -->
+			<coitem type="10004" price="600" />		<!-- 大瓶牛乳 -->
+			<coitem type="10009" price="730" />		<!-- 高級大瓶牛乳 -->
+			<coitem type="10010" price="900" />		<!-- PETボトル牛乳 -->
+			<coitem type="10011" price="1050" />	<!-- 高級PETボトル牛乳 -->
+			<coitem type="20001" price="100" />		<!-- ガンバミン101 -->
+			<coitem type="20003" price="330" />		<!-- ガンバミン202 -->
+			<coitem type="20002" price="900" />		<!-- ガンバミン404 -->
+			<coitem type="30217" price="150" />		<!-- 宵月乗車券 -->
+			<beitem type="110006" price="100" />	<!-- 木刀 -->
+			<beitem type="120001" price="100" />	<!-- 有備無患 -->
+			<beitem type="130006" price="100" />	<!-- パンフルート -->
+			<beitem type="140001" price="100" />	<!-- アクアマリン -->
+			<coitem type="30128" price="5000" />	<!-- 友情の石(開設) -->
+			<coitem type="30129" price="30000" />	<!-- 友情の石(LvUP) -->
+			<coitem type="30131" price="8000" />	<!-- 友情の石(名前変更) -->
+			<enitem type="10001" price="500" />		<!-- 1年生強化参考書 -->
+			<enitem type="10002" price="2000" />	<!-- 2年生強化参考書 -->
+			<enitem type="10003" price="8000" />	<!-- 3年生強化参考書 -->
+			<enitem type="10004" price="32000" />	<!-- 4年生強化参考書 -->
+			<enitem type="10005" price="128000" />	<!-- 5年生強化参考書 -->
+			<enitem type="10006" price="512000" />	<!-- 6年生強化参考書 -->
+			<coitem type="40003" price="2000" />	<!-- 武器源石ボックス[1年生] -->
+			<coitem type="40004" price="8000" />	<!-- 武器源石ボックス[2年生] -->
+			<coitem type="40005" price="32000" />	<!-- 武器源石ボックス[3年生] -->
+			<coitem type="40006" price="128000" />	<!-- 武器源石ボックス[4年生] -->
+			<coitem type="40007" price="512000" />	<!-- 武器源石ボックス[5年生] -->
+			<coitem type="40026" price="2000" />	<!-- 制服源石ボックス[1年生] -->
+			<coitem type="40027" price="8000" />	<!-- 制服源石ボックス[2年生] -->
+			<coitem type="40028" price="32000" />	<!-- 制服源石ボックス[3年生] -->
+			<coitem type="40029" price="128000" />	<!-- 制服源石ボックス[4年生] -->
+			<coitem type="40030" price="512000" />	<!-- 制服源石ボックス[5年生] -->
+		</buy>
+		<sell name="sell" />
+		<dialog name="cancel"
+				cutin="0"
+				text="……。"
+				timeout="0"
+				choiceontimeout="0"
+				closebutton="1"
+				bgframeclick="1">
+			<selection text="すいません" />
+		</dialog>
+	</npc>
+</field>

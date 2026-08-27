@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="Shift_JIS"?>
+<!-- MapID:1 エスティバー 屋外 -->
+<field>
+	<!-- スーチョン -->
+	<npc id="36" shell="21" x="80" y="79" dir="3" init="init" >
+		<script name="init">
+			<call name="peke.get.info" />
+			<call name="peke.get.epi"/>
+
+			<ifeq varname="local.school" value="1">
+				<ifge varname="peke.epi.es" value="10">
+						<jump label="suchon_es5"/>
+				</ifge>
+				<ifge varname="peke.epi.es" value="9">
+						<jump label="suchon_es4"/>
+				</ifge>
+				<ifge varname="peke.epi.es" value="7">
+						<jump label="suchon_es3"/>
+				</ifge>
+				<ifge varname="peke.epi.es" value="6">
+						<jump label="suchon_es2"/>
+				</ifge>
+				<ifge varname="peke.epi.es" value="0">
+						<jump label="suchon_es1"/>
+				</ifge>
+			</ifeq>
+
+			<ifge varname="peke.epi.es" value="10">
+					<jump label="suchon_yoi4"/>
+			</ifge>
+			<ifge varname="peke.epi.es" value="9">
+					<jump label="suchon_yoi3"/>
+			</ifge>
+			<ifge varname="peke.epi.es" value="7">
+					<jump label="suchon_es3"/>
+			</ifge>
+			<ifge varname="peke.epi.es" value="6">
+					<jump label="suchon_yoi2"/>
+			</ifge>
+			<ifge varname="peke.epi.es" value="0">
+					<jump label="suchon_yoi1"/>
+			</ifge>
+		</script>
+
+		<!-- ▼エス生セリフ -->
+		<dialog name="suchon_es1" cutin="0" closebutton="1">
+			<text><![CDATA[
+				ハ～ッハッハッハ！<br>
+				EstivaStudent会のため！　そしてこの私のために滅私奉公するFreshmanたちよ、歓迎するぞ！
+			]]></text>
+			<selection next="suchon_quest_no" text="新しいクエスト表示" />
+			<selection next="suchon_quest_miss" text="クエスト達成を報告する" />
+		</dialog>
+
+		<dialog name="suchon_es2" cutin="0" closebutton="1">
+			<text><![CDATA[
+				Student諸君！　この私が特別に、諸君がStudent会に貢献出来る任務を用意しておいたぞ。<br>
+				さあ、私に従って、Basement 1Fの修行部屋を平定するのだ！
+
+			]]></text>
+			<selection next="suchon_quest_no" text="新しいクエスト表示" />
+			<selection next="suchon_quest_miss" text="クエスト達成を報告する" />
+		</dialog>
+
+		<dialog name="suchon_es3" cutin="0" closebutton="1">
+			<text><![CDATA[
+				うむ！　Student会と、このスーチョンのために働こうという諸君の志、しかと見届けたぞ。<br>
+				今後とも全身全霊、私に仕えるように！
+			]]></text>
+			<selection next="suchon_quest_no" text="新しいクエスト表示" />
+			<selection next="suchon_quest_miss" text="クエスト達成を報告する" />
+		</dialog>
+
+		<dialog name="suchon_es4" cutin="0" closebutton="1">
+			<text><![CDATA[
+				諸君。今、EstivaのBasementでは、巨大な悪の軍団が陰謀を企んでいるという。諸君が、Estivaを脅かす悪党どもを打倒せんと願うのなら、講堂の前に集合し、出発するように。
+
+			]]></text>
+			<selection next="suchon_quest_no" text="新しいクエスト表示" />
+			<selection next="suchon_quest_miss" text="クエスト達成を報告する" />
+		</dialog>
+
+		<dialog name="suchon_es5" cutin="0" closebutton="1">
+			<text><![CDATA[
+				ハハハ！　ご苦労だった。
+			]]></text>
+			<selection next="suchon_quest_no" text="新しいクエスト表示" />
+			<selection next="suchon_quest_miss" text="クエスト達成を報告する" />
+		</dialog>
+
+
+		<!-- ▼宵生セリフ -->
+		<dialog name="suchon_yoi1" cutin="0" closebutton="1">
+			<text><![CDATA[
+				ハハハ！　私はスーチョン。EstivaStudent会の最重要VIPだ。<br>
+				見たところSo-il学院のStudentのようだが、よく憶えておくように。
+			]]></text>
+			<selection next="suchon_quest_no" text="新しいクエスト表示" />
+			<selection next="suchon_quest_miss" text="クエスト達成を報告する" />
+		</dialog>
+
+		<dialog name="suchon_yoi2" cutin="0" closebutton="1">
+			<text><![CDATA[
+				フン…たとえ諸君が他校のStudentであっても、このEstivaに来た以上はEstivaStudentも同然。従って、Student会のために協力するのも当然なのだ。至急、Basement 1Fの修行部屋に集合するように！<br>
+			]]></text>
+			<selection next="suchon_quest_no" text="新しいクエスト表示" />
+			<selection next="suchon_quest_miss" text="クエスト達成を報告する" />
+		</dialog>
+
+		<dialog name="suchon_yoi3" cutin="0" closebutton="1">
+			<text><![CDATA[
+				諸君。今、Estivaは巨大なモンスターの群によって脅かされている。<br>
+				諸君が真にEstivaを想うのなら、直ちに講堂の前に集合し、出発するように。
+			]]></text>
+			<selection next="suchon_quest_no" text="新しいクエスト表示" />
+			<selection next="suchon_quest_miss" text="クエスト達成を報告する" />
+		</dialog>
+
+		<dialog name="suchon_yoi4" cutin="0" closebutton="1">
+			<text><![CDATA[
+				たとえ他の学校のStudentでも、このEstivaのために働く諸君の勇姿！　このスーチョン、いつも見ているぞ。
+			]]></text>
+			<selection next="suchon_quest_no" text="新しいクエスト表示" />
+			<selection next="suchon_quest_miss" text="クエスト達成を報告する" />
+		</dialog>
+
+
+		<!-- ▼クエスト -->
+		<dialog name="suchon_quest_no" cutin="0" closebutton="1">
+			<text><![CDATA[
+				フフン、諸君は基本が出来ているな。<br>
+				残念ながらまだ諸君に出来ることはないが、その姿勢を忘れないように。
+			]]></text>
+			<selection text="…それじゃまた" />
+		</dialog>
+		<dialog name="suchon_quest_miss" cutin="0" closebutton="1">
+			<text><![CDATA[
+				諸君に任務は与えていないが？
+			]]></text>
+			<selection text="そうでした、すみません" />
+		</dialog>
+	</npc>
+</field>

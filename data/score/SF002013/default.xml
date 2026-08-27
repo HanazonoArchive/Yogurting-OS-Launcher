@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="Shift_JIS"?>
+<!-- MapID:217-SF002013 旧校舎 2階 -->
+<field>
+	<!-- 2F→1F -->
+	<warpgate id="1" x="6749" y="6719" shell="11" idCli="217" dir="2" idDestField="166" xDest="66" yDest="59"/>
+	<!-- 2F→奇妙な旧校舎 2階 -->
+	<warpgate id="3" x="3450" y="6249" shell="11" idCli="156" dir="0" idDestField="403" xDest="25" yDest="63"/>
+</field>

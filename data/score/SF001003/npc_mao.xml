@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="Shift_JIS"?>
+<!-- MapID:3 エスティバー 2階 -->
+<field>
+	<!-- マオ=シャオピン -->
+	<npc id="13" shell="12" x="48" y="128" dir="2" init="init" >
+		<script name="init">
+			<call name="peke.get.info" />
+			<call name="peke.get.epi"/>
+
+			<ifeq varname="local.school" value="1">
+				<ifge varname="peke.epi.es" value="8">
+						<jump label="mao_es3"/>
+				</ifge>
+				<ifge varname="peke.epi.es" value="7">
+						<jump label="mao_es2"/>
+				</ifge>
+				<ifge varname="peke.epi.es" value="0">
+						<jump label="mao_es1"/>
+				</ifge>
+			</ifeq>
+			<ifge varname="peke.epi.es" value="8">
+					<jump label="mao_es3"/>
+			</ifge>
+			<ifge varname="peke.epi.es" value="7">
+					<jump label="mao_yoi2"/>
+			</ifge>
+			<ifge varname="peke.epi.es" value="0">
+					<jump label="mao_yoi1"/>
+			</ifge>
+		</script>
+
+		<!-- ▼エス生セリフ -->
+		<dialog name="mao_es1" cutin="0" closebutton="1">
+			<text><![CDATA[
+				ようこそ。Estivaへの入学を歓迎するよ。
+			]]></text>
+			<selection next="mao_quest_no" text="新しいクエスト表示" />
+			<selection next="mao_quest_miss" text="クエスト達成を報告する" />
+		</dialog>
+
+		<dialog name="mao_es2" cutin="0" closebutton="1">
+			<text><![CDATA[
+				うん。荷物が早く届かないとちょっと困るんだ。<br>
+				アルバイトが事故を起こしたせいで遅れてると連絡が来た以上、直接取りに行ってみないといけないかな。
+			]]></text>
+			<selection next="mao_quest_no" text="新しいクエスト表示" />
+			<selection next="mao_quest_miss" text="クエスト達成を報告する" />
+		</dialog>
+
+		<dialog name="mao_es3" cutin="0" closebutton="1">
+			<text><![CDATA[
+				君たちか、この前は助かったよ。<br>
+				今日は何の用かな？
+			]]></text>
+			<selection next="mao_quest_no" text="新しいクエスト表示" />
+			<selection next="mao_quest_miss" text="クエスト達成を報告する" />
+		</dialog>
+
+		<!-- ▼宵生セリフ -->
+		<dialog name="mao_yoi1" cutin="0" closebutton="1">
+			<text><![CDATA[
+				Estivaにようこそ。私は教師のMao Shaopingだ。<br>
+				ゆっくり遊んでいきなさい。
+			]]></text>
+			<selection next="mao_quest_no" text="新しいクエスト表示" />
+			<selection next="mao_quest_miss" text="クエスト達成を報告する" />
+		</dialog>
+
+		<dialog name="mao_yoi2" cutin="0" closebutton="1">
+			<text><![CDATA[
+				う～ん。早く荷物が届かないと、ちょっと困るんだ…
+			]]></text>
+			<selection next="mao_quest_no" text="新しいクエスト表示" />
+			<selection next="mao_quest_miss" text="クエスト達成を報告する" />
+		</dialog>
+
+		<!-- ▼クエスト -->
+		<dialog name="mao_quest_no" cutin="0" closebutton="1">
+			<text><![CDATA[
+				うん？　今はこれといった緊急の仕事はないね。<br>
+				後でまた来たらいいよ。
+
+			]]></text>
+			<selection text="そうですか、失礼します" />
+		</dialog>
+
+		<dialog name="mao_quest_miss" cutin="0" closebutton="1">
+			<text><![CDATA[
+				君たちに仕事は頼んでないはずだよね？
+			]]></text>
+			<selection text="そうでした、すみません" />
+		</dialog>
+	</npc>
+</field>

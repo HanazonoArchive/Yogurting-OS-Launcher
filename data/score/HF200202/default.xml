@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="Shift_JIS"?>
+<!-- MapID:400-HF200202 火葬場 -->
+<field>
+	<!-- 火葬場→分かれ道 -->
+	<warpgate id="2" x="5950" y="2449" shell="43" idCli="2142" dir="0" idDestField="399" xDest="32" yDest="64"/>
+
+	<generator>
+		<point x="47" y="42"/>
+		<point x="30" y="43"/>
+		<point x="51" y="60"/>
+		<point x="72" y="55"/>
+		<point x="70" y="41"/>
+		<point x="89" y="51"/>
+		<point x="96" y="64"/>
+		<point x="94" y="92"/>
+		<point x="99" y="77"/>
+		<point x="73" y="68"/>
+		<point x="67" y="82"/>
+		<point x="57" y="95"/>
+		<point x="42" y="86"/>
+		<point x="65" y="102"/>
+		<point x="79" y="90"/>
+		<point x="85" y="79"/>
+		<point x="54" y="79"/>
+
+		<monster type="41" count="43">		<!-- リーグ7 -->
+		</monster>
+		<monster type="42" count="43">		<!-- ﾅｲﾄｳｫｰｶｰ7 -->
+		</monster>
+		<monster type="43" count="43">		<!-- ビーオ7 -->
+		</monster>
+	</generator>
+</field>

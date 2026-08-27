@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="Shift_JIS"?>
+<!-- MapID:27 エスティバー バス停 -->
+<field>
+	<!-- ワルグマー -->
+	<npc id="41" shell="36" x="100" y="57" dir="7" init="init" >
+		<script name="init">
+			<call name="peke.get.info" />
+			<call name="peke.get.epi"/>
+
+			<ifeq varname="local.school" value="1">
+				<ifge varname="peke.epi.es" value="0">
+						<jump label="waruguma_es1"/>
+				</ifge>
+			</ifeq>
+			<ifge varname="peke.epi.es" value="0">
+					<jump label="waruguma_es1"/>
+			</ifge>
+		</script>
+
+		<!-- ▼エス生セリフ -->
+		<dialog name="waruguma_es1" cutin="0" closebutton="1">
+			<text><![CDATA[
+				何見てんだ、ああ？　オレたちが優しいお兄さんに見えんのか？<br>
+				ジロジロ見上げてねぇで失せな、チビどもが！
+			]]></text>
+			<selection next="waruguma_quest_no" text="新しいクエスト表示" />
+			<selection next="waruguma_quest_miss" text="クエスト達成を報告する" />
+		</dialog>
+
+		<!-- ▼宵生セリフ -->
+		<!-- ▼クエスト -->
+		<dialog name="waruguma_quest_no" cutin="0" closebutton="1">
+			<text><![CDATA[
+				テメェらさっさと行っちまいな！
+			]]></text>
+			<selection text="…すみません" />
+		</dialog>
+
+		<dialog name="waruguma_quest_miss" cutin="0" closebutton="1">
+			<text><![CDATA[
+				あぁ？　ナニぬかしてんだコラ。
+			]]></text>
+			<selection text="すみません、失礼します" />
+		</dialog>
+	</npc>
+</field>

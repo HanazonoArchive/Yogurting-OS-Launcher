@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="Shift_JIS"?>
+<!-- MapID:427-HF100403 さまよえる 4次元教室 -->
+<field>
+	<!-- さまよえる 4次元教室→逆世界樹 -->
+	<warpgate id="2" x="7150" y="6349" shell="50" idCli="252" dir="0" idDestField="426" xDest="86" yDest="111"/>
+	<!-- さまよえる 4次元教室→失われた教室 -->
+	<warpgate id="3" x="4250" y="1349" shell="50" idCli="254" dir="0" idDestField="428" xDest="24" yDest="96"/>
+	<generator>
+		<!--
+			type: HuntMon.txtのtypeMonster
+			count: フィールド全体での数
+			※フィールド全体で200体以下にすること
+		-->
+		<monster type="166" count="19"/>
+		<monster type="167" count="39"/>
+		<monster type="168" count="39"/>
+		<monster type="190" count="03"/>
+		
+		<!--
+			x, y: ジェネレータの位置
+		-->
+		<point x="67" y="62"/>
+		<point x="62" y="62"/>
+		<point x="52" y="62"/>
+		
+		<point x="50" y="48"/>
+		<point x="63" y="44"/>
+		<point x="65" y="34"/>
+		<point x="53" y="34"/>
+		
+		<point x="44" y="37"/>
+		
+		<point x="41" y="21"/>
+		<point x="41" y="16"/>
+
+		<point x="38" y="44"/>
+		<point x="27" y="51"/>
+		<point x="30" y="42"/>
+		<point x="37" y="37"/>
+		
+		<point x="30" y="57"/>
+		
+		<point x="30" y="64"/>
+		<point x="28" y="71"/>
+		
+		<point x="24" y="29"/>
+		<point x="18" y="26"/>
+		<point x="18" y="20"/>
+
+		
+		<!--
+			type: CoItemType.txtのid
+			rate: 入手率
+			※入手率はアイテム数*1000を分母とした際の分子とする
+			(例えば50と100のアイテムがあった場合、それぞれ50/2000、100/2000の確率)
+		-->
+		<rare type="71275" rate="10"/><!-- 4B4SS -->
+		<rare type="71274" rate="20"/><!-- 4B4S -->
+		<rare type="71273" rate="30"/><!-- 4B4A+ -->
+		<rare type="71272" rate="40"/><!-- 4B4A- -->
+		<rare type="71271" rate="100"/><!-- 4B4A- -->
+		<rare type="71270" rate="100"/><!-- 4B4B+ -->
+		<rare type="72269" rate="200"/><!-- 4G4B -->
+		<rare type="72275" rate="10"/><!-- 4G4SS -->
+		<rare type="72274" rate="20"/><!-- 4G4S -->
+		<rare type="72273" rate="30"/><!-- 4G4A+ -->
+		<rare type="72272" rate="40"/><!-- 4G4A- -->
+		<rare type="72271" rate="100"/><!-- 4G4A- -->
+		<rare type="72270" rate="100"/><!-- 4G4B+ -->
+		<rare type="72269" rate="200"/><!-- 4G4B -->
+		<rare type="73275" rate="10"/><!-- 4M4SS -->
+		<rare type="73274" rate="20"/><!-- 4M4S -->
+		<rare type="73273" rate="30"/><!-- 4M4A+ -->
+		<rare type="73272" rate="40"/><!-- 4M4A- -->
+		<rare type="73271" rate="100"/><!-- 4M4A- -->
+		<rare type="73270" rate="100"/><!-- 4M4B+ -->
+		<rare type="73269" rate="200"/><!-- 4M4B -->
+		<rare type="74275" rate="10"/><!-- 4S4SS -->
+		<rare type="74274" rate="20"/><!-- 4S4S -->
+		<rare type="74273" rate="30"/><!-- 4S4A+ -->
+		<rare type="74272" rate="40"/><!-- 4S4A- -->
+		<rare type="74271" rate="100"/><!-- 4S4A- -->
+		<rare type="74270" rate="100"/><!-- 4S4B+ -->
+		<rare type="74269" rate="200"/><!-- 4S4B -->
+	</generator>
+</field>

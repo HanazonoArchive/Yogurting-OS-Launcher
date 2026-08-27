@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="Shift_JIS"?>
+<!-- MapID:2 エスティバー 1階 -->
+<field>
+	<!-- 1F→裏庭 -->
+	<warpgate id="1" x="6599" y="10050" shell="119" idCli="1414" dir="4" idDestField="1" xDest="75" yDest="105"/>
+	<!-- 1F→2F -->
+	<warpgate id="2" x="7050" y="12849" shell="119" idCli="1415" dir="0" idDestField="3" xDest="61" yDest="128"/>
+	<!-- 1F→地下 -->
+	<warpgate id="3" x="6150" y="13049" shell="119" idCli="1373" dir="0" idDestField="25" xDest="70" yDest="126"/>
+	<!-- 1F→裏庭 -->
+	<warpgate id="4" x="6600" y="13249" shell="119" idCli="1374" dir="0" idDestField="26" xDest="60" yDest="49"/>
+	<!-- 1F→ドロシーの部屋 -->
+	<warpgate id="9" x="2750" y="9949" shell="119" idCli="1382" dir="0" idDestField="386" xDest="38" yDest="14"/>
+	
+	<!-- エスティバー3年生EP -->
+<!--	<episodegate subid="10402" idCli="1383" shell="129" x="31.4999713897705" y="117.498695373535" dir="0" visible="1" usable="1">-->
+<!--		<episode id="13" grade="3"/>-->	<!-- 水門事件 -->
+<!--		<episode id="25" grade="3"/>-->	<!-- 地下水路を封鎖せよ -->
+<!--		<episode id="24" grade="3"/>-->	<!-- 校門の決斗 -->
+<!--		<episode id="4" grade="3"/>-->		<!-- 変熊のシツコイ依頼 -->
+<!--		<episode id="26" grade="3"/>-->	<!-- エスカルゴ･ラッシュ -->
+<!--		<episode id="22" grade="3"/>-->	<!-- 異次元からの物体Ｘ -->
+<!--		<episode id="11" grade="3"/>-->	<!-- 沈没教室 -->
+<!--		<episode id="90" grade="3"/>-->	<!-- ワルグマーの闇露店 -->
+<!--		<episode id="57" grade="3"/>-->	<!-- オオカミが来たぞ！ -->
+<!--		<episode id="20" grade="3"/>-->	<!-- やつらが裏山にやってきた -->
+<!--		<episode id="59" grade="3"/>-->	<!-- 真・特命生徒会 -->
+<!--		<episode id="97" grade="3"/>-->	<!-- 親知らず -->
+<!--		<episode id="2" grade="3"/>-->		<!-- ジョニー救出作戦 -->
+<!--		<episode id="81" grade="3"/>-->	<!-- 秘密の実験室 -->
+<!--	</episodegate>-->
+</field>

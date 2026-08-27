@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="Shift_JIS"?>
+<!-- MapID:339 エスティバー 購買 -->
+<field>
+	<!-- 購買→屋外 -->
+	<warpgate id="2" x="1450" y="3149" shell="78" idCli="180" dir="0" idDestField="1" xDest="115" yDest="42"/>
+	
+	<!-- ロッカー -->
+	<locker subid="137" idCli="137" shell="86" x="35.4970016479492" y="18.5" dir="6" visible="1" usable="1"/>
+	<locker subid="138" idCli="138" shell="86" x="35.4970016479492" y="19.5" dir="6" visible="1" usable="1"/>
+	<locker subid="139" idCli="139" shell="86" x="35.4970016479492" y="20.5" dir="6" visible="1" usable="1"/>
+	<locker subid="127" idCli="127" shell="86" x="38.4970016479492" y="18.5" dir="6" visible="1" usable="1"/>
+	<locker subid="132" idCli="132" shell="86" x="38.4970016479492" y="19.5" dir="6" visible="1" usable="1"/>
+	<locker subid="133" idCli="133" shell="86" x="38.4970016479492" y="20.5" dir="6" visible="1" usable="1"/>
+	<locker subid="134" idCli="134" shell="86" x="41.6970100402832" y="20.5" dir="6" visible="1" usable="1"/>
+	<locker subid="135" idCli="135" shell="86" x="41.6970100402832" y="19.5" dir="6" visible="1" usable="1"/>
+	<locker subid="136" idCli="136" shell="86" x="41.6970100402832" y="18.5" dir="6" visible="1" usable="1"/>
+	
+	<!-- カプセル販売機 -->
+	<vmachine totalAmount="100" price="100" subid="101" idCli="142" shell="87" x="28.5" y="17.7000007629395" dir="0" visible="1" usable="1">
+		<product type="60001" amount="10" secret="false"/>	<!-- Stand001 -->
+		<product type="60007" amount="10" secret="false"/>	<!-- Stand003 -->
+		<product type="60002" amount="5" secret="false"/>	<!-- Basic001 -->
+		<product type="60005" amount="5" secret="false"/>	<!-- Basic004 -->
+		<product type="60008" amount="3" secret="false"/>	<!-- Act001 -->
+		<product type="60010" amount="3" secret="false"/>	<!-- Act011 -->
+		<product type="60011" amount="3" secret="false"/>	<!-- Act012 -->
+		<product type="60012" amount="3" secret="false"/>	<!-- Act013 -->
+		<product type="60013" amount="3" secret="false"/>	<!-- Act014 -->
+		<product type="60019" amount="2" secret="true"/>	<!-- Special001 -->
+	</vmachine>
+	<vmachine totalAmount="100" price="500" subid="102" idCli="81" shell="87" x="27.5" y="17.7000007629395" dir="0" visible="1" usable="1">
+		<product type="60001" amount="20" secret="false"/>	<!-- Stand001 -->
+		<product type="60007" amount="20" secret="false"/>	<!-- Stand003 -->
+		<product type="60002" amount="10" secret="false"/>	<!-- Basic001 -->
+		<product type="60005" amount="10" secret="false"/>	<!-- Basic004 -->
+		<product type="60008" amount="8" secret="false"/>	<!-- Act001 -->
+		<product type="60010" amount="8" secret="false"/>	<!-- Act011 -->
+		<product type="60011" amount="8" secret="false"/>	<!-- Act012 -->
+		<product type="60012" amount="8" secret="false"/>	<!-- Act013 -->
+		<product type="60013" amount="8" secret="false"/>	<!-- Act014 -->
+		<product type="60019" amount="5" secret="true"/>	<!-- Special001 -->
+	</vmachine>
+	<vmachine totalAmount="100" price="200" subid="103" idCli="141" shell="87" x="26.5" y="17.7000007629395" dir="0" visible="1" usable="1">
+		<product type="60006" amount="10" secret="false"/>	<!-- Stand002 -->
+		<product type="60018" amount="10" secret="false"/>	<!-- Stand004 -->
+		<product type="60003" amount="5" secret="false"/>	<!-- Basic002 -->
+		<product type="60004" amount="5" secret="false"/>	<!-- Basic003 -->
+		<product type="60009" amount="3" secret="false"/>	<!-- Act002 -->
+		<product type="60014" amount="3" secret="false"/>	<!-- Act021 -->
+		<product type="60015" amount="3" secret="false"/>	<!-- Act022 -->
+		<product type="60016" amount="3" secret="false"/>	<!-- Act023 -->
+		<product type="60017" amount="3" secret="false"/>	<!-- Act024 -->
+		<product type="60020" amount="2" secret="true"/>	<!-- Special002 -->
+	</vmachine>
+	<vmachine totalAmount="100" price="500" subid="104" idCli="143" shell="87" x="25.5" y="17.7000007629395" dir="0" visible="1" usable="1">
+		<product type="60006" amount="20" secret="false"/>	<!-- Stand002 -->
+		<product type="60018" amount="20" secret="false"/>	<!-- Stand004 -->
+		<product type="60003" amount="10" secret="false"/>	<!-- Basic002 -->
+		<product type="60004" amount="10" secret="false"/>	<!-- Basic003 -->
+		<product type="60009" amount="8" secret="false"/>	<!-- Act002 -->
+		<product type="60014" amount="8" secret="false"/>	<!-- Act021 -->
+		<product type="60015" amount="8" secret="false"/>	<!-- Act022 -->
+		<product type="60016" amount="8" secret="false"/>	<!-- Act023 -->
+		<product type="60017" amount="8" secret="false"/>	<!-- Act024 -->
+		<product type="60020" amount="5" secret="true"/>	<!-- Special002 -->
+	</vmachine>
+	<vmachine totalAmount="100" price="300" subid="105" idCli="144" shell="87" x="24.5" y="17.7000007629395" dir="0" visible="1" usable="1">
+		<product type="60001" amount="10" secret="false"/>	<!-- Stand001 -->
+		<product type="60007" amount="10" secret="false"/>	<!-- Stand003 -->
+		<product type="60003" amount="10" secret="false"/>	<!-- Basic002 -->
+		<product type="60004" amount="10" secret="false"/>	<!-- Basic003 -->
+		<product type="60008" amount="3" secret="false"/>	<!-- Act001 -->
+		<product type="60014" amount="8" secret="false"/>	<!-- Act021 -->
+		<product type="60015" amount="8" secret="false"/>	<!-- Act022 -->
+		<product type="60016" amount="8" secret="false"/>	<!-- Act023 -->
+		<product type="60017" amount="8" secret="false"/>	<!-- Act024 -->
+		<product type="60020" amount="2" secret="true"/>	<!-- Special002 -->
+	</vmachine>
+	<vmachine totalAmount="100" price="500" subid="106" idCli="151" shell="87" x="29.5" y="17.6999988555908" dir="0" visible="1" usable="1">
+		<product type="60016" amount="10" secret="false"/>	<!-- Act023 -->
+		<product type="60021" amount="10" secret="false"/>	<!-- Stand005 -->
+		<product type="60022" amount="20" secret="false"/>	<!-- Act003 -->
+		<product type="60023" amount="5" secret="false"/>	<!-- Act004 -->
+		<product type="60024" amount="5" secret="false"/>	<!-- Basic005 -->
+		<product type="60025" amount="5" secret="false"/>	<!-- Act005 -->
+		<product type="60019" amount="5" secret="true"/>	<!-- Special001 -->
+		<product type="60020" amount="5" secret="true"/>	<!-- Special002 -->
+		<product type="60026" amount="5" secret="true"/>	<!-- Special003 -->
+		<product type="60027" amount="10" secret="true"/>	<!-- Special004 -->
+	</vmachine>
+</field>
