@@ -95,15 +95,15 @@ namespace Yogurting.Server.World
                     gate.Id, gate.X, gate.Y, gate.Shell, gate.CliId, gate.Dir, gate.DestFieldId));
             }
 
-            // 4. Field Monsters (Temporarily disabled for isolated mob field testing)
-            // foreach (var mon in fieldDef.Monsters)
-            // {
-            //     if (!mon.IsDead)
-            //     {
-            //         await session.SendAsync(YogurtingPackets.MakeGameTriggerMobNtf(mon.EntityId));
-            //         await session.SendAsync(YogurtingPackets.MakeGameMonInfoNtf(mon));
-            //     }
-            // }
+            // 4. Field Monsters
+            foreach (var mon in fieldDef.Monsters)
+            {
+                if (!mon.IsDead)
+                {
+                    await session.SendAsync(YogurtingPackets.MakeGameTriggerMobNtf(mon.EntityId));
+                    await session.SendAsync(YogurtingPackets.MakeGameMonInfoNtf(mon));
+                }
+            }
         }
     }
 }
