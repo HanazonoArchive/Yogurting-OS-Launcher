@@ -1,0 +1,14 @@
+function parse(packet){
+	with(packet){
+		setTitle("アイテム売却返答");
+		readInt64("price");
+		var cnt = readWord("vecSoldItemsCount");
+		for(var i = 1; i <= cnt; i++){
+			readInt32("  idType" + i.toString());
+			readWord("  count or Dim1Index" + i.toString());
+			readWord("  (invalid) or Dim2Index" + i.toString());
+			readInt32("  (invalid) or idItem" + i.toString());
+		}
+		readInt32("戻り値");
+	}
+}

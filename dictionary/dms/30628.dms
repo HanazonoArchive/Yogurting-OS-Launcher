@@ -1,0 +1,4 @@
+function parse(packet){
+	packet.setTitle("チャットサーバー同好会情報要求");
+	packet.readUInt32("キャラID");
+}

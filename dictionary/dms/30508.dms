@@ -1,0 +1,7 @@
+function parse(packet){
+	with(packet){
+		setTitle("—F’B“o˜^\¿•Ô“š");
+		readInt32("–ß‚è’l");
+		readInt32("requesterID");
+	}
+}

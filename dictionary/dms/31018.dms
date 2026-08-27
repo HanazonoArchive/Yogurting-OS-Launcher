@@ -1,0 +1,6 @@
+function parse(packet){
+	with(packet){
+		setTitle("ŒðŠ·Ž¸”s’Ê’m");
+		readInt32("reason");
+	}
+}

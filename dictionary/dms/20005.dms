@@ -1,0 +1,7 @@
+function parse(packet){
+	packet.setTitle("ƒ[ƒ‹ƒhŠÔ’Ê’m");
+	packet.readByte("season");
+	packet.readByte("clock");
+	packet.readBinary(2, "(padding)");
+	packet.readUInt32("time");
+}

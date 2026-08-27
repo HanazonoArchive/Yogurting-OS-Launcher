@@ -1,0 +1,6 @@
+function parse(packet){
+	with(packet){
+		setTitle("“Áê”Ô†ƒR[ƒ‹•Ô“š");
+		readInt32("–ß‚è’l");
+	}
+}

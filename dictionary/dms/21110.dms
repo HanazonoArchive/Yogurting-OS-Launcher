@@ -1,0 +1,32 @@
+function parse(packet){
+	with(packet){
+		setTitle("ハントモンスター死亡通知");
+		readInt32("idMonster");
+		readWord("posX");
+		readWord("posY");
+		readInt32("idAtkChar");
+		readInt32("expUp");
+		readInt32("exp");
+		var cnt = readWord("vecItemSilCount");
+		for(var i = 1; i <= cnt; i++){
+			readInt32("  ItemSil" + i.toString());
+		}
+		var cnt = readWord("vecItemCount");
+		for(var i = 1; i <= cnt; i++){
+			switch(readInt32("  typeItem+typeNum" + i.toString()) & 0xFF000000){
+				case 0x02000000: //BeItem
+					readWord("  dim1Index" + i.toString());
+					readWord("  dim2Index" + i.toString());
+					readInt32("  idItem" + i.toString());
+					break;
+				case 0x03000000: //CoItem
+				case 0x05000000: //EnItem
+					readInt32("  count" + i.toString());
+					readInt32("  (invalid)" + i.toString());
+					break;
+			}
+		}
+		readInt32("戻り値");
+		readInt32("type");
+	}
+}

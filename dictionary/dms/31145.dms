@@ -1,0 +1,8 @@
+function parse(packet){
+	with(packet){
+		setTitle("Œ‹»ƒŒƒxƒ‹•Ô“š");
+		readInt32("–ß‚è’l");
+		readInt32("type");
+		readInt32("level");
+	}
+}

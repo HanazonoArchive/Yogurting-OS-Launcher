@@ -1,0 +1,28 @@
+function parse(packet){
+	with(packet){
+		setTitle("ロッカーアイテム情報通知");
+		readInt32("lockerID");
+		var cnt = readWord("vecBeItemCount");
+		for(var i = 1; i <= cnt; i++){
+			readWord("  dim1Index" + i.toString());
+			readWord("  dim2Index" + i.toString());
+			readInt32("  idItem" + i.toString());
+			readInt32("  typeBeItem" + i.toString());
+			readInt32("   reinforceslot[0]" + i.toString());
+			readInt32("   reinforceslot[1]" + i.toString());
+			readInt32("   reinforceslot[2]" + i.toString());
+			readInt32("   reinforceslot[3]" + i.toString());
+			readInt32("   reinforceslot[4]" + i.toString());
+		}
+		var cnt = readWord("vecCoItemCount");
+		for(var i = 1; i <= cnt; i++){
+			readInt32("  typeCoItem" + i.toString());
+			readInt32("  count" + i.toString());
+		}
+		var cnt = readWord("vecEnItemCount");
+		for(var i = 1; i <= cnt; i++){
+			readInt32("  typeEnItem" + i.toString());
+			readInt32("  count" + i.toString());
+		}
+	}
+}

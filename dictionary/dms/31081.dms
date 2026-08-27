@@ -1,0 +1,13 @@
+function parse(packet){
+	with(packet){
+		setTitle("モンスター移動通知");
+		readInt32("idMonster");
+		readWord("posCurX");
+		readWord("posCurY");
+		readWord("posDestX");
+		readWord("posDestY");
+		readInt32("motion");
+		readByte("speedRate");
+		readBinary(3, "(padding)");
+	}
+}

@@ -1,0 +1,30 @@
+function parse(packet){
+	with(packet){
+		setTitle("スターアイテム購入返答");
+		readInt32("戻り値");
+		readInt32("productID");
+		readInt64("productPrice");
+		readInt32("byul");
+		readInt32("priceType");
+		var cnt = readWord("vecByulItemCount");
+		for(var i = 1; i <= cnt; i++){
+			readInt32("  typeByulItem" + i.toString());
+			readInt32("  idByulItem" + i.toString());
+			readInt32("  idByulItem" + i.toString());
+			readInt32("  countByulItem" + i.toString());
+			readInt32("  bUse" + i.toString());
+			readInt32("  remainTimeInSecond" + i.toString());
+			readInt32("  reinforceslot[0]" + i.toString());
+			readInt32("  reinforceslot[1]" + i.toString());
+			readInt32("  reinforceslot[2]" + i.toString());
+			readInt32("  reinforceslot[3]" + i.toString());
+			readInt32("  reinforceslot[4]" + i.toString());
+		}
+		//history
+		readInt32("eventDate");
+		readWStr(12, "kind");
+		readInt32("byul");
+		readWStr(0xCA, "usage");
+		readBinary(2, "(padding)");
+	}
+}

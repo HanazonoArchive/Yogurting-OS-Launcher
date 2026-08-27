@@ -1,0 +1,7 @@
+function parse(packet){
+	with(packet){
+		setTitle("台紙色変更通知(1:r 2:o 3:y 4:g 5:c 6:b 7:m)");
+		readUInt32("キャラID");
+		readUInt32("背景色番号");
+	}
+}

@@ -1,0 +1,4 @@
+function parse(packet){
+	packet.setTitle("電話番号重複確認");
+	packet.readUInt32("電話番号(下4ケタ)");
+}

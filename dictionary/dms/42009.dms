@@ -1,0 +1,7 @@
+function parse(packet){
+	with(packet){
+		setTitle("ダンスアイテム使用通知");
+		readInt32("キャラID");
+		readInt32("typeCoItem");
+	}
+}

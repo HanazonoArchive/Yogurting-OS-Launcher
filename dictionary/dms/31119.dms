@@ -1,0 +1,6 @@
+function parse(packet){
+	packet.setTitle("キャラ向き変更要求");
+	packet.readInt32("キャラID");
+	packet.readInt32("向き");
+	packet.readInt32("向き2？");
+}

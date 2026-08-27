@@ -1,0 +1,22 @@
+import struct.*;
+function parse(packet){
+	packet.setTitle("他キャラ情報通知");
+	packet.readUInt32("キャラID");
+	char_disp_info(packet);
+	packet.readWord("X");
+	packet.readWord("Y");
+	packet.readInt32("ステータス");
+	packet.readInt32("向き1");
+	packet.readInt32("向き2");
+	packet.readInt32("typeInteract");
+	packet.readInt32("idInteractObject");
+	packet.readInt32("idTitle");
+	packet.readInt32("curWeaponType");
+	packet.readInt32("typeQuestReward");
+	//packet.readInt32();
+	//packet.readInt32();
+	//packet.readInt32("看板表示状況");
+	//packet.readWStr(0x4A,"看板コメント");
+	//packet.readBinary(2, "(padding)");
+	char_byulitem_effect_info(packet);
+}

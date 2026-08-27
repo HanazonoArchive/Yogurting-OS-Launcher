@@ -1,0 +1,17 @@
+import struct.*;
+function parse(packet){
+	with(packet){
+		setTitle("クエスト結果通知");
+		readInt32("idQuest");
+		var i, cnt;
+		cnt = readWord("vecUseItem");
+		for(i = 0; i < cnt; i++){
+			readItem(packet, false);
+		}
+		cnt = readWord("vecAcqItem");
+		for(i = 0; i < cnt; i++){
+			readItem(packet, false);
+		}
+		readInt32("spReward_sn");
+	}
+}

@@ -1,0 +1,10 @@
+function parse(packet){
+	with(packet){
+		setTitle("対象領域へアクション通知");
+		readInt32();
+		readInt32("キャラID");
+		readInt32();
+		readInt32("idCommand");
+		readInt32("idMotion");
+	}
+}

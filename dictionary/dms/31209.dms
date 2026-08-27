@@ -1,0 +1,16 @@
+function parse(packet){
+	with(packet){
+		setTitle("イベントシステム参加通知");
+		readInt32("戻り値");
+		var cnt = readWord("vecEventCount");
+		for(var i = 1; i <= cnt; i++){
+			readInt32();
+			readInt32();
+			readInt32();
+			readWStr(0x32, "str");
+			readWStr(0x202, "str");
+			readWStr(0x42, "str");
+			readBinary(2, "(padding)");
+		}
+	}
+}

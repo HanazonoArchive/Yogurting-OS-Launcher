@@ -1,0 +1,6 @@
+function parse(packet){
+	packet.setTitle("攻撃・移動速度変更通知");
+	packet.readUInt32("キャラID");
+	packet.readSingle("攻撃速度");
+	packet.readSingle("移動速度");
+}

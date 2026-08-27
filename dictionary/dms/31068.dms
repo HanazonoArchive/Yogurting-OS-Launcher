@@ -1,0 +1,50 @@
+function parse(packet){
+	switch(packet.readUInt32("typeAction")){
+		case 0x03:
+			packet.setTitle("トリガ作用通知(モンスター消去)");
+			var cnt = packet.readInt32("消去モンスター数");
+			for(var i = 0; i < cnt; i++){
+				packet.readInt32("モンスターID");
+			}
+			for(var len = 0x44-cnt*4; len > 0; len-=4){
+				packet.readBinary(4, "(padding)");
+			}
+			break;
+		case 0x0A:
+			packet.setTitle("トリガ作用通知(ワープゲート表示)");
+			packet.readUInt32("ゲートID");
+			packet.readUInt32("X(x100)");
+			packet.readUInt32("Y(x100)");
+			packet.readUInt32("shell");
+			packet.readUInt32("idCli");	// マップ内に決まった数字で１つしか置けない様子？存在しない番号でも置けない？
+			packet.readUInt32("dir");
+			packet.readUInt32("idDestField");
+			packet.readBinary(0x2C, "(padding)");
+			break;
+		case 0x25:
+			packet.setTitle("トリガ作用通知(バス移動デモ)");
+			packet.readInt32();
+			packet.readInt32();
+			packet.readInt32();
+			packet.readBinary(0x3C, "(padding)");
+			break;
+		case 0x27:
+			var i = packet.readUInt32("padding？(SEとBGMで違う)");	// 600,601=SE 800=BGM
+			if(i == 800){
+				packet.setTitle("トリガ作用通知(BGM変更)");
+				packet.readUInt32("BGM番号");
+			}else if((i == 600) || (i == 601)){
+				packet.setTitle("トリガ作用通知(SE変更)");
+				packet.readUInt32("SE番号");
+			}else{
+				packet.setTitle("トリガ作用通知(BGM変更？)");
+				packet.readUInt32("BGM番号");
+			}
+			packet.readUInt32("再生(BOOLEAN)");		// 再生TRUEで同じ局番号のリクエストしても、最初から再生はないみたい？
+			packet.readUInt32("再生回数(0:無限)");	// そして、繰り返しが終わっていたとしても同じ番号リクエストだと再生はしてくれないみたい
+			packet.readBinary(0x38, "(padding)");
+			break;
+		default:
+			packet.setTitle("トリガ作用通知(未対応フラグ)");
+	}
+}

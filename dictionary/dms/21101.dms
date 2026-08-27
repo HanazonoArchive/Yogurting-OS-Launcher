@@ -1,0 +1,8 @@
+import struct.*;
+function parse(packet){
+	with(packet){
+		setTitle("ヘアショップ参加通知");
+		var cnt = readWord("vecHairInfoCount");
+		hair_info(packet, cnt);
+	}
+}

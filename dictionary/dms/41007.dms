@@ -1,0 +1,28 @@
+function parse(packet){
+	with(packet){
+		setTitle("ロッカーアイテム移動通知");
+		readInt32("lockerID");
+		readByte("direct");
+		readBinary(3, "(padding)");
+		switch(readInt32("typeItem+typeNum") & 0xFF000000){
+			case 0x02000000: //BeItem
+				readWord("├dim1Index");
+				readWord("├dim2Index");
+				readInt32("├idItem");
+				readInt32("├reinforceslot[0]");
+				readInt32("├reinforceslot[1]");
+				readInt32("├reinforceslot[2]");
+				readInt32("├reinforceslot[3]");
+				readInt32("└reinforceslot[4]");
+				break;
+			case 0x03000000: //CoItem
+				readInt64("└count");
+				readBinary(20, "(invalid)");
+				break;
+			case 0x05000000: //EnItem
+				readInt64("└count");
+				readBinary(20, "(invalid)");
+				break;
+		}
+	}
+}

@@ -1,0 +1,5 @@
+function parse(packet){
+	packet.setTitle("名前重複チェック返答");
+	packet.readUInt32("戻り値");
+	packet.readWStr(0x1C, "キャラ名");
+}

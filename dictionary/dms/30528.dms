@@ -1,0 +1,6 @@
+function parse(packet){
+	with(packet){
+		setTitle("電話発信");
+		readUInt32("電話番号");
+	}
+}

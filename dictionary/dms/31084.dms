@@ -1,0 +1,15 @@
+function parse(packet){
+	with(packet){
+		setTitle("モンスター死亡通知");
+		readInt32("idMonster");
+		readWord("posX");
+		readWord("posY");
+		var cnt = readWord("vecItemMonDead");
+		for(var i = 0; i < cnt; i++){
+			readInt32("├Unknown");
+			readInt32("├Unknown");
+			readInt32("└Unknown");
+		}
+		readInt32("countDropItem");
+	}
+}

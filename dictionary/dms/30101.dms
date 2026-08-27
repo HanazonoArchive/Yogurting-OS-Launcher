@@ -1,0 +1,4 @@
+function parse(packet){
+	packet.setTitle("認証タイプ通知");
+	packet.readUInt32("認証タイプ");
+}

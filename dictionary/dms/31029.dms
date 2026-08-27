@@ -1,0 +1,11 @@
+function parse(packet){
+	with(packet){
+		setTitle("NPCからアイテム購入要求");
+		readInt32("idNpc");
+		for(var i = 1; i <= 20; i++){
+			readInt32("  typeItem" + i.toString());
+			readInt32("  count" + i.toString());
+			readInt32("  unknown" + i.toString());
+		}
+	}
+}

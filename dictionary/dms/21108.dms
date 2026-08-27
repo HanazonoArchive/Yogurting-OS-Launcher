@@ -1,0 +1,19 @@
+function parse(packet){
+	with(packet){
+		setTitle("•ŠíƒtƒŒ[ƒ€î•ñ•Ô“š");
+		readInt32("•ŠíID");
+		readWord("•ŠíSN-ID-low");
+		readWord("•ŠíSN-ID-high");
+		readInt32("•ŠíSN-Type");
+		var cnt = readWord("vecAttackFrameCount");
+		for(var i = 1; i <= cnt; i++){
+			readInt32("  AttackFrameID" + i.toString());
+			readInt32("  AttackFrame???" + i.toString());
+		}
+		var cnt = readWord("vecSkillFrameCount");
+		for(var i = 1; i <= cnt; i++){
+			readInt32("  SkillFrameID" + i.toString());
+			readInt32("  SkillFrame???" + i.toString());
+		}
+	}
+}

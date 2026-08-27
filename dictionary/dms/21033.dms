@@ -1,0 +1,15 @@
+function parse(packet){
+	packet.setTitle("拡張NPCダイアログ返答通知");
+	packet.readInt32("NPDID");
+	packet.readInt32("ダイアログID");
+	packet.readInt32("カットイン種類");
+	packet.readWStr(packet.readWord("テキスト長"), "テキスト");
+	var cnt = packet.readWord("選択肢数");
+	for(var i = 1; i <= cnt; i++){
+		packet.readWStr( packet.readWord("選択肢長" + i.toString()), "選択肢" + i.toString());
+	}
+	packet.readInt32("nTimeOut");
+	packet.readInt32("idChoiceOnTimeOut");
+	packet.readInt32("bShowCloseButton");
+	packet.readInt32("bEnableBgFrameClick");
+}

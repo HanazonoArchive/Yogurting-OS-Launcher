@@ -1,0 +1,6 @@
+function parse(packet){
+	with(packet){
+		setTitle("モンスター所有権喪失通知");
+		readInt32("モンスターID");
+	}
+}

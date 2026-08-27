@@ -1,0 +1,14 @@
+function parse(packet){
+	with(packet){
+		setTitle("カプセル販売機商品情報通知");
+		readInt32("idMachine");
+		readInt64("price");
+		var cnt = readWord("listProductsCount");
+		for(var i = 1; i <= cnt; i++){
+			readInt32("  bSecret" + i.toString());
+			readInt32("  typeItem+typeNum" + i.toString());
+			readInt64("  amount" + i.toString());
+		}
+		readInt32("totalAmount");
+	}
+}

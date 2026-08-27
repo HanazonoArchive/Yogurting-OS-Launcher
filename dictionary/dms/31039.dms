@@ -1,0 +1,11 @@
+function parse(packet){
+	with(packet){
+		setTitle("NPCダイアログ商品リスト通知");
+		readInt32("idNpc");
+		var cnt = readWord("vecItemCount");
+		for(var i = 1; i <= cnt; i++){
+			readInt32("  typeItem" + i.toString());
+			readInt64("  priceItem" + i.toString());
+		}
+	}
+}

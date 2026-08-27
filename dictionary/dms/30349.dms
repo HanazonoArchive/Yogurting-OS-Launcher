@@ -1,0 +1,5 @@
+function parse(packet){
+	with(packet){
+		setTitle("待機室・スタート通知");
+	}
+}

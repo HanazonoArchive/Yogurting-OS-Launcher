@@ -1,0 +1,6 @@
+function parse(packet){
+	packet.setTitle("ƒLƒƒƒ‰’…À—v‹");
+	packet.readWord("X");
+	packet.readWord("Y");
+	packet.readInt32("bChair");
+}

@@ -1,0 +1,14 @@
+function parse(packet){
+	with(packet){
+		setTitle("BEITEM‘•”õ•Ô“š");
+		readInt32("–ß‚è’l");
+		readInt32("ƒLƒƒƒ‰ID");
+		readWord("idBeItemDim1Index");
+		readWord("idBeItemDim2Index");
+		readInt32("idBeItem");
+		readInt32("typeBeItem");
+		for(var i = 1; i <= 5; i++){
+			readInt32("reinforceslot" + i.toString());
+		}
+	}
+}

@@ -1,0 +1,5 @@
+function parse(packet){
+	with(packet){
+		setTitle("ロビー・部屋作成キャンセル通知");
+	}
+}

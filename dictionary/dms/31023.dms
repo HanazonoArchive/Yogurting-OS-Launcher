@@ -1,0 +1,14 @@
+function parse(packet){
+	with(packet){
+		setTitle("交換相手アイテム情報通知");
+		for(var i = 1; i <= 5; i++){
+			readInt32("  typeItem+typeNum" + i.toString());
+			readWord("  dim1index or count" + i.toString());
+			readWord("  dim2index or (invalid)" + i.toString());
+			readInt32("  idItem or (invalid)" + i.toString());
+			for(var j = 0; j < 5; j++)
+				readInt32("  reinforceslot[" + j.toString() + "]" + i.toString());
+		}
+		readInt64("money");
+	}
+}

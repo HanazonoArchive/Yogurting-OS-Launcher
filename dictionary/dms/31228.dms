@@ -1,0 +1,8 @@
+function parse(packet){
+	with(packet){
+		setTitle("スキルホットキー設定通知");
+		readWord("武器カテゴリ");
+		readWord("インデックス");
+		readInt32("攻撃スキルID");
+	}
+}

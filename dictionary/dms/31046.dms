@@ -1,0 +1,8 @@
+function parse(packet){
+	with(packet){
+		setTitle("BEITEM‘•”õ‰ğœ—v‹");
+		readWord("BeItemID-low");
+		readWord("BeItemID-high");
+		readInt32("BeItemID");
+	}
+}

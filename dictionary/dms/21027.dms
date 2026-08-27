@@ -1,0 +1,7 @@
+function parse(packet){
+	with(packet){
+		setTitle("ガイド情報要求");
+		readByte("種類");
+		readByte("学年");
+	}
+}

@@ -1,0 +1,15 @@
+function parse(packet){
+	packet.setTitle("待機室情報通知");
+	packet.readWord("部屋ID");
+	packet.readWord("ロビーID");
+	packet.readWStr(0x2A,"部屋名");
+	packet.readBinary(2, "padding");
+	packet.readInt32("idEpisodeType");
+	packet.readByte("bPKMode");
+	packet.readByte("bLimitMilk");
+	packet.readByte("cntMinChar");
+	packet.readByte("cntMaxChar");
+	packet.readByte("cntTeam");
+	packet.readByte("clearRate");
+	packet.readWStr(0x12,"password");
+}

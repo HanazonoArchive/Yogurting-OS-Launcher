@@ -1,0 +1,8 @@
+function parse(packet){
+	with(packet){
+		setTitle("モンスターHP情報通知");
+		readInt32("idMonster");
+		readInt32("hpCurrent");
+		readInt32("hpMax");
+	}
+}

@@ -1,0 +1,4 @@
+function parse(packet){
+	packet.setTitle("ˆÚ“®ŠÔŠu’Ê’m");
+	packet.readInt32("ˆÚ“®ŠÔŠu");
+}

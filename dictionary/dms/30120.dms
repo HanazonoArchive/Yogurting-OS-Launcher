@@ -1,0 +1,15 @@
+function parse(packet){
+	packet.setTitle("キャラ作成要求");
+	packet.readUInt32("ワールドID");
+	packet.readWStr(0x1C, "キャラ名");
+	packet.readUInt32("電話番号(下4ケタ)");
+	packet.readUInt32("性別");
+	packet.readUInt32("学校");
+	packet.readUInt32("顔パーツ");
+	packet.readUInt32("髪パーツ");
+	packet.readUInt32("肌の色");
+	packet.readByte("誕生月");
+	packet.readByte("誕生日");
+	packet.readByte("血液型");
+	packet.readByte("学年");
+}

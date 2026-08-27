@@ -1,0 +1,5 @@
+function parse(packet){
+	packet.setTitle("NPCダイアログイベント通知");
+	packet.readInt32("NPCID");
+	packet.readInt32("イベント");
+}

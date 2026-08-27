@@ -1,0 +1,12 @@
+function parse(packet){
+	with(packet){
+		setTitle("販売スキルリスト通知");
+		readInt32("idNpc");
+		var cnt = readWord("vecSkillCount");
+		for(var i = 1; i <= cnt; i++){
+			readInt32("typeItem");
+			readInt64("seed");
+			readInt32();
+		}
+	}
+}

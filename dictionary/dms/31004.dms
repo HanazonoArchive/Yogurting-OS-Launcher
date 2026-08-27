@@ -1,0 +1,9 @@
+function parse(packet){
+	with(packet){
+		setTitle("チャージポイント更新通知");
+		readByte("チャージポイント");
+		readBinary(3, "(paddding)");
+		readInt32("uguuToNextUpdate");
+		readInt32("uguuCurrent");
+	}
+}

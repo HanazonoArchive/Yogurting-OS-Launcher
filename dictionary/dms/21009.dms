@@ -1,0 +1,15 @@
+function parse(packet){
+	packet.setTitle("サーバー参加通知");
+	packet.readInt32("キャラID");
+	packet.readInt32("accountSN");
+	packet.readInt32("サーバー番号");
+	packet.readWord("年");
+	packet.readWord("月");
+	packet.readWord("曜");
+	packet.readWord("日");
+	packet.readWord("時");
+	packet.readWord("分");
+	packet.readWord("秒");
+	packet.readWord("ミリ秒");
+	packet.readUInt32("sessionKey");
+}

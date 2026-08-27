@@ -1,0 +1,16 @@
+function parse(packet){
+	with(packet){
+		setTitle("NPCダイアログクエスト情報返答通知");
+		readInt32("idNpc");
+		readInt32("idDialog");
+		readInt32("cateCutIn");
+		readInt32("idQuest");
+		readWStr(readWord("sDialogTextLen"), "sDialogText");
+		var cnt = readWord("vecSelectionText");
+		for(var i = 0; i < cnt; i++){
+			readWStr(readWord("SelectionTextLen"), "SelectionText");
+		}
+		readInt32("bShowCloseButton");
+		readInt32("bEnableBgFrameClick");
+	}
+}

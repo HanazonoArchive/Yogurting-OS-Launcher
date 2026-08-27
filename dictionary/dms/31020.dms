@@ -1,0 +1,6 @@
+function parse(packet){
+	with(packet){
+		setTitle("ŒğŠ·‰“š—v‹");
+		readWStr(0x1A, "name");
+	}
+}

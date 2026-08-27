@@ -1,0 +1,6 @@
+function parse(packet){
+	with(packet){
+		setTitle("NPCダイアログ開始通知");
+		readInt32("NPCID");
+	}
+}

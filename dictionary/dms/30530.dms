@@ -1,0 +1,5 @@
+import struct35.*;
+function parse(packet){
+	packet.setTitle("“d˜b’…M");
+	phone_call_from_char_info(packet);
+}

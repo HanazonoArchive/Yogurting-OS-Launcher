@@ -1,0 +1,8 @@
+function parse(packet){
+	with(packet){
+		setTitle("ƒ[ƒv—v‹");
+		readInt32("idChar");
+		readChar("idWarpCell");
+		readBinary(3,"(padding?)");
+	}
+}

@@ -1,0 +1,30 @@
+import struct.*;
+function parse(packet){
+	with(packet){
+		setTitle("ƒLƒƒƒ‰î•ñ’Ê’m");
+		readUInt32("bAvailable");
+		char_play_info(packet);
+		char_beitem_list(packet, readWord("countBeItemList"));
+		char_coitem_list(packet, readWord("countCoItemList"));
+		char_questitem_list(packet, readWord("countQuestItemList"));
+		char_enitem_list(packet, readWord("countEnItemList"));
+		char_byulitem_list(packet, readWord("countByulItemList"));
+		char_byulitem_list2(packet, readWord("countByulItemList2"));
+		char_byulitem_effect_list(packet, readWord("countByulItemEffectList"));
+		readInt32("bByulPresent");
+		readInt32("bProductPresent");
+		readInt32("bHistoryByul");
+		readInt32("bPresentBox");
+		readInt32("bHistoryPresentRcv");
+		readInt32("bHistoryPresentSnd");
+		readInt32("bHistoryTease");
+		readInt32("idQuestReward");
+		readInt32("remainQuestRewardSecond");
+		char_byulitem_effect_info(packet);
+		readInt32("limitInvalidCouponInput");
+		readInt32("remainCouponInputSecond");
+		readInt32("DirX");
+		readInt32("DirY");
+
+	}
+}

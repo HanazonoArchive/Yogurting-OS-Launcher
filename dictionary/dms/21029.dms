@@ -1,0 +1,13 @@
+function parse(packet){
+	with(packet){
+		setTitle("エピソードガイド情報通知");
+		readByte("学年");
+		var cnt = readWord("countInfo");
+		for(var i = 1; i <= cnt; i++){
+			readByte("  学年" + i.toString());
+			readBinary(1, "  (padding)");
+			readWord("  エピソードID？" + i.toString());
+			readWord("  エピソードID？" + i.toString());
+		}
+	}
+}

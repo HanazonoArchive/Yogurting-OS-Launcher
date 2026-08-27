@@ -1,0 +1,7 @@
+function parse(packet){
+	with(packet){
+		setTitle("プッシュオブジェクト停止通知");
+		readInt32("idChar");
+		readInt32("idObject");
+	}
+}

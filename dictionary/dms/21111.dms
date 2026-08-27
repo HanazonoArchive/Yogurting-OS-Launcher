@@ -1,0 +1,6 @@
+function parse(packet){
+	with(packet){
+		setTitle("キャラEXPアップ通知");
+		readInt32("EXP");
+	}
+}

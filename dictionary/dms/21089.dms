@@ -1,0 +1,9 @@
+function parse(packet){
+	with(packet){
+		setTitle("プラカード内容変更返答");
+		readInt32("err");
+		readInt32("idChar");
+		readWStr(0x4A, "contents");
+		readBinary(2, "(padding)");
+	}
+}

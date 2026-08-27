@@ -1,0 +1,10 @@
+function parse(packet){
+	with(packet){
+		setTitle("MSG_GAME_BYUL_BYUL_HISTORY_ANS(ñ¢äÆê¨)");
+		readInt32("ñﬂÇËíl");
+		var cnt = readWord("vecByulHistoryCount");
+		for(var i = 1; i <= cnt; i++){
+			//???
+		}
+	}
+}

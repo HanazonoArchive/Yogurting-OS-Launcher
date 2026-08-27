@@ -1,0 +1,14 @@
+function parse(packet){
+	with(packet){
+		setTitle("モンスター情報通知");
+		readInt32("idMonster");
+		readInt32("typeMonster");
+		readInt32("hpCurrent");
+		readInt32("hpMax");
+		readWord("X");
+		readWord("Y");
+		readInt32("dirX");
+		readInt32("dirY");
+		readInt32("bOwnership");
+	}
+}

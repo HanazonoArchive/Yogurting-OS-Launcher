@@ -1,0 +1,9 @@
+function parse(packet){
+	with(packet){
+		setTitle("スキルエフェクト停止通知");
+		readInt32("タイプ");
+		readInt32("ID");
+		readWord("エフェクトタイプ");
+		readBinary(2, "(padding)");
+	}
+}

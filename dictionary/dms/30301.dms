@@ -1,0 +1,14 @@
+function parse(packet){
+	with(packet){
+		setTitle("ロビー参加通知");
+		var cnt = readWord("vecAvailEpisodeTypeCount");
+		for(var i = 1; i <= cnt; i++){
+			readInt32("  AvailEpisodeType" + i.toString());
+			readInt32("  AvailEpisodeType" + i.toString());
+			readSingle("  AvailEpisodeType" + i.toString());
+			readSingle("  AvailEpisodeType" + i.toString());
+		}
+		readWord("cntMaxRoom");
+		readInt32("epSN");
+	}
+}

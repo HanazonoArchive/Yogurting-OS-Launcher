@@ -1,0 +1,6 @@
+function parse(packet){
+	with(packet){
+		setTitle("カプセル販売機購入要求");
+		readInt32("machineSN");
+	}
+}

@@ -1,0 +1,8 @@
+function parse(packet){
+	with(packet){
+		setTitle("メール(memo)送信");
+		readUInt32("送信先電話番号");
+		readWStr(202, "メッセージ");
+		readBinary( 2, "(padding)");
+	}
+}

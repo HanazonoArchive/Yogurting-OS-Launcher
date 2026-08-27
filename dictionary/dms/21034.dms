@@ -1,0 +1,16 @@
+function parse(packet){
+	with(packet){
+		setTitle("拡張NPCダイアログクエストリスト返答通知");
+		readInt32("idNpc");
+		readInt32("idDialog");
+		readInt32("cateCutIn");
+		readWStr(readWord("sDialogTextLength"), "sDialogText");
+		var cnt = readWord("vecQuestSelectionCount");
+		for(var i = 1; i <= cnt; i++){
+			readInt32("  idQuestSelection" + i.toString());
+			readWStr(readWord("  sQuestSelectionLength" + i.toString()), "  sQuestSelection" + i.toString());
+		}
+		readInt32("bShowCloseButton");
+		readInt32("bEnableBgFrameClick");
+	}
+}

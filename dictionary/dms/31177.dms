@@ -1,0 +1,8 @@
+function parse(packet){
+	with(packet){
+		setTitle("ランダムボックス結果通知");
+		readInt32("ItemType");
+		readInt32("Item???(数？)");
+		readInt32("Item???");
+	}
+}

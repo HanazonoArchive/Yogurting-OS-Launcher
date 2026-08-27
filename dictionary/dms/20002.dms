@@ -1,0 +1,14 @@
+function parse(packet){
+	with(packet){
+		setTitle("エラーメッセージ通知");
+		readInt32("フォーマット番号");
+		var cnt = readWord("パラメータ数");
+		var len;
+		for(var i = 0; i < cnt; i++){
+			len = readWord("パラメータ文字長");
+			readWStr(len, "パラメータ文字列");
+		}
+		len = readWord("文字長");
+		readWStr(len, "エラーメッセージ");
+	}
+}

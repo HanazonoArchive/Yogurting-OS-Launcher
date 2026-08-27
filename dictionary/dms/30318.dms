@@ -1,0 +1,17 @@
+function parse(packet){
+	with(packet){
+		setTitle("ロビー・待機室参加予約返答");
+		readInt32("戻り値");
+		readWord("部屋ID");
+		readWord("ロビーID");
+		readWord();
+		readInt32("キャラID");
+		readWStr(26, "キャラ名");
+		readByte("性別");
+		readByte("学年");
+		readWord("武器タイプ");
+		readWord("チームID");
+		readInt32("電話番号");
+		readInt32("idPromotion");
+	}
+}

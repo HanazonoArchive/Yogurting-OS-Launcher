@@ -1,0 +1,8 @@
+function parse(packet){
+	with(packet){
+		setTitle("待機室・チーム選択");
+		readUInt32("キャラID");
+		readChar("チーム番号");
+		readBinary(3,"(padding)");
+	}
+}

@@ -1,0 +1,14 @@
+function parse(packet){
+	with(packet){
+		setTitle("ƒXƒLƒ‹€”õ’Ê’m");
+		readInt32("idChar");
+		readInt32("idSkill");
+		readInt32("seqNum");
+		readInt32("targetMainType");
+		readInt32("targetMainID");
+		readInt32("targetMainX");
+		readInt32("targetMainY");
+		readInt32("time");
+		readInt32("bSkill");
+	}
+}

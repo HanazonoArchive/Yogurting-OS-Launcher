@@ -1,0 +1,19 @@
+function parse(packet){
+	with(packet){
+		setTitle("タイマー開始通知");
+		readInt32("タイマーID");
+		readInt32("開始時間");
+		readInt32("表示時間");
+		readInt32("終了時間");
+		readInt32("typeVisible");
+		readInt32("typeTarget");
+		readInt32("アイコンID");
+		readInt32("descType");
+		for(var i = 1; i <= 3; i++){
+			readInt32("timeBegin" + i.toString());
+		}
+		for(var i = 1; i <= 3; i++){
+			readInt32("color" + i.toString());
+		}
+	}
+}

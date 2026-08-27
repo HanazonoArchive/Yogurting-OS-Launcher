@@ -1,0 +1,7 @@
+function parse(packet){
+	with(packet){
+		setTitle("MSG_GAME_BYUL_CHARGE_ANS");
+		readInt32("–ß‚è’l");
+		readInt32("shopPoint");
+	}
+}

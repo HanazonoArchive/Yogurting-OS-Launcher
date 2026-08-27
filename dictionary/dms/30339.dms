@@ -1,0 +1,8 @@
+function parse(packet){
+	with(packet){
+		setTitle("待機室・招待検証返答");
+		readInt32("キャラID");
+		readByte("戻り値");
+		readBinary(3, "(padding)");
+	}
+}

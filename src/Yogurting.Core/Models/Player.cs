@@ -125,12 +125,21 @@ namespace Yogurting.Core.Models
         public int SaveFieldId { get; set; } = 1;
         public Position SavePosition { get; set; } = new Position(76f, 104f, 0f);
 
-        // Inventories & Equipment
+        // Inventories, Lockers & Equipment
+        public long BankMoney { get; set; } = 0;
         public int[] EquippedSlotUids { get; set; } = new int[10] { 0, 0, 0, 0, 1, 0, 0, 2, 3, 4 };
         public bool[] EquippedSlotIsStar { get; set; } = new bool[10];
         public List<Item> Equips { get; set; } = new();
         public List<Item> Inventory { get; set; } = new();
         public List<Item> StarBeItems { get; set; } = new();
+        public List<Item> LockerItems { get; set; } = new();
+        public Dictionary<int, int[]> SkillHotkeys { get; set; } = new()
+        {
+            { 1, new int[10] },
+            { 2, new int[10] },
+            { 3, new int[10] },
+            { 4, new int[10] },
+        };
         public List<int> LearnedSkills { get; set; } = new();
         public List<int> CompletedEpisodes { get; set; } = new();
         public List<int> UnlockedTitles { get; set; } = new();

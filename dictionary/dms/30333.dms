@@ -1,0 +1,6 @@
+function parse(packet){
+	with(packet){
+		setTitle("待機室・キャラ退出通知");
+		readInt32("idChar");
+	}
+}

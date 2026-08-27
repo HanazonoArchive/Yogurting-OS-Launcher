@@ -1,0 +1,6 @@
+function parse(packet){
+	with(packet){
+		setTitle("“d˜bØ’f");
+		readUInt32("’Ê˜bID");
+	}
+}

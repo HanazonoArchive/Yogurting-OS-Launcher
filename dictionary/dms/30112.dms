@@ -1,0 +1,5 @@
+function parse(packet){
+	packet.setTitle("ワールドリスト返答");
+	packet.readUInt32("戻り値");
+	var cnt = packet.readUInt32("ワールド数");
+}

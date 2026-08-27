@@ -1,0 +1,7 @@
+function parse(packet){
+	with(packet){
+		setTitle("エピソードページ状態通知");
+		readInt32("snEpisode");
+		readInt32("exist");
+	}
+}

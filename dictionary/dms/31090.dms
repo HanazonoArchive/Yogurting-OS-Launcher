@@ -1,0 +1,22 @@
+import struct.*;
+function parse(packet){
+	with(packet){
+		setTitle("エピソード結果通知");
+		readByte("countChar");
+		var cnt = readWord("キャラ数");
+		episode_char_info(packet, cnt);
+		readInt32("points");
+		readInt32("rank");
+		var cnt = readWord("bootyBoxCount");
+		for(var i = 1; i <= cnt; i++){
+			readInt32("idChar");
+			var icnt = readWord("itemBootyCount");
+			for (var j = 0; j < icnt; j++){
+				readItem(packet, false);
+			}
+			readByte("cntBootyItem");
+			readItem(packet, false);
+			readInt32("bPowerUp");
+		}
+	}
+}

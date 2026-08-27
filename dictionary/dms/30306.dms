@@ -1,0 +1,11 @@
+import struct.*;
+function parse(packet){
+	with(packet){
+		setTitle("ロビーページ情報通知");
+		readInt32("pageNum");
+		var cnt = readWord("rooms");
+		for (var i = 0; i < cnt; i++){
+			room_info(packet);
+		}
+	}
+}

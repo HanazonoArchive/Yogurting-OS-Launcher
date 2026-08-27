@@ -1,0 +1,10 @@
+function parse(packet){
+	packet.setTitle("ワールドリスト通知");
+	packet.readUInt32("bLast");
+	var cnt = packet.readUInt32("ワールド数");
+	for(var i = 1; i <= cnt; i++){
+		packet.readWStr(0x18, "ワールド名" + i.toString());
+		packet.readUInt32("ワールド番号" + i.toString());
+		packet.readUInt32("通し番号？混雑度？" + i.toString());
+	}
+}

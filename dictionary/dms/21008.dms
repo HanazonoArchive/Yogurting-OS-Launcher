@@ -1,0 +1,6 @@
+function parse(packet){
+	with(packet){
+		setTitle("サーバー移動通知");
+		readIPPort("移動先");
+	}
+}

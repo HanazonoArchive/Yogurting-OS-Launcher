@@ -1,0 +1,5 @@
+function parse(packet){
+	packet.setTitle("他キャラ消滅通知");
+	packet.readInt32("消滅キャラID");
+	packet.readInt32("消滅タイプ");
+}

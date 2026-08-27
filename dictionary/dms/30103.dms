@@ -1,0 +1,9 @@
+import struct.*;
+function parse(packet){
+	packet.setTitle("ログイン認証返答");
+	packet.readUInt32("戻り値");
+	packet.readWStr(0x16, "ワールド名");
+	packet.readWStr(0x42, "学校名");
+	char_disp_info(packet);
+	packet.readUInt32("cntWait");
+}

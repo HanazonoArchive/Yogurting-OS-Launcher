@@ -1,0 +1,7 @@
+function parse(packet){
+	with(packet){
+		setTitle("装備系スターアイテム使用要求");
+		readUInt32("BeItemシリアルNo");
+		readUInt32();
+	}
+}

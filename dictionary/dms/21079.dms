@@ -1,0 +1,5 @@
+function parse(packet){
+	with(packet){
+		setTitle("MSG_GAME_BYUL_BYUL_HISTORY_REQ");
+	}
+}

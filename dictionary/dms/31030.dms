@@ -1,0 +1,13 @@
+function parse(packet){
+	with(packet){
+		setTitle("NPCからアイテム購入返答");
+		readInt32("戻り値");
+		for(var i = 1; i <= 20; i++){
+			readInt32(" typeItem" + i.toString());
+			readWord("  idItemDim1Index" + i.toString());
+			readWord("  idItemDim2Index" + i.toString());
+			readInt32("  idItem[Dim1][Dim2]" + i.toString());
+		}
+		readInt64("totalPrice");
+	}
+}

@@ -1,0 +1,8 @@
+function parse(packet){
+	with(packet){
+		setTitle("ミニマップ変更通知");
+		readByte("ミニマップID");
+		readBinary(3, "(padding)");
+		readInt32("typePcShow");
+	}
+}

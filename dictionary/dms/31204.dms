@@ -1,0 +1,8 @@
+import struct.*;
+function parse(packet){
+	with(packet){
+		setTitle("定期プレイヤーHP情報通知");
+		var cnt = readWord("vecHpInfoCount");
+		player_hp_info(packet, cnt);
+	}
+}

@@ -1,0 +1,5 @@
+import struct.*;
+function parse(packet){
+	packet.setTitle("ロビー参加キャラ通知");
+	pc_info(packet);
+}

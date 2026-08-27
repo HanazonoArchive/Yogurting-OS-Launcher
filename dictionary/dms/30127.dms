@@ -1,0 +1,4 @@
+function parse(packet){
+	packet.setTitle("タイムアウト通知");
+	packet.readUInt32("アカウントID");
+}

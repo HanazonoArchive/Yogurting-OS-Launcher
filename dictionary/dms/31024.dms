@@ -1,0 +1,11 @@
+function parse(packet){
+	with(packet){
+		setTitle("交換アイテム追加通知");
+		readInt32("typeItem+typeNum");
+		readWord("dim1Index or count");
+		readWord("dim2Index or (invalid)");
+		readInt32("idItem or (invalid)");
+		for(var i = 0; i < 5; i++)
+			readInt32("reinforceslot[" + i.toString() + "]");
+	}
+}

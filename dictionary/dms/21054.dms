@@ -1,0 +1,7 @@
+function parse(packet){
+	with(packet){
+		setTitle("スターアイテム購入要求");
+		readInt32("productID");
+		readInt32("count");
+	}
+}

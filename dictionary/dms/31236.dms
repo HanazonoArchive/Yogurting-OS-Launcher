@@ -1,0 +1,9 @@
+function parse(packet){
+	with(packet){
+		setTitle("アイテム廃棄通知");
+		readInt32("typeItem+typeNum");
+		var dim1 = readWord("idBeItemDim1Index");
+		var dim2 = readWord("idBeItemDim2Index");
+		readInt32("idBeItem[" + dim1.toString() + "][" + dim2.toString() + "]");
+	}
+}

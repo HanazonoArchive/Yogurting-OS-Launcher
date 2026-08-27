@@ -1,0 +1,6 @@
+function parse(packet){
+	with(packet){
+		setTitle("消費アイテム使用要求");
+		readInt32("CoItemタイプ");
+	}
+}

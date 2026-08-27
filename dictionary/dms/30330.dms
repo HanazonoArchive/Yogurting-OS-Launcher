@@ -1,0 +1,12 @@
+function parse(packet){
+	with(packet){
+		setTitle("待機室・エディット要求");
+		readInt32("snEpisode");
+		readWStr(42, "title");
+		readByte("bPKMode");
+		readByte("bLimitMilk");
+		readByte("cntTeam");
+		readBinary(1, "(padding)");
+		readWStr(18, "password");
+	}
+}

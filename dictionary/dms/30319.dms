@@ -1,0 +1,6 @@
+function parse(packet){
+	with(packet){
+		setTitle("ロビー・待機室参加要求");
+		readWStr(18, "password");
+	}
+}

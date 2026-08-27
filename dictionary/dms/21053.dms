@@ -1,0 +1,18 @@
+import struct.*;
+function parse(packet){
+	with(packet){
+		setTitle("MSG_GAME_BYUL_PRODUCT_LIST_ANS");
+		readInt32("–ß‚è’l");
+		var cnt = readWord("vecByulProductCount");
+		byul_product(packet, cnt);
+		/*
+		for(var i = 1; i <= cnt; i++){
+			readInt32("typeByulItem" + i.toString());
+			readInt32("shopPoint" + i.toString());
+			readInt32();
+			readInt32();
+			readInt32();
+		}
+		*/
+	}
+}

@@ -1,0 +1,9 @@
+function parse(packet){
+	with(packet){
+		setTitle("ƒ‹[ƒ€ì¬—\–ñ•Ô“š");
+		readInt32("–ß‚è’l");
+		readWord("snRoom");
+		readWord("idLobby");
+		readByte("bAuthSecret");
+	}
+}

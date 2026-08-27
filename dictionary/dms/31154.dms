@@ -1,0 +1,22 @@
+function parse(packet){
+	packet.setTitle("i‹‰î•ñ’Ê’m");
+	packet.readInt32("ƒLƒƒƒ‰ID");
+	for(var i = 1; i <= 10; i++){
+		packet.readWord("nTypeSN" + i.toString());
+	}
+	for(var i = 1; i <= 10; i++){
+		packet.readWord("nCondId" + i.toString());
+	}
+	for(var i = 1; i <= 13; i++){
+		packet.readInt32("nGradeLevel" + i.toString());
+	}
+	packet.readInt32("nBaseMeanValue");
+	var cnt = packet.readWord("vecCondCount");
+	for(var i = 1; i <= cnt; i++){
+		packet.readInt32("vecCond1_" + i.toString());
+		packet.readInt32("vecCond2_" + i.toString());
+		packet.readInt32("vecCond3_" + i.toString());
+	}
+	packet.readInt32();
+	packet.readInt32();
+}

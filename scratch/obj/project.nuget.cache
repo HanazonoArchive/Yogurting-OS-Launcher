@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "58Fzs8nGc7o=",
+  "success": true,
+  "projectFilePath": "C:\\Users\\Hanazono Archive\\Desktop\\Yogurting Game\\server_modern\\scratch\\VerifyFiveAngles.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Hanazono Archive\\.nuget\\packages\\system.io.pipelines\\10.0.11\\system.io.pipelines.10.0.11.nupkg.sha512"
+  ],
+  "logs": []
+}

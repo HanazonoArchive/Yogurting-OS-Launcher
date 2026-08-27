@@ -1,0 +1,27 @@
+function parse(packet){
+	with(packet){
+		setTitle("エピソード情報通知");
+		readInt32("typeEpisode");
+		readInt32("mode");
+		readInt32("bPK");
+		readWStr(readWord("title len"), "title");
+		readInt32("cntLimitMilk");
+		readInt32("cntTotalRevival");
+		readInt32("cntFreeRevival");
+		readInt32("curTotalRevival");
+		readInt32("curFreeRevival");
+		var cnt = readWord("vecEpisodePC");
+		for(var i = 0; i < cnt; i++){
+			readInt32("├idChar");
+			readWStr(0x1A, "├name");
+			readByte("├grade");
+			readByte("├weapon");
+			readWord("├idTeam");
+			readBinary(2, "├(padding)");
+			readInt32("├phone");
+			readInt32("└idPromotion");
+		}
+		readSingle("scheduleCalorieEnter");
+		readSingle("scheduleCalorieConsume");
+	}
+}

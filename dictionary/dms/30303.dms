@@ -1,0 +1,5 @@
+import struct.*;
+function parse(packet){
+	packet.setTitle("ƒƒr[•”‰®î•ñ’Ê’m");
+	room_info(packet);
+}

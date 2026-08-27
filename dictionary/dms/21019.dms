@@ -1,0 +1,14 @@
+function parse(packet){
+	packet.setTitle("オブジェクト生成通知");
+	packet.readUInt32("id");
+	packet.readUInt32("type");
+	packet.readUInt32("subid");
+	packet.readUInt32("idCli");
+	packet.readUInt32("shell");
+	packet.readSingle("posX");
+	packet.readSingle("posY");
+	packet.readByte("direction");
+	packet.readByte("visible");
+	packet.readByte("usable");
+	packet.readBinary(1, "(padding)");
+}

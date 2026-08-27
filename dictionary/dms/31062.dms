@@ -1,0 +1,4 @@
+function parse(packet){
+	packet.setTitle("フィールド情報完了通知");
+	packet.readInt32("フィールドID");
+}

@@ -1,0 +1,4 @@
+function parse(packet){
+	packet.setTitle("チャットサーバーエコー通知");
+	packet.readInt32("seqNum");
+}

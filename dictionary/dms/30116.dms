@@ -1,0 +1,4 @@
+function parse(packet){
+	packet.setTitle("名前重複チェック要求");
+	packet.readWStr(0x1A, "キャラ名");
+}

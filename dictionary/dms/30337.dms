@@ -1,0 +1,8 @@
+function parse(packet){
+	with(packet){
+		setTitle("待機室・アイテム変更通知");
+		readInt32("idChar");
+		readByte("weapon");
+		readBinary(3, "(padding)");
+	}
+}

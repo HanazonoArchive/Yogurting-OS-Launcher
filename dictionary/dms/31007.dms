@@ -1,0 +1,9 @@
+function parse(packet){
+	with(packet){
+		setTitle("ê≥ãKà íuí ím");
+		readInt32("idChar");
+		readInt32("typeCorrect");
+		readWord("posX");
+		readWord("posY");
+	}
+}

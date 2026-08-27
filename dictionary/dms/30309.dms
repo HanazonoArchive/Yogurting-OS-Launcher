@@ -1,0 +1,7 @@
+function parse(packet){
+	with(packet){
+		setTitle("ロビー・エピソード選択返答");
+		readInt32("戻り値");
+		readInt32("snEpisode");
+	}
+}

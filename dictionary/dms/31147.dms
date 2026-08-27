@@ -1,0 +1,15 @@
+function parse(packet){
+	with(packet){
+		setTitle("Œ‹»¸»•Ô“š");
+		readInt32("–ß‚è’l");
+		var cnt = readWord("vecGoneItemsCount");
+		for(var i = 1; i <= cnt; i++){
+			readInt32("  typeItem+typeNum" + i.toString());
+			readInt32("  count" + i.toString());
+			readInt32("  (invalid)" + i.toString());
+		}
+		readInt32("[crystal]typeItem+typeNum");
+		readInt32("[crystal]count");
+		readInt32("[crystal](invalid)");
+	}
+}

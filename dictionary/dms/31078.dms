@@ -1,0 +1,14 @@
+function parse(packet){
+	with(packet){
+		setTitle("ƒ[ƒv•Ô“š");
+		readInt32("result");
+		readInt32("idDestField");
+		readWord("posDestX");
+		readWord("posDestY");
+		if( readInt32("bHuntField") ) {
+			readInt32("idHuntField");
+		}else {
+			readBinary(4, "(padding)");
+		}
+	}
+}

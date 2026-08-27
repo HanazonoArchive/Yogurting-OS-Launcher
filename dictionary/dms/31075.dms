@@ -1,0 +1,13 @@
+function parse(packet){
+	packet.setTitle("チャット通知");
+	packet.readInt32("送信元ID");
+	var flag = packet.readUInt32("カラー");
+	packet.readUInt32("Emoticon");
+	packet.readWStr(0x1A, "キャラ名");
+	packet.readUInt32("メッセージフォーマット番号(MATCHING_SYS_MSG.clt)");
+	var cnt = packet.readWord("フォーマットパラメータ数");
+	for(var i = 1; i <= cnt; i++){
+		packet.readWStr(packet.readWord("  文字列長" + i.toString()), "  文字列" + i.toString());
+	}
+	packet.readWStr(packet.readWord("メッセージ長"), "メッセージ");
+}

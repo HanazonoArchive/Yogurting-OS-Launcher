@@ -1,0 +1,7 @@
+function parse(packet){
+	with(packet){
+		setTitle("アイテム売値要求");
+		readInt32("idNpc");
+		readInt32("idType");
+	}
+}

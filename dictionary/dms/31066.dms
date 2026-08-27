@@ -1,0 +1,10 @@
+function parse(packet){
+	packet.setTitle("フィールド読み込み開始通知");
+	packet.readByte("フィールドタイプ");
+	packet.readBinary(3, "(padding)");
+	packet.readInt32("フィールドID");
+	packet.readWord("X");
+	packet.readWord("Y");
+	packet.readUInt32("bHuntField");
+	packet.readUInt32("idHuntField");
+}

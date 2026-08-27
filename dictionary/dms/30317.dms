@@ -1,0 +1,7 @@
+function parse(packet){
+	with(packet){
+		setTitle("ロビー・待機室参加予約要求");
+		readWord("部屋ID");
+		readWord("ロビーID");
+	}
+}

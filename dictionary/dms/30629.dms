@@ -1,0 +1,37 @@
+function parse(packet){
+	packet.setTitle("チャットサーバー同好会情報返答");
+	packet.readUInt32("キャラID");
+	packet.readWord();
+	packet.readWord();
+	packet.readUInt32();
+	packet.readUInt32();
+	packet.readUInt32("同好会ID？");
+	packet.readWStr(0x1C, "同好会名");
+	packet.readUInt32("設立日");
+	packet.readUInt32();
+	packet.readUInt32();
+	packet.readUInt32();
+	packet.readUInt32();
+	packet.readUInt32();
+	packet.readUInt32("会長キャラID");
+	packet.readInt32();
+	packet.readInt32();
+	packet.readUInt32();
+	var cnt = packet.readWord("メンバー数");
+	for(var i = 1; i <= cnt; i++){
+		packet.readWord();
+		packet.readWord();
+		packet.readUInt32();
+		packet.readUInt32();
+		packet.readUInt32();
+		packet.readUInt32("加入日");
+		packet.readUInt32();
+		packet.readUInt32("メンバーキャラID");
+		packet.readUInt32("電話番号");
+		packet.readWStr(0x44, "メンバー名");
+		packet.readUInt32();
+		packet.readUInt32();
+		packet.readUInt32();
+		packet.readUInt32();
+	}
+}

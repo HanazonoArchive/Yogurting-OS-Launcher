@@ -1,0 +1,10 @@
+function parse(packet){
+	with(packet){
+		setTitle("友達登録通知");
+		readInt32("キャラID");
+		readInt32("電話番号");
+		readWStr(0x42, "キャラ名");
+		readBinary(2, "(padding)");
+		readInt32("bOnline?");
+	}
+}

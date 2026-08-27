@@ -1,0 +1,14 @@
+function parse(packet){
+	with(packet){
+		setTitle("…î•ñ’Ê’m");
+		readInt32("idWater");
+		readInt32("dH");
+		readInt32("timeDH");
+		readInt32("speed1");
+		readInt32("timeSpeed1");
+		readInt32("speed2");
+		readInt32("timeSpeed2");
+		readInt32("texture1");
+		readInt32("texture2");
+	}
+}

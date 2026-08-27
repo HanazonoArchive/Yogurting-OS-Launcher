@@ -1,0 +1,28 @@
+function phone_call_info(packet) {
+	packet.readUInt32("通話ID");
+	packet.readUInt32("発信/着信タイプ");
+	packet.readWord();
+	packet.readWord();
+	packet.readUInt32("Unknown(なんか4n)");
+}
+
+
+function phone_call_from_char_info(packet) {
+	packet.readUInt32("キャラID");
+	packet.readUInt32("電話番号");
+	packet.readWStr(0x40, "キャラ名");
+	packet.readBinary(2, "(padding)");
+}
+
+
+function lobby_char_pc_info(packet)
+{
+	packet.readUInt32("キャラID");
+	packet.readWStr(26,"キャラ名");
+	packet.readChar("性別");
+	packet.readChar("学年");
+	packet.readInt32("武器種類");
+	packet.readUInt32("電話番号");
+	packet.readBinary(4, "(padding)");
+};
+

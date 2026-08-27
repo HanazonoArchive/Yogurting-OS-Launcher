@@ -1,0 +1,7 @@
+function parse(packet){
+	with(packet){
+		setTitle("アイテム売値返答");
+		readInt32("idType");
+		readInt64("price");
+	}
+}

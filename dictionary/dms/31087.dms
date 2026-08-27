@@ -1,0 +1,7 @@
+function parse(packet){
+	with(packet){
+		setTitle("ƒLƒƒƒ‰EXP’Ê’m");
+		readInt32("expUp");
+		readInt32("exp");
+	}
+}

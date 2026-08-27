@@ -1,0 +1,12 @@
+import struct.*;
+function parse(packet){
+	with(packet){
+		setTitle("クーポン結果通知");
+		readInt32("戻り値");
+		readInt32("eventSN");
+		readWStr(0x22, "coupon");
+		readBinary(2, "(padding)");
+		readItem(packet);
+		readInt32("limitInputCount");
+	}
+}

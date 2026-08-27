@@ -1,0 +1,9 @@
+function parse(packet){
+	with(packet){
+		setTitle("•ŠíƒtƒŒ[ƒ€î•ñ—v‹");
+		readInt32("typeItem+typeNum");
+		readWord("dim1Index");
+		readWord("dim2Index");
+		readInt32("idItem");
+	}
+}

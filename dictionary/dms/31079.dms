@@ -1,0 +1,7 @@
+function parse(packet){
+	with(packet){
+		setTitle("ワープ完了通知");
+		readInt32("キャラID");
+		readInt32("移動先フィールドID");
+	}
+}

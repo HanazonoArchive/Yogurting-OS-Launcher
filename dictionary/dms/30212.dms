@@ -1,0 +1,70 @@
+import struct.*;
+import struct35.*;
+function parse(packet){
+	packet.setTitle("チャット鯖参加返答");
+	packet.readUInt32("isReg");
+	var fricnt = packet.readWord("友達リスト数");
+	for(var i = 1; i <= fricnt; i++){
+		packet.readUInt32("  キャラID" + i.toString());
+		packet.readUInt32("  電話番号" + i.toString());
+		packet.readWStr(0x44, "  キャラ名" + i.toString());
+		packet.readUInt32("  下校/登校状態" + i.toString());
+	}
+	var memocnt = packet.readWord("メッセージ記録数");
+	for(var i =1; i <= memocnt ; i++) {
+		packet.readWord("  Unknown" + i.toString());
+		packet.readWord("  Unknown" + i.toString());
+		packet.readUInt32("  Unknown" + i.toString());
+		packet.readBinary(4, "  Unknown" + i.toString());
+		packet.readUInt32("  キャラID" + i.toString());
+		packet.readUInt32("  電話番号" + i.toString());
+		packet.readBinary(64,"  キャラ名" + i.toString());
+		packet.readBinary(2, "  (padding)" + i.toString());
+		packet.readWStr(202, "  メッセージ内容" + i.toString());
+	}
+	var cnt = packet.readWord("通話記録数");
+	for(var i = 1; i <= cnt; i++){
+		packet.readUInt32("  発信/着信タイプ" + i.toString());
+		packet.readWord("  Unknown" + i.toString());
+		packet.readWord("  Unknown" + i.toString());
+		packet.readUInt32("  Unknown" + i.toString());
+		packet.readUInt32("  キャラID" + i.toString());
+		packet.readUInt32("  電話番号" + i.toString());
+		packet.readWStr(0x44, "  キャラ名" + i.toString());
+	}
+	packet.readWord("受信拒否リスト数");
+	for(var i = 1; i <= cnt; i++){
+	
+	}
+	packet.readUInt32();
+	packet.readUInt32();
+	packet.readUInt32();
+	packet.readUInt32();
+	packet.readUInt32();
+	packet.readUInt32();
+	packet.readUInt32();
+	packet.readWord();
+	packet.readWord();
+	packet.readUInt32();
+	packet.readInt32();
+	packet.readByte();
+	packet.readBinary(3, "(padding)");
+	packet.readUInt32("同好会結成年月日");
+	packet.readUInt32();
+	packet.readInt32("キャラID");
+	packet.readInt32("電話番号");
+	packet.readWStr(0x44, "キャラ名");
+	packet.readUInt32();
+	packet.readUInt32();
+	packet.readUInt32();
+	packet.readUInt32();
+	char_brief_info(packet);
+	packet.readWord("年");
+	packet.readWord("月");
+	packet.readWord("曜日");
+	packet.readWord("日");
+	packet.readWord("時");
+	packet.readWord("分");
+	packet.readWord("秒");
+	packet.readWord("ミリ秒");
+}

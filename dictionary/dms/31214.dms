@@ -1,0 +1,10 @@
+function parse(packet){
+	with(packet){
+		setTitle("武器熟練度アップ通知");
+		readInt32("キャラID");
+		readInt32("戻り値");
+		readInt32("レベル");
+		readInt32();
+		readInt32("次レベルアップ値");
+	}
+}

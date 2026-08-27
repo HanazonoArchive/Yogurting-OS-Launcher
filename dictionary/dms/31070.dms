@@ -1,0 +1,9 @@
+function parse(packet){
+	with(packet){
+		setTitle("ƒŒƒo[ˆø‚«•Ô“š");
+		readInt32("idObject");
+		readInt32("result");
+		readByte("status");
+		readBinary(3, "(padding)");
+	}
+}

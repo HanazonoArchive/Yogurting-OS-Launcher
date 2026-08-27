@@ -387,5 +387,134 @@ namespace Yogurting.Server.Handlers.Field
         {
             return Task.CompletedTask;
         }
+
+        /// <summary>
+        /// 0xA02B (41003): MsgLockerOpenReq - Open Player Storage Locker
+        /// </summary>
+        [PacketHandler(PacketOpcode.MsgLockerOpenReq)]
+        public async Task HandleLockerOpenReqAsync(PlayerSessionState state, byte[] packetData)
+        {
+            try
+            {
+                var player = state.Player;
+                if (player == null) return;
+
+                int lockerId = packetData.Length >= 10 ? BitConverter.ToInt32(packetData, 6) : 1;
+                Logger.Info($"[Locker] '{player.CharacterName}' opened Locker #{lockerId}.");
+
+                // 1. Send Open Ans (0xA02C)
+                await state.Session.SendAsync(YogurtingPackets.MakeLockerOpenAns(1, lockerId));
+
+                // 2. Send Stored Items (0xA02D)
+                await state.Session.SendAsync(YogurtingPackets.MakeLockerItemInfoNtf(lockerId, player.LockerItems));
+            }
+            catch (Exception ex)
+            {
+                Logger.Error($"[Locker] HandleLockerOpenReq error: {ex.Message}");
+            }
+        }
+
+        /// <summary>
+        /// 0xA02F (41007): MsgLockerMoveItemReq - Move Item between Backpack and Locker
+        /// </summary>
+        [PacketHandler(PacketOpcode.MsgLockerMoveItemReq)]
+        public async Task HandleLockerMoveItemReqAsync(PlayerSessionState state, byte[] packetData)
+        {
+            try
+            {
+                var player = state.Player;
+                if (player == null) return;
+
+                int lockerId = packetData.Length >= 10 ? BitConverter.ToInt32(packetData, 6) : 1;
+                byte direct = packetData.Length >= 11 ? packetData[10] : (byte)0; // 0 = Inven -> Locker, 1 = Locker -> Inven
+                int rawType = packetData.Length >= 18 ? BitConverter.ToInt32(packetData, 14) : 0;
+                int itemTypeMask = rawType & unchecked((int)0xFF000000);
+                int typeId = rawType & 0x00FFFFFF;
+
+                Logger.Info($"[Locker] '{player.CharacterName}' moving item Type #{typeId} Direct={direct} (0:Deposit, 1:Withdraw).");
+
+                Item? movedItem = null;
+                if (direct == 0) // Deposit
+                {
+                    movedItem = player.Inventory?.Find(i => i.TypeId == typeId);
+                    if (movedItem != null)
+                    {
+                        player.Inventory?.Remove(movedItem);
+                        player.LockerItems.Add(movedItem);
+                    }
+                }
+                else // Withdraw
+                {
+                    movedItem = player.LockerItems.Find(i => i.TypeId == typeId);
+                    if (movedItem != null)
+                    {
+                        player.LockerItems.Remove(movedItem);
+                        player.Inventory?.Add(movedItem);
+                    }
+                }
+
+                if (movedItem != null)
+                {
+                    await state.Session.SendAsync(YogurtingPackets.MakeLockerMoveItemCompleteNtf(0, lockerId, direct, movedItem));
+                    if (_repository != null)
+                    {
+                        await _repository.SaveAccountAsync(player);
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                Logger.Error($"[Locker] HandleLockerMoveItemReq error: {ex.Message}");
+            }
+        }
+
+        /// <summary>
+        /// 0x526D (21101): MsgGameHairShopEnterNtf / Hair Shop Request
+        /// </summary>
+        [PacketHandler(PacketOpcode.MsgGameEnterHairShopNtf)]
+        public async Task HandleEnterHairShopAsync(PlayerSessionState state, byte[] packetData)
+        {
+            try
+            {
+                var player = state.Player;
+                if (player == null) return;
+
+                var catalog = new List<(int hairId, long price)>
+                {
+                    (101, 500), (102, 500), (103, 500), (104, 750), (105, 1000), (106, 1200)
+                };
+
+                Logger.Info($"[HairSalon] '{player.CharacterName}' entered Hair Salon.");
+                await state.Session.SendAsync(YogurtingPackets.MakeGameHairShopEnterNtf(catalog));
+            }
+            catch (Exception ex)
+            {
+                Logger.Error($"[HairSalon] HandleEnterHairShop error: {ex.Message}");
+            }
+        }
+
+        /// <summary>
+        /// 0x522C (21036): MsgGameExNpcDialogSelectNtf - NPC Dialogue Option Selected
+        /// </summary>
+        [PacketHandler(PacketOpcode.MsgGameExNpcDialogSelectNtf)]
+        public async Task HandleNpcDialogSelectAsync(PlayerSessionState state, byte[] packetData)
+        {
+            try
+            {
+                var player = state.Player;
+                if (player == null) return;
+
+                int dialogId = packetData.Length >= 10 ? BitConverter.ToInt32(packetData, 6) : 0;
+                uint choiceRaw = packetData.Length >= 14 ? BitConverter.ToUInt32(packetData, 10) : 0;
+                int questId = packetData.Length >= 18 ? BitConverter.ToInt32(packetData, 14) : 0;
+                int choiceIndex = (int)(choiceRaw & 0x7FFFFFFF);
+
+                Logger.Info($"[NPC] '{player.CharacterName}' selected Dialog #{dialogId} Choice #{choiceIndex} QuestId={questId}.");
+            }
+            catch (Exception ex)
+            {
+                Logger.Error($"[NPC] HandleNpcDialogSelect error: {ex.Message}");
+            }
+        }
     }
 }

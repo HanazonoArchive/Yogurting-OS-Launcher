@@ -1,0 +1,6 @@
+function parse(packet){
+	with(packet){
+		setTitle("待機室・エディット返答");
+		readInt32("戻り値");
+	}
+}

@@ -1,0 +1,23 @@
+function parse(packet){
+	with(packet){
+		setTitle("ŒðŠ·Š®—¹’Ê’m");
+		for(var i = 1; i <= 5; i++){
+			readInt32("  [out]typeItem+typeNum" + i.toString());
+			readWord("  [out]dim1index or count" + i.toString());
+			readWord("  [out]dim2index or (invalid)" + i.toString());
+			readInt32("  [out]idItem or (invalid)" + i.toString());
+			for(var j = 0; j < 5; j++)
+				readInt32("  [out]reinforceslot[" + j.toString() + "]" + i.toString());
+		}
+		readInt64("[out]money");
+		for(var i = 1; i <= 5; i++){
+			readInt32("  [in]typeItem+typeNum" + i.toString());
+			readWord("  [in]dim1index or count" + i.toString());
+			readWord("  [in]dim2index or (invalid)" + i.toString());
+			readInt32("  [in]idItem or (invalid)" + i.toString());
+			for(var j = 0; j < 5; j++)
+				readInt32("  [in]reinforceslot[" + j.toString() + "]" + i.toString());
+		}
+		readInt64("[in]money");
+	}
+}

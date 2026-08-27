@@ -1,0 +1,11 @@
+function parse(packet){
+	with(packet){
+		setTitle("装備系スターアイテム使用応答");
+		readInt32("戻り値");
+		readInt32("キャラID");
+		readInt32("byulItemSN_1");
+		readInt32("byulItemSN_2");
+		readInt32("effectType");
+		readInt32("resultValue");
+	}
+}

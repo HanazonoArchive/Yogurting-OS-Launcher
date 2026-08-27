@@ -1,0 +1,6 @@
+function parse(packet){
+	packet.setTitle("ƒƒr[ó‘Ô’Ê’m");
+	packet.readInt32("ID");
+	packet.readByte("ó‘Ô");
+	packet.readBinary(3, "(padding)");
+}

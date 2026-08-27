@@ -1,0 +1,5 @@
+function parse(packet){
+	packet.setTitle("ƒLƒƒƒ‰ˆÊ’u’Ê’m");
+	packet.readWord("X");
+	packet.readWord("Y");
+}

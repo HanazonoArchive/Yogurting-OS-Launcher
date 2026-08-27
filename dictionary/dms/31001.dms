@@ -1,0 +1,27 @@
+function parse(packet){
+	with(packet){
+		setTitle("攻撃要求");
+		readInt32("idChar");
+		readByte("idxAtkSkill");
+		readInt32("targetMainType");
+		readInt32("targetMainId");
+		readInt32("targetMainPosX");
+		readInt32("targetMainPosY");
+		readByte("cntTarget");
+		var cnt = readWord("TargetsCount");
+		for(var i = 1; i <= cnt; i++){
+			if(i != cnt){
+				readInt32("├┬target"+i+"Type");
+				readInt32("│├target"+i+"Id");
+				readInt32("│├target"+i+"PosX");
+				readInt32("│└target"+i+"PosY");
+			}else{
+				readInt32("└┬target"+i+"Type");
+				readInt32("　 ├target"+i+"Id");
+				readInt32("　 ├target"+i+"PosX");
+				readInt32("　 └target"+i+"PosY");
+			}
+		}
+		readInt32("time");
+	}
+}

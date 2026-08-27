@@ -1,0 +1,20 @@
+function parse(packet){
+	with(packet){
+		setTitle("ƒXƒLƒ‹”­“®—v‹");
+		readInt32("idSkill");
+		readInt32("seqNum");
+		readInt32("targetMainType");
+		readInt32("targetMainID");
+		readInt32("targetMainX");
+		readInt32("targetMainY");
+		readByte("cntTarget");
+		var cnt = readWord("cnttargets");
+		for(var i = 1; i <= cnt; i++){
+			readInt32("  targetType" + i.toString());
+			readInt32("  targetID" + i.toString());
+			readInt32("  targetX" + i.toString());
+			readInt32("  targetY" + i.toString());
+		}
+		readInt32("time");
+	}
+}

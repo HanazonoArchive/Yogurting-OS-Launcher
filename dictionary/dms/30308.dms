@@ -1,0 +1,6 @@
+function parse(packet){
+	with(packet){
+		setTitle("ロビー・エピソード選択要求");
+		readInt32("snEpisode");
+	}
+}

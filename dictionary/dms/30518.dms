@@ -1,0 +1,11 @@
+import struct35.*;
+function parse(packet){
+	packet.setTitle("メール(memo)受信");
+	packet.readWord();
+	packet.readWord();
+	packet.readUInt32();
+	packet.readUInt32();
+	phone_call_from_char_info(packet);
+	packet.readWStr(200, "メッセージ");
+	packet.readBinary(2, "(padding)");
+}

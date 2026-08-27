@@ -1,0 +1,10 @@
+function parse(packet){
+	packet.setTitle("学校リスト通知");
+	packet.readUInt32("bLast");
+	packet.readUInt32("ワールドID");
+	var cnt = packet.readUInt32("学校数");
+	for(var i = 1; i <= cnt; i++){
+		packet.readUInt32("学校ID" + i.toString());
+		packet.readWStr(0x44, "学校名" + i.toString());
+	}
+}

@@ -1,0 +1,8 @@
+function parse(packet){
+	with(packet){
+		setTitle("プラカード状態変更返答");
+		readInt32("err");
+		readInt32("idChar");
+		readInt32("bShow");
+	}
+}

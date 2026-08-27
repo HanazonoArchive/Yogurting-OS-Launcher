@@ -1,0 +1,6 @@
+function parse(packet){
+	with(packet){
+		setTitle("アイテムショップ開始返答");
+		readInt32("戻り値");
+	}
+}

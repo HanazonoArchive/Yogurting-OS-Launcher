@@ -1,0 +1,10 @@
+function parse(packet){
+	with(packet){
+		setTitle("プッシュオブジェクト返答");
+		readInt32("idChar");
+		readInt32("idObject");
+		readInt32("result");
+		readWord("posX");
+		readWord("posY");
+	}
+}

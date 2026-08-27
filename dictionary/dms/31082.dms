@@ -1,0 +1,15 @@
+function parse(packet){
+	with(packet){
+		setTitle("モンスター攻撃通知");
+		readInt32("idMonster");
+		readWord("posX");
+		readWord("posY");
+		readInt32("typeMotion");
+		readInt32("idTargetChar");
+		readInt32("damage");
+		readInt64("pocketMoney");
+		readByte("speedRate");
+		readByte("typeHit");
+		readBinary(2, "(padding)");
+	}
+}

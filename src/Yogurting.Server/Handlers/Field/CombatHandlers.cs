@@ -427,157 +427,7 @@ namespace Yogurting.Server.Handlers.Field
         /// <summary>
         /// 0x7925 (31013): MsgGameSkillCastReq - Active Skill Cast Initiation (F1 hotkey)
         /// </summary>
-        [PacketHandler(PacketOpcode.MsgGameSkillCastReq)]
-        public Task HandleSkillCastReqAsync(PlayerSessionState state, byte[] packetData)
-        {
-            try
-            {
-                var player = state.Player;
-                if (player == null) return Task.CompletedTask;
 
-                int skillId = packetData.Length >= 10 ? BitConverter.ToInt32(packetData, 6) : 0;
-                Logger.Info($"[Combat] '{player.CharacterName}' initiated skill cast #{skillId} (ChargePoints={player.ChargePoint})!");
-            }
-            catch (Exception ex)
-            {
-                Logger.Error($"[Combat] HandleSkillCastReq failed: {ex.Message}");
-            }
-            return Task.CompletedTask;
-        }
-
-        /// <summary>
-        /// 0x7923 (31011): MsgGameSkillActiveReq - Active Skill Execution on Targets (F1 impact)
-        /// </summary>
-        [PacketHandler(PacketOpcode.MsgGameSkillActiveReq)]
-        public async Task HandleSkillActiveReqAsync(PlayerSessionState state, byte[] packetData)
-        {
-            try
-            {
-                var player = state.Player;
-                if (player == null) return;
-
-                int skillId = packetData.Length >= 10 ? BitConverter.ToInt32(packetData, 6) : 0;
-                int seqNum = packetData.Length >= 14 ? BitConverter.ToInt32(packetData, 10) : 0;
-                int targetMainType = packetData.Length >= 18 ? BitConverter.ToInt32(packetData, 14) : 2;
-                int targetMainId = packetData.Length >= 22 ? BitConverter.ToInt32(packetData, 18) : -1;
-                int targetMainX = packetData.Length >= 26 ? BitConverter.ToInt32(packetData, 22) : (int)player.Position.X;
-                int targetMainY = packetData.Length >= 30 ? BitConverter.ToInt32(packetData, 26) : (int)player.Position.Y;
-                byte cntTarget = packetData.Length >= 31 ? packetData[30] : (byte)0;
-                ushort targetsCount = packetData.Length >= 33 ? BitConverter.ToUInt16(packetData, 31) : (ushort)cntTarget;
-
-                // Read all targets in skill packet (Delphi: 16 bytes per target)
-                var skillTargets = new List<(int type, int entityId, int x, int y)>();
-                int sOffset = 33;
-                for (int i = 0; i < targetsCount && sOffset + 16 <= packetData.Length; i++)
-                {
-                    int tType = BitConverter.ToInt32(packetData, sOffset);
-                    int tId = BitConverter.ToInt32(packetData, sOffset + 4);
-                    int tX = BitConverter.ToInt32(packetData, sOffset + 8);
-                    int tY = BitConverter.ToInt32(packetData, sOffset + 12);
-                    sOffset += 16;
-                    skillTargets.Add((tType, tId, tX, tY));
-                }
-
-                // Consume 1 ChargePoint
-                if (player.ChargePoint > 0)
-                {
-                    player.ChargePoint--;
-                    await state.Session.SendAsync(YogurtingPackets.MakeGameChargePointUpdateNtf(player.ChargePoint));
-                }
-
-                // Detect equipped weapon category (1=Blade, 2=Glove, 3=Blunt, 4=Spirit)
-                int weaponCat = 1;
-                if (player.EquippedSlotUids != null && player.EquippedSlotUids.Length > 4 && player.EquippedSlotUids[4] > 0)
-                {
-                    int wUid = player.EquippedSlotUids[4];
-                    var wItem = player.StarBeItems?.Find(i => i.Id == wUid || i.SerialId == wUid || (i.TypeId > 0 && i.TypeId == wUid))
-                             ?? player.Inventory?.Find(i => i.Id == wUid);
-                    if (wItem != null)
-                    {
-                        int weaponTypeId = wItem.TypeId > 0 ? wItem.TypeId : wItem.ItemId;
-                        weaponCat = (weaponTypeId / 10000) switch
-                        {
-                            11 => 1,
-                            12 => 2,
-                            13 => 3,
-                            14 => 4,
-                            _ => 1
-                        };
-                    }
-                }
-
-                // Calculate powerful skill damage: 2.5x base attack
-                var status = _gameDb != null ? _gameDb.GetStatusForLevel(player.Level) : new StatusDef { Pow = player.Level * 4, Luck = player.Level * 2 };
-                int equipAtk = 0;
-                if (_gameDb != null && player.Equips != null)
-                {
-                    foreach (var eq in player.Equips)
-                    {
-                        if (_gameDb.Items.TryGetValue(eq.TypeId, out var itemDef) && itemDef.Attack > 0)
-                        {
-                            equipAtk += itemDef.Attack;
-                        }
-                    }
-                }
-                int skillDmg = (int)(Math.Max(35, (status.Pow * 6 + equipAtk * 2)) * player.GetDamageMultiplier());
-
-                var hitList = new List<(int entityId, int x, int y, int damage, bool isCrit)>();
-
-                // Check field monsters
-                if (_gameDb != null && _gameDb.Fields.TryGetValue(player.FieldId, out var fieldDef))
-                {
-                    lock (fieldDef.Monsters)
-                    {
-                        var targetIds = new HashSet<int>();
-                        if (targetMainId > 0) targetIds.Add(targetMainId);
-                        foreach (var st in skillTargets)
-                        {
-                            if (st.entityId > 0) targetIds.Add(st.entityId);
-                        }
-
-                        foreach (var tId in targetIds)
-                        {
-                            var mon = fieldDef.Monsters.Find(m => m.EntityId == tId && !m.IsDead);
-                            if (mon != null)
-                            {
-                                mon.TakeDamage(skillDmg);
-                                hitList.Add((mon.EntityId, (int)mon.X, (int)mon.Y, skillDmg, true));
-
-                                if (mon.IsDead)
-                                {
-                                    int expEarned = Math.Max(1, mon.ExpReward);
-                                    byte[] deadPkt = YogurtingPackets.MakeGameHuntMonDeadNtf(mon, player.CharacterId, expEarned, (int)player.Exp);
-                                    _ = state.Session.SendAsync(deadPkt);
-                                    _ = _broadcastDelegate(state, deadPkt);
-                                }
-                            }
-                        }
-                    }
-                }
-
-                if (hitList.Count == 0)
-                {
-                    hitList.Add((-1, targetMainX, targetMainY, 0, false));
-                }
-
-                Logger.Info($"[Combat] *** SKILL ACTIVATED! *** '{player.CharacterName}' cast skill #{skillId} dealing {skillDmg} damage (Remaining Charge={player.ChargePoint})!");
-
-                // Broadcast skill answer (0x7924)
-                byte[] skillAns = YogurtingPackets.MakeGameSkillActiveAns(
-                    player.CharacterId,
-                    skillId,
-                    seqNum,
-                    hitList,
-                    1);
-
-                await state.Session.SendAsync(skillAns);
-                await _broadcastDelegate(state, skillAns);
-            }
-            catch (Exception ex)
-            {
-                Logger.Error($"[Combat] HandleSkillActiveReq failed: {ex.Message}");
-            }
-        }
 
         /// <summary>
         /// 0xA413 (42003): MsgGameCapsuleBuyReq - Capsule Vending Machine Purchase
@@ -614,6 +464,169 @@ namespace Yogurting.Server.Handlers.Field
         public Task HandleCapsuleExitNtfAsync(PlayerSessionState state, byte[] packetData)
         {
             return Task.CompletedTask;
+        }
+
+        /// <summary>
+        /// 0x7923 (31011): MsgGameSkillCastReq - Player Active Combat Skill Cast
+        /// </summary>
+        [PacketHandler(PacketOpcode.MsgGameSkillCastReq)]
+        public async Task HandleSkillCastReqAsync(PlayerSessionState state, byte[] packetData)
+        {
+            try
+            {
+                var player = state.Player;
+                if (player == null) return;
+
+                int skillId = packetData.Length >= 10 ? BitConverter.ToInt32(packetData, 6) : 0;
+                int seqNum = packetData.Length >= 14 ? BitConverter.ToInt32(packetData, 10) : 0;
+                int targetMainType = packetData.Length >= 18 ? BitConverter.ToInt32(packetData, 14) : 2;
+                int targetMainId = packetData.Length >= 22 ? BitConverter.ToInt32(packetData, 18) : -1;
+                int targetMainX = packetData.Length >= 26 ? BitConverter.ToInt32(packetData, 22) : (int)player.Position.X;
+                int targetMainY = packetData.Length >= 30 ? BitConverter.ToInt32(packetData, 26) : (int)player.Position.Y;
+                byte flag = packetData.Length >= 31 ? packetData[30] : (byte)0;
+                ushort targetsCount = packetData.Length >= 33 ? BitConverter.ToUInt16(packetData, 31) : (ushort)0;
+
+                int weaponCat = 1; // Default Blade
+                if (player.EquippedSlotUids != null && player.EquippedSlotUids.Length > 4 && player.EquippedSlotUids[4] != 0)
+                {
+                    var weaponItem = player.Inventory?.Find(i => i.Id == player.EquippedSlotUids[4]);
+                    if (weaponItem != null && _gameDb?.Items.TryGetValue(weaponItem.TypeId, out var wDef) == true)
+                    {
+                        weaponCat = Math.Max(1, wDef.WeaponType);
+                    }
+                }
+
+                Logger.Info($"[Combat] '{player.CharacterName}' cast Skill #{skillId} Seq={seqNum} WeaponCat={weaponCat} TargetMainId={targetMainId} TargetsCount={targetsCount}");
+
+                // Resolve splash damage for all hit targets
+                var targetResults = new List<(int targetType, int targetId, int targetX, int targetY, int damage, byte hitType)>();
+                int targetOffset = 33;
+                for (int i = 0; i < targetsCount && targetOffset + 16 <= packetData.Length; i++)
+                {
+                    int tType = BitConverter.ToInt32(packetData, targetOffset);
+                    int tId = BitConverter.ToInt32(packetData, targetOffset + 4);
+                    int tX = BitConverter.ToInt32(packetData, targetOffset + 8);
+                    int tY = BitConverter.ToInt32(packetData, targetOffset + 12);
+                    targetOffset += 16;
+
+                    // Skill damage calculation (2.5x base weapon attack + variance)
+                    int baseAtk = 40 + (player.Level * 4);
+                    int dmg = Math.Max(10, (int)(baseAtk * 2.5f + _random.Next(-5, 12)));
+                    bool isCrit = _random.Next(0, 100) < 30;
+                    if (isCrit) dmg = (int)(dmg * 1.5f);
+
+                    targetResults.Add((tType, tId, tX, tY, dmg, isCrit ? (byte)2 : (byte)1));
+
+                    // Apply to monster if present
+                    if (_gameDb != null && _gameDb.Fields.TryGetValue(player.FieldId, out var fDef))
+                    {
+                        lock (fDef.Monsters)
+                        {
+                            var mon = fDef.Monsters.Find(m => m.EntityId == tId && !m.IsDead);
+                            if (mon != null)
+                            {
+                                mon.TakeDamage(dmg);
+                                byte[] monHpNtf = YogurtingPackets.MakeGameMonHpInfoNtf(mon.EntityId, mon.CurrentHp, mon.MaxHp);
+                                _ = state.Session.SendAsync(monHpNtf);
+                                _ = _broadcastDelegate(state, monHpNtf);
+                            }
+                        }
+                    }
+                }
+
+                // If single-target (targetsCount == 0) and targetMainId != -1
+                if (targetResults.Count == 0 && targetMainId != -1)
+                {
+                    int baseAtk = 40 + (player.Level * 4);
+                    int dmg = Math.Max(10, (int)(baseAtk * 2.5f + _random.Next(-5, 12)));
+                    bool isCrit = _random.Next(0, 100) < 30;
+                    if (isCrit) dmg = (int)(dmg * 1.5f);
+
+                    targetResults.Add((targetMainType, targetMainId, targetMainX, targetMainY, dmg, isCrit ? (byte)2 : (byte)1));
+
+                    if (_gameDb != null && _gameDb.Fields.TryGetValue(player.FieldId, out var fDef))
+                    {
+                        lock (fDef.Monsters)
+                        {
+                            var mon = fDef.Monsters.Find(m => m.EntityId == targetMainId && !m.IsDead);
+                            if (mon != null)
+                            {
+                                mon.TakeDamage(dmg);
+                                byte[] monHpNtf = YogurtingPackets.MakeGameMonHpInfoNtf(mon.EntityId, mon.CurrentHp, mon.MaxHp);
+                                _ = state.Session.SendAsync(monHpNtf);
+                                _ = _broadcastDelegate(state, monHpNtf);
+                            }
+                        }
+                    }
+                }
+
+                // Dispatch 0x7924 (MsgGameSkillCastAns)
+                byte[] skillAns = YogurtingPackets.MakeGameSkillCastAns(
+                    player.CharacterId,
+                    skillId,
+                    seqNum,
+                    targetMainType,
+                    targetMainId,
+                    targetMainX,
+                    targetMainY,
+                    targetResults,
+                    weaponCat,
+                    addDexExp: 2);
+
+                await state.Session.SendAsync(skillAns);
+                await _broadcastDelegate(state, skillAns);
+
+                // Award proficiency EXP
+                if (player.DexExps != null && player.DexExps.Length > weaponCat)
+                {
+                    player.DexExps[weaponCat] += 2;
+                }
+
+                if (_repository != null)
+                {
+                    await _repository.SaveAccountAsync(player);
+                }
+            }
+            catch (Exception ex)
+            {
+                Logger.Error($"[Combat] HandleSkillCastReq error: {ex.Message}");
+            }
+        }
+
+        /// <summary>
+        /// 0x79FC (31228): MsgGameSkillHotkeyNtf - Save Player Skill Hotkey Bindings
+        /// </summary>
+        [PacketHandler(PacketOpcode.MsgGameSkillHotkeyNtf)]
+        public async Task HandleSkillHotkeyNtfAsync(PlayerSessionState state, byte[] packetData)
+        {
+            try
+            {
+                var player = state.Player;
+                if (player == null) return;
+
+                ushort weaponCategory = packetData.Length >= 8 ? BitConverter.ToUInt16(packetData, 6) : (ushort)1;
+                ushort slotIndex = packetData.Length >= 10 ? BitConverter.ToUInt16(packetData, 8) : (ushort)1;
+                int skillId = packetData.Length >= 14 ? BitConverter.ToInt32(packetData, 10) : 0;
+
+                Logger.Info($"[Combat] '{player.CharacterName}' set Skill Hotkey: WeaponCat={weaponCategory} Slot={slotIndex} SkillId={skillId}");
+
+                if (player.SkillHotkeys != null && player.SkillHotkeys.TryGetValue(weaponCategory, out var slots))
+                {
+                    if (slotIndex < slots.Length)
+                    {
+                        slots[slotIndex] = skillId;
+                    }
+                }
+
+                if (_repository != null)
+                {
+                    await _repository.SaveAccountAsync(player);
+                }
+            }
+            catch (Exception ex)
+            {
+                Logger.Error($"[Combat] HandleSkillHotkeyNtf error: {ex.Message}");
+            }
         }
     }
 }

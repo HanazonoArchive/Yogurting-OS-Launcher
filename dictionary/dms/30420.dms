@@ -1,0 +1,10 @@
+function parse(packet){
+	with(packet){
+		setTitle("アトラクションプレイ開始通知");
+		readInt32("キャラID");
+		readWord("X");
+		readWord("Y");
+		readByte("チーム数");
+		readBinary(3, "(padding)");
+	}
+}

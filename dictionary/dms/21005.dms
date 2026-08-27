@@ -1,0 +1,4 @@
+function parse(packet){
+	packet.setTitle("HPİ’è’Ê’m");
+	packet.readWord("HP");
+}

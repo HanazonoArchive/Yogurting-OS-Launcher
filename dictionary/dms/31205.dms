@@ -1,0 +1,8 @@
+function parse(packet){
+	with(packet){
+		setTitle("プレイヤーステータス通知");
+		readInt32("idChar");
+		readInt32("type");
+		readInt32("bStart");
+	}
+}

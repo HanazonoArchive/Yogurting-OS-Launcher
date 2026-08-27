@@ -1,0 +1,20 @@
+function parse(packet){
+	with(packet){
+		setTitle("Œ¹Î‘•’…•Ô“š");
+		readInt32("–ß‚è’l");
+		readInt32("ƒLƒƒƒ‰ID");
+		var cnt = readWord("vecGoneItemsCount");
+		for(var i = 1; i <= cnt; i++){
+			readInt32("  typeItem+typeNum" + i.toString());
+			readInt32("  count" + i.toString());
+			readInt32("  (invalid)" + i.toString());
+		}
+		readInt32("typeItem+typeNum");
+		readWord("Dim1Index");
+		readWord("Dim2Index");
+		readInt32("idItem");
+		for(var i = 0; i < 5; i++)
+			readInt32("reinforceslot[" + i.toString() + "]");
+		readInt32("remainTimeInSecond");
+	}
+}

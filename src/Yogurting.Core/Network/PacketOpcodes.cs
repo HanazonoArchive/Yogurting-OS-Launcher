@@ -102,6 +102,20 @@ namespace Yogurting.Core.Network
         MsgGamePromoteInfoNtf       = 0x79B2, // 31154: Grade promotion info (Delphi 0x005AEF1C)
         MsgGameRevivalSchoolAns     = 0x7950, // 31056: School Respawn / Revival Answer
         MsgGameActionAttackReq      = 0xA031, // 41009: Action / Basic Attack request (Delphi 0x00611FD0)
+        MsgGameSkillCastReq         = 0x7923, // 31011: Skill Cast Request
+        MsgGameSkillCastAns         = 0x7924, // 31012: Skill Cast Answer / Multi-target Damage
+        MsgGameSkillPrepNtf         = 0x7925, // 31013: Skill Cast Preparation Notice
+        MsgGameSkillHotkeyNtf       = 0x79FC, // 31228: Skill Hotkey Shortcut Sync
+        MsgGameExNpcDialogNtf       = 0x5229, // 21033: Extended NPC Dialog Notice
+        MsgGameExNpcDialogSelectNtf = 0x522C, // 21036: Extended NPC Dialog Selection Notice
+        MsgGameHairShopEnterNtf     = 0x526D, // 21101: Hair Salon Catalog Notice
+        MsgGameHairChangeAns        = 0x5271, // 21105: Hair Change Answer
+        MsgLockerEnterNtf           = 0xA029, // 41001: Locker Enter Notice
+        MsgLockerOpenReq            = 0xA02B, // 41003: Locker Open Request
+        MsgLockerOpenAns            = 0xA02C, // 41004: Locker Open Answer
+        MsgLockerItemInfoNtf        = 0xA02D, // 41005: Locker Stored Items Info Notice
+        MsgLockerMoveItemReq        = 0xA02F, // 41007: Locker Move Item Request
+        MsgLockerMoveItemCompleteNtf = 0xA030, // 41008: Locker Move Item Complete Notice
 
         // ----------------------------------------------------
         // LOGIN SERVER (PORT 10000 - 30100 series)
@@ -156,6 +170,7 @@ namespace Yogurting.Core.Network
         // ----------------------------------------------------
         // IN-GAME / WORLD ACTIONS (31000 series)
         // ----------------------------------------------------
+        MsgGameMoveNtf              = 0x7918, // 31000: Character Movement Sync Broadcast
         MsgGameAttackReq            = 0x7919, // 31001: Character Attack Request (Delphi TMsgGameAttackReq)
         MsgGameAttackAns            = 0x791A, // 31002: Character Attack Response / Damage Broadcast (Delphi TMsgGameAttackAns)
         MsgGameDieCharNtf           = 0x791B, // 31003: Player Death Notification (Delphi TMsgGameDieCharNtf)
@@ -165,9 +180,6 @@ namespace Yogurting.Core.Network
         MsgGameMoveStopReq          = 0x791E, // 31006: Character Stop Move
         MsgGamePosSyncReq           = 0x7921, // 31009: Position Sync packet
         MsgGameJumpReq              = 0x7922, // 31010: Jump action
-        MsgGameSkillActiveReq       = 0x7923, // 31011: Skill Active Request (Delphi TMsgGameSkillActiveReq)
-        MsgGameSkillActiveAns       = 0x7924, // 31012: Skill Active Response (Delphi TMsgGameSkillActiveAns)
-        MsgGameSkillCastReq         = 0x7925, // 31013: Skill Cast request
         MsgGameUseCoItemReq         = 0x7928, // 31016: Consumable Item Use Request (31016.dms: 消費アイテム使用要求)
         MsgGameUseCoItemAns         = 0x7929, // 31017: Consumable Item Use Answer (31017.dms: COITEM使用返答)
         MsgGameSkillHitReq          = 0x7928, // 31016: Legacy alias

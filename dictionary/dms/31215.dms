@@ -1,0 +1,18 @@
+function parse(packet){
+	with(packet){
+		setTitle("Œ¹Î‘•’…—v‹");
+		readInt32("[beitem]typeItem+typeNum");
+		readWord("[beitem]Dim1Index");
+		readWord("[beitem]Dim2Index");
+		readInt32("[beitem]idItem");
+		for(var i = 0; i < 5; i++)
+			readInt32("[beitem]reinforceslot[" + i.toString() + "]");
+		readInt32("[book]typeItem+typeNum");
+		readInt32("[book]count");
+		readInt32("[book](invalid)");
+		readInt32("[stone]typeItem+typeNum");
+		readInt32("[stone]count");
+		readInt32("[stone](invalid)");
+		readInt32("slot");
+	}
+}

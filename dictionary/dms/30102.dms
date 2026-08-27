@@ -1,0 +1,6 @@
+function parse(packet){
+	packet.setTitle("アカウント認証要求");
+	packet.readWStr(0x32, "ユーザーID");
+	packet.readStr(0x22, "ユーザーパスワード(MD5)");
+	packet.readInt32("エンコードタイプ");
+}

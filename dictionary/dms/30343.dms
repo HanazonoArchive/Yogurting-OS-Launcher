@@ -1,0 +1,6 @@
+function parse(packet){
+	with(packet){
+		setTitle("待機室・招待申請通知");
+		readByte("accept");
+	}
+}

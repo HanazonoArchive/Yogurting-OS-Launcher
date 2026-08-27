@@ -1,0 +1,9 @@
+function parse(packet){
+	with(packet){
+		setTitle("ロッカーENTER通知");
+		var cnt = readWord("vecLockerCount");
+		for(var i = 1; i <= cnt; i++){
+		
+		}
+	}
+}

@@ -1,0 +1,10 @@
+function parse(packet){
+	with(packet){
+		setTitle("戦闘フィールドキャラレベルアップ通知");
+		readInt32("level");
+		readInt32("exp");
+		readInt32("expMax");
+		readInt32("skillPoint");
+		readInt32("idChar");
+	}
+}

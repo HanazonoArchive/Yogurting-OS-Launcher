@@ -1,0 +1,6 @@
+function parse(packet){
+	packet.setTitle("拡張NPCダイアログ選択通知");
+	packet.readInt32("ダイアログID");
+	packet.readUInt32("選択肢番号+0x80000000");
+	packet.readInt32("クエストID");
+}

@@ -1,0 +1,4 @@
+function parse(packet){
+	packet.setTitle("自動回復開始通知");
+	packet.readSingle("basicRegain(時間単位回復量？)");
+}

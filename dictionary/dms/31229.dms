@@ -1,0 +1,11 @@
+function parse(packet){
+	with(packet){
+		setTitle("MSG_GAME_PASSIVE_EFFECT_START_NTF(常時エフェクト表示開始？)");
+		var mgpesCnt = readWord("エフェクト数");
+		for(var i=1 ; i<=mgpesCnt ; i++) {
+			readByte( "  Unknown" + i.toString() );
+			readBinary( 3, "  (padding" + i.toString() + ")");
+			readUInt32( "  Unknown" + i.toString());
+		}
+	}
+}

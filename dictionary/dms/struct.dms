@@ -1,0 +1,387 @@
+function char_disp_info(packet){
+	packet.readUInt32("キャラID");
+	packet.readUInt32("学年");
+	packet.readWStr(0x1C, "キャラ名");
+	packet.readUInt32("学校ID");
+	packet.readUInt32("マークID");
+	packet.readUInt32("電話番号");
+	packet.readInt64("所持金");
+	packet.readUInt32("性別");
+	packet.readUInt32("顔タイプ");
+	packet.readUInt32("髪タイプ");
+	packet.readUInt32("肌タイプ");
+	packet.readWStr(0x1C, "同好会名");
+	packet.readUInt32("レベル");
+	packet.readUInt32("頭装備");
+	packet.readUInt32();
+	packet.readUInt32("バック？");
+	packet.readUInt32("武器");
+	packet.readUInt32("手装備？");
+	packet.readUInt32();
+	packet.readUInt32("服(上)");
+	packet.readUInt32("服(下)");
+	packet.readUInt32("靴");
+
+	packet.readUInt32("源石解除可能(頭)");
+	packet.readUInt32("源石解除可能(?)");
+	packet.readUInt32("源石解除可能(バック？)");
+	packet.readUInt32("源石解除可能(武器)");
+	packet.readUInt32("源石解除可能(手)");
+	packet.readUInt32("源石解除可能(?)");
+	packet.readUInt32("源石解除可能(服上)");
+	packet.readUInt32("源石解除可能(服下)");
+	packet.readUInt32("源石解除可能(靴)");
+	for(var i=1 ; i<=5 ; i++) {
+		packet.readUInt32("頭装備源石？"+i.toString());
+	}
+	for(var i=1 ; i<=5 ; i++) {
+		packet.readUInt32("Unknown"+i.toString());
+	}
+	for(var i=1 ; i<=5 ; i++) {
+		packet.readUInt32("バック？"+i.toString());
+	}
+	for(var i=1 ; i<=5 ; i++) {
+		packet.readUInt32("武器源石"+i.toString());
+	}
+	for(var i=1 ; i<=5 ; i++) {
+		packet.readUInt32("手装備源石？"+i.toString());
+	}
+	for(var i=1 ; i<=5 ; i++) {
+		packet.readUInt32();
+	}
+	for(var i=1 ; i<=5 ; i++) {
+		packet.readUInt32("服(上)源石"+i.toString());
+	}
+	for(var i=1 ; i<=5 ; i++) {
+		packet.readUInt32("服(下)源石"+i.toString());
+	}
+	for(var i=1 ; i<=5 ; i++) {
+		packet.readUInt32("靴源石"+i.toString());
+	}
+}
+
+// 武器熟練度
+function weapon_dex_info(packet, count){
+	var s = ["", "ブレード", "グローブ", "ミューラ", "スピリット"];
+	for(var i = 1; i <= count; i++){
+		if (i <= 4){
+			packet.readInt32(s[i]+"熟練度レベル");
+			packet.readInt32(s[i]+"熟練度経験値");
+			packet.readInt32(s[i]+"熟練度最大経験値");
+		}else{
+			packet.readInt32("熟練度レベル" + i.toString());
+			packet.readInt32("熟練度経験値" + i.toString());
+			packet.readInt32("熟練度最大経験値" + i.toString());
+		}
+	}
+}
+
+function char_play_info(packet){
+	with(packet){
+		readUInt32("キャラID");
+		readWStr(0x1A, "キャラ名");
+		readUInt32("電話番号");
+		readByte("性別");
+		readWord("学校ID");
+		readWStr(8, "ギルドID");
+		readUInt32("マークID");
+		readUInt32("顔タイプ");
+		readUInt32("髪タイプ");
+		readUInt32("肌タイプ");
+		readUInt32("レベル");
+		readByte("学年");
+		readUInt32("メインクエストポイント");
+		readUInt32("サブクエストポイント");
+		readInt64("所持金");
+		readInt64("銀行預金");
+		readUInt32("ショップポイント");
+		readUInt32("基本HP");
+		readUInt32("現在HP");
+		readUInt32("基本攻撃力");
+		readUInt32("基本防御力");
+		readUInt32("基本命中率");
+		readUInt32("フィールドID");
+		readWord("X");
+		readWord("Y");
+		for(var i = 1; i <= 10; i++){
+			readUInt32("クイックアイテム種類" + i.toString());
+		}
+		for(var i = 1; i <= 20; i++){
+			readUInt32("クイックアイテムID" + i.toString());
+		}
+		readUInt32("体力");
+		readUInt32("瞬発力");
+		readUInt32("技術");
+		readUInt32("運");
+		readUInt32("最大HP");
+		readUInt32("uguuMax");
+		readUInt32("uguuCurrent");
+		readByte("チャージポイント");
+		readUInt32("攻撃力");
+		readUInt32("防御力");
+		readUInt32("命中");
+		readUInt32("回避");
+		readUInt32("クリティカル");
+		readUInt32("攻撃速度");
+		readUInt32("移動速度");
+		readUInt32("クールタイム");
+		readUInt32("経験値");
+		readUInt32("最大経験値");
+
+		for(var i = 1; i <= 5; i++){
+			readUInt32("クエストID" + i.toString());
+		}
+		for(var i = 1; i <= 8; i++){
+			readUInt32("titleGetVec" + i.toString());
+		}
+		for(var i = 1; i <= 8; i++){
+			readUInt32("titleActiveVec" + i.toString());
+		}
+		readInt32("equipedTitle");
+		readInt32("groove");
+		readSingle("fCurCalorie");
+		readSingle("fPcConsumeRate");
+		readInt32("idCurYogurt");
+		readWStr(0x1A, "同好会名");
+
+		for(var i = 1; i <= 9; i++){
+			readWord("装備アイテムID_curEquipPart" + i.toString());
+			readWord("装備アイテムID???" + i.toString());
+			readInt32("装備アイテムID???" + i.toString());
+			//readInt64("装備アイテムID");
+		}
+		for(var i = 1; i <= 9; i++){
+			readInt32("bByulPart" + i.toString());
+		}
+		weapon_dex_info(packet, 4);
+		readInt32("skillPoint");
+		var cnt = readWord("vecSkillListCount");
+		for(var i = 1; i <= cnt; i++){
+			readInt32("Skill" + i.toString());
+		}
+		for(var i = 1; i <= 9; i++){
+			readInt32("ブレードスキルショートカット" + i.toString());
+		}
+		for(var i = 1; i <= 9; i++){
+			readInt32("グローブスキルショートカット" + i.toString());
+		}
+		for(var i = 1; i <= 9; i++){
+			readInt32("ミューラスキルショートカット" + i.toString());
+		}
+		for(var i = 1; i <= 9; i++){
+			readInt32("スピリットスキルショートカット" + i.toString());
+		}
+	}
+}
+
+function char_beitem_list(packet, count){
+	for(var i = 1; i <= count; i++){
+		var dim1 = packet.readWord("  idBeItemDim1Index" + i.toString());
+		var dim2 = packet.readWord("  idBeItemDim2Index" + i.toString());
+		packet.readInt32("  idBeItem[" + dim1.toString() + "][" + dim2.toString() + "]" +  i.toString());
+		packet.readInt32("  typeBeItem" + i.toString());
+		for(var j = 1; j <= 5; j++){
+			packet.readInt32("    reinforceslot" + i.toString() + "-" + j.toString());
+		}
+	}
+}
+
+function char_coitem_list(packet, count){
+	for(var i = 1; i <= count; i++){
+		packet.readInt32("  typeCoItem" + i.toString());
+		packet.readInt32("  countCoItem" + i.toString());
+	}
+}
+
+function char_questitem_list(packet, count){
+	for(var i = 1; i <= count; i++){
+		packet.readInt32("  typeQuestItem" + i.toString());
+		packet.readInt32("  countQuestItem" + i.toString());
+	}
+}
+
+function char_enitem_list(packet, count){
+	for(var i = 1; i <= count; i++){
+		packet.readInt32("  typeEnItem" + i.toString());
+		packet.readInt32("  countEnItem" + i.toString());
+	}
+}
+
+function char_byulitem_list(packet, count){
+	for(var i = 1; i <= count; i++){
+		packet.readInt32("  typeByulItem" + i.toString());
+		packet.readInt32("  countByulItem" + i.toString());
+	}
+}
+
+function char_byulitem_list2(packet, count){
+	for(var i = 1; i <= count; i++){
+		packet.readInt32("  idByulItem??" + i.toString());
+		packet.readInt32("  idByulItem??" + i.toString());
+		packet.readInt32("  typeByulItem" + i.toString());
+		packet.readInt32("  countByulItem" + i.toString());
+		packet.readInt32("  bUse" + i.toString());
+		packet.readInt32("  remainTimeInSecond" + i.toString());
+		for(var j = 1; j <= 5; j++){
+			packet.readInt32("    reinforceslot" + i.toString() + "-" + j.toString());
+		}
+	}
+}
+
+function char_byulitem_effect_list(packet, count){
+	for(var i = 1; i <= count; i++){
+		packet.readInt32("  effectType" + i.toString());
+		packet.readInt32("  remainTimeInSecond" + i.toString());
+	}
+}
+
+function char_byulitem_effect_info(packet){
+	packet.readInt32("bShowIdTag");
+	packet.readInt32("bgTypeIdTag");
+	packet.readInt32("bShowPicket");
+	packet.readWStr(0x4A, "contents");
+	packet.readBinary(2, "(padding)");
+}
+
+function char_brief_info(packet){
+	packet.readInt32("キャラID");
+	packet.readWStr(0x44, "キャラ名");
+	packet.readUInt32("電話番号");
+}
+
+function byul_product(packet, count){
+	for(var i = 1; i <= count; i++){
+		packet.readInt32("  productID" + i.toString());
+		packet.readInt64("  productPrice" + i.toString());
+		packet.readInt32("  dp_option" + i.toString());
+		packet.readInt32("  priceType" + i.toString());
+	}
+}
+
+function hair_info(packet, count){
+	for(var i = 1; i <= count; i++){
+		packet.readInt32("  idHair" + i.toString());
+		packet.readInt64("  taff" + i.toString());
+	}
+}
+
+function episode_char_info(packet, count){
+	for(var i = 0; i < count; i++){
+		readInt32("├idChar");
+		readWStr(0x1A, "├name");
+		readWord("└idTeam");
+	}
+}
+
+function episode_result_contents(packet, count){
+	for(var i = 0; i < count; i++){
+		//↓適当
+		readInt32("idChar");
+		readInt32("itemBooty");
+		readInt32("cntBootyItem");
+		readInt32("bonusItem");
+		readInt32("bPowerUp");
+	}
+}
+
+function room_info(packet){
+	with(packet){
+		readWord("snRoom");
+		readWord("idLobby");
+		readByte("status");
+		readBinary(1, "(padding)");
+		readWStr(42, "title");
+		readUInt32("idEpisodeType");
+		readByte("cntMaxUser");
+		readByte("cntCurrentUser");
+		readByte("cntTeam");
+		readByte("bPassWord");
+		readByte("bPK");
+		readByte("bLimitMilk");
+		readByte("bWaiting");
+		readByte("clearRate");
+		readSingle("scheduleCalorieEnter");
+		readSingle("scheduleCalorieConsume");
+	}
+}
+
+function pc_info(packet){
+	with(packet){
+		readInt32("idChar");
+		readWStr(26, "name");
+		readByte("gender");
+		readByte("grade");
+		readWord("weapon");
+		readWord("idTeam");
+		readInt32("phone");
+		readInt32("idPromotion");
+	}
+}
+
+function player_hp_info(packet, count){
+	for(var i = 0; i < count; i++){
+		readInt32("├idChar");
+		readInt32("├hpCur");
+		readInt32("├hpMax");
+		readInt32("└grade");
+	}
+}
+
+function status_change_effect(packet, count){
+	for(var i = 0; i < count; i++){
+		readInt32("idStatus");
+		readInt32("dur");
+		readInt32("val");
+		readBinary(1, "(padding)");
+	}
+}
+
+function episode_info(packet, count){
+	for(var i = 1; i <= count; i++){
+		packet.readInt32("  epTypeId" + i.toString());
+		packet.readSingle("  defaultCalorieEnter" + i.toString());
+		packet.readSingle("  defaultCalorieConsume" + i.toString());
+		packet.readSingle("  eventScheduleRate" + i.toString());
+	}
+}
+
+function readItem(packet, reinforceslot){
+	with(packet){
+		switch(readInt32("typeItem+typeNum") & 0xFF000000){
+			case 0x01000000: //Taff
+				readInt32("taff");
+				readInt32("(invalid)");
+				if(reinforceslot){
+					readBinary(20, "(padding)");
+				}
+				break;
+			case 0x02000000: //BeItem
+				readWord("dim1Index");
+				readWord("dim2Index");
+				readInt32("idItem");
+				if(reinforceslot){
+					readInt32("reinforceslot[0]");
+					readInt32("reinforceslot[1]");
+					readInt32("reinforceslot[2]");
+					readInt32("reinforceslot[3]");
+					readInt32("reinforceslot[4]");
+				}
+				break;
+			case 0x03000000: //CoItem
+			case 0x04000000: //QuestItem
+			case 0x05000000: //EnItem
+				readInt32("count");
+				readInt32("(invalid)");
+				if(reinforceslot){
+					readBinary(20, "(padding)");
+				}
+				break;
+			default:
+				if(reinforceslot){
+					readBinary(28, "(padding)");
+				}else{
+					readBinary(8, "(padding)");
+				}
+		}
+	}
+}

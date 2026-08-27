@@ -1,0 +1,7 @@
+function parse(packet){
+	with(packet){
+		setTitle("ロッカーオープン返答");
+		readInt32("open");
+		readInt32("lockerID");
+	}
+}

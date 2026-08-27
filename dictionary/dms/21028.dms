@@ -1,0 +1,5 @@
+function parse(packet){
+	with(packet){
+		setTitle("ƒKƒCƒhî•ñ•Ô“š");
+	}
+}

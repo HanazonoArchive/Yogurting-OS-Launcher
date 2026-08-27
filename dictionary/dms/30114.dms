@@ -1,0 +1,4 @@
+function parse(packet){
+	packet.setTitle("ワールド選択通知");
+	packet.readUInt32("ワールドID");
+}

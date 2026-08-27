@@ -1,0 +1,4 @@
+function parse(packet){
+	packet.setTitle("ŠwZî•ñ’Ê’m");
+	packet.readUInt32("ŠwZID");
+}

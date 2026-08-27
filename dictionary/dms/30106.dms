@@ -1,0 +1,3 @@
+function parse(packet){
+	packet.setTitle("ƒQ[ƒ€Q‰Á—v‹");
+}

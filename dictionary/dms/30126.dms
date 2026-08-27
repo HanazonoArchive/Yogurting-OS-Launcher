@@ -1,0 +1,4 @@
+function parse(packet){
+	packet.setTitle("リジューム通知");
+	packet.readUInt32("アカウントID");
+}

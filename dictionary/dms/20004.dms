@@ -1,0 +1,11 @@
+function parse(packet){
+	with(packet){
+		setTitle("アラートメッセージ通知");
+		readInt32("msgInfoTitle1");
+		readWord("msgInfoTitle2");
+		readInt32("msgInfoText1");
+		readWord("msgInfoText2");
+		readWStr(readWord("titleLen"), "title");
+		readWStr(readWord("textLen"), "text");
+	}
+}

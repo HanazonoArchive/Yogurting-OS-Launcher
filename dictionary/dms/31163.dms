@@ -1,0 +1,6 @@
+function parse(packet){
+	with(packet){
+		setTitle("オブジェクト消去通知");
+		readInt32("idObject");
+	}
+}

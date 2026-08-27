@@ -1,0 +1,9 @@
+function parse(packet){
+	packet.setTitle("Šg’£ˆÚ“®’Ê’m");
+	packet.readInt32("idChar");
+	packet.readWord("px");
+	packet.readWord("py");
+	packet.readChar("dx");
+	packet.readChar("dy");
+	packet.readBinary(2, "(padding)");
+}

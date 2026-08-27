@@ -1947,7 +1947,7 @@ namespace Yogurting.Core.Network
             System.Collections.Generic.List<(int entityId, int x, int y, int damage, bool isCrit)> targets,
             int dexExp = 1)
         {
-            using var writer = PacketWriter.Create(PacketOpcode.MsgGameSkillActiveAns);
+            using var writer = PacketWriter.Create(PacketOpcode.MsgGameSkillCastAns);
             writer.WriteInt32(charaId);
             writer.WriteInt32(skillId);
             writer.WriteInt32(seqNum);
@@ -2198,6 +2198,256 @@ namespace Yogurting.Core.Network
             writer.WriteInt64(price);
             writer.WriteInt64(remainingMoney);
             writer.WriteInt64(remainingMoney);
+            return writer.Build();
+        }
+
+        /// <summary>
+        /// 0x7924 (31012): MsgGameSkillCastAns - Skill Cast & Multi-Target Resolution
+        /// Exact layout from Delphi TMsgGameSkillCastAns.Create (0x005AC250) & 31012.dms:
+        /// </summary>
+        public static byte[] MakeGameSkillCastAns(
+            int charaId,
+            int skillId,
+            int seqNum,
+            int targetMainType,
+            int targetMainId,
+            int targetMainX,
+            int targetMainY,
+            List<(int targetType, int targetId, int targetX, int targetY, int damage, byte hitType)> targets,
+            int weaponCategory,
+            int addDexExp = 1)
+        {
+            using var writer = PacketWriter.Create(PacketOpcode.MsgGameSkillCastAns);
+            writer.WriteInt32(charaId);
+            writer.WriteInt32(skillId);
+            writer.WriteInt32(seqNum);
+            writer.WriteInt32(targetMainType);
+            writer.WriteInt32(targetMainId);
+            writer.WriteInt32(targetMainX);
+            writer.WriteInt32(targetMainY);
+            writer.WriteByte((byte)targets.Count);
+            writer.WriteUInt16((ushort)targets.Count);
+
+            foreach (var t in targets)
+            {
+                writer.WriteInt32(t.targetType);
+                writer.WriteInt32(t.targetId);
+                writer.WriteInt32(t.targetX);
+                writer.WriteInt32(t.targetY);
+            }
+
+            writer.WriteUInt16((ushort)targets.Count);
+            foreach (var t in targets)
+            {
+                writer.WriteInt32(t.damage);
+            }
+
+            writer.WriteUInt16((ushort)targets.Count);
+            foreach (var t in targets)
+            {
+                writer.WriteByte(t.hitType); // 0=Miss, 1=Hit, 2=Crit
+            }
+
+            writer.WriteInt32(1); // bSkill = 1
+            writer.WriteInt32(weaponCategory);
+            writer.WriteInt32(addDexExp);
+            return writer.Build();
+        }
+
+        /// <summary>
+        /// 0x7925 (31013): MsgGameSkillPrepNtf - Skill Cast Preparation Notice
+        /// </summary>
+        public static byte[] MakeGameSkillPrepNtf(int charaId, int skillId, int seqNum, int targetMainType, int targetMainId, int targetMainX, int targetMainY)
+        {
+            using var writer = PacketWriter.Create(PacketOpcode.MsgGameSkillPrepNtf);
+            writer.WriteInt32(charaId);
+            writer.WriteInt32(skillId);
+            writer.WriteInt32(seqNum);
+            writer.WriteInt32(targetMainType);
+            writer.WriteInt32(targetMainId);
+            writer.WriteInt32(targetMainX);
+            writer.WriteInt32(targetMainY);
+            writer.WriteInt32((int)DateTimeOffset.UtcNow.ToUnixTimeMilliseconds());
+            writer.WriteInt32(1); // bSkill = 1
+            return writer.Build();
+        }
+
+        /// <summary>
+        /// 0x79FC (31228): MsgGameSkillHotkeyNtf - Skill Hotkey Shortcut Sync
+        /// </summary>
+        public static byte[] MakeGameSkillHotkeyNtf(ushort weaponCategory, ushort slotIndex, int skillId)
+        {
+            using var writer = PacketWriter.Create(PacketOpcode.MsgGameSkillHotkeyNtf);
+            writer.WriteUInt16(weaponCategory);
+            writer.WriteUInt16(slotIndex);
+            writer.WriteInt32(skillId);
+            return writer.Build();
+        }
+
+        /// <summary>
+        /// 0xA02C (41004): MsgLockerOpenAns - Locker Open Answer
+        /// </summary>
+        public static byte[] MakeLockerOpenAns(int open, int lockerId)
+        {
+            using var writer = PacketWriter.Create(PacketOpcode.MsgLockerOpenAns);
+            writer.WriteInt32(open);
+            writer.WriteInt32(lockerId);
+            return writer.Build();
+        }
+
+        /// <summary>
+        /// 0xA02D (41005): MsgLockerItemInfoNtf - Locker Stored Items Info Notice
+        /// </summary>
+        public static byte[] MakeLockerItemInfoNtf(int lockerId, List<Item> storedItems)
+        {
+            using var writer = PacketWriter.Create(PacketOpcode.MsgLockerItemInfoNtf);
+            writer.WriteInt32(lockerId);
+
+            var beItems = storedItems.Where(i => i.SlotType == ItemSlotType.Inventory || i.SlotType == ItemSlotType.Equipment || i.SlotType == ItemSlotType.Locker).ToList();
+            writer.WriteUInt16((ushort)beItems.Count);
+            for (int i = 0; i < beItems.Count; i++)
+            {
+                var it = beItems[i];
+                writer.WriteUInt16((ushort)(i % 8)); // Dim1
+                writer.WriteUInt16((ushort)(i / 8)); // Dim2
+                writer.WriteInt32(it.Id);
+                writer.WriteInt32(it.TypeId);
+                writer.WriteInt32(it.SocketSlots != null && it.SocketSlots.Length > 0 ? it.SocketSlots[0] : 0);
+                writer.WriteInt32(it.SocketSlots != null && it.SocketSlots.Length > 1 ? it.SocketSlots[1] : 0);
+                writer.WriteInt32(it.SocketSlots != null && it.SocketSlots.Length > 2 ? it.SocketSlots[2] : 0);
+                writer.WriteInt32(it.SocketSlots != null && it.SocketSlots.Length > 3 ? it.SocketSlots[3] : 0);
+                writer.WriteInt32(it.SocketSlots != null && it.SocketSlots.Length > 4 ? it.SocketSlots[4] : 0);
+            }
+
+            var coItems = storedItems.Where(i => i.SlotType == ItemSlotType.Consumable).ToList();
+            writer.WriteUInt16((ushort)coItems.Count);
+            foreach (var it in coItems)
+            {
+                writer.WriteInt32(it.TypeId);
+                writer.WriteInt32(it.Quantity);
+            }
+
+            writer.WriteUInt16(0); // enItemsCount = 0
+            return writer.Build();
+        }
+
+        /// <summary>
+        /// 0xA030 (41008): MsgLockerMoveItemCompleteNtf - Locker Move Item Complete Notice
+        /// </summary>
+        public static byte[] MakeLockerMoveItemCompleteNtf(int result, int lockerId, byte direct, Item item)
+        {
+            using var writer = PacketWriter.Create(PacketOpcode.MsgLockerMoveItemCompleteNtf);
+            writer.WriteInt32(result);
+            writer.WriteInt32(lockerId);
+            writer.WriteByte(direct);
+            writer.WriteByte(0);
+            writer.WriteByte(0);
+            writer.WriteByte(0);
+
+            if (item.SlotType != ItemSlotType.Consumable)
+            {
+                writer.WriteInt32((int)(0x02000000 | (item.TypeId & 0x00FFFFFF)));
+                writer.WriteUInt16((ushort)item.SlotIndex);
+                writer.WriteUInt16(0);
+                writer.WriteInt32(item.Id);
+                writer.WriteInt32(item.SocketSlots != null && item.SocketSlots.Length > 0 ? item.SocketSlots[0] : 0);
+                writer.WriteInt32(item.SocketSlots != null && item.SocketSlots.Length > 1 ? item.SocketSlots[1] : 0);
+                writer.WriteInt32(item.SocketSlots != null && item.SocketSlots.Length > 2 ? item.SocketSlots[2] : 0);
+                writer.WriteInt32(item.SocketSlots != null && item.SocketSlots.Length > 3 ? item.SocketSlots[3] : 0);
+                writer.WriteInt32(item.SocketSlots != null && item.SocketSlots.Length > 4 ? item.SocketSlots[4] : 0);
+            }
+            else
+            {
+                writer.WriteInt32(0x03000000 | (item.TypeId & 0x00FFFFFF));
+                writer.WriteInt64(item.Quantity);
+                writer.WriteBytes(new byte[20]);
+            }
+
+            return writer.Build();
+        }
+
+        /// <summary>
+        /// 0x5229 (21033): MsgGameExNpcDialogNtf - Extended NPC Dialog Notice
+        /// </summary>
+        public static byte[] MakeGameExNpcDialogNtf(int npcId, int dialogId, int cutInType, string text, List<string> choices)
+        {
+            using var writer = PacketWriter.Create(PacketOpcode.MsgGameExNpcDialogNtf);
+            writer.WriteInt32(npcId);
+            writer.WriteInt32(dialogId);
+            writer.WriteInt32(cutInType);
+            writer.WriteUInt16((ushort)text.Length);
+            writer.WriteUnicodeString(text);
+            writer.WriteUInt16((ushort)choices.Count);
+
+            foreach (var ch in choices)
+            {
+                writer.WriteUInt16((ushort)ch.Length);
+                writer.WriteUnicodeString(ch);
+            }
+
+            writer.WriteInt32(0); // nTimeOut = 0 (infinite)
+            writer.WriteInt32(0); // idChoiceOnTimeOut
+            writer.WriteInt32(1); // bShowCloseButton
+            writer.WriteInt32(1); // bEnableBgFrameClick
+            return writer.Build();
+        }
+
+        /// <summary>
+        /// 0x526D (21101): MsgGameHairShopEnterNtf - Hair Salon Catalog Notice
+        /// </summary>
+        public static byte[] MakeGameHairShopEnterNtf(List<(int hairId, long price)> hairs)
+        {
+            using var writer = PacketWriter.Create(PacketOpcode.MsgGameHairShopEnterNtf);
+            writer.WriteUInt16((ushort)hairs.Count);
+            foreach (var h in hairs)
+            {
+                writer.WriteInt32(h.hairId);
+                writer.WriteInt64(h.price);
+            }
+            return writer.Build();
+        }
+
+        /// <summary>
+        /// 0x5271 (21105): MsgGameHairChangeAns - Hair Change Answer
+        /// </summary>
+        public static byte[] MakeGameHairChangeAns(int result, int charaId, int gender, int newHairId, long deductedTaff)
+        {
+            using var writer = PacketWriter.Create(PacketOpcode.MsgGameHairChangeAns);
+            writer.WriteInt32(result);
+            writer.WriteInt32(charaId);
+            writer.WriteInt32(gender);
+            writer.WriteInt32(newHairId);
+            writer.WriteInt64(deductedTaff);
+            return writer.Build();
+        }
+
+        /// <summary>
+        /// 0x7918 (31000): MsgGameMoveNtf - Player Movement Synchronization Broadcast
+        /// </summary>
+        public static byte[] MakeGameMoveNtf(int charaId, int curX, int curY, int destX, int destY, int motion = 1, byte speedRate = 100)
+        {
+            using var writer = PacketWriter.Create(PacketOpcode.MsgGameMoveNtf);
+            writer.WriteInt32(charaId);
+            writer.WriteUInt16((ushort)curX);
+            writer.WriteUInt16((ushort)curY);
+            writer.WriteUInt16((ushort)destX);
+            writer.WriteUInt16((ushort)destY);
+            writer.WriteInt32(motion);
+            writer.WriteByte(speedRate);
+            writer.WriteByte(0xCC);
+            writer.WriteByte(0xCC);
+            writer.WriteByte(0xCC);
+            return writer.Build();
+        }
+
+        /// <summary>
+        /// 0x7970 (31088): MsgGameCharLvUpNtf - Player Level Up Notification & Sound/VFX
+        /// </summary>
+        public static byte[] MakeGameCharLvUpNtf(int charaId, int newLevel)
+        {
+            using var writer = PacketWriter.Create(PacketOpcode.MsgGameCharLvUpNtf);
+            writer.WriteInt32(charaId);
+            writer.WriteInt32(newLevel);
             return writer.Build();
         }
     }

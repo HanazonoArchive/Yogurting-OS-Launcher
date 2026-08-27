@@ -1,0 +1,16 @@
+function parse(packet){
+	with(packet){
+		setTitle("スキルエフェクト開始通知");
+		readInt32("タイプ");
+		readInt32("ID");
+		var cnt = readWord("vecStatusChangeEffectCount");
+		for(var i = 1; i <= cnt; i++){
+			readByte("StatusChangeEffect" + i.toString());
+			readBinary(3, "(padding)");
+		}
+		readInt32("varHpRec");
+		readWord("varMoveSpd");
+		readWord("varAtkSpd");
+		readBinary(2, "(padding)");
+	}
+}

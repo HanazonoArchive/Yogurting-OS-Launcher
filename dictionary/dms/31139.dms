@@ -1,0 +1,7 @@
+function parse(packet){
+	packet.setTitle("Ì†‘•”õ•Ô“š");
+	packet.readInt32("–ß‚è’l");
+	packet.readInt32("ƒLƒƒƒ‰ID");
+	packet.readInt32("Ì†ID");
+	packet.readInt32("bForce");
+}

@@ -1,0 +1,18 @@
+function parse(packet){
+	packet.setTitle("ゲーム参加返答");
+	packet.readUInt32("戻り値");
+	packet.readUInt32("accountSN");
+	packet.readUInt32("サーバー番号");
+	packet.readWord("年");
+	packet.readWord("月");
+	packet.readWord("曜日");
+	packet.readWord("日");
+	packet.readWord("時");
+	packet.readWord("分");
+	packet.readWord("秒");
+	packet.readWord("ミリ秒");
+	packet.readUInt32();
+	packet.readIPPort("スクールサーバー");
+	packet.readIPPort("チャットサーバー");
+	packet.readUInt32("ユーザーID");
+}

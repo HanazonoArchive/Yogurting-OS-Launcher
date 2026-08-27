@@ -1,0 +1,12 @@
+function parse(packet){
+	with(packet){
+		setTitle("Œ‹»ƒŒƒxƒ‹—v‹");
+		readInt32("type");
+		var cnt = readWord("itemsCount");
+		for(var i = 1; i <= cnt; i++){
+			readInt32("  typeItem+typeNum" + i.toString());
+			readInt32("  count" + i.toString());
+			readInt32("  (invalid)" + i.toString());
+		}
+	}
+}

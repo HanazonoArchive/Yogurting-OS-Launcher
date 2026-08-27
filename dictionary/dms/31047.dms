@@ -1,0 +1,11 @@
+function parse(packet){
+	with(packet){
+		setTitle("BEITEM装備解除返答");
+		readInt32("戻り値");
+		readInt32("キャラID");
+		readWord("BeItemID-low");
+		readWord("BeItemID-high");
+		readInt32("BeItemID");
+		readInt32("BeItemタイプ");
+	}
+}

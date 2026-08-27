@@ -1,0 +1,9 @@
+function parse(packet){
+	with(packet){
+		setTitle("電話メッセージ送信");
+		readUInt32("通話ID");
+		readWStr( 200, "メッセージ");
+		readBinary( 2, "(padding)");
+		readBinary( 2);
+	}
+}

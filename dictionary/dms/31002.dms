@@ -1,0 +1,34 @@
+function parse(packet){
+	with(packet){
+		setTitle("攻撃返答");
+		readInt32("キャラID");
+		readInt32("戻り値");
+		readInt32("メインターゲットタイプ");
+		readInt32("メインターゲットID");
+		readInt32("メインターゲットX");
+		readInt32("メインターゲットY");
+		readByte("cntTarget");
+		var cnt = readWord("TargetsCount");
+		for(var i = 1; i <= cnt; i++){
+			readInt32("  ターゲットタイプ" + i.toString());
+			readInt32("  ターゲットID" + i.toString());
+			readInt32("  ターゲットX" + i.toString());
+			readInt32("  ターゲットY" + i.toString());
+		}
+		var cnt = readWord("DamagesCount");
+		for(var i = 1; i <= cnt; i++){
+			readInt32("  ダメージ" + i.toString());
+		}
+		var cnt = readWord("typeHitsCount");
+		for(var i = 1; i <= cnt; i++){
+			readByte("  typeHit" + i.toString());
+		}
+		readInt32("スキルID");
+		readInt32("moneyDelta");
+		readInt32("bCritical");
+		readBinary(1, "(padding)");
+		readInt32("numCombo");
+		readInt32("cateWeapon");
+		readInt32("addDexExp");
+	}
+}

@@ -1,0 +1,9 @@
+function parse(packet){
+	with(packet){
+		setTitle("ホットキー設定通知");
+		readInt32("インデックス");
+		readInt32("アイテム種類");
+		readInt32("アイテムSN1");
+		readInt32("アイテムSN2");
+	}
+}

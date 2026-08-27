@@ -1,0 +1,5 @@
+function parse(packet){
+	with(packet){
+		setTitle("ロッカー終了通知");
+	}
+}

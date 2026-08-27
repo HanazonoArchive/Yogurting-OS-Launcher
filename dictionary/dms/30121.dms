@@ -1,0 +1,6 @@
+import struct.*;
+function parse(packet){
+	packet.setTitle("ƒLƒƒƒ‰ì¬•Ô“š");
+	packet.readUInt32("–ß‚è’l");
+	char_disp_info(packet);
+}

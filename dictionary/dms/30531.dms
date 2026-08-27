@@ -1,0 +1,6 @@
+function parse(packet){
+	with(packet){
+		setTitle("通話応答");
+		readUInt32("受話(1以外で拒否？)");
+	}
+}

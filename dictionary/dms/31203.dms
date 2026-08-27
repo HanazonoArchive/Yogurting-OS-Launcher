@@ -1,0 +1,7 @@
+function parse(packet){
+	with(packet){
+		setTitle("戦利品箱割り当て通知");
+		readInt32("キャラID");
+		readInt32("戦利品箱ID");
+	}
+}

@@ -1,0 +1,13 @@
+function parse(packet){
+	with(packet){
+		setTitle("ルーム作成要求");
+		readWStr(0x2C, "タイトル");
+		readInt32("idEpisodeType");
+		readByte("bPKMode");
+		readByte("bLimitMilk");
+		readByte("bWaitRoom");
+		readByte("cntTeam");
+		readWStr(18, "password");
+		readWord();
+	}
+}

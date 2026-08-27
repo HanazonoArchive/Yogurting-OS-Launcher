@@ -1,0 +1,4 @@
+function parse(packet){
+	packet.setTitle("ロビー退出キャラ通知");
+	packet.readInt32("キャラID");
+}

@@ -1,0 +1,31 @@
+function parse(packet){
+	with(packet){
+		setTitle("ƒXƒLƒ‹”­“®•Ô“š");
+		readInt32("idChar");
+		readInt32("idSkill");
+		readInt32("seqNum");
+		readInt32("targetMainType");
+		readInt32("targetMainID");
+		readInt32("targetMainX");
+		readInt32("targetMainY");
+		readByte("cntTarget");
+		var cnt = readWord("targetsCount");
+		for(var i = 1; i <= cnt; i++){
+			readInt32("  targetType" + i.toString());
+			readInt32("  targetID" + i.toString());
+			readInt32("  targetX" + i.toString());
+			readInt32("  targetY" + i.toString());
+		}
+		var cnt = readWord("damagesCount");
+		for(var i = 1; i <= cnt; i++){
+			readInt32("  damage" + i.toString());
+		}
+		var cnt = readWord("typeHitsCount");
+		for(var i = 1; i <= cnt; i++){
+			readByte("  typeHit" + i.toString());
+		}
+		readInt32("bSkill");
+		readInt32("cateWeapon");
+		readInt32("addDexExp");
+	}
+}

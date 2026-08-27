@@ -1,0 +1,9 @@
+function parse(packet){
+	packet.setTitle("NPC¶¬’Ê’m");
+	packet.readUInt32("NPCID");
+	packet.readUInt32("idShellType");
+	packet.readWord("X");
+	packet.readWord("Y");
+	packet.readByte("Œü‚«");
+	packet.readBinary(3, "(padding)");
+}

@@ -1,0 +1,6 @@
+import struct35.*;
+function parse(packet){
+	packet.setTitle("電話通話開始");
+	phone_call_info(packet);
+	phone_call_from_char_info(packet);
+}

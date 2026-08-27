@@ -1,0 +1,22 @@
+function parse(packet){
+	with(packet){
+		setTitle("ステータス通知");
+		readByte("学年");
+		readBinary(1, "(padding)");
+		readWord("レベル");
+		readWord("最大HP");
+		readWord("体力");
+		readWord("瞬発力");
+		readWord("技術");
+		readWord("運");
+		readBinary(2, "(padding)");
+		readInt32("攻撃力");
+		readInt32("防御力");
+		readInt32("命中");
+		readInt32("回避");
+		readInt32("攻撃速度");
+		readInt32("移動速度");
+		readInt32("クールタイム");
+		readInt32("クリティカル");
+	}
+}

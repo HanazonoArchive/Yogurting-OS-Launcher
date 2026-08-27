@@ -1,0 +1,8 @@
+import struct.*;
+function parse(packet){
+	with(packet){
+		setTitle("利用可能エピソード情報通知");
+		var cnt = readWord("vecAvailEpisodeType");
+		episode_info(packet, cnt);
+	}
+}

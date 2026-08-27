@@ -1,0 +1,9 @@
+function parse(packet){
+	with(packet){
+		setTitle("COITEM使用返答");
+		readInt32("キャラID");
+		readInt32("戻り値");
+		readInt32("CoItemタイプ");
+		readInt32("数");
+	}
+}

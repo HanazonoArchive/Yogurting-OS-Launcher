@@ -1,0 +1,10 @@
+function parse(packet){
+	with(packet){
+		setTitle("”¯Œ^•ÏX•Ô“š");
+		readInt32("–ß‚è’l");
+		readInt32("idChar");
+		readInt32("gender");
+		readInt32("idHair");
+		readInt64("reduceTaff");
+	}
+}

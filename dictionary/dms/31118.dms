@@ -1,0 +1,4 @@
+function parse(packet){
+	packet.setTitle("キャラ起立通知");
+	packet.readInt32("キャラID");
+}

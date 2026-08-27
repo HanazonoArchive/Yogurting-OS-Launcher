@@ -1,0 +1,11 @@
+function parse(packet){
+	with(packet){
+		setTitle("アナウンス通知");
+  	readUInt32("メッセージフォーマット番号(MATCHING_SYS_MSG.clt)");
+  	var cnt = readWord("フォーマットパラメータ数");
+  	for(var i = 1; i <= cnt; i++){
+  		readWStr(packet.readWord("  文字列長" + i.toString()), "  文字列" + i.toString());
+  	}
+		readWStr(readWord("メッセージ長"), "メッセージ");
+	}
+}

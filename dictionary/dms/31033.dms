@@ -1,0 +1,12 @@
+function parse(packet){
+	with(packet){
+		setTitle("アイテム売却要求");
+		readInt32("idNpc");
+		for(var i = 1; i <= 20; i++){
+			readInt32("  idType" + i.toString());
+			readWord("  count or Dim1Index" + i.toString());
+			readWord("  (invalid) or Dim2Index" + i.toString());
+			readInt32("  (invalid) or idItem" + i.toString());
+		}
+	}
+}

@@ -1,0 +1,8 @@
+function parse(packet){
+	with(packet){
+		setTitle("ワープ結果通知");
+		readInt32("フィールドID");
+		readWord("X");
+		readWord("Y");
+	}
+}

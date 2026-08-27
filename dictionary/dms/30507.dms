@@ -1,0 +1,9 @@
+function parse(packet){
+	with(packet){
+		setTitle("—F’B“o˜^\¿—v‹");
+		readInt32("requesterID");
+		readInt32("requesterPhone");
+		readWStr(0x40, "requesterName");
+		readBinary(4, "(padding)");
+	}
+}
