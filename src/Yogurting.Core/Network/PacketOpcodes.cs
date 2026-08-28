@@ -76,6 +76,7 @@ namespace Yogurting.Core.Network
         MsgGameEquipAns             = 0x7945, // 31045: Equip item response (Delphi 0x005ACAA4)
         MsgGameUnequipReq           = 0x7946, // 31046: Unequip item request (Delphi 0x006C08D8)
         MsgGameUnequipAns           = 0x7947, // 31047: Unequip item response (Delphi 0x005ACB28)
+        MsgGameRevivalCharAns       = 0x794C, // 31052: Character Revival Execution Notice (Delphi 0x0060EB1F)
         MsgGameFieldEntitySpawnNtf  = 0x795C, // 31068: Field Entity / NPC Spawn Info
         MsgGameWarpTriggerReq       = 0x7965, // 31077: Step into warp zone request
         MsgGameWarpStartNtf         = 0x7966, // 31078: Warp transition start
@@ -105,6 +106,7 @@ namespace Yogurting.Core.Network
         MsgGameSkillCastReq         = 0x7923, // 31011: Skill Cast Request
         MsgGameSkillCastAns         = 0x7924, // 31012: Skill Cast Answer / Multi-target Damage
         MsgGameSkillPrepNtf         = 0x7925, // 31013: Skill Cast Preparation Notice
+        MsgGameSkillEndNtf          = 0x7926, // 31014: Skill Cast End / Cancel Notice
         MsgGameSkillHotkeyNtf       = 0x79FC, // 31228: Skill Hotkey Shortcut Sync
         MsgGameExNpcDialogNtf       = 0x5229, // 21033: Extended NPC Dialog Notice
         MsgGameExNpcDialogSelectNtf = 0x522C, // 21036: Extended NPC Dialog Selection Notice

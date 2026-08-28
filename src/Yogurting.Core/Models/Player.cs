@@ -97,6 +97,10 @@ namespace Yogurting.Core.Models
         // Progression & Stats
         public int Level { get; set; } = 1;
         public int Grade { get; set; } = 1;
+        public int Pow { get; set; } = 4;
+        public int Speed { get; set; } = 3;
+        public int Skill { get; set; } = 3;
+        public int Luck { get; set; } = 2;
         public int DexLevel { get; set; } = 1;
         public int DexExp { get; set; } = 0;
         public int[] DexLevels { get; set; } = new int[5] { 0, 1, 1, 1, 1 };
@@ -104,13 +108,16 @@ namespace Yogurting.Core.Models
         public int ComboCount { get; set; } = 0;
         public long LastAttackTime { get; set; } = 0;
         public byte ChargePoint { get; set; } = 0;
+        public int GaugeMax { get; set; } = 70000;
+        public int GaugeCurrent { get; set; } = 0;
+        public int SkillPoint { get; set; } = 0;
         public int Defense { get; set; } = 10;
         public long CurrentExp { get; set; } = 0;
         public long Exp { get => CurrentExp; set => CurrentExp = value; }
         public long MaxExp { get; set; } = 1000;
-        public int CurrentHp { get; set; } = 260;
+        public int CurrentHp { get; set; } = 28;
         public int Hp { get => CurrentHp; set => CurrentHp = value; }
-        public int MaxHp { get; set; } = 260;
+        public int MaxHp { get; set; } = 28;
         public int CurrentMp { get; set; } = 195;
         public int Sp { get => CurrentMp; set => CurrentMp = value; }
         public int MaxMp { get; set; } = 195;
@@ -118,6 +125,16 @@ namespace Yogurting.Core.Models
         public long Money { get; set; } = 9999999;
         public int StarPoints { get; set; } = 9999999;
         public int TaffPoints { get => StarPoints; set => StarPoints = value; }
+
+        public void RecalculateStats(int pow, int speed, int skill, int luck)
+        {
+            Pow = pow;
+            Speed = speed;
+            Skill = skill;
+            Luck = luck;
+            MaxHp = Math.Max(28, Pow * 7);
+            if (CurrentHp > MaxHp || CurrentHp <= 0) CurrentHp = MaxHp;
+        }
 
         // Coordinates & Zones (Defaults to Estiva Central Campus Courtyard / So-il Ground)
         public int FieldId { get; set; } = 1;

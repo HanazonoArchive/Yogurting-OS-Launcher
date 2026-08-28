@@ -201,9 +201,9 @@ namespace Yogurting.Server.Handlers.Field
                 }
 
                 // 9. Update Stats & State (Exact sequence matching Quartet live packet capture)
-                await state.Session.SendAsync(YogurtingPackets.MakeGameStatDeltaNtf());
+                await state.Session.SendAsync(YogurtingPackets.MakeGameSetHpNtf((ushort)player.CurrentHp));
                 await state.Session.SendAsync(YogurtingPackets.MakeGameSetStateNtf(player));
-                await state.Session.SendAsync(YogurtingPackets.MakeGameChargePointUpdateNtf());
+                await state.Session.SendAsync(YogurtingPackets.MakeGameChargePointUpdateNtf(player.ChargePoint, player.GaugeMax, player.GaugeCurrent));
                 await state.Session.SendAsync(YogurtingPackets.MakeGameAtkMovChangeNtf(player.CharaId, 1.0f, 1.0f));
 
                 if (ansOpcode == PacketOpcode.MsgGameEquipByulBeItemAns)
@@ -286,9 +286,9 @@ namespace Yogurting.Server.Handlers.Field
                 Logger.Info($"[FieldServer] '{player.CharacterName}' unequipped item (UID {uniqueId}, Slot {targetSlot}, Type {typeId})");
 
                 // 1. Update Stats & State FIRST (Exact sequence matching Quartet live capture)
-                await state.Session.SendAsync(YogurtingPackets.MakeGameStatDeltaNtf());
+                await state.Session.SendAsync(YogurtingPackets.MakeGameSetHpNtf((ushort)player.CurrentHp));
                 await state.Session.SendAsync(YogurtingPackets.MakeGameSetStateNtf(player));
-                await state.Session.SendAsync(YogurtingPackets.MakeGameChargePointUpdateNtf());
+                await state.Session.SendAsync(YogurtingPackets.MakeGameChargePointUpdateNtf(player.ChargePoint, player.GaugeMax, player.GaugeCurrent));
                 await state.Session.SendAsync(YogurtingPackets.MakeGameAtkMovChangeNtf(player.CharaId, 1.0f, 1.0f));
 
                 // 2. Send unequip answer (Client 3D mesh update)
@@ -321,7 +321,7 @@ namespace Yogurting.Server.Handlers.Field
             try
             {
                 state.Player.Hp = Math.Min(state.Player.MaxHp, state.Player.Hp + 50);
-                await state.Session.SendAsync(YogurtingPackets.MakeGameStatDeltaNtf());
+                await state.Session.SendAsync(YogurtingPackets.MakeGameSetHpNtf((ushort)state.Player.CurrentHp));
                 await state.Session.SendAsync(YogurtingPackets.MakeGameSetStateNtf(state.Player));
             }
             catch (Exception ex)
@@ -405,9 +405,9 @@ namespace Yogurting.Server.Handlers.Field
                 }
 
                 // 5. Stat & State Update
-                await state.Session.SendAsync(YogurtingPackets.MakeGameStatDeltaNtf());
+                await state.Session.SendAsync(YogurtingPackets.MakeGameSetHpNtf((ushort)player.CurrentHp));
                 await state.Session.SendAsync(YogurtingPackets.MakeGameSetStateNtf(player));
-                await state.Session.SendAsync(YogurtingPackets.MakeGameChargePointUpdateNtf());
+                await state.Session.SendAsync(YogurtingPackets.MakeGameChargePointUpdateNtf(player.ChargePoint, player.GaugeMax, player.GaugeCurrent));
                 await state.Session.SendAsync(YogurtingPackets.MakeGameAtkMovChangeNtf(player.CharaId, 1.0f, 1.0f));
 
                 // 6. Duration active notice (0x5269)
@@ -491,8 +491,9 @@ namespace Yogurting.Server.Handlers.Field
                 // 1. Reply with 0x7929 (31017: COITEM使用返答) - Result 1 = Success
                 await state.Session.SendAsync(YogurtingPackets.MakeGameUseCoItemAns(player.CharaId, 1, coItemType, remainingCount));
 
-                // 2. Sync updated HP / SP state (0x520F)
+                // 2. Sync updated HP / SP state (0x520F + 0x520D)
                 await state.Session.SendAsync(YogurtingPackets.MakeGameSetStateNtf(player));
+                await state.Session.SendAsync(YogurtingPackets.MakeGameSetHpNtf((ushort)player.CurrentHp));
 
                 // 3. Persist character
                 if (_repository != null)
@@ -537,9 +538,9 @@ namespace Yogurting.Server.Handlers.Field
                 await _broadcastDelegate(state, equipAns);
 
                 // 2. Stat & Combat State Synchronization
-                await state.Session.SendAsync(YogurtingPackets.MakeGameStatDeltaNtf());
+                await state.Session.SendAsync(YogurtingPackets.MakeGameSetHpNtf((ushort)player.CurrentHp));
                 await state.Session.SendAsync(YogurtingPackets.MakeGameSetStateNtf(player));
-                await state.Session.SendAsync(YogurtingPackets.MakeGameChargePointUpdateNtf());
+                await state.Session.SendAsync(YogurtingPackets.MakeGameChargePointUpdateNtf(player.ChargePoint, player.GaugeMax, player.GaugeCurrent));
                 await state.Session.SendAsync(YogurtingPackets.MakeGameAtkMovChangeNtf(player.CharaId, 1.0f, 1.0f));
             }
             catch (Exception ex)

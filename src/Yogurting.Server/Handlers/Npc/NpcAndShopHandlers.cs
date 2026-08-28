@@ -53,7 +53,7 @@ namespace Yogurting.Server.Handlers.Npc
                         greeting = "You look tired! Let me heal your wounds.";
                         state.Player.Hp = state.Player.MaxHp;
                         state.Player.Sp = state.Player.MaxSp;
-                        await state.Session.SendAsync(YogurtingPackets.MakeGameStatDeltaNtf());
+                        await state.Session.SendAsync(YogurtingPackets.MakeGameSetHpNtf((ushort)state.Player.CurrentHp));
                         await state.Session.SendAsync(YogurtingPackets.MakeGameSetStateNtf(state.Player));
                         choices = new[] { "1. Full Recovery Done!", "2. Bye" };
                         break;

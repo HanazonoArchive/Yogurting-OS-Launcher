@@ -380,7 +380,7 @@ namespace Yogurting.Server.Handlers.Field
 
                 // Exact Quartet response sequence for 0x7965 (Screen fades to black, client prepares target field):
                 await state.Session.SendAsync(YogurtingPackets.MakeGameFadeOutNtf());
-                await state.Session.SendAsync(YogurtingPackets.MakeGameStatDeltaNtf(0xCB));
+                await state.Session.SendAsync(YogurtingPackets.MakeGameSetHpNtf((ushort)state.Player.CurrentHp));
                 await state.Session.SendAsync(YogurtingPackets.MakeGameWarpStartNtf(targetField, targetPos.X, targetPos.Y, isHuntField, huntFieldId));
 
                 // If entering a Mob / Hunt Field, request weapon socket frame info (0x5273)
@@ -417,24 +417,37 @@ namespace Yogurting.Server.Handlers.Field
                 Logger.Info($"[FieldServer] '{player.CharacterName}' requested School Revival (0x794F)");
 
                 // 1. Restore Full HP and MP from StatusTable
-                var status = _gameDb?.GetStatusForLevel(player.Level) ?? new StatusDef { Pow = player.Level * 4, Skill = player.Level * 3 };
-                player.MaxHp = status.Pow * 10 + 200;
+                var status = _gameDb?.GetStatusForLevel(player.Level) ?? new StatusDef { Pow = player.Level * 4, Speed = player.Level * 3, Skill = player.Level * 3, Luck = player.Level * 2 };
+                player.RecalculateStats(status.Pow, status.Speed, status.Skill, status.Luck);
                 player.CurrentHp = player.MaxHp;
-                player.MaxMp = status.Skill * 10 + 150;
                 player.CurrentMp = player.MaxMp;
+
+                // Clear aggro from current field monsters so they don't attack during warp
+                if (_gameDb != null && _gameDb.Fields.TryGetValue(player.FieldId, out var curFDef))
+                {
+                    foreach (var m in curFDef.Monsters)
+                    {
+                        if (m.TargetPlayerId == player.CharacterId)
+                        {
+                            m.TargetPlayerId = 0;
+                        }
+                    }
+                }
 
                 // 2. Reply with Revival School Ans (0x7950)
                 await state.Session.SendAsync(YogurtingPackets.MakeGameRevivalSchoolAns(1));
 
-                // 3. Initiate Warp back to School Campus (Field 91 for Estiva, Field 90 for So-il)
-                int schoolFieldId = player.School == SchoolType.EstivaAcademy ? 91 : 90;
-                var schoolPos = new Position(76f, 104f, 0f);
+                // 3. Initiate Warp back to School Campus spawn point via 0x794C (MsgGameRevivalCharAns)
+                var spawn = StarterConfigLoader.GetSpawnPoint(player.School);
+                int schoolFieldId = spawn.FieldId;
+                var schoolPos = new Position(spawn.X, spawn.Y, 0f);
                 state.PendingWarpFieldId = schoolFieldId;
                 state.PendingWarpPosition = schoolPos;
 
                 await state.Session.SendAsync(YogurtingPackets.MakeGameFadeOutNtf());
                 await state.Session.SendAsync(YogurtingPackets.MakeGameSetStateNtf(player));
-                await state.Session.SendAsync(YogurtingPackets.MakeGameWarpStartNtf(schoolFieldId, schoolPos.X, schoolPos.Y, false, 0));
+                await state.Session.SendAsync(YogurtingPackets.MakeGameSetHpNtf((ushort)player.CurrentHp));
+                await state.Session.SendAsync(YogurtingPackets.MakeGameRevivalCharAns(1, player.CharaId, schoolFieldId, (ushort)spawn.X, (ushort)spawn.Y, player.CurrentHp));
             }
             catch (Exception ex)
             {
@@ -549,6 +562,16 @@ namespace Yogurting.Server.Handlers.Field
 
                 // 8. Warp Result (0x7968) - Signals client to fade in and render character at new location
                 await state.Session.SendAsync(YogurtingPackets.MakeGameWarpResultNtf(targetField, targetPos.X, targetPos.Y));
+
+                // 9. Unlock movement, stand up & refresh character state (0x798E, 0x799F, 0x520F, 0x520D, 0x791C)
+                byte[] standUpNtf = YogurtingPackets.MakeGameStandUpNtf(state.Player.CharaId);
+                await state.Session.SendAsync(standUpNtf);
+                await _broadcastDelegate(state, standUpNtf);
+
+                await state.Session.SendAsync(YogurtingPackets.MakeGameAtkMovChangeNtf(state.Player.CharaId, 1.0f, 1.0f));
+                await state.Session.SendAsync(YogurtingPackets.MakeGameSetStateNtf(state.Player));
+                await state.Session.SendAsync(YogurtingPackets.MakeGameSetHpNtf((ushort)state.Player.CurrentHp));
+                await state.Session.SendAsync(YogurtingPackets.MakeGameChargePointUpdateNtf(state.Player.ChargePoint, state.Player.GaugeMax, state.Player.GaugeCurrent));
             }
             catch (Exception ex)
             {

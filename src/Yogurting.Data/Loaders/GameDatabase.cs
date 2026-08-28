@@ -700,6 +700,8 @@ namespace Yogurting.Data.Loaders
                                             Y = pt.Y + jitterY,
                                             SpawnX = pt.X + jitterX,
                                             SpawnY = pt.Y + jitterY,
+                                            AttackPower = Math.Max(5, monDef.Level * 4),
+                                            MotionType = monDef.Motion > 0 ? monDef.Motion : 300011,
                                             ExpReward = monDef.Exp,
                                             DropItemType = monDef.DropItemType,
                                             DropCount = monDef.DropCount,

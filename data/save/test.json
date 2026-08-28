@@ -7,7 +7,7 @@
   "HasCharacter": true,
   "CharaId": 256,
   "CharacterId": 256,
-  "SessionKey": 202470,
+  "SessionKey": 713849,
   "School": 1,
   "Gender": 2,
   "FaceId": 42,
@@ -17,45 +17,51 @@
   "BirthDay": 29,
   "BloodType": 3,
   "NametagColor": 0,
-  "Level": 6,
+  "Level": 9,
   "Grade": 1,
+  "Pow": 38,
+  "Speed": 28,
+  "Skill": 28,
+  "Luck": 19,
   "DexLevel": 1,
   "DexExp": 4,
   "DexLevels": [
     0,
-    3,
+    5,
     1,
     1,
     5
   ],
   "DexExps": [
     0,
-    15,
+    68,
     0,
     0,
-    22
+    38
   ],
-  "ComboCount": 1,
-  "LastAttackTime": 87998390,
-  "ChargePoint": 3,
+  "ComboCount": 5,
+  "LastAttackTime": 94135484,
+  "ChargePoint": 2,
+  "GaugeMax": 70000,
+  "GaugeCurrent": 21100,
   "Defense": 10,
-  "CurrentExp": 26,
-  "Exp": 26,
-  "MaxExp": 35,
-  "CurrentHp": 450,
-  "Hp": 450,
-  "MaxHp": 450,
-  "CurrentMp": 340,
-  "Sp": 340,
-  "MaxMp": 340,
-  "MaxSp": 340,
+  "CurrentExp": 0,
+  "Exp": 0,
+  "MaxExp": 65,
+  "CurrentHp": 266,
+  "Hp": 266,
+  "MaxHp": 266,
+  "CurrentMp": 370,
+  "Sp": 370,
+  "MaxMp": 370,
+  "MaxSp": 370,
   "Money": 10000,
   "StarPoints": 0,
   "TaffPoints": 0,
-  "FieldId": 399,
+  "FieldId": 91,
   "Position": {
-    "X": 63,
-    "Y": 32,
+    "X": 220,
+    "Y": 99,
     "Z": 0,
     "Heading": 0
   },
@@ -75,9 +81,9 @@
     1,
     503,
     0,
-    511,
+    501,
     0,
-    513
+    502
   ],
   "EquippedSlotIsStar": [
     false,
@@ -253,7 +259,7 @@
       "SlotIndex": 8,
       "SlotType": 0,
       "SerialId": 0,
-      "Quantity": 13,
+      "Quantity": 24,
       "EnchantLevel": 0,
       "IsEquipped": false,
       "SocketSlots": [
@@ -272,7 +278,7 @@
       "SlotIndex": 9,
       "SlotType": 0,
       "SerialId": 0,
-      "Quantity": 18,
+      "Quantity": 26,
       "EnchantLevel": 0,
       "IsEquipped": false,
       "SocketSlots": [
@@ -291,7 +297,7 @@
       "SlotIndex": 10,
       "SlotType": 0,
       "SerialId": 0,
-      "Quantity": 10,
+      "Quantity": 22,
       "EnchantLevel": 0,
       "IsEquipped": false,
       "SocketSlots": [
@@ -481,11 +487,11 @@
       "TypeId": 1202631,
       "Name": "\u7E67\uFF6E\u7E5D\uFF63\u7E5D\uFF73\u7E5D\u60B6\u039B\u7E5D\uFF7CShoes",
       "SlotIndex": 9,
-      "SlotType": 0,
+      "SlotType": 1,
       "SerialId": 510,
       "Quantity": 1,
       "EnchantLevel": 0,
-      "IsEquipped": false,
+      "IsEquipped": true,
       "SocketSlots": [
         0,
         0,
@@ -687,19 +693,19 @@
       "EffectType": 7300,
       "DurationSeconds": 2592000,
       "ActivatedAt": "2026-08-26T23:43:06.1444261Z",
-      "RemainingSeconds": 2472681
+      "RemainingSeconds": 2466665
     },
     {
       "EffectType": 7400,
       "DurationSeconds": 2592000,
       "ActivatedAt": "2026-08-26T23:43:12.4274453Z",
-      "RemainingSeconds": 2472687
+      "RemainingSeconds": 2466671
     },
     {
       "EffectType": 7000,
       "DurationSeconds": 2592000,
       "ActivatedAt": "2026-08-26T23:43:14.5546298Z",
-      "RemainingSeconds": 2472689
+      "RemainingSeconds": 2466673
     }
   ]
 }

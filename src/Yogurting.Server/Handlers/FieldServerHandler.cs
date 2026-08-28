@@ -260,6 +260,19 @@ namespace Yogurting.Server.Handlers
             {
                 if (_gameDb == null) return;
 
+                // 1. Natural HP Regain tick for all active players (Delphi TChara.Update / 0x520B Regain)
+                foreach (var s in _activeSessions.Values)
+                {
+                    var p = s.Player;
+                    if (p != null && p.CurrentHp > 0 && p.CurrentHp < p.MaxHp)
+                    {
+                        bool isHunt = _gameDb.Fields.TryGetValue(p.FieldId, out var f) && f.IsHuntField;
+                        // In Campus: 2.2 HP/sec. In Hunt: 0.3 HP/sec. Timer interval is 1.5 seconds.
+                        float regainRate = (isHunt ? 0.3f : 2.2f) * 1.5f;
+                        p.CurrentHp = Math.Min(p.MaxHp, (int)Math.Ceiling(p.CurrentHp + regainRate));
+                    }
+                }
+
                 // Only tick fields that currently have active players
                 var activeFieldIds = new System.Collections.Generic.HashSet<int>();
                 foreach (var s in _activeSessions.Values)
@@ -291,14 +304,14 @@ namespace Yogurting.Server.Handlers
                         {
                             if (mon.IsDead) continue;
 
-                            // 1. Authentic Aggro logic: Monster only pursues if attacked by a player (TargetPlayerId > 0)
+                            // 1. Passive Retaliation AI (Delphi style): Only attack if specifically aggroed by player attack
                             PlayerSessionState? targetedPlayer = null;
                             if (mon.TargetPlayerId > 0)
                             {
                                 targetedPlayer = playersInField.Find(p => p.Player.CharacterId == mon.TargetPlayerId || p.Player.CharaId == mon.TargetPlayerId);
                             }
 
-                            if (targetedPlayer != null && targetedPlayer.Player.CurrentHp > 0)
+                            if (targetedPlayer != null && targetedPlayer.Player.CurrentHp > 0 && targetedPlayer.PendingWarpFieldId == 0)
                             {
                                 // Agro: move towards target player
                                 float pX = (float)targetedPlayer.Player.Position.X;
@@ -346,12 +359,21 @@ namespace Yogurting.Server.Handlers
                                     if ((DateTime.UtcNow - mon.LastAttackTime).TotalSeconds >= 1.5)
                                     {
                                         mon.LastAttackTime = DateTime.UtcNow;
-                                        int monDmg = Math.Max(1, mon.Level * 2 - (targetedPlayer.Player.Defense / 4));
+                                        int monAtk = Math.Max(3, mon.AttackPower - (targetedPlayer.Player.Defense / 4));
+                                        int monDmg = Math.Max(2, monAtk + Random.Shared.Next(-2, 4));
                                         targetedPlayer.Player.CurrentHp = Math.Max(0, targetedPlayer.Player.CurrentHp - monDmg);
 
-                                        byte[] monAtkNtf = YogurtingPackets.MakeGameMonAttackNtf(mon.EntityId, (int)mon.X, (int)mon.Y, targetedPlayer.Player.CharaId, monDmg);
+                                        byte[] monAtkNtf = YogurtingPackets.MakeGameMonAttackNtf(
+                                            mon.EntityId, 
+                                            (int)mon.X, 
+                                            (int)mon.Y, 
+                                            targetedPlayer.Player.CharaId, 
+                                            monDmg, 
+                                            mon.MotionType > 0 ? mon.MotionType : 300011, 
+                                            1);
                                         var field = _worldManager.GetOrCreateField(fieldId);
                                         _ = field.BroadcastAsync(monAtkNtf);
+                                        _ = targetedPlayer.Session.SendAsync(YogurtingPackets.MakeGameSetHpNtf((ushort)targetedPlayer.Player.CurrentHp));
                                         _ = targetedPlayer.Session.SendAsync(YogurtingPackets.MakeGameSetStateNtf(targetedPlayer.Player));
 
                                         // Player Death Notification (0x791B)
@@ -364,13 +386,23 @@ namespace Yogurting.Server.Handlers
                                                 (int)targetedPlayer.Player.Position.Y);
                                             _ = targetedPlayer.Session.SendAsync(dieNtf);
                                             _ = field.BroadcastAsync(dieNtf);
-                                            mon.TargetPlayerId = 0;
+                                            
+                                            // Drop aggro on all monsters in zone
+                                            foreach (var m in fieldDef.Monsters)
+                                            {
+                                                if (m.TargetPlayerId == targetedPlayer.Player.CharaId)
+                                                {
+                                                    m.TargetPlayerId = 0;
+                                                }
+                                            }
                                         }
                                     }
                                 }
                             }
                             else
                             {
+                                mon.TargetPlayerId = 0;
+
                                 // Peaceful idle wander: 25% chance to wander within 3 tiles of spawn
                                 if (Random.Shared.Next(0, 4) == 0)
                                 {

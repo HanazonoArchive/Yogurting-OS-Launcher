@@ -27,6 +27,8 @@ namespace Yogurting.Core.Models
         public DateTime DeathTime { get; set; }
         public int RespawnSeconds { get; set; } = 5;
         public int TargetPlayerId { get; set; }
+        public int AttackPower { get; set; } = 8;
+        public int MotionType { get; set; } = 300011;
         public DateTime LastAttackTime { get; set; }
 
         public void TakeDamage(int damage)

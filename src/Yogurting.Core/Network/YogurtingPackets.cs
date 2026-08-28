@@ -504,23 +504,23 @@ namespace Yogurting.Core.Network
             // 10 QuickSlot Hotbar Buffers (10 x 8 bytes = 80 bytes: dim1, dim2, id)
             for (int i = 0; i < 80; i++) writer.WriteByte(0);
 
-            // Stats
-            writer.WriteInt32(100);                         // Pow
-            writer.WriteInt32(100);                         // Speed
-            writer.WriteInt32(100);                         // Skill
-            writer.WriteInt32(100);                         // Luck
+            // Stats (Delphi _Unit47.pas:005A8728)
+            writer.WriteInt32(player.Pow);                  // Pow
+            writer.WriteInt32(player.Speed);                // Speed
+            writer.WriteInt32(player.Skill);                // Skill
+            writer.WriteInt32(player.Luck);                 // Luck
             writer.WriteInt32(player.MaxHp);                // MaxHP
-            writer.WriteInt32(100);                         // GaugeMax
-            writer.WriteInt32(100);                         // GaugeCurrent
-            writer.WriteByte(0);                            // ChargePoint
-            writer.WriteInt32(100);                         // Atk
-            writer.WriteInt32(100);                         // Def
-            writer.WriteInt32(100);                         // Hit
-            writer.WriteInt32(100);                         // Evasion
-            writer.WriteInt32(100);                         // Critical
-            writer.WriteInt32(100);                         // AtkSpeed
-            writer.WriteInt32(100);                         // MovSpeed
-            writer.WriteInt32(100);                         // CoolTime
+            writer.WriteInt32(player.GaugeMax);             // GaugeMax
+            writer.WriteInt32(player.GaugeCurrent);         // GaugeCurrent
+            writer.WriteByte(player.ChargePoint);           // ChargePoint
+            writer.WriteInt32((player.Pow + 15) * 64);      // Atk
+            writer.WriteInt32(player.Defense * 64);         // Def
+            writer.WriteInt32(100 * 64);                    // Hit
+            writer.WriteInt32(player.Speed * 65);           // Evasion
+            writer.WriteInt32(player.Luck * 65);            // Critical
+            writer.WriteInt32(player.Speed * 65);           // AtkSpeed
+            writer.WriteInt32(player.Speed * 65);           // MovSpeed
+            writer.WriteInt32(player.Skill * 65);           // CoolTime
             writer.WriteInt32((int)player.Exp);             // Exp
             writer.WriteInt32((int)player.MaxExp);          // MaxExp
 
@@ -803,17 +803,19 @@ namespace Yogurting.Core.Network
         }
 
         /// <summary>
-        /// 0x520D (21005): TMsgGameStatDeltaNtf - Stat delta update notification
-        /// Exact 8-byte ground truth from Quartet:
+        /// 0x520D (21005): TMsgGameSetHpNtf - Character Current HP Update Notice
+        /// Exact 8-byte ground truth from Delphi TMsgGameSetHpNtf.Create (_Unit47.pas:005A92DC):
         ///   WriteID(0x520D)
-        ///   WriteWord(StatDeltaIndex)
+        ///   WriteWord(CurrentHp)
         /// </summary>
-        public static byte[] MakeGameStatDeltaNtf(ushort delta = 0x1C)
+        public static byte[] MakeGameSetHpNtf(ushort currentHp)
         {
             using var writer = PacketWriter.Create(PacketOpcode.MsgGameStatDeltaNtf);
-            writer.WriteUInt16(delta);
+            writer.WriteUInt16(currentHp);
             return writer.Build();
         }
+
+        public static byte[] MakeGameStatDeltaNtf(ushort currentHp = 200) => MakeGameSetHpNtf(currentHp);
 
         /// <summary>
         /// 0x791C (31004): TMsgGameChargePointUpdateNtf - Charge point update notification
@@ -1121,35 +1123,44 @@ namespace Yogurting.Core.Network
 
         /// <summary>
         /// 0x520F (21007): TMsgGameSetStateNtf - Complete 54-byte Character Stats Table
-        /// Exact 54-byte ground truth from Quartet:
-        ///   Byte(0x01), Byte(0xCC)
-        ///   Word(Level=1), Word(Pow=28), Word(Spd=4), Word(Skl=3), Word(Luk=3), Word(State=2)
+        /// Exact 54-byte ground truth from Delphi TMsgGameSetStateNtf.Create (_Unit47.pas:005A93A4-005A9492):
+        ///   Byte(Grade), Byte(0xCC)
+        ///   Word(Level), Word(FMaxHP = Pow * 7), Word(FPow), Word(FSpeed), Word(FSkill), Word(FLuck)
         ///   Byte(0xCC), Byte(0xCC)
-        ///   Int32(MaxHP=260), Int32(CurHP=260)
-        ///   Int32(MaxSP=195), Int32(CurSP=195)
-        ///   Int32(Atk=195), Int32(Def=195), Int32(Hit=195), Int32(Crit=130)
+        ///   Int32(FAtk), Int32(FDef), Int32(FHit), Int32(FEvasion)
+        ///   Int32(FAtkSpeed), Int32(FMovSpeed), Int32(FCoolTime), Int32(FCritical)
         /// </summary>
         public static byte[] MakeGameSetStateNtf(Player player)
         {
+            int maxHp = Math.Max(28, player.Pow * 7);
+            int atk = (player.Pow + 15) * 64;
+            int def = player.Defense * 64;
+            int hit = 100 * 64;
+            int evasion = player.Speed * 65;
+            int atkSpeed = player.Speed * 65;
+            int movSpeed = player.Speed * 65;
+            int coolTime = player.Skill * 65;
+            int critical = player.Luck * 65;
+
             using var writer = PacketWriter.Create(PacketOpcode.MsgGameSetStateNtf);
-            writer.WriteByte(1);                            // Flag (IsHunt/Active = 1)
+            writer.WriteByte((byte)player.Grade);           // Grade
             writer.WriteByte(0xCC);                         // Padding
-            writer.WriteUInt16((ushort)player.Level);       // Level = 1
-            writer.WriteUInt16(28);                         // Power = 28
-            writer.WriteUInt16(4);                          // Speed = 4
-            writer.WriteUInt16(3);                          // Skill = 3
-            writer.WriteUInt16(3);                          // Luck = 3
-            writer.WriteUInt16(2);                          // State = 2
+            writer.WriteUInt16((ushort)player.Level);       // Level
+            writer.WriteUInt16((ushort)maxHp);              // FMaxHP (_Unit49.pas:0060DD94: Pow * 7)
+            writer.WriteUInt16((ushort)player.Pow);         // FPow
+            writer.WriteUInt16((ushort)player.Speed);       // FSpeed
+            writer.WriteUInt16((ushort)player.Skill);       // FSkill
+            writer.WriteUInt16((ushort)player.Luck);        // FLuck
             writer.WriteByte(0xCC);                         // Padding
             writer.WriteByte(0xCC);                         // Padding
-            writer.WriteInt32(player.MaxHp > 0 ? player.MaxHp : 260); // MaxHP
-            writer.WriteInt32(player.Hp > 0 ? player.Hp : 260);       // CurrentHP
-            writer.WriteInt32(player.MaxSp > 0 ? player.MaxSp : 195); // MaxSP
-            writer.WriteInt32(player.Sp > 0 ? player.Sp : 195);       // CurrentSP
-            writer.WriteInt32(195);                         // Attack
-            writer.WriteInt32(195);                         // Defense
-            writer.WriteInt32(195);                         // Hit
-            writer.WriteInt32(130);                         // Critical
+            writer.WriteInt32(atk);                         // FAtk
+            writer.WriteInt32(def);                         // FDef
+            writer.WriteInt32(hit);                         // FHit
+            writer.WriteInt32(evasion);                     // FEvasion
+            writer.WriteInt32(atkSpeed);                    // FAtkSpeed
+            writer.WriteInt32(movSpeed);                    // FMovSpeed
+            writer.WriteInt32(coolTime);                    // FCoolTime
+            writer.WriteInt32(critical);                    // FCritical
             return writer.Build();
         }
 
@@ -2145,12 +2156,41 @@ namespace Yogurting.Core.Network
 
         /// <summary>
         /// 0x7970 (31088): MsgGameCharLvUpNtf - Player Level-Up Fanfare & Animation
-        /// Exact layout from Delphi TMsgGameCharLvUpNtf.Create (0x005AE27C)
+        /// Exact layout from Delphi TMsgGameCharLvUpNtf.Create (_Unit47.pas:005AE27C):
+        ///   WriteID(0x7970)
+        ///   WriteInt32(Level)
+        ///   WriteInt32(Exp)
+        ///   WriteInt32(MaxExp)
+        ///   WriteInt32(SkillPoint)
         /// </summary>
-        public static byte[] MakeGameCharLvUpNtf(int newLevel)
+        public static byte[] MakeGameCharLvUpNtf(int newLevel, int exp = 0, int maxExp = 100, int skillPoint = 1)
         {
             using var writer = PacketWriter.Create(PacketOpcode.MsgGameCharLvUpNtf);
             writer.WriteInt32(newLevel);
+            writer.WriteInt32(exp);
+            writer.WriteInt32(maxExp);
+            writer.WriteInt32(skillPoint);
+            return writer.Build();
+        }
+
+        /// <summary>
+        /// 0x5275 (21109): MsgGameHuntCharLvUpNtf - Field/Hunt Monster Zone Level-Up Fanfare
+        /// Exact layout from Delphi TMsgGameHuntCharLvUpNtf.Create (_Unit47.pas:005AA50C):
+        ///   WriteID(0x5275)
+        ///   WriteInt32(Level)
+        ///   WriteInt32(Exp)
+        ///   WriteInt32(MaxExp)
+        ///   WriteInt32(SkillPoint)
+        ///   WriteInt32(CharaID)
+        /// </summary>
+        public static byte[] MakeGameHuntCharLvUpNtf(int newLevel, int exp = 0, int maxExp = 100, int skillPoint = 1, int charaId = 1)
+        {
+            using var writer = PacketWriter.Create(PacketOpcode.MsgGameHuntCharLvUpNtf);
+            writer.WriteInt32(newLevel);
+            writer.WriteInt32(exp);
+            writer.WriteInt32(maxExp);
+            writer.WriteInt32(skillPoint);
+            writer.WriteInt32(charaId);
             return writer.Build();
         }
 
@@ -2181,6 +2221,28 @@ namespace Yogurting.Core.Network
         {
             using var writer = PacketWriter.Create(PacketOpcode.MsgGameRevivalSchoolAns);
             writer.WriteInt32(result);
+            return writer.Build();
+        }
+
+        /// <summary>
+        /// 0x794C (31052): MsgGameRevivalCharAns - Complete character revival notice
+        /// Delphi 0x0060EB1F (TChara.StartMoveToField mmRevival):
+        ///   WriteInt32(rc = 1)
+        ///   WriteInt32(charaId)
+        ///   WriteInt32(fieldId)
+        ///   WriteUInt16(x)
+        ///   WriteUInt16(y)
+        ///   WriteInt32(hp)
+        /// </summary>
+        public static byte[] MakeGameRevivalCharAns(int rc, int charaId, int fieldId, ushort x, ushort y, int hp)
+        {
+            using var writer = PacketWriter.Create(PacketOpcode.MsgGameRevivalCharAns);
+            writer.WriteInt32(rc);
+            writer.WriteInt32(charaId);
+            writer.WriteInt32(fieldId);
+            writer.WriteUInt16(x);
+            writer.WriteUInt16(y);
+            writer.WriteInt32(hp);
             return writer.Build();
         }
 
