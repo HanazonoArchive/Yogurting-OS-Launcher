@@ -507,27 +507,44 @@ namespace Yogurting.Server.Handlers.Field
         }
 
         /// <summary>
-        /// 0x5273 (21107): MsgGameWeaponFrameReq - Weapon Socket Frame Info Request
-        /// 0x5274 (21108): MsgGameWeaponFrameAns - Weapon Socket Frame Info Answer
+        /// 0x5274 (21108): MsgGameWeaponFrameAns - Client Weapon Socket & Skill Frames Response
+        /// Server acknowledges weapon combat stance and updates combat stats (0x7945 -> 0x520D -> 0x520F -> 0x791C -> 0x799F).
         /// </summary>
-        [PacketHandler(PacketOpcode.MsgGameWeaponFrameReq)]
-        public async Task HandleWeaponFrameReqAsync(PlayerSessionState state, byte[] packetData)
+        [PacketHandler(PacketOpcode.MsgGameWeaponFrameAns)]
+        public async Task HandleWeaponFrameAnsAsync(PlayerSessionState state, byte[] packetData)
         {
             try
             {
                 var player = state.Player;
-                if (player == null || packetData.Length < 10) return;
+                if (player == null) return;
 
-                int weaponId = BitConverter.ToInt32(packetData, 6);
-                ushort serialLow = packetData.Length >= 12 ? BitConverter.ToUInt16(packetData, 10) : (ushort)0;
-                ushort serialHigh = packetData.Length >= 14 ? BitConverter.ToUInt16(packetData, 12) : (ushort)0;
-                int serialType = packetData.Length >= 18 ? BitConverter.ToInt32(packetData, 14) : 0;
+                int rawType = packetData.Length >= 10 ? BitConverter.ToInt32(packetData, 6) : 0;
+                int weaponTypeId = rawType & 0x00FFFFFF;
+                long weaponUid = packetData.Length >= 18 ? BitConverter.ToInt64(packetData, 10) : 1;
+                if (weaponUid == 0) weaponUid = 1;
 
-                await state.Session.SendAsync(YogurtingPackets.MakeGameWeaponFrameAns(weaponId, serialLow, serialHigh, serialType));
+                if (weaponTypeId == 0)
+                {
+                    weaponTypeId = YogurtingPackets.GetPlayerItemTypeId(player, (int)weaponUid, 4);
+                    if (weaponTypeId == 0) weaponTypeId = 140001;
+                }
+
+                Logger.Info($"[FieldServer] '{player.CharacterName}' synchronized weapon frame for Weapon #{weaponTypeId} (UID {weaponUid})");
+
+                // 1. Confirm combat weapon equip (0x7945)
+                byte[] equipAns = YogurtingPackets.MakeGameEquipAns(player.CharaId, weaponUid, weaponTypeId, PacketOpcode.MsgGameEquipAns);
+                await state.Session.SendAsync(equipAns);
+                await _broadcastDelegate(state, equipAns);
+
+                // 2. Stat & Combat State Synchronization
+                await state.Session.SendAsync(YogurtingPackets.MakeGameStatDeltaNtf());
+                await state.Session.SendAsync(YogurtingPackets.MakeGameSetStateNtf(player));
+                await state.Session.SendAsync(YogurtingPackets.MakeGameChargePointUpdateNtf());
+                await state.Session.SendAsync(YogurtingPackets.MakeGameAtkMovChangeNtf(player.CharaId, 1.0f, 1.0f));
             }
             catch (Exception ex)
             {
-                Logger.Error($"[FieldServer] WeaponFrameReq error: {ex.Message}");
+                Logger.Error($"[FieldServer] WeaponFrameAns error: {ex.Message}");
             }
         }
 

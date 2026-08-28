@@ -130,8 +130,8 @@ namespace Yogurting.Server.Handlers
             var player = await _repository.GetByUsernameAsync(session.AccountId ?? "test") ?? new Player("test", session.CharacterName ?? "Hanazono");
 
             // Reset to campus plaza on login if previously saved in a temporary mob/hunt field or if coordinates are invalid
-            bool isHuntField = _gameDb != null && _gameDb.Fields.TryGetValue(player.FieldId, out var fDef) && fDef.IsHuntField;
-            if (isHuntField || player.FieldId <= 0 || player.Position.X <= 0 || player.Position.Y <= 0)
+            bool wasSavedInHunt = _gameDb != null && _gameDb.Fields.TryGetValue(player.FieldId, out var savedFDef) && savedFDef.IsHuntField;
+            if (wasSavedInHunt || player.FieldId <= 0 || player.Position.X <= 0 || player.Position.Y <= 0)
             {
                 bool hasValidSave = player.SaveFieldId > 0 && (_gameDb == null || !_gameDb.Fields.TryGetValue(player.SaveFieldId, out var sf) || !sf.IsHuntField);
                 if (hasValidSave && player.SavePosition.X > 0 && player.SavePosition.Y > 0)
@@ -180,7 +180,13 @@ namespace Yogurting.Server.Handlers
             await session.SendAsync(YogurtingPackets.MakeGameEquipTitleAns(player.CharaId, 0));
 
             // 8. TMsgGameFieldLoadingStartNtf (0x795A) - Triggers the loading screen in client!
-            int monCount = _gameDb != null && _gameDb.Fields.TryGetValue(player.FieldId, out var curF) ? curF.Monsters.Count : 0;
+            bool isHuntField = false;
+            int monCount = 0;
+            if (_gameDb != null && _gameDb.Fields.TryGetValue(player.FieldId, out var curF))
+            {
+                isHuntField = curF.IsHuntField;
+                monCount = curF.Monsters.Count;
+            }
             await session.SendAsync(YogurtingPackets.MakeGameFieldLoadingStartNtf(player.FieldId, player.Position.X, player.Position.Y, isHuntField, monCount));
 
             Logger.Info($"[FieldServer] '{player.CharacterName}' (Entity #{entityId}) field loading sequence dispatched for Field {player.FieldId} ({player.Position})! Awaiting map load (0x795B)...");
@@ -234,17 +240,6 @@ namespace Yogurting.Server.Handlers
 
             // 10. Set State (HP, SP, Stats - 0x520F)
             await session.SendAsync(YogurtingPackets.MakeGameSetStateNtf(player));
-
-            // 11. Initial Cardboard Box State (0x79E3): Show (0) if spawning into mob field, hide (-1) on campus
-            bool isHunt = _gameDb != null && _gameDb.Fields.TryGetValue(player.FieldId, out var curF) && curF.IsHuntField;
-            if (isHunt)
-            {
-                await session.SendAsync(YogurtingPackets.MakeGameBootyBoxAssignNtf(player.CharaId, 0));
-            }
-            else
-            {
-                await session.SendAsync(YogurtingPackets.MakeGameBootyBoxAssignNtf(player.CharaId, -1));
-            }
         }
 
         public async Task SpawnCampusEntitiesAsync(ClientSession session, int fieldId)

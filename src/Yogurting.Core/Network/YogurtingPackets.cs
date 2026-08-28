@@ -2018,35 +2018,69 @@ namespace Yogurting.Core.Network
         }
 
         /// <summary>
-        /// 0x5276 (21110): MsgGameHuntMonDeadNtf - Monster Death Animation and Loot Drop
-        /// Exact layout from Delphi TMsgGameHuntMonDeadNtf.Create (0x005AA588)
+        /// 0x5273 (21107): MsgGameWeaponFrameReq - Weapon Frame Info Request
+        /// Exact Delphi layout from TMsgGameWeaponFrameInfoReq.Create (0x005AA498 / _Unit47.pas:48756):
+        ///   WriteInt32(WeaponType | 0x02000000)
+        ///   WriteInt64(WeaponUniqueId)
         /// </summary>
-        public static byte[] MakeGameHuntMonDeadNtf(FieldMonster monster, int killerCharaId, int expEarned, int totalExp, int dropItemId = 0, int dropCount = 0)
+        public static byte[] MakeGameWeaponFrameInfoReq(int weaponTypeId, long weaponUid = 1)
+        {
+            using var writer = PacketWriter.Create(PacketOpcode.MsgGameWeaponFrameReq);
+            writer.WriteInt32(weaponTypeId | 0x02000000);
+            writer.WriteInt64(weaponUid);
+            return writer.Build();
+        }
+
+        /// <summary>
+        /// 0x5276 (21110): MsgGameHuntMonDeadNtf - Monster Death Animation and Loot Delivery to Cardboard Booty Box
+        /// Exact Delphi layout from TMsgGameHuntMonDeadNtf.Create (0x005AA588 / _Unit47.pas:48845-49048)
+        /// </summary>
+        public static byte[] MakeGameHuntMonDeadNtf(int monsterEntityId, ushort x, ushort y, int killerCharaId, int expEarned, int totalExp, int dropItemId = 0, int dropCount = 0, bool isEquipment = false)
         {
             using var writer = PacketWriter.Create(PacketOpcode.MsgGameHuntMonDeadNtf);
-            writer.WriteInt32(monster.EntityId);
-            writer.WriteUInt16((ushort)monster.X);
-            writer.WriteUInt16((ushort)monster.Y);
+            writer.WriteInt32(monsterEntityId);
+            writer.WriteUInt16(x);
+            writer.WriteUInt16(y);
             writer.WriteInt32(killerCharaId);
             writer.WriteInt32(expEarned);
             writer.WriteInt32(totalExp);
 
             if (dropItemId > 0 && dropCount > 0)
             {
+                // Array 1: Item Type IDs (_Unit47.pas:48915-48937)
                 writer.WriteUInt16(1);
+                writer.WriteInt32(dropItemId);
+
+                // Array 2: Item Instances / Details (_Unit47.pas:48946-49017)
                 writer.WriteUInt16(1);
-                writer.WriteInt32(dropItemId | 0x03000000); // 0x03000000 = CoItem prefix
-                writer.WriteInt32(dropCount);
-                writer.WriteInt32(0);
+                if (isEquipment)
+                {
+                    writer.WriteInt32(dropItemId | 0x02000000); // 0x02000000 = BeItem (equipment)
+                    writer.WriteInt64(DateTime.UtcNow.Ticks);
+                }
+                else
+                {
+                    writer.WriteInt32(dropItemId | 0x03000000); // 0x03000000 = CoItem (consumable/material)
+                    writer.WriteInt32(dropCount);
+                    writer.WriteInt32(0);
+                }
             }
             else
             {
+                // No loot dropped (_Unit47.pas:48902-48908)
                 writer.WriteUInt16(0);
                 writer.WriteUInt16(0);
             }
 
+            // Trailing status zeroes (_Unit47.pas:49018-49023)
+            writer.WriteInt32(0);
+            writer.WriteInt32(0);
+
             return writer.Build();
         }
+
+        public static byte[] MakeGameHuntMonDeadNtf(FieldMonster monster, int killerCharaId, int expEarned, int totalExp, int dropItemId = 0, int dropCount = 0, bool isEquipment = false) =>
+            MakeGameHuntMonDeadNtf(monster.EntityId, (ushort)monster.X, (ushort)monster.Y, killerCharaId, expEarned, totalExp, dropItemId, dropCount, isEquipment);
 
         /// <summary>
         /// 0x5277 (21111): MsgGameHuntCharExpUpNtf - Player Hunting EXP Gain
@@ -2604,49 +2638,6 @@ namespace Yogurting.Core.Network
             using var writer = PacketWriter.Create(PacketOpcode.MsgGameBootyBoxAssignNtf);
             writer.WriteInt32(charaId);
             writer.WriteInt32(bootyBoxId); // 0 = Box 0 (First Cardboard Box HUD), 1 = Box 1
-            return writer.Build();
-        }
-
-        /// <summary>
-        /// 0x5276 (21110): MsgGameHuntMonDeadNtf - Hunt Field Monster Death & Loot Delivery into Top-Right Booty Box HUD
-        /// Exact Delphi structure from _Unit47.pas:005AA588
-        /// </summary>
-        public static byte[] MakeGameHuntMonDeadNtf(int monsterEntityId, ushort x, ushort y, int killerCharaId, int expGained, int totalExp, int dropItemId = 0, int quantity = 1, bool isEquipment = false)
-        {
-            using var writer = PacketWriter.Create(PacketOpcode.MsgGameHuntMonDeadNtf);
-            writer.WriteInt32(monsterEntityId);
-            writer.WriteUInt16(x);
-            writer.WriteUInt16(y);
-            writer.WriteInt32(killerCharaId);
-            writer.WriteInt32(expGained);
-            writer.WriteInt32(totalExp);
-
-            if (dropItemId > 0)
-            {
-                // 1. Loot Types array
-                writer.WriteUInt16(1); // 1 loot item
-                writer.WriteInt32(dropItemId);
-
-                // 2. Loot Details array
-                writer.WriteUInt16(1); // 1 detail
-                if (isEquipment)
-                {
-                    writer.WriteInt32(dropItemId | 0x02000000); // Equipment type flag
-                    writer.WriteInt64(DateTime.UtcNow.Ticks);   // Unique Item UID
-                }
-                else
-                {
-                    writer.WriteInt32(dropItemId | 0x03000000); // Consumable/Material type flag
-                    writer.WriteInt32(quantity);                // Quantity
-                    writer.WriteInt32(0);                       // Reserved / Status
-                }
-            }
-            else
-            {
-                writer.WriteUInt16(0); // No loot items
-                writer.WriteUInt16(0); // No loot details
-            }
-
             return writer.Build();
         }
     }

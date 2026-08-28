@@ -81,10 +81,10 @@ namespace Yogurting.Server.Handlers.Field
                         weaponTypeId = wItem.TypeId > 0 ? wItem.TypeId : wItem.ItemId;
                         weaponCat = (weaponTypeId / 10000) switch
                         {
-                            11 => 1,
-                            12 => 2,
-                            13 => 3,
-                            14 => 4,
+                            11 => 1, // Blade
+                            12 => 2, // Glove
+                            13 => 3, // Blunt
+                            14 => 1, // Starter Weapon (140001) uses Blade attack skills 70101..70104
                             _ => 1
                         };
                     }
@@ -99,6 +99,10 @@ namespace Yogurting.Server.Handlers.Field
                 player.ComboCount = Math.Min(999, player.ComboCount + 1);
                 player.LastAttackTime = now;
 
+                // Calculate authentic weapon combo attack skill ID (70101..70104 for Blade, 70201..70204 for Glove, etc.)
+                int comboStep = Math.Min(4, Math.Max(1, (player.ComboCount - 1) % 4 + 1));
+                int attackSkillId = 70000 + (weaponCat * 100) + comboStep;
+
                 // Check if swinging in empty air (no target selected and target list is empty)
                 bool isEmptySwing = (targetMainId <= 0 || targetMainId == -1) && targetsCount == 0 && reqTargets.Count == 0;
                 if (isEmptySwing)
@@ -112,7 +116,7 @@ namespace Yogurting.Server.Handlers.Field
                         isCritical: false,
                         combo: player.ComboCount,
                         weaponCategory: weaponCat,
-                        skillId: 215,
+                        skillId: attackSkillId,
                         addDexExp: 0);
                     await state.Session.SendAsync(swingAns);
                     await _broadcastDelegate(state, swingAns);
@@ -206,16 +210,12 @@ namespace Yogurting.Server.Handlers.Field
                         isCrit,
                         player.ComboCount,
                         weaponCategory: weaponCat,
-                        skillId: 215,
+                        skillId: attackSkillId,
                         addDexExp: 1);
 
                     await state.Session.SendAsync(atkAns);
                     await _broadcastDelegate(state, atkAns);
 
-                    // Broadcast overhead HP bar update (0x79D8)
-                    byte[] monHpNtf = YogurtingPackets.MakeGameMonHpInfoNtf(targetMonster.EntityId, targetMonster.CurrentHp, targetMonster.MaxHp);
-                    await state.Session.SendAsync(monHpNtf);
-                    await _broadcastDelegate(state, monHpNtf);
 
                     // Generate Charge Points (0x791C: MsgGameChargePointUpdateNtf: 0 -> 1 -> 2 -> 3)
                     player.ChargePoint = (byte)Math.Min((byte)3, (byte)(player.ChargePoint + 1));
@@ -306,17 +306,7 @@ namespace Yogurting.Server.Handlers.Field
                         player.CurrentExp += expEarned;
                         Logger.Info($"[Combat] '{targetMonster.Name}' defeated by '{player.CharacterName}'! Gained {expEarned} EXP. Total EXP: {player.CurrentExp}/{player.MaxExp}");
 
-                        // 1. Broadcast Monster Death Animation (0x796A)
-                        byte[] actionNtf = YogurtingPackets.MakeGameMonActionNtf(targetMonster.EntityId, (ushort)targetMonster.X, (ushort)targetMonster.Y, 5, player.CharacterId);
-                        await state.Session.SendAsync(actionNtf);
-                        await _broadcastDelegate(state, actionNtf);
-
-                        // 2. Broadcast Monster Overhead Status HP=0 (0x796D)
-                        byte[] monStatusNtf = YogurtingPackets.MakeGameMonStatusNtf(targetMonster.EntityId, targetMonster.MonsterType, 0, targetMonster.MaxHp, (ushort)targetMonster.X, (ushort)targetMonster.Y);
-                        await state.Session.SendAsync(monStatusNtf);
-                        await _broadcastDelegate(state, monStatusNtf);
-
-                        // 3. Broadcast Monster Dead & Loot Delivery to Top-Right Cardboard Booty Box (0x5276)
+                        // 1. Broadcast Monster Dead & Loot Delivery to Top-Right Cardboard Booty Box (0x5276)
                         byte[] deadNtf = YogurtingPackets.MakeGameHuntMonDeadNtf(
                             targetMonster.EntityId,
                             (ushort)targetMonster.X,
@@ -330,36 +320,9 @@ namespace Yogurting.Server.Handlers.Field
                         await state.Session.SendAsync(deadNtf);
                         await _broadcastDelegate(state, deadNtf);
 
-                        // 3b. Broadcast Physical Cardboard Loot Drop Box on Floor (0x796C)
-                        if (dropItemId > 0)
-                        {
-                            byte[] dropBoxNtf = YogurtingPackets.MakeGameFieldDropBoxNtf(targetMonster.EntityId, (ushort)targetMonster.X, (ushort)targetMonster.Y, dropItemId, 1);
-                            await state.Session.SendAsync(dropBoxNtf);
-                            await _broadcastDelegate(state, dropBoxNtf);
-                        }
-
-                        // 4. Send EXP Gain notice (0x5277) to trigger floating EXP popup
+                        // 2. Send EXP Gain notice (0x5277) to trigger floating EXP popup
                         byte[] expNtf = YogurtingPackets.MakeGameHuntCharExpUpNtf(expEarned);
                         await state.Session.SendAsync(expNtf);
-
-                        // 5. Broadcast Despawn Packet (0x7A00) to clear dead 3D model
-                        byte[] despawnNtf = YogurtingPackets.MakeGameMonDeadNtf(targetMonster.EntityId);
-                        await state.Session.SendAsync(despawnNtf);
-                        // 6. Update Top-Right Monster Counter Box (0x7959)
-                        if (_gameDb != null && _gameDb.Fields.TryGetValue(player.FieldId, out var currentFieldDef))
-                        {
-                            int aliveRemaining = 0;
-                            lock (currentFieldDef.Monsters)
-                            {
-                                foreach (var m in currentFieldDef.Monsters)
-                                {
-                                    if (!m.IsDead) aliveRemaining++;
-                                }
-                            }
-                            byte[] counterNtf = YogurtingPackets.MakeGameDisplayCounterNtf(aliveRemaining, 1);
-                            await state.Session.SendAsync(counterNtf);
-                            await _broadcastDelegate(state, counterNtf);
-                        }
 
                         // Authentic Level-Up Check using ExpTable.txt & StatusTable.txt
                         int reqExp = _gameDb != null ? _gameDb.GetMaxExpForLevel(player.Level) : (int)player.MaxExp;
@@ -399,10 +362,7 @@ namespace Yogurting.Server.Handlers.Field
                             {
                                 await Task.Delay(TimeSpan.FromSeconds(targetMonster.RespawnSeconds));
                                 targetMonster.Respawn();
-                                byte[] triggerNtf = YogurtingPackets.MakeGameTriggerMobNtf(targetMonster.EntityId);
                                 byte[] respawnNtf = YogurtingPackets.MakeGameMonInfoNtf(targetMonster);
-                                await state.Session.SendAsync(triggerNtf);
-                                await _broadcastDelegate(state, triggerNtf);
                                 await state.Session.SendAsync(respawnNtf);
                                 await _broadcastDelegate(state, respawnNtf);
                                 Logger.Debug($"[Combat] '{targetMonster.Name}' respawned at ({targetMonster.X}, {targetMonster.Y}).");
@@ -421,7 +381,10 @@ namespace Yogurting.Server.Handlers.Field
                         (int)player.Position.Y,
                         0,
                         false,
-                        1);
+                        player.ComboCount,
+                        weaponCategory: weaponCat,
+                        skillId: attackSkillId,
+                        addDexExp: 0);
 
                     await state.Session.SendAsync(atkAns);
                     await _broadcastDelegate(state, atkAns);
@@ -535,9 +498,6 @@ namespace Yogurting.Server.Handlers.Field
                             if (mon != null)
                             {
                                 mon.TakeDamage(dmg);
-                                byte[] monHpNtf = YogurtingPackets.MakeGameMonHpInfoNtf(mon.EntityId, mon.CurrentHp, mon.MaxHp);
-                                _ = state.Session.SendAsync(monHpNtf);
-                                _ = _broadcastDelegate(state, monHpNtf);
                             }
                         }
                     }
@@ -561,9 +521,6 @@ namespace Yogurting.Server.Handlers.Field
                             if (mon != null)
                             {
                                 mon.TakeDamage(dmg);
-                                byte[] monHpNtf = YogurtingPackets.MakeGameMonHpInfoNtf(mon.EntityId, mon.CurrentHp, mon.MaxHp);
-                                _ = state.Session.SendAsync(monHpNtf);
-                                _ = _broadcastDelegate(state, monHpNtf);
                             }
                         }
                     }

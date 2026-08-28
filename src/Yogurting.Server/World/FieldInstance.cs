@@ -94,14 +94,25 @@ namespace Yogurting.Server.World
                 await session.SendAsync(YogurtingPackets.MakeGameWarpGateSpawnNtf(
                     gate.Id, gate.X, gate.Y, gate.Shell, gate.CliId, gate.Dir, gate.DestFieldId));
             }
+        }
 
-            // 4. Field Monsters
+        /// <summary>
+        /// Spawns field monsters matching Quartet's exact 0x796E (MonInfo) + 0x7969 (MonMove) sequence.
+        /// </summary>
+        public async Task SpawnMonstersAsync(ClientSession session, Yogurting.Data.Loaders.GameDatabase? gameDb = null)
+        {
+            if (gameDb == null || !gameDb.Fields.TryGetValue(FieldId, out var fieldDef))
+            {
+                return;
+            }
+
             foreach (var mon in fieldDef.Monsters)
             {
                 if (!mon.IsDead)
                 {
-                    await session.SendAsync(YogurtingPackets.MakeGameTriggerMobNtf(mon.EntityId));
                     await session.SendAsync(YogurtingPackets.MakeGameMonInfoNtf(mon));
+                    await session.SendAsync(YogurtingPackets.MakeGameMonMoveNtf(
+                        mon.EntityId, (int)mon.X, (int)mon.Y, (int)mon.X, (int)mon.Y, 1, 80));
                 }
             }
         }

@@ -63,16 +63,6 @@ namespace Yogurting.Server.Handlers.Field
         }
 
         /// <summary>
-        /// 0x5274 (21108): MsgGameWeaponFrameAns - Weapon / Visual Mesh Frame Sync from Client
-        /// </summary>
-        [PacketHandler((PacketOpcode)0x5274)]
-        public Task HandleWeaponFrameSyncAsync(PlayerSessionState state, byte[] packetData)
-        {
-            // Acknowledge client mesh frame updates silently
-            return Task.CompletedTask;
-        }
-
-        /// <summary>
         /// 0x79D5 (31189): MsgGameMoveExReq / MsgGameMoveExNtf - Extended 2D/3D Movement Delta Sync
         /// Delphi 0x005AF7F0
         /// </summary>
@@ -390,8 +380,22 @@ namespace Yogurting.Server.Handlers.Field
 
                 // Exact Quartet response sequence for 0x7965 (Screen fades to black, client prepares target field):
                 await state.Session.SendAsync(YogurtingPackets.MakeGameFadeOutNtf());
-                await state.Session.SendAsync(YogurtingPackets.MakeGameStatDeltaNtf());
+                await state.Session.SendAsync(YogurtingPackets.MakeGameStatDeltaNtf(0xCB));
                 await state.Session.SendAsync(YogurtingPackets.MakeGameWarpStartNtf(targetField, targetPos.X, targetPos.Y, isHuntField, huntFieldId));
+
+                // If entering a Mob / Hunt Field, request weapon socket frame info (0x5273)
+                // This initializes combat stance and activates the Cardboard Box HUD (LuCGameItemDropCateFrame / bootybox.tga)
+                if (isHuntField)
+                {
+                    int weaponSlot = 4;
+                    int weaponUid = state.Player.EquippedSlotUids.Length > weaponSlot ? state.Player.EquippedSlotUids[weaponSlot] : 1;
+                    if (weaponUid == 0) weaponUid = 1;
+
+                    int weaponTypeId = YogurtingPackets.GetPlayerItemTypeId(state.Player, weaponUid, (ushort)weaponSlot);
+                    if (weaponTypeId == 0) weaponTypeId = 140001; // Starter Blade
+
+                    await state.Session.SendAsync(YogurtingPackets.MakeGameWeaponFrameInfoReq(weaponTypeId, weaponUid));
+                }
             }
             catch (Exception ex)
             {
@@ -508,18 +512,27 @@ namespace Yogurting.Server.Handlers.Field
                 Logger.Info($"[FieldServer] '{state.Player.CharacterName}' warped from Field {oldFieldId} to Field {targetField} at ({targetPos.X}, {targetPos.Y})!");
 
                 // Exact 1-to-1 transition sequence from Quartet live capture:
-                // 1. School Info
-                int schoolId = state.Player.School == SchoolType.EstivaAcademy ? 1 : 2;
-                await state.Session.SendAsync(YogurtingPackets.MakeGameSchoolInfoNtf(schoolId));
+                // If entering a Non-Hunt (Campus) map, send MsgGameSchoolInfoNtf (0x5264) to restore Campus mode & UI
+                if (!isHunt)
+                {
+                    await state.Session.SendAsync(YogurtingPackets.MakeGameSchoolInfoNtf());
+                }
 
-                // 2. Spawn entities on new map (NPCs, terminals, gates)
+                // 1. Spawn entities on new map (NPCs, terminals, gates)
                 await _spawnEntitiesDelegate(state.Session, targetField);
 
-                // 3. Field Info Done (signals client that all entities are sent)
+                // 2. Field Info Done (0x7956) - signals client that map geometry and gates are ready
                 await state.Session.SendAsync(YogurtingPackets.MakeGameFieldInfoDoneNtf());
 
-                // 4. Enter Stat Ready (0x520B)
-                await state.Session.SendAsync(YogurtingPackets.MakeGameFieldEnterStatReadyNtf(0.3f));
+                // 3. Enter Stat Ready (0x520B)
+                await state.Session.SendAsync(YogurtingPackets.MakeGameFieldEnterStatReadyNtf(isHunt ? 0.3f : 2.2f));
+
+                // 4. Field Monsters (0x796E MonInfo + 0x7969 MonMove) for Hunt Maps
+                if (isHunt && _worldManager != null)
+                {
+                    var targetInstance = _worldManager.GetOrCreateField(targetField);
+                    await targetInstance.SpawnMonstersAsync(state.Session, _gameDb);
+                }
 
                 // 5. Zone Title & Mission Announcement (0x7963) - Exact 1-to-1 match with Quartet
                 string zoneName = _gameDb != null && _gameDb.Fields.TryGetValue(targetField, out var fDef) && !string.IsNullOrWhiteSpace(fDef.Name)
@@ -527,41 +540,15 @@ namespace Yogurting.Server.Handlers.Field
                     : (isHunt ? "分かれ道" : "1F");
                 await state.Session.SendAsync(YogurtingPackets.MakeGameCharaNameInfoNtfPhase2(state.Player, 1, zoneName));
 
-                // 6. Field View Range (400)
+                // 6. Field View Range (0x79D4 / 400)
                 await state.Session.SendAsync(YogurtingPackets.MakeGameFieldViewRangeNtf(400));
 
-                // 7. Background Music for New Field
+                // 7. Background Music for New Field (0x795C)
                 int bgm = _gameDb != null ? _gameDb.GetFieldBgm(targetField) : 6;
                 await state.Session.SendAsync(YogurtingPackets.MakeGameTriggerBgmNtf(bgm));
 
-                // 8. Warp Result (Signals client to fade in and render character at new location)
+                // 8. Warp Result (0x7968) - Signals client to fade in and render character at new location
                 await state.Session.SendAsync(YogurtingPackets.MakeGameWarpResultNtf(targetField, targetPos.X, targetPos.Y));
-
-                // 9. State Synchronization
-                await state.Session.SendAsync(YogurtingPackets.MakeGameSetStateNtf(state.Player));
-
-                // 10. Mission Counter Begin (0x7990), Display Counter (0x7959), Cardboard Booty Box (0x79E3, 0x79B5, 0x7957)
-                if (isHunt)
-                {
-                    int monsterCount = _gameDb != null && _gameDb.Fields.TryGetValue(targetField, out var huntFieldDef) ? huntFieldDef.Monsters.Count : 90;
-                    // A. Episode & Hunt Stage Context (0x79B5) - Initializes Episode HUD and loads Booty Box subsystem
-                    await state.Session.SendAsync(YogurtingPackets.MakeGameEpisodeInfoNtf(targetField, 1, zoneName, state.Player.CharaId, state.Player.CharacterName, (byte)state.Player.Gender, (byte)state.Player.Grade));
-                    // B. Assign Cardboard Booty Box (0x79E3) to local player charaId (Box Index 0)
-                    await state.Session.SendAsync(YogurtingPackets.MakeGameBootyBoxAssignNtf(state.Player.CharaId, 0));
-                    // C. Episode Play Resume (0x7957) - Unpauses client and unlocks all player controls & combat
-                    await state.Session.SendAsync(YogurtingPackets.MakeGameEpisodePlayResumeNtf());
-                    // D. Initialize Objective / Mission Counter HUD (0x7990 & 0x7959)
-                    await state.Session.SendAsync(YogurtingPackets.MakeGameBeginCounterNtf(0, monsterCount, 0, 0, 1));
-                    await state.Session.SendAsync(YogurtingPackets.MakeGameDisplayCounterNtf(monsterCount, 1));
-                    Logger.Info($"[FieldServer] Episode Info (0x79B5), Booty Box (0x79E3), Play Resume (0x7957), and BeginCounter (0x7990) assigned for Field {targetField}.");
-                }
-                else
-                {
-                    // Non-hunt field / Campus: Clear Booty Box HUD (-1)
-                    await state.Session.SendAsync(YogurtingPackets.MakeGameBootyBoxAssignNtf(state.Player.CharaId, -1));
-                }
-
-
             }
             catch (Exception ex)
             {
