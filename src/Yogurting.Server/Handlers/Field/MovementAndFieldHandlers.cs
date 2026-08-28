@@ -518,10 +518,16 @@ namespace Yogurting.Server.Handlers.Field
                 // 3. Field Info Done (signals client that all entities are sent)
                 await state.Session.SendAsync(YogurtingPackets.MakeGameFieldInfoDoneNtf());
 
-                // 4. Enter Stat Ready
+                // 4. Enter Stat Ready (0x520B)
                 await state.Session.SendAsync(YogurtingPackets.MakeGameFieldEnterStatReadyNtf(0.3f));
 
-                // 5. Field View Range (400)
+                // 5. Zone Title & Mission Announcement (0x7963) - Exact 1-to-1 match with Quartet
+                string zoneName = _gameDb != null && _gameDb.Fields.TryGetValue(targetField, out var fDef) && !string.IsNullOrWhiteSpace(fDef.Name)
+                    ? fDef.Name
+                    : (isHunt ? "分かれ道" : "1F");
+                await state.Session.SendAsync(YogurtingPackets.MakeGameCharaNameInfoNtfPhase2(state.Player, 1, zoneName));
+
+                // 6. Field View Range (400)
                 await state.Session.SendAsync(YogurtingPackets.MakeGameFieldViewRangeNtf(400));
 
                 // 7. Background Music for New Field
@@ -533,6 +539,8 @@ namespace Yogurting.Server.Handlers.Field
 
                 // 9. State Synchronization
                 await state.Session.SendAsync(YogurtingPackets.MakeGameSetStateNtf(state.Player));
+
+
             }
             catch (Exception ex)
             {

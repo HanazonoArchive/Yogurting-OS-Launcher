@@ -62,7 +62,13 @@ namespace Yogurting.Server.Handlers
 
                 // 3. Booty Box Opened (Opcode 31092 / 0x7974) -> TAttractionSession.sub_006C5DCC
                 case PacketOpcode.MsgGameBootyBoxDoneReq:
-                    Console.WriteLine($"[EpisodeServer] Booty Box Opened! Rewarding player...");
+                    int selectedBoxIndex = packetData.Length >= 10 ? BitConverter.ToInt32(packetData, 6) : 0;
+                    Console.WriteLine($"[EpisodeServer] Booty Box #{selectedBoxIndex} Opened! Unboxing reward...");
+
+                    // 1. Confirm Booty Box Unbox with particle effect trigger (0x7975)
+                    await session.SendAsync(YogurtingPackets.MakeGameBootyBoxDoneAns(1));
+
+                    // 2. Return to School Campus
                     await session.SendAsync(YogurtingPackets.MakeGotoSvrNtf(_host, _fieldPort));
                     break;
 

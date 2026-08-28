@@ -510,6 +510,7 @@ namespace Yogurting.Server.Handlers.Field
                 int choiceIndex = (int)(choiceRaw & 0x7FFFFFFF);
 
                 Logger.Info($"[NPC] '{player.CharacterName}' selected Dialog #{dialogId} Choice #{choiceIndex} QuestId={questId}.");
+                await Task.CompletedTask;
             }
             catch (Exception ex)
             {

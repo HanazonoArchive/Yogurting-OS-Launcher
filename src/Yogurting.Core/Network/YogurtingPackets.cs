@@ -999,20 +999,28 @@ namespace Yogurting.Core.Network
 
         /// <summary>
         /// 0x795A (31066): TMsgGameFieldLoadingStartNtf
-        /// Delphi 0x005AD2FC: WriteInt32(1), WriteInt32(FieldID), WriteMapPoint(Point), WriteLongBool(False), FillBuffer(0xCC, 4)
+        /// Delphi 0x005AD2FC: WriteInt32(1), WriteInt32(FieldID), WriteMapPoint(Point), WriteLongBool(IsHuntField), WriteInt32(MonsterCount) or FillBuffer(0xCC, 4)
         /// </summary>
-        public static byte[] MakeGameFieldLoadingStartNtf(int fieldId = 1, float x = 38f, float y = 14f)
+        public static byte[] MakeGameFieldLoadingStartNtf(int fieldId = 1, float x = 38f, float y = 14f, bool isHuntField = false, int monsterCount = 0)
         {
             using var writer = PacketWriter.Create(PacketOpcode.MsgGameFieldLoadingStartNtf);
             writer.WriteInt32(1);                           // State: 1 (School)
             writer.WriteInt32(fieldId);                     // Field ID
             writer.WriteUInt16((ushort)x);                  // MapPoint X (word: raw integer coordinate)
             writer.WriteUInt16((ushort)y);                  // MapPoint Y (word: raw integer coordinate)
-            writer.WriteInt32(0);                           // LongBool (False: not instance dungeon)
-            writer.WriteByte(0xCC);                         // 4-byte padding
-            writer.WriteByte(0xCC);
-            writer.WriteByte(0xCC);
-            writer.WriteByte(0xCC);
+            if (isHuntField)
+            {
+                writer.WriteInt32(1);                       // LongBool (True: Hunt Field)
+                writer.WriteInt32(monsterCount);            // Monster Count for on-screen counter UI box
+            }
+            else
+            {
+                writer.WriteInt32(0);                       // LongBool (False)
+                writer.WriteByte(0xCC);                     // 4-byte padding
+                writer.WriteByte(0xCC);
+                writer.WriteByte(0xCC);
+                writer.WriteByte(0xCC);
+            }
             return writer.Build();
         }
 
@@ -1070,21 +1078,36 @@ namespace Yogurting.Core.Network
         }
 
         /// <summary>
-        /// 0x7963 (31075): TMsgGameCharaNameInfoNtf (Phase 2) - Field Zone Title & Overhead Tag
-        /// Exact 78-byte ground truth from Quartet
+        /// 0x7963 (31075): TMsgGameCharaNameInfoNtf (Phase 2) - Field Zone Title & Mission Announcement
+        /// Exact 66-byte ground truth from Quartet & 31075.dms:
+        ///   WriteInt32(-1)            // Sender ID / Broadcast
+        ///   WriteInt32(entityId)      // 1 = Local Player
+        ///   Write 30 bytes zeroes     // Padding / Emoticon / Character Name
+        ///   WriteUInt32(0x00000FA1)   // Message Format 4001 (MATCHING_SYS_MSG.clt)
+        ///   WriteUInt16(1)            // Format Param Count = 1
+        ///   WriteUInt16(stringLen)    // Byte length of string including null
+        ///   WriteUnicodeString(zone)  // UTF-16LE characters with null terminator
+        ///   WriteUInt16(2)            // Message Length = 2
+        ///   WriteUInt16(0)            // Empty message null terminator
         /// </summary>
-        public static byte[] MakeGameCharaNameInfoNtfPhase2(Player player, int entityId = 1, string zoneName = "裏庭 聖堂周辺")
+        public static byte[] MakeGameCharaNameInfoNtfPhase2(Player player, int entityId = 1, string zoneName = "分かれ道")
         {
             using var writer = PacketWriter.Create(PacketOpcode.MsgGameCharaNameInfoNtf);
             writer.WriteInt32(-1);                          // Offset 0..3: Unused (-1)
             writer.WriteInt32(entityId);                    // Offset 4..7: EntityID in 3D Field (1 for Local Player)
             for (int i = 0; i < 7; i++) writer.WriteInt32(0); // Offset 8..35: 28 bytes zeroes
-            writer.WriteUInt16(0);                          // Offset 36..37: 2 bytes padding
-            writer.WriteInt32(0x00000FA1);                  // Offset 38..41: Name Tag Attribute
-            writer.WriteUInt16(1);                          // Offset 42..43: Style flag
-            writer.WriteUInt16(0x0016);                     // Offset 44..45: Zone string byte length (22 bytes)
-            writer.WriteUnicodeString(zoneName, 11);        // Offset 46..67: 22 bytes UTF-16LE
-            writer.WriteInt32(2);                           // Offset 68..71: Suffix flag (4 bytes)
+            writer.WriteUInt16(0);                          // Offset 36..37: 2 bytes zeroes (Total 30 zeroes)
+            writer.WriteInt32(0x00000FA1);                  // Offset 38..41: Message Format 4001 (0x0FA1)
+            writer.WriteUInt16(1);                          // Offset 42..43: Param Count = 1
+            
+            // Format string parameter (e.g. "分かれ道" or "So-il 1F")
+            byte[] zoneBytes = System.Text.Encoding.Unicode.GetBytes(zoneName + "\0");
+            writer.WriteUInt16((ushort)zoneBytes.Length);   // String length in bytes including \0
+            writer.WriteBytes(zoneBytes);
+            
+            // Suffix message
+            writer.WriteUInt16(2);                          // Message byte length = 2
+            writer.WriteUInt16(0);                          // Empty message null terminator
             return writer.Build();
         }
 
@@ -2448,6 +2471,182 @@ namespace Yogurting.Core.Network
             using var writer = PacketWriter.Create(PacketOpcode.MsgGameCharLvUpNtf);
             writer.WriteInt32(charaId);
             writer.WriteInt32(newLevel);
+            return writer.Build();
+        }
+
+        /// <summary>
+        /// 0x7972 (31090): MsgGameEpisodeResultNtf - Stage Clear Evaluation & 3-Cardboard Booty Box Roulette
+        /// Exact Delphi structure from _Unit47.pas:005AE2E8 and 31090.dms
+        /// </summary>
+        public static byte[] MakeGameEpisodeResultNtf(
+            List<(int charaId, string charaName, ushort grade, int score, int kills)> players,
+            List<(int ownerId, int itemId, int quantity, int slot, bool powerUp)> bootyBoxes)
+        {
+            using var writer = PacketWriter.Create(PacketOpcode.MsgGameEpisodeResultNtf);
+            writer.WriteByte((byte)players.Count);
+            writer.WriteUInt16((ushort)players.Count);
+
+            foreach (var p in players)
+            {
+                writer.WriteInt32(p.charaId);
+                writer.WriteUnicodeString(p.charaName, 26);
+                writer.WriteUInt16(p.grade); // 0=S, 1=A, 2=B, 3=C, 4=D
+                writer.WriteInt32(p.score);
+                writer.WriteInt32(p.kills);
+            }
+
+            writer.WriteUInt16((ushort)bootyBoxes.Count);
+            foreach (var b in bootyBoxes)
+            {
+                writer.WriteInt32(b.ownerId);
+                writer.WriteUInt16(1); // 1 item in this box
+                writer.WriteInt32(b.itemId);
+                writer.WriteInt32(b.quantity);
+                writer.WriteInt32(b.slot);
+                writer.WriteByte(1);
+                writer.WriteInt32(b.itemId);
+                writer.WriteInt32(b.quantity);
+                writer.WriteInt32(b.slot);
+                writer.WriteInt32(b.powerUp ? 1 : 0);
+            }
+
+            return writer.Build();
+        }
+
+        /// <summary>
+        /// 0x7975 (31093): MsgGameBootyBoxDoneAns - Booty Box Unbox Answer & Particle Trigger
+        /// Exact Delphi structure from _Unit47.pas:005AE4D8
+        /// </summary>
+        public static byte[] MakeGameBootyBoxDoneAns(int resultCode = 1)
+        {
+            using var writer = PacketWriter.Create(PacketOpcode.MsgGameBootyBoxDoneAns);
+            writer.WriteInt32(resultCode);
+            return writer.Build();
+        }
+
+        /// <summary>
+        /// 0x796C (31084): MsgGameFieldDropBoxNtf - Physical Cardboard Drop Box on Ground at Monster Death
+        /// Exact Delphi structure from _Unit47.pas:54726 and 31084.dms
+        /// </summary>
+        public static byte[] MakeGameFieldDropBoxNtf(int monsterEntityId, ushort x, ushort y, int dropItemId, int bootyBoxId = 1)
+        {
+            using var writer = PacketWriter.Create(PacketOpcode.MsgGameFieldDropBoxNtf);
+            writer.WriteInt32(monsterEntityId);
+            writer.WriteUInt16(x);
+            writer.WriteUInt16(y);
+            if (dropItemId > 0)
+            {
+                writer.WriteUInt16(1); // vecItemMonDead count = 1
+                writer.WriteInt32(dropItemId);
+                writer.WriteInt32(bootyBoxId);
+                writer.WriteInt32(1);
+                writer.WriteInt32(1); // countDropItem
+            }
+            else
+            {
+                writer.WriteUInt16(0);
+                writer.WriteInt32(0);
+            }
+            return writer.Build();
+        }
+
+        /// <summary>
+        /// 0x79B5 (31157): MsgGameEpisodeInfoNtf - Informs client of active Episode/Hunt context, loads Booty Box HUD and initializes mission stage.
+        /// Exact Delphi structure from _Unit47.pas:005AF11D
+        /// </summary>
+        public static byte[] MakeGameEpisodeInfoNtf(int episodeId, int episodeKind, string title, int charaId, string name, byte gender = 0, byte grade = 1, byte weaponType = 1)
+        {
+            using var writer = PacketWriter.Create(PacketOpcode.MsgGameEpisodeInfoNtf);
+            writer.WriteInt32(episodeId); // e.g. 114 or fieldId (399)
+            writer.WriteInt32(episodeKind); // 1 = Hunt / Mission
+            writer.WriteInt32(0); // bPK = 0
+            byte[] titleBytes = Encoding.Unicode.GetBytes(title ?? string.Empty);
+            writer.WriteUInt16((ushort)(titleBytes.Length / 2));
+            writer.WriteBytes(titleBytes);
+            writer.WriteInt32(int.MaxValue); // cntLimitMilk = 0x7FFFFFFF
+            writer.WriteInt32(int.MaxValue); // cntTotalRevival = 0x7FFFFFFF
+            writer.WriteInt32(3); // cntFreeRevival = 3
+            writer.WriteInt32(0); // curTotalRevival = 0
+            writer.WriteInt32(0); // curFreeRevival = 0
+            writer.WriteUInt16(1); // vecEpisodePC count = 1
+
+            // Episode PC entry (52-byte name + attributes)
+            writer.WriteInt32(charaId);
+            writer.WriteUnicodeString(name ?? "Player", 26); // Fixed 26-char string (52 bytes UTF-16LE)
+            writer.WriteByte(gender); // 0 or 1
+            writer.WriteByte(grade); // Grade
+            writer.WriteByte(weaponType); // WeaponType (1)
+            writer.WriteByte(0); // Team (0)
+            writer.WriteBytes(new byte[2] { 0xCC, 0xCC }); // Padding
+            writer.WriteInt32(charaId); // TelNumber / ID
+            writer.WriteInt32(-1); // Extra field (-1)
+
+            writer.WriteInt32(0); // Trailing flag / clear rate
+            writer.WriteSingle(1.0f); // Float scale (1.0f)
+            return writer.Build();
+        }
+
+        /// <summary>
+        /// 0x7957 (31063): MsgGameEpisodePlayResumeNtf - Unpauses client and unlocks all player controls & combat (Delphi _Unit47.pas:53292)
+        /// </summary>
+        public static byte[] MakeGameEpisodePlayResumeNtf()
+        {
+            using var writer = PacketWriter.Create(PacketOpcode.MsgGameEpisodePlayResumeNtf);
+            return writer.Build();
+        }
+
+        /// <summary>
+        /// 0x79E3 (31203): MsgGameBootyBoxAssignNtf - Assigns the Cardboard Booty Box HUD in the top right below minimap
+        /// Exact Delphi structure from _Unit40.pas:00548F26 and 31203.dms
+        /// </summary>
+        public static byte[] MakeGameBootyBoxAssignNtf(int charaId, int bootyBoxId = 0)
+        {
+            using var writer = PacketWriter.Create(PacketOpcode.MsgGameBootyBoxAssignNtf);
+            writer.WriteInt32(charaId);
+            writer.WriteInt32(bootyBoxId); // 0 = Box 0 (First Cardboard Box HUD), 1 = Box 1
+            return writer.Build();
+        }
+
+        /// <summary>
+        /// 0x5276 (21110): MsgGameHuntMonDeadNtf - Hunt Field Monster Death & Loot Delivery into Top-Right Booty Box HUD
+        /// Exact Delphi structure from _Unit47.pas:005AA588
+        /// </summary>
+        public static byte[] MakeGameHuntMonDeadNtf(int monsterEntityId, ushort x, ushort y, int killerCharaId, int expGained, int totalExp, int dropItemId = 0, int quantity = 1, bool isEquipment = false)
+        {
+            using var writer = PacketWriter.Create(PacketOpcode.MsgGameHuntMonDeadNtf);
+            writer.WriteInt32(monsterEntityId);
+            writer.WriteUInt16(x);
+            writer.WriteUInt16(y);
+            writer.WriteInt32(killerCharaId);
+            writer.WriteInt32(expGained);
+            writer.WriteInt32(totalExp);
+
+            if (dropItemId > 0)
+            {
+                // 1. Loot Types array
+                writer.WriteUInt16(1); // 1 loot item
+                writer.WriteInt32(dropItemId);
+
+                // 2. Loot Details array
+                writer.WriteUInt16(1); // 1 detail
+                if (isEquipment)
+                {
+                    writer.WriteInt32(dropItemId | 0x02000000); // Equipment type flag
+                    writer.WriteInt64(DateTime.UtcNow.Ticks);   // Unique Item UID
+                }
+                else
+                {
+                    writer.WriteInt32(dropItemId | 0x03000000); // Consumable/Material type flag
+                    writer.WriteInt32(quantity);                // Quantity
+                    writer.WriteInt32(0);                       // Reserved / Status
+                }
+            }
+            else
+            {
+                writer.WriteUInt16(0); // No loot items
+                writer.WriteUInt16(0); // No loot details
+            }
+
             return writer.Build();
         }
     }

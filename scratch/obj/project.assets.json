@@ -43,20 +43,6 @@
         "runtime": {
           "bin/placeholder/Yogurting.Data.dll": {}
         }
-      },
-      "Yogurting.Server/1.0.0": {
-        "type": "project",
-        "framework": ".NETCoreApp,Version=v8.0",
-        "dependencies": {
-          "Yogurting.Core": "1.0.0",
-          "Yogurting.Data": "1.0.0"
-        },
-        "compile": {
-          "bin/placeholder/Yogurting.Server.dll": {}
-        },
-        "runtime": {
-          "bin/placeholder/Yogurting.Server.dll": {}
-        }
       }
     }
   },
@@ -99,18 +85,12 @@
       "type": "project",
       "path": "../src/Yogurting.Data/Yogurting.Data.csproj",
       "msbuildProject": "../src/Yogurting.Data/Yogurting.Data.csproj"
-    },
-    "Yogurting.Server/1.0.0": {
-      "type": "project",
-      "path": "../src/Yogurting.Server/Yogurting.Server.csproj",
-      "msbuildProject": "../src/Yogurting.Server/Yogurting.Server.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "net8.0": [
       "Yogurting.Core >= 1.0.0",
-      "Yogurting.Data >= 1.0.0",
-      "Yogurting.Server >= 1.0.0"
+      "Yogurting.Data >= 1.0.0"
     ]
   },
   "packageFolders": {
@@ -119,9 +99,9 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Hanazono Archive\\Desktop\\Yogurting Game\\server_modern\\scratch\\VerifyFiveAngles.csproj",
-      "projectName": "VerifyFiveAngles",
-      "projectPath": "C:\\Users\\Hanazono Archive\\Desktop\\Yogurting Game\\server_modern\\scratch\\VerifyFiveAngles.csproj",
+      "projectUniqueName": "C:\\Users\\Hanazono Archive\\Desktop\\Yogurting Game\\server_modern\\scratch\\VerifyEpisodeAndBootyBox.csproj",
+      "projectName": "VerifyEpisodeAndBootyBox",
+      "projectPath": "C:\\Users\\Hanazono Archive\\Desktop\\Yogurting Game\\server_modern\\scratch\\VerifyEpisodeAndBootyBox.csproj",
       "packagesPath": "C:\\Users\\Hanazono Archive\\.nuget\\packages\\",
       "outputPath": "C:\\Users\\Hanazono Archive\\Desktop\\Yogurting Game\\server_modern\\scratch\\obj\\",
       "projectStyle": "PackageReference",
@@ -143,9 +123,6 @@
             },
             "C:\\Users\\Hanazono Archive\\Desktop\\Yogurting Game\\server_modern\\src\\Yogurting.Data\\Yogurting.Data.csproj": {
               "projectPath": "C:\\Users\\Hanazono Archive\\Desktop\\Yogurting Game\\server_modern\\src\\Yogurting.Data\\Yogurting.Data.csproj"
-            },
-            "C:\\Users\\Hanazono Archive\\Desktop\\Yogurting Game\\server_modern\\src\\Yogurting.Server\\Yogurting.Server.csproj": {
-              "projectPath": "C:\\Users\\Hanazono Archive\\Desktop\\Yogurting Game\\server_modern\\src\\Yogurting.Server\\Yogurting.Server.csproj"
             }
           }
         }

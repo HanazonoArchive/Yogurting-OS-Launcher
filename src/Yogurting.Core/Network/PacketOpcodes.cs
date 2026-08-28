@@ -209,7 +209,13 @@ namespace Yogurting.Core.Network
         MsgGameChatReq              = 0x7963, // 31075: Send Chat Message
         MsgGameChatNtf              = 0x7963, // 31075: Broadcast Chat Message
         MsgGameChannelSwitchReq     = 0x7965, // 31077: Switch school channel
-        MsgGameBootyBoxDoneReq      = 0x7974, // 31092: Booty Box opened
+        MsgGameFieldDropBoxNtf      = 0x796C, // 31084: Physical Cardboard Loot Drop Box on Ground (Delphi TMsgGameMonDeadNtf)
+        MsgGameEpisodeResultNtf     = 0x7972, // 31090: Episode / Stage Result Evaluation & 3-Booty Box Roulette (Delphi TMsgGameEpisodeResultNtf)
+        MsgGameBootyBoxDoneReq      = 0x7974, // 31092: Booty Box opened / Selected by Player (Delphi TMsgGameBootyBoxDoneReq)
+        MsgGameBootyBoxDoneAns      = 0x7975, // 31093: Booty Box Unbox Answer & Particle Trigger (Delphi TMsgGameBootyBoxDoneAns)
+        MsgGameEpisodePlayResumeNtf = 0x7957, // 31063: Episode Play Resume / Unpause / Unlock Controls (Delphi _Unit47.pas:53292)
+        MsgGameEpisodeInfoNtf       = 0x79B5, // 31157: Episode Info / Hunt Stage Context & Booty Box Init (Delphi _Unit47.pas:005AF11D)
+        MsgGameBootyBoxAssignNtf    = 0x79E3, // 31203: Booty Box HUD Assignment in Top-Right below minimap (Delphi 31203.dms)
         MsgGameTakeUpObjectReq      = 0x7984, // 31108: Take up interactive object
         MsgGamePushObjectReq        = 0x7996, // 31126: Push interactive object
         MsgGameLockerOpenReq        = 0x79A2, // 31138: Open Storage Locker

@@ -180,7 +180,8 @@ namespace Yogurting.Server.Handlers
             await session.SendAsync(YogurtingPackets.MakeGameEquipTitleAns(player.CharaId, 0));
 
             // 8. TMsgGameFieldLoadingStartNtf (0x795A) - Triggers the loading screen in client!
-            await session.SendAsync(YogurtingPackets.MakeGameFieldLoadingStartNtf(player.FieldId, player.Position.X, player.Position.Y));
+            int monCount = _gameDb != null && _gameDb.Fields.TryGetValue(player.FieldId, out var curF) ? curF.Monsters.Count : 0;
+            await session.SendAsync(YogurtingPackets.MakeGameFieldLoadingStartNtf(player.FieldId, player.Position.X, player.Position.Y, isHuntField, monCount));
 
             Logger.Info($"[FieldServer] '{player.CharacterName}' (Entity #{entityId}) field loading sequence dispatched for Field {player.FieldId} ({player.Position})! Awaiting map load (0x795B)...");
         }

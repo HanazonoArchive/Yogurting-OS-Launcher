@@ -316,16 +316,27 @@ namespace Yogurting.Server.Handlers.Field
                         await state.Session.SendAsync(monStatusNtf);
                         await _broadcastDelegate(state, monStatusNtf);
 
-                        // 3. Broadcast Monster Kill / Hunting Score (0x5276)
+                        // 3. Broadcast Monster Dead & Loot Delivery to Top-Right Cardboard Booty Box (0x5276)
                         byte[] deadNtf = YogurtingPackets.MakeGameHuntMonDeadNtf(
-                            targetMonster,
+                            targetMonster.EntityId,
+                            (ushort)targetMonster.X,
+                            (ushort)targetMonster.Y,
                             player.CharacterId,
                             expEarned,
                             (int)player.CurrentExp,
                             dropItemId,
-                            dropCount);
+                            dropCount,
+                            isEquipment: false);
                         await state.Session.SendAsync(deadNtf);
                         await _broadcastDelegate(state, deadNtf);
+
+                        // 3b. Broadcast Physical Cardboard Loot Drop Box on Floor (0x796C)
+                        if (dropItemId > 0)
+                        {
+                            byte[] dropBoxNtf = YogurtingPackets.MakeGameFieldDropBoxNtf(targetMonster.EntityId, (ushort)targetMonster.X, (ushort)targetMonster.Y, dropItemId, 1);
+                            await state.Session.SendAsync(dropBoxNtf);
+                            await _broadcastDelegate(state, dropBoxNtf);
+                        }
 
                         // 4. Send EXP Gain notice (0x5277) to trigger floating EXP popup
                         byte[] expNtf = YogurtingPackets.MakeGameHuntCharExpUpNtf(expEarned);
@@ -336,21 +347,7 @@ namespace Yogurting.Server.Handlers.Field
                         await state.Session.SendAsync(despawnNtf);
                         await _broadcastDelegate(state, despawnNtf);
 
-                        // 6. Update Top-Right Monster Counter Box (0x7959)
-                        if (_gameDb != null && _gameDb.Fields.TryGetValue(player.FieldId, out var currentFieldDef))
-                        {
-                            int aliveRemaining = 0;
-                            lock (currentFieldDef.Monsters)
-                            {
-                                foreach (var m in currentFieldDef.Monsters)
-                                {
-                                    if (!m.IsDead) aliveRemaining++;
-                                }
-                            }
-                            byte[] counterNtf = YogurtingPackets.MakeGameDisplayCounterNtf(aliveRemaining, 1);
-                            await state.Session.SendAsync(counterNtf);
-                            await _broadcastDelegate(state, counterNtf);
-                        }
+
 
                         // Authentic Level-Up Check using ExpTable.txt & StatusTable.txt
                         int reqExp = _gameDb != null ? _gameDb.GetMaxExpForLevel(player.Level) : (int)player.MaxExp;
@@ -626,6 +623,57 @@ namespace Yogurting.Server.Handlers.Field
             catch (Exception ex)
             {
                 Logger.Error($"[Combat] HandleSkillHotkeyNtf error: {ex.Message}");
+            }
+        }
+
+        /// <summary>
+        /// 0x7974 (31092): MsgGameBootyBoxDoneReq - Player selected and opened a Booty Box
+        /// </summary>
+        [PacketHandler(PacketOpcode.MsgGameBootyBoxDoneReq)]
+        public async Task HandleBootyBoxDoneReqAsync(PlayerSessionState state, byte[] packetData)
+        {
+            try
+            {
+                var player = state.Player;
+                if (player == null) return;
+
+                int selectedBoxIndex = packetData.Length >= 10 ? BitConverter.ToInt32(packetData, 6) : 0;
+                Logger.Info($"[Combat] '{player.CharacterName}' opened Booty Box #{selectedBoxIndex}! Unboxing reward...");
+
+                // Award reward item (e.g. Rare Uniform / Consumable)
+                int rewardTypeId = selectedBoxIndex switch
+                {
+                    1 => 110001, // Gym Uniform
+                    2 => 310001, // Potion
+                    _ => 140001  // Blade Weapon
+                };
+
+                player.Inventory.Add(new Item
+                {
+                    Id = (player.Inventory.Count > 0 ? player.Inventory.Max(i => i.Id) : 0) + 1,
+                    TypeId = rewardTypeId,
+                    SlotIndex = player.Inventory.Count,
+                    SlotType = ItemSlotType.Inventory,
+                    Quantity = 1,
+                    Name = _gameDb != null && _gameDb.Items.TryGetValue(rewardTypeId, out var itemDef) ? itemDef.Name : "Booty Box Prize"
+                });
+
+                if (_repository != null)
+                {
+                    await _repository.SaveAccountAsync(player);
+                }
+
+                // 1. Confirm Booty Box Unbox with particle sparkle trigger (0x7975)
+                byte[] doneAns = YogurtingPackets.MakeGameBootyBoxDoneAns(1);
+                await state.Session.SendAsync(doneAns);
+
+                // 2. Sync updated inventory to client (0x520F)
+                byte[] stateNtf = YogurtingPackets.MakeGameSetStateNtf(player);
+                await state.Session.SendAsync(stateNtf);
+            }
+            catch (Exception ex)
+            {
+                Logger.Error($"[Combat] HandleBootyBoxDoneReq error: {ex.Message}");
             }
         }
     }

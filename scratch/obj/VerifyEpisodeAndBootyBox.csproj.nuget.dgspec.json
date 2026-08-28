@@ -1,0 +1,199 @@
+{
+  "format": 1,
+  "restore": {
+    "C:\\Users\\Hanazono Archive\\Desktop\\Yogurting Game\\server_modern\\scratch\\VerifyEpisodeAndBootyBox.csproj": {}
+  },
+  "projects": {
+    "C:\\Users\\Hanazono Archive\\Desktop\\Yogurting Game\\server_modern\\scratch\\VerifyEpisodeAndBootyBox.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\Hanazono Archive\\Desktop\\Yogurting Game\\server_modern\\scratch\\VerifyEpisodeAndBootyBox.csproj",
+        "projectName": "VerifyEpisodeAndBootyBox",
+        "projectPath": "C:\\Users\\Hanazono Archive\\Desktop\\Yogurting Game\\server_modern\\scratch\\VerifyEpisodeAndBootyBox.csproj",
+        "packagesPath": "C:\\Users\\Hanazono Archive\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Hanazono Archive\\Desktop\\Yogurting Game\\server_modern\\scratch\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\Hanazono Archive\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0": {
+            "targetAlias": "net8.0",
+            "projectReferences": {
+              "C:\\Users\\Hanazono Archive\\Desktop\\Yogurting Game\\server_modern\\src\\Yogurting.Core\\Yogurting.Core.csproj": {
+                "projectPath": "C:\\Users\\Hanazono Archive\\Desktop\\Yogurting Game\\server_modern\\src\\Yogurting.Core\\Yogurting.Core.csproj"
+              },
+              "C:\\Users\\Hanazono Archive\\Desktop\\Yogurting Game\\server_modern\\src\\Yogurting.Data\\Yogurting.Data.csproj": {
+                "projectPath": "C:\\Users\\Hanazono Archive\\Desktop\\Yogurting Game\\server_modern\\src\\Yogurting.Data\\Yogurting.Data.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        }
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.301/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\Hanazono Archive\\Desktop\\Yogurting Game\\server_modern\\src\\Yogurting.Core\\Yogurting.Core.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\Hanazono Archive\\Desktop\\Yogurting Game\\server_modern\\src\\Yogurting.Core\\Yogurting.Core.csproj",
+        "projectName": "Yogurting.Core",
+        "projectPath": "C:\\Users\\Hanazono Archive\\Desktop\\Yogurting Game\\server_modern\\src\\Yogurting.Core\\Yogurting.Core.csproj",
+        "packagesPath": "C:\\Users\\Hanazono Archive\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Hanazono Archive\\Desktop\\Yogurting Game\\server_modern\\src\\Yogurting.Core\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\Hanazono Archive\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0": {
+            "targetAlias": "net8.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        }
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "dependencies": {
+            "System.IO.Pipelines": {
+              "target": "Package",
+              "version": "[10.0.11, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.301/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\Hanazono Archive\\Desktop\\Yogurting Game\\server_modern\\src\\Yogurting.Data\\Yogurting.Data.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\Hanazono Archive\\Desktop\\Yogurting Game\\server_modern\\src\\Yogurting.Data\\Yogurting.Data.csproj",
+        "projectName": "Yogurting.Data",
+        "projectPath": "C:\\Users\\Hanazono Archive\\Desktop\\Yogurting Game\\server_modern\\src\\Yogurting.Data\\Yogurting.Data.csproj",
+        "packagesPath": "C:\\Users\\Hanazono Archive\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Hanazono Archive\\Desktop\\Yogurting Game\\server_modern\\src\\Yogurting.Data\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\Hanazono Archive\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0": {
+            "targetAlias": "net8.0",
+            "projectReferences": {
+              "C:\\Users\\Hanazono Archive\\Desktop\\Yogurting Game\\server_modern\\src\\Yogurting.Core\\Yogurting.Core.csproj": {
+                "projectPath": "C:\\Users\\Hanazono Archive\\Desktop\\Yogurting Game\\server_modern\\src\\Yogurting.Core\\Yogurting.Core.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        }
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.301/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}
