@@ -17,6 +17,9 @@ namespace Yogurting.Core.Models
         public int PendingWarpFieldId { get; set; }
         public Position PendingWarpPosition { get; set; }
         public DateTime LastWarpAt { get; set; } = DateTime.MinValue;
+        public int ActiveNpcId { get; set; }
+        public int ActiveDialogId { get; set; }
+        public string CurrentNpcDialogNode { get; set; } = string.Empty;
 
         public PlayerSessionState(ClientSession session, Player player, int entityId)
         {

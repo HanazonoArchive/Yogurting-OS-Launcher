@@ -220,14 +220,15 @@ namespace Yogurting.Server.Handlers.Field
                     await _broadcastDelegate(state, atkAns);
 
                     // Charge gauge accumulation (matching Delphi TChara.AttackTo _Unit49.pas:22236-22248)
-                    if (player.ChargePoint < 3)
+                    if (player.ChargePoint < 4)
                     {
-                        int gaugeGain = 6000 + (player.ComboCount * 150);
+                        int hits = Math.Max(1, targetEntries.Count);
+                        int gaugeGain = (15000 + (player.ComboCount * 500)) * hits;
                         player.GaugeCurrent += gaugeGain;
-                        if (player.GaugeCurrent >= player.GaugeMax)
+                        while (player.GaugeCurrent >= player.GaugeMax && player.ChargePoint < 4)
                         {
-                            player.ChargePoint = (byte)Math.Min((byte)3, (byte)(player.ChargePoint + 1));
-                            player.GaugeCurrent = (player.ChargePoint >= 3) ? 0 : (player.GaugeCurrent - player.GaugeMax);
+                            player.ChargePoint = (byte)(player.ChargePoint + 1);
+                            player.GaugeCurrent = (player.ChargePoint >= 4) ? 0 : (player.GaugeCurrent - player.GaugeMax);
                         }
                     }
                     await state.Session.SendAsync(YogurtingPackets.MakeGameChargePointUpdateNtf(player.ChargePoint, player.GaugeMax, player.GaugeCurrent));

@@ -468,54 +468,5 @@ namespace Yogurting.Server.Handlers.Field
             }
         }
 
-        /// <summary>
-        /// 0x526D (21101): MsgGameHairShopEnterNtf / Hair Shop Request
-        /// </summary>
-        [PacketHandler(PacketOpcode.MsgGameEnterHairShopNtf)]
-        public async Task HandleEnterHairShopAsync(PlayerSessionState state, byte[] packetData)
-        {
-            try
-            {
-                var player = state.Player;
-                if (player == null) return;
-
-                var catalog = new List<(int hairId, long price)>
-                {
-                    (101, 500), (102, 500), (103, 500), (104, 750), (105, 1000), (106, 1200)
-                };
-
-                Logger.Info($"[HairSalon] '{player.CharacterName}' entered Hair Salon.");
-                await state.Session.SendAsync(YogurtingPackets.MakeGameHairShopEnterNtf(catalog));
-            }
-            catch (Exception ex)
-            {
-                Logger.Error($"[HairSalon] HandleEnterHairShop error: {ex.Message}");
-            }
-        }
-
-        /// <summary>
-        /// 0x522C (21036): MsgGameExNpcDialogSelectNtf - NPC Dialogue Option Selected
-        /// </summary>
-        [PacketHandler(PacketOpcode.MsgGameExNpcDialogSelectNtf)]
-        public async Task HandleNpcDialogSelectAsync(PlayerSessionState state, byte[] packetData)
-        {
-            try
-            {
-                var player = state.Player;
-                if (player == null) return;
-
-                int dialogId = packetData.Length >= 10 ? BitConverter.ToInt32(packetData, 6) : 0;
-                uint choiceRaw = packetData.Length >= 14 ? BitConverter.ToUInt32(packetData, 10) : 0;
-                int questId = packetData.Length >= 18 ? BitConverter.ToInt32(packetData, 14) : 0;
-                int choiceIndex = (int)(choiceRaw & 0x7FFFFFFF);
-
-                Logger.Info($"[NPC] '{player.CharacterName}' selected Dialog #{dialogId} Choice #{choiceIndex} QuestId={questId}.");
-                await Task.CompletedTask;
-            }
-            catch (Exception ex)
-            {
-                Logger.Error($"[NPC] HandleNpcDialogSelect error: {ex.Message}");
-            }
-        }
     }
 }

@@ -2702,5 +2702,183 @@ namespace Yogurting.Core.Network
             writer.WriteInt32(bootyBoxId); // 0 = Box 0 (First Cardboard Box HUD), 1 = Box 1
             return writer.Build();
         }
+
+        /// <summary>
+        /// 0x520E (21006): MsgGameGeneralPotionNtf - Potion Gradual HP Regeneration
+        /// Exact Delphi layout from TMsgGameGeneralPotionNtf.Create (_Unit47.pas:005A9341):
+        ///   WriteID(0x520E)
+        ///   WriteUInt16(PotionRegain) // Total HP to regain
+        ///   FillBuffer(2, 0xCC)      // 2 bytes padding
+        ///   WriteSingle(Speed)       // Regain rate per second (PotionRegain / 5.0f)
+        /// </summary>
+        public static byte[] MakeGameGeneralPotionNtf(ushort potionRegain, float speed = 0f)
+        {
+            if (speed <= 0f) speed = potionRegain / 5.0f;
+            using var writer = PacketWriter.Create(PacketOpcode.MsgGameGeneralPotionNtf);
+            writer.WriteUInt16(potionRegain);
+            writer.WriteByte(0xCC);
+            writer.WriteByte(0xCC);
+            writer.WriteSingle(speed);
+            return writer.Build();
+        }
+
+        /// <summary>
+        /// 0x5229 (21033): MsgGameExNpcDialogNtf - Interactive NPC Dialogue Window & Options
+        /// Exact Delphi layout from TMsgGameExNpcDialogNtf.Create (_Unit47.pas:005A97CF):
+        ///   WriteID(0x5229)
+        ///   WriteInt32(NpcID)
+        ///   WriteInt32(DialogID)
+        ///   WriteInt32(CutInType)
+        ///   WriteWord(TextByteLen)
+        ///   WriteWStr(Text)
+        ///   WriteWord(SelectionCount)
+        ///   Loop: WriteWord(ChoiceByteLen), WriteWStr(ChoiceText)
+        /// </summary>
+        public static byte[] MakeGameExNpcDialogNtf(int npcId, int dialogId, int cutInType, string dialogText, System.Collections.Generic.IList<string>? selections = null)
+        {
+            using var writer = PacketWriter.Create(PacketOpcode.MsgGameExNpcDialogNtf);
+            writer.WriteInt32(npcId);
+            writer.WriteInt32(dialogId);
+            writer.WriteInt32(cutInType);
+
+            byte[] textBytes = Encoding.Unicode.GetBytes((dialogText ?? string.Empty) + "\0");
+            writer.WriteUInt16((ushort)textBytes.Length);
+            writer.WriteBytes(textBytes);
+
+            ushort selCount = (ushort)(selections?.Count ?? 0);
+            writer.WriteUInt16(selCount);
+            if (selections != null)
+            {
+                foreach (var sel in selections)
+                {
+                    byte[] selBytes = Encoding.Unicode.GetBytes((sel ?? string.Empty) + "\0");
+                    writer.WriteUInt16((ushort)selBytes.Length);
+                    writer.WriteBytes(selBytes);
+                }
+            }
+
+            // Exact Delphi dialog UI control parameters (_Unit47.pas:005A98D6 - 005A9905)
+            writer.WriteInt32(0); // TimeOut (0 = No timer / cast progress bar)
+            writer.WriteInt32(0); // ChoiceOnTimeOut
+            writer.WriteInt32(1); // ShowCloseButton (1 = Enable [X] Close Button)
+            writer.WriteInt32(1); // EnableBgFrameClick (1 = Enable ESC & background click)
+
+            return writer.Build();
+        }
+
+        /// <summary>
+        /// 0x522C (21036): MsgGameExNpcDialogSelectNtf - NPC Dialogue Single Response Notice
+        /// Exact Delphi layout from TMsgGameExNpcDialogSelectNtf.Create (_Unit47.pas:005A9965):
+        ///   WriteID(0x522C)
+        ///   WriteInt32(NpcID)
+        ///   WriteInt32(DialogID)
+        ///   WriteInt32(CutInType)
+        ///   WriteWord(TextByteLen)
+        ///   WriteWStr(Text)
+        /// </summary>
+        public static byte[] MakeGameExNpcDialogSelectNtf(int npcId, int dialogId, int cutInType, string responseText)
+        {
+            using var writer = PacketWriter.Create(PacketOpcode.MsgGameExNpcDialogSelectNtf);
+            writer.WriteInt32(npcId);
+            writer.WriteInt32(dialogId);
+            writer.WriteInt32(cutInType);
+
+            byte[] textBytes = Encoding.Unicode.GetBytes((responseText ?? string.Empty) + "\0");
+            writer.WriteUInt16((ushort)textBytes.Length);
+            writer.WriteBytes(textBytes);
+
+            return writer.Build();
+        }
+
+        /// <summary>
+        /// 0x526D (21101): MsgGameHairShopEnterNtf - Hair Salon Catalog & Menu
+        /// Exact Delphi layout from TMsgGameHairShopEnterNtf.Create (_Unit47.pas:005AA376):
+        ///   WriteID(0x526D)
+        ///   WriteWord(CatalogCount) // 51
+        ///   Loop: WriteInt32(HairId), WriteInt32(Price = 100), WriteInt32(0)
+        /// </summary>
+        public static byte[] MakeGameHairShopEnterNtf(System.Collections.Generic.IList<(int HairId, int Price)>? hairCatalog = null)
+        {
+            using var writer = PacketWriter.Create(PacketOpcode.MsgGameHairShopEnterNtf);
+            if (hairCatalog == null || hairCatalog.Count == 0)
+            {
+                // Default 51 hairstyles from Delphi catalog
+                writer.WriteUInt16(51);
+                for (int i = 1; i <= 51; i++)
+                {
+                    writer.WriteInt32(i);
+                    writer.WriteInt32(100);
+                    writer.WriteInt32(0);
+                }
+            }
+            else
+            {
+                writer.WriteUInt16((ushort)hairCatalog.Count);
+                foreach (var h in hairCatalog)
+                {
+                    writer.WriteInt32(h.HairId);
+                    writer.WriteInt32(h.Price);
+                    writer.WriteInt32(0);
+                }
+            }
+            return writer.Build();
+        }
+
+        /// <summary>
+        /// 0x526E (21102): MsgGameHairShopChangeAns - Hair Salon Style Change Answer
+        /// Exact Delphi layout from TMsgGameHairShopChangeAns.Create (_Unit47.pas:005AA444):
+        ///   WriteID(0x526E)
+        ///   WriteInt32(Result) // 1 = Success
+        ///   WriteInt32(HairID)
+        ///   WriteInt32(SkinColor)
+        /// </summary>
+        public static byte[] MakeGameHairShopChangeAns(int result, int hairId, int skinTone)
+        {
+            using var writer = PacketWriter.Create(PacketOpcode.MsgGameHairShopChangeAns);
+            writer.WriteInt32(result);
+            writer.WriteInt32(hairId);
+            writer.WriteInt32(skinTone);
+            return writer.Build();
+        }
+
+        /// <summary>
+        /// 0x794D (31053): MsgGameVMachineUseDanceItemNtf - Dance / Fireworks / Event Consumables
+        /// Exact Delphi layout from TMsgVMachineUseDanceItemNtf.Create (_Unit47.pas:005A6CBC):
+        ///   WriteID(0x794D)
+        ///   WriteInt32(CharaID)
+        ///   WriteInt32(ItemType)
+        /// </summary>
+        public static byte[] MakeGameVMachineUseDanceItemNtf(int charaId, int itemType)
+        {
+            using var writer = PacketWriter.Create(PacketOpcode.MsgGameVMachineUseDanceItemNtf);
+            writer.WriteInt32(charaId);
+            writer.WriteInt32(itemType);
+            return writer.Build();
+        }
+
+        /// <summary>
+        /// 0x793E (31038): MsgGameNpcDialogEventNtf - Notifies client NPC dialog event completion
+        /// Exact Delphi layout from TMsgGameNpcDialogEventNtf.Create (_Unit47.pas:005AC6C4):
+        ///   WriteID(0x793E)
+        ///   WriteInt32(NpcId)
+        ///   WriteInt32(EventId)
+        /// </summary>
+        public static byte[] MakeGameNpcDialogEventNtf(int npcId, int eventId = 1)
+        {
+            using var writer = PacketWriter.Create(PacketOpcode.MsgGameNpcDialogEventNtf);
+            writer.WriteInt32(npcId);
+            writer.WriteInt32(eventId);
+            return writer.Build();
+        }
+
+        /// <summary>
+        /// 0x7940 (31040): MsgGameNpcDialogEndNtf - Closes NPC Dialogue window and unlocks player movement
+        /// Exact Delphi layout (_Unit47.pas:005AC80E): WriteID(0x7940)
+        /// </summary>
+        public static byte[] MakeGameNpcDialogEndNtf()
+        {
+            using var writer = PacketWriter.Create(PacketOpcode.MsgGameNpcDialogEndNtf);
+            return writer.Build();
+        }
     }
 }

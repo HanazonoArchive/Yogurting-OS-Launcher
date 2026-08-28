@@ -17,6 +17,8 @@ namespace Yogurting.Data.Loaders
         public ConcurrentDictionary<int, GameSkillDef> Skills { get; } = new();
         public ConcurrentDictionary<int, string> Titles { get; } = new();
         public ConcurrentDictionary<int, string> Npcs { get; } = new();
+        public ConcurrentDictionary<int, int> NpcCutIns { get; } = new();
+        public ConcurrentDictionary<int, NpcScriptDef> NpcScripts { get; } = new();
         public ConcurrentDictionary<int, ReinforceStoneDef> ReinforceStones { get; } = new();
         public ConcurrentDictionary<int, GameFieldDef> Fields { get; } = new();
         public ConcurrentDictionary<int, HuntMonsterDef> HuntMonsters { get; } = new();
@@ -361,7 +363,11 @@ namespace Yogurting.Data.Loaders
                 if (parts.Length < 2) parts = line.Split(',');
                 if (parts.Length >= 2 && int.TryParse(parts[0], out int id))
                 {
-                    Npcs[id] = parts[1];
+                    Npcs[id] = parts[1].Trim();
+                    if (parts.Length >= 3 && int.TryParse(parts[2], out int cutIn))
+                    {
+                        NpcCutIns[id] = cutIn;
+                    }
                 }
             }
         }
@@ -756,6 +762,8 @@ namespace Yogurting.Data.Loaders
                                 totalNpcs++;
                             }
                         }
+                        // Parse NPC Dialogues from XML
+                        ParseNpcDialogsFromXml(text);
                     }
                 }
                 catch (Exception ex)
@@ -764,7 +772,69 @@ namespace Yogurting.Data.Loaders
                 }
             }
 
-            Console.WriteLine($"[GameDatabase] Loaded {totalNpcs} Field NPCs, {totalGates} WarpGates, {totalTerminals} Terminal Objects, {totalMonsters} Field Monsters across {Fields.Count} maps.");
+            Console.WriteLine($"[GameDatabase] Loaded {totalNpcs} Field NPCs, {NpcScripts.Count} NPC Dialog Trees, {totalGates} WarpGates, {totalTerminals} Terminal Objects, {totalMonsters} Field Monsters across {Fields.Count} maps.");
+        }
+
+        private void ParseNpcDialogsFromXml(string xmlContent)
+        {
+            try
+            {
+                var npcMatches = System.Text.RegularExpressions.Regex.Matches(xmlContent, @"<npc\s+([^>]+)>(.*?)</npc>", System.Text.RegularExpressions.RegexOptions.Singleline | System.Text.RegularExpressions.RegexOptions.IgnoreCase);
+                foreach (System.Text.RegularExpressions.Match nm in npcMatches)
+                {
+                    string attr = nm.Groups[1].Value;
+                    string body = nm.Groups[2].Value;
+                    int id = GetIntAttr(attr, "id");
+                    if (id <= 0) continue;
+
+                    var script = NpcScripts.GetOrAdd(id, _ => new NpcScriptDef { NpcId = id });
+
+                    var dlgMatches = System.Text.RegularExpressions.Regex.Matches(body, @"<dialog\s+([^>]+)>(.*?)</dialog>", System.Text.RegularExpressions.RegexOptions.Singleline | System.Text.RegularExpressions.RegexOptions.IgnoreCase);
+                    foreach (System.Text.RegularExpressions.Match dm in dlgMatches)
+                    {
+                        string dlgAttr = dm.Groups[1].Value;
+                        string dlgBody = dm.Groups[2].Value;
+                        string dlgName = GetStringAttr(dlgAttr, "name");
+                        int cutin = GetIntAttr(dlgAttr, "cutin");
+
+                        if (string.IsNullOrEmpty(script.InitialDialogName))
+                        {
+                            script.InitialDialogName = dlgName;
+                        }
+
+                        // Clean text: strip newlines/tabs and replace <br> with space (prevents packet string corruption)
+                        var textMatch = System.Text.RegularExpressions.Regex.Match(dlgBody, @"<text>(?:<!\[CDATA\[)?(.*?)(?:\]\]>)?</text>", System.Text.RegularExpressions.RegexOptions.Singleline | System.Text.RegularExpressions.RegexOptions.IgnoreCase);
+                        string rawText = textMatch.Success ? textMatch.Groups[1].Value : string.Empty;
+                        rawText = System.Text.RegularExpressions.Regex.Replace(rawText, @"[\r\n\t]+", " ");
+                        rawText = System.Text.RegularExpressions.Regex.Replace(rawText, @"<br\s*/?>", " ", System.Text.RegularExpressions.RegexOptions.IgnoreCase);
+                        rawText = System.Text.RegularExpressions.Regex.Replace(rawText, @"\s+", " ").Trim();
+
+                        var dlgDef = new NpcDialogDef
+                        {
+                            Name = dlgName,
+                            Text = rawText,
+                            CutIn = cutin
+                        };
+
+                        // Extract selections
+                        var selMatches = System.Text.RegularExpressions.Regex.Matches(dlgBody, @"<selection\s+([^>]+)/>", System.Text.RegularExpressions.RegexOptions.IgnoreCase);
+                        foreach (System.Text.RegularExpressions.Match sm in selMatches)
+                        {
+                            string selAttr = sm.Groups[1].Value;
+                            string selText = GetStringAttr(selAttr, "text");
+                            string selNext = GetStringAttr(selAttr, "next");
+                            dlgDef.Selections.Add(new NpcDialogSelectionDef
+                            {
+                                Text = selText,
+                                Next = selNext
+                            });
+                        }
+
+                        script.Dialogs[dlgName] = dlgDef;
+                    }
+                }
+            }
+            catch { }
         }
 
         private static int GetIntAttr(string attr, string name)
@@ -784,6 +854,27 @@ namespace Yogurting.Data.Loaders
             var m = System.Text.RegularExpressions.Regex.Match(attr, name + @"=""([^""]*)""", System.Text.RegularExpressions.RegexOptions.IgnoreCase);
             return m.Success ? m.Groups[1].Value : string.Empty;
         }
+    }
+
+    public sealed class NpcDialogSelectionDef
+    {
+        public string Text { get; set; } = string.Empty;
+        public string Next { get; set; } = string.Empty;
+    }
+
+    public sealed class NpcDialogDef
+    {
+        public string Name { get; set; } = string.Empty;
+        public string Text { get; set; } = string.Empty;
+        public int CutIn { get; set; } = 0;
+        public System.Collections.Generic.List<NpcDialogSelectionDef> Selections { get; set; } = new();
+    }
+
+    public sealed class NpcScriptDef
+    {
+        public int NpcId { get; set; }
+        public string InitialDialogName { get; set; } = string.Empty;
+        public System.Collections.Generic.Dictionary<string, NpcDialogDef> Dialogs { get; set; } = new(StringComparer.OrdinalIgnoreCase);
     }
 
     /// <summary>

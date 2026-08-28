@@ -7,7 +7,7 @@
   "HasCharacter": true,
   "CharaId": 256,
   "CharacterId": 256,
-  "SessionKey": 713849,
+  "SessionKey": 508140,
   "School": 1,
   "Gender": 2,
   "FaceId": 42,
@@ -17,40 +17,41 @@
   "BirthDay": 29,
   "BloodType": 3,
   "NametagColor": 0,
-  "Level": 9,
+  "Level": 10,
   "Grade": 1,
-  "Pow": 38,
-  "Speed": 28,
-  "Skill": 28,
-  "Luck": 19,
+  "Pow": 42,
+  "Speed": 31,
+  "Skill": 31,
+  "Luck": 21,
   "DexLevel": 1,
   "DexExp": 4,
   "DexLevels": [
     0,
-    5,
+    6,
     1,
     1,
     5
   ],
   "DexExps": [
     0,
-    68,
+    48,
     0,
     0,
-    38
+    44
   ],
   "ComboCount": 5,
-  "LastAttackTime": 94135484,
-  "ChargePoint": 2,
+  "LastAttackTime": 103012015,
+  "ChargePoint": 3,
   "GaugeMax": 70000,
-  "GaugeCurrent": 21100,
+  "GaugeCurrent": 40500,
+  "SkillPoint": 1,
   "Defense": 10,
-  "CurrentExp": 0,
-  "Exp": 0,
-  "MaxExp": 65,
-  "CurrentHp": 266,
-  "Hp": 266,
-  "MaxHp": 266,
+  "CurrentExp": 4,
+  "Exp": 4,
+  "MaxExp": 78,
+  "CurrentHp": 294,
+  "Hp": 294,
+  "MaxHp": 294,
   "CurrentMp": 370,
   "Sp": 370,
   "MaxMp": 370,
@@ -259,7 +260,7 @@
       "SlotIndex": 8,
       "SlotType": 0,
       "SerialId": 0,
-      "Quantity": 24,
+      "Quantity": 30,
       "EnchantLevel": 0,
       "IsEquipped": false,
       "SocketSlots": [
@@ -278,7 +279,7 @@
       "SlotIndex": 9,
       "SlotType": 0,
       "SerialId": 0,
-      "Quantity": 26,
+      "Quantity": 36,
       "EnchantLevel": 0,
       "IsEquipped": false,
       "SocketSlots": [
@@ -297,7 +298,7 @@
       "SlotIndex": 10,
       "SlotType": 0,
       "SerialId": 0,
-      "Quantity": 22,
+      "Quantity": 23,
       "EnchantLevel": 0,
       "IsEquipped": false,
       "SocketSlots": [
@@ -693,19 +694,19 @@
       "EffectType": 7300,
       "DurationSeconds": 2592000,
       "ActivatedAt": "2026-08-26T23:43:06.1444261Z",
-      "RemainingSeconds": 2466665
+      "RemainingSeconds": 2457789
     },
     {
       "EffectType": 7400,
       "DurationSeconds": 2592000,
       "ActivatedAt": "2026-08-26T23:43:12.4274453Z",
-      "RemainingSeconds": 2466671
+      "RemainingSeconds": 2457795
     },
     {
       "EffectType": 7000,
       "DurationSeconds": 2592000,
       "ActivatedAt": "2026-08-26T23:43:14.5546298Z",
-      "RemainingSeconds": 2466673
+      "RemainingSeconds": 2457797
     }
   ]
 }

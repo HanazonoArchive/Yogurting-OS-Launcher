@@ -38,7 +38,7 @@ namespace Yogurting.Server.Handlers
             // Register modular domain handlers
             var equipHandlers = new EquipmentHandlers(BroadcastToFieldAsync, _repository, _gameDb);
             var movementHandlers = new MovementAndFieldHandlers(BroadcastToFieldAsync, SpawnCampusEntitiesAsync, _gameDb, _worldManager, _repository);
-            var npcHandlers = new NpcAndShopHandlers(_gameDb);
+            var npcHandlers = new NpcAndDialogueHandlers(_gameDb, _repository, BroadcastToFieldAsync);
             var shopHandlers = new ShopHandlers(BroadcastToFieldAsync, _repository, _gameDb);
             var combatHandlers = new CombatHandlers(BroadcastToFieldAsync, _repository, _gameDb);
 

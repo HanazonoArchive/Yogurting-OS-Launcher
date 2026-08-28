@@ -108,10 +108,17 @@ namespace Yogurting.Core.Network
         MsgGameSkillPrepNtf         = 0x7925, // 31013: Skill Cast Preparation Notice
         MsgGameSkillEndNtf          = 0x7926, // 31014: Skill Cast End / Cancel Notice
         MsgGameSkillHotkeyNtf       = 0x79FC, // 31228: Skill Hotkey Shortcut Sync
+        MsgGameExNpcDialogReq       = 0x793B, // 31035: Interactive NPC Dialog Request
+        MsgGameExNpcDialogSelectReq = 0x793C, // 31036: Interactive NPC Dialog Select Request
         MsgGameExNpcDialogNtf       = 0x5229, // 21033: Extended NPC Dialog Notice
         MsgGameExNpcDialogSelectNtf = 0x522C, // 21036: Extended NPC Dialog Selection Notice
+        MsgGameNpcDialogEventNtf    = 0x793E, // 31038: NPC Dialog Event Notice (Delphi 0x005AC6C4)
+        MsgGameNpcDialogSaleListNtf = 0x793F, // 31039: NPC Shop Catalog Notice (Delphi 0x005AC718)
+        MsgGameNpcDialogEndNtf      = 0x7940, // 31040: NPC Action End / Dialog Close Notice
         MsgGameHairShopEnterNtf     = 0x526D, // 21101: Hair Salon Catalog Notice
+        MsgGameHairShopChangeAns    = 0x526E, // 21102: Hair Salon Style Change Answer
         MsgGameHairChangeAns        = 0x5271, // 21105: Hair Change Answer
+        MsgGameVMachineUseDanceItemNtf = 0x794D, // 31053: Dance / Event Consumables Broadcast
         MsgLockerEnterNtf           = 0xA029, // 41001: Locker Enter Notice
         MsgLockerOpenReq            = 0xA02B, // 41003: Locker Open Request
         MsgLockerOpenAns            = 0xA02C, // 41004: Locker Open Answer

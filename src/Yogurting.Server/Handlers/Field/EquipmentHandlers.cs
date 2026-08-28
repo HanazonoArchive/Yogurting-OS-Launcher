@@ -449,6 +449,7 @@ namespace Yogurting.Server.Handlers.Field
 
         /// <summary>
         /// 0x7928 (31016): MsgGameUseCoItemReq - Consumable Item Use Request (31016.dms: 消費アイテム使用要求)
+        /// Exact 1-to-1 match with Delphi TChara.UseCoItem (_Unit49.pas:0061019C)
         /// </summary>
         [PacketHandler(PacketOpcode.MsgGameUseCoItemReq)]
         public async Task HandleUseCoItemAsync(PlayerSessionState state, byte[] packetData)
@@ -477,25 +478,82 @@ namespace Yogurting.Server.Handlers.Field
                     }
                 }
 
-                // Apply Consumable Benefits (Heal HP / SP) - 100% DB-driven from ByulItemType.txt / CoItemType.txt
-                int healHp = 50;
-                if (_gameDb != null && _gameDb.Items.TryGetValue(coItemType, out var itemDef))
+                // 1. Determine Consumable Effect & Healing Amount from DB & Delphi table
+                int healHp = coItemType switch
                 {
-                    healHp = itemDef.RecoveryAmount > 0 
-                        ? itemDef.RecoveryAmount 
-                        : (itemDef.Price > 0 ? Math.Max(50, itemDef.Price / 5) : 70);
+                    10001 or 10005 => 150,  // 三角Milk / 新入生Milk
+                    10002 => 500,           // パックMilk
+                    10003 => 960,           // 瓶Milk
+                    10004 => 1440,          // 大瓶Milk
+                    10006 => 300,           // 高級三角Milk
+                    10007 => 730,           // 高級パックMilk
+                    10008 => 1200,          // 高級瓶Milk
+                    10009 => 1750,          // 高級大瓶Milk
+                    10010 => 2060,          // PETボトルMilk
+                    10011 => 2410,          // 高級PETボトルMilk
+                    20001 or 29016 => 110,  // ガンバミン 101 / 01
+                    20002 => 1440,          // ガンバミン 404
+                    20003 => 670,           // ガンバミン 202
+                    29001 => 60,            // ファンタミニオレンジ
+                    29002 or 29003 or 29014 => 120, // ファンタミニアイスベリー / BIGフラマンドル
+                    29010 or 29011 or 29015 => player.MaxHp, // Full Recovery (バレンタインチョコ / ガンバミンV)
+                    _ => (_gameDb != null && _gameDb.Items.TryGetValue(coItemType, out var d) && d.RecoveryAmount > 0) ? d.RecoveryAmount : 100
+                };
+
+                bool isInstant = coItemType >= 20000 && coItemType < 30000;
+                bool isBox = coItemType >= 40000 && coItemType < 50000;
+
+                // Handle Loot Boxes (UseType 2 & 4: バトルボックス / 源石ボックス)
+                if (isBox)
+                {
+                    int rewardItemId = coItemType switch
+                    {
+                        40001 => 101100, // 翡翠・刀源石 1-C
+                        40003 => 101101, // 翡翠・刀源石 1-B
+                        _ => 10001       // Default Milk
+                    };
+
+                    var existing = player.Inventory?.Find(i => i.TypeId == rewardItemId);
+                    if (existing != null)
+                    {
+                        existing.Quantity += 1;
+                    }
+                    else
+                    {
+                        player.Inventory?.Add(new Item
+                        {
+                            Id = ((player.Inventory?.Count > 0) ? player.Inventory.Max(i => i.Id) : 0) + 1,
+                            TypeId = rewardItemId,
+                            SlotIndex = player.Inventory?.Count ?? 0,
+                            SlotType = ItemSlotType.Inventory,
+                            Quantity = 1,
+                            Name = _gameDb != null && _gameDb.Items.TryGetValue(rewardItemId, out var rDef) ? rDef.Name : "Box Reward"
+                        });
+                    }
+                    Logger.Info($"[FieldServer] '{player.CharacterName}' unboxed #{coItemType} and obtained Item #{rewardItemId}!");
+                }
+                else if (isInstant)
+                {
+                    // Instant Heal (0x520D + 0x520F)
+                    player.CurrentHp = Math.Min(player.MaxHp, player.CurrentHp + healHp);
+                    await state.Session.SendAsync(YogurtingPackets.MakeGameSetStateNtf(player));
+                    await state.Session.SendAsync(YogurtingPackets.MakeGameSetHpNtf((ushort)player.CurrentHp));
+                }
+                else
+                {
+                    // Gradual Potion Regain over 5s (0x520E: MsgGameGeneralPotionNtf)
+                    player.CurrentHp = Math.Min(player.MaxHp, player.CurrentHp + healHp);
+                    await state.Session.SendAsync(YogurtingPackets.MakeGameGeneralPotionNtf((ushort)healHp, healHp / 5.0f));
+                    await state.Session.SendAsync(YogurtingPackets.MakeGameSetStateNtf(player));
+                    await state.Session.SendAsync(YogurtingPackets.MakeGameSetHpNtf((ushort)player.CurrentHp));
                 }
 
-                player.CurrentHp = Math.Min(player.MaxHp, player.CurrentHp + healHp);
+                // 2. Broadcast 0x7929 (31017: COITEM使用返答) to area for player consuming animation
+                byte[] ansPkt = YogurtingPackets.MakeGameUseCoItemAns(player.CharaId, 1, coItemType, remainingCount);
+                await state.Session.SendAsync(ansPkt);
+                await _broadcastDelegate(state, ansPkt);
 
-                // 1. Reply with 0x7929 (31017: COITEM使用返答) - Result 1 = Success
-                await state.Session.SendAsync(YogurtingPackets.MakeGameUseCoItemAns(player.CharaId, 1, coItemType, remainingCount));
-
-                // 2. Sync updated HP / SP state (0x520F + 0x520D)
-                await state.Session.SendAsync(YogurtingPackets.MakeGameSetStateNtf(player));
-                await state.Session.SendAsync(YogurtingPackets.MakeGameSetHpNtf((ushort)player.CurrentHp));
-
-                // 3. Persist character
+                // 3. Persist character progression
                 if (_repository != null)
                 {
                     await _repository.SaveAccountAsync(player);

@@ -101,19 +101,27 @@ namespace Yogurting.Server.World
         /// </summary>
         public async Task SpawnMonstersAsync(ClientSession session, Yogurting.Data.Loaders.GameDatabase? gameDb = null)
         {
-            if (gameDb == null || !gameDb.Fields.TryGetValue(FieldId, out var fieldDef))
+            if (gameDb == null || !gameDb.Fields.TryGetValue(FieldId, out var fieldDef) || fieldDef.Monsters.Count == 0)
             {
                 return;
             }
 
-            foreach (var mon in fieldDef.Monsters)
+            using var ms = new System.IO.MemoryStream();
+            lock (fieldDef.Monsters)
             {
-                if (!mon.IsDead)
+                foreach (var mon in fieldDef.Monsters)
                 {
-                    await session.SendAsync(YogurtingPackets.MakeGameMonInfoNtf(mon));
-                    await session.SendAsync(YogurtingPackets.MakeGameMonMoveNtf(
-                        mon.EntityId, (int)mon.X, (int)mon.Y, (int)mon.X, (int)mon.Y, 1, 80));
+                    if (!mon.IsDead)
+                    {
+                        byte[] monPkt = YogurtingPackets.MakeGameMonInfoNtf(mon);
+                        ms.Write(monPkt, 0, monPkt.Length);
+                    }
                 }
+            }
+
+            if (ms.Length > 0)
+            {
+                await session.SendAsync(ms.ToArray());
             }
         }
     }
