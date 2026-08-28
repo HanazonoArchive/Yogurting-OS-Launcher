@@ -540,6 +540,27 @@ namespace Yogurting.Server.Handlers.Field
                 // 9. State Synchronization
                 await state.Session.SendAsync(YogurtingPackets.MakeGameSetStateNtf(state.Player));
 
+                // 10. Mission Counter Begin (0x7990), Display Counter (0x7959), Cardboard Booty Box (0x79E3, 0x79B5, 0x7957)
+                if (isHunt)
+                {
+                    int monsterCount = _gameDb != null && _gameDb.Fields.TryGetValue(targetField, out var huntFieldDef) ? huntFieldDef.Monsters.Count : 90;
+                    // A. Episode & Hunt Stage Context (0x79B5) - Initializes Episode HUD and loads Booty Box subsystem
+                    await state.Session.SendAsync(YogurtingPackets.MakeGameEpisodeInfoNtf(targetField, 1, zoneName, state.Player.CharaId, state.Player.CharacterName, (byte)state.Player.Gender, (byte)state.Player.Grade));
+                    // B. Assign Cardboard Booty Box (0x79E3) to local player charaId (Box Index 0)
+                    await state.Session.SendAsync(YogurtingPackets.MakeGameBootyBoxAssignNtf(state.Player.CharaId, 0));
+                    // C. Episode Play Resume (0x7957) - Unpauses client and unlocks all player controls & combat
+                    await state.Session.SendAsync(YogurtingPackets.MakeGameEpisodePlayResumeNtf());
+                    // D. Initialize Objective / Mission Counter HUD (0x7990 & 0x7959)
+                    await state.Session.SendAsync(YogurtingPackets.MakeGameBeginCounterNtf(0, monsterCount, 0, 0, 1));
+                    await state.Session.SendAsync(YogurtingPackets.MakeGameDisplayCounterNtf(monsterCount, 1));
+                    Logger.Info($"[FieldServer] Episode Info (0x79B5), Booty Box (0x79E3), Play Resume (0x7957), and BeginCounter (0x7990) assigned for Field {targetField}.");
+                }
+                else
+                {
+                    // Non-hunt field / Campus: Clear Booty Box HUD (-1)
+                    await state.Session.SendAsync(YogurtingPackets.MakeGameBootyBoxAssignNtf(state.Player.CharaId, -1));
+                }
+
 
             }
             catch (Exception ex)

@@ -234,6 +234,17 @@ namespace Yogurting.Server.Handlers
 
             // 10. Set State (HP, SP, Stats - 0x520F)
             await session.SendAsync(YogurtingPackets.MakeGameSetStateNtf(player));
+
+            // 11. Initial Cardboard Box State (0x79E3): Show (0) if spawning into mob field, hide (-1) on campus
+            bool isHunt = _gameDb != null && _gameDb.Fields.TryGetValue(player.FieldId, out var curF) && curF.IsHuntField;
+            if (isHunt)
+            {
+                await session.SendAsync(YogurtingPackets.MakeGameBootyBoxAssignNtf(player.CharaId, 0));
+            }
+            else
+            {
+                await session.SendAsync(YogurtingPackets.MakeGameBootyBoxAssignNtf(player.CharaId, -1));
+            }
         }
 
         public async Task SpawnCampusEntitiesAsync(ClientSession session, int fieldId)

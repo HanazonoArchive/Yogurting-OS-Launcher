@@ -345,9 +345,21 @@ namespace Yogurting.Server.Handlers.Field
                         // 5. Broadcast Despawn Packet (0x7A00) to clear dead 3D model
                         byte[] despawnNtf = YogurtingPackets.MakeGameMonDeadNtf(targetMonster.EntityId);
                         await state.Session.SendAsync(despawnNtf);
-                        await _broadcastDelegate(state, despawnNtf);
-
-
+                        // 6. Update Top-Right Monster Counter Box (0x7959)
+                        if (_gameDb != null && _gameDb.Fields.TryGetValue(player.FieldId, out var currentFieldDef))
+                        {
+                            int aliveRemaining = 0;
+                            lock (currentFieldDef.Monsters)
+                            {
+                                foreach (var m in currentFieldDef.Monsters)
+                                {
+                                    if (!m.IsDead) aliveRemaining++;
+                                }
+                            }
+                            byte[] counterNtf = YogurtingPackets.MakeGameDisplayCounterNtf(aliveRemaining, 1);
+                            await state.Session.SendAsync(counterNtf);
+                            await _broadcastDelegate(state, counterNtf);
+                        }
 
                         // Authentic Level-Up Check using ExpTable.txt & StatusTable.txt
                         int reqExp = _gameDb != null ? _gameDb.GetMaxExpForLevel(player.Level) : (int)player.MaxExp;

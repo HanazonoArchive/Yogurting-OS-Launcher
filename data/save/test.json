@@ -7,7 +7,7 @@
   "HasCharacter": true,
   "CharaId": 256,
   "CharacterId": 256,
-  "SessionKey": 549772,
+  "SessionKey": 169417,
   "School": 1,
   "Gender": 2,
   "FaceId": 42,
@@ -52,10 +52,10 @@
   "Money": 10000,
   "StarPoints": 0,
   "TaffPoints": 0,
-  "FieldId": 91,
+  "FieldId": 399,
   "Position": {
-    "X": 220,
-    "Y": 100,
+    "X": 58,
+    "Y": 17,
     "Z": 0,
     "Heading": 0
   },
@@ -630,19 +630,19 @@
       "EffectType": 7300,
       "DurationSeconds": 2592000,
       "ActivatedAt": "2026-08-26T23:43:06.1444261Z",
-      "RemainingSeconds": 2494230
+      "RemainingSeconds": 2492131
     },
     {
       "EffectType": 7400,
       "DurationSeconds": 2592000,
       "ActivatedAt": "2026-08-26T23:43:12.4274453Z",
-      "RemainingSeconds": 2494237
+      "RemainingSeconds": 2492137
     },
     {
       "EffectType": 7000,
       "DurationSeconds": 2592000,
       "ActivatedAt": "2026-08-26T23:43:14.5546298Z",
-      "RemainingSeconds": 2494239
+      "RemainingSeconds": 2492140
     }
   ]
 }
