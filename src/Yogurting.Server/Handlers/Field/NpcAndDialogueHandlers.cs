@@ -63,15 +63,13 @@ namespace Yogurting.Server.Handlers.Field
                     // Evaluate authentic XML init script conditionals dynamically against live player stats & episode progress
                     string initialNode = script.EvaluateInit((int)player.School, player.Level, player.Grade, player.EpisodeYoi, player.EpisodeEs);
 
-                    if (!script.Dialogs.TryGetValue(initialNode, out var initialDlg))
-                    {
-                        initialDlg = script.Dialogs.Values.FirstOrDefault();
-                    }
-
-                    if (initialDlg != null)
+                    if (!string.IsNullOrEmpty(initialNode) && script.Dialogs.TryGetValue(initialNode, out var initialDlg))
                     {
                         state.CurrentNpcDialogNode = initialDlg.Name;
                         var choices = initialDlg.Selections.Select(s => s.Text).ToList();
+
+                        string tempEs = _gameDb?.GetEpisodeTitleForProgress(1, player.EpisodeEs) ?? "クリア";
+                        string tempYoi = _gameDb?.GetEpisodeTitleForProgress(2, player.EpisodeYoi) ?? "クリア";
 
                         string formattedText = initialDlg.Text
                             .Replace("${local.grade}", player.Grade.ToString())
@@ -79,11 +77,11 @@ namespace Yogurting.Server.Handlers.Field
                             .Replace("${local.name}", player.CharacterName)
                             .Replace("${peke.epi.es}", player.EpisodeEs.ToString())
                             .Replace("${peke.epi.yoi}", player.EpisodeYoi.ToString())
-                            .Replace("${peke.temp}", "0")
-                            .Replace("${peke.temp2}", "0");
+                            .Replace("${peke.temp}", tempEs)
+                            .Replace("${peke.temp2}", tempYoi);
 
                         int startingDialogId = initialDlg.Id > 0 ? initialDlg.Id : (int.TryParse(initialDlg.Name, out int parsedId) ? parsedId : 2);
-                        byte[] dialogNtf = YogurtingPackets.MakeGameExNpcDialogNtf(npcId, startingDialogId, initialDlg.CutIn, formattedText, choices);
+                        byte[] dialogNtf = YogurtingPackets.MakeGameExNpcDialogNtf(npcId, startingDialogId, initialDlg.CutIn, formattedText, choices, initialDlg.CloseButton);
                         await state.Session.SendAsync(dialogNtf);
                         Logger.Info($"[FieldServer] '{player.CharacterName}' opened dialogue with '{npcName}' (ID: {npcId}) Dialog #{startingDialogId} Node='{initialDlg.Name}' on Field {currentFieldId}");
                         return;
@@ -198,17 +196,20 @@ namespace Yogurting.Server.Handlers.Field
                                 state.CurrentNpcDialogNode = nextDlg.Name;
                                 var nextChoices = nextDlg.Selections.Select(s => s.Text).ToList();
 
+                                string tempEs = _gameDb?.GetEpisodeTitleForProgress(1, epiEs) ?? "クリア";
+                                string tempYoi = _gameDb?.GetEpisodeTitleForProgress(2, epiYoi) ?? "クリア";
+
                                 string formattedNextText = nextDlg.Text
                                     .Replace("${local.grade}", player.Grade.ToString())
                                     .Replace("${local.level}", player.Level.ToString())
                                     .Replace("${local.name}", player.CharacterName)
                                     .Replace("${peke.epi.es}", epiEs.ToString())
                                     .Replace("${peke.epi.yoi}", epiYoi.ToString())
-                                    .Replace("${peke.temp}", "0")
-                                    .Replace("${peke.temp2}", "0");
+                                    .Replace("${peke.temp}", tempEs)
+                                    .Replace("${peke.temp2}", tempYoi);
 
                                 int nextDialogId = nextDlg.Id > 0 ? nextDlg.Id : (int.TryParse(nextDlg.Name, out int parsedId) ? parsedId : 2);
-                                byte[] nextDialogNtf = YogurtingPackets.MakeGameExNpcDialogNtf(npcId, nextDialogId, nextDlg.CutIn, formattedNextText, nextChoices);
+                                byte[] nextDialogNtf = YogurtingPackets.MakeGameExNpcDialogNtf(npcId, nextDialogId, nextDlg.CutIn, formattedNextText, nextChoices, nextDlg.CloseButton);
                                 await state.Session.SendAsync(nextDialogNtf);
                                 return;
                             }

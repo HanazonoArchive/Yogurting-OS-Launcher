@@ -204,7 +204,7 @@ namespace Yogurting.Server.Handlers.Field
                 await state.Session.SendAsync(YogurtingPackets.MakeGameSetHpNtf((ushort)player.CurrentHp));
                 await state.Session.SendAsync(YogurtingPackets.MakeGameSetStateNtf(player));
                 await state.Session.SendAsync(YogurtingPackets.MakeGameChargePointUpdateNtf(player.ChargePoint, player.GaugeMax, player.GaugeCurrent));
-                await state.Session.SendAsync(YogurtingPackets.MakeGameAtkMovChangeNtf(player.CharaId, 1.0f, 1.0f));
+                await state.Session.SendAsync(YogurtingPackets.MakeGameAtkMovChangeNtf(player.CharaId, player.AtkSpeedF, player.MoveSpeedF));
 
                 if (ansOpcode == PacketOpcode.MsgGameEquipByulBeItemAns)
                 {
@@ -289,7 +289,7 @@ namespace Yogurting.Server.Handlers.Field
                 await state.Session.SendAsync(YogurtingPackets.MakeGameSetHpNtf((ushort)player.CurrentHp));
                 await state.Session.SendAsync(YogurtingPackets.MakeGameSetStateNtf(player));
                 await state.Session.SendAsync(YogurtingPackets.MakeGameChargePointUpdateNtf(player.ChargePoint, player.GaugeMax, player.GaugeCurrent));
-                await state.Session.SendAsync(YogurtingPackets.MakeGameAtkMovChangeNtf(player.CharaId, 1.0f, 1.0f));
+                await state.Session.SendAsync(YogurtingPackets.MakeGameAtkMovChangeNtf(player.CharaId, player.AtkSpeedF, player.MoveSpeedF));
 
                 // 2. Send unequip answer (Client 3D mesh update)
                 PacketOpcode ansOpcode = reqOpcode == (ushort)PacketOpcode.MsgGameStripByulBeItemReq 
@@ -421,7 +421,7 @@ namespace Yogurting.Server.Handlers.Field
                 await state.Session.SendAsync(YogurtingPackets.MakeGameSetHpNtf((ushort)player.CurrentHp));
                 await state.Session.SendAsync(YogurtingPackets.MakeGameSetStateNtf(player));
                 await state.Session.SendAsync(YogurtingPackets.MakeGameChargePointUpdateNtf(player.ChargePoint, player.GaugeMax, player.GaugeCurrent));
-                await state.Session.SendAsync(YogurtingPackets.MakeGameAtkMovChangeNtf(player.CharaId, 1.0f, 1.0f));
+                await state.Session.SendAsync(YogurtingPackets.MakeGameAtkMovChangeNtf(player.CharaId, player.AtkSpeedF, player.MoveSpeedF));
 
                 // 6. Duration active notice (0x5269)
                 if (isTimedBuff)
@@ -452,7 +452,7 @@ namespace Yogurting.Server.Handlers.Field
                 var player = state.Player;
                 if (player == null) return;
                 // Acknowledge action and maintain player combat state
-                await state.Session.SendAsync(YogurtingPackets.MakeGameAtkMovChangeNtf(player.CharaId, 1.0f, 1.0f));
+                await state.Session.SendAsync(YogurtingPackets.MakeGameAtkMovChangeNtf(player.CharaId, player.AtkSpeedF, player.MoveSpeedF));
             }
             catch (Exception ex)
             {
@@ -612,7 +612,7 @@ namespace Yogurting.Server.Handlers.Field
                 await state.Session.SendAsync(YogurtingPackets.MakeGameSetHpNtf((ushort)player.CurrentHp));
                 await state.Session.SendAsync(YogurtingPackets.MakeGameSetStateNtf(player));
                 await state.Session.SendAsync(YogurtingPackets.MakeGameChargePointUpdateNtf(player.ChargePoint, player.GaugeMax, player.GaugeCurrent));
-                await state.Session.SendAsync(YogurtingPackets.MakeGameAtkMovChangeNtf(player.CharaId, 1.0f, 1.0f));
+                await state.Session.SendAsync(YogurtingPackets.MakeGameAtkMovChangeNtf(player.CharaId, player.AtkSpeedF, player.MoveSpeedF));
             }
             catch (Exception ex)
             {

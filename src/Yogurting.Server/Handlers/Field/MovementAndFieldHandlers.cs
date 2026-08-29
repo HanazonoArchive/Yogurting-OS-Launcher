@@ -81,14 +81,9 @@ namespace Yogurting.Server.Handlers.Field
 
                     state.Player.Position = new Position(px, py, state.Player.Position.Z, state.Player.Position.Heading);
 
-                    // If dialogue is open while moving, cancel dialogue matching Delphi TChara.DoMove
-                    if (state.ActiveNpcId > 0)
-                    {
-                        int activeNpc = state.ActiveNpcId;
-                        state.ActiveNpcId = 0;
-                        state.CurrentNpcDialogNode = string.Empty;
-                        await state.Session.SendAsync(YogurtingPackets.MakeGameNpcDialogEventNtf(activeNpc, 1));
-                    }
+                    // If dialogue is open while moving, reset dialogue state
+                    state.ActiveNpcId = 0;
+                    state.CurrentNpcDialogNode = string.Empty;
 
                     await _broadcastDelegate(state, packetData);
                 }
@@ -136,14 +131,9 @@ namespace Yogurting.Server.Handlers.Field
                     ushort py = BitConverter.ToUInt16(packetData, 8);
                     state.Player.Position = new Position(px, py, state.Player.Position.Z, state.Player.Position.Heading);
 
-                    // If dialogue is open while jumping, cancel dialogue matching Delphi
-                    if (state.ActiveNpcId > 0)
-                    {
-                        int activeNpc = state.ActiveNpcId;
-                        state.ActiveNpcId = 0;
-                        state.CurrentNpcDialogNode = string.Empty;
-                        await state.Session.SendAsync(YogurtingPackets.MakeGameNpcDialogEventNtf(activeNpc, 1));
-                    }
+                    // If dialogue is open while jumping, reset dialogue state
+                    state.ActiveNpcId = 0;
+                    state.CurrentNpcDialogNode = string.Empty;
 
                     await _broadcastDelegate(state, packetData);
                 }
@@ -195,8 +185,14 @@ namespace Yogurting.Server.Handlers.Field
                 // 3. Reveal 3D Campus (0x7956)
                 await session.SendAsync(YogurtingPackets.MakeGameFieldInfoDoneNtf());
 
-                // 4. Activate LocalPlayer Live Inventory & Paperdoll Event Listener (0x520B / Float 2.2f matching Delphi)
-                await session.SendAsync(YogurtingPackets.MakeGameFieldEnterStatReadyNtf(2.2f));
+                // 4. Activate LocalPlayer Live Inventory & Paperdoll Event Listener (0x520B / TMsgGameStartRegainNtf: Speed / 10.0f)
+                int totalSpeed = player.Speed;
+                if (_gameDb != null && _gameDb.StatusTable.TryGetValue(player.Level, out var statDef))
+                {
+                    totalSpeed = statDef.Speed;
+                }
+                float regainRate = (totalSpeed > 0 ? totalSpeed : 34) / 10.0f;
+                await session.SendAsync(YogurtingPackets.MakeGameFieldEnterStatReadyNtf(regainRate));
 
                 // 5. Set 3D Field View Range (0x79D4 / 400)
                 await session.SendAsync(YogurtingPackets.MakeGameFieldViewRangeNtf(400));
@@ -204,6 +200,15 @@ namespace Yogurting.Server.Handlers.Field
                 // 6. Background Music (BGM - 0x795C / Action 0x27)
                 int bgmNo = _gameDb != null ? _gameDb.GetFieldBgm(player.FieldId) : 6;
                 await session.SendAsync(YogurtingPackets.MakeGameTriggerBgmNtf(bgmNo));
+
+                // 7. TMsgGameCharaNameInfoNtf (0x7963) - Field name and zone info (Delphi push 0xFA1 = 4001)
+                string fieldName = string.Empty;
+                if (_gameDb != null && _gameDb.Fields.TryGetValue(player.FieldId, out var curF))
+                {
+                    fieldName = curF.Name;
+                }
+                var zoneTitles = !string.IsNullOrEmpty(fieldName) ? new List<string> { fieldName } : null;
+                await session.SendAsync(YogurtingPackets.MakeGameCharaNameInfoNtf(-1, (int)player.School, 0, string.Empty, 4001, zoneTitles, string.Empty));
 
                 Logger.Info($"[FieldServer] '{player.CharacterName}' completed 3D field loading for Field {player.FieldId}! BGM #{bgmNo} triggered.");
             }
@@ -535,8 +540,14 @@ namespace Yogurting.Server.Handlers.Field
                 // 2. Field Info Done (0x7956) - signals client that map geometry and gates are ready
                 await state.Session.SendAsync(YogurtingPackets.MakeGameFieldInfoDoneNtf());
 
-                // 3. Enter Stat Ready (0x520B)
-                await state.Session.SendAsync(YogurtingPackets.MakeGameFieldEnterStatReadyNtf(isHunt ? 0.3f : 2.2f));
+                // 3. Enter Stat Ready (0x520B / TMsgGameStartRegainNtf: Speed / 10.0f)
+                int totalSpeed = state.Player.Speed;
+                if (_gameDb != null && _gameDb.StatusTable.TryGetValue(state.Player.Level, out var statDef))
+                {
+                    totalSpeed = statDef.Speed;
+                }
+                float regainRate = (totalSpeed > 0 ? totalSpeed : 34) / 10.0f;
+                await state.Session.SendAsync(YogurtingPackets.MakeGameFieldEnterStatReadyNtf(regainRate));
 
                 // 4. Field Monsters (0x796E MonInfo + 0x7969 MonMove) for Hunt Maps
                 if (isHunt && _worldManager != null)
@@ -555,8 +566,14 @@ namespace Yogurting.Server.Handlers.Field
                 // 7. Warp Result (0x7968) - Signals client to fade in and render character at new location
                 await state.Session.SendAsync(YogurtingPackets.MakeGameWarpResultNtf(targetField, targetPos.X, targetPos.Y));
 
-                // 8. TMsgGameCharaNameInfoNtf (0x7963) - Exact 56B match with Delphi Quartet
-                await state.Session.SendAsync(YogurtingPackets.MakeGameCharaNameInfoNtf(-1, (int)state.Player.School, 0, string.Empty, 0, null, string.Empty));
+                // 8. TMsgGameCharaNameInfoNtf (0x7963) - Field name and zone info
+                string targetFieldName = string.Empty;
+                if (_gameDb != null && _gameDb.Fields.TryGetValue(targetField, out var tfDef))
+                {
+                    targetFieldName = tfDef.Name;
+                }
+                var targetZoneTitles = !string.IsNullOrEmpty(targetFieldName) ? new List<string> { targetFieldName } : null;
+                await state.Session.SendAsync(YogurtingPackets.MakeGameCharaNameInfoNtf(-1, (int)state.Player.School, 0, string.Empty, 4001, targetZoneTitles, string.Empty));
             }
             catch (Exception ex)
             {

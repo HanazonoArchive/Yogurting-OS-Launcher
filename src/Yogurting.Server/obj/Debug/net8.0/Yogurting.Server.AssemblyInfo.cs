@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Yogurting.Server")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+1c1781abdd74078ca8a8369e42d37266691a5b77")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+f2471c56b3c9aff61b46fce6b086e4dff4e5699b")]
 [assembly: System.Reflection.AssemblyProductAttribute("Yogurting.Server")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Yogurting.Server")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

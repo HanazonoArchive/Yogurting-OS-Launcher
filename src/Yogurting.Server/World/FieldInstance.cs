@@ -71,14 +71,17 @@ namespace Yogurting.Server.World
                 return;
             }
 
-            // 1. Episode Kiosks and Terminal Objects (0x521B + 0x5227)
-            foreach (var obj in fieldDef.TerminalObjects)
+            // 1. Episode Kiosks and Terminal Objects (0x521B + 0x5227) - only for episode / hunt fields
+            if (fieldDef.IsEpisode || fieldDef.IsHuntField)
             {
-                float worldX = obj.X * 4.0f;
-                float worldY = obj.Y * 4.0f;
-                await session.SendAsync(YogurtingPackets.MakeObjectCreateNtf(
-                    obj.ObjectId, obj.ObjectType, obj.SubId, obj.CliId, obj.ShellId, worldX, worldY, (byte)obj.Dir, 1, 1));
-                await session.SendAsync(YogurtingPackets.MakeGameObjectStateNtf(obj.ObjectId, 1));
+                foreach (var obj in fieldDef.TerminalObjects)
+                {
+                    float worldX = obj.X * 4.0f;
+                    float worldY = obj.Y * 4.0f;
+                    await session.SendAsync(YogurtingPackets.MakeObjectCreateNtf(
+                        obj.ObjectId, obj.ObjectType, obj.SubId, obj.CliId, obj.ShellId, worldX, worldY, (byte)obj.Dir, 1, 1));
+                    await session.SendAsync(YogurtingPackets.MakeGameObjectStateNtf(obj.ObjectId, 1));
+                }
             }
 
             // 2. Visual and Campus NPCs (0x7942)
@@ -115,6 +118,17 @@ namespace Yogurting.Server.World
                     {
                         byte[] monPkt = YogurtingPackets.MakeGameMonInfoNtf(mon);
                         ms.Write(monPkt, 0, monPkt.Length);
+
+                        // If monster is currently moving, immediately send 0x7968 (MonMove) matching Delphi _Unit49.pas:14081-14093
+                        if (mon.State == MonsterState.Walk || mon.State == MonsterState.Chase || (mon.StartX != mon.DestX || mon.StartY != mon.DestY))
+                        {
+                            int curX = (int)mon.X;
+                            int curY = (int)mon.Y;
+                            int destX = (int)mon.DestX;
+                            int destY = (int)mon.DestY;
+                            byte[] movePkt = YogurtingPackets.MakeGameMonMoveNtf(mon.EntityId, curX, curY, destX, destY, mon.MoveMotion, mon.MoveSpeedRate);
+                            ms.Write(movePkt, 0, movePkt.Length);
+                        }
                     }
                 }
             }

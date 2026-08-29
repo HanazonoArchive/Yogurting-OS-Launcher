@@ -21,6 +21,10 @@ namespace Yogurting.Data.Loaders
         public ConcurrentDictionary<int, NpcScriptDef> NpcScripts { get; } = new();
         public ConcurrentDictionary<int, ReinforceStoneDef> ReinforceStones { get; } = new();
         public ConcurrentDictionary<int, GameFieldDef> Fields { get; } = new();
+        public ConcurrentDictionary<int, AtkWeaponDef> AtkWeapons { get; } = new();
+        public ConcurrentDictionary<int, SkillDescDef> SkillDescs { get; } = new();
+        public ConcurrentDictionary<int, SkillDesc2Def> SkillDesc2s { get; } = new();
+        public ConcurrentDictionary<int, SkillWeaponDef> SkillWeapons { get; } = new();
         public ConcurrentDictionary<int, HuntMonsterDef> HuntMonsters { get; } = new();
         public System.Collections.Generic.List<ShopProductDef> StarProducts { get; } = new();
         public System.Collections.Generic.List<ShopItemDef> ShopItems { get; } = new();
@@ -50,7 +54,8 @@ namespace Yogurting.Data.Loaders
 
         private static Encoding GetTableEncoding()
         {
-            return Encoding.UTF8;
+            try { Encoding.RegisterProvider(CodePagesEncodingProvider.Instance); } catch { }
+            return Encoding.GetEncoding("Shift_JIS");
         }
 
         public void LoadAll(string dbDir)
@@ -73,6 +78,10 @@ namespace Yogurting.Data.Loaders
             LoadShopItemList(Path.Combine(dbDir, "ShopItemList.txt"));
             LoadHuntMonsters(Path.Combine(dbDir, "HuntMon.txt"));
             LoadFields(Path.Combine(dbDir, "Field.txt"));
+            LoadAtkWeapons(Path.Combine(dbDir, "AtkWeapon.txt"));
+            LoadSkillWeapons(Path.Combine(dbDir, "SkillWeapon.txt"));
+            LoadSkillDescs(Path.Combine(dbDir, "SkillDesc.txt"));
+            LoadSkillDesc2s(Path.Combine(dbDir, "SkillDesc2.txt"));
 
             string scoreDir = Path.Combine(dbDir, "..", "score");
             if (!Directory.Exists(scoreDir))
@@ -323,17 +332,59 @@ namespace Yogurting.Data.Loaders
         private void LoadEpisodes(string filePath)
         {
             if (!File.Exists(filePath)) return;
-            var enc = GetTableEncoding();
+            var enc = Encoding.GetEncoding("Shift_JIS");
             foreach (var line in File.ReadAllLines(filePath, enc))
             {
                 if (string.IsNullOrWhiteSpace(line) || line.StartsWith("//")) continue;
-                var parts = line.Split('\t');
-                if (parts.Length < 2) parts = line.Split(',');
-                if (parts.Length >= 2 && int.TryParse(parts[0], out int id))
+                var parts = ParseCsvLine(line);
+                if (parts.Count >= 2 && int.TryParse(parts[0], out int id))
                 {
-                    Episodes[id] = new GameEpisodeDef { Id = id, Title = parts[1] };
+                    string rawTitle = parts[1].Trim();
+                    int bracketIdx = rawTitle.IndexOf(']');
+                    if (bracketIdx >= 0 && bracketIdx + 1 < rawTitle.Length)
+                    {
+                        rawTitle = rawTitle.Substring(bracketIdx + 1).Trim();
+                    }
+                    Episodes[id] = new GameEpisodeDef { Id = id, Title = rawTitle };
                 }
             }
+        }
+
+        private static readonly System.Collections.Generic.Dictionary<int, string> _estivaStorySteps = new()
+        {
+            [0] = "エスティバー学園へようこそ！",
+            [1] = "廊下いっぱいの箱",
+            [2] = "廊下いっぱいの箱＠２階",
+            [3] = "ゲトー大行進！",
+            [5] = "ラッチュー撲滅作戦",
+            [7] = "マルシュ・アタック！",
+            [9] = "宵月学院へGO！GO！GO！"
+        };
+
+        private static readonly System.Collections.Generic.Dictionary<int, string> _soilStorySteps = new()
+        {
+            [0] = "宵月学院にようこそ！",
+            [1] = "箱でいっぱいの廊下",
+            [2] = "職員室いっぱいの箱",
+            [3] = "怖がりサム先生",
+            [5] = "オカルトボックス",
+            [7] = "彼と彼女の生徒会",
+            [9] = "エスティバー学園へ行こう！"
+        };
+
+        public string GetEpisodeTitleForProgress(int school, int epiProgress)
+        {
+            if (school == 1) // Estiva
+            {
+                if (_estivaStorySteps.TryGetValue(epiProgress, out var title)) return title;
+                return Episodes.TryGetValue(epiProgress, out var ep) ? ep.Title : "クリア";
+            }
+            else if (school == 2) // So-il
+            {
+                if (_soilStorySteps.TryGetValue(epiProgress, out var title)) return title;
+                return Episodes.TryGetValue(epiProgress, out var ep) ? ep.Title : "クリア";
+            }
+            return "クリア";
         }
 
         private void LoadTitles(string filePath)
@@ -564,6 +615,109 @@ namespace Yogurting.Data.Loaders
             }
         }
 
+        private void LoadAtkWeapons(string filePath)
+        {
+            if (!File.Exists(filePath)) return;
+            var enc = GetTableEncoding();
+            foreach (var line in File.ReadAllLines(filePath, enc))
+            {
+                if (string.IsNullOrWhiteSpace(line) || line.StartsWith("//")) continue;
+                var parts = ParseCsvLine(line);
+                if (parts.Count >= 3 && int.TryParse(parts[0], out int itemType))
+                {
+                    AtkWeapons[itemType] = new AtkWeaponDef
+                    {
+                        ItemType = itemType,
+                        Category = int.TryParse(parts[1], out int cat) ? cat : 1,
+                        AtkRatio = int.TryParse(parts[2], out int ratio) ? ratio : 10000,
+                        HitMotion = parts.Count >= 4 && int.TryParse(parts[3], out int mot) ? mot : 0,
+                        Range = parts.Count >= 5 && int.TryParse(parts[4], out int rng) ? rng : 22,
+                        Angle = parts.Count >= 6 && int.TryParse(parts[5], out int ang) ? ang : 63
+                    };
+                }
+            }
+        }
+
+        private void LoadSkillWeapons(string filePath)
+        {
+            if (!File.Exists(filePath)) return;
+            var enc = GetTableEncoding();
+            foreach (var line in File.ReadAllLines(filePath, enc))
+            {
+                if (string.IsNullOrWhiteSpace(line) || line.StartsWith("//")) continue;
+                var parts = ParseCsvLine(line);
+                if (parts.Count >= 1 && int.TryParse(parts[0], out int skillId))
+                {
+                    SkillWeapons[skillId] = new SkillWeaponDef
+                    {
+                        SkillId = skillId,
+                        Code = parts.Count >= 2 ? parts[1].Trim() : string.Empty,
+                        Name = parts.Count >= 3 ? parts[2].Trim().Trim('"') : string.Empty,
+                        Range = parts.Count >= 5 && int.TryParse(parts[4], out int rng) ? rng : 22,
+                        Delay = parts.Count >= 10 && int.TryParse(parts[9], out int dly) ? dly : 100
+                    };
+                }
+            }
+        }
+
+        private void LoadSkillDescs(string filePath)
+        {
+            if (!File.Exists(filePath)) return;
+            var enc = GetTableEncoding();
+            foreach (var line in File.ReadAllLines(filePath, enc))
+            {
+                if (string.IsNullOrWhiteSpace(line) || line.StartsWith("//")) continue;
+                var parts = ParseCsvLine(line);
+                if (parts.Count >= 6 && int.TryParse(parts[0], out int skillId))
+                {
+                    SkillDescs[skillId] = new SkillDescDef
+                    {
+                        SkillId = skillId,
+                        Code = parts[1].Trim(),
+                        Name = parts[2].Trim().Trim('"'),
+                        Description = parts[3].Trim().Trim('"'),
+                        RequiredSkill = int.TryParse(parts[4], out int reqSk) ? reqSk : 0,
+                        WeaponType = int.TryParse(parts[5], out int wType) ? wType : 0
+                    };
+                }
+            }
+        }
+
+        private void LoadSkillDesc2s(string filePath)
+        {
+            if (!File.Exists(filePath)) return;
+            var enc = GetTableEncoding();
+            foreach (var line in File.ReadAllLines(filePath, enc))
+            {
+                if (string.IsNullOrWhiteSpace(line) || line.StartsWith("//")) continue;
+                var parts = ParseCsvLine(line);
+                if (parts.Count >= 20 && int.TryParse(parts[0], out int skillId))
+                {
+                    SkillDesc2s[skillId] = new SkillDesc2Def
+                    {
+                        SkillId = skillId,
+                        BaseId = int.TryParse(parts[1], out int baseId) ? baseId : skillId,
+                        RequiredGrade = int.TryParse(parts[4], out int reqGr) ? reqGr : 1,
+                        Level = int.TryParse(parts[5], out int lv) ? lv : 1,
+                        NextId = int.TryParse(parts[6], out int nextId) ? nextId : 0,
+                        RequiredDex = int.TryParse(parts[7], out int reqDex) ? reqDex : 0,
+                        SkillType = int.TryParse(parts[8], out int sType) ? sType : 0,
+                        Power = int.TryParse(parts[9], out int pwr) ? pwr : 0,
+                        Time = int.TryParse(parts[10], out int time) ? time : 0,
+                        Atk = int.TryParse(parts[11], out int atk) ? atk : 0,
+                        Def = int.TryParse(parts[12], out int def) ? def : 0,
+                        Hit = int.TryParse(parts[13], out int hit) ? hit : 0,
+                        Eva = int.TryParse(parts[14], out int eva) ? eva : 0,
+                        Cri = int.TryParse(parts[15], out int cri) ? cri : 0,
+                        Hp = int.TryParse(parts[16], out int hp) ? hp : 0,
+                        AtkSpd = int.TryParse(parts[17], out int atkSpd) ? atkSpd : 0,
+                        MovSpd = int.TryParse(parts[18], out int movSpd) ? movSpd : 0,
+                        CoolTime = int.TryParse(parts[19], out int cool) ? cool : 0
+                    };
+                }
+            }
+        }
+
         private void LoadFieldScoreData(string scoreDir)
         {
             if (!Directory.Exists(scoreDir)) return;
@@ -692,8 +846,18 @@ namespace Yogurting.Data.Loaders
                                     for (int i = 0; i < spawnCount; i++, ptIdx++)
                                     {
                                         var pt = gen.Points[ptIdx % gen.Points.Count];
-                                        float jitterX = (i / gen.Points.Count) * 1.5f;
-                                        float jitterY = ((i % 3) - 1) * 1.0f;
+                                        // Distribute monsters naturally around generator anchor (matching Delphi territory distribution)
+                                        double angle = (2.0 * Math.PI * i) / Math.Max(1, spawnCount);
+                                        float radius = 1.8f + ((i % 3) * 1.5f);
+                                        float spawnX = pt.X + (float)Math.Cos(angle) * radius;
+                                        float spawnY = pt.Y + (float)Math.Sin(angle) * radius;
+
+                                        // Immediate wander destination on entry (matching Delphi active field state)
+                                        float offX = Random.Shared.Next(-6, 7);
+                                        float offY = Random.Shared.Next(-6, 7);
+                                        float destX = Math.Clamp(spawnX + offX, 5f, 95f);
+                                        float destY = Math.Clamp(spawnY + offY, 5f, 95f);
+
                                         var monster = new FieldMonster
                                         {
                                             EntityId = nextEntityId++,
@@ -702,17 +866,28 @@ namespace Yogurting.Data.Loaders
                                             Level = monDef.Level,
                                             CurrentHp = monDef.HpMax,
                                             MaxHp = monDef.HpMax,
-                                            X = pt.X + jitterX,
-                                            Y = pt.Y + jitterY,
-                                            SpawnX = pt.X + jitterX,
-                                            SpawnY = pt.Y + jitterY,
+                                            X = spawnX,
+                                            Y = spawnY,
+                                            SpawnX = spawnX,
+                                            SpawnY = spawnY,
+                                            DirX = 0,
+                                            DirY = 1,
+                                            StartX = spawnX,
+                                            StartY = spawnY,
+                                            DestX = destX,
+                                            DestY = destY,
+                                            State = MonsterState.Walk, // Active moving on field entry!
+                                            MoveMotion = 1,
+                                            MoveSpeedRate = 80,
                                             AttackPower = Math.Max(5, monDef.Level * 4),
                                             MotionType = monDef.Motion > 0 ? monDef.Motion : 300011,
                                             ExpReward = monDef.Exp,
                                             DropItemType = monDef.DropItemType,
                                             DropCount = monDef.DropCount,
                                             DropRate = monDef.DropRate,
-                                            RespawnSeconds = 5
+                                            RespawnSeconds = 5,
+                                            Frame = (uint)Random.Shared.Next(0, 4),
+                                            NextWanderInterval = Random.Shared.Next(2, 6)
                                         };
                                         field.Monsters.Add(monster);
                                         totalMonsters++;
@@ -833,14 +1008,17 @@ namespace Yogurting.Data.Loaders
                             // Extract text: preserve authentic XML formatting, markup and CDATA structure
                             var textMatch = System.Text.RegularExpressions.Regex.Match(tagBody, @"<text>(?:<!\[CDATA\[)?(.*?)(?:\]\]>)?</text>", System.Text.RegularExpressions.RegexOptions.Singleline | System.Text.RegularExpressions.RegexOptions.IgnoreCase);
                             string rawText = textMatch.Success ? textMatch.Groups[1].Value : string.Empty;
-                            rawText = rawText.Replace("\r\n", "\n").TrimEnd('\r', '\n', '\t');
+                            rawText = rawText.Replace("\r\n", "\n");
+
+                            int closebutton = GetIntAttr(attr, "closebutton");
 
                             var dlgDef = new NpcDialogDef
                             {
                                 Id = dlgId,
                                 Name = dlgName,
                                 Text = rawText,
-                                CutIn = cutin
+                                CutIn = cutin,
+                                CloseButton = closebutton
                             };
 
                             // Extract selections
@@ -911,6 +1089,7 @@ namespace Yogurting.Data.Loaders
         public string Name { get; set; } = string.Empty;
         public string Text { get; set; } = string.Empty;
         public int CutIn { get; set; } = 0;
+        public int CloseButton { get; set; } = 0;
         public System.Collections.Generic.List<NpcDialogSelectionDef> Selections { get; set; } = new();
     }
 
@@ -930,7 +1109,7 @@ namespace Yogurting.Data.Loaders
         {
             if (string.IsNullOrWhiteSpace(InitScriptBody))
             {
-                return !string.IsNullOrEmpty(InitialDialogName) ? InitialDialogName : (Dialogs.Keys.FirstOrDefault() ?? "1");
+                return !string.IsNullOrEmpty(InitialDialogName) ? InitialDialogName : (Dialogs.Keys.FirstOrDefault() ?? string.Empty);
             }
 
             var vars = new Dictionary<string, int>(StringComparer.OrdinalIgnoreCase)
@@ -938,8 +1117,8 @@ namespace Yogurting.Data.Loaders
                 ["local.school"] = school,
                 ["local.level"] = level,
                 ["local.grade"] = grade,
-                ["peke.epi.yoi"] = epiYoi,
-                ["peke.epi.es"] = epiEs
+                ["peke.epi.yoi"] = school == 2 ? epiYoi : -1,
+                ["peke.epi.es"] = school == 1 ? epiEs : -1
             };
 
             string? targetJump = EvaluateBlock(InitScriptBody, vars);
@@ -948,7 +1127,7 @@ namespace Yogurting.Data.Loaders
                 return ResolveToDialog(targetJump, vars);
             }
 
-            return !string.IsNullOrEmpty(InitialDialogName) ? InitialDialogName : (Dialogs.Keys.FirstOrDefault() ?? "1");
+            return string.Empty;
         }
 
         /// <summary>
@@ -1186,6 +1365,7 @@ namespace Yogurting.Data.Loaders
         public string Code { get; set; } = string.Empty;
         public string Name { get; set; } = string.Empty;
         public bool IsHuntField { get; set; }
+        public bool IsEpisode { get; set; }
         public int HuntFieldId { get; set; }
         public int Bgm { get; set; } = 6;
         public System.Collections.Generic.List<FieldNpcSpawn> Npcs { get; } = new();
@@ -1270,5 +1450,56 @@ namespace Yogurting.Data.Loaders
         public int Price { get; set; }
         public int Grade { get; set; }
         public int Category { get; set; }
+    }
+
+    public class AtkWeaponDef
+    {
+        public int ItemType { get; set; }
+        public int Category { get; set; }
+        public int AtkRatio { get; set; }
+        public int HitMotion { get; set; }
+        public int Range { get; set; }
+        public int Angle { get; set; }
+    }
+
+    public class SkillDescDef
+    {
+        public int SkillId { get; set; }
+        public string Code { get; set; } = string.Empty;
+        public string Name { get; set; } = string.Empty;
+        public string Description { get; set; } = string.Empty;
+        public int RequiredSkill { get; set; }
+        public int WeaponType { get; set; }
+    }
+
+    public class SkillWeaponDef
+    {
+        public int SkillId { get; set; }
+        public string Code { get; set; } = string.Empty;
+        public string Name { get; set; } = string.Empty;
+        public int Range { get; set; }
+        public int Delay { get; set; } = 100;
+    }
+
+    public class SkillDesc2Def
+    {
+        public int SkillId { get; set; }
+        public int BaseId { get; set; }
+        public int RequiredGrade { get; set; }
+        public int Level { get; set; }
+        public int NextId { get; set; }
+        public int RequiredDex { get; set; }
+        public int SkillType { get; set; }
+        public int Power { get; set; }
+        public int Time { get; set; }
+        public int Atk { get; set; }
+        public int Def { get; set; }
+        public int Hit { get; set; }
+        public int Eva { get; set; }
+        public int Cri { get; set; }
+        public int Hp { get; set; }
+        public int AtkSpd { get; set; }
+        public int MovSpd { get; set; }
+        public int CoolTime { get; set; }
     }
 }

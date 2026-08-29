@@ -126,6 +126,13 @@ namespace Yogurting.Core.Models
         public int StarPoints { get; set; } = 9999999;
         public int TaffPoints { get => StarPoints; set => StarPoints = value; }
 
+        /// <summary>
+        /// Speed Multipliers calculated exactly from Delphi _Unit49.pas:20342:
+        /// 1.0f + (FSpeed * 0.65f * 0.0003f)
+        /// </summary>
+        public float AtkSpeedF => 1.0f + (Speed * 0.65f * 0.0003f);
+        public float MoveSpeedF => 1.0f + (Speed * 0.65f * 0.0003f);
+
         public void RecalculateStats(int pow, int speed, int skill, int luck)
         {
             Pow = pow;

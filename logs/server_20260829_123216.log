@@ -1,0 +1,12 @@
+﻿[12:32:16.629] [Logging] Server log initialized at 'C:\Users\Hanazono Archive\Desktop\Yogurting Game\server_modern\logs\server_20260829_123216.log'
+[12:32:16.659] [Server] [Config] Loaded configuration from 'C:\Users\Hanazono Archive\Desktop\Yogurting Game\server_modern\config\server.json'
+[12:32:16.659] [Server] [Config] Shadow / Differential Mode Enabled: Listening on shadow ports (30000, 30002, 30003, 30004)
+[12:32:16.972] [Server] [System] 'Yogurting Online English Revival' is ONLINE on all ports (Login: 30000, Field: 30002, Episode: 30003, Comm: 30004)!
+[12:32:16.972] [Server] [System] Type 'help' for available server commands.
+
+[12:32:35.245] [Server] [LoginServer] Client connected from 127.0.0.1:57528. Sending AuthTypeNtf (0x7595)...
+[12:32:35.249] [LoginServer] -> SEND [127.0.0.1:57528] Opcode 0x7595 (30101) [MsgAuthTypeNtf] (10 bytes)
+    Hex: 04 00 00 00 95 75 00 00 00 00
+[12:32:48.157] [Server] [LoginServer] Client connected from 127.0.0.1:57531. Sending AuthTypeNtf (0x7595)...
+[12:32:48.158] [LoginServer] -> SEND [127.0.0.1:57531] Opcode 0x7595 (30101) [MsgAuthTypeNtf] (10 bytes)
+    Hex: 04 00 00 00 95 75 00 00 00 00

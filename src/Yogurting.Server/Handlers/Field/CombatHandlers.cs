@@ -38,24 +38,31 @@ namespace Yogurting.Server.Handlers.Field
                 var player = state.Player;
                 if (player == null) return;
 
-                int charaId = packetData.Length >= 10 ? BitConverter.ToInt32(packetData, 6) : player.CharacterId;
-                byte animId = packetData.Length >= 11 ? packetData[10] : (byte)0;
-                int targetMainType = packetData.Length >= 15 ? BitConverter.ToInt32(packetData, 11) : 2;
-                int targetMainId = packetData.Length >= 19 ? BitConverter.ToInt32(packetData, 15) : -1;
-                int targetMainX = packetData.Length >= 23 ? BitConverter.ToInt32(packetData, 19) : (int)player.Position.X;
-                int targetMainY = packetData.Length >= 27 ? BitConverter.ToInt32(packetData, 23) : (int)player.Position.Y;
-                byte flag = packetData.Length >= 28 ? packetData[27] : (byte)0;
-                ushort targetsCount = packetData.Length >= 30 ? BitConverter.ToUInt16(packetData, 28) : (ushort)0;
+                // 0x7919 Payload layout (_Unit67.pas:19595-19612):
+                // Header (6B): Size(2B) + Opcode(4B)
+                // Offset 6:  targetMainType (4B Int32)
+                // Offset 10: targetMainId   (4B Int32)
+                // Offset 14: targetMainX    (4B Int32)
+                // Offset 18: targetMainY    (4B Int32)
+                // Offset 22: flag           (1B Byte)
+                // Offset 23: targetsCount   (2B UInt16)
+                // Offset 25: targets array (16B each: type, id, x, y)
+                int targetMainType = packetData.Length >= 10 ? BitConverter.ToInt32(packetData, 6) : 2;
+                int targetMainId   = packetData.Length >= 14 ? BitConverter.ToInt32(packetData, 10) : -1;
+                int targetMainX    = packetData.Length >= 18 ? BitConverter.ToInt32(packetData, 14) : (int)player.Position.X;
+                int targetMainY    = packetData.Length >= 22 ? BitConverter.ToInt32(packetData, 18) : (int)player.Position.Y;
+                byte flag          = packetData.Length >= 23 ? packetData[22] : (byte)0;
+                ushort targetsCount = packetData.Length >= 25 ? BitConverter.ToUInt16(packetData, 23) : (ushort)0;
 
-                // Read all targets in list (Delphi TSchoolSession.sub_006C17DC: 16 bytes per target)
+                // Read all targets in list (Delphi TSchoolSession.sub_006C17DC / _Unit67.pas:19624-19646: 16 bytes per target)
                 var reqTargets = new List<(int type, int entityId, int x, int y)>();
-                int targetOffset = 30;
+                int targetOffset = 25;
                 for (int i = 0; i < targetsCount && targetOffset + 16 <= packetData.Length; i++)
                 {
                     int tType = BitConverter.ToInt32(packetData, targetOffset);
-                    int tId = BitConverter.ToInt32(packetData, targetOffset + 4);
-                    int tX = BitConverter.ToInt32(packetData, targetOffset + 8);
-                    int tY = BitConverter.ToInt32(packetData, targetOffset + 12);
+                    int tId   = BitConverter.ToInt32(packetData, targetOffset + 4);
+                    int tX    = BitConverter.ToInt32(packetData, targetOffset + 8);
+                    int tY    = BitConverter.ToInt32(packetData, targetOffset + 12);
                     targetOffset += 16;
                     reqTargets.Add((tType, tId, tX, tY));
                 }
@@ -114,7 +121,7 @@ namespace Yogurting.Server.Handlers.Field
                         targetY: targetMainY,
                         damage: 0,
                         isCritical: false,
-                        combo: player.ComboCount,
+                        combo: comboStep - 1,
                         weaponCategory: weaponCat,
                         skillId: attackSkillId,
                         addDexExp: 0);
@@ -137,26 +144,37 @@ namespace Yogurting.Server.Handlers.Field
                         }
 
                         // 2. Exact match by any target in list
-                        foreach (var rt in reqTargets)
+                        if (reqTargets.Count > 0)
                         {
-                            var m = fieldDef.Monsters.Find(mon => mon.EntityId == rt.entityId && !mon.IsDead);
+                            foreach (var rt in reqTargets)
+                            {
+                                var m = fieldDef.Monsters.Find(mon => mon.EntityId == rt.entityId && !mon.IsDead);
+                                if (m != null && !hitMonsters.Contains(m)) hitMonsters.Add(m);
+                            }
+                        }
+                        else if (targetMainId > 0 && targetMainId != unchecked((int)0xFFFFFFFF))
+                        {
+                            var m = fieldDef.Monsters.Find(mon => mon.EntityId == targetMainId && !mon.IsDead);
                             if (m != null && !hitMonsters.Contains(m)) hitMonsters.Add(m);
                         }
 
-                        // 3. Proximity cleave radius around player (up to 4 monsters in melee/weapon range)
-                        float pX = (float)player.Position.X;
-                        float pY = (float)player.Position.Y;
-                        float cleaveRangeSq = 3.5f * 3.5f;
-
-                        foreach (var mon in fieldDef.Monsters)
+                        // Proximity fallback only if no explicit targets were specified by client
+                        if (hitMonsters.Count == 0)
                         {
-                            if (mon.IsDead || hitMonsters.Contains(mon)) continue;
-                            float dx = mon.X - pX;
-                            float dy = mon.Y - pY;
-                            if (dx * dx + dy * dy <= cleaveRangeSq)
+                            float pX = (float)player.Position.X;
+                            float pY = (float)player.Position.Y;
+                            float cleaveRangeSq = 3.0f * 3.0f;
+
+                            foreach (var mon in fieldDef.Monsters)
                             {
-                                hitMonsters.Add(mon);
-                                if (hitMonsters.Count >= 4) break;
+                                if (mon.IsDead || hitMonsters.Contains(mon)) continue;
+                                float dx = mon.X - pX;
+                                float dy = mon.Y - pY;
+                                if (dx * dx + dy * dy <= cleaveRangeSq)
+                                {
+                                    hitMonsters.Add(mon);
+                                    break; // Single primary melee target
+                                }
                             }
                         }
                     }
@@ -182,6 +200,13 @@ namespace Yogurting.Server.Handlers.Field
                     int baseAtk = Math.Max(5, status.Pow + equipAtk);
                     float dmgMultiplier = player.GetDamageMultiplier(); // e.g. 1.2x if Attack Buff active
 
+                    // Authentic AtkRatio from AtkWeapon.txt (Delphi _Unit49.pas:21990-21996)
+                    int atkRatio = 10000;
+                    if (_gameDb != null && weaponTypeId > 0 && _gameDb.AtkWeapons.TryGetValue(weaponTypeId, out var atkDef))
+                    {
+                        atkRatio = atkDef.AtkRatio;
+                    }
+
                     // Authentic LUCK scaling from StatusTable.txt + Critical Buff Multiplier (2.0x in Delphi _Unit49.pas:22007)
                     float critChance = Math.Min(60f, (status.Luck * 1.5f + 5f) * player.GetCritMultiplier());
 
@@ -190,7 +215,9 @@ namespace Yogurting.Server.Handlers.Field
 
                     foreach (var targetMonster in hitMonsters)
                     {
-                        int damage = Math.Max(3, (int)((baseAtk + _random.Next(0, Math.Max(5, player.Level / 2))) * dmgMultiplier));
+                        int scaledAtk = (int)((baseAtk * (long)atkRatio) / 10000);
+                        int levelVariance = _random.Next(0, Math.Max(5, player.Level / 2));
+                        int damage = Math.Max(3, (int)((scaledAtk + levelVariance) * dmgMultiplier));
                         bool isCrit = _random.Next(0, 100) < critChance;
                         if (isCrit) damage = (int)(damage * 2.0);
 
@@ -207,11 +234,18 @@ namespace Yogurting.Server.Handlers.Field
                         }
                     }
 
+                    // Send 0x7A00 Target Ownership Acquired notice to activate Green Targeting Circle at mob's feet
+                    if (hitMonsters.Count > 0)
+                    {
+                        byte[] lockPkt = YogurtingPackets.MakeGameMonsterOwnershipAcquiredNtf(hitMonsters[0].EntityId);
+                        await state.Session.SendAsync(lockPkt);
+                    }
+
                     // Broadcast attack answer & floating damage numbers across all hit enemies (0x791A)
                     byte[] atkAns = YogurtingPackets.MakeGameAttackAns(
                         player.CharacterId,
                         targetEntries,
-                        player.ComboCount,
+                        comboStep - 1,
                         weaponCategory: weaponCat,
                         skillId: attackSkillId,
                         addDexExp: 1);
@@ -219,54 +253,24 @@ namespace Yogurting.Server.Handlers.Field
                     await state.Session.SendAsync(atkAns);
                     await _broadcastDelegate(state, atkAns);
 
-                    // Charge gauge accumulation (matching Delphi TChara.AttackTo _Unit49.pas:22236-22248)
-                    if (player.ChargePoint < 4)
+                    // Real-time Overhead HP update for damaged living monsters (0x79E8 - Delphi 0x005AFAE4)
+                    foreach (var hMon in hitMonsters)
                     {
-                        int hits = Math.Max(1, targetEntries.Count);
-                        int gaugeGain = (15000 + (player.ComboCount * 500)) * hits;
-                        player.GaugeCurrent += gaugeGain;
-                        while (player.GaugeCurrent >= player.GaugeMax && player.ChargePoint < 4)
+                        if (!hMon.IsDead)
                         {
-                            player.ChargePoint = (byte)(player.ChargePoint + 1);
-                            player.GaugeCurrent = (player.ChargePoint >= 4) ? 0 : (player.GaugeCurrent - player.GaugeMax);
-                        }
-                    }
-                    await state.Session.SendAsync(YogurtingPackets.MakeGameChargePointUpdateNtf(player.ChargePoint, player.GaugeMax, player.GaugeCurrent));
-
-                    // Weapon Proficiency / Dexterity Progression (_Unit49.pas:18950)
-                    if (player.DexExps != null && player.DexExps.Length > weaponCat)
-                    {
-                        player.DexExps[weaponCat] += 1;
-                        int curLvl = player.DexLevels != null && player.DexLevels.Length > weaponCat ? player.DexLevels[weaponCat] : 1;
-                        int reqDex = _gameDb != null ? _gameDb.GetRequiredDexForLevel(curLvl) : 20;
-                        if (player.DexExps[weaponCat] >= reqDex)
-                        {
-                            int newLvl = curLvl + 1;
-                            if (player.DexLevels != null && player.DexLevels.Length > weaponCat)
-                            {
-                                player.DexLevels[weaponCat] = newLvl;
-                            }
-                            player.DexExps[weaponCat] -= reqDex;
-                            Logger.Info($"[Combat] *** WEAPON MASTERY UP! *** '{player.CharacterName}' Weapon Category {weaponCat} reached Level {newLvl}!");
+                            byte[] monHpPkt = YogurtingPackets.MakeGameMonHpInfoNtf(hMon.EntityId, hMon.CurrentHp, hMon.MaxHp);
+                            await state.Session.SendAsync(monHpPkt);
+                            await _broadcastDelegate(state, monHpPkt);
                         }
                     }
 
-                    // Monster Retaliation Counter-Attack for first living target
-                    var livingTarget = hitMonsters.Find(m => !m.IsDead);
-                    if (livingTarget != null && (DateTime.UtcNow - livingTarget.LastAttackTime).TotalSeconds >= 1.5)
+                    // Synchronously process monster kills immediately following 0x791A (matching Delphi Quartet pipeline)
+                    if (killedMonsters.Count > 0)
                     {
-                        livingTarget.LastAttackTime = DateTime.UtcNow;
-                        int monDmg = Math.Max(1, livingTarget.Level * 2 - (player.Defense / 4));
-                        player.CurrentHp = Math.Max(0, player.CurrentHp - monDmg);
-                        Logger.Info($"[Combat] '{livingTarget.Name}' counter-attacked '{player.CharacterName}' for {monDmg} dmg! Player HP: {player.CurrentHp}/{player.MaxHp}");
-                        await state.Session.SendAsync(YogurtingPackets.MakeGameSetStateNtf(player));
-                        await state.Session.SendAsync(YogurtingPackets.MakeGameSetHpNtf((ushort)player.CurrentHp));
-                    }
-
-                    // Check if any monsters died from attack
-                    foreach (var kMon in killedMonsters)
-                    {
-                        await ProcessMonsterDefeatAsync(state, player, kMon);
+                        foreach (var kMon in killedMonsters)
+                        {
+                            await ProcessMonsterDefeatAsync(state, player, kMon);
+                        }
                     }
                 }
                 else
@@ -279,7 +283,7 @@ namespace Yogurting.Server.Handlers.Field
                         (int)player.Position.Y,
                         0,
                         false,
-                        player.ComboCount,
+                        comboStep - 1,
                         weaponCategory: weaponCat,
                         skillId: attackSkillId,
                         addDexExp: 0);
@@ -296,37 +300,23 @@ namespace Yogurting.Server.Handlers.Field
 
         private async Task ProcessMonsterDefeatAsync(PlayerSessionState state, Player player, FieldMonster monster)
         {
-            // Authentic EXP formula: exp = monster.Exp * (1.0 - 0.003907 * levelDiff * levelDiff)
-            int levelDiff = Math.Abs(player.Level - monster.Level);
-            int expEarned;
-            if (levelDiff > 15)
-            {
-                expEarned = 1;
-            }
-            else
-            {
-                double factor = 1.0 - (0.003907 * levelDiff * levelDiff);
-                expEarned = Math.Max(1, (int)Math.Floor(monster.ExpReward * Math.Max(0.1, factor)));
-            }
-
-            // Apply Dynamic EXP Buff Multiplier
+            // Award EXP using ExpMultiplier (Delphi _Unit49.pas:19020)
+            int expEarned = monster.ExpReward > 0 ? monster.ExpReward : (monster.Level * 3 + 2);
             float expMultiplier = player.GetExpMultiplier();
             expEarned = Math.Max(1, (int)(expEarned * expMultiplier));
 
-            // Determine loot drop
-            int dropItemId = 0;
-            int dropCount = 0;
+            // Delphi Loot Drop (_Unit49.pas:19028-19360: Matches HuntMon.txt)
+            var lootList = new List<(int itemId, int count, bool isEquip)>();
+
+            // Monster Drop Item / Material / Equipment from HuntMon.txt
             if (monster.DropItemType > 0 && _random.Next(0, 1000) < monster.DropRate)
             {
-                dropItemId = monster.DropItemType;
-                dropCount = Math.Max(1, monster.DropCount);
-            }
+                int dropCount = Math.Max(1, monster.DropCount);
+                bool isEquip = _gameDb != null && _gameDb.Items.TryGetValue(monster.DropItemType, out var idf) && idf.Attack > 0;
+                lootList.Add((monster.DropItemType, dropCount, isEquip));
 
-            // Insert dropped loot directly into player's inventory (_Unit49.pas:19000: TCoItemList.IncItem)
-            if (dropItemId > 0)
-            {
-                var existing = player.Inventory?.Find(i => i.TypeId == dropItemId);
-                if (existing != null)
+                var existing = player.Inventory?.Find(i => i.TypeId == monster.DropItemType);
+                if (existing != null && !isEquip)
                 {
                     existing.Quantity += dropCount;
                 }
@@ -335,14 +325,14 @@ namespace Yogurting.Server.Handlers.Field
                     player.Inventory?.Add(new Item
                     {
                         Id = ((player.Inventory?.Count > 0) ? player.Inventory.Max(i => i.Id) : 0) + 1,
-                        TypeId = dropItemId,
+                        TypeId = monster.DropItemType,
                         SlotIndex = player.Inventory?.Count ?? 0,
                         SlotType = ItemSlotType.Inventory,
                         Quantity = dropCount,
-                        Name = _gameDb != null && _gameDb.Items.TryGetValue(dropItemId, out var itemDef) ? itemDef.Name : "Loot Item"
+                        Name = _gameDb != null && _gameDb.Items.TryGetValue(monster.DropItemType, out var itemDef) ? itemDef.Name : "Loot Item"
                     });
                 }
-                Logger.Info($"[Combat] '{player.CharacterName}' collected dropped loot: {dropCount}x Item #{dropItemId}!");
+                Logger.Info($"[Combat] '{player.CharacterName}' collected dropped loot: {dropCount}x Item #{monster.DropItemType}!");
             }
 
             player.CurrentExp += expEarned;
@@ -356,9 +346,7 @@ namespace Yogurting.Server.Handlers.Field
                 player.CharacterId,
                 expEarned,
                 (int)player.CurrentExp,
-                dropItemId,
-                dropCount,
-                isEquipment: false);
+                lootList);
             await state.Session.SendAsync(deadNtf);
             await _broadcastDelegate(state, deadNtf);
 
@@ -403,6 +391,7 @@ namespace Yogurting.Server.Handlers.Field
                 {
                     await Task.Delay(TimeSpan.FromSeconds(monster.RespawnSeconds));
                     monster.Respawn();
+                    monster.Frame = (uint)monster.NextWanderInterval; // Active movement immediately on respawn
                     byte[] respawnNtf = YogurtingPackets.MakeGameMonInfoNtf(monster);
                     await state.Session.SendAsync(respawnNtf);
                     await _broadcastDelegate(state, respawnNtf);
@@ -574,40 +563,7 @@ namespace Yogurting.Server.Handlers.Field
                     }
                 }
 
-                // Fallback: AoE skill splash around player (e.g. 5.5 tiles radius) if client didn't send explicit target list
-                if (targetResults.Count == 0 && _gameDb != null && _gameDb.Fields.TryGetValue(player.FieldId, out var fieldDef))
-                {
-                    float pX = (float)player.Position.X;
-                    float pY = (float)player.Position.Y;
-                    float aoeDistSq = 5.5f * 5.5f;
 
-                    lock (fieldDef.Monsters)
-                    {
-                        foreach (var mon in fieldDef.Monsters)
-                        {
-                            if (mon.IsDead) continue;
-                            float dx = mon.X - pX;
-                            float dy = mon.Y - pY;
-                            if (dx * dx + dy * dy <= aoeDistSq)
-                            {
-                                int baseAtk = player.Pow + 20;
-                                int dmg = Math.Max(10, (int)(baseAtk * 2.5f + _random.Next(-3, 8)));
-                                bool isCrit = _random.Next(0, 100) < 30;
-                                if (isCrit) dmg = (int)(dmg * 1.5f);
-
-                                mon.TakeDamage(dmg);
-                                mon.TargetPlayerId = player.CharacterId;
-
-                                targetResults.Add((2, mon.EntityId, (int)mon.X, (int)mon.Y, dmg, isCrit ? (byte)1 : (byte)0));
-                                if (mon.IsDead)
-                                {
-                                    killedMonsters.Add(mon);
-                                }
-                                if (targetResults.Count >= 6) break;
-                            }
-                        }
-                    }
-                }
 
                 // Dispatch 0x7924 (MsgGameSkillCastAns)
                 byte[] skillAns = YogurtingPackets.MakeGameSkillCastAns(
@@ -625,16 +581,61 @@ namespace Yogurting.Server.Handlers.Field
                 await state.Session.SendAsync(skillAns);
                 await _broadcastDelegate(state, skillAns);
 
-                // Process monster kills and loot
-                foreach (var kMon in killedMonsters)
+                // Process monster kills and loot after skill VFX animation delay
+                if (killedMonsters.Count > 0)
                 {
-                    await ProcessMonsterDefeatAsync(state, player, kMon);
+                    int skillDelayMs = 500;
+                    if (_gameDb != null && _gameDb.SkillDesc2s.TryGetValue(skillId, out var skDef) && skDef.Time > 0)
+                    {
+                        skillDelayMs = Math.Clamp(skDef.Time * 70, 300, 1500);
+                    }
+                    else
+                    {
+                        skillDelayMs = weaponCat switch
+                        {
+                            1 => 450, // Blade skill
+                            2 => 550, // Blunt skill
+                            3 => 650, // Staff skill
+                            4 => 320, // Gun skill
+                            _ => 500
+                        };
+                    }
+
+                    _ = Task.Run(async () =>
+                    {
+                        try
+                        {
+                            await Task.Delay(skillDelayMs);
+                            foreach (var kMon in killedMonsters)
+                            {
+                                await ProcessMonsterDefeatAsync(state, player, kMon);
+                            }
+                        }
+                        catch { }
+                    });
                 }
 
-                // Award proficiency EXP
+                // Award proficiency EXP & check for Weapon Mastery Level-Up (0x79EE)
                 if (player.DexExps != null && player.DexExps.Length > weaponCat)
                 {
                     player.DexExps[weaponCat] += 2;
+                    int curLvl = player.DexLevels != null && player.DexLevels.Length > weaponCat ? player.DexLevels[weaponCat] : 1;
+                    int reqDex = _gameDb != null ? _gameDb.GetRequiredDexForLevel(curLvl) : 20;
+                    if (player.DexExps[weaponCat] >= reqDex)
+                    {
+                        int newLvl = curLvl + 1;
+                        if (player.DexLevels != null && player.DexLevels.Length > weaponCat)
+                        {
+                            player.DexLevels[weaponCat] = newLvl;
+                        }
+                        player.DexExps[weaponCat] -= reqDex;
+                        int nextReqDex = _gameDb != null ? _gameDb.GetRequiredDexForLevel(newLvl) : 20;
+                        Logger.Info($"[Combat] *** WEAPON MASTERY UP! *** '{player.CharacterName}' Weapon Category {weaponCat} reached Level {newLvl}!");
+
+                        byte[] dexLvUpPkt = YogurtingPackets.MakeGameCharDexLvUpNtf(player.CharacterId, weaponCat, newLvl, player.DexExps[weaponCat], nextReqDex);
+                        await state.Session.SendAsync(dexLvUpPkt);
+                        await _broadcastDelegate(state, dexLvUpPkt);
+                    }
                 }
 
                 if (_repository != null)

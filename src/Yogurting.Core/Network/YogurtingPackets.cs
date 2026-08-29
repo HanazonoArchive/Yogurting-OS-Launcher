@@ -464,28 +464,23 @@ namespace Yogurting.Core.Network
             writer.WriteUnicodeString(charaName, 13);   // 26B: Fixed 13 Unicode characters (0x1A bytes in Delphi)
             writer.WriteInt32(titleId);                 // 4B: Title ID (0)
 
-            // Titles list (Delphi WriteWord(Count + 1))
+            // Titles list (Delphi WriteWord(Count))
             int titleCount = titles?.Count ?? 0;
-            writer.WriteUInt16((ushort)(titleCount + 1));
-            if (titles != null)
+            if (titleCount == 0)
             {
-                foreach (var t in titles)
+                writer.WriteUInt16(0);
+            }
+            else
+            {
+                writer.WriteUInt16((ushort)titleCount);
+                foreach (var t in titles!)
                 {
                     writer.WriteUnicodeStringWithLength(t);
                 }
             }
-            writer.WriteUnicodeStringWithLength(string.Empty);
 
             // Guild name
             writer.WriteUnicodeStringWithLength(guildName);
-
-            if (charaId == -1)
-            {
-                writer.WriteByte(0xCC);
-                writer.WriteByte(0xCC);
-                writer.WriteByte(0xCC);
-                writer.WriteByte(0xCC);
-            }
 
             return writer.Build();
         }
@@ -2076,7 +2071,14 @@ namespace Yogurting.Core.Network
         /// 0x5276 (21110): MsgGameHuntMonDeadNtf - Monster Death Animation and Loot Delivery to Cardboard Booty Box
         /// Exact Delphi layout from TMsgGameHuntMonDeadNtf.Create (0x005AA588 / _Unit47.pas:48845-49048)
         /// </summary>
-        public static byte[] MakeGameHuntMonDeadNtf(int monsterEntityId, ushort x, ushort y, int killerCharaId, int expEarned, int totalExp, int dropItemId = 0, int dropCount = 0, bool isEquipment = false)
+        public static byte[] MakeGameHuntMonDeadNtf(
+            int monsterEntityId,
+            ushort x,
+            ushort y,
+            int killerCharaId,
+            int expEarned,
+            int totalExp,
+            System.Collections.Generic.IReadOnlyList<(int itemId, int count, bool isEquip)>? drops)
         {
             using var writer = PacketWriter.Create(PacketOpcode.MsgGameHuntMonDeadNtf);
             writer.WriteInt32(monsterEntityId);
@@ -2086,24 +2088,36 @@ namespace Yogurting.Core.Network
             writer.WriteInt32(expEarned);
             writer.WriteInt32(totalExp);
 
-            if (dropItemId > 0 && dropCount > 0)
+            if (drops != null && drops.Count > 0)
             {
-                // Array 1: Item Type IDs (_Unit47.pas:48915-48937)
-                writer.WriteUInt16(1);
-                writer.WriteInt32(dropItemId);
+                // Array 1: Item Category / Class Type (_Unit47.pas:48915-48945)
+                writer.WriteUInt16((ushort)drops.Count);
+                foreach (var d in drops)
+                {
+                    int itemCategory = d.isEquip ? 1 : 9;
+                    writer.WriteInt32(itemCategory);
+                }
 
                 // Array 2: Item Instances / Details (_Unit47.pas:48946-49017)
-                writer.WriteUInt16(1);
-                if (isEquipment)
+                writer.WriteUInt16((ushort)drops.Count);
+                foreach (var d in drops)
                 {
-                    writer.WriteInt32(dropItemId | 0x02000000); // 0x02000000 = BeItem (equipment)
-                    writer.WriteInt64(DateTime.UtcNow.Ticks);
-                }
-                else
-                {
-                    writer.WriteInt32(dropItemId | 0x03000000); // 0x03000000 = CoItem (consumable/material)
-                    writer.WriteInt32(dropCount);
-                    writer.WriteInt32(0);
+                    if (d.isEquip)
+                    {
+                        writer.WriteInt32(d.itemId | 0x02000000); // 0x02000000 = BeItem (equipment)
+                        writer.WriteInt32(d.count);
+                        writer.WriteInt32(0);
+                        writer.WriteInt32(0);
+                        writer.WriteInt32(0);
+                    }
+                    else
+                    {
+                        writer.WriteInt32(d.itemId | 0x03000000); // 0x03000000 = CoItem (consumable/money/drop)
+                        writer.WriteInt32(d.count);
+                        writer.WriteInt32(0);
+                        writer.WriteInt32(0);
+                        writer.WriteInt32(0);
+                    }
                 }
             }
             else
@@ -2118,6 +2132,14 @@ namespace Yogurting.Core.Network
             writer.WriteInt32(0);
 
             return writer.Build();
+        }
+
+        public static byte[] MakeGameHuntMonDeadNtf(int monsterEntityId, ushort x, ushort y, int killerCharaId, int expEarned, int totalExp, int dropItemId = 0, int dropCount = 0, bool isEquipment = false)
+        {
+            var drops = (dropItemId > 0 && dropCount > 0)
+                ? new System.Collections.Generic.List<(int, int, bool)> { (dropItemId, dropCount, isEquipment) }
+                : null;
+            return MakeGameHuntMonDeadNtf(monsterEntityId, x, y, killerCharaId, expEarned, totalExp, drops);
         }
 
         public static byte[] MakeGameHuntMonDeadNtf(FieldMonster monster, int killerCharaId, int expEarned, int totalExp, int dropItemId = 0, int dropCount = 0, bool isEquipment = false) =>
@@ -2135,13 +2157,47 @@ namespace Yogurting.Core.Network
         }
 
         /// <summary>
-        /// 0x7A00 (31232): MsgGameMonDeadNtf - Despawn Monster from client 3D engine
-        /// Exact layout from Delphi TMsgGameMonDeadNtf.Create (0x005B0169): WriteInt32(MonsterEntityId)
+        /// 0x7A00 (31232): MsgGameMonsterOwnershipAcquiredNtf - Monster Target Lock / Green Ring at feet
+        /// Exact layout from Delphi TMsgGameMonsterOwnershipAcquiredNtf.Create (_Unit47.pas:57894-57925)
         /// </summary>
-        public static byte[] MakeGameMonDeadNtf(int monsterEntityId)
+        public static byte[] MakeGameMonsterOwnershipAcquiredNtf(int monsterEntityId)
         {
-            using var writer = PacketWriter.Create(PacketOpcode.MsgGameMonDeadNtf);
+            using var writer = PacketWriter.Create(PacketOpcode.MsgGameMonsterOwnershipAcquiredNtf);
             writer.WriteInt32(monsterEntityId);
+            return writer.Build();
+        }
+
+        public static byte[] MakeGameMonDeadNtf(int monsterEntityId) => MakeGameMonsterOwnershipAcquiredNtf(monsterEntityId);
+
+        /// <summary>
+        /// 0x7A01 (31233): MsgGameMonsterOwnershipLostNtf - Monster Target Ownership Dropped
+        /// Exact layout from Delphi TMsgGameMonsterOwnershipLostNtf.Create (0x005B019C): WriteInt32(MonsterId)
+        /// </summary>
+        public static byte[] MakeGameMonsterOwnershipLostNtf(int monsterEntityId)
+        {
+            using var writer = PacketWriter.Create(PacketOpcode.MsgGameMonsterOwnershipLostNtf);
+            writer.WriteInt32(monsterEntityId);
+            return writer.Build();
+        }
+
+        /// <summary>
+        /// 0x79EE (31214): MsgGameCharDexLvUpNtf - Weapon Mastery / Dex Level-Up Notification
+        /// Exact layout from Delphi TMsgGameCharDexLvUpNtf.Create (0x005AFB44):
+        ///   WriteID(0x79EE)
+        ///   WriteInt32(CharaID)
+        ///   WriteInt32(WeaponCate)
+        ///   WriteInt32(DexLevel)
+        ///   WriteInt32(DexExp)
+        ///   WriteInt32(NextDexExp)
+        /// </summary>
+        public static byte[] MakeGameCharDexLvUpNtf(int charaId, int weaponCat, int dexLevel, int dexExp, int nextDexExp)
+        {
+            using var writer = PacketWriter.Create(PacketOpcode.MsgGameCharDexLvUpNtf);
+            writer.WriteInt32(charaId);
+            writer.WriteInt32(weaponCat);
+            writer.WriteInt32(dexLevel);
+            writer.WriteInt32(dexExp);
+            writer.WriteInt32(nextDexExp);
             return writer.Build();
         }
 
@@ -2738,7 +2794,7 @@ namespace Yogurting.Core.Network
         ///   WriteWord(SelectionCount)
         ///   Loop: WriteWord(ChoiceByteLen), WriteWStr(ChoiceText)
         /// </summary>
-        public static byte[] MakeGameExNpcDialogNtf(int npcId, int dialogId, int cutInType, string dialogText, System.Collections.Generic.IList<string>? selections = null)
+        public static byte[] MakeGameExNpcDialogNtf(int npcId, int dialogId, int cutInType, string dialogText, System.Collections.Generic.IList<string>? selections = null, int closeButton = 1)
         {
             using var writer = PacketWriter.Create(PacketOpcode.MsgGameExNpcDialogNtf);
             writer.WriteInt32(npcId);
@@ -2764,8 +2820,8 @@ namespace Yogurting.Core.Network
             // Exact Delphi dialog UI control parameters (_Unit47.pas:005A98D6 - 005A9905)
             writer.WriteInt32(0); // TimeOut (0 = No timer / cast progress bar)
             writer.WriteInt32(0); // ChoiceOnTimeOut
-            writer.WriteInt32(1); // ShowCloseButton (1 = Enable [X] Close Button)
             writer.WriteInt32(1); // EnableBgFrameClick (1 = Enable ESC & background click)
+            writer.WriteInt32(closeButton); // ShowCloseButton (0 or 1)
 
             return writer.Build();
         }

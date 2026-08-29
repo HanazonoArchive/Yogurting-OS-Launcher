@@ -84,7 +84,9 @@ namespace Yogurting.Core.Network
         MsgGameWarpResultNtf        = 0x7968, // 31080: Warp Gate success notice
         MsgGameMonActionNtf         = 0x796A, // 31082: Monster Action / Death / Attack Animation (Delphi 0x005AE01C)
         MsgGameMonStatusNtf         = 0x796D, // 31085: Monster Status / Live Overhead HP Update (Delphi 0x005AE185)
-        MsgGameMonDeadNtf           = 0x7A00, // 31232: Monster Death / Despawn Notification (Delphi 0x005B0169)
+        MsgGameMonHpInfoNtf         = 0x79E8, // 31208: Monster HP & Target State Update (Delphi 0x005AFAE4)
+        MsgGameMonsterOwnershipAcquiredNtf = 0x7A00, // 31232: Monster Target Ownership Acquired / Green Ring (Delphi TMsgGameMonsterOwnershipAcquiredNtf)
+        MsgGameMonsterOwnershipLostNtf = 0x7A01, // 31233: Monster Target Ownership Dropped (Delphi TMsgGameMonsterOwnershipLostNtf)
         MsgGameSitDownReq           = 0x798C, // 31116: Bench / ground sit down request
         MsgGameSitDownAns           = 0x798D, // 31117: Sit down response / broadcast
         MsgGameStandUpNtf           = 0x798E, // 31118: Stand up notification
@@ -195,8 +197,8 @@ namespace Yogurting.Core.Network
         MsgGameMonMoveNtf           = 0x7969, // 31081: Monster Move Notification (Delphi TMsgGameMonMoveNtf)
         MsgGameMonAttackNtf         = 0x796A, // 31082: Monster Attack Notification (Delphi TMsgGameMonAttackNtf)
         MsgGameMonInfoNtf           = 0x796E, // 31086: Monster Spawn / Info Notification (Delphi TMsgGameMonInfoNtf)
-        MsgGameMonHpInfoNtf         = 0x79D8, // 31208: Monster HP Update Notification (Delphi TMsgGameMonHpInfoNtf)
         MsgGameCharLvUpNtf          = 0x7970, // 31088: Player Level-Up Notification (Delphi TMsgGameCharLvUpNtf)
+        MsgGameCharDexLvUpNtf       = 0x79EE, // 31214: Weapon Mastery / Dex Level-Up Notification (Delphi TMsgGameCharDexLvUpNtf)
         MsgGameTradeProposeReq      = 0x792B, // 31019: Trade Propose
         MsgGameTradeAcceptReq       = 0x792D, // 31021: Trade Accept
         MsgGameTradeAddItemReq      = 0x7930, // 31024: Trade Add Item
