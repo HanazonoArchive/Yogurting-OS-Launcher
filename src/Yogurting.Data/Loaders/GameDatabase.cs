@@ -735,10 +735,13 @@ namespace Yogurting.Data.Loaders
 
                     foreach (var f in files)
                     {
-                        if (Path.GetFileName(f).Equals("default.xml", StringComparison.OrdinalIgnoreCase))
+                        string fname = Path.GetFileName(f);
+                        if (fname.Equals("default.xml", StringComparison.OrdinalIgnoreCase))
                             continue;
 
                         string text = File.ReadAllText(f, Encoding.GetEncoding("Shift_JIS"));
+
+                        // 1. Spawn all field NPCs defined in this XML
                         foreach (System.Text.RegularExpressions.Match m in System.Text.RegularExpressions.Regex.Matches(text, @"<npc\s+([^>]+)>", System.Text.RegularExpressions.RegexOptions.IgnoreCase))
                         {
                             string attr = m.Groups[1].Value;
@@ -762,8 +765,9 @@ namespace Yogurting.Data.Loaders
                                 totalNpcs++;
                             }
                         }
-                        // Parse NPC Dialogues from XML
-                        ParseNpcDialogsFromXml(text);
+
+                        // 2. Attach dialogue scripts directly to THIS field instance and global cache
+                        ParseNpcDialogsFromXml(text, field);
                     }
                 }
                 catch (Exception ex)
@@ -775,7 +779,7 @@ namespace Yogurting.Data.Loaders
             Console.WriteLine($"[GameDatabase] Loaded {totalNpcs} Field NPCs, {NpcScripts.Count} NPC Dialog Trees, {totalGates} WarpGates, {totalTerminals} Terminal Objects, {totalMonsters} Field Monsters across {Fields.Count} maps.");
         }
 
-        private void ParseNpcDialogsFromXml(string xmlContent)
+        private void ParseNpcDialogsFromXml(string xmlContent, GameFieldDef? field = null)
         {
             try
             {
@@ -787,50 +791,89 @@ namespace Yogurting.Data.Loaders
                     int id = GetIntAttr(attr, "id");
                     if (id <= 0) continue;
 
-                    var script = NpcScripts.GetOrAdd(id, _ => new NpcScriptDef { NpcId = id });
+                    var script = new NpcScriptDef { NpcId = id };
 
-                    var dlgMatches = System.Text.RegularExpressions.Regex.Matches(body, @"<dialog\s+([^>]+)>(.*?)</dialog>", System.Text.RegularExpressions.RegexOptions.Singleline | System.Text.RegularExpressions.RegexOptions.IgnoreCase);
-                    foreach (System.Text.RegularExpressions.Match dm in dlgMatches)
+                    // Parse all <script> and <dialog> actions in exact sequential document order (matching Delphi TNpcActionList)
+                    var actionMatches = System.Text.RegularExpressions.Regex.Matches(body, @"<(script|dialog)\s+([^>]+)>(.*?)</\1>", System.Text.RegularExpressions.RegexOptions.Singleline | System.Text.RegularExpressions.RegexOptions.IgnoreCase);
+
+                    int actionIndex = 1; // 1-based index matching Delphi TNpcActionList
+                    foreach (System.Text.RegularExpressions.Match am in actionMatches)
                     {
-                        string dlgAttr = dm.Groups[1].Value;
-                        string dlgBody = dm.Groups[2].Value;
-                        string dlgName = GetStringAttr(dlgAttr, "name");
-                        int cutin = GetIntAttr(dlgAttr, "cutin");
+                        string tag = am.Groups[1].Value.ToLowerInvariant();
+                        string tagAttr = am.Groups[2].Value;
+                        string tagBody = am.Groups[3].Value;
 
-                        if (string.IsNullOrEmpty(script.InitialDialogName))
+                        if (tag == "script")
                         {
-                            script.InitialDialogName = dlgName;
-                        }
-
-                        // Clean text: strip newlines/tabs and replace <br> with space (prevents packet string corruption)
-                        var textMatch = System.Text.RegularExpressions.Regex.Match(dlgBody, @"<text>(?:<!\[CDATA\[)?(.*?)(?:\]\]>)?</text>", System.Text.RegularExpressions.RegexOptions.Singleline | System.Text.RegularExpressions.RegexOptions.IgnoreCase);
-                        string rawText = textMatch.Success ? textMatch.Groups[1].Value : string.Empty;
-                        rawText = System.Text.RegularExpressions.Regex.Replace(rawText, @"[\r\n\t]+", " ");
-                        rawText = System.Text.RegularExpressions.Regex.Replace(rawText, @"<br\s*/?>", " ", System.Text.RegularExpressions.RegexOptions.IgnoreCase);
-                        rawText = System.Text.RegularExpressions.Regex.Replace(rawText, @"\s+", " ").Trim();
-
-                        var dlgDef = new NpcDialogDef
-                        {
-                            Name = dlgName,
-                            Text = rawText,
-                            CutIn = cutin
-                        };
-
-                        // Extract selections
-                        var selMatches = System.Text.RegularExpressions.Regex.Matches(dlgBody, @"<selection\s+([^>]+)/>", System.Text.RegularExpressions.RegexOptions.IgnoreCase);
-                        foreach (System.Text.RegularExpressions.Match sm in selMatches)
-                        {
-                            string selAttr = sm.Groups[1].Value;
-                            string selText = GetStringAttr(selAttr, "text");
-                            string selNext = GetStringAttr(selAttr, "next");
-                            dlgDef.Selections.Add(new NpcDialogSelectionDef
+                            string sName = GetStringAttr(tagAttr, "name");
+                            script.Scripts[sName] = tagBody;
+                            if (sName.Equals("init", StringComparison.OrdinalIgnoreCase))
                             {
-                                Text = selText,
-                                Next = selNext
-                            });
+                                script.InitScriptBody = tagBody;
+                            }
+                        }
+                        else if (tag == "dialog")
+                        {
+                            string dlgName = GetStringAttr(tagAttr, "name");
+                            int dlgId = GetIntAttr(tagAttr, "id");
+                            int cutin = GetIntAttr(tagAttr, "cutin");
+
+                            if (dlgId <= 0) dlgId = actionIndex;
+
+                            if (string.IsNullOrEmpty(dlgName))
+                            {
+                                dlgName = dlgId.ToString();
+                            }
+
+                            if (string.IsNullOrEmpty(script.InitialDialogName))
+                            {
+                                script.InitialDialogName = dlgName;
+                            }
+
+                            // Extract text: preserve authentic XML formatting, markup and CDATA structure
+                            var textMatch = System.Text.RegularExpressions.Regex.Match(tagBody, @"<text>(?:<!\[CDATA\[)?(.*?)(?:\]\]>)?</text>", System.Text.RegularExpressions.RegexOptions.Singleline | System.Text.RegularExpressions.RegexOptions.IgnoreCase);
+                            string rawText = textMatch.Success ? textMatch.Groups[1].Value : string.Empty;
+                            rawText = rawText.Replace("\r\n", "\n").TrimEnd('\r', '\n', '\t');
+
+                            var dlgDef = new NpcDialogDef
+                            {
+                                Id = dlgId,
+                                Name = dlgName,
+                                Text = rawText,
+                                CutIn = cutin
+                            };
+
+                            // Extract selections
+                            var selMatches = System.Text.RegularExpressions.Regex.Matches(tagBody, @"<selection\s+([^>]+)/>", System.Text.RegularExpressions.RegexOptions.IgnoreCase);
+                            foreach (System.Text.RegularExpressions.Match sm in selMatches)
+                            {
+                                string selAttr = sm.Groups[1].Value;
+                                string selText = GetStringAttr(selAttr, "text");
+                                string selNext = GetStringAttr(selAttr, "next");
+                                dlgDef.Selections.Add(new NpcDialogSelectionDef
+                                {
+                                    Text = selText,
+                                    Next = selNext
+                                });
+                            }
+
+                            if (!string.IsNullOrEmpty(dlgName))
+                            {
+                                script.Dialogs[dlgName] = dlgDef;
+                            }
+                            script.Dialogs[dlgId.ToString()] = dlgDef;
                         }
 
-                        script.Dialogs[dlgName] = dlgDef;
+                        actionIndex++;
+                    }
+
+                    if (script.Dialogs.Count > 0 || script.Scripts.Count > 0)
+                    {
+                        NpcScripts[id] = script;
+                        if (field != null)
+                        {
+                            field.NpcScripts[id] = script;
+                        }
                     }
                 }
             }
@@ -864,6 +907,7 @@ namespace Yogurting.Data.Loaders
 
     public sealed class NpcDialogDef
     {
+        public int Id { get; set; }
         public string Name { get; set; } = string.Empty;
         public string Text { get; set; } = string.Empty;
         public int CutIn { get; set; } = 0;
@@ -874,7 +918,160 @@ namespace Yogurting.Data.Loaders
     {
         public int NpcId { get; set; }
         public string InitialDialogName { get; set; } = string.Empty;
+        public string InitScriptBody { get; set; } = string.Empty;
+        public System.Collections.Generic.Dictionary<string, string> Scripts { get; set; } = new(StringComparer.OrdinalIgnoreCase);
         public System.Collections.Generic.Dictionary<string, NpcDialogDef> Dialogs { get; set; } = new(StringComparer.OrdinalIgnoreCase);
+
+        /// <summary>
+        /// Evaluates official XML <script name="init"> conditionals against player attributes
+        /// matching Delphi TNpcScriptRunner.
+        /// </summary>
+        public string EvaluateInit(int school, int level, int grade, int epiYoi, int epiEs)
+        {
+            if (string.IsNullOrWhiteSpace(InitScriptBody))
+            {
+                return !string.IsNullOrEmpty(InitialDialogName) ? InitialDialogName : (Dialogs.Keys.FirstOrDefault() ?? "1");
+            }
+
+            var vars = new Dictionary<string, int>(StringComparer.OrdinalIgnoreCase)
+            {
+                ["local.school"] = school,
+                ["local.level"] = level,
+                ["local.grade"] = grade,
+                ["peke.epi.yoi"] = epiYoi,
+                ["peke.epi.es"] = epiEs
+            };
+
+            string? targetJump = EvaluateBlock(InitScriptBody, vars);
+            if (!string.IsNullOrEmpty(targetJump))
+            {
+                return ResolveToDialog(targetJump, vars);
+            }
+
+            return !string.IsNullOrEmpty(InitialDialogName) ? InitialDialogName : (Dialogs.Keys.FirstOrDefault() ?? "1");
+        }
+
+        /// <summary>
+        /// Resolves a dialogue selection target label, executing any intermediate <script> blocks (e.g. epi_es_up, look)
+        /// until reaching a concrete <dialog> node.
+        /// </summary>
+        public string ResolveNext(string nextLabel, int school, int level, int grade, ref int epiYoi, ref int epiEs)
+        {
+            var vars = new Dictionary<string, int>(StringComparer.OrdinalIgnoreCase)
+            {
+                ["local.school"] = school,
+                ["local.level"] = level,
+                ["local.grade"] = grade,
+                ["peke.epi.yoi"] = epiYoi,
+                ["peke.epi.es"] = epiEs
+            };
+
+            string result = ResolveToDialog(nextLabel, vars);
+            epiYoi = vars["peke.epi.yoi"];
+            epiEs = vars["peke.epi.es"];
+            return result;
+        }
+
+        private string ResolveToDialog(string label, Dictionary<string, int> vars)
+        {
+            int depth = 0;
+            string current = label;
+
+            while (depth++ < 10)
+            {
+                if (Dialogs.ContainsKey(current))
+                {
+                    return current;
+                }
+
+                if (Scripts.TryGetValue(current, out var scriptBody))
+                {
+                    string? nextJump = EvaluateBlock(scriptBody, vars);
+                    if (!string.IsNullOrEmpty(nextJump))
+                    {
+                        current = nextJump;
+                        continue;
+                    }
+                }
+
+                break;
+            }
+
+            return current;
+        }
+
+        private static string? EvaluateBlock(string xmlBlock, Dictionary<string, int> vars)
+        {
+            var matches = System.Text.RegularExpressions.Regex.Matches(xmlBlock, @"<(?<tag>ifeq|ifne|ifge|ifle|ifgt|iflt|jump|set|inc|dec)\s+([^>]+?)(?:>(.*?)</\k<tag>>|/>)", System.Text.RegularExpressions.RegexOptions.Singleline | System.Text.RegularExpressions.RegexOptions.IgnoreCase);
+
+            foreach (System.Text.RegularExpressions.Match m in matches)
+            {
+                string tag = m.Groups["tag"].Value.ToLowerInvariant();
+                string attr = m.Groups[1].Value;
+                string inner = m.Groups[2].Value;
+
+                if (tag == "jump")
+                {
+                    string label = GetAttr(attr, "label");
+                    if (!string.IsNullOrEmpty(label)) return label;
+                }
+                else if (tag == "set")
+                {
+                    string varname = GetAttr(attr, "varname");
+                    int val = GetIntAttrVal(attr, "value");
+                    vars[varname] = val;
+                }
+                else if (tag == "inc")
+                {
+                    string varname = GetAttr(attr, "varname");
+                    int curr = vars.TryGetValue(varname, out var v) ? v : 0;
+                    vars[varname] = curr + 1;
+                }
+                else if (tag == "dec")
+                {
+                    string varname = GetAttr(attr, "varname");
+                    int curr = vars.TryGetValue(varname, out var v) ? v : 0;
+                    vars[varname] = curr - 1;
+                }
+                else if (tag.StartsWith("if"))
+                {
+                    string varname = GetAttr(attr, "varname");
+                    int val = GetIntAttrVal(attr, "value");
+                    int currentVal = vars.TryGetValue(varname, out var v) ? v : 0;
+
+                    bool conditionMet = tag switch
+                    {
+                        "ifeq" => currentVal == val,
+                        "ifne" => currentVal != val,
+                        "ifge" => currentVal >= val,
+                        "ifle" => currentVal <= val,
+                        "ifgt" => currentVal > val,
+                        "iflt" => currentVal < val,
+                        _ => false
+                    };
+
+                    if (conditionMet)
+                    {
+                        string? j = EvaluateBlock(inner, vars);
+                        if (!string.IsNullOrEmpty(j)) return j;
+                    }
+                }
+            }
+
+            return null;
+        }
+
+        private static int GetIntAttrVal(string attr, string name)
+        {
+            var m = System.Text.RegularExpressions.Regex.Match(attr, name + @"=""?([0-9]+)""?", System.Text.RegularExpressions.RegexOptions.IgnoreCase);
+            return m.Success && int.TryParse(m.Groups[1].Value, out int v) ? v : 0;
+        }
+
+        private static string GetAttr(string attr, string name)
+        {
+            var m = System.Text.RegularExpressions.Regex.Match(attr, name + @"=""([^""]*)""", System.Text.RegularExpressions.RegexOptions.IgnoreCase);
+            return m.Success ? m.Groups[1].Value : string.Empty;
+        }
     }
 
     /// <summary>
@@ -994,6 +1191,7 @@ namespace Yogurting.Data.Loaders
         public System.Collections.Generic.List<FieldNpcSpawn> Npcs { get; } = new();
         public System.Collections.Generic.List<FieldWarpGate> WarpGates { get; } = new();
         public System.Collections.Generic.List<FieldTerminalObject> TerminalObjects { get; } = new();
+        public System.Collections.Generic.Dictionary<int, NpcScriptDef> NpcScripts { get; } = new();
         public System.Collections.Generic.List<FieldMonster> Monsters { get; } = new();
         public System.Collections.Generic.List<FieldGeneratorDef> Generators { get; } = new();
     }

@@ -60,8 +60,8 @@
 		<!-- ▼宵生セリフ -->
 		<dialog name="kurata_yoi1" cutin="0" closebutton="1">
 			<text><![CDATA[
-				さぁ、Freshmanの皆さぁん～<br>
-				So-il学院で最高の同好会である、オカルト研究部ですよ～　クックック…
+				さぁ、新入生の皆さぁん～<br>
+				宵月学院で最高の同好会である、オカルト研究部ですよ～　クックック…
 			]]></text>
 			<selection next="kurata_quest_no" text="新しいクエスト表示" />
 			<selection next="kurata_quest_miss" text="クエスト達成を報告する" />
@@ -132,7 +132,7 @@
 		<!-- ▼エス生セリフ -->
 		<dialog name="kurata_es1" cutin="0" closebutton="1">
 			<text><![CDATA[
-				このSo-il学院まで何の御用でいらっしゃったんです？<br>
+				この宵月学院まで何の御用でいらっしゃったんです？<br>
 				僕は、オカルト研究部の暗田と申します。<br>
 				どうぞお見知りおきを、ククク。
 			]]></text>
@@ -153,7 +153,7 @@
 		<dialog name="kurata_es3" cutin="0" closebutton="1">
 			<text><![CDATA[
 				皆さん何をするんですか！！！　オカルト研究部の仕事を邪魔するなんて！<br>
-				いくら他の学校のStudentでも、あの御方を怒らせたら大変なことになりますよぉ！
+				いくら他の学校の生徒でも、あの御方を怒らせたら大変なことになりますよぉ！
 			]]></text>
 			<selection next="kurata_quest_no" text="新しいクエスト表示" />
 			<selection next="kurata_quest_miss" text="クエスト達成を報告する" />

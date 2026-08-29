@@ -80,6 +80,16 @@ namespace Yogurting.Server.Handlers.Field
                     sbyte dy = (sbyte)packetData[15];
 
                     state.Player.Position = new Position(px, py, state.Player.Position.Z, state.Player.Position.Heading);
+
+                    // If dialogue is open while moving, cancel dialogue matching Delphi TChara.DoMove
+                    if (state.ActiveNpcId > 0)
+                    {
+                        int activeNpc = state.ActiveNpcId;
+                        state.ActiveNpcId = 0;
+                        state.CurrentNpcDialogNode = string.Empty;
+                        await state.Session.SendAsync(YogurtingPackets.MakeGameNpcDialogEventNtf(activeNpc, 1));
+                    }
+
                     await _broadcastDelegate(state, packetData);
                 }
             }
@@ -125,6 +135,16 @@ namespace Yogurting.Server.Handlers.Field
                     ushort px = BitConverter.ToUInt16(packetData, 6);
                     ushort py = BitConverter.ToUInt16(packetData, 8);
                     state.Player.Position = new Position(px, py, state.Player.Position.Z, state.Player.Position.Heading);
+
+                    // If dialogue is open while jumping, cancel dialogue matching Delphi
+                    if (state.ActiveNpcId > 0)
+                    {
+                        int activeNpc = state.ActiveNpcId;
+                        state.ActiveNpcId = 0;
+                        state.CurrentNpcDialogNode = string.Empty;
+                        await state.Session.SendAsync(YogurtingPackets.MakeGameNpcDialogEventNtf(activeNpc, 1));
+                    }
+
                     await _broadcastDelegate(state, packetData);
                 }
             }
@@ -175,21 +195,15 @@ namespace Yogurting.Server.Handlers.Field
                 // 3. Reveal 3D Campus (0x7956)
                 await session.SendAsync(YogurtingPackets.MakeGameFieldInfoDoneNtf());
 
-                // 4. Activate LocalPlayer Live Inventory & Paperdoll Event Listener (0x520B / Float 0.3f)
-                await session.SendAsync(YogurtingPackets.MakeGameFieldEnterStatReadyNtf(0.3f));
+                // 4. Activate LocalPlayer Live Inventory & Paperdoll Event Listener (0x520B / Float 2.2f matching Delphi)
+                await session.SendAsync(YogurtingPackets.MakeGameFieldEnterStatReadyNtf(2.2f));
 
                 // 5. Set 3D Field View Range (0x79D4 / 400)
                 await session.SendAsync(YogurtingPackets.MakeGameFieldViewRangeNtf(400));
 
-                // 7. Background Music (BGM - 0x795C / Action 0x27)
+                // 6. Background Music (BGM - 0x795C / Action 0x27)
                 int bgmNo = _gameDb != null ? _gameDb.GetFieldBgm(player.FieldId) : 6;
                 await session.SendAsync(YogurtingPackets.MakeGameTriggerBgmNtf(bgmNo));
-
-                // 8. Sync Full Character State
-                await session.SendAsync(YogurtingPackets.MakeGameSetStateNtf(player));
-
-                // 10. Warp Result / Fade-in confirmation
-                await session.SendAsync(YogurtingPackets.MakeGameWarpResultNtf(player.FieldId, player.Position.X, player.Position.Y));
 
                 Logger.Info($"[FieldServer] '{player.CharacterName}' completed 3D field loading for Field {player.FieldId}! BGM #{bgmNo} triggered.");
             }
@@ -317,31 +331,25 @@ namespace Yogurting.Server.Handlers.Field
             try
             {
                 int gateId = packetData.Length >= 11 ? packetData[10] : 1;
-                Logger.Info($"[FieldServer] '{state.Player.CharacterName}' stepped onto Warp Gate {gateId} in Field {state.Player.FieldId}");
+                int currentFieldId = state.Player.FieldId;
+                Logger.Info($"[FieldServer] '{state.Player.CharacterName}' stepped onto Warp Gate {gateId} in Field {currentFieldId} at position ({state.Player.Position.X:F1}, {state.Player.Position.Y:F1})");
 
                 int targetField = 0;
                 Position targetPos = new Position(50f, 50f, 0f);
 
-                // 1. Authoritative lookup from database score WarpGates (default.xml)
+                // 1. Authoritative lookup from current field's WarpGates
                 FieldWarpGate? matchedGate = null;
-                if (_gameDb != null && _gameDb.Fields.TryGetValue(state.Player.FieldId, out var curField))
+                if (_gameDb != null && _gameDb.Fields.TryGetValue(currentFieldId, out var curField))
                 {
                     matchedGate = curField.WarpGates.Find(g => g.Id == gateId);
-                }
-
-                // If not found in current recorded field, search connected fields by proximity to find true current field
-                if (matchedGate == null && _gameDb != null)
-                {
-                    foreach (var kvp in _gameDb.Fields)
+                    if (matchedGate == null && curField.WarpGates.Count > 0)
                     {
-                        var g = kvp.Value.WarpGates.Find(gate => gate.Id == gateId);
-                        if (g != null)
-                        {
-                            state.Player.FieldId = kvp.Key;
-                            matchedGate = g;
-                            Logger.Info($"[FieldServer] Synchronized '{state.Player.CharacterName}' to Field {kvp.Key} via Gate {gateId}");
-                            break;
-                        }
+                        // Proximity match within current field
+                        float px = state.Player.Position.X * 100f;
+                        float py = state.Player.Position.Y * 100f;
+                        matchedGate = curField.WarpGates
+                            .OrderBy(g => (g.X - px) * (g.X - px) + (g.Y - py) * (g.Y - py))
+                            .FirstOrDefault();
                     }
                 }
 
@@ -349,22 +357,12 @@ namespace Yogurting.Server.Handlers.Field
                 {
                     targetField = matchedGate.DestFieldId;
                     targetPos = new Position(matchedGate.DestX, matchedGate.DestY, 0f);
+                    Logger.Info($"[FieldServer] Warp target resolved from DB: Field {targetField} at ({targetPos.X:F1}, {targetPos.Y:F1}) via Gate #{matchedGate.Id}");
                 }
-
-                // Fallback if not configured in database
-                if (targetField == 0)
+                else
                 {
-                    targetField = state.Player.FieldId switch
-                    {
-                        90 => 92,
-                        92 => 90,
-                        91 => 399,
-                        399 => 91,
-                        1 or 386 => 2,
-                        2 => 1,
-                        _ => state.Player.FieldId
-                    };
-                    targetPos = new Position(55f, 28f, 0f);
+                    Logger.Warn($"[FieldServer] No warp gate found for Gate ID {gateId} on Field {currentFieldId} in database.");
+                    return;
                 }
 
                 state.PendingWarpFieldId = targetField;
@@ -550,22 +548,15 @@ namespace Yogurting.Server.Handlers.Field
                 // 5. Field View Range (0x79D4 / 400)
                 await state.Session.SendAsync(YogurtingPackets.MakeGameFieldViewRangeNtf(400));
 
-                // 7. Background Music for New Field (0x795C)
+                // 6. Background Music for New Field (0x795C / Action 0x27)
                 int bgm = _gameDb != null ? _gameDb.GetFieldBgm(targetField) : 6;
                 await state.Session.SendAsync(YogurtingPackets.MakeGameTriggerBgmNtf(bgm));
 
-                // 8. Warp Result (0x7968) - Signals client to fade in and render character at new location
+                // 7. Warp Result (0x7968) - Signals client to fade in and render character at new location
                 await state.Session.SendAsync(YogurtingPackets.MakeGameWarpResultNtf(targetField, targetPos.X, targetPos.Y));
 
-                // 9. Unlock movement, stand up & refresh character state (0x798E, 0x799F, 0x520F, 0x520D, 0x791C)
-                byte[] standUpNtf = YogurtingPackets.MakeGameStandUpNtf(state.Player.CharaId);
-                await state.Session.SendAsync(standUpNtf);
-                await _broadcastDelegate(state, standUpNtf);
-
-                await state.Session.SendAsync(YogurtingPackets.MakeGameAtkMovChangeNtf(state.Player.CharaId, 1.0f, 1.0f));
-                await state.Session.SendAsync(YogurtingPackets.MakeGameSetStateNtf(state.Player));
-                await state.Session.SendAsync(YogurtingPackets.MakeGameSetHpNtf((ushort)state.Player.CurrentHp));
-                await state.Session.SendAsync(YogurtingPackets.MakeGameChargePointUpdateNtf(state.Player.ChargePoint, state.Player.GaugeMax, state.Player.GaugeCurrent));
+                // 8. TMsgGameCharaNameInfoNtf (0x7963) - Exact 56B match with Delphi Quartet
+                await state.Session.SendAsync(YogurtingPackets.MakeGameCharaNameInfoNtf(-1, (int)state.Player.School, 0, string.Empty, 0, null, string.Empty));
             }
             catch (Exception ex)
             {

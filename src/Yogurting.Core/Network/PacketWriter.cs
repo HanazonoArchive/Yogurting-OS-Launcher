@@ -63,6 +63,21 @@ namespace Yogurting.Core.Network
             }
         }
 
+        public void WriteUnicodeStringWithLength(string value)
+        {
+            if (string.IsNullOrEmpty(value))
+            {
+                WriteUInt16(2); // (0 + 1) * 2 = 2 bytes
+                WriteUInt16(0); // Null terminator
+                return;
+            }
+            ushort byteLen = (ushort)((value.Length + 1) * 2);
+            WriteUInt16(byteLen);
+            byte[] bytes = Encoding.Unicode.GetBytes(value);
+            WriteBytes(bytes);
+            WriteUInt16(0); // Null terminator
+        }
+
         public void WriteAnsiString(string value, int fixedChars = 0)
         {
             byte[] bytes = Encoding.Latin1.GetBytes(value ?? string.Empty);

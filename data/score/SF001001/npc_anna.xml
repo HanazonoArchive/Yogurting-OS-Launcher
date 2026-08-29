@@ -44,7 +44,7 @@
 
 		<dialog name="anna1" cutin="0" closebutton="1">
 			<text><![CDATA[
-				チュートリアルEpisodeはどうだった？<br>
+				チュートリアルエピソードはどうだった？<br>
 				そんなに複雑じゃないから、すぐ慣れると思うよ～
 			]]></text>
 			<selection next="anna1_2" text="うん、そうだね" />
@@ -52,10 +52,10 @@
 
 		<dialog name="anna1_2" cutin="0" closebutton="1">
 			<text><![CDATA[
-				それじゃ、すぐそこにいる <font color="00FFBD">Prof. Ben</font>と話してみて。<br>
+				それじゃ、すぐそこにいる <font color="00FFBD">ベン先生</font>と話してみて。<br>
 				いろいろ丁寧に教えてくれるから！
 			]]></text>
-			<selection next="anna1_3" text="Prof. Ben？" />
+			<selection next="anna1_3" text="ベン先生？" />
 		</dialog>
 
 		<dialog name="anna1_3" cutin="0" closebutton="1">
@@ -77,15 +77,15 @@
 		<dialog name="anna2_2" cutin="0" closebutton="1">
 			<text><![CDATA[
 				すご～い！　初めてなのに、頼もしいね！<br>
-				それじゃ、<font color="00FFBD">Prof. Ben</font>から <font color="00FFBD">Sosoの大発生</font> クエストを受けてみたら？　Sosoをたくさん退治すれば、ご褒美がもらえるよ！
+				それじゃ、<font color="00FFBD">ベン先生</font>から <font color="00FFBD">ソソの大発生</font> クエストを受けてみたら？　ソソをたくさん退治すれば、ご褒美がもらえるよ！
 			]]></text>
-			<selection next="anna2_3" text="なるほど！　Thank you" />
+			<selection next="anna2_3" text="なるほど！　ありがとう" />
 		</dialog>
 
 		<dialog name="anna2_3" cutin="0" closebutton="1">
 			<text><![CDATA[
-				<font color="00FFBD">Prof. Ben</font>はEstivaのSchool Building前にいるよ。<br>
-				School BuildingはSchool Groundsの北にあるからね～。
+				<font color="00FFBD">ベン先生</font>はエスティバーの校舎前にいるよ。<br>
+				校舎はグラウンドの北にあるからね～。
 			]]></text>
 			<selection op="set" varname="peke.anna.f001" value="2" text="わかった、ありがと～" />
 		</dialog>
@@ -93,14 +93,14 @@
 		<dialog name="anna2_4" cutin="0" closebutton="1">
 			<text><![CDATA[
 				う～ん、それじゃ友達と一緒にやってみたらどうかな、楽になるよ？<br>
-				あ、そうそう！　<font color="00FFBD">Prof. Ben</font>から <font color="00FFBD">Sosoの大発生</font> クエストを受けてみて。Sosoを退治すれば、ご褒美がもらえるから！
+				あ、そうそう！　<font color="00FFBD">ベン先生</font>から <font color="00FFBD">ソソの大発生</font> クエストを受けてみて。ソソを退治すれば、ご褒美がもらえるから！
 			]]></text>
-			<selection next="anna2_3" text="なるほど！　Thank you" />
+			<selection next="anna2_3" text="なるほど！　ありがとう" />
 		</dialog>
 
 		<dialog name="anna3" cutin="0" closebutton="1">
 			<text><![CDATA[
-				やっほ～！　<font color="00FFBD">廊下いっぱいの箱＠ 2F</font>はどうだった？<br>
+				やっほ～！　<font color="00FFBD">廊下いっぱいの箱＠ 2階</font>はどうだった？<br>
 				さすがに、ちょっとキツかったんじゃない？
 			]]></text>
 			<selection next="anna3_2" text="ううん、問題ないよ" />
@@ -109,10 +109,10 @@
 
 		<dialog name="anna3_2" cutin="0" closebutton="1">
 			<text><![CDATA[
-				えーっ、このEpisode、初めてだったのに？　すごいね！<br>
-				でも、次のEpisodeはそう簡単にYesかないよ？
+				えーっ、このエピソード、初めてだったのに？　すごいね！<br>
+				でも、次のエピソードはそう簡単にはいかないよ？
 			]]></text>
-			<selection next="anna3_3" text="えっ？　次のEpisode？" />
+			<selection next="anna3_3" text="えっ？　次のエピソード？" />
 		</dialog>
 
 		<dialog name="anna3_3" cutin="0" closebutton="1">
@@ -125,14 +125,14 @@
 
 		<dialog name="anna3_4" cutin="0" closebutton="1">
 			<text><![CDATA[
-				うん、それが<font color="00FFBD">案内板</font>だよ。今、学校内で起きてる <font color="00FFBD">Episode</font>と、引き受けられる <font color="00FFBD">クエスト</font>のことがわかるようになってるの。
+				うん、それが<font color="00FFBD">案内板</font>だよ。今、学校内で起きてる <font color="00FFBD">エピソード</font>と、引き受けられる <font color="00FFBD">クエスト</font>のことがわかるようになってるの。
 			]]></text>
 			<selection next="anna3_5" text="うわぁ、それは便利だね！" />
 		</dialog>
 
 		<dialog name="anna3_5" cutin="0" closebutton="1">
 			<text><![CDATA[
-				でも気を付けて！　<font color="00FFBD">赤い字</font>で表示されるEpisodeとクエストは、今のキミにはキツイから。<font color="00FFBD">黒い字</font>か <font color="00FFBD">灰色の字</font>で表示されるのを先にやってみた方がいいよ。<br>
+				でも気を付けて！　<font color="00FFBD">赤い字</font>で表示されるエピソードとクエストは、今のキミにはキツイから。<font color="00FFBD">黒い字</font>か <font color="00FFBD">灰色の字</font>で表示されるのを先にやってみた方がいいよ。<br>
 				それじゃ、ヨーグルティングを楽しんでね～！
 			]]></text>
 			<selection op="set" varname="peke.anna.f001" value="3" text="わかった、ありがと～！" />
@@ -140,7 +140,7 @@
 
 		<dialog name="anna3_6" cutin="0" closebutton="1">
 			<text><![CDATA[
-				<font color="00FFBD">廊下いっぱいの箱＠ 2F</font> Episodeがキツイなら、<font color="00FFBD">廊下いっぱいの箱</font> Episodeをやって、パワーアップして強くなった後で、また挑戦したらいいと思うよ。
+				<font color="00FFBD">廊下いっぱいの箱＠ 2階</font> エピソードがキツイなら、<font color="00FFBD">廊下いっぱいの箱</font> エピソードをやって、パワーアップして強くなった後で、また挑戦したらいいと思うよ。
 			]]></text>
 			<selection next="anna3_7" text="廊下いっぱいの箱？" />
 		</dialog>
@@ -155,7 +155,7 @@
 		<dialog name="anna4" cutin="0" closebutton="1">
 			<text><![CDATA[
 				やっほー！　調子はどう？<br>
-				EpisodeをClearできない時は、友達に声をかけて一緒にプレイ！<br>
+				エピソードをクリアできない時は、友達に声をかけて一緒にプレイ！<br>
 				みんなで力を合わせればきっとうまくいくし、何倍も楽しいよ！
 			]]></text>
 			<selection next="anna_janken_init" text="ジャンケンしよう！" />
@@ -169,26 +169,26 @@
 				セーブポイントを変えるんだね！<br>
 				どこにする？
 			]]></text>
-			<selection next="anna_save_library1" text="Library前" />
+			<selection next="anna_save_library1" text="図書館前" />
 			<selection next="anna_save_garden1" text="裏庭" />
-			<selection next="anna_save_ground1" text="School Grounds" />
+			<selection next="anna_save_ground1" text="グラウンド" />
 		</dialog>
 
 		<dialog name="anna_save_library1" cutin="0" closebutton="1">
 			<text><![CDATA[
-				<font color="00FFBD">Library前</font>だね？<br>
-				戦いにあんまり慣れてないStudentが練習するのにいい場所だよ！
+				<font color="00FFBD">図書館前</font>だね？<br>
+				戦いにあんまり慣れてない生徒が練習するのにいい場所だよ！
 			]]></text>
-			<selection next="anna_save_library2" text="Yes, sounds good" />
-			<selection next="anna_save_menu" text="Let me choose another location" />
+			<selection next="anna_save_library2" text="うん、そうする" />
+			<selection next="anna_save_menu" text="やっぱり別の場所にするね" />
 		</dialog>
 
 		<dialog name="anna_save_library2" cutin="0" closebutton="1">
 			<text><![CDATA[
 				それじゃ、キミが戦闘フィールドで気絶しちゃった時は、<br>
-				Library前にReturnようになったよ！
+				図書館前に戻るようになったよ！
 			]]></text>
-			<selection text="Thank you!" />
+			<selection text="ありがとう！" />
 		</dialog>
 
 		<dialog name="anna_save_garden1" cutin="0" closebutton="1">
@@ -196,44 +196,44 @@
 				<font color="00FFBD">裏庭</font>だね？<br>
 				戦いに慣れて来たら、オススメのエリアだよ！
 			]]></text>
-			<selection next="anna_save_garden2" text="Yes, sounds good" />
-			<selection next="anna_save_menu" text="Let me choose another location" />
+			<selection next="anna_save_garden2" text="うん、そうする" />
+			<selection next="anna_save_menu" text="やっぱり別の場所にするね" />
 		</dialog>
 
 		<dialog name="anna_save_garden2" cutin="0" closebutton="1">
 			<text><![CDATA[
 				それじゃ、キミが戦闘フィールドで気絶しちゃった時は、<br>
-				裏庭にReturnようになったよ！
+				裏庭に戻るようになったよ！
 			]]></text>
-			<selection text="Thank you!" />
+			<selection text="ありがとう！" />
 		</dialog>
 
 		<dialog name="anna_save_ground1" cutin="0" closebutton="1">
 			<text><![CDATA[
-				<font color="00FFBD">School Grounds</font>だね？<br>
+				<font color="00FFBD">グラウンド</font>だね？<br>
 				学校の真ん中だから、どこに行くにも便利だよ～！
 
 			]]></text>
-			<selection next="anna_save_ground2" text="Yes, sounds good" />
-			<selection next="anna_save_menu" text="Let me choose another location" />
+			<selection next="anna_save_ground2" text="うん、そうする" />
+			<selection next="anna_save_menu" text="やっぱり別の場所にするね" />
 		</dialog>
 
 		<dialog name="anna_save_ground2" cutin="0" closebutton="1">
 			<text><![CDATA[
 				それじゃ、キミが戦闘フィールドで気絶しちゃった時は、<br>
-				School GroundsにReturnようになったよ！
+				グラウンドに戻るようになったよ！
 			]]></text>
-			<selection text="Thank you!" />
+			<selection text="ありがとう！" />
 		</dialog>
 
 		<!-- ▼ジャンケン▼ -->
 		<dialog name="anna_janken_init" cutin="0" closebutton="1">
 			<text><![CDATA[
 				わたしと勝負しに来たんだね！<br>
-				You know the rules, right?
+				ルールはわかってるよね？
 			]]></text>
-			<selection next="anna_janken_select" text="Yes, let's duel!" />
-			<selection next="anna_janken_help1" text="Could you explain the rules?" />
+			<selection next="anna_janken_select" text="うん、勝負だ！" />
+			<selection next="anna_janken_help1" text="えっと、ルールを教えてくれない？" />
 		</dialog>
 
 		<dialog name="anna_janken_help1" cutin="0" closebutton="1">
@@ -243,24 +243,24 @@
 				それを持ってきたら、わたしと勝負出来るよ！
 			]]></text>
 			<selection next="anna_janken_help1_2" text="あ、持ってくるだけじゃダメなの？" />
-			<selection next="anna_janken_help2" text="Where can I get a Yogur! Box?" />
+			<selection next="anna_janken_help2" text="ヨーグル！ボックスはどこで手に入るの？" />
 		</dialog>
 
 		<dialog name="anna_janken_help1_2" cutin="0" closebutton="1">
 			<text><![CDATA[
 				あいこでも、キミの負けでもプレゼントをあげるけど、<br>
 				キミが勝ったら一番いいものをあげるよ～、勝ったらね！<br>
-				さあ！　準備Yesい？
+				さあ！　準備はいい？
 			]]></text>
-			<selection next="anna_janken_select" text="Yes, let's duel!" />
-			<selection text="Sorry, maybe later" />
+			<selection next="anna_janken_select" text="うん、勝負だ！" />
+			<selection text="ごめん、また後で" />
 		</dialog>
 
 		<dialog name="anna_janken_help2" cutin="0" closebutton="1">
 			<text><![CDATA[
-				<font color="00FFBD">ヨーグル！ボックス</font>は、看護部のKarteちゃんが配ってるよ！<br>
+				<font color="00FFBD">ヨーグル！ボックス</font>は、看護部のカルテちゃんが配ってるよ！<br>
 				<font color="00FFBD">｢ヨ｣｢ー｣｢グ｣｢ル｣｢！｣</font>の 5色のカラーボールを揃えて、<br>
-				Front GateのKarteちゃんに届けてあげてね！
+				校門前のカルテちゃんに届けてあげてね！
 			]]></text>
 			<selection text="うん、わかった！" />
 		</dialog>
@@ -269,9 +269,9 @@
 			<text><![CDATA[
 				いくよ～！　ジャンケン、ぽん！<br>
 			]]></text>
-			<selection next="anna_janken_judge" text="Rock!" op="set" varname="peke.temp" value="1" />
-			<selection next="anna_janken_judge" text="Scissors!" op="set" varname="peke.temp" value="0" />
-			<selection next="anna_janken_judge" text="Paper!" op="set" varname="peke.temp" value="2" />
+			<selection next="anna_janken_judge" text="グー！" op="set" varname="peke.temp" value="1" />
+			<selection next="anna_janken_judge" text="チョキ！" op="set" varname="peke.temp" value="0" />
+			<selection next="anna_janken_judge" text="パー！" op="set" varname="peke.temp" value="2" />
 		</dialog>
 
 		<script name="anna_janken_judge">
@@ -294,7 +294,7 @@
 			<text><![CDATA[
 				あ、<font color="00FFBD">${peke.temp}</font>を出したの？
 			]]></text>
-			<selection next="anna_janken_draw2" text="A draw, huh..." />
+			<selection next="anna_janken_draw2" text="う～ん、引き分けかぁ" />
 		</dialog>
 		<dialog name="anna_janken_draw2" cutin="0" closebutton="1">
 			<text><![CDATA[
@@ -302,7 +302,7 @@
 				それじゃ、この<font color="00FFBD">あいこでしょ！ボックス</font>をあげるね。
 				いいもの入ってたらいいね！
 			]]></text>
-			<selection text="Let's duel again next time" />
+			<selection text="勝負はまた今度ね" />
 		</dialog>
 
 		<!-- プレイヤー負け -->
@@ -310,12 +310,12 @@
 			<text><![CDATA[
 				ふふふ、<font color="00FFBD">${peke.temp}</font>を出したね～？
 			]]></text>
-			<selection next="anna_janken_lose2" text="Aargh, I lost..." />
+			<selection next="anna_janken_lose2" text="あああ、負けた…" />
 		</dialog>
 		<dialog name="anna_janken_lose2" cutin="1" closebutton="1">
 			<text><![CDATA[
 				やった～、わたしの勝ち！<br>
-				Yes、これ<font color="00FFBD">負けてくやしいボックス</font>だよ。<br>
+				はい、これ<font color="00FFBD">負けてくやしいボックス</font>だよ。<br>
 				元気出してね～！
 			]]></text>
 			<selection text="つ、次は絶対勝つよ！" />
@@ -326,7 +326,7 @@
 			<text><![CDATA[
 				うぅっ、<font color="00FFBD">${peke.temp}</font>を出したの？
 			]]></text>
-			<selection next="anna_janken_win2" text="Yay, I won!" />
+			<selection next="anna_janken_win2" text="やった、勝った！" />
 		</dialog>
 		<dialog name="anna_janken_win2" cutin="2" closebutton="1">
 			<text><![CDATA[

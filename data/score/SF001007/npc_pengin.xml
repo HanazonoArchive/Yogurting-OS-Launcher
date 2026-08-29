@@ -22,7 +22,7 @@
 			<text><![CDATA[				
 				いらっしゃい、今日はどないしたん？
 			]]></text>
-			<selection next="busYOI" text="So-il学院に行きたい" />
+			<selection next="busYOI" text="宵月学院に行きたい" />
 			<selection next="pengin_quest_no" text="新しいクエスト表示" />
 			<selection next="pengin_quest_miss" text="クエスト達成を報告する" />
 		</dialog>
@@ -30,9 +30,9 @@
 		<!-- ▼宵生セリフ -->
 		<dialog name="pengin_yoi1" cutin="0" closebutton="1">
 			<text><![CDATA[
-				お～、So-il学院のStudentさんが遊びに来たんやね、うれしいなぁ。
+				お～、宵月学院の生徒さんが遊びに来たんやね、うれしいなぁ。
 			]]></text>
-			<selection next="busYOI" text="So-il学院に行きたい" />
+			<selection next="busYOI" text="宵月学院に行きたい" />
 			<selection next="pengin_quest_no" text="新しいクエスト表示" />
 			<selection next="pengin_quest_miss" text="クエスト達成を報告する" />
 		</dialog>

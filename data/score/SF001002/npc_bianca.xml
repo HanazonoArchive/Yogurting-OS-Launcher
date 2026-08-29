@@ -150,7 +150,7 @@ Grade : ${local.grade}
 
 		<dialog name="init20"
 				cutin="0"
-				text="upgrade2??"
+				text="upgrade2?"
 				timeout="0"
 				choiceontimeout="0"
 				closebutton="0"
@@ -161,7 +161,7 @@ Grade : ${local.grade}
 
 		<dialog name="init30"
 				cutin="0"
-				text="upgrade3??"
+				text="upgrade3?"
 				timeout="0"
 				choiceontimeout="0"
 				closebutton="0"
@@ -171,7 +171,7 @@ Grade : ${local.grade}
 		</dialog>
 		<dialog name="init40"
 				cutin="0"
-				text="upgrade4??"
+				text="upgrade4?"
 				timeout="0"
 				choiceontimeout="0"
 				closebutton="0"
@@ -181,7 +181,7 @@ Grade : ${local.grade}
 		</dialog>
 		<dialog name="init50"
 				cutin="0"
-				text="upgrade5??"
+				text="upgrade5?"
 				timeout="0"
 				choiceontimeout="0"
 				closebutton="0"
@@ -193,7 +193,7 @@ Grade : ${local.grade}
 
 		<dialog name="init60"
 				cutin="0"
-				text="upgrade6??"
+				text="upgrade6?"
 				timeout="0"
 				choiceontimeout="0"
 				closebutton="0"
@@ -204,7 +204,7 @@ Grade : ${local.grade}
 
 		<dialog name="init70"
 				cutin="0"
-				text="hi?"
+				text="hi"
 				timeout="0"
 				choiceontimeout="0"
 				closebutton="0"
@@ -215,7 +215,7 @@ Grade : ${local.grade}
 
 		<dialog name="init80"
 				cutin="0"
-				text="hi?"
+				text="hi"
 				timeout="0"
 				choiceontimeout="0"
 				closebutton="0"
@@ -503,7 +503,7 @@ Grade : ${local.grade}
 		<dialog name="nana_exp_info" cutin="0" closebutton="1">
 			<text><![CDATA[
 				${local.grade}<br>
-				àÇÅá¤? ${local.level} .! Level down!!!
+				àÇÅá¤è ${local.level} .! Level down!!!
 			]]></text>
 			<selection text="OK" />
 		</dialog>

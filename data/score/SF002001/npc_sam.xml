@@ -73,17 +73,17 @@
 		<!-- ▼宵生セリフ -->
 		<dialog name="sam_yoi1" cutin="0" closebutton="1">
 			<text><![CDATA[
-				おっ、Freshmanだね。入学おめでとう。まだ入学したばかりだから、<br>
-				最初は、<font color="00FFBD">Public Cemeteryのモンスター退治</font>とか、ワタクシのそばにある<br>
-				<font color="00FFBD">エピドードゲート</font>に入って、<font color="00FFBD">箱で一杯の廊下</font>Episodeをやってみたら？
+				おっ、新入生だね。入学おめでとう。まだ入学したばかりだから、<br>
+				最初は、<font color="00FFBD">共同墓地のモンスター退治</font>とか、ワタクシのそばにある<br>
+				<font color="00FFBD">エピドードゲート</font>に入って、<font color="00FFBD">箱で一杯の廊下</font>エピソードをやってみたら？
 			]]></text>
 			<selection next="sam_guide" text="学校について教えて下さい" />
-			<selection text="Yes、Episodeをやってみます" />
+			<selection text="はい、エピソードをやってみます" />
 		</dialog>
 
 		<dialog name="sam_yoi2" cutin="0" closebutton="1">
 			<text><![CDATA[
-				Episodeはどうやってやるのか分かったかな？<br>
+				エピソードはどうやってやるのか分かったかな？<br>
 				うん、それじゃ、楽しい学校生活をね。
 			]]></text>
 			<selection next="sam_guide" text="学校について教えて下さい" />
@@ -102,8 +102,8 @@
 
 		<dialog name="sam_yoi4" cutin="0" closebutton="1">
 			<text><![CDATA[
-				Student会の 2人には会ったようだね。<br>
-				2人とも、学校のためにとても熱心に働くStudentたちだ。君たちも時間が出来たら、彼らを手伝ってあげてね。
+				生徒会の 2人には会ったようだね。<br>
+				2人とも、学校のためにとても熱心に働く生徒たちだ。君たちも時間が出来たら、彼らを手伝ってあげてね。
 			]]></text>
 			<selection next="sam_guide" text="教えて欲しいことがあります" />
 			<selection next="sam_quest_no" text="新しいクエスト表示" />
@@ -112,8 +112,8 @@
 
 		<dialog name="sam_yoi5" cutin="0" closebutton="1">
 			<text><![CDATA[
-				ああ、早く掃除を済ませたいのに、Latchuだなんてまったく。<br>
-				一緒に掃除してた妖艶TeacherYesつのまにか逃げだしてるし、Student会もこの件は避けてる雰囲気だし…はぁ。
+				ああ、早く掃除を済ませたいのに、ラッチューだなんてまったく。<br>
+				一緒に掃除してた妖艶先生はいつのまにか逃げだしてるし、生徒会もこの件は避けてる雰囲気だし…はぁ。
 			]]></text>
 			<selection next="sam_guide" text="教えて欲しいことがあります" />
 			<selection next="sam_quest_no" text="新しいクエスト表示" />
@@ -122,7 +122,7 @@
 
 		<dialog name="sam_yoi6" cutin="0" closebutton="1">
 			<text><![CDATA[
-				諸君のおかげで、掃除も済んだしLatchuも追い出せた。本当にThank you。
+				諸君のおかげで、掃除も済んだしラッチューも追い出せた。本当にありがとう。
 			]]></text>
 			<selection next="sam_guide" text="教えて欲しいことがあります" />
 			<selection next="sam_quest_no" text="新しいクエスト表示" />
@@ -162,8 +162,8 @@
 		<!-- ▼エス生セリフ -->
 		<dialog name="sam_es1" cutin="0" closebutton="1">
 			<text><![CDATA[
-				Estivaから遊びに来たようだね。ようこそSo-il学院へ。<br>
-				えっ、EstivaのProf. Benと似てるって？　うん、同じ制服を着てるから、当然と言えば当然だね。
+				エスティバーから遊びに来たようだね。ようこそ宵月学院へ。<br>
+				えっ、エスティバーのベン先生と似てるって？　うん、同じ制服を着てるから、当然と言えば当然だね。
 			]]></text>
 			<selection next="sam_guide" text="教えて欲しいことがあります" />
 			<selection next="sam_quest_no" text="新しいクエスト表示" />
@@ -172,7 +172,7 @@
 
 		<dialog name="sam_es2" cutin="0" closebutton="1">
 			<text><![CDATA[
-				Sosoがとても多くなっててね。いろいろと大変なんだ。<br>
+				ソソがとても多くなっててね。いろいろと大変なんだ。<br>
 				ともかく、とてもがんばってるようだね…
 			]]></text>
 			<selection next="sam_guide" text="教えて欲しいことがあります" />
@@ -183,7 +183,7 @@
 		<dialog name="sam_es3" cutin="0" closebutton="1">
 			<text><![CDATA[
 				ううっ…学校にモンスターが…<br>
-				どうしよう？　119？　110？　いやStudent会か？
+				どうしよう？　119？　110？　いや生徒会か？
 			]]></text>
 			<selection next="sam_guide" text="教えて欲しいことがあります" />
 			<selection next="sam_quest_no" text="新しいクエスト表示" />
@@ -193,7 +193,7 @@
 		<dialog name="sam_es4" cutin="0" closebutton="1">
 			<text><![CDATA[
 				うん、うん。モンスターを退治してくれて本当に助かったよ。<br>
-				Infirmaryの妖艶Teacherも、諸君にThank youと伝えて欲しいとおっしゃってたよ。
+				保健室の妖艶先生も、諸君にありがとうと伝えて欲しいとおっしゃってたよ。
 			]]></text>
 			<selection next="sam_guide" text="教えて欲しいことがあります" />
 			<selection next="sam_quest_no" text="新しいクエスト表示" />
@@ -212,7 +212,7 @@
 		<dialog name="sam_es6" cutin="0" closebutton="1">
 			<text><![CDATA[
 				ううん。オカルト研究部は本当に…<br>
-				あそこの部長は本当に大人しいStudentなんだけど。暗田君さえ問題を起こさなければいいんだけどね。
+				あそこの部長は本当に大人しい生徒なんだけど。暗田君さえ問題を起こさなければいいんだけどね。
 			]]></text>
 			<selection next="sam_guide" text="教えて欲しいことがあります" />
 			<selection next="sam_quest_no" text="新しいクエスト表示" />
@@ -279,14 +279,14 @@
 
 		<dialog name="sam_guide_quest5" cutin="0" closebutton="1">
 			<text><![CDATA[
-				<font color="00FFBD">クエストメニュー</font>(ＸキーまたはＪキー)で、進行中のクエストの詳細な説明を見られるんだ。それを見れば、どのEpisodeでどのアイテムをいくつ集めればいいか分かるよ。
+				<font color="00FFBD">クエストメニュー</font>(ＸキーまたはＪキー)で、進行中のクエストの詳細な説明を見られるんだ。それを見れば、どのエピソードでどのアイテムをいくつ集めればいいか分かるよ。
 			]]></text>
 			<selection next="sam_guide_quest6" text="わかりました" />
 		</dialog>
 
 		<dialog name="sam_guide_quest6" cutin="0" closebutton="1">
 			<text><![CDATA[
-				何をすればいいかわかったら、後は該当するEpisodeをプレイしたりして、クエストの目標条件を満たせばいいんだ。手に入れたクエストアイテムは、<font color="00FFBD">もちもの(ＣキーまたはＩキー)</font>メニューのクエストタブでも確かめられるよ。
+				何をすればいいかわかったら、後は該当するエピソードをプレイしたりして、クエストの目標条件を満たせばいいんだ。手に入れたクエストアイテムは、<font color="00FFBD">もちもの(ＣキーまたはＩキー)</font>メニューのクエストタブでも確かめられるよ。
 			]]></text>
 			<selection next="sam_guide_quest7" text="クエストはどんな風に終わらせるんですか？" />
 			<selection next="sam_guide" text="他のことを教えてください" />
@@ -303,7 +303,7 @@
 			<text><![CDATA[
 				普通はクエストをくれる人が依頼者なんだけど、たまに、クエストをくれた人と依頼者が別にいることもあるんだ。でも、安心してね。クエストをくれた人が、誰に会えばいいか、ちゃんと教えてくれるから。
 			]]></text>
-			<selection text="Thank youございます" />
+			<selection text="ありがとうございます" />
 			<selection next="sam_guide" text="他のことを教えて下さい" />
 		</dialog>
 
@@ -313,16 +313,16 @@
 			]]></text>
 			<selection next="sam_guide_road2" text="モンスターはどこに出ますか？" />
 			<selection next="sam_guide_road3" text="アイテムを強化する場所はどこですか？" />
-			<selection next="sam_guide_road1_2" text="次のPageを表示" />
+			<selection next="sam_guide_road1_2" text="次のページを表示" />
 		</dialog>
 
 		<dialog name="sam_guide_road1_2" cutin="0" closebutton="1">
 			<text><![CDATA[
 				そう、どこに行きたいのかな？
 			]]></text>
-			<selection next="sam_guide_road4" text="Staff RoomとInfirmaryはどこですか？" />
-			<selection next="sam_guide_road5" text="Storeはどこですか？" />
-			<selection next="sam_guide_road1_3" text="次のPageを表示" />
+			<selection next="sam_guide_road4" text="職員室と保健室はどこですか？" />
+			<selection next="sam_guide_road5" text="購買はどこですか？" />
+			<selection next="sam_guide_road1_3" text="次のページを表示" />
 		</dialog>
 
 		<dialog name="sam_guide_road1_3" cutin="0" closebutton="1">
@@ -330,17 +330,17 @@
 				そう、どこに行きたいのかな？
 			]]></text>
 			<selection next="sam_guide_road6" text="講堂と桜広場はどこですか？" />
-			<selection next="sam_guide_road7" text="聖堂とCemeteryはどこですか？" />
-			<selection next="sam_guide_road1_4" text="次のPageを表示" />
+			<selection next="sam_guide_road7" text="聖堂と墓地はどこですか？" />
+			<selection next="sam_guide_road1_4" text="次のページを表示" />
 		</dialog>
 
 		<dialog name="sam_guide_road1_4" cutin="0" closebutton="1">
 			<text><![CDATA[
 				そう、どこに行きたいのかな？
 			]]></text>
-			<selection next="sam_guide_road8" text="Old School Buildingはどこですか？" />
+			<selection next="sam_guide_road8" text="旧校舎はどこですか？" />
 			<selection next="sam_guide_road9" text="化学室はどこですか？" />
-			<selection next="sam_guide_road1_5" text="次のPageを表示" />
+			<selection next="sam_guide_road1_5" text="次のページを表示" />
 		</dialog>
 
 		<dialog name="sam_guide_road1_5" cutin="0" closebutton="1">
@@ -349,7 +349,7 @@
 			]]></text>
 			<selection next="sam_guide_road10" text="献血車とバス停はどこですか？" />
 			<selection next="sam_guide_road11" text="桜並木はどこですか？" />
-			<selection next="sam_guide_road1" text="最初のPageを表示" />
+			<selection next="sam_guide_road1" text="最初のページを表示" />
 		</dialog>
 
 		<dialog name="sam_guide_road2" cutin="0" closebutton="1">
@@ -358,25 +358,25 @@
 				ワープポイントを使うと別のフィールドに移動出来るけど、<br>
 				モンスターがいる場所に出るかもしれないから、気をつけるんだよ。
 			]]></text>
-			<selection text="Thank youございます" />
+			<selection text="ありがとうございます" />
 			<selection next="sam_guide_road1" text="他の場所について教えて下さい" />
 			<selection next="sam_guide" text="他の事を教えて下さい" />
 		</dialog>
 
 		<dialog name="sam_guide_road3" cutin="0" closebutton="1">
 			<text><![CDATA[
-				アイテムを強化したいなら、<font color="00FFBD">School Building 2F</font>にいる<font color="00FFBD">No. 486</font>に会うといいよ。
+				アイテムを強化したいなら、<font color="00FFBD">校舎 2階</font>にいる<font color="00FFBD">No. 486</font>に会うといいよ。
 			]]></text>
-			<selection text="Thank youございます" />
+			<selection text="ありがとうございます" />
 			<selection next="sam_guide_road1" text="他の場所について教えて下さい" />
 			<selection next="sam_guide" text="他のことを教えて下さい" />
 		</dialog>
 
 		<dialog name="sam_guide_road4" cutin="0" closebutton="1">
 			<text><![CDATA[
-				Staff Room、InfirmaryはSchool Buildingの 1Fだ。あそこにある、玄関の前のワープポイントからSchool Buildingに入れるよ。Infirmaryには進級を担当する妖艶Teacherがいて、Staff RoomにはStudent会のSinsohyon君がいるはずだよ。
+				職員室、保健室は校舎の 1階だ。あそこにある、玄関の前のワープポイントから校舎に入れるよ。保健室には進級を担当する妖艶先生がいて、職員室には生徒会のシンソヒョン君がいるはずだよ。
 			]]></text>
-			<selection text="Thank youございます" />
+			<selection text="ありがとうございます" />
 			<selection next="sam_guide_road1_2" text="他の場所について教えて下さい" />
 			<selection next="sam_guide" text="他のことを教えて下さい" />
 		</dialog>
@@ -384,70 +384,70 @@
 
 		<dialog name="sam_guide_road5" cutin="0" closebutton="1">
 			<text><![CDATA[
-				Storeは、School Buildingの外の西の方にあるよ。
+				購買は、校舎の外の西の方にあるよ。
 				]]></text>
-			<selection text="Thank youございます" />
+			<selection text="ありがとうございます" />
 			<selection next="sam_guide_road1_2" text="他の場所について教えて下さい" />
 			<selection next="sam_guide" text="他のことを教えて下さい" />
 		</dialog>
 
 		<dialog name="sam_guide_road6" cutin="0" closebutton="1">
 			<text><![CDATA[
-				講堂はSchool Groundsの西側にあるよ。ミニマップで見ると、School Grounds左側になるね。桜広場は講堂の南側にある。この桜広場から、世界樹のある場所に行けるんだ。
+				講堂はグラウンドの西側にあるよ。ミニマップで見ると、グラウンド左側になるね。桜広場は講堂の南側にある。この桜広場から、世界樹のある場所に行けるんだ。
 			]]></text>
-			<selection text="Thank youございます" />
+			<selection text="ありがとうございます" />
 			<selection next="sam_guide_road1_3" text="他の場所について教えて下さい" />
 			<selection next="sam_guide" text="他のことを教えて下さい" />
 		</dialog>
 
 		<dialog name="sam_guide_road7" cutin="0" closebutton="1">
 			<text><![CDATA[
-				聖堂とCemeteryはSchool Buildingの西の方、ミニマップで左上にあるワープポイントから行けるよ。神父様と、水蓮、火蓮がそこで暮らしてるんだ。
+				聖堂と墓地は校舎の西の方、ミニマップで左上にあるワープポイントから行けるよ。神父様と、水蓮、火蓮がそこで暮らしてるんだ。
 			]]></text>
-			<selection text="Thank youございます" />
+			<selection text="ありがとうございます" />
 			<selection next="sam_guide_road1_3" text="他の場所について教えて下さい" />
 			<selection next="sam_guide" text="他のことを教えて下さい" />
 		</dialog>
 
 		<dialog name="sam_guide_road8" cutin="0" closebutton="1">
 			<text><![CDATA[
-				Old School BuildingはSchool Buildingの東側にあって、ミニマップの右側にあるワープポイントから行けるよ。うん…古い建物だから、幽霊が出るってウワサもあってね…
+				旧校舎は校舎の東側にあって、ミニマップの右側にあるワープポイントから行けるよ。うん…古い建物だから、幽霊が出るってウワサもあってね…
 			]]></text>
-			<selection text="Thank youございます" />
+			<selection text="ありがとうございます" />
 			<selection next="sam_guide_road1_4" text="他の場所について教えて下さい" />
 			<selection next="sam_guide" text="他のことを教えて下さい" />
 		</dialog>
 
 		<dialog name="sam_guide_road9" cutin="0" closebutton="1">
 			<text><![CDATA[
-				科学室はSchool Buildingの 2Fにあるよ。 2Fには、 1F階段のワープポイントから行ける。科学室にいるNo.486はアイテム強化をしてくれるから、武器や制服が弱いと思ったら訪ねてみてごらん。
+				科学室は校舎の 2階にあるよ。 2階には、 1階階段のワープポイントから行ける。科学室にいるNo.486はアイテム強化をしてくれるから、武器や制服が弱いと思ったら訪ねてみてごらん。
 			]]></text>
-			<selection text="Thank youございます" />
+			<selection text="ありがとうございます" />
 			<selection next="sam_guide_road1_4" text="他の場所について教えて下さい" />
 			<selection next="sam_guide" text="他のことを教えて下さい" />
 		</dialog>
 
 		<dialog name="sam_guide_road10" cutin="0" closebutton="1">
 			<text><![CDATA[
-				献血車とバス停留所は、School Gateの前にある。桜並木を下って、School Grounds南側のワープポイントから行けるよ。
+				献血車とバス停留所は、校門の前にある。桜並木を下って、グラウンド南側のワープポイントから行けるよ。
 			]]></text>
-			<selection text="Thank youございます" />
+			<selection text="ありがとうございます" />
 			<selection next="sam_guide_road1_5" text="他の場所について教えて下さい" />
 			<selection next="sam_guide" text="他のことを教えて下さい" />
 		</dialog>
 
 		<dialog name="sam_guide_road11" cutin="0" closebutton="1">
 			<text><![CDATA[
-				School Grounds東の方の通学路が、桜並木だよ。この道を行くと、学校外に出られるよ。
+				グラウンド東の方の通学路が、桜並木だよ。この道を行くと、学校外に出られるよ。
 			]]></text>
-			<selection text="Thank youございます" />
+			<selection text="ありがとうございます" />
 			<selection next="sam_guide_road1_5" text="他の場所について教えて下さい" />
 			<selection next="sam_guide" text="他のことを教えて下さい" />
 		</dialog>
 
 		<dialog name="sam_guide2" cutin="0" closebutton="1">
 			<text><![CDATA[
-				基本的な<font color="00FFBD">Episode</font>と、<font color="00FFBD">クエスト</font>はやってみたね。これからは学校を歩き回って、いろいろな<font color="00FFBD">Episode</font>と<font color="00FFBD">クエスト</font>をやってみてごらん。新しく出来るものが分からなかったら、学校中にある<font color="00FFBD">案内板</font>を見るといいよ。
+				基本的な<font color="00FFBD">エピソード</font>と、<font color="00FFBD">クエスト</font>はやってみたね。これからは学校を歩き回って、いろいろな<font color="00FFBD">エピソード</font>と<font color="00FFBD">クエスト</font>をやってみてごらん。新しく出来るものが分からなかったら、学校中にある<font color="00FFBD">案内板</font>を見るといいよ。
 			]]></text>
 			<selection next="sam_annai" text="案内板って何ですか？" />
 			<selection next="sam_quesr_no" text="新しいクエスト表示" />
@@ -456,21 +456,21 @@
 
 		<dialog name="sam_annai" cutin="0" closebutton="1">
 			<text><![CDATA[
-				<font color="00FFBD">案内板</font>はミニマップ上では<font color="00FFBD">本</font>の形で表示されてるもので、学校のあちこちにあるよ。案内板を見れば、今プレイ出来る<font color="00FFBD">Episode</font>と<font color="00FFBD">クエスト</font>についてわかるんだ。
+				<font color="00FFBD">案内板</font>はミニマップ上では<font color="00FFBD">本</font>の形で表示されてるもので、学校のあちこちにあるよ。案内板を見れば、今プレイ出来る<font color="00FFBD">エピソード</font>と<font color="00FFBD">クエスト</font>についてわかるんだ。
 			]]></text>
 			<selection next="sam_annai2" text="そうなんですか？" />
 		</dialog>
 
 		<dialog name="sam_annai2" cutin="0" closebutton="1">
 			<text><![CDATA[
-				そうそう。案内板をクリックすると、まず<font color="00FFBD">Episode</font>についての情報が表示される。<font color="00FFBD">案内板</font>左側にある<font color="00FFBD">クエストタブ</font>を押せば、<font color="00FFBD">クエスト</font>に関する情報が見られるんだよ。
+				そうそう。案内板をクリックすると、まず<font color="00FFBD">エピソード</font>についての情報が表示される。<font color="00FFBD">案内板</font>左側にある<font color="00FFBD">クエストタブ</font>を押せば、<font color="00FFBD">クエスト</font>に関する情報が見られるんだよ。
 			]]></text>
 			<selection next="sam_annai3" text="便利ですね" />
 		</dialog>
 
 		<dialog name="sam_annai3" cutin="0" closebutton="1">
 			<text><![CDATA[
-				そうだね。学校で何をすればいいかわからなくなった時に見てみれば、きっと役に立つよ。それじゃ、実際に<font color="00FFBD">案内板</font>を見てみて、次へ何が出来るのかConfirmしてみてごらん。
+				そうだね。学校で何をすればいいかわからなくなった時に見てみれば、きっと役に立つよ。それじゃ、実際に<font color="00FFBD">案内板</font>を見てみて、次へ何が出来るのか確認してみてごらん。
 			]]></text>
 			<selection text="わかりました～" />
 		</dialog>

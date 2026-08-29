@@ -53,25 +53,25 @@
 		<!-- ▼宵生セリフ -->
 		<dialog name="vermont_yoi1" cutin="0" closebutton="1">
 			<text><![CDATA[
-				So-ilに入学おめでとう。君たちはまだ入学したばかりだから、<br>
-				<font color="00FFBD">Episode</font>をやってみるか、<font color="00FFBD">ミニマップの右</font>に見えるワープポイントを<br>
-				通じて<font color="00FFBD">Public Cemeteryのモンスター退治</font>をしに行ってみるといい。
+				宵月に入学おめでとう。君たちはまだ入学したばかりだから、<br>
+				<font color="00FFBD">エピソード</font>をやってみるか、<font color="00FFBD">ミニマップの右</font>に見えるワープポイントを<br>
+				通じて<font color="00FFBD">共同墓地のモンスター退治</font>をしに行ってみるといい。
 
 			]]></text>
 			<selection next="vermont_quest_no" text="新しいクエスト表示" />
 			<selection next="vermont_quest_miss" text="クエスト達成を報告する" />
-			<selection text="Skillを習う" />
+			<selection text="スキルを習う" />
 		</dialog>
 
 		<dialog name="vermont_yoi2" cutin="0" closebutton="1">
 			<text><![CDATA[
-				Episodeは一人でも出来るけど、大勢でやればもっと面白いはずだよ。<br>
+				エピソードは一人でも出来るけど、大勢でやればもっと面白いはずだよ。<br>
 				それでは、今度は<font color="00FFBD">ミニマップ</font>の左下に見えるワープポイントから<br>
-学校へ行って、<font color="00FFBD">SamTeacher</font>にお会いしてみてごらん。
+学校へ行って、<font color="00FFBD">サム先生</font>にお会いしてみてごらん。
 			]]></text>
 			<selection next="vermont_quest_no" text="新しいクエスト表示" />
 			<selection next="vermont_quest_miss" text="クエスト達成を報告する" />
-			<selection text="Skillを習う" />
+			<selection text="スキルを習う" />
 		</dialog>
 
 		<dialog name="vermont_yoi3" cutin="0" closebutton="1">
@@ -81,7 +81,7 @@
 			]]></text>
 			<selection next="vermont_quest_no" text="新しいクエスト表示" />
 			<selection next="vermont_quest_miss" text="クエスト達成を報告する" />
-			<selection text="Skillを習う" />
+			<selection text="スキルを習う" />
 		</dialog>
 
 		<dialog name="vermont_yoi4" cutin="0" closebutton="1">
@@ -90,27 +90,27 @@
 			]]></text>
 			<selection next="vermont_quest_no" text="新しいクエスト表示" />
 			<selection next="vermont_quest_miss" text="クエスト達成を報告する" />
-			<selection text="Skillを習う" />
+			<selection text="スキルを習う" />
 		</dialog>
 
 		<dialog name="vermont_yoi5" cutin="0" closebutton="1">
 			<text><![CDATA[
-				この前はThank you。<br>
+				この前はありがとう。<br>
 				今日はどんな用事かな？
 			]]></text>
 			<selection next="vermont_quest_no" text="新しいクエスト表示" />
 			<selection next="vermont_quest_miss" text="クエスト達成を報告する" />
-			<selection text="Skillを習う" />
+			<selection text="スキルを習う" />
 		</dialog>
 
 		<dialog name="vermont_yoi6" cutin="0" closebutton="1">
 			<text><![CDATA[
 				ううむ…<br>
-				友達と遊ぶのYesいんだが、Cemeteryで遊ぶのは危険だということは、承知しておきなさい…
+				友達と遊ぶのはいいんだが、墓地で遊ぶのは危険だということは、承知しておきなさい…
 			]]></text>
 			<selection next="vermont_quest_no" text="新しいクエスト表示" />
 			<selection next="vermont_quest_miss" text="クエスト達成を報告する" />
-			<selection text="Skillを習う" />
+			<selection text="スキルを習う" />
 		</dialog>
 
 		<dialog name="vermont_yoi7" cutin="0" closebutton="1">
@@ -119,29 +119,29 @@
 			]]></text>
 			<selection next="vermont_quest_no" text="新しいクエスト表示" />
 			<selection next="vermont_quest_miss" text="クエスト達成を報告する" />
-			<selection text="Skillを習う" />
+			<selection text="スキルを習う" />
 		</dialog>
 
 		<!-- ▼エス生セリフ -->
 		<dialog name="vermont_es1" cutin="0" closebutton="1">
 			<text><![CDATA[
-				遠くからSo-il学院まで遊びに来たようだね。<br>
-				私はVermont、この聖堂とCemeteryの管理を担当している。<br>
+				遠くから宵月学院まで遊びに来たようだね。<br>
+				私はバーモント、この聖堂と墓地の管理を担当している。<br>
 				楽しく過ごすといいよ。
 			]]></text>
 			<selection next="vermont_quest_no" text="新しいクエスト表示" />
 			<selection next="vermont_quest_miss" text="クエスト達成を報告する" />
-			<selection text="Skillを習う" />
+			<selection text="スキルを習う" />
 		</dialog>
 
 		<dialog name="vermont_es2" cutin="0" closebutton="1">
 			<text><![CDATA[
 				よく来たね。<br>
-				So-ilには友達に会いに来たの？
+				宵月には友達に会いに来たの？
 			]]></text>
 			<selection next="vermont_quest_no" text="新しいクエスト表示" />
 			<selection next="vermont_quest_miss" text="クエスト達成を報告する" />
-			<selection text="Skillを習う" />
+			<selection text="スキルを習う" />
 		</dialog>
 
 		<!-- ▼クエスト -->

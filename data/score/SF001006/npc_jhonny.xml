@@ -20,7 +20,7 @@
 		<!-- ▼エス生セリフ -->
 		<dialog name="jhonny_es1" cutin="0" closebutton="1">
 			<text><![CDATA[
-				お、よく来たな。いつでもGreenhouseに遊びに来なよ。
+				お、よく来たな。いつでも温室に遊びに来なよ。
 			]]></text>
 			<selection next="jhonny_quest_no" text="新しいクエスト表示" />
 			<selection next="jhonny_quest_miss" text="クエスト達成を報告する" />
@@ -30,7 +30,7 @@
 		<dialog name="jhonny_yoi1" cutin="0" closebutton="1">
 			<text><![CDATA[
 				別の学校から遊びに来てくれたのかい？<br>
-				俺はGreenhouseを管理してるJohnnyってもんだ、<br>
+				俺は温室を管理してるジョニーってもんだ、<br>
 				よろしく頼むわ。
 			]]></text>
 			<selection next="jhonny_quest_no" text="新しいクエスト表示" />

@@ -33,10 +33,10 @@ namespace Yogurting.Server.Handlers.Auth
         /// 0x4E21 (20001): MsgCheckVersionNtf - Client initial connection handshake
         /// </summary>
         [PacketHandler(PacketOpcode.MsgCheckVersionNtf)]
-        public async Task HandleCheckVersionAsync(ClientSession session, byte[] packetData)
+        public Task HandleCheckVersionAsync(ClientSession session, byte[] packetData)
         {
-            Logger.Info($"[LoginServer] Client connected from {session.RemoteEndPoint}. Awaiting handshake...");
-            await session.SendAsync(YogurtingPackets.MakeAuthTypeNtf(0));
+            // Initial AuthTypeNtf (0x7595) was already dispatched upon TCP accept
+            return Task.CompletedTask;
         }
 
         /// <summary>

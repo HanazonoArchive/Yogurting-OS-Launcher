@@ -44,17 +44,26 @@ namespace Yogurting.Server.Handlers.Field
                 state.ActiveDialogId = 1;
 
                 string npcName = _gameDb != null && _gameDb.Npcs.TryGetValue(npcId, out var name) ? name : $"NPC #{npcId}";
-                Logger.Info($"[FieldServer] '{player.CharacterName}' opened dialogue with '{npcName}' (ID: {npcId})");
+                int currentFieldId = state.Player.FieldId;
 
-                // Check for dynamic XML-driven script from official database
-                if (_gameDb != null && _gameDb.NpcScripts.TryGetValue(npcId, out var script) && script.Dialogs.Count > 0)
+                // 1. Check if NPC has an active dialogue script attached in this map
+                NpcScriptDef? script = null;
+                if (_gameDb != null && _gameDb.Fields.TryGetValue(currentFieldId, out var curField))
                 {
-                    NpcDialogDef? initialDlg = null;
-                    if (!string.IsNullOrEmpty(script.InitialDialogName) && script.Dialogs.TryGetValue(script.InitialDialogName, out var d))
-                    {
-                        initialDlg = d;
-                    }
-                    else
+                    curField.NpcScripts.TryGetValue(npcId, out script);
+                }
+
+                if (script == null && _gameDb != null && (npcId == 600 || npcId == 486))
+                {
+                    _gameDb.NpcScripts.TryGetValue(npcId, out script);
+                }
+
+                if (script != null && (script.Dialogs.Count > 0 || script.Scripts.Count > 0))
+                {
+                    // Evaluate authentic XML init script conditionals dynamically against live player stats & episode progress
+                    string initialNode = script.EvaluateInit((int)player.School, player.Level, player.Grade, player.EpisodeYoi, player.EpisodeEs);
+
+                    if (!script.Dialogs.TryGetValue(initialNode, out var initialDlg))
                     {
                         initialDlg = script.Dialogs.Values.FirstOrDefault();
                     }
@@ -63,21 +72,28 @@ namespace Yogurting.Server.Handlers.Field
                     {
                         state.CurrentNpcDialogNode = initialDlg.Name;
                         var choices = initialDlg.Selections.Select(s => s.Text).ToList();
-                        if (choices.Count == 0)
-                        {
-                            choices.Add("…またね (Farewell)");
-                        }
 
-                        byte[] dialogNtf = YogurtingPackets.MakeGameExNpcDialogNtf(npcId, 1, initialDlg.CutIn, initialDlg.Text, choices);
+                        string formattedText = initialDlg.Text
+                            .Replace("${local.grade}", player.Grade.ToString())
+                            .Replace("${local.level}", player.Level.ToString())
+                            .Replace("${local.name}", player.CharacterName)
+                            .Replace("${peke.epi.es}", player.EpisodeEs.ToString())
+                            .Replace("${peke.epi.yoi}", player.EpisodeYoi.ToString())
+                            .Replace("${peke.temp}", "0")
+                            .Replace("${peke.temp2}", "0");
+
+                        int startingDialogId = initialDlg.Id > 0 ? initialDlg.Id : (int.TryParse(initialDlg.Name, out int parsedId) ? parsedId : 2);
+                        byte[] dialogNtf = YogurtingPackets.MakeGameExNpcDialogNtf(npcId, startingDialogId, initialDlg.CutIn, formattedText, choices);
                         await state.Session.SendAsync(dialogNtf);
+                        Logger.Info($"[FieldServer] '{player.CharacterName}' opened dialogue with '{npcName}' (ID: {npcId}) Dialog #{startingDialogId} Node='{initialDlg.Name}' on Field {currentFieldId}");
                         return;
                     }
                 }
 
-                // Fallback for special NPCs (Store Auntie / Salon) or unscripted NPCs
-                var (dialogText, fallbackChoices) = GetNpcGreetingAndChoices(npcId, npcName, player);
-                byte[] fallbackNtf = YogurtingPackets.MakeGameExNpcDialogNtf(npcId, 1, 0, dialogText, fallbackChoices);
-                await state.Session.SendAsync(fallbackNtf);
+                // 2. Ambient / Unscripted NPC -> Dismiss immediately via 0x7940 (matching Delphi Quartet _Unit67.pas:006C2663)
+                Logger.Info($"[FieldServer] '{player.CharacterName}' interacted with unscripted entity '{npcName}' (ID: #{npcId}) on Field {currentFieldId} -> Dismissing via 0x7940");
+                byte[] cancelAmbientNtf = YogurtingPackets.MakeGameNpcDialogEndNtf();
+                await state.Session.SendAsync(cancelAmbientNtf);
             }
             catch (Exception ex)
             {
@@ -119,67 +135,90 @@ namespace Yogurting.Server.Handlers.Field
                 int npcId = state.ActiveNpcId > 0 ? state.ActiveNpcId : 1;
                 Logger.Info($"[FieldServer] '{player.CharacterName}' selected option [{selectedIndex}] (Quest #{questId}) for NPC #{npcId} (Dialog #{dialogId}, Node '{state.CurrentNpcDialogNode}')");
 
-                // Handle NPC Facility Actions
-                switch (npcId)
-                {
-                    case 4 or 27: // 購買おばちゃん (Store Auntie / School Canteen)
-                        if (selectedIndex == 1) // Choice 1: "Browse Store Goods"
-                        {
-                            await OpenNpcShopAsync(state, npcId);
-                            return;
-                        }
-                        break;
-
-                    case 7: // メイ (Hairdresser / Salon)
-                        if (selectedIndex == 1) // Choice 1: "Change Hairstyle"
-                        {
-                            await OpenHairShopAsync(state);
-                            return;
-                        }
-                        break;
-                }
-
-                // Close Dialogue on Close button ([X] = 101 or 102)
+                // Close Dialogue on Close button ([X] = 101 or 102) -> Send ONLY 0x793E matching Delphi Quartet
                 if (selectedIndex == 101 || selectedIndex == 102)
                 {
                     byte[] eventNtf = YogurtingPackets.MakeGameNpcDialogEventNtf(npcId, 1);
                     await state.Session.SendAsync(eventNtf);
-
-                    byte[] endNtf = YogurtingPackets.MakeGameNpcDialogEndNtf();
-                    await state.Session.SendAsync(endNtf);
                     return;
                 }
 
                 // Check dynamic XML dialogue tree transitions
-                if (_gameDb != null && _gameDb.NpcScripts.TryGetValue(npcId, out var script) &&
-                    script.Dialogs.TryGetValue(state.CurrentNpcDialogNode, out var currentDlg))
+                NpcScriptDef? script = null;
+                if (_gameDb != null)
+                {
+                    if (_gameDb.Fields.TryGetValue(state.Player.FieldId, out var curField))
+                    {
+                        curField.NpcScripts.TryGetValue(npcId, out script);
+                    }
+                    if (script == null && (npcId == 600 || npcId == 486))
+                    {
+                        _gameDb.NpcScripts.TryGetValue(npcId, out script);
+                    }
+                }
+
+                if (script != null && script.Dialogs.TryGetValue(state.CurrentNpcDialogNode, out var currentDlg))
                 {
                     int selIdx = selectedIndex - 1; // 1-indexed to 0-indexed
                     if (selIdx >= 0 && selIdx < currentDlg.Selections.Count)
                     {
                         var selection = currentDlg.Selections[selIdx];
-                        if (!string.IsNullOrEmpty(selection.Next) && script.Dialogs.TryGetValue(selection.Next, out var nextDlg))
+
+                        // Dynamic shop / salon facility detection from selection action/text
+                        if (selection.Text.Contains("購買") || selection.Text.Contains("Shop") || selection.Text.Contains("店"))
                         {
-                            state.CurrentNpcDialogNode = nextDlg.Name;
-                            var nextChoices = nextDlg.Selections.Select(s => s.Text).ToList();
-                            if (nextChoices.Count == 0)
+                            await OpenNpcShopAsync(state, npcId);
+                            return;
+                        }
+                        if (selection.Text.Contains("Hair") || selection.Text.Contains("美容") || selection.Text.Contains("Salon"))
+                        {
+                            await OpenHairShopAsync(state);
+                            return;
+                        }
+
+                        if (!string.IsNullOrEmpty(selection.Next))
+                        {
+                            int epiYoi = player.EpisodeYoi;
+                            int epiEs = player.EpisodeEs;
+                            string nextNode = script.ResolveNext(selection.Next, (int)player.School, player.Level, player.Grade, ref epiYoi, ref epiEs);
+
+                            if (epiYoi != player.EpisodeYoi || epiEs != player.EpisodeEs)
                             {
-                                nextChoices.Add("…またね (Farewell)");
+                                player.EpisodeYoi = epiYoi;
+                                player.EpisodeEs = epiEs;
+                                if (_repository != null)
+                                {
+                                    _ = _repository.SaveAccountAsync(player);
+                                }
+                                Logger.Info($"[FieldServer] '{player.CharacterName}' episode progress updated: So-il={epiYoi}, Estiva={epiEs}");
                             }
 
-                            byte[] nextDialogNtf = YogurtingPackets.MakeGameExNpcDialogNtf(npcId, 2, nextDlg.CutIn, nextDlg.Text, nextChoices);
-                            await state.Session.SendAsync(nextDialogNtf);
-                            return;
+                            if (script.Dialogs.TryGetValue(nextNode, out var nextDlg))
+                            {
+                                state.CurrentNpcDialogNode = nextDlg.Name;
+                                var nextChoices = nextDlg.Selections.Select(s => s.Text).ToList();
+
+                                string formattedNextText = nextDlg.Text
+                                    .Replace("${local.grade}", player.Grade.ToString())
+                                    .Replace("${local.level}", player.Level.ToString())
+                                    .Replace("${local.name}", player.CharacterName)
+                                    .Replace("${peke.epi.es}", epiEs.ToString())
+                                    .Replace("${peke.epi.yoi}", epiYoi.ToString())
+                                    .Replace("${peke.temp}", "0")
+                                    .Replace("${peke.temp2}", "0");
+
+                                int nextDialogId = nextDlg.Id > 0 ? nextDlg.Id : (int.TryParse(nextDlg.Name, out int parsedId) ? parsedId : 2);
+                                byte[] nextDialogNtf = YogurtingPackets.MakeGameExNpcDialogNtf(npcId, nextDialogId, nextDlg.CutIn, formattedNextText, nextChoices);
+                                await state.Session.SendAsync(nextDialogNtf);
+                                return;
+                            }
                         }
                     }
                 }
 
-                // Dialogue ended / farewell chosen -> Send 0x793E and 0x7940 to close and restore mobility
+                // Dialogue ended / farewell chosen -> Send ONLY 0x793E to close and restore mobility
                 byte[] closeEventNtf = YogurtingPackets.MakeGameNpcDialogEventNtf(npcId, 1);
                 await state.Session.SendAsync(closeEventNtf);
-
-                byte[] closeEndNtf = YogurtingPackets.MakeGameNpcDialogEndNtf();
-                await state.Session.SendAsync(closeEndNtf);
             }
             catch (Exception ex)
             {
@@ -217,25 +256,6 @@ namespace Yogurting.Server.Handlers.Field
             }
 
             await state.Session.SendAsync(writer.Build());
-        }
-
-        private static (string Text, List<string> Choices) GetNpcGreetingAndChoices(int npcId, string npcName, Player player)
-        {
-            return npcId switch
-            {
-                4 or 27 => (
-                    $"Hello there {player.CharacterName}! Welcome to the School Store. Need any drinks, snacks, or stationery?",
-                    new List<string> { "Browse Store Goods", "School Information", "Goodbye" }
-                ),
-                7 => (
-                    $"Welcome to the Salon, {player.CharacterName}! Looking for a stylish new cut or fresh color today?",
-                    new List<string> { "Change Hairstyle", "Styling Advice", "Maybe Next Time" }
-                ),
-                _ => (
-                    $"Hello {player.CharacterName}! Good luck with your studies today!",
-                    new List<string> { "Talk", "…またね (Farewell)" }
-                )
-            };
         }
     }
 }

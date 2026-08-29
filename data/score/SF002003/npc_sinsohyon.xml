@@ -56,9 +56,9 @@
 		<!-- ▼宵生セリフ -->
 		<dialog name="sinsohyon_yoi1" cutin="0" closebutton="1">
 			<text><![CDATA[
-				Freshmanの皆さん、ご入学をお祝い申し上げます。<br>
-				まずは、<font color="00FFBD">Public Cemeteryのモンスター退治</font>や、School Building前の<font color="00FFBD">Episodeゲート</font>から<br>
-				<font color="00FFBD">箱でいっぱいの廊下</font>Episodeをなさってみて下さい。
+				新入生の皆さん、ご入学をお祝い申し上げます。<br>
+				まずは、<font color="00FFBD">共同墓地のモンスター退治</font>や、校舎前の<font color="00FFBD">エピソードゲート</font>から<br>
+				<font color="00FFBD">箱でいっぱいの廊下</font>エピソードをなさってみて下さい。
 			]]></text>
 			<selection next="sinsohyon_doukou" text="同好会のことで来ました" />
 			<selection next="sinsohyon_quest_no" text="新しいクエスト表示" />
@@ -67,8 +67,8 @@
 
 		<dialog name="sinsohyon_yoi2" cutin="0" closebutton="1">
 			<text><![CDATA[
-				Episodeをプレイする方法はもうわかりましたね？　それでは、<br>
-				<font color="00FFBD">ワープポイント</font>を通じてSchool Buildingを出て、<font color="00FFBD">Sam</font>Teacherに会ってみて下さい。<br>
+				エピソードをプレイする方法はもうわかりましたね？　それでは、<br>
+				<font color="00FFBD">ワープポイント</font>を通じて校舎を出て、<font color="00FFBD">サム</font>先生に会ってみて下さい。<br>
 				<font color="00FFBD">クエストと基本的なこと</font>について教えて下さるでしょう。
 			]]></text>
 			<selection next="sinsohyon_doukou" text="同好会のことで来ました" />
@@ -97,7 +97,7 @@
 
 		<dialog name="sinsohyon_yoi5" cutin="0" closebutton="1">
 			<text><![CDATA[
-				Estivaから来るFreshmanと、So-ilから行くFreshmanとの行事を、問題なく進行するには…<br>
+				エスティバーから来る新入生と、宵月から行く新入生との行事を、問題なく進行するには…<br>
 あ、申し訳ありません。何かお困りですか？				
 			]]></text>
 			<selection next="sinsohyon_doukou" text="同好会のことで来ました" />
@@ -117,7 +117,7 @@
 
 		<dialog name="sinsohyon_yoi7" cutin="0" closebutton="1">
 			<text><![CDATA[
-				この前の呪いの御札事件でも分かったでしょうが、オカルト研究部はSo-il学院で最も問題が多く、怪しい同好会です。<br>
+				この前の呪いの御札事件でも分かったでしょうが、オカルト研究部は宵月学院で最も問題が多く、怪しい同好会です。<br>
 				出来るだけ関わらないよう、気を付けて下さい。				
 			]]></text>
 			<selection next="sinsohyon_doukou" text="同好会のことで来ました" />
@@ -127,8 +127,8 @@
 
 		<dialog name="sinsohyon_yoi8" cutin="0" closebutton="1">
 			<text><![CDATA[
-				Hello。この前は、ファントムの楽譜の回収を手伝って下さって、Thank youございます。<br>
-今後とも、Student会へのご協力をお願い致します。				
+				こんにちは。この前は、ファントムの楽譜の回収を手伝って下さって、ありがとうございます。<br>
+今後とも、生徒会へのご協力をお願い致します。				
 			]]></text>
 			<selection next="sinsohyon_doukou" text="同好会のことで来ました" />
 			<selection next="sinsohyon_quest_no" text="新しいクエスト表示" />
@@ -138,8 +138,8 @@
 		<!-- ▼エス生セリフ -->
 		<dialog name="sinsohyon_es1" cutin="0" closebutton="1">
 			<text><![CDATA[
-				EstivaのStudentの皆様ですね、わたくしはSo-il学院のStudent会副会長を努めている、Sinsohyonです。<br>
-				So-il学院へようこそ。
+				エスティバーの生徒の皆様ですね、わたくしは宵月学院の生徒会副会長を努めている、シンソヒョンです。<br>
+				宵月学院へようこそ。
 			]]></text>
 			<selection next="sinsohyon_quest_no" text="新しいクエスト表示" />
 			<selection next="sinsohyon_quest_miss" text="クエスト達成を報告する" />
@@ -213,23 +213,23 @@
 			<text><![CDATA[
 				同好会を開設しますか？
 			]]></text>
-			<selection next="sinsohyon_doukou_make99" text="Yes" />
-			<selection text="No" />
+			<selection next="sinsohyon_doukou_make99" text="はい" />
+			<selection text="いいえ" />
 		</dialog>
 
 		<dialog name="sinsohyon_doukou_make2" cutin="0" closebutton="1">
 			<text><![CDATA[
 				同好会開設を取り消しますか？
 			]]></text>
-			<selection text="Yes" />
-			<selection next="sinsohyon_doukou_make1" text="No" />
+			<selection text="はい" />
+			<selection next="sinsohyon_doukou_make1" text="いいえ" />
 		</dialog>
 
 		<dialog name="sinsohyon_doukou_make99" cutin="0" closebutton="1">
 			<text><![CDATA[
 				申し訳ありません。原因不明のエラーが起きました。
 			]]></text>
-			<selection text="Yes" />
+			<selection text="はい" />
 		</dialog>
 	</npc>
 </field>

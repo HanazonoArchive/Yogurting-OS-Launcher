@@ -11,19 +11,19 @@
 
 		<dialog name="menu" cutin="0" closebutton="1">
 			<text><![CDATA[
-				<font color="FFBB55">∬</font> Episode進行度 <font color="FFBB55">∬</font>
+				<font color="FFBB55">∬</font> エピソード進行度 <font color="FFBB55">∬</font>
 			]]></text>
-			<selection next="epi_es" text="Estivaエピ" />
-			<selection next="epi_yoi" text="So-il学院エピ" />
+			<selection next="epi_es" text="エスティバーエピ" />
+			<selection next="epi_yoi" text="宵月学院エピ" />
 			<selection next="look" text="現在の状態を見る" />
 		</dialog>
 
 		<dialog name="epi_es" cutin="0" closebutton="1">
 			<text><![CDATA[
-				<font color="FFBB55">∬</font> Estiva　Episode進行度 <font color="FFBB55">∬</font>
+				<font color="FFBB55">∬</font> エスティバー　エピソード進行度 <font color="FFBB55">∬</font>
 			]]></text>
 			<selection next="epi_es_up" text="1つ 進める" />
-			<selection next="epi_es_down" text="1つ Return" />
+			<selection next="epi_es_down" text="1つ 戻る" />
 			<selection next="epi_es_reset" text="0にリセット" />
 		</dialog>
 
@@ -47,10 +47,10 @@
 
 		<dialog name="epi_yoi" cutin="0" closebutton="1">
 			<text><![CDATA[
-				<font color="FFBB55">∬</font> So-il　Episode進行度 <font color="FFBB55">∬</font>
+				<font color="FFBB55">∬</font> 宵月　エピソード進行度 <font color="FFBB55">∬</font>
 			]]></text>
 			<selection next="epi_yoi_up" text="1つ 進める" />
-			<selection next="epi_yoi_down" text="1つ Return" />
+			<selection next="epi_yoi_down" text="1つ 戻る" />
 			<selection next="epi_yoi_reset" text="0にリセット" />
 		</dialog>
 
@@ -80,8 +80,8 @@
 		<dialog name="look2" cutin="0" closebutton="1">
 			<text><![CDATA[
 				現在　<font color="00FFBD">${local.grade}</font>年生<br>
-				　Estiva 第 <font color="00FFBD">${peke.epi.es}</font>エピ　<font color="00FFBD">${peke.temp}</font> Clear<br>
-				　So-il学院　第 <font color="00FFBD">${peke.epi.yoi}</font>エピ　<font color="00FFBD">${peke.temp2}</font> Clear
+				　エスティバー 第 <font color="00FFBD">${peke.epi.es}</font>エピ　<font color="00FFBD">${peke.temp}</font> クリア<br>
+				　宵月学院　第 <font color="00FFBD">${peke.epi.yoi}</font>エピ　<font color="00FFBD">${peke.temp2}</font> クリア
 			]]></text>
 			<selection next="menu" text="続ける" />
 			<selection text="終わる" />

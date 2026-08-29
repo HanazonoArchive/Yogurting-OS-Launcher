@@ -24,7 +24,7 @@
 		<!-- ▼クエスト -->
 		<dialog name="meiyen_quest_no" cutin="0" closebutton="1">
 			<text><![CDATA[
-				Thank you、でも今は特に頼みたいことはないわ。
+				ありがとう、でも今は特に頼みたいことはないわ。
 			]]></text>
 			<selection text="そう？　またね" />
 		</dialog>
@@ -33,7 +33,7 @@
 			<text><![CDATA[
 				頼みって、何のこと？
 			]]></text>
-			<selection text="No、お元気で" />
+			<selection text="いいえ、お元気で" />
 		</dialog>
 	</npc>
 </field>

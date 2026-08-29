@@ -34,8 +34,8 @@
 				<set varname="lyna.nana.cutin" value="2"/>
 				<set varname="lyna.nana.msg">
 					<value><![CDATA[
-						I lost... sniff.<br>
-						But next time, I'm definitely going to win!
+						負けちゃった…くすん。<br>
+						でも、次はボクが勝つんだから！
 					]]></value>
 				</set>
 				<set varname="lyna.nana.select" value="うん、次はナナが勝つかもね"/>
@@ -45,8 +45,8 @@
 				<set varname="lyna.nana.cutin" value="1"/>
 				<set varname="lyna.nana.msg">
 					<value><![CDATA[
-						Yay! I win!<br>
-						That's my true skill!
+						やった～、ボクの勝ち！<br>
+						これがボクの実力さ！
 					]]></value>
 				</set>
 				<set varname="lyna.nana.select" value="つ、次は本気出すよ！"/>

@@ -1,0 +1,6 @@
+﻿[10:06:53.611] [Logging] Server log initialized at 'C:\Users\Hanazono Archive\Desktop\Yogurting Game\server_modern\logs\server_20260829_100653.log'
+[10:06:53.640] [Server] [Config] Loaded configuration from 'C:\Users\Hanazono Archive\Desktop\Yogurting Game\server_modern\config\server.json'
+[10:06:53.640] [Server] [Config] Shadow / Differential Mode Enabled: Listening on shadow ports (30000, 30002, 30003, 30004)
+[10:06:53.945] [Server] [System] 'Yogurting Online English Revival' is ONLINE on all ports (Login: 30000, Field: 30002, Episode: 30003, Comm: 30004)!
+[10:06:53.946] [Server] [System] Type 'help' for available server commands.
+

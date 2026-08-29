@@ -35,9 +35,9 @@
 		<!-- ▼エス生セリフ -->
 		<dialog name="somnyang_es1" cutin="0" closebutton="1">
 			<text><![CDATA[
-				Freshmanのみなさま、御入学をお祝い申し上げます。<br>
-				御入学なさったばかりですから、手始めに<font color="00FFBD">Libraryのモンスター退治や</font><br>
-				<font color="00FFBD">廊下いっぱいの箱</font>Episodeをなさってみて下さいませ。
+				新入生のみなさま、御入学をお祝い申し上げます。<br>
+				御入学なさったばかりですから、手始めに<font color="00FFBD">図書館のモンスター退治や</font><br>
+				<font color="00FFBD">廊下いっぱいの箱</font>エピソードをなさってみて下さいませ。
 			]]></text>
 			<selection next="somnyang_quest_no" text="新しいクエスト表示" />
 			<selection next="somnyang_quest_miss" text="クエスト達成を報告する" />
@@ -45,8 +45,8 @@
 
 		<dialog name="somnyang_es2" cutin="0" closebutton="1">
 			<text><![CDATA[
-					EpisodeClearをお祝い申し上げます。この後はワープポイントを通じて<br>
-					1Fに降り、School Building前にいらっしゃる<font color="00FFBD">Prof. Ben</font>にお会いしてみて<br>
+					エピソードクリアをお祝い申し上げます。この後はワープポイントを通じて<br>
+					1階に降り、校舎前にいらっしゃる<font color="00FFBD">ベン先生</font>にお会いしてみて<br>
 下さいませ。いろいろな事柄を教えて下さるはずですわ。
 			]]></text>
 			<selection next="somnyang_quest_no" text="新しいクエスト表示" />
@@ -55,7 +55,7 @@
 
 		<dialog name="somnyang_es3" cutin="0" closebutton="1">
 			<text><![CDATA[
-				ああ…学校にLatchuが出るだなんて…
+				ああ…学校にラッチューが出るだなんて…
 			]]></text>
 			<selection next="somnyang_quest_no" text="新しいクエスト表示" />
 			<selection next="somnyang_quest_miss" text="クエスト達成を報告する" />
@@ -63,7 +63,7 @@
 
 		<dialog name="somnyang_es4" cutin="0" closebutton="1">
 			<text><![CDATA[
-				Latchuを退治して下さって、Thank youございます。今後ともよろしくお願い申し上げます。
+				ラッチューを退治して下さって、ありがとうございます。今後ともよろしくお願い申し上げます。
 			]]></text>
 			<selection next="somnyang_quest_no" text="新しいクエスト表示" />
 			<selection next="somnyang_quest_miss" text="クエスト達成を報告する" />
@@ -72,7 +72,7 @@
 		<!-- ▼宵生セリフ -->
 		<dialog name="somnyang_yoi1" cutin="0" closebutton="1">
 			<text><![CDATA[
-				ご機嫌いかがでしょうか。EstivaでStudentを指導しております、Somunyangと申します。Estivaにはどのような御用でいらっしゃったのですか。
+				ご機嫌いかがでしょうか。エスティバーで生徒を指導しております、ソムンヤンと申します。エスティバーにはどのような御用でいらっしゃったのですか。
 			]]></text>
 			<selection next="somnyang_quest_no" text="新しいクエスト表示" />
 			<selection next="somnyang_quest_miss" text="クエスト達成を報告する" />
@@ -80,7 +80,7 @@
 
 		<dialog name="somnyang_yoi2" cutin="0" closebutton="1">
 			<text><![CDATA[
-				ああ…学校にLatchuが出るだなんて…なんと汚らわしいのかしら…
+				ああ…学校にラッチューが出るだなんて…なんと汚らわしいのかしら…
 			]]></text>
 			<selection next="somnyang_quest_no" text="新しいクエスト表示" />
 			<selection next="somnyang_quest_miss" text="クエスト達成を報告する" />
@@ -88,7 +88,7 @@
 
 		<dialog name="somnyang_yoi3" cutin="0" closebutton="1">
 			<text><![CDATA[
-				Latchuを退治して下さって、Thank youございます。<br>
+				ラッチューを退治して下さって、ありがとうございます。<br>
 				今後ともよろしくお願い申し上げます。
 			]]></text>
 			<selection next="somnyang_quest_no" text="新しいクエスト表示" />
@@ -106,7 +106,7 @@
 
 		<dialog name="somnyang_quest_miss" cutin="0" closebutton="1">
 			<text><![CDATA[
-				わたくし、何もお願いしてYesないと思うのですけれど、いかがでしょう？
+				わたくし、何もお願いしてはいないと思うのですけれど、いかがでしょう？
 			]]></text>
 			<selection text="そうでした、すみません" />
 		</dialog>

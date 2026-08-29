@@ -47,9 +47,9 @@
 		<!-- ▼宵生セリフ -->
 		<dialog name="suiren_yoi1" cutin="0" closebutton="1">
 			<text><![CDATA[
-				ご入学をお祝い申し上げます。Episodeはなさってみましたか？<br>
-				まず、School Building前にいらっしゃる<font color="00FFBD">SamTeacher</font>のそばの<font color="00FFBD">Episodeゲート</font>に入って、<br>
-				<font color="00FFBD">箱でいっぱいの廊下</font>に行ってみてYesかがですか。
+				ご入学をお祝い申し上げます。エピソードはなさってみましたか？<br>
+				まず、校舎前にいらっしゃる<font color="00FFBD">サム先生</font>のそばの<font color="00FFBD">エピソードゲート</font>に入って、<br>
+				<font color="00FFBD">箱でいっぱいの廊下</font>に行ってみてはいかがですか。
 			]]></text>
 			<selection next="suiren_quest_no" text="新しいクエスト表示" />
 			<selection next="suiren_quest_miss" text="クエスト達成を報告する" />
@@ -57,8 +57,8 @@
 
 		<dialog name="suiren_yoi2" cutin="0" closebutton="1">
 			<text><![CDATA[
-				EpisodeClear、お祝い申し上げます。この後は、<font color="00FFBD">ミニマップ</font>左下にある<br>
-<font color="00FFBD">ワープポイント</font>で学校へいらっしゃって、<font color="00FFBD">Sam</font>Teacherに会ってみて下さい。<br>
+				エピソードクリア、お祝い申し上げます。この後は、<font color="00FFBD">ミニマップ</font>左下にある<br>
+<font color="00FFBD">ワープポイント</font>で学校へいらっしゃって、<font color="00FFBD">サム</font>先生に会ってみて下さい。<br>
 他の基本的なことについて教えて下さいますよ。
 				]]></text>
 			<selection next="suiren_quest_no" text="新しいクエスト表示" />
@@ -83,7 +83,7 @@
 
 		<dialog name="suiren_yoi5" cutin="0" closebutton="1">
 			<text><![CDATA[
-				Hello。今日はどのようなご用でしょうか？
+				こんにちは。今日はどのようなご用でしょうか？
 				]]></text>
 			<selection next="suiren_quest_no" text="新しいクエスト表示" />
 			<selection next="suiren_quest_miss" text="クエスト達成を報告する" />
@@ -92,7 +92,7 @@
 		<dialog name="suiren_yoi6" cutin="0" closebutton="1">
 			<text><![CDATA[
 				お弁当のことでしたら、どうぞお気づかいなく。<br>
-				そういえば、StudentたちがSchool Groundsに集まって競技をしてましたが、一緒に楽しんでみてYesかがでしょう？
+				そういえば、生徒たちがグラウンドに集まって競技をしてましたが、一緒に楽しんでみてはいかがでしょう？
 				]]></text>
 			<selection next="suiren_quest_no" text="新しいクエスト表示" />
 			<selection next="suiren_quest_miss" text="クエスト達成を報告する" />
@@ -128,7 +128,7 @@
 		<dialog name="suiren_es4" cutin="0" closebutton="1">
 			<text><![CDATA[
 				お弁当のことでしたら、どうぞお気づかいなく。<br>
-				そういえばStudentたちがSchool Groundsに集まって競技をしてましたが、一緒に楽しんでみてYesかがですか？
+				そういえば生徒たちがグラウンドに集まって競技をしてましたが、一緒に楽しんでみてはいかがですか？
 			]]></text>
 			<selection next="suiren_quest_no" text="新しいクエスト表示" />
 			<selection next="suiren_quest_miss" text="クエスト達成を報告する" />
@@ -137,14 +137,14 @@
 		<!-- ▼クエスト -->
 		<dialog name="suiren_quest_no" cutin="0" closebutton="1">
 			<text><![CDATA[
-				Thank youございます、今は特に助けが必要なことはないです。
+				ありがとうございます、今は特に助けが必要なことはないです。
 			]]></text>
 			<selection text="そう？　またね" />
 		</dialog>
 
 		<dialog name="suiren_quest_miss" cutin="0" closebutton="1">
 			<text><![CDATA[
-				Yes？　何を終わらせたのですか？
+				はい？　何を終わらせたのですか？
 			]]></text>
 			<selection text="ううん、またね" />
 		</dialog>

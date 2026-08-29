@@ -7,7 +7,7 @@
   "HasCharacter": true,
   "CharaId": 256,
   "CharacterId": 256,
-  "SessionKey": 508140,
+  "SessionKey": 506548,
   "School": 1,
   "Gender": 2,
   "FaceId": 42,
@@ -61,15 +61,15 @@
   "TaffPoints": 0,
   "FieldId": 91,
   "Position": {
-    "X": 220,
-    "Y": 99,
+    "X": 113,
+    "Y": 122,
     "Z": 0,
     "Heading": 0
   },
   "SaveFieldId": 91,
   "SavePosition": {
-    "X": 220,
-    "Y": 99,
+    "X": 113,
+    "Y": 122,
     "Z": 0,
     "Heading": 0
   },
@@ -688,25 +688,27 @@
   },
   "LearnedSkills": [],
   "CompletedEpisodes": [],
+  "EpisodeYoi": 0,
+  "EpisodeEs": 0,
   "UnlockedTitles": [],
   "ActiveBuffs": [
     {
       "EffectType": 7300,
       "DurationSeconds": 2592000,
       "ActivatedAt": "2026-08-26T23:43:06.1444261Z",
-      "RemainingSeconds": 2457789
+      "RemainingSeconds": 2409922
     },
     {
       "EffectType": 7400,
       "DurationSeconds": 2592000,
       "ActivatedAt": "2026-08-26T23:43:12.4274453Z",
-      "RemainingSeconds": 2457795
+      "RemainingSeconds": 2409928
     },
     {
       "EffectType": 7000,
       "DurationSeconds": 2592000,
       "ActivatedAt": "2026-08-26T23:43:14.5546298Z",
-      "RemainingSeconds": 2457797
+      "RemainingSeconds": 2409930
     }
   ]
 }

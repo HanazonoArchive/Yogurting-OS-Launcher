@@ -64,14 +64,17 @@ namespace Yogurting.Server.Handlers
                     break;
                 }
 
-                // 3. Friend Request (Opcode 30504 / 0x7728) -> TCommSession.sub_006C62F8
+                // 3. Client CheckVersion handshake on Comm Port
+                case PacketOpcode.MsgCheckVersionNtf:
+                    break;
+
+                // 4. Friend Request (Opcode 30504 / 0x7728) -> TCommSession.sub_006C62F8
                 case PacketOpcode.MsgCommFriendProposeReq:
                     Console.WriteLine($"[CommServer] Friend Request received from {session.RemoteEndPoint}");
                     break;
 
                 default:
-                    Console.WriteLine($"[CommServer] Unknown opcode 0x{opcode:X4} ({opcode}) from {session.RemoteEndPoint}, echoing...");
-                    await session.SendAsync(YogurtingPackets.MakeCommEchoNtf());
+                    Console.WriteLine($"[CommServer] Unknown opcode 0x{opcode:X4} ({opcode}) from {session.RemoteEndPoint}");
                     break;
             }
         }

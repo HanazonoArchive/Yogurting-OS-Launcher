@@ -189,6 +189,9 @@ namespace Yogurting.Server.Handlers
             }
             await session.SendAsync(YogurtingPackets.MakeGameFieldLoadingStartNtf(player.FieldId, player.Position.X, player.Position.Y, isHuntField, monCount));
 
+            // 9. TMsgGameCharaNameInfoNtf (0x7963) - Exact 56B match with Delphi Quartet
+            await session.SendAsync(YogurtingPackets.MakeGameCharaNameInfoNtf(-1, (int)player.School, 0, string.Empty, 0, null, string.Empty));
+
             Logger.Info($"[FieldServer] '{player.CharacterName}' (Entity #{entityId}) field loading sequence dispatched for Field {player.FieldId} ({player.Position})! Awaiting map load (0x795B)...");
         }
 

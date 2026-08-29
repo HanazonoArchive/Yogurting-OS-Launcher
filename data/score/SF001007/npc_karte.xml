@@ -20,7 +20,7 @@
 		<!-- ▼エス生セリフ -->
 		<dialog name="karte_es1" cutin="0" closebutton="1">
 			<text><![CDATA[
-				Hello、私はKarte！　Estiva学園看護部の部員よ。<br>
+				こんにちは、私はカルテ！　エスティバー学園看護部の部員よ。<br>
 				もし <font color="00FFBD">5色のカラーボール</font>を見つけたら、私のところに持ってきてね。<br>
 				プレゼントと交換してあげるから！
 			]]></text>
@@ -32,7 +32,7 @@
 		<!-- ▼宵生セリフ -->
 		<dialog name="karte_yoi1" cutin="0" closebutton="1">
 			<text><![CDATA[
-				Estivaにようこそ！　私はKarte、Estiva学園の看護部員よ。<br>
+				エスティバーにようこそ！　私はカルテ、エスティバー学園の看護部員よ。<br>
 				もし <font color="00FFBD">5色のカラーボール</font>を見つけたら、私のところに持ってきてね。<br>
 				プレゼントと交換してあげるから！
 			]]></text>
@@ -69,9 +69,9 @@
 
 		<dialog name="karte_ball2" cutin="0" closebutton="1">
 			<text><![CDATA[
-				<font color="00FFBD">｢ヨ｣｢ー｣｢グ｣｢ル｣｢！｣</font>の 5色のボールは、EpisodeをClearすると<br>
-				手に入るわよ。Episodeによって手に入るボールが違うらしいから、<br>
-				いろんなEpisodeにチャレンジしてみるといいわよ！
+				<font color="00FFBD">｢ヨ｣｢ー｣｢グ｣｢ル｣｢！｣</font>の 5色のボールは、エピソードをクリアすると<br>
+				手に入るわよ。エピソードによって手に入るボールが違うらしいから、<br>
+				いろんなエピソードにチャレンジしてみるといいわよ！
 			]]></text>
 			<selection text="うん、わかった！" />
 		</dialog>
@@ -79,7 +79,7 @@
 		<dialog name="karte_ball3" cutin="0" closebutton="1">
 			<text><![CDATA[
 				あれっ、足りないボールがあるみたいよ？<br>
-				Prof. Biancaの命令で、5色セットじゃないと交換できない決まりなの、<br>
+				ビアンカ先生の命令で、5色セットじゃないと交換できない決まりなの、<br>
 				ゴメンね！　足りないボールを見つけて揃えられたら、また来てね！
 			]]></text>
 			<selection text="わかった、また来るね" />
@@ -96,11 +96,11 @@
 
 		<dialog name="karte_ball91" cutin="0" closebutton="1">
 			<text><![CDATA[
-				Yes！　1st Year用のヨーグル！ボックスよ！<br>
+				はい！　1年生用のヨーグル！ボックスよ！<br>
 				もしかしたらレアアイテムが出るかも？<br>
 				いいものが入ってるといいわね！
 			]]></text>
-			<selection text="Thank you!" />
+			<selection text="ありがとう！" />
 		</dialog>
 	</npc>
 </field>

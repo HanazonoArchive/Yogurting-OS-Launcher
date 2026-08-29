@@ -17,7 +17,7 @@
 			]]></text>
 			<selection next="command1_1" text="コマンドについて教えて下さい" />
 			<selection next="exitem_first" text="アイテムを交換して下さい" />
-			<selection text="Goodbye" />
+			<selection text="さようなら" />
 		</dialog>
 		<script name="command1_1">
 			<set varname="lyna.sam.first" value="1"/>
@@ -33,13 +33,13 @@
 				コマンドはチャット欄で使うんだよ。<br>
 				試しに<font color="FF0000">/list</font>と打ってみるといいね。
 			]]></text>
-			<selection text="Thank youございました" />
+			<selection text="ありがとうございました" />
 		</dialog>
 		
 		<!-- アイテム交換 -->
 		<dialog name="exitem_first" cutin="0" closebutton="1">
 			<text><![CDATA[
-				<font color="00FFFF">Freshman牛乳 5 個</font> と <font color="00FFFF">スティンガー</font> を交換する？
+				<font color="00FFFF">新入生牛乳 5 個</font> と <font color="00FFFF">スティンガー</font> を交換する？
 			]]></text>
 			<selection next="exitem_check" text="お願いします" />
 			<selection next="exitem_cancel" text="やっぱりいいです" />
@@ -54,9 +54,9 @@
 		</script>
 		<dialog name="exitem_succeeded" cutin="0" closebutton="1">
 			<text><![CDATA[
-				Yes、<font color="00FFFF">スティンガー</font> ね。
+				はい、<font color="00FFFF">スティンガー</font> ね。
 			]]></text>
-			<selection text="Thank youございました" />
+			<selection text="ありがとうございました" />
 		</dialog>
 		<dialog name="exitem_failed" cutin="0" closebutton="1">
 			<text><![CDATA[
@@ -77,11 +77,11 @@
 	<npc id="557" shell="76" x="189" y="188" dir="4" init="hachi1">
 		<dialog name="hachi1" cutin="0" closebutton="1">
 			<text><![CDATA[
-				ヤッホー！　私はHachi！　So-ilの飼育部員なんだ～！<br>あ、GloveのSkillのことなら私に任せて！
+				ヤッホー！　私はハチ！　宵月の飼育部員なんだ～！<br>あ、グローブのスキルのことなら私に任せて！
 			]]></text>
 			<selection next="hachi_showquest" text="新しいクエストを表示" />
 			<selection next="hachi_report" text="クエスト達成を報告する" />
-			<selection next="hachi_skill" text="Skillを習う" />
+			<selection next="hachi_skill" text="スキルを習う" />
 		</dialog>
 		<dialog name="hachi_showquest" cutin="0" closebutton="1">
 			<text><![CDATA[
@@ -126,7 +126,7 @@
 		</script>
 		<dialog name="nana1_1" cutin="0" closebutton="1">
 			<text><![CDATA[
-				はじめまして！ボクは<font color="00FFFF">Nana</font>。<br>
+				はじめまして！ボクは<font color="00FFFF">ナナ</font>。<br>
 				エミュに繋ぐのは初めてかな。
 			]]></text>
 			<selection next="nana1_2" text="はじめまして！" />
@@ -137,7 +137,7 @@
 		</script>
 		<dialog name="nana1_3" cutin="0" closebutton="1">
 			<text><![CDATA[
-				じゃあまず<font color="00FFFF">SamTeacher</font>に話しかけてみて！<br>
+				じゃあまず<font color="00FFFF">サム先生</font>に話しかけてみて！<br>
 			]]></text>
 			<selection next="nana1_4" text="わかった！" />
 		</dialog>
@@ -146,7 +146,7 @@
 		<!-- サム先生に話しかけてない -->
 		<dialog name="nana2" cutin="0" closebutton="1">
 			<text><![CDATA[
-				SamTeacherはすぐそこにいるよ。<br>
+				サム先生はすぐそこにいるよ。<br>
 				じゃあ、また後でね！
 			]]></text>
 			<selection text="うん、また後で" />
@@ -162,10 +162,10 @@
 		</script>
 		<dialog name="nana3_2" cutin="0" closebutton="1">
 			<text><![CDATA[
-				SamTeacherに<font color="00FFFF">コマンド</font>の使い方を教えてもらったみたいだね。<br>
+				サム先生に<font color="00FFFF">コマンド</font>の使い方を教えてもらったみたいだね。<br>
 				それじゃあ、エミュを楽しんでね！
 			]]></text>
-			<selection text="Thank you!" />
+			<selection text="ありがとう！" />
 		</dialog>
 		
 		<!-- サム先生に話しかけた後2回目以降 -->
@@ -175,7 +175,7 @@
 			]]></text>
 			<selection next="nana_janken_init" text="磯野！ジャンケンしようぜ！" />
 			<selection next="nana_exp_check" text="おつげをきく" />
-			<selection next="nana_next_menu" text="Next" />
+			<selection next="nana_next_menu" text="次へ" />
 		</dialog>
 		
 		<!-- おつげをきく -->
@@ -202,13 +202,13 @@ MaxExp : ${local.maxexp}]]></text>
 				${local.name}が つぎのレベルになるには<br>
 				あと${local.maxexp}の けいけんが ひつようだよ！
 			]]></text>
-			<selection text="Thank you!" />
+			<selection text="ありがとう！" />
 		</dialog>
 		<dialog name="nana_exp_over" cutin="0" closebutton="1">
 			<text><![CDATA[
 				${local.name}は もうじゅうぶんに つよいよ！
 			]]></text>
-			<selection text="Thank you!" />
+			<selection text="ありがとう！" />
 		</dialog>
 		
 		<!-- ジャンケン -->
@@ -219,11 +219,11 @@ MaxExp : ${local.maxexp}]]></text>
 		<dialog name="nana_janken_select" cutin="0" closebutton="1">
 			<text><![CDATA[
 				これまでの成績はボクの${lyna.nana.win}勝${lyna.nana.lose}敗${lyna.nana.draw}分けだね。<br>
-				Here we go! Rock, Paper, Scissors... Shoot!<br>
+				いくよ！ジャンケン、ぽん！<br>
 			]]></text>
-			<selection next="nana_janken_judge" text="Rock!" op="set" varname="hand" value="0" />
-			<selection next="nana_janken_judge" text="Scissors!" op="set" varname="hand" value="1" />
-			<selection next="nana_janken_judge" text="Paper!" op="set" varname="hand" value="2" />
+			<selection next="nana_janken_judge" text="グー！" op="set" varname="hand" value="0" />
+			<selection next="nana_janken_judge" text="チョキ！" op="set" varname="hand" value="1" />
+			<selection next="nana_janken_judge" text="パー！" op="set" varname="hand" value="2" />
 		</dialog>
 		<script name="nana_janken_judge">
 			<call name="lyna.nana.janken.judge"/>
@@ -262,7 +262,7 @@ MaxExp : ${local.maxexp}]]></text>
 			<text><![CDATA[
 				進級おめでとう！<br>
 			]]></text>
-			<selection text="Thank you!" />
+			<selection text="ありがとう！" />
 		</dialog>
 		<dialog name="nana_gradeup_fail" cutin="0" closebutton="1">
 			<text><![CDATA[

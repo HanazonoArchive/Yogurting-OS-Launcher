@@ -5,11 +5,11 @@
 	<npc id="4" shell="3" x="110" y="145" dir="3" init="init">
 		<dialog name="init" cutin="0" closebutton="1">
 			<text><![CDATA[
-				Welcome~<br>
-				What would you like to buy today?
+				いらっしゃい～<br>
+				今日は何買うんや？
 			]]></text>
-			<selection next="buy" text="Buy Items" />
-			<selection next="sell" text="Sell Items" />
+			<selection next="buy" text="買い物をする" />
+			<selection next="sell" text="アイテムを売る" />
 		</dialog>
 		<buy name="buy">
 			<coitem type="10001" price="50" />		<!-- 三角牛乳 -->

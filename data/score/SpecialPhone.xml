@@ -4,9 +4,9 @@
 	<npc id="4" shell="3" x="120" y="47" dir="7" init="init" >
 		<dialog name="init" cutin="0" closebutton="1">
 			<text><![CDATA[
-				YesYes`A‰½‚Å‚à‘µ‚Á‚Ä‚é’Ê”ÌŠwZStore 2†I@‚²’•¶‚ÍH@”z’B‚àƒ‚ƒ`ƒƒ“‚n‚j‚â‚ÅI
+				‚Í‚¢‚Í‚¢`A‰½‚Å‚à‘µ‚Á‚Ä‚é’Ê”ÌŠwZw”ƒ 2†I@‚²’•¶‚ÍH@”z’B‚àƒ‚ƒ`ƒƒ“‚n‚j‚â‚ÅI
 			]]></text>
-			<selection next="buy" text="Buy Items" />
+			<selection next="buy" text="”ƒ‚¢•¨‚ð‚·‚é" />
 		</dialog>
 		<buy name="buy">
 			<coitem type="10001" price="50" />	<!-- ŽOŠp‹“û -->
@@ -52,9 +52,9 @@
 	<npc id="4" shell="3" x="120" y="47" dir="7" init="init" >
 		<dialog name="init" cutin="0" closebutton="1">
 			<text><![CDATA[
-				YesYes`A‰½‚Å‚à‘µ‚Á‚Ä‚é’Ê”ÌŠwZStore 27†I@‚²’•¶‚ÍH@”z’B‚àƒ‚ƒ`ƒƒ“‚n‚j‚â‚ÅI
+				‚Í‚¢‚Í‚¢`A‰½‚Å‚à‘µ‚Á‚Ä‚é’Ê”ÌŠwZw”ƒ 27†I@‚²’•¶‚ÍH@”z’B‚àƒ‚ƒ`ƒƒ“‚n‚j‚â‚ÅI
 			]]></text>
-			<selection next="buy" text="Buy Items" />
+			<selection next="buy" text="”ƒ‚¢•¨‚ð‚·‚é" />
 		</dialog>
 		<buy name="buy">
 			<coitem type="10001" price="50" />	<!-- ŽOŠp‹“û -->

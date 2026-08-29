@@ -313,13 +313,26 @@ namespace Yogurting.Server.Handlers.Field
         }
 
         /// <summary>
-        /// 0x793B (31035): MsgGameItemUseReq - Use Consumable Item
+        /// 0x793B (31035): MsgGameItemUseReq - Use Consumable Item or Interact with Field Object (Book of Knowledge)
         /// </summary>
         [PacketHandler(PacketOpcode.MsgGameItemUseReq)]
         public async Task HandleItemUseAsync(PlayerSessionState state, byte[] packetData)
         {
             try
             {
+                int itemId = packetData.Length >= 10 ? BitConverter.ToInt32(packetData, 6) : 0;
+
+                // If itemId has an NPC/object dialogue script (e.g. Book of Knowledge #600 / #486)
+                if (_gameDb != null && (_gameDb.NpcScripts.ContainsKey(itemId) || itemId == 600 || itemId == 486))
+                {
+                    if (_repository != null)
+                    {
+                        var npcHandler = new NpcAndDialogueHandlers(_gameDb, _repository, _broadcastDelegate);
+                        await npcHandler.HandleNpcDialogReqAsync(state, packetData);
+                    }
+                    return;
+                }
+
                 state.Player.Hp = Math.Min(state.Player.MaxHp, state.Player.Hp + 50);
                 await state.Session.SendAsync(YogurtingPackets.MakeGameSetHpNtf((ushort)state.Player.CurrentHp));
                 await state.Session.SendAsync(YogurtingPackets.MakeGameSetStateNtf(state.Player));

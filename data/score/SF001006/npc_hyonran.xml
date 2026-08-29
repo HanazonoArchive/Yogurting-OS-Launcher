@@ -49,7 +49,7 @@
 
 		<dialog name="hyonran_es3" cutin="0" closebutton="1">
 			<text><![CDATA[
-				羊が一匹消えた…Yochimaruさんの話だと…<br>
+				羊が一匹消えた…四刀丸さんの話だと…<br>
 				僕がいない時にモンスターが出たんで…<br>
 				羊たちを飼育場に連れ戻してくれたそうだけど…<br>
 				一匹足りない…
@@ -61,7 +61,7 @@
 		<!-- ▼宵生セリフ -->
 		<dialog name="hyonran_yoi1" cutin="0" closebutton="1">
 			<text><![CDATA[
-				…ここは飼育場で、僕はHyonran…。
+				…ここは飼育場で、僕はヒョンラン…。
 			]]></text>
 			<selection next="hyonran_quest_no" text="新しいクエスト表示" />
 			<selection next="hyonran_quest_miss" text="クエスト達成を報告する" />

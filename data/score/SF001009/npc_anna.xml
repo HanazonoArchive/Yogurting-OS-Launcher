@@ -4,24 +4,24 @@
 	<npc id="365" shell="78" x="66" y="77" dir="6" init="init">
 		<dialog name="init" cutin="0" closebutton="1">
 			<text><![CDATA[
-				やっほー！　わたしは <font color="00FFBD">Anna</font>！<br>
-				<font color="00FFBD">Estiva</font>に入学おめでとう！
+				やっほー！　わたしは <font color="00FFBD">アンナ</font>！<br>
+				<font color="00FFBD">エスティバー</font>に入学おめでとう！
 			]]></text>
 			<selection next="talk2" text="やっほ～！" />
 		</dialog>
 
 		<dialog name="talk2" cutin="0" closebutton="1">
 			<text><![CDATA[
-				ヨーグルティングをプレイするのに必要な、<font color="00FFBD">Episodeゲート</font>のことを<br>
+				ヨーグルティングをプレイするのに必要な、<font color="00FFBD">エピソードゲート</font>のことを<br>
 				教えてあげるね！
 			]]></text>
-			<selection next="talk3" text="Episodeゲート？" />
+			<selection next="talk3" text="エピソードゲート？" />
 		</dialog>
 
 		<dialog name="talk3" cutin="0" closebutton="1">
 			<text><![CDATA[
-				<font color="00FFBD">Episodeゲート</font>は、<font color="00FFBD">ヨーグルティング</font>で一番の特徴になってる<br>
-				 <font color="00FFBD">Episode</font>をプレイするために、ぜ～ったい必要なの。<br>
+				<font color="00FFBD">エピソードゲート</font>は、<font color="00FFBD">ヨーグルティング</font>で一番の特徴になってる<br>
+				 <font color="00FFBD">エピソード</font>をプレイするために、ぜ～ったい必要なの。<br>
 				使い方は簡単だから、よ～く聞いて覚えてね。
 			]]></text>
 			<selection next="talk4" text="うん。" />
@@ -29,9 +29,9 @@
 
 		<dialog name="talk4" cutin="0" closebutton="1">
 			<text><![CDATA[
-				まず、Episodeゲートをクリック～！　<font color="00FFBD">ルームを作る</font>ボタンをクリック～！<br>
-				Episodeを選んで<font color="00FFBD">Confirm</font>を押すと待機室！<br>
-				準備OKならEpisodeを<font color="00FFBD">スタート</font>！　簡単でしょ、ラララ～！
+				まず、エピソードゲートをクリック～！　<font color="00FFBD">ルームを作る</font>ボタンをクリック～！<br>
+				エピソードを選んで<font color="00FFBD">確認</font>を押すと待機室！<br>
+				準備OKならエピソードを<font color="00FFBD">スタート</font>！　簡単でしょ、ラララ～！
 			]]></text>
 			<selection next="talk5" text="ルームを作る、選ぶ、スタート。だね？" />
 		</dialog>
@@ -40,9 +40,9 @@
 			<text><![CDATA[
 				その通り！　それと、大勢でプレイした方がアイテムもたくさん出るから、<br>
 				みんなで力を合わせて楽しんでみてね！<br>
-				その他のことは、実際に<font color="00FFBD">Episode</font>をやればわかるようになってるよ！
+				その他のことは、実際に<font color="00FFBD">エピソード</font>をやればわかるようになってるよ！
 			]]></text>
-			<selection next="talk6" text="わかった、それじゃEpisodeゲートをクリックしてみるね！" />
+			<selection next="talk6" text="わかった、それじゃエピソードゲートをクリックしてみるね！" />
 		</dialog>
 
 		<dialog name="talk6" cutin="0" closebutton="1">
@@ -51,7 +51,7 @@
 				がんばって～！<br>
 				それじゃ学校で会おうね！
 			]]></text>
-			<selection text="うん！　Thank you！" />
+			<selection text="うん！　ありがとう！" />
 		</dialog>
 	</npc>
 </field>

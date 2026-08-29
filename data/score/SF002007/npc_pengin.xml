@@ -22,7 +22,7 @@
 			<text><![CDATA[				
 					いらっしゃい、今日はどないしたん？
 				]]></text>
-			<selection next="busST" text="Estivaに行きたい" />
+			<selection next="busST" text="エスティバーに行きたい" />
 			<selection next="pengin_quest_no" text="新しいクエスト表示" />
 			<selection next="pengin_quest_miss" text="クエスト達成を報告する" />
 		</dialog>
@@ -30,9 +30,9 @@
 		<!-- ▼エス生セリフ -->
 		<dialog name="pengin_es1" cutin="0" closebutton="1">
 			<text><![CDATA[
-				お～、Estivaからここまで遊びに来たんやね、うれしいなぁ。
+				お～、エスティバーからここまで遊びに来たんやね、うれしいなぁ。
 			]]></text>
-			<selection next="busST" text="Estivaに行きたい" />
+			<selection next="busST" text="エスティバーに行きたい" />
 			<selection next="pengin_quest_no" text="新しいクエスト表示" />
 			<selection next="pengin_quest_miss" text="クエスト達成を報告する" />
 		</dialog>

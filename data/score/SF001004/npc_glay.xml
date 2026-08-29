@@ -35,15 +35,15 @@
 		<!-- ▼エス生セリフ -->
 		<dialog name="glay_es1" cutin="0" closebutton="1">
 			<text><![CDATA[
-				入学おめでとう。入学したばかりですから、まずは一番基本的な <font color="00FFBD">Episode</font>をやってみるといいですよ。School Building前にいるProf. Benのそばの<font color="00FFBD">Episodeゲート</font>に入って、<font color="00FFBD">「廊下いっぱいの箱」</font>Episodeを一度やってみて下さい。
+				入学おめでとう。入学したばかりですから、まずは一番基本的な <font color="00FFBD">エピソード</font>をやってみるといいですよ。校舎前にいるベン先生のそばの<font color="00FFBD">エピソードゲート</font>に入って、<font color="00FFBD">「廊下いっぱいの箱」</font>エピソードを一度やってみて下さい。
 			]]></text>
-			<selection text="Yes、Episodeをやってみます" />
+			<selection text="はい、エピソードをやってみます" />
 		</dialog>
 
 		<dialog name="glay_es2" cutin="0" closebutton="1">
 			<text><![CDATA[
-				もう、<font color="00FFBD">Episode</font>のやり方はわかりましたよね？<br>
-				それでは、階段にある<font color="00FFBD">ワープポイント</font>を利用して下の階に降り、School Buildingの外に出て<font color="00FFBD">Prof. Ben</font>に会ってみて下さい。
+				もう、<font color="00FFBD">エピソード</font>のやり方はわかりましたよね？<br>
+				それでは、階段にある<font color="00FFBD">ワープポイント</font>を利用して下の階に降り、校舎の外に出て<font color="00FFBD">ベン先生</font>に会ってみて下さい。
 
 			]]></text>
 			<selection next="glay_quest_no" text="新しいクエスト表示" />
@@ -53,7 +53,7 @@
 		<dialog name="glay_es3" cutin="0" closebutton="1">
 			<text><![CDATA[
 				う～ん、変ですね。<br>
-				Estivaは地質学的に地震が起こりにくい場所なのに…一度、Student会レベルで詳しく調査してみないといけませんね。
+				エスティバーは地質学的に地震が起こりにくい場所なのに…一度、生徒会レベルで詳しく調査してみないといけませんね。
 			]]></text>
 			<selection next="glay_quest_no" text="新しいクエスト表示" />
 			<selection next="glay_quest_miss" text="クエスト達成を報告する" />
@@ -61,7 +61,7 @@
 
 		<dialog name="glay_es4" cutin="0" closebutton="1">
 			<text><![CDATA[
-				EstivaのBasementは老朽化してるから、いろいろ危険な事故が起こることがあります。出来るだけBasementには入らないようにして下さいね。
+				エスティバーの地下は老朽化してるから、いろいろ危険な事故が起こることがあります。出来るだけ地下には入らないようにして下さいね。
 			]]></text>
 			<selection next="glay_quest_no" text="新しいクエスト表示" />
 			<selection next="glay_quest_miss" text="クエスト達成を報告する" />
@@ -70,8 +70,8 @@
 		<!-- ▼宵生セリフ -->
 		<dialog name="glay_yoi1" cutin="0" closebutton="1">
 			<text><![CDATA[
-				僕は、EstivaStudent会実行委員長のGrayです。<br>
-				Estivaへの訪問を歓迎します。他の学校のStudentでも、何か助けが必要な時は、遠慮せずにいつでも相談に来て下さい。
+				僕は、エスティバー生徒会実行委員長のグレイです。<br>
+				エスティバーへの訪問を歓迎します。他の学校の生徒でも、何か助けが必要な時は、遠慮せずにいつでも相談に来て下さい。
 			]]></text>
 			<selection next="glay_quest_no" text="新しいクエスト表示" />
 			<selection next="glay_quest_miss" text="クエスト達成を報告する" />
@@ -79,7 +79,7 @@
 
 		<dialog name="glay_yoi2" cutin="0" closebutton="1">
 			<text><![CDATA[
-				EstivaのBasementは老朽化してるから、危険な事故が起こることがあります。出来るだけBasementには入らないようにして下さいね。
+				エスティバーの地下は老朽化してるから、危険な事故が起こることがあります。出来るだけ地下には入らないようにして下さいね。
 			]]></text>
 			<selection next="glay_quest_no" text="新しいクエスト表示" />
 			<selection next="glay_quest_miss" text="クエスト達成を報告する" />

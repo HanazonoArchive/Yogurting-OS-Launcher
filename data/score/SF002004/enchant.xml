@@ -24,9 +24,9 @@
 				アイテム強化っすか。<br>
 				何するんすか？
 			]]></text>
-			<selection next="attach" text="Origin Stoneを装着するっす" />
-			<selection next="detach" text="Origin Stoneを取り外すっす" />
-			<selection next="break" text="Origin Stoneをぶっ壊すっす" />
+			<selection next="attach" text="源石を装着するっす" />
+			<selection next="detach" text="源石を取り外すっす" />
+			<selection next="break" text="源石をぶっ壊すっす" />
 		</dialog>
 		<attachstone name="attach" />
 		<detachstone name="detach" />

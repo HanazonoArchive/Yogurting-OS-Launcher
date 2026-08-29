@@ -442,12 +442,51 @@ namespace Yogurting.Core.Network
         /// 0x799F (31135): TMsgGameAtkMovChangeNtf
         /// Delphi 0x005AEC54: WriteInt32(CharaID), WriteSingle(AtkSpeed), WriteSingle(MovSpeed)
         /// </summary>
-        public static byte[] MakeGameAtkMovChangeNtf(int charaId = 1, float atkSpeed = 1.0f, float moveSpeed = 1.0f)
+        public static byte[] MakeGameAtkMovChangeNtf(int charaId = 1, float atkSpeed = 1.0043f, float moveSpeed = 1.0043f)
         {
             using var writer = PacketWriter.Create(PacketOpcode.MsgGameAtkMovChangeNtf);
             writer.WriteInt32(charaId);
             writer.WriteSingle(atkSpeed);
             writer.WriteSingle(moveSpeed);
+            return writer.Build();
+        }
+
+        /// <summary>
+        /// 0x7963 (31075): TMsgGameCharaNameInfoNtf - Name, School, Guild, and Titles
+        /// Delphi 0x005ADBA0
+        /// </summary>
+        public static byte[] MakeGameCharaNameInfoNtf(int charaId = -1, int school = 1, int guildId = 0, string charaName = "", int titleId = 0, List<string>? titles = null, string guildName = "")
+        {
+            using var writer = PacketWriter.Create((PacketOpcode)0x7963);
+            writer.WriteInt32(charaId);                 // 4B: -1 (0xFFFFFFFF) or CharaId
+            writer.WriteInt32(school);                  // 4B: School (1 = Estiva, 2 = So-il)
+            writer.WriteInt32(guildId);                 // 4B: Guild ID (0)
+            writer.WriteUnicodeString(charaName, 13);   // 26B: Fixed 13 Unicode characters (0x1A bytes in Delphi)
+            writer.WriteInt32(titleId);                 // 4B: Title ID (0)
+
+            // Titles list (Delphi WriteWord(Count + 1))
+            int titleCount = titles?.Count ?? 0;
+            writer.WriteUInt16((ushort)(titleCount + 1));
+            if (titles != null)
+            {
+                foreach (var t in titles)
+                {
+                    writer.WriteUnicodeStringWithLength(t);
+                }
+            }
+            writer.WriteUnicodeStringWithLength(string.Empty);
+
+            // Guild name
+            writer.WriteUnicodeStringWithLength(guildName);
+
+            if (charaId == -1)
+            {
+                writer.WriteByte(0xCC);
+                writer.WriteByte(0xCC);
+                writer.WriteByte(0xCC);
+                writer.WriteByte(0xCC);
+            }
+
             return writer.Build();
         }
 
@@ -696,17 +735,8 @@ namespace Yogurting.Core.Network
                 }
             }
 
-            // StarItemEffectList (Active Buffs + Baseline Perks)
-            var effectList = new List<(int effectType, int remainSec)>
-            {
-                (0x1068, 0x1E8D0F),
-                (0x1072, 0x1E8D0F),
-                (0x1839, 0x1E8D0F),
-                (0x183A, 0x1E8D0F),
-                (0x183B, 0x1E8D0F),
-                (0x183C, 0x1E8D0F),
-                (0x183D, 0x1E8D0F)
-            };
+            // StarItemEffectList (Active Buffs) - 100% exact match with Delphi Quartet (0 active buffs on login)
+            var effectList = new List<(int effectType, int remainSec)>();
 
             if (player.ActiveBuffs != null)
             {
@@ -2482,32 +2512,6 @@ namespace Yogurting.Core.Network
                 writer.WriteBytes(new byte[20]);
             }
 
-            return writer.Build();
-        }
-
-        /// <summary>
-        /// 0x5229 (21033): MsgGameExNpcDialogNtf - Extended NPC Dialog Notice
-        /// </summary>
-        public static byte[] MakeGameExNpcDialogNtf(int npcId, int dialogId, int cutInType, string text, List<string> choices)
-        {
-            using var writer = PacketWriter.Create(PacketOpcode.MsgGameExNpcDialogNtf);
-            writer.WriteInt32(npcId);
-            writer.WriteInt32(dialogId);
-            writer.WriteInt32(cutInType);
-            writer.WriteUInt16((ushort)text.Length);
-            writer.WriteUnicodeString(text);
-            writer.WriteUInt16((ushort)choices.Count);
-
-            foreach (var ch in choices)
-            {
-                writer.WriteUInt16((ushort)ch.Length);
-                writer.WriteUnicodeString(ch);
-            }
-
-            writer.WriteInt32(0); // nTimeOut = 0 (infinite)
-            writer.WriteInt32(0); // idChoiceOnTimeOut
-            writer.WriteInt32(1); // bShowCloseButton
-            writer.WriteInt32(1); // bEnableBgFrameClick
             return writer.Build();
         }
 

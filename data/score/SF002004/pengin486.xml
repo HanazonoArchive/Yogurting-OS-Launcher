@@ -20,23 +20,23 @@
 		<!-- ▼宵生セリフ -->
 		<dialog name="pengin486_yoi1" cutin="0" closebutton="1">
 			<text><![CDATA[
-				お～、Freshmanやね、いらっしゃ～い！<br>
+				お～、新入生やね、いらっしゃ～い！<br>
 				ほんで、なに手伝おか～？
 			]]></text>
 			<selection next="enchant_menu" text="アイテムを強化したい" />
 			<selection next="crystal" text="結晶を精製したい" />
-			<selection next="next_menu" text="次のPageを表示" />
+			<selection next="next_menu" text="次のページを表示" />
 		</dialog>
 
 		<!-- ▼エス生セリフ -->
 		<dialog name="pengin486_es1" cutin="0" closebutton="1">
 			<text><![CDATA[
-				Estivaからよう来たなぁ。<br>
+				エスティバーからよう来たなぁ。<br>
 				で、なに手伝おか～？
 			]]></text>
 			<selection next="enchant_menu" text="アイテムを強化したい" />
 			<selection next="crystal" text="結晶を精製したい" />
-			<selection next="next_menu" text="次のPageを表示" />
+			<selection next="next_menu" text="次のページを表示" />
 		</dialog>
 
 		<!-- ▼クエスト -->
@@ -68,14 +68,14 @@
 				アイテム強化やね、ほな何しよか？<BR>
 				選んでや～
 			]]></text>
-			<selection next="attach" text="アイテムにOrigin Stoneを装着したい" />
-			<selection next="break" text="装着されたOrigin Stoneを外したい" />
+			<selection next="attach" text="アイテムに源石を装着したい" />
+			<selection next="break" text="装着された源石を外したい" />
 			<selection next="enchant_help1" text="アイテム強化について教えて下さい" />
 		</dialog>
 
 		<dialog name="enchant_help1" cutin="0" timeout="0" choiceontimeout="0" closebutton="1" bgframeclick="0">
 			<text><![CDATA[
-				武器とか制服に<font color="00FFBD">Origin Stone</font>を装着して、アイテムを強力にするのが、<BR>
+				武器とか制服に<font color="00FFBD">源石</font>を装着して、アイテムを強力にするのが、<BR>
 				アイテム強化やで～
 			]]></text>
 			<selection next="enchant_help1_2" text="なるほど！" />
@@ -83,7 +83,7 @@
 
 		<dialog name="enchant_help1_2" cutin="0" timeout="0" choiceontimeout="0" closebutton="1" bgframeclick="0">
 			<text><![CDATA[
-				アイテムにOrigin Stoneを装着した後、もっとええOrigin Stone見つかったら、<BR>
+				アイテムに源石を装着した後、もっとええ源石見つかったら、<BR>
 				装着し直せるさかい、ドンドン強化したってや～！
 			]]></text>
 			<selection next="enchant_help1_3" text="強化には何が必要ですか？" />
@@ -92,7 +92,7 @@
 		<dialog name="enchant_help1_3" cutin="0" timeout="0" choiceontimeout="0" closebutton="1" bgframeclick="0">
 			<text><![CDATA[
 				アイテム強化に必要なのは、<BR>
-				<font color="00FFBD">強化スロットがあるアイテム</font>と、<font color="00FFBD">Origin Stone</font>と、<font color="00FFBD">参考書</font>や。
+				<font color="00FFBD">強化スロットがあるアイテム</font>と、<font color="00FFBD">源石</font>と、<font color="00FFBD">参考書</font>や。
 			]]></text>
 			<selection next="enchant_help1_4" text="強化スロットがあるアイテム？"/>
 			<selection next="enchant_help2" text="参考書？"/>
@@ -117,15 +117,15 @@
 
 		<dialog name="enchant_help2" cutin="0" timeout="0" choiceontimeout="0" closebutton="1" bgframeclick="0">
 			<text><![CDATA[
-				Origin Stone装着するには参考書が必要や。<BR>
-				参考書の学年は、Origin Stoneの学年制限以上やないとあかんで。
+				源石装着するには参考書が必要や。<BR>
+				参考書の学年は、源石の学年制限以上やないとあかんで。
 			]]></text>
 			<selection next="enchant_help2_2" text="どこで手に入りますか？"/>
 		</dialog>
 
 		<dialog name="enchant_help2_2" cutin="0" timeout="0" choiceontimeout="0" closebutton="1" bgframeclick="0">
 			<text><![CDATA[
-				StoreにおるNo.2が売っとるで。<BR>
+				購買におるNo.2が売っとるで。<BR>
 				アタシそっくりやけど、アタシやないから間違えんといてや～
 			]]></text>
 			<selection text="わかりました"/>

@@ -20,11 +20,11 @@
 		<!-- ▼宵生セリフ -->
 		<dialog name="pengin27_yoi1" cutin="0" closebutton="1">
 			<text><![CDATA[
-				お～、Freshman！　いらっしゃい。牛乳は新鮮やし、武器もきれいな新品やで！　これからちょくちょく寄ってって～　値引き以外は何でもあるで～！
+				お～、新入生！　いらっしゃい。牛乳は新鮮やし、武器もきれいな新品やで！　これからちょくちょく寄ってって～　値引き以外は何でもあるで～！
 			]]></text>
-			<selection next="buy" text="Buy Items" />
-			<selection next="sell" text="Sell Items" />
-			<selection next="next_menu" text="次のPageを表示" />
+			<selection next="buy" text="買い物をする" />
+			<selection next="sell" text="アイテムを売る" />
+			<selection next="next_menu" text="次のページを表示" />
 		</dialog>
 
 		<!-- ▼エス生セリフ -->
@@ -32,9 +32,9 @@
 			<text><![CDATA[
 				なあ～、寄っといで～！　新鮮な牛乳～、きれいな新しい武器～、何が欲しいんや？　値引きはせえへんけど品ぞろいは豊富やで～！
 			]]></text>
-			<selection next="buy" text="Buy Items" />
-			<selection next="sell" text="Sell Items" />
-			<selection next="next_menu" text="次のPageを表示" />
+			<selection next="buy" text="買い物をする" />
+			<selection next="sell" text="アイテムを売る" />
+			<selection next="next_menu" text="次のページを表示" />
 		</dialog>
 
 		<!-- ▼クエスト -->

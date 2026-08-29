@@ -46,7 +46,7 @@
 		<dialog name="suchon_es1" cutin="0" closebutton="1">
 			<text><![CDATA[
 				ハ～ッハッハッハ！<br>
-				EstivaStudent会のため！　そしてこの私のために滅私奉公するFreshmanたちよ、歓迎するぞ！
+				エスティバー生徒会のため！　そしてこの私のために滅私奉公する新入生たちよ、歓迎するぞ！
 			]]></text>
 			<selection next="suchon_quest_no" text="新しいクエスト表示" />
 			<selection next="suchon_quest_miss" text="クエスト達成を報告する" />
@@ -54,8 +54,8 @@
 
 		<dialog name="suchon_es2" cutin="0" closebutton="1">
 			<text><![CDATA[
-				Student諸君！　この私が特別に、諸君がStudent会に貢献出来る任務を用意しておいたぞ。<br>
-				さあ、私に従って、Basement 1Fの修行部屋を平定するのだ！
+				生徒諸君！　この私が特別に、諸君が生徒会に貢献出来る任務を用意しておいたぞ。<br>
+				さあ、私に従って、地下 1階の修行部屋を平定するのだ！
 
 			]]></text>
 			<selection next="suchon_quest_no" text="新しいクエスト表示" />
@@ -64,7 +64,7 @@
 
 		<dialog name="suchon_es3" cutin="0" closebutton="1">
 			<text><![CDATA[
-				うむ！　Student会と、このスーチョンのために働こうという諸君の志、しかと見届けたぞ。<br>
+				うむ！　生徒会と、このスーチョンのために働こうという諸君の志、しかと見届けたぞ。<br>
 				今後とも全身全霊、私に仕えるように！
 			]]></text>
 			<selection next="suchon_quest_no" text="新しいクエスト表示" />
@@ -73,7 +73,7 @@
 
 		<dialog name="suchon_es4" cutin="0" closebutton="1">
 			<text><![CDATA[
-				諸君。今、EstivaのBasementでは、巨大な悪の軍団が陰謀を企んでいるという。諸君が、Estivaを脅かす悪党どもを打倒せんと願うのなら、講堂の前に集合し、出発するように。
+				諸君。今、エスティバーの地下では、巨大な悪の軍団が陰謀を企んでいるという。諸君が、エスティバーを脅かす悪党どもを打倒せんと願うのなら、講堂の前に集合し、出発するように。
 
 			]]></text>
 			<selection next="suchon_quest_no" text="新しいクエスト表示" />
@@ -92,8 +92,8 @@
 		<!-- ▼宵生セリフ -->
 		<dialog name="suchon_yoi1" cutin="0" closebutton="1">
 			<text><![CDATA[
-				ハハハ！　私はスーチョン。EstivaStudent会の最重要VIPだ。<br>
-				見たところSo-il学院のStudentのようだが、よく憶えておくように。
+				ハハハ！　私はスーチョン。エスティバー生徒会の最重要VIPだ。<br>
+				見たところ宵月学院の生徒のようだが、よく憶えておくように。
 			]]></text>
 			<selection next="suchon_quest_no" text="新しいクエスト表示" />
 			<selection next="suchon_quest_miss" text="クエスト達成を報告する" />
@@ -101,7 +101,7 @@
 
 		<dialog name="suchon_yoi2" cutin="0" closebutton="1">
 			<text><![CDATA[
-				フン…たとえ諸君が他校のStudentであっても、このEstivaに来た以上はEstivaStudentも同然。従って、Student会のために協力するのも当然なのだ。至急、Basement 1Fの修行部屋に集合するように！<br>
+				フン…たとえ諸君が他校の生徒であっても、このエスティバーに来た以上はエスティバー生徒も同然。従って、生徒会のために協力するのも当然なのだ。至急、地下 1階の修行部屋に集合するように！<br>
 			]]></text>
 			<selection next="suchon_quest_no" text="新しいクエスト表示" />
 			<selection next="suchon_quest_miss" text="クエスト達成を報告する" />
@@ -109,8 +109,8 @@
 
 		<dialog name="suchon_yoi3" cutin="0" closebutton="1">
 			<text><![CDATA[
-				諸君。今、Estivaは巨大なモンスターの群によって脅かされている。<br>
-				諸君が真にEstivaを想うのなら、直ちに講堂の前に集合し、出発するように。
+				諸君。今、エスティバーは巨大なモンスターの群によって脅かされている。<br>
+				諸君が真にエスティバーを想うのなら、直ちに講堂の前に集合し、出発するように。
 			]]></text>
 			<selection next="suchon_quest_no" text="新しいクエスト表示" />
 			<selection next="suchon_quest_miss" text="クエスト達成を報告する" />
@@ -118,7 +118,7 @@
 
 		<dialog name="suchon_yoi4" cutin="0" closebutton="1">
 			<text><![CDATA[
-				たとえ他の学校のStudentでも、このEstivaのために働く諸君の勇姿！　このスーチョン、いつも見ているぞ。
+				たとえ他の学校の生徒でも、このエスティバーのために働く諸君の勇姿！　このスーチョン、いつも見ているぞ。
 			]]></text>
 			<selection next="suchon_quest_no" text="新しいクエスト表示" />
 			<selection next="suchon_quest_miss" text="クエスト達成を報告する" />

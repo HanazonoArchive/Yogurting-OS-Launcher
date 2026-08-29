@@ -32,12 +32,12 @@
 		<!-- ▼エス生セリフ -->
 		<dialog name="pengin2_es1" cutin="0" closebutton="1">
 			<text><![CDATA[
-				Welcome~　新鮮な牛乳やで～！<br>
-				おっ！　Freshmanかい！　新規のお客さんやね！　入学おめでとう、ちょくちょく寄ってってや～！　値引きはあらへんけど、ええもん揃てるで。
+				いらっしゃい～　新鮮な牛乳やで～！<br>
+				おっ！　新入生かい！　新規のお客さんやね！　入学おめでとう、ちょくちょく寄ってってや～！　値引きはあらへんけど、ええもん揃てるで。
 			]]></text>
-			<selection next="buy" text="Buy Items" />
-			<selection next="sell" text="Sell Items" />
-			<selection next="next_menu" text="次のPageを表示" />
+			<selection next="buy" text="買い物をする" />
+			<selection next="sell" text="アイテムを売る" />
+			<selection next="next_menu" text="次のページを表示" />
 		</dialog>
 
 		<dialog name="pengin2_es2" cutin="0" closebutton="1">
@@ -45,46 +45,46 @@
 				ああ、よりによって配達が溜まってる時に限って事故に遭うなんかなぁ…あ～もう！<br>
 				…あ、ええとこへ来たね！　もし時間あったら、荷物運ぶの手伝ってくれへん？
 			]]></text>
-			<selection next="buy" text="Buy Items" />
-			<selection next="sell" text="Sell Items" />
-			<selection next="next_menu" text="次のPageを表示" />
+			<selection next="buy" text="買い物をする" />
+			<selection next="sell" text="アイテムを売る" />
+			<selection next="next_menu" text="次のページを表示" />
 		</dialog>
 
 		<dialog name="pengin2_es3" cutin="0" closebutton="1">
 			<text><![CDATA[
-				あらぁ～、この前バイト君が遅れて困ってた時、手伝ってくれたStudentさんやね。あん時は助かったで。今後も何かバイト要る時には言うさかい、またよろしゅう頼むわ～！
+				あらぁ～、この前バイト君が遅れて困ってた時、手伝ってくれた生徒さんやね。あん時は助かったで。今後も何かバイト要る時には言うさかい、またよろしゅう頼むわ～！
 			]]></text>
-			<selection next="buy" text="Buy Items" />
-			<selection next="sell" text="Sell Items" />
-			<selection next="next_menu" text="次のPageを表示" />
+			<selection next="buy" text="買い物をする" />
+			<selection next="sell" text="アイテムを売る" />
+			<selection next="next_menu" text="次のページを表示" />
 		</dialog>
 
 		<!-- ▼宵生セリフ -->
 		<dialog name="pengin2_yoi1" cutin="0" closebutton="1">
 			<text><![CDATA[
-				見かけへん顔やねぇ…ははぁ、So-ilから来たんやな。なあ～、牛乳は新鮮で武器もええもんが揃ってるよ、いっぺん見てってな！　そっちじゃどないなんか知らへんけど、うちは値引きはせぇへんよ～！
+				見かけへん顔やねぇ…ははぁ、宵月から来たんやな。なあ～、牛乳は新鮮で武器もええもんが揃ってるよ、いっぺん見てってな！　そっちじゃどないなんか知らへんけど、うちは値引きはせぇへんよ～！
 			]]></text>
-			<selection next="buy" text="Buy Items" />
-			<selection next="sell" text="Sell Items" />
-			<selection next="next_menu" text="次のPageを表示" />
+			<selection next="buy" text="買い物をする" />
+			<selection next="sell" text="アイテムを売る" />
+			<selection next="next_menu" text="次のページを表示" />
 		</dialog>
 
 		<dialog name="pengin2_yoi2" cutin="0" closebutton="1">
 			<text><![CDATA[
-				ああ、よりによって配達が溜まってる時に事故やなんて、もしかして仮病とちゃうんかなぁ…あ～もう！　…あ、ええとこへ来たね！　もし時間あったら、Estivaの 1Fへ行って荷物運ぶの手伝ってくれへん？
+				ああ、よりによって配達が溜まってる時に事故やなんて、もしかして仮病とちゃうんかなぁ…あ～もう！　…あ、ええとこへ来たね！　もし時間あったら、エスティバーの 1階へ行って荷物運ぶの手伝ってくれへん？
 			]]></text>
-			<selection next="buy" text="Buy Items" />
-			<selection next="sell" text="Sell Items" />
-			<selection next="next_menu" text="次のPageを表示" />
+			<selection next="buy" text="買い物をする" />
+			<selection next="sell" text="アイテムを売る" />
+			<selection next="next_menu" text="次のページを表示" />
 		</dialog>
 
 		<dialog name="pengin2_yoi3" cutin="0" closebutton="1">
 			<text><![CDATA[
-				あらぁ～、この前バイト君が遅れて困ってた時、手伝ってくれたStudentさんやね。あの時は助かったよ、ほんま！
+				あらぁ～、この前バイト君が遅れて困ってた時、手伝ってくれた生徒さんやね。あの時は助かったよ、ほんま！
 			]]></text>
-			<selection next="buy" text="Buy Items" />
-			<selection next="sell" text="Sell Items" />
-			<selection next="next_menu" text="次のPageを表示" />
+			<selection next="buy" text="買い物をする" />
+			<selection next="sell" text="アイテムを売る" />
+			<selection next="next_menu" text="次のページを表示" />
 		</dialog>
 
 		<!-- ▼クエスト -->

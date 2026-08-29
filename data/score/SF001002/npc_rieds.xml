@@ -35,9 +35,9 @@
 		<!-- ▼エス生セリフ -->
 		<dialog name="rieds_es1" cutin="0" closebutton="1">
 			<text><![CDATA[
-				おっ、よく来たなFreshman！　Estivaに入学おめでとう。<br>
-				まだ右も左も分からないだろうから、<font color="00FFBD">Libraryのモンスター退治</font>とか、<br>
-				<font color="00FFBD">Episode</font>をやってみたらどうだ？　詳しくはSchool Building前のBenに聞くといい。
+				おっ、よく来たな新入生！　エスティバーに入学おめでとう。<br>
+				まだ右も左も分からないだろうから、<font color="00FFBD">図書館のモンスター退治</font>とか、<br>
+				<font color="00FFBD">エピソード</font>をやってみたらどうだ？　詳しくは校舎前のベンに聞くといい。
 			]]></text>
 			<selection next="rieds_quest_no" text="新しいクエスト表示" />
 			<selection next="rieds_quest_miss" text="クエスト達成を報告する" />
@@ -45,7 +45,7 @@
 
 		<dialog name="rieds_es2" cutin="0" closebutton="1">
 			<text><![CDATA[
-				Episodeはどうだった？　簡単だったろ？　それじゃ、今度は<font color="00FFBD">クエスト</font>や、学校のことを学んでみよう。昇降口の前の<font color="00FFBD">ワープポイント</font>でSchool Buildingの外に出て<font color="00FFBD">Ben</font>に会ってみてごらん。
+				エピソードはどうだった？　簡単だったろ？　それじゃ、今度は<font color="00FFBD">クエスト</font>や、学校のことを学んでみよう。昇降口の前の<font color="00FFBD">ワープポイント</font>で校舎の外に出て<font color="00FFBD">ベン</font>に会ってみてごらん。
 			]]></text>
 			<selection next="rieds_quest_no" text="新しいクエスト表示" />
 			<selection next="rieds_quest_miss" text="クエスト達成を報告する" />
@@ -62,7 +62,7 @@
 
 		<dialog name="rieds_es4" cutin="0" closebutton="1">
 			<text><![CDATA[
-				ああ、この前配達に来たStudentだな。世話になったな。<br>
+				ああ、この前配達に来た生徒だな。世話になったな。<br>
 				バイトもがんばれよ。
 			]]></text>
 			<selection next="rieds_quest_no" text="新しいクエスト表示" />
@@ -73,7 +73,7 @@
 		<!-- ▼宵生セリフ -->
 		<dialog name="rieds_yoi1" cutin="0" closebutton="1">
 			<text><![CDATA[
-				あたしはRiez。EstivaのStudentたちを指導してる。お前たちはSo-il学院のStudentのようだが、友達に会いに来たのか？<br>
+				あたしはリエズ。エスティバーの生徒たちを指導してる。お前たちは宵月学院の生徒のようだが、友達に会いに来たのか？<br>
 				ケンカせず、仲良くしなよ。
 			]]></text>
 			<selection next="rieds_quest_no" text="新しいクエスト表示" />

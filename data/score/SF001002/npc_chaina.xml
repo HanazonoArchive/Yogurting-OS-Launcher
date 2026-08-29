@@ -32,8 +32,8 @@
 		<!-- ▼エス生セリフ -->
 		<dialog name="chaina_es1" cutin="0" closebutton="1">
 			<text><![CDATA[
-				今度のFreshmanの数が…<br>
-				So-il学院にも先に連絡しないと、あっ！　書類も整理しなくちゃ。
+				今度の新入生の数が…<br>
+				宵月学院にも先に連絡しないと、あっ！　書類も整理しなくちゃ。
 			]]></text>
 			<selection next="chaina_doukou" text="同好会のことで来ました" />
 			<selection next="chaina_quest_no" text="新しいクエスト表示" />
@@ -42,7 +42,7 @@
 
 		<dialog name="chaina_es2" cutin="0" closebutton="1">
 			<text><![CDATA[
-				モンスターに、ロボット研究部に、ワルグマーたちだけでも大変なのに、地震まで起きるなんて。Studentの安全のために、早く調査しないといけないわね。
+				モンスターに、ロボット研究部に、ワルグマーたちだけでも大変なのに、地震まで起きるなんて。生徒の安全のために、早く調査しないといけないわね。
 
 			]]></text>
 			<selection next="chaina_doukou" text="同好会のことで来ました" />
@@ -52,7 +52,7 @@
 
 		<dialog name="chaina_es3" cutin="0" closebutton="1">
 			<text><![CDATA[
-				今年の新規同好会に予算を支給すると、ううん…ホントにぎりぎりね。Gray先輩がポケットマネーでまかなってる費用も多いし、やっぱり活動実績のない同好会は…
+				今年の新規同好会に予算を支給すると、ううん…ホントにぎりぎりね。グレイ先輩がポケットマネーでまかなってる費用も多いし、やっぱり活動実績のない同好会は…
 			]]></text>
 			<selection next="chaina_doukou" text="同好会のことで来ました" />
 			<selection next="chaina_quest_no" text="新しいクエスト表示" />
@@ -62,8 +62,8 @@
 		<!-- ▼宵生セリフ -->
 		<dialog name="chaina_yoi1" cutin="0" closebutton="1">
 			<text><![CDATA[
-				あっ、So-il学院から来たのね。<br>
-				今度、EstivaのFreshmanと一緒に、So-il学院を訪問する事になったんだけど、一緒に行かない？
+				あっ、宵月学院から来たのね。<br>
+				今度、エスティバーの新入生と一緒に、宵月学院を訪問する事になったんだけど、一緒に行かない？
 			]]></text>
 			<selection next="chaina_quest_no" text="新しいクエスト表示" />
 			<selection next="chaina_quest_miss" text="クエスト達成を報告する" />
@@ -72,7 +72,7 @@
 		<!-- ▼クエスト -->
 		<dialog name="chaina_quest_no" cutin="0" closebutton="1">
 			<text><![CDATA[
-				Thank you。でもこの仕事はわたし一人で大丈夫よ。
+				ありがとう。でもこの仕事はわたし一人で大丈夫よ。
 			]]></text>
 			<selection text="そうですか、失礼します" />
 		</dialog>
@@ -118,16 +118,16 @@
 			<text><![CDATA[
 				新しい同好会を作るのね？
 			]]></text>
-			<selection next="chaina_doukou_make99" text="Yes" />
-			<selection text="No" />
+			<selection next="chaina_doukou_make99" text="はい" />
+			<selection text="いいえ" />
 		</dialog>
 
 		<dialog name="chaina_doukou_make2" cutin="0" closebutton="1">
 			<text><![CDATA[
 				同好会の開設をやめるのね？
 			]]></text>
-			<selection text="Yes" />
-			<selection next="chaina_doukou_make1" text="No" />
+			<selection text="はい" />
+			<selection next="chaina_doukou_make1" text="いいえ" />
 		</dialog>
 
 		<dialog name="chaina_doukou_make99" cutin="0" closebutton="1">

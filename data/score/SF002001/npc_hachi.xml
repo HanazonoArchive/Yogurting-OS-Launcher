@@ -15,12 +15,12 @@
 		<!-- ▼セリフ -->
 		<dialog name="hachi1" cutin="0" closebutton="1">
 			<text><![CDATA[
-				ヤッホー！　私はHachi！　So-ilの飼育部員なんだ～！<br>
-				あ、GloveのSkillのことなら私に任せて！
+				ヤッホー！　私はハチ！　宵月の飼育部員なんだ～！<br>
+				あ、グローブのスキルのことなら私に任せて！
 			]]></text>
 			<selection next="hachi_quest_no" text="新しいクエスト表示" />
 			<selection next="hachi_quest_miss" text="クエスト達成を報告する" />
-			<selection text="Skillを習う" />
+			<selection text="スキルを習う" />
 		</dialog>
 
 		<!-- ▼クエスト -->

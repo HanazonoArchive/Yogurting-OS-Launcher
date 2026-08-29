@@ -20,7 +20,7 @@
 		<!-- ▼宵生セリフ -->
 		<dialog name="inject_yoi1" cutin="0" closebutton="1">
 			<text><![CDATA[
-				私はInject。看護部員として妖艶Teacherのお手伝いをしています。<br>
+				私はインジェクト。看護部員として妖艶先生のお手伝いをしています。<br>
 				看護部では、 <font color="00FFBD">5色のカラーボール</font>を集めて下さった方に、<br>
 				プレゼントを配布しております。
 			]]></text>
@@ -32,7 +32,7 @@
 		<!-- ▼エス生セリフ -->
 		<dialog name="inject_es1" cutin="0" closebutton="1">
 			<text><![CDATA[
-				So-il学院へようこそ。私はInject、So-il学院看護部員です。<br>
+				宵月学院へようこそ。私はインジェクト、宵月学院看護部員です。<br>
 				看護部では、<font color="00FFBD">5色のカラーボール</font>を集めて下さった方に、<br>
 				プレゼントを配布しております。
 			]]></text>
@@ -69,9 +69,9 @@
 
 		<dialog name="inject_ball2" cutin="0" closebutton="1">
 			<text><![CDATA[
-				<font color="00FFBD">｢ヨ｣｢ー｣｢グ｣｢ル｣｢！｣</font>の 5色のボールは、EpisodeをClearすると<br>
-				手に入るそうです。Episodeによって手に入るボールが違うと…
-				色々なEpisodeを調べてみて下さい。
+				<font color="00FFBD">｢ヨ｣｢ー｣｢グ｣｢ル｣｢！｣</font>の 5色のボールは、エピソードをクリアすると<br>
+				手に入るそうです。エピソードによって手に入るボールが違うと…
+				色々なエピソードを調べてみて下さい。
 			]]></text>
 			<selection text="わかりました！" />
 		</dialog>
@@ -79,7 +79,7 @@
 		<dialog name="inject_ball3" cutin="0" closebutton="1">
 			<text><![CDATA[
 				…5色そろっていませんね。<br>
-				妖艶Teacherは、5色をセットで集めるようご希望なさってますので…<br>
+				妖艶先生は、5色をセットで集めるようご希望なさってますので…<br>
 				申し訳ありませんが、足りないボールを手に入れてから、もう一度…
 			]]></text>
 			<selection text="わかりました、また来ます" />
@@ -96,10 +96,10 @@
 
 		<dialog name="inject_ball91" cutin="0" closebutton="1">
 			<text><![CDATA[
-				1st Year用のヨーグル！ボックスです。<br>
+				1年生用のヨーグル！ボックスです。<br>
 				どうか、素敵なアイテムが出ますよう……
 			]]></text>
-			<selection text="Thank you!" />
+			<selection text="ありがとう！" />
 		</dialog>
 	</npc>
 </field>

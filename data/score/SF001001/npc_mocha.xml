@@ -57,8 +57,8 @@
 		<!-- ▼エス生セリフ -->
 		<dialog name="mocha_es1" cutin="0" closebutton="1">
 			<text><![CDATA[
-				Hello…<br>
-				え～と…Estivaにご入学おめでとうございます～
+				こんにちは…<br>
+				え～と…エスティバーにご入学おめでとうございます～
 			]]></text>
 			<selection next="mocha_quest_no" text="新しいクエスト表示" />
 			<selection next="mocha_quest_miss" text="クエスト達成を報告する" />
@@ -74,7 +74,7 @@
 
 		<dialog name="mocha_es3" cutin="0" closebutton="1">
 			<text><![CDATA[
-				あの、虫を退治して下さって、本当にThank youございます…
+				あの、虫を退治して下さって、本当にありがとうございます…
 			]]></text>
 			<selection next="mocha_quest_no" text="新しいクエスト表示" />
 			<selection next="mocha_quest_miss" text="クエスト達成を報告する" />
@@ -90,7 +90,7 @@
 
 		<dialog name="mocha_es5" cutin="0" closebutton="1">
 			<text><![CDATA[
-				あの、Hello…この前は、プリントを拾うのを手伝っていただいて…本当にThank youございます。
+				あの、こんにちは…この前は、プリントを拾うのを手伝っていただいて…本当にありがとうございます。
 			]]></text>
 			<selection next="mocha_quest_no" text="新しいクエスト表示" />
 			<selection next="mocha_quest_miss" text="クエスト達成を報告する" />
@@ -107,8 +107,8 @@
 
 		<dialog name="mocha_es7" cutin="0" closebutton="1">
 			<text><![CDATA[
-				Hello…学校生活はうまくいってますか？<br>
-				わたしじゃ頼りないでしょうけど、…でも、Student会の一員として、一生懸命働きますので、何か困った事があったら言って下さい。
+				こんにちは…学校生活はうまくいってますか？<br>
+				わたしじゃ頼りないでしょうけど、…でも、生徒会の一員として、一生懸命働きますので、何か困った事があったら言って下さい。
 			]]></text>
 			<selection next="mocha_quest_no" text="新しいクエスト表示" />
 			<selection next="mocha_quest_miss" text="クエスト達成を報告する" />
@@ -117,8 +117,8 @@
 		<!-- ▼宵生セリフ -->
 		<dialog name="mocha_yoi1" cutin="0" closebutton="1">
 			<text><![CDATA[
-				Hello…<br>
-				あの、EstivaStudent会の書記を務めております、モカと申します…<br>
+				こんにちは…<br>
+				あの、エスティバー生徒会の書記を務めております、モカと申します…<br>
 				よろしくお願いします…
 			]]></text>
 			<selection next="mocha_quest_no" text="新しいクエスト表示" />
@@ -127,7 +127,7 @@
 
 		<dialog name="mocha_yoi2" cutin="0" closebutton="1">
 			<text><![CDATA[
-				あの…虫を退治して下さって本当にThank you。
+				あの…虫を退治して下さって本当にありがとう。
 			]]></text>
 			<selection next="mocha_quest_no" text="新しいクエスト表示" />
 			<selection next="mocha_quest_miss" text="クエスト達成を報告する" />
@@ -135,7 +135,7 @@
 
 		<dialog name="mocha_yoi3" cutin="0" closebutton="1">
 			<text><![CDATA[
-				あの…他の学校のStudentさんに…こんなお願いをするのは…大変申し訳ないんですけど…<br>
+				あの…他の学校の生徒さんに…こんなお願いをするのは…大変申し訳ないんですけど…<br>
 				どうか、裏山でプリントを拾うのを手伝って下さいませんか？
 			]]></text>
 			<selection next="mocha_quest_no" text="新しいクエスト表示" />
@@ -144,7 +144,7 @@
 
 		<dialog name="mocha_yoi4" cutin="0" closebutton="1">
 			<text><![CDATA[
-				プリントを拾うのを手伝っていただいて、本当にThank youございます。
+				プリントを拾うのを手伝っていただいて、本当にありがとうございます。
 			]]></text>
 			<selection next="mocha_quest_no" text="新しいクエスト表示" />
 			<selection next="mocha_quest_miss" text="クエスト達成を報告する" />
@@ -152,7 +152,7 @@
 
 		<dialog name="mocha_yoi5" cutin="0" closebutton="1">
 			<text><![CDATA[
-				あの…Student会の一員として一生懸命働きますので、何か困った事があったら言って下さい。<br>
+				あの…生徒会の一員として一生懸命働きますので、何か困った事があったら言って下さい。<br>
 				全力でお手伝い致しますから…
 			]]></text>
 			<selection next="mocha_quest_no" text="新しいクエスト表示" />

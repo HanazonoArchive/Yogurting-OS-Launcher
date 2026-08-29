@@ -36,17 +36,17 @@
 			]]></text>
 			<selection next="arena_quest_no" text="新しいクエスト表示" />
 			<selection next="arena_quest_miss" text="クエスト達成を報告する" />
-			<selection text="Skillを習う" />
+			<selection text="スキルを習う" />
 		</dialog>
 
 		<dialog name="arena_es2" cutin="0" closebutton="1">
 			<text><![CDATA[
-				LibraryBasementに隠されてる女神の楽器…<br>
+				図書館地下に隠されてる女神の楽器…<br>
 				たとえ手に入らなくっても、一回でいいから聞いてみたいんだ、ゼッタイ！
 			]]></text>
 			<selection next="arena_quest_no" text="新しいクエスト表示" />
 			<selection next="arena_quest_miss" text="クエスト達成を報告する" />
-			<selection text="Skillを習う" />
+			<selection text="スキルを習う" />
 		</dialog>
 
 		<dialog name="arena_es3" cutin="0" closebutton="1">
@@ -56,7 +56,7 @@
 			]]></text>
 			<selection next="arena_quest_no" text="新しいクエスト表示" />
 			<selection next="arena_quest_miss" text="クエスト達成を報告する" />
-			<selection text="Skillを習う" />
+			<selection text="スキルを習う" />
 		</dialog>
 
 		<!-- ▼宵生セリフ -->
@@ -66,7 +66,7 @@
 			]]></text>
 			<selection next="arena_quest_no" text="新しいクエスト表示" />
 			<selection next="arena_quest_miss" text="クエスト達成を報告する" />
-			<selection text="Skillを習う" />
+			<selection text="スキルを習う" />
 		</dialog>
 
 		<dialog name="arena_yoi2" cutin="0" closebutton="1">
@@ -76,7 +76,7 @@
 			]]></text>
 			<selection next="arena_quest_no" text="新しいクエスト表示" />
 			<selection next="arena_quest_miss" text="クエスト達成を報告する" />
-			<selection text="Skillを習う" />
+			<selection text="スキルを習う" />
 		</dialog>
 
 		<!-- ▼クエスト -->
@@ -97,7 +97,7 @@
 		<dialog name="skill" cutin="0" closebutton="1">
 			<text><![CDATA[
 				フフ～ン、フン、ダダン！<br>
-				えっ？　Skill？<br>
+				えっ？　スキル？<br>
 				あ～、んじゃまず、熟練度をアップしなきゃ！
 			]]></text>
 			<selection next="skill2" text="熟練度？" />
@@ -106,7 +106,7 @@
 		<dialog name="skill2" cutin="0" closebutton="1">
 			<text><![CDATA[
 				4種類の武器に、それぞれ<font color="00FFBD">熟練度</font>ってのがあるんだよ。<br>
-				熟練度がアップすればいろんなSkillを覚えられるし、命中率もアップ！<br>
+				熟練度がアップすればいろんなスキルを覚えられるし、命中率もアップ！<br>
 				んじゃ、好きな武器を <font color="00FFBD">2種類</font>選んで！
 			]]></text>
 			<selection text="わかった！" />

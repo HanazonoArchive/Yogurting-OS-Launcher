@@ -72,8 +72,8 @@
 				choiceontimeout="0"
 				closebutton="1"
 				bgframeclick="1">
-			<selection next="makeguild_yes" text="Yes" />
-			<selection next="makeguild_no" text="No" />
+			<selection next="makeguild_yes" text="‚Í‚¢" />
+			<selection next="makeguild_no" text="‚¢‚¢‚¦" />
 		</dialog>
 		
 		<makeguild name="makeguild_yes" failed="guild_failed" />

@@ -45,7 +45,7 @@
 		<dialog name="nana1" cutin="0" closebutton="1">
 			<text><![CDATA[
 				やっほー！<br>
-				チュートリアルEpisode、どうだった？<br>
+				チュートリアルエピソード、どうだった？<br>
 				そんなに複雑じゃないから、すぐ慣れると思うよ！
 			]]></text>
 			<selection next="nana1_2" text="うん、そうだね" />
@@ -53,10 +53,10 @@
 
 		<dialog name="nana1_2" cutin="0" closebutton="1">
 			<text><![CDATA[
-				じゃあ、すぐそこにいる <font color="00FFBD">SamTeacher</font>と話してみて。<br>
+				じゃあ、すぐそこにいる <font color="00FFBD">サム先生</font>と話してみて。<br>
 				いろいろ教えてくれるからさ！
 			]]></text>
-			<selection next="nana1_3" text="SamTeacher？" />
+			<selection next="nana1_3" text="サム先生？" />
 		</dialog>
 
 		<dialog name="nana1_3" cutin="0" closebutton="1">
@@ -78,16 +78,16 @@
 		<dialog name="nana2_2" cutin="0" closebutton="1">
 			<text><![CDATA[
 				ふ～ん…初めてなのに、結構やるね！<br>
-				じゃあ、<font color="00FFBD">SamTeacher</font>から<font color="00FFBD"> Sosoの大発生</font> クエストを受けてみたら？<br>
-				Sosoを退治すれば、ご褒美がもらえるから！
+				じゃあ、<font color="00FFBD">サム先生</font>から<font color="00FFBD"> ソソの大発生</font> クエストを受けてみたら？<br>
+				ソソを退治すれば、ご褒美がもらえるから！
 			]]></text>
-			<selection next="nana2_3" text="なるほど！　Thank you" />
+			<selection next="nana2_3" text="なるほど！　ありがとう" />
 		</dialog>
 
 		<dialog name="nana2_3" cutin="0" closebutton="1">
 			<text><![CDATA[
-				<font color="00FFBD">SamTeacher</font>はSo-il学院のSchool Building前にいるよ。<br>
-				School BuildingはSchool Groundsの北…って、見ればわかるよね。
+				<font color="00FFBD">サム先生</font>は宵月学院の校舎前にいるよ。<br>
+				校舎はグラウンドの北…って、見ればわかるよね。
 			]]></text>
 			<selection op="set" varname="peke.nana.f001" value="2" text="わかった、ありがと～" />
 		</dialog>
@@ -95,14 +95,14 @@
 		<dialog name="nana2_4" cutin="0" closebutton="1">
 			<text><![CDATA[
 				う～ん、じゃあ友達とか先輩と一緒にやってみたら？<br>
-				それと、<font color="00FFBD">SamTeacher</font>から <font color="00FFBD">Sosoの大発生</font> クエストを受けてみるといいよ。Sosoを退治すれば、ご褒美がもらえるからさ！
+				それと、<font color="00FFBD">サム先生</font>から <font color="00FFBD">ソソの大発生</font> クエストを受けてみるといいよ。ソソを退治すれば、ご褒美がもらえるからさ！
 			]]></text>
-			<selection next="nana2_3" text="なるほど！　Thank you" />
+			<selection next="nana2_3" text="なるほど！　ありがとう" />
 		</dialog>
 
 		<dialog name="nana3" cutin="0" closebutton="1">
 			<text><![CDATA[
-				やっほ～！　<font color="00FFBD">Staff Roomいっぱいの箱</font>はどう？<br>
+				やっほ～！　<font color="00FFBD">職員室いっぱいの箱</font>はどう？<br>
 				さすがに手強かったよね？
 			]]></text>
 			<selection next="nana3_2" text="ううん、問題ないよ" />
@@ -111,10 +111,10 @@
 
 		<dialog name="nana3_2" cutin="0" closebutton="1">
 			<text><![CDATA[
-				えっ、このEpisode、初めてだったのに？　…やるね！<br>
-				でも、次のEpisodeはそう簡単にYesかないよ？
+				えっ、このエピソード、初めてだったのに？　…やるね！<br>
+				でも、次のエピソードはそう簡単にはいかないよ？
 			]]></text>
-			<selection next="nana3_3" text="えっ？　次のEpisode？" />
+			<selection next="nana3_3" text="えっ？　次のエピソード？" />
 		</dialog>
 
 		<dialog name="nana3_3" cutin="0" closebutton="1">
@@ -128,14 +128,14 @@
 
 		<dialog name="nana3_4" cutin="0" closebutton="1">
 			<text><![CDATA[
-				うん、それが <font color="00FFBD">案内板</font>だよ。今、学校内で起きてる <font color="00FFBD">Episode</font>と、引き受けられる <font color="00FFBD">クエスト</font>のことがわかるようになってるよ。
+				うん、それが <font color="00FFBD">案内板</font>だよ。今、学校内で起きてる <font color="00FFBD">エピソード</font>と、引き受けられる <font color="00FFBD">クエスト</font>のことがわかるようになってるよ。
 			]]></text>
 			<selection next="nana3_5" text="うわぁ、それは便利だね！" />
 		</dialog>
 
 		<dialog name="nana3_5" cutin="0" closebutton="1">
 			<text><![CDATA[
-				ただし！ <font color="00FFBD">赤い字</font>で表示されるEpisodeとクエストは、<br>
+				ただし！ <font color="00FFBD">赤い字</font>で表示されるエピソードとクエストは、<br>
 				今のキミじゃ危ないからね！<font color="00FFBD">黒い字</font>か <font color="00FFBD">灰色の字</font>で表示されるのを先にやってね。<br>
 				じゃあ、ヨーグルティングを楽しんで！
 			]]></text>
@@ -144,8 +144,8 @@
 
 		<dialog name="nana3_6" cutin="0" closebutton="1">
 			<text><![CDATA[
-				<font color="00FFBD">Staff Roomいっぱいの箱</font> Episodeで苦戦してるなら、<br>
-				 <font color="00FFBD">箱でいっぱいの廊下</font> Episodeか、Public Cemeteryの戦闘フィールドで<br>
+				<font color="00FFBD">職員室いっぱいの箱</font> エピソードで苦戦してるなら、<br>
+				 <font color="00FFBD">箱でいっぱいの廊下</font> エピソードか、共同墓地の戦闘フィールドで<br>
 				鍛えてから、挑戦するといいよ。
 			]]></text>
 			<selection next="nana3_7" text="箱でいっぱいの廊下？" />
@@ -161,7 +161,7 @@
 		<dialog name="nana4" cutin="0" closebutton="1">
 			<text><![CDATA[
 				やっほー！　調子はどう？<br>
-				EpisodeをClearできない時は、先輩に声をかけて手伝ってもらうといいよ！<br>
+				エピソードをクリアできない時は、先輩に声をかけて手伝ってもらうといいよ！<br>
 				１人でできることでも、みんなでやると違った楽しみ方もあるからさっ！
 			]]></text>
 			<selection next="nana_janken_init" text="ジャンケンしよう！" />
@@ -175,71 +175,71 @@
 				セーブポイントを変えるの？<br>
 				じゃあ、どこにする？
 			]]></text>
-			<selection next="nana_save_graveyard1" text="Public Cemetery" />
-			<selection next="nana_save_school1" text="Old School Building 1F" />
-			<selection next="nana_save_ground1" text="School Grounds" />
+			<selection next="nana_save_graveyard1" text="共同墓地" />
+			<selection next="nana_save_school1" text="旧校舎 1階" />
+			<selection next="nana_save_ground1" text="グラウンド" />
 		</dialog>
 
 		<dialog name="nana_save_graveyard1" cutin="0" closebutton="1">
 			<text><![CDATA[
-				<font color="00FFBD">Public Cemetery</font>だね？<br>
-				戦いに慣れてないStudentが練習するのにピッタリの場所だよ。
+				<font color="00FFBD">共同墓地</font>だね？<br>
+				戦いに慣れてない生徒が練習するのにピッタリの場所だよ。
 			]]></text>
-			<selection next="nana_save_graveyard2" text="Yes, let's do that" />
-			<selection next="nana_save_menu" text="Let me choose another location" />
+			<selection next="nana_save_graveyard2" text="うん、そうするよ" />
+			<selection next="nana_save_menu" text="やっぱり別の場所にするね" />
 		</dialog>
 
 		<dialog name="nana_save_graveyard2" cutin="0" closebutton="1">
 			<text><![CDATA[
-				Alright, if you faint in a combat zone,<br>
-				Public CemeteryにReturnよ。
+				じゃあ、キミが戦闘フィールドで気絶した時は、<br>
+				共同墓地に戻るよ。
 			]]></text>
-			<selection text="Thank you!" />
+			<selection text="ありがとう！" />
 		</dialog>
 
 		<dialog name="nana_save_school1" cutin="0" closebutton="1">
 			<text><![CDATA[
-				<font color="00FFBD">Old School Building 1F</font>だね？<br>
-				Public Cemeteryのモンスターじゃ物足りなくなったらオススメだけど…<br>
+				<font color="00FFBD">旧校舎 1階</font>だね？<br>
+				共同墓地のモンスターじゃ物足りなくなったらオススメだけど…<br>
 				不気味な場所だし、幽霊がゾロゾロ出るけど、それでもいいの？
 			]]></text>
-			<selection next="nana_save_school2" text="Yes, let's do that" />
-			<selection next="nana_save_menu" text="Let me choose another location" />
+			<selection next="nana_save_school2" text="うん、そうするよ" />
+			<selection next="nana_save_menu" text="やっぱり別の場所にするね" />
 		</dialog>
 
 		<dialog name="nana_save_school2" cutin="0" closebutton="1">
 			<text><![CDATA[
-				Alright, if you faint in a combat zone,<br>
-				Old School Building 1FにReturnよ。
+				じゃあ、キミが戦闘フィールドで気絶した時は、<br>
+				旧校舎 1階に戻るよ。
 			]]></text>
-			<selection text="Thank you!" />
+			<selection text="ありがとう！" />
 		</dialog>
 
 		<dialog name="nana_save_ground1" cutin="0" closebutton="1">
 			<text><![CDATA[
-				<font color="00FFBD">School Grounds</font>だね？<br>
-				It's right in the center of school, very convenient!
+				<font color="00FFBD">グラウンド</font>だね？<br>
+				学校の真ん中だから、どこに行くにも便利だよ。
 			]]></text>
-			<selection next="nana_save_ground2" text="Yes, sounds good" />
-			<selection next="nana_save_menu" text="Let me choose another location" />
+			<selection next="nana_save_ground2" text="うん、そうする" />
+			<selection next="nana_save_menu" text="やっぱり別の場所にするね" />
 		</dialog>
 
 		<dialog name="nana_save_ground2" cutin="0" closebutton="1">
 			<text><![CDATA[
-				Alright, if you faint in a combat zone,<br>
-				School GroundsにReturnよ。
+				じゃあ、キミが戦闘フィールドで気絶した時は、<br>
+				グラウンドに戻るよ。
 			]]></text>
-			<selection text="Thank you!" />
+			<selection text="ありがとう！" />
 		</dialog>
 
 		<!-- ▼ジャンケン▼ -->
 		<dialog name="nana_janken_init" cutin="0" closebutton="1">
 			<text><![CDATA[
-				ふ～ん、Did you come to challenge me?。<br>
-				You know the rules, right?<br>
+				ふ～ん、ボクと勝負しに来たの。<br>
+				ルールはわかってるよね？<br>
 			]]></text>
-			<selection next="nana_janken_select" text="Yes, let's duel!" />
-			<selection next="nana_janken_help1" text="Could you explain the rules?" />
+			<selection next="nana_janken_select" text="うん、勝負だ！" />
+			<selection next="nana_janken_help1" text="えっと、ルールを教えてくれない？" />
 		</dialog>
 
 		<dialog name="nana_janken_help1" cutin="0" closebutton="1">
@@ -248,36 +248,36 @@
 				出ることがあるよ。<br>
 				それを持ってきたら、勝負してあげるよ！
 			]]></text>
-			<selection next="nana_janken_help1_2" text="Oh, bringing it isn't enough?" />
-			<selection next="nana_janken_help2" text="Where can I get a Yogur! Box?" />
+			<selection next="nana_janken_help1_2" text="あ、持ってくるだけじゃダメなんだ？" />
+			<selection next="nana_janken_help2" text="ヨーグル！ボックスはどこで手に入るの？" />
 		</dialog>
 
 		<dialog name="nana_janken_help1_2" cutin="0" closebutton="1">
 			<text><![CDATA[
 				あいこでも、キミの負けでもプレゼントをあげるけど、<br>
 				キミが勝ったら一番いいものをあげるよ、ボクは強いけどね！<br>
-				さあ、準備Yesい？
+				さあ、準備はいい？
 			]]></text>
-			<selection next="nana_janken_select" text="Yes, let's duel!" />
-			<selection text="Sorry, maybe later" />
+			<selection next="nana_janken_select" text="うん、勝負だ！" />
+			<selection text="ごめん、また後で" />
 		</dialog>
 
 		<dialog name="nana_janken_help2" cutin="0" closebutton="1">
 			<text><![CDATA[
-				<font color="00FFBD">ヨーグル！ボックス</font>は、看護部のInjectさんが配ってるよ。<br>
+				<font color="00FFBD">ヨーグル！ボックス</font>は、看護部のインジェクトさんが配ってるよ。<br>
 				<font color="00FFBD">｢ヨ｣｢ー｣｢グ｣｢ル｣｢！｣</font>の 5色のカラーボールを揃えて、<br>
-				Front GateのInjectさんに届けてあげて！
+				校門前のインジェクトさんに届けてあげて！
 			]]></text>
 			<selection text="うん、わかった！" />
 		</dialog>
 
 		<dialog name="nana_janken_select" cutin="0" closebutton="1">
 			<text><![CDATA[
-				Here we go! Rock, Paper, Scissors... Shoot!<br>
+				いくよ！ジャンケン、ぽん！<br>
 			]]></text>
-			<selection next="nana_janken_judge" text="Rock!" op="set" varname="peke.temp" value="1" />
-			<selection next="nana_janken_judge" text="Scissors!" op="set" varname="peke.temp" value="0" />
-			<selection next="nana_janken_judge" text="Paper!" op="set" varname="peke.temp" value="2" />
+			<selection next="nana_janken_judge" text="グー！" op="set" varname="peke.temp" value="1" />
+			<selection next="nana_janken_judge" text="チョキ！" op="set" varname="peke.temp" value="0" />
+			<selection next="nana_janken_judge" text="パー！" op="set" varname="peke.temp" value="2" />
 		</dialog>
 
 		<script name="nana_janken_judge">
@@ -300,13 +300,13 @@
 			<text><![CDATA[
 				あ、<font color="00FFBD">${peke.temp}</font>を出したの？
 			]]></text>
-			<selection next="nana_janken_draw2" text="A draw, huh..." />
+			<selection next="nana_janken_draw2" text="う～ん、引き分けかぁ" />
 		</dialog>
 		<dialog name="nana_janken_draw2" cutin="0" closebutton="1">
 			<text><![CDATA[
 				ふ～ん、あいこかぁ。
 			]]></text>
-			<selection text="Let's duel again next time" />
+			<selection text="勝負はまた今度ね" />
 		</dialog>
 
 		<!-- プレイヤー負け -->
@@ -314,15 +314,15 @@
 			<text><![CDATA[
 				ふふふ、<font color="00FFBD">${peke.temp}</font>を出したね～？
 			]]></text>
-			<selection next="nana_janken_lose2" text="Aargh, I lost..." />
+			<selection next="nana_janken_lose2" text="あああ、負けた…" />
 		</dialog>
 
 		<dialog name="nana_janken_lose2" cutin="1" closebutton="1">
 			<text><![CDATA[
-				Yay! I win!<br>
-				That's my true skill!
+				やった～、ボクの勝ち！<br>
+				これがボクの実力さ！
 			]]></text>
-			<selection text="I-I'll go all out next time!" />
+			<selection text="つ、次は本気出すよ！" />
 		</dialog>
 
 		<!-- プレイヤー勝ち -->
@@ -330,15 +330,15 @@
 			<text><![CDATA[
 				うぅっ、<font color="00FFBD">${peke.temp}</font>を出したの？
 			]]></text>
-			<selection next="nana_janken_win2" text="Yay, I won!" />
+			<selection next="nana_janken_win2" text="やった、勝った！" />
 		</dialog>
 
 		<dialog name="nana_janken_win2" cutin="2" closebutton="1">
 			<text><![CDATA[
-				I lost... sniff.<br>
-				But next time, I'm definitely going to win!
+				負けちゃった…くすん。<br>
+				でも、次はボクが勝つんだから！
 			]]></text>
-			<selection text="Maybe you will win next time!" />
+			<selection text="うん、次はナナが勝つかもね" />
 		</dialog>
 	</npc>
 </field>

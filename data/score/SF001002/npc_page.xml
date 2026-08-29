@@ -61,7 +61,7 @@
 		<!-- ▼エス生セリフ -->
 		<dialog name="page_es1" cutin="0" closebutton="1">
 			<text><![CDATA[
-				EstivaLibraryにようこそ。<br>
+				エスティバー図書館にようこそ。<br>
 				どんな本をお探しですか？
 			]]></text>
 			<selection next="page_quest_no" text="新しいクエスト表示" />
@@ -70,7 +70,7 @@
 
 		<dialog name="page_es2" cutin="0" closebutton="1">
 			<text><![CDATA[
-				変ね…最近、Marcheがやたらと…一体どうして…<br>
+				変ね…最近、マルシュがやたらと…一体どうして…<br>
 				あ、ようこそおいで下さいました。今日はどんなご用事でしょうか？
 			]]></text>
 			<selection next="page_quest_no" text="新しいクエスト表示" />
@@ -79,7 +79,7 @@
 
 		<dialog name="page_es3" cutin="0" closebutton="1">
 			<text><![CDATA[
-				この前はLibraryのMarcheを退治して下さって、Thank youございました。<br>
+				この前は図書館のマルシュを退治して下さって、ありがとうございました。<br>
 				今日はどんな本をお探しですか？
 			]]></text>
 			<selection next="page_quest_no" text="新しいクエスト表示" />
@@ -89,7 +89,7 @@
 		<dialog name="page_es4" cutin="0" closebutton="1">
 			<text><![CDATA[
 				あ…ようこそおいで下さいました。実は皆さんに、お願いしたいことがありまして…。<br>
-				この頃、Libraryで大きなロボットを見たというStudentが多いのですが、時間があったら一度調査して下さいませんか？
+				この頃、図書館で大きなロボットを見たという生徒が多いのですが、時間があったら一度調査して下さいませんか？
 			]]></text>
 			<selection next="page_quest_no" text="新しいクエスト表示" />
 			<selection next="page_quest_miss" text="クエスト達成を報告する" />
@@ -97,8 +97,8 @@
 
 		<dialog name="page_es5" cutin="0" closebutton="1">
 			<text><![CDATA[
-				ロボット研究会が作ったロボットがLibraryに隠れていたのですね。調べて下さって、Thank youございます。<br>
-				この頃、LibraryBasementについての変なうわさが流れていましたが…大問題ですね。
+				ロボット研究会が作ったロボットが図書館に隠れていたのですね。調べて下さって、ありがとうございます。<br>
+				この頃、図書館地下についての変なうわさが流れていましたが…大問題ですね。
 			]]></text>
 			<selection next="page_quest_no" text="新しいクエスト表示" />
 			<selection next="page_quest_miss" text="クエスト達成を報告する" />
@@ -107,7 +107,7 @@
 		<dialog name="page_es6" cutin="0" closebutton="1">
 			<text><![CDATA[
 				アリーナはこの前の楽器で満足していましたか？<br>
-				ですが、LibraryBasementはとても危険ですから、入らないようにして下さい。
+				ですが、図書館地下はとても危険ですから、入らないようにして下さい。
 			]]></text>
 			<selection next="page_quest_no" text="新しいクエスト表示" />
 			<selection next="page_quest_miss" text="クエスト達成を報告する" />
@@ -117,7 +117,7 @@
 		<!-- ▼宵生セリフ -->
 		<dialog name="page_yoi1" cutin="0" closebutton="1">
 			<text><![CDATA[
-				…So-ilからいらっしゃったのですね。EstivaのLibrary司書を務めているPageです。Libraryは常時開館されているので、何か本を読みたい時は、いつでもおいで下さい。
+				…宵月からいらっしゃったのですね。エスティバーの図書館司書を務めているページです。図書館は常時開館されているので、何か本を読みたい時は、いつでもおいで下さい。
 			]]></text>
 			<selection next="page_quest_no" text="新しいクエスト表示" />
 			<selection next="page_quest_miss" text="クエスト達成を報告する" />
@@ -125,7 +125,7 @@
 
 		<dialog name="page_yoi2" cutin="0" closebutton="1">
 			<text><![CDATA[
-				変ね…最近、Marcheがやたらと…<br>
+				変ね…最近、マルシュがやたらと…<br>
 				あ、ようこそおいで下さいました。今日はどんなご用事でしょうか？
 			]]></text>
 			<selection next="page_quest_no" text="新しいクエスト表示" />
@@ -134,7 +134,7 @@
 
 		<dialog name="page_yoi3" cutin="0" closebutton="1">
 			<text><![CDATA[
-				この前はLibraryのMarcheを退治して下さって、Thank you。<br>
+				この前は図書館のマルシュを退治して下さって、ありがとう。<br>
 				今日はどんな本をお探しですか？
 			]]></text>
 			<selection next="page_quest_no" text="新しいクエスト表示" />
@@ -143,8 +143,8 @@
 
 		<dialog name="page_yoi4" cutin="0" closebutton="1">
 			<text><![CDATA[
-				ようこそ。この頃Libraryによくおいでですね。<br>
-				今日はどんな本をお探しですか？　あ、最近Libraryに巨大ロボットが出没するという噂があるので、気を付けて下さい。
+				ようこそ。この頃図書館によくおいでですね。<br>
+				今日はどんな本をお探しですか？　あ、最近図書館に巨大ロボットが出没するという噂があるので、気を付けて下さい。
 			]]></text>
 			<selection next="page_quest_no" text="新しいクエスト表示" />
 			<selection next="page_quest_miss" text="クエスト達成を報告する" />
@@ -152,7 +152,7 @@
 
 		<dialog name="page_yoi5" cutin="0" closebutton="1">
 			<text><![CDATA[
-				そうですか。ロボット研究会が作ったロボットがLibraryに隠されていたなんて…　ただでさえ、Libraryの変なうわさが流れていて困っているのに…
+				そうですか。ロボット研究会が作ったロボットが図書館に隠されていたなんて…　ただでさえ、図書館の変なうわさが流れていて困っているのに…
 			]]></text>
 			<selection next="page_quest_no" text="新しいクエスト表示" />
 			<selection next="page_quest_miss" text="クエスト達成を報告する" />
@@ -160,8 +160,8 @@
 
 		<dialog name="page_yoi6" cutin="0" closebutton="1">
 			<text><![CDATA[
-				この前、LibraryのBasementで会った方ですね。<br>
-				EstivaLibraryのBasementは古くなっていて、危険ですから入らないようにして下さい。
+				この前、図書館の地下で会った方ですね。<br>
+				エスティバー図書館の地下は古くなっていて、危険ですから入らないようにして下さい。
 			]]></text>
 			<selection next="page_quest_no" text="新しいクエスト表示" />
 			<selection next="page_quest_miss" text="クエスト達成を報告する" />

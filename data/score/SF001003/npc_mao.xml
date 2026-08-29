@@ -32,7 +32,7 @@
 		<!-- ▼エス生セリフ -->
 		<dialog name="mao_es1" cutin="0" closebutton="1">
 			<text><![CDATA[
-				ようこそ。Estivaへの入学を歓迎するよ。
+				ようこそ。エスティバーへの入学を歓迎するよ。
 			]]></text>
 			<selection next="mao_quest_no" text="新しいクエスト表示" />
 			<selection next="mao_quest_miss" text="クエスト達成を報告する" />
@@ -59,7 +59,7 @@
 		<!-- ▼宵生セリフ -->
 		<dialog name="mao_yoi1" cutin="0" closebutton="1">
 			<text><![CDATA[
-				Estivaにようこそ。私は教師のMao Shaopingだ。<br>
+				エスティバーにようこそ。私は教師のマオシャオピンだ。<br>
 				ゆっくり遊んでいきなさい。
 			]]></text>
 			<selection next="mao_quest_no" text="新しいクエスト表示" />

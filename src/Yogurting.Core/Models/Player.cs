@@ -159,6 +159,8 @@ namespace Yogurting.Core.Models
         };
         public List<int> LearnedSkills { get; set; } = new();
         public List<int> CompletedEpisodes { get; set; } = new();
+        public int EpisodeYoi { get; set; } = 0;
+        public int EpisodeEs { get; set; } = 0;
         public List<int> UnlockedTitles { get; set; } = new();
         public List<ActiveBuff> ActiveBuffs { get; set; } = new();
 
