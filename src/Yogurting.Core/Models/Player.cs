@@ -124,6 +124,7 @@ namespace Yogurting.Core.Models
         public int MaxSp { get => MaxMp; set => MaxMp = value; }
         public long TaffPoints { get; set; } = 100000;
         public int StarPoints { get; set; } = 100000;
+        public float HpRegainAccumulator { get; set; } = 0f;
 
         /// <summary>
         /// Speed Multipliers calculated exactly from Delphi _Unit49.pas:20342:
@@ -132,15 +133,23 @@ namespace Yogurting.Core.Models
         public float AtkSpeedF => 1.0f + (Speed * 0.65f * 0.0003f);
         public float MoveSpeedF => 1.0f + (Speed * 0.65f * 0.0003f);
 
-        public void RecalculateStats(int pow, int speed, int skill, int luck)
+        public void RecalculateStats(int pow, int speed, int skill, int luck, int itemBonusHp = -1)
         {
+            int oldBaseHp = Math.Max(28, Pow * 7);
+            int equipHpBonus = itemBonusHp >= 0 ? itemBonusHp : Math.Max(0, MaxHp - oldBaseHp);
+
             Pow = pow;
             Speed = speed;
             Skill = skill;
             Luck = luck;
-            MaxHp = Math.Max(28, Pow * 7);
-            if (CurrentHp > MaxHp || CurrentHp <= 0) CurrentHp = MaxHp;
+
+            int newBaseHp = Math.Max(28, Pow * 7);
+            MaxHp = Math.Max(260, newBaseHp + equipHpBonus);
+            CurrentHp = MaxHp;
         }
+
+        // Target lock tracking
+        public int TargetMonsterId { get; set; } = 0;
 
         // Coordinates & Zones (Defaults to Estiva Central Campus Courtyard / So-il Ground)
         public int FieldId { get; set; } = 1;
@@ -180,10 +189,7 @@ namespace Yogurting.Core.Models
             CharacterName = characterName;
             School = school;
             Gender = gender;
-            FieldId = school == SchoolType.EstivaAcademy ? 1 : 90;
-            Position = school == SchoolType.EstivaAcademy ? new Position(76f, 104f, 0f) : new Position(89f, 131f, 0f);
-            SaveFieldId = school == SchoolType.EstivaAcademy ? 1 : 90;
-            SavePosition = school == SchoolType.EstivaAcademy ? new Position(76f, 104f, 0f) : new Position(89f, 131f, 0f);
+            StarterConfigLoader.ApplyDefaultStats(this);
         }
 
         public bool HasActiveBuff(int effectType) => ActiveBuffs.Any(b => b.EffectType == effectType && b.RemainingSeconds > 0);

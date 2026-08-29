@@ -521,12 +521,12 @@ namespace Yogurting.Core.Network
             writer.WriteInt32(0);                           // Padding
             writer.WriteInt64(player.TaffPoints);           // TAFF (Int64)
             writer.WriteInt64(0);                           // Exp (Int64)
-            writer.WriteInt32((int)Math.Min(int.MaxValue, player.TaffPoints)); // ShopPoint / Taff
-            writer.WriteInt32(player.Hp);                   // Current HP (0x0060DD94)
-            writer.WriteInt32(player.Sp);                   // Current SP (0x0060FE00)
-            writer.WriteInt32(0);                           // 0x0060DDA4
-            writer.WriteInt32(0);                           // 0x0060DDB0
-            writer.WriteInt32(0);                           // 0x0060DDBC
+            writer.WriteInt32((int)Math.Min(int.MaxValue, player.TaffPoints)); // ShopPoint / Taff (Int32)
+            writer.WriteInt32(player.Pow * 7);              // Base HP (0x0060DD94: Delphi FPow * 7)
+            writer.WriteInt32(player.CurrentHp);            // Current HP (0x0060FE00: Delphi FCurrentHP)
+            writer.WriteInt32(player.Pow * 65);             // Base Atk (0x0060DDA4)
+            writer.WriteInt32(player.Defense * 64);         // Base Def (0x0060DDB0)
+            writer.WriteInt32(player.Skill * 65);           // Base Hit (0x0060DDBC)
 
             writer.WriteInt32(player.FieldId);              // Field.ID
             writer.WriteUInt16((ushort)player.Position.X);  // MapPoint X (word: 124 for So-il, 38 for Estiva)
@@ -718,10 +718,6 @@ namespace Yogurting.Core.Network
 
                     writer.WriteInt64(rawUid);
                     int starModelId = starItem.TypeId > 0 ? starItem.TypeId : starItem.ItemId;
-                    if (starModelId > 1000000 && starModelId % 10 == 4) // E.g. 1400044 -> 140004, 1200174 -> 120017
-                    {
-                        starModelId /= 10;
-                    }
                     writer.WriteInt32(starModelId);
                     writer.WriteInt32(1);
                     writer.WriteInt32(isEquipped ? 1 : 0);
@@ -1984,11 +1980,11 @@ namespace Yogurting.Core.Network
             }
 
             // Metadata
-            writer.WriteInt32(skillId); // skillId (Delphi 215 or weapon skill)
+            writer.WriteInt32(skillId); // skillId (Delphi: weapon skill e.g. 101..104, 401..404)
             writer.WriteInt32(0); // moneyDelta
-            writer.WriteInt32(main.isCrit ? 1 : 0); // bCritical
+            writer.WriteInt32(0); // bCritical (Delphi always sets 0, critical is per-target via typeHit=1)
             writer.WriteByte(0xCC); // padding (Delphi 0xCC)
-            writer.WriteInt32(combo); // numCombo
+            writer.WriteInt32(combo); // numCombo (Delphi TChara.ComboCount)
             writer.WriteInt32(weaponCategory); // cateWeapon: 1=Blade, 2=Glove, 3=Blunt, 4=Spirit
             writer.WriteInt32(addDexExp); // addDexExp (1)
 
@@ -2049,7 +2045,11 @@ namespace Yogurting.Core.Network
                 writer.WriteUInt16(0);
             }
 
+            writer.WriteInt32(0); // moneyDelta
+            writer.WriteInt32(0); // bCritical
+            writer.WriteByte(0xCC); // padding
             writer.WriteInt32(dexExp);
+
             return writer.Build();
         }
 
@@ -2078,7 +2078,8 @@ namespace Yogurting.Core.Network
             int killerCharaId,
             int expEarned,
             int totalExp,
-            System.Collections.Generic.IReadOnlyList<(int itemId, int count, bool isEquip)>? drops)
+            System.Collections.Generic.IReadOnlyList<(int itemId, int count, bool isEquip)>? drops,
+            int monsterType = 0)
         {
             using var writer = PacketWriter.Create(PacketOpcode.MsgGameHuntMonDeadNtf);
             writer.WriteInt32(monsterEntityId);
@@ -2098,38 +2099,40 @@ namespace Yogurting.Core.Network
                     writer.WriteInt32(itemCategory);
                 }
 
-                // Array 2: Item Instances / Details (_Unit47.pas:48946-49017)
+                // Array 2: Item Instances / Details (_Unit47.pas:48946-49025)
+                // Each item is EXACTLY 12 bytes:
+                // BeItem:  TypeId | 0x02000000 (4B), dim1Index(2B) + dim2Index(2B), idItem(4B)
+                // CoItem:  TypeId | 0x03000000 (4B), count(4B), 0(4B)
+                // EnItem:  TypeId | 0x05000000 (4B), count(4B), 0(4B)
                 writer.WriteUInt16((ushort)drops.Count);
                 foreach (var d in drops)
                 {
                     if (d.isEquip)
                     {
-                        writer.WriteInt32(d.itemId | 0x02000000); // 0x02000000 = BeItem (equipment)
-                        writer.WriteInt32(d.count);
-                        writer.WriteInt32(0);
-                        writer.WriteInt32(0);
-                        writer.WriteInt32(0);
+                        writer.WriteInt32(d.itemId | 0x02000000);
+                        writer.WriteInt32(d.count); // 4B: dim1Index + dim2Index
+                        writer.WriteInt32(0);       // 4B: idItem
                     }
                     else
                     {
-                        writer.WriteInt32(d.itemId | 0x03000000); // 0x03000000 = CoItem (consumable/money/drop)
+                        bool isMaterial = (d.itemId >= 30000 && d.itemId < 40000);
+                        int mask = isMaterial ? 0x05000000 : 0x03000000;
+                        writer.WriteInt32(d.itemId | mask);
                         writer.WriteInt32(d.count);
-                        writer.WriteInt32(0);
-                        writer.WriteInt32(0);
                         writer.WriteInt32(0);
                     }
                 }
             }
             else
             {
-                // No loot dropped (_Unit47.pas:48902-48908)
+                // No loot dropped (_Unit47.pas:48912-48917)
                 writer.WriteUInt16(0);
                 writer.WriteUInt16(0);
             }
 
-            // Trailing status zeroes (_Unit47.pas:49018-49023)
-            writer.WriteInt32(0);
-            writer.WriteInt32(0);
+            // Trailing fields (_Unit47.pas:49028-49033)
+            writer.WriteInt32(0); // ReturnCode: 0
+            writer.WriteInt32(monsterType); // Monster Type from HuntMon.txt
 
             return writer.Build();
         }

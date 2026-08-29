@@ -470,33 +470,41 @@ namespace Yogurting.Server.Handlers.Field
                 int targetField = state.PendingWarpFieldId;
                 Position targetPos = state.PendingWarpPosition;
 
-                // Fallback: If pending destination was not set, parse requested destination from client packet
+                // Fallback: If pending destination was not set, parse requested destination from client packet or player save
                 if (targetField == 0)
                 {
                     if (packetData.Length >= 14)
                     {
                         targetField = BitConverter.ToInt32(packetData, 10);
                     }
-                    if (targetField == 0) targetField = 91;
+                    if (targetField == 0)
+                    {
+                        targetField = state.Player.SaveFieldId > 0
+                            ? state.Player.SaveFieldId
+                            : (state.Player.School == SchoolType.SoilAcademy ? 90 : 1);
+                    }
 
-                    // Derive arrival position from return gate in destination field or map defaults
+                    // Derive arrival position dynamically from destination field gates or starter spawn point
                     if (_gameDb != null && _gameDb.Fields.TryGetValue(targetField, out var destField))
                     {
-                        var returnGate = destField.WarpGates.Find(g => g.DestFieldId == state.Player.FieldId);
+                        var returnGate = destField.WarpGates.Find(g => g.DestFieldId == state.Player.FieldId)
+                                      ?? destField.WarpGates.FirstOrDefault();
                         if (returnGate != null)
                         {
                             float rx = returnGate.X > 500 ? returnGate.X / 100f : returnGate.X;
                             float ry = returnGate.Y > 500 ? returnGate.Y / 100f : returnGate.Y;
-                            targetPos = new Position(rx > 0 ? rx : 58f, ry > 0 ? ry : 17f, 0f);
+                            targetPos = new Position(rx, ry, 0f);
                         }
                         else
                         {
-                            targetPos = new Position(58f, 17f, 0f);
+                            var spawn = StarterConfigLoader.GetSpawnPoint(state.Player.School);
+                            targetPos = new Position(spawn.X, spawn.Y, 0f);
                         }
                     }
                     else
                     {
-                        targetPos = new Position(58f, 17f, 0f);
+                        var spawn = StarterConfigLoader.GetSpawnPoint(state.Player.School);
+                        targetPos = new Position(spawn.X, spawn.Y, 0f);
                     }
                 }
 

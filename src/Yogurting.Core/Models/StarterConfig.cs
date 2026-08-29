@@ -112,7 +112,7 @@ namespace Yogurting.Core.Models
         private static void CreateDefaultFallback()
         {
             _instance = new StarterConfig();
-            _instance.SpawnPoints["EstivaAcademy"] = new StarterSpawnPoint { FieldId = 91, X = 220f, Y = 99f };
+            _instance.SpawnPoints["EstivaAcademy"] = new StarterSpawnPoint { FieldId = 1, X = 76f, Y = 104f };
             _instance.SpawnPoints["SoilAcademy"] = new StarterSpawnPoint { FieldId = 90, X = 124f, Y = 165f };
 
             // Estiva Male

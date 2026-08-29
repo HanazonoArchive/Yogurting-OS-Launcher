@@ -26,6 +26,8 @@ namespace Yogurting.Data.Loaders
         public ConcurrentDictionary<int, SkillDesc2Def> SkillDesc2s { get; } = new();
         public ConcurrentDictionary<int, SkillWeaponDef> SkillWeapons { get; } = new();
         public ConcurrentDictionary<int, HuntMonsterDef> HuntMonsters { get; } = new();
+        public ConcurrentDictionary<int, string> MatchingBgm { get; } = new();
+        public System.Collections.Generic.List<string> KujiResults { get; } = new();
         public System.Collections.Generic.List<ShopProductDef> StarProducts { get; } = new();
         public System.Collections.Generic.List<ShopItemDef> ShopItems { get; } = new();
         public Dictionary<int, int> ExpTable { get; } = new();
@@ -42,14 +44,7 @@ namespace Yogurting.Data.Loaders
             {
                 return field.Bgm;
             }
-            return fieldId switch
-            {
-                1 or 386 => 6,
-                2 or 3 or 387 => 5,
-                90 or 91 => 35,
-                92 or 93 or 94 => 34,
-                _ => 6
-            };
+            return 6;
         }
 
         private static Encoding GetTableEncoding()
@@ -82,6 +77,8 @@ namespace Yogurting.Data.Loaders
             LoadSkillWeapons(Path.Combine(dbDir, "SkillWeapon.txt"));
             LoadSkillDescs(Path.Combine(dbDir, "SkillDesc.txt"));
             LoadSkillDesc2s(Path.Combine(dbDir, "SkillDesc2.txt"));
+            LoadMatchingBgm(Path.Combine(dbDir, "MatchingBGM.txt"));
+            LoadKujiTable(Path.Combine(dbDir, "kuji.txt"));
 
             string scoreDir = Path.Combine(dbDir, "..", "score");
             if (!Directory.Exists(scoreDir))
@@ -204,6 +201,16 @@ namespace Yogurting.Data.Loaders
                     item.UseType = parts.Count > 6 && int.TryParse(parts[6], out int useType) ? useType : item.UseType;
                     item.QuickUsable = parts.Count > 7 && (parts[7].Trim() == "1" || parts[7].Trim().Equals("true", StringComparison.OrdinalIgnoreCase));
                     item.Price = parts.Count > 8 && int.TryParse(parts[8], out int price) ? price : item.Price;
+
+                    // Dynamically parse recovery HP from hint text if available (e.g. "HP 150 回復" -> 150)
+                    if (!string.IsNullOrEmpty(item.Description))
+                    {
+                        var match = System.Text.RegularExpressions.Regex.Match(item.Description, @"HP.*?(\d+)");
+                        if (match.Success && int.TryParse(match.Groups[1].Value, out int rec))
+                        {
+                            item.RecoveryAmount = rec;
+                        }
+                    }
                 }
             }
         }
@@ -714,6 +721,36 @@ namespace Yogurting.Data.Loaders
                         MovSpd = int.TryParse(parts[18], out int movSpd) ? movSpd : 0,
                         CoolTime = int.TryParse(parts[19], out int cool) ? cool : 0
                     };
+                }
+            }
+        }
+
+        private void LoadMatchingBgm(string filePath)
+        {
+            if (!File.Exists(filePath)) return;
+            var enc = GetTableEncoding();
+            foreach (var line in File.ReadAllLines(filePath, enc))
+            {
+                if (string.IsNullOrWhiteSpace(line) || line.StartsWith("//")) continue;
+                var parts = ParseCsvLine(line);
+                if (parts.Count >= 2 && int.TryParse(parts[0], out int id))
+                {
+                    MatchingBgm[id] = parts[1].Trim().Trim('"');
+                }
+            }
+        }
+
+        private void LoadKujiTable(string filePath)
+        {
+            if (!File.Exists(filePath)) return;
+            var enc = GetTableEncoding();
+            foreach (var line in File.ReadAllLines(filePath, enc))
+            {
+                if (string.IsNullOrWhiteSpace(line) || line.StartsWith("//")) continue;
+                string entry = line.Trim().Trim('"');
+                if (!string.IsNullOrEmpty(entry))
+                {
+                    KujiResults.Add(entry);
                 }
             }
         }

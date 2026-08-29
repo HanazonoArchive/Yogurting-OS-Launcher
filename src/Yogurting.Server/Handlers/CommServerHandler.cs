@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Concurrent;
 using System.Threading.Tasks;
+using Yogurting.Core.Models;
 using Yogurting.Core.Network;
 using Yogurting.Data.Repositories;
 
@@ -50,7 +51,20 @@ namespace Yogurting.Server.Handlers
 
                     Console.WriteLine($"[CommServer] Comm Handshake (0x5211) from {session.RemoteEndPoint} - CharaId={charaId}, AuthToken={authToken}");
 
-                    var player = await _repository.GetByUsernameAsync(session.AccountId ?? "test");
+                    Player? player = null;
+                    if (authToken > 0)
+                    {
+                        player = await _repository.GetBySessionKeyAsync(authToken);
+                    }
+                    if (player == null && !string.IsNullOrEmpty(session.AccountId))
+                    {
+                        player = await _repository.GetByUsernameAsync(session.AccountId);
+                    }
+                    if (player == null)
+                    {
+                        player = await _repository.GetByUsernameAsync("test");
+                    }
+
                     // Respond with TMsgTransJoinCmsAns (0x7604) - exact 254-byte ground truth
                     await session.SendAsync(YogurtingPackets.MakeTransJoinCmsAns(player));
                     break;

@@ -103,15 +103,13 @@ namespace Yogurting.Server.Handlers.Field
                     return;
                 }
 
-                // 5. Dynamic Slot Resolution
-                ushort targetSlot = itemDef?.GetTargetEquipSlot() ?? (uniqueId switch
+                // 5. Dynamic Slot Resolution from Database
+                ushort targetSlot = itemDef?.GetTargetEquipSlot() ?? 0;
+                if (targetSlot == 0)
                 {
-                    1 => 4, // Weapon
-                    2 or 5 => 7, // Top
-                    3 or 6 => 8, // Bottom
-                    4 or 7 => 9, // Shoes
-                    _ => (ushort)0
-                });
+                    Logger.Warn($"[FieldServer] Cannot equip item '{itemDef?.Name ?? "Unknown"}' ({typeId}): No valid equipment slot mapped.");
+                    return;
+                }
 
                 if (typeId == 0)
                 {
@@ -122,7 +120,8 @@ namespace Yogurting.Server.Handlers.Field
                 if (targetSlot > 0 && targetSlot < player.EquippedSlotUids.Length && player.EquippedSlotUids[targetSlot] > 0)
                 {
                     int prevUid = player.EquippedSlotUids[targetSlot];
-                    var prevItem = player.Inventory?.Find(i => i.Id == prevUid);
+                    var prevItem = player.Inventory?.Find(i => i.Id == prevUid)
+                                ?? player.StarBeItems?.Find(i => i.Id == prevUid);
                     if (prevItem != null)
                     {
                         prevItem.IsEquipped = false;
@@ -186,7 +185,7 @@ namespace Yogurting.Server.Handlers.Field
                     : PacketOpcode.MsgGameEquipAns;
 
                 int equipAnsTypeId = reqOpcode == (ushort)PacketOpcode.MsgGameEquipByulBeItemReq ? typeId : ((itemDef != null && itemDef.BaseItemType > 0) ? itemDef.BaseItemType : typeId);
-                int baseModelTypeId = (itemDef != null && itemDef.BaseItemType > 0) ? itemDef.BaseItemType : (typeId > 1000000 && typeId % 10 == 4 ? typeId / 10 : typeId);
+                int baseModelTypeId = (itemDef != null && itemDef.BaseItemType > 0) ? itemDef.BaseItemType : typeId;
 
                 byte[] ans = YogurtingPackets.MakeGameEquipAns(player.CharaId, rawUid, equipAnsTypeId, ansOpcode);
                 await state.Session.SendAsync(ans);
@@ -491,40 +490,36 @@ namespace Yogurting.Server.Handlers.Field
                     }
                 }
 
-                // 1. Determine Consumable Effect & Healing Amount from DB & Delphi table
-                int healHp = coItemType switch
+                // 1. Determine Consumable Effect & Healing Amount dynamically from GameDatabase
+                GameItemDef? coDef = null;
+                _gameDb?.Items.TryGetValue(coItemType, out coDef);
+
+                int healHp = 150;
+                if (coDef != null && coDef.RecoveryAmount > 0)
                 {
-                    10001 or 10005 => 150,  // 三角Milk / 新入生Milk
-                    10002 => 500,           // パックMilk
-                    10003 => 960,           // 瓶Milk
-                    10004 => 1440,          // 大瓶Milk
-                    10006 => 300,           // 高級三角Milk
-                    10007 => 730,           // 高級パックMilk
-                    10008 => 1200,          // 高級瓶Milk
-                    10009 => 1750,          // 高級大瓶Milk
-                    10010 => 2060,          // PETボトルMilk
-                    10011 => 2410,          // 高級PETボトルMilk
-                    20001 or 29016 => 110,  // ガンバミン 101 / 01
-                    20002 => 1440,          // ガンバミン 404
-                    20003 => 670,           // ガンバミン 202
-                    29001 => 60,            // ファンタミニオレンジ
-                    29002 or 29003 or 29014 => 120, // ファンタミニアイスベリー / BIGフラマンドル
-                    29010 or 29011 or 29015 => player.MaxHp, // Full Recovery (バレンタインチョコ / ガンバミンV)
-                    _ => (_gameDb != null && _gameDb.Items.TryGetValue(coItemType, out var d) && d.RecoveryAmount > 0) ? d.RecoveryAmount : 100
-                };
+                    healHp = coDef.RecoveryAmount;
+                }
+                else if (coDef != null && coDef.Description.Contains("全回復"))
+                {
+                    healHp = player.MaxHp;
+                }
 
-                bool isInstant = coItemType >= 20000 && coItemType < 30000;
-                bool isBox = coItemType >= 40000 && coItemType < 50000;
+                bool isInstant = coDef?.QuickUsable == true || (coItemType >= 20000 && coItemType < 30000);
+                bool isBox = coDef?.UseType == 2 || (coItemType >= 40000 && coItemType < 50000);
 
-                // Handle Loot Boxes (UseType 2 & 4: バトルボックス / 源石ボックス)
+                // Handle Loot Boxes (UseType 2: バトルボックス / 源石ボックス)
                 if (isBox)
                 {
-                    int rewardItemId = coItemType switch
+                    int rewardItemId = 101100; // 翡翠・刀源石 1-C default
+                    if (_gameDb != null && _gameDb.ReinforceStones.Count > 0)
                     {
-                        40001 => 101100, // 翡翠・刀源石 1-C
-                        40003 => 101101, // 翡翠・刀源石 1-B
-                        _ => 10001       // Default Milk
-                    };
+                        var stoneKeys = _gameDb.ReinforceStones.Keys.ToList();
+                        rewardItemId = stoneKeys[Random.Shared.Next(stoneKeys.Count)];
+                    }
+                    else if (_gameDb != null && _gameDb.ShopItems.Count > 0)
+                    {
+                        rewardItemId = _gameDb.ShopItems[Random.Shared.Next(_gameDb.ShopItems.Count)].ItemId;
+                    }
 
                     var existing = player.Inventory?.Find(i => i.TypeId == rewardItemId);
                     if (existing != null)

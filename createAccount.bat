@@ -40,34 +40,8 @@ $account = @{
     AccountId = $user
     CharacterName = ""
     PasswordHash = $hashStr
-    CharacterId = 0
-    CharaId = 0
-    SessionKey = 0
-    School = 0
-    Gender = 0
-    Level = 1
-    Grade = 1
-    CurrentExp = 0
-    MaxExp = 100
-    CurrentHp = 260
-    MaxHp = 260
-    CurrentMp = 195
-    MaxMp = 195
-    TaffPoints = 100000
-    StarPoints = 100000
-    FieldId = 1
-    Position = @{ X = 76.0; Y = 104.0; Z = 0.0 }
-    Direction = @{ X = 0; Y = 0 }
-    FaceId = 0
-    HairId = 0
-    SkinTone = 0
     HasCharacter = $false
     AuthType = "normal"
-    EquippedSlotUids = @(0,0,0,0,0,0,0,0,0,0)
-    EquippedSlotIsStar = @($false,$false,$false,$false,$false,$false,$false,$false,$false,$false)
-    Inventory = @()
-    Equips = @()
-    StarBeItems = @()
 }
 
 $json = $account | ConvertTo-Json -Depth 5

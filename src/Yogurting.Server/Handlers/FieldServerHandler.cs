@@ -116,7 +116,7 @@ namespace Yogurting.Server.Handlers
                 await field.BroadcastAsync(despawnPacket, state.Player.CharaId);
 
                 // Save character position and state to disk
-                _ = _repository.SaveAsync(state.Player);
+                await _repository.SaveAsync(state.Player);
             }
         }
 
@@ -127,7 +127,19 @@ namespace Yogurting.Server.Handlers
 
             Logger.Info($"[FieldServer] School Server Handshake (0x5211/0x5213) from {session.RemoteEndPoint} - CharaId={charaId}, AuthToken={authToken}");
 
-            var player = await _repository.GetByUsernameAsync(session.AccountId ?? "test") ?? new Player("test", session.CharacterName ?? "Hanazono");
+            Player? player = null;
+            if (authToken > 0)
+            {
+                player = await _repository.GetBySessionKeyAsync(authToken);
+            }
+            if (player == null && !string.IsNullOrEmpty(session.AccountId))
+            {
+                player = await _repository.GetByUsernameAsync(session.AccountId);
+            }
+            if (player == null)
+            {
+                player = await _repository.GetByUsernameAsync("test") ?? new Player("test", session.CharacterName ?? "Hanazono");
+            }
 
             // Reset to campus plaza on login if previously saved in a temporary mob/hunt field or if coordinates are invalid
             bool wasSavedInHunt = _gameDb != null && _gameDb.Fields.TryGetValue(player.FieldId, out var savedFDef) && savedFDef.IsHuntField;
@@ -294,10 +306,15 @@ namespace Yogurting.Server.Handlers
                     var p = s.Player;
                     if (p != null && p.CurrentHp > 0 && p.CurrentHp < p.MaxHp)
                     {
-                        bool isHunt = _gameDb.Fields.TryGetValue(p.FieldId, out var f) && f.IsHuntField;
-                        // In Campus: 2.2 HP/sec. In Hunt: 0.3 HP/sec. Timer interval is 250ms (0.25 sec).
-                        float regainRate = (isHunt ? 0.3f : 2.2f) * 0.25f;
-                        p.CurrentHp = Math.Min(p.MaxHp, (int)Math.Ceiling(p.CurrentHp + regainRate));
+                        p.HpRegainAccumulator += 0.25f;
+                        if (p.HpRegainAccumulator >= 3.0f)
+                        {
+                            p.HpRegainAccumulator = 0f;
+                            bool isHunt = _gameDb.Fields.TryGetValue(p.FieldId, out var f) && f.IsHuntField;
+                            int regainAmount = isHunt ? 1 : 4;
+                            p.CurrentHp = Math.Min(p.MaxHp, p.CurrentHp + regainAmount);
+                            _ = s.Session.SendAsync(YogurtingPackets.MakeGameSetHpNtf((ushort)p.CurrentHp));
+                        }
                     }
                 }
 
@@ -433,30 +450,37 @@ namespace Yogurting.Server.Handlers
                                     }
 
                                     // Melee Range Reached: Switch to Attack
-                                    if (dist <= 1.5f)
+                                    if (dist <= 1.8f)
                                     {
                                         mon.State = MonsterState.Attack;
                                         mon.Frame = 60; // Ready for attack
                                         break;
                                     }
 
-                                    // Run towards player target
-                                    int curX = (int)mon.X;
-                                    int curY = (int)mon.Y;
+                                    // Run towards player target smoothly
+                                    float moveSpeed = 0.8f; // ~3.2 units / sec
                                     float dirX = dx / dist;
                                     float dirY = dy / dist;
-                                    float step = MathF.Min(dist - 1.0f, 2.0f);
+                                    float step = MathF.Min(dist - 1.2f, moveSpeed);
                                     mon.X += dirX * step;
                                     mon.Y += dirY * step;
                                     mon.DirX = (int)(dirX * 100);
                                     mon.DirY = (int)(dirY * 100);
 
-                                    int destX = (int)mon.X;
-                                    int destY = (int)mon.Y;
-
-                                    byte[] moveNtf = YogurtingPackets.MakeGameMonMoveNtf(mon.EntityId, curX, curY, destX, destY, 2, 80); // Motion 2 = Run
-                                    var fld = _worldManager.GetOrCreateField(fieldId);
-                                    _ = fld.BroadcastAsync(moveNtf);
+                                    // Send MoveNtf periodically (every 1.5s or if target position shifted > 3 units)
+                                    if (mon.Frame >= 6 || MathF.Abs(mon.DestX - pX) > 3f || MathF.Abs(mon.DestY - pY) > 3f)
+                                    {
+                                        mon.Frame = 0;
+                                        mon.DestX = pX;
+                                        mon.DestY = pY;
+                                        byte[] moveNtf = YogurtingPackets.MakeGameMonMoveNtf(mon.EntityId, (int)mon.X, (int)mon.Y, (int)pX, (int)pY, 2, 80); // Motion 2 = Run
+                                        var fld = _worldManager.GetOrCreateField(fieldId);
+                                        _ = fld.BroadcastAsync(moveNtf);
+                                    }
+                                    else
+                                    {
+                                        mon.Frame++;
+                                    }
                                     break;
                                 }
 
@@ -536,7 +560,6 @@ namespace Yogurting.Server.Handlers
                                         _ = field.BroadcastAsync(monAtkNtf);
 
                                         _ = target.Session.SendAsync(YogurtingPackets.MakeGameSetHpNtf((ushort)target.Player.CurrentHp));
-                                        _ = target.Session.SendAsync(YogurtingPackets.MakeGameSetStateNtf(target.Player));
 
                                         // Player Defeat / Collapse (0x791B)
                                         if (target.Player.CurrentHp <= 0)

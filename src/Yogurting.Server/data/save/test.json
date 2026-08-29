@@ -1,68 +1,7 @@
 ﻿{
-    "HasCharacter":  false,
-    "AccountId":  "test",
-    "Grade":  1,
-    "Gender":  0,
-    "MaxExp":  100,
-    "Position":  {
-                     "Y":  104,
-                     "Z":  0,
-                     "X":  76
-                 },
-    "Equips":  [
-
-               ],
-    "CharacterId":  0,
-    "FaceId":  0,
-    "EquippedSlotUids":  [
-                             0,
-                             0,
-                             0,
-                             0,
-                             0,
-                             0,
-                             0,
-                             0,
-                             0,
-                             0
-                         ],
-    "HairId":  0,
-    "CurrentHp":  260,
-    "Direction":  {
-                      "Y":  0,
-                      "X":  0
-                  },
-    "StarBeItems":  [
-
-                    ],
-    "Inventory":  [
-
-                  ],
-    "School":  0,
-    "StarPoints":  100000,
-    "CharaId":  0,
     "CharacterName":  "",
-    "FieldId":  1,
-    "PasswordHash":  "098f6bcd4621d373cade4e832627b4f6",
-    "EquippedSlotIsStar":  [
-                               false,
-                               false,
-                               false,
-                               false,
-                               false,
-                               false,
-                               false,
-                               false,
-                               false,
-                               false
-                           ],
     "AuthType":  "normal",
-    "TaffPoints":  100000,
-    "CurrentExp":  0,
-    "CurrentMp":  195,
-    "MaxHp":  260,
-    "SkinTone":  0,
-    "MaxMp":  195,
-    "SessionKey":  0,
-    "Level":  1
+    "AccountId":  "test",
+    "HasCharacter":  false,
+    "PasswordHash":  "098f6bcd4621d373cade4e832627b4f6"
 }

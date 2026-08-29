@@ -56,7 +56,7 @@ namespace Yogurting.Server.Handlers.Field
             try
             {
                 var player = state.Player;
-                int points = player != null && player.StarPoints > 0 ? player.StarPoints : 10000;
+                int points = player?.StarPoints ?? 0;
                 Logger.Info($"[FieldServer] '{player?.CharacterName ?? "Player"}' requested Star Coin balance -> {points} Points");
 
                 byte[] ans = YogurtingPackets.MakeGameByulChargeAns(0, points);
@@ -123,9 +123,9 @@ namespace Yogurting.Server.Handlers.Field
                 var player = state.Player;
                 if (player == null) return;
 
-                // 1. Locate product definition
+                // 1. Locate product definition from database
                 ShopProductDef? product = _gameDb?.StarProducts.Find(p => p.ProductId == productId);
-                int price = product?.Price ?? 5000;
+                int price = product?.Price ?? 0;
                 int period = product?.Period ?? 0;
 
                 // 2. Validate Player Star Points
@@ -144,7 +144,7 @@ namespace Yogurting.Server.Handlers.Field
                 var deliveredItems = new List<Item>();
                 var itemTypeIds = (product?.ItemIds != null && product.ItemIds.Count > 0)
                     ? product.ItemIds
-                    : GetProductItemIds(productId);
+                    : (product != null ? new List<int> { product.ProductId } : new List<int> { productId });
 
                 int maxInv = (player.Inventory != null && player.Inventory.Count > 0) ? player.Inventory.Max(i => i.Id) : 0;
                 int maxStar = (player.StarBeItems != null && player.StarBeItems.Count > 0) ? player.StarBeItems.Max(i => i.Id) : 0;
@@ -172,22 +172,6 @@ namespace Yogurting.Server.Handlers.Field
                     };
 
                     (player.StarBeItems ??= new List<Item>()).Add(newItem);
-
-                    // Also add to standard inventory for instant client sync
-                    (player.Inventory ??= new List<Item>()).Add(new Item
-                    {
-                        Id = nextUid,
-                        ItemId = itemTypeId,
-                        TypeId = itemTypeId,
-                        Name = itemName,
-                        Quantity = quantity,
-                        SerialId = itemSerialId,
-                        SlotIndex = (ushort)(player.Inventory.Count + 1),
-                        SlotType = ItemSlotType.Inventory,
-                        IsEquipped = false,
-                        SocketSlots = new int[5]
-                    });
-
                     deliveredItems.Add(newItem);
                     Logger.Info($"[FieldServer] Star purchase granted item: '{player.CharacterName}' received '{itemName}' ({itemTypeId}) [FID: {itemSerialId}]");
                 }
@@ -201,77 +185,13 @@ namespace Yogurting.Server.Handlers.Field
                 }
 
                 // 6. Send Purchase Success Response (0x523F)
-                byte[] successAns = YogurtingPackets.MakeByulProductBuyAns(0, productId, deliveredItems[0].SerialId, player.StarPoints, period, price, deliveredItems);
+                byte[] successAns = YogurtingPackets.MakeByulProductBuyAns(0, productId, deliveredItems.Count > 0 ? deliveredItems[0].SerialId : 0L, player.StarPoints, period, price, deliveredItems);
                 await state.Session.SendAsync(successAns);
             }
             catch (Exception ex)
             {
                 Logger.Error($"[FieldServer] HandleByulProductBuy failed: {ex.Message}");
             }
-        }
-
-        private static List<int> GetProductItemIds(int productId)
-        {
-            return productId switch
-            {
-                // Consumables & Utility Items
-                23 => new List<int> { 23 },
-                27 => new List<int> { 27 },
-                31 => new List<int> { 31 },
-                44 => new List<int> { 44 },
-                48 => new List<int> { 48 },
-                54 => new List<int> { 6103 }, // Memory Chip 30d
-                70 => new List<int> { 70 },
-                161 => new List<int> { 7004 }, // EXP Up 30d
-                167 => new List<int> { 7103 }, // Damage Up 7d
-                168 => new List<int> { 7104 }, // Damage Up 30d
-                174 => new List<int> { 7203 }, // Defense Up 7d
-                175 => new List<int> { 7204 }, // Defense Up 30d
-                181 => new List<int> { 7303 }, // Hit Up 7d
-                182 => new List<int> { 7304 }, // Hit Up 30d
-                188 => new List<int> { 7403 }, // Free Up 7d
-                189 => new List<int> { 7404 }, // Free Up 30d
-                195 => new List<int> { 7503 }, // Critical Up 7d
-                196 => new List<int> { 7504 }, // Critical Up 30d
-
-                // Costume Sets
-                105 => new List<int> { 2103111, 2103121, 2103131 }, // Badminton (Male)
-                126 => new List<int> { 2203111, 2203121, 2203131 }, // Badminton (Female)
-                133 => new List<int> { 1103211, 1103221, 1103231 }, // ROCK Stage (Male)
-                140 => new List<int> { 1203211, 1203221, 1203231 }, // ROCK Stage (Female)
-                147 => new List<int> { 2103211, 2103221, 2103231 }, // Folk Band (Male)
-                154 => new List<int> { 2203211, 2203221, 2203231 }, // Folk Band (Female)
-
-                // Tempo Buff & Utility Bundles
-                205 => new List<int> { 6202, 27, 7003 },             // Mezzo Forte Set (Locker, Placard, EXP Up 7d)
-                206 => new List<int> { 6202, 31, 27, 6103, 7003 },       // Forte Set (Locker, Name Tag, Placard, Chip, EXP Up 7d)
-                207 => new List<int> { 6202, 31, 44, 27, 6103, 48, 23, 7004 }, // Fortissimo Set
-                208 => new List<int> { 7301, 7401, 7001 },          // Presto / Beginner Adagio Set (Hit 1d, Free 1d, EXP 1d)
-                209 => new List<int> { 7103, 7203, 7503 },          // Largo / Allegro Set (Damage 7d, Def 7d, Crit 7d)
-                210 => new List<int> { 7303, 7403, 7003 },          // Moderato Set (Hit 7d, Free 7d, EXP 7d)
-
-                // Club Uniform Sets
-                211 => new List<int> { 1102211, 1102221, 1102231 }, // Robot Club Set (Male)
-                212 => new List<int> { 1202211, 1202221, 1202231 }, // Robot Club Set (Female)
-                213 => new List<int> { 2102911, 2102921, 2102931 }, // Archaeology Set (Male)
-                214 => new List<int> { 2202911, 2202921, 2202931 }, // Archaeology Set (Female)
-                215 => new List<int> { 1102411, 1102421, 1102431 }, // Tea Time Set (Male)
-                216 => new List<int> { 1202411, 1202421, 1202431 }, // Tea Time Set (Female)
-                217 => new List<int> { 2102411, 2102421, 2102431 }, // Dim Sum Set (Male)
-                218 => new List<int> { 2202411, 2202421, 2202431 }, // Dim Sum Set (Female)
-
-                // 30-Day Musical Tempo Buff Sets
-                219 => new List<int> { 7104, 7204, 7504 },          // Allegrissimo Set (Damage 30d, Def 30d, Crit 30d)
-                220 => new List<int> { 7304, 7404, 7004 },          // Vivace Set (Hit 30d, Free 30d, EXP 30d)
-
-                // Club Uniforms (Extended)
-                342 => new List<int> { 1102611, 1102621, 1102631 }, // Gambling Club (Male)
-                343 => new List<int> { 1202611, 1202621, 1202631 }, // Gambling Club (Female)
-                344 => new List<int> { 2101911, 2101921, 2101931 }, // Ninja Club (Male)
-                345 => new List<int> { 2201911, 2201921, 2201931 }, // Ninja Club (Female)
-
-                _ => new List<int> { productId }
-            };
         }
 
         /// <summary>
@@ -298,11 +218,6 @@ namespace Yogurting.Server.Handlers.Field
                         storeItems.Add((cat, item.ItemId));
                     }
                 }
-                else
-                {
-                    storeItems.Add((1, 200001)); // Beginner Bread
-                    storeItems.Add((2, 110001)); // Starter Blade
-                }
 
                 byte[] catalog = YogurtingPackets.MakeGameShopListNtf(1, storeItems.ToArray());
                 await state.Session.SendAsync(catalog);
@@ -328,9 +243,17 @@ namespace Yogurting.Server.Handlers.Field
                 int machineSn = packetData.Length >= 10 ? BitConverter.ToInt32(packetData, 6) : 0;
                 long price = 500;
 
-                // Roll random capsule prize item from kuji / starter items
-                int[] prizePool = { 30002, 1001, 1002, 110001, 120001, 130001, 140001 };
-                int rolledItem = prizePool[Random.Shared.Next(prizePool.Length)];
+                // Roll random capsule prize item dynamically from database ShopItems or Items table
+                int rolledItem = 10001;
+                if (_gameDb != null && _gameDb.ShopItems.Count > 0)
+                {
+                    rolledItem = _gameDb.ShopItems[Random.Shared.Next(_gameDb.ShopItems.Count)].ItemId;
+                }
+                else if (_gameDb != null && _gameDb.Items.Count > 0)
+                {
+                    var keyList = _gameDb.Items.Keys.ToList();
+                    rolledItem = keyList[Random.Shared.Next(keyList.Count)];
+                }
 
                 if (player.TaffPoints >= price)
                 {

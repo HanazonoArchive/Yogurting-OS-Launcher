@@ -79,7 +79,7 @@ namespace Yogurting.Server.Handlers.Field
                     targetMainY = reqTargets[0].y;
                 }
 
-                // Detect equipped weapon category (1=Blade, 2=Glove, 3=Blunt, 4=Spirit)
+                // Detect equipped weapon category dynamically from GameDatabase (1=Blade, 2=Glove, 3=Blunt, 4=Spirit)
                 int weaponCat = 1;
                 int weaponTypeId = 0;
                 if (player.EquippedSlotUids != null && player.EquippedSlotUids.Length > 4 && player.EquippedSlotUids[4] > 0)
@@ -90,14 +90,22 @@ namespace Yogurting.Server.Handlers.Field
                     if (wItem != null)
                     {
                         weaponTypeId = wItem.TypeId > 0 ? wItem.TypeId : wItem.ItemId;
-                        weaponCat = (weaponTypeId / 10000) switch
+                        if (_gameDb != null && _gameDb.Items.TryGetValue(weaponTypeId, out var wDef) && wDef.WeaponType > 0)
                         {
-                            11 => 1, // Blade
-                            12 => 2, // Glove
-                            13 => 3, // Blunt
-                            14 => 1, // Starter Weapon (140001) uses Blade attack skills 70101..70104
-                            _ => 1
-                        };
+                            weaponCat = wDef.WeaponType;
+                        }
+                        else
+                        {
+                            weaponCat = (weaponTypeId / 10000) switch
+                            {
+                                11 => 1, // Blade
+                                12 => 2, // Glove
+                                13 => 3, // Blunt
+                                14 => 4, // Spirit / Gun
+                                140 => 4, // Star Spirit
+                                _ => 1
+                            };
+                        }
                     }
                 }
 
@@ -110,9 +118,15 @@ namespace Yogurting.Server.Handlers.Field
                 player.ComboCount = Math.Min(999, player.ComboCount + 1);
                 player.LastAttackTime = now;
 
-                // Calculate authentic weapon combo attack skill ID (70101..70104 for Blade, 70201..70204 for Glove, etc.)
-                int comboStep = Math.Min(4, Math.Max(1, (player.ComboCount - 1) % 4 + 1));
-                int attackSkillId = 70000 + (weaponCat * 100) + comboStep;
+                // Calculate authentic weapon combo attack skill ID (SkillWeapon.txt / AtkWeapon.txt: 10101..10104 for Blade, 70101..70104 for Spirit)
+                int attackSkillId = weaponCat switch
+                {
+                    1 => 10101 + (int)animId, // Blade
+                    2 => 30101 + (int)animId, // Glove
+                    3 => 50101 + (int)animId, // Blunt
+                    4 => 70101 + (int)animId, // Spirit
+                    _ => 10101 + (int)animId
+                };
 
                 // Check if swinging in empty air (no target selected and target list is empty)
                 bool isEmptySwing = (targetMainId <= 0 || targetMainId == -1) && targetsCount == 0 && reqTargets.Count == 0;
@@ -125,7 +139,7 @@ namespace Yogurting.Server.Handlers.Field
                         targetY: targetMainY,
                         damage: 0,
                         isCritical: false,
-                        combo: comboStep - 1,
+                        combo: player.ComboCount,
                         weaponCategory: weaponCat,
                         skillId: attackSkillId,
                         addDexExp: 0);
@@ -227,29 +241,38 @@ namespace Yogurting.Server.Handlers.Field
 
                         // Apply damage to monster
                         targetMonster.TakeDamage(damage);
-                        targetMonster.TargetPlayerId = player.CharacterId; // Retaliate against attacker
+
+                        // Wake up monster into Chase state immediately
+                        if (!targetMonster.IsDead)
+                        {
+                            targetMonster.State = MonsterState.Chase;
+                            targetMonster.Frame = 6; // Force immediate path broadcast on next AI tick
+                        }
+
+                        // If monster wasn't previously targeting this player, notify Ownership Acquired (0x7A00 - Green Circle on feet)
+                        if (targetMonster.TargetPlayerId != player.CharacterId && !targetMonster.IsDead)
+                        {
+                            targetMonster.TargetPlayerId = player.CharacterId;
+                            byte[] lockPkt = YogurtingPackets.MakeGameMonsterOwnershipAcquiredNtf(targetMonster.EntityId);
+                            _ = state.Session.SendAsync(lockPkt);
+                            _ = _broadcastDelegate(state, lockPkt);
+                        }
 
                         targetEntries.Add((targetMonster.EntityId, (int)targetMonster.X, (int)targetMonster.Y, damage, isCrit));
                         Logger.Info($"[Combat] '{player.CharacterName}' attacked '{targetMonster.Name}' (ID: {targetMonster.EntityId}) for {damage} dmg (Crit: {isCrit})! Remaining HP: {targetMonster.CurrentHp}/{targetMonster.MaxHp}");
 
                         if (targetMonster.IsDead)
                         {
+                            targetMonster.TargetPlayerId = 0;
                             killedMonsters.Add(targetMonster);
                         }
                     }
 
-                    // Send 0x7A00 Target Ownership Acquired notice to activate Green Targeting Circle at mob's feet
-                    if (hitMonsters.Count > 0)
-                    {
-                        byte[] lockPkt = YogurtingPackets.MakeGameMonsterOwnershipAcquiredNtf(hitMonsters[0].EntityId);
-                        await state.Session.SendAsync(lockPkt);
-                    }
-
-                    // Broadcast attack answer & floating damage numbers across all hit enemies (0x791A)
+                    // 1. Broadcast attack answer & floating damage numbers across all hit enemies (0x791A)
                     byte[] atkAns = YogurtingPackets.MakeGameAttackAns(
                         player.CharacterId,
                         targetEntries,
-                        comboStep - 1,
+                        player.ComboCount,
                         weaponCategory: weaponCat,
                         skillId: attackSkillId,
                         addDexExp: 1);
@@ -257,7 +280,7 @@ namespace Yogurting.Server.Handlers.Field
                     await state.Session.SendAsync(atkAns);
                     await _broadcastDelegate(state, atkAns);
 
-                    // Real-time Overhead HP update for damaged living monsters (0x79E8 - Delphi 0x005AFAE4)
+                    // 2. Real-time Overhead HP update for damaged living monsters (0x79E8 - Delphi 0x005AFAE4)
                     foreach (var hMon in hitMonsters)
                     {
                         if (!hMon.IsDead)
@@ -267,6 +290,20 @@ namespace Yogurting.Server.Handlers.Field
                             await _broadcastDelegate(state, monHpPkt);
                         }
                     }
+
+                    // 3. Charge Point & Skill Gauge Update on Hit (_Unit49.pas:22236-22258)
+                    player.GaugeCurrent += 7000 + (player.ComboCount * 150);
+                    if (player.GaugeMax <= 0) player.GaugeMax = 70000;
+                    if (player.GaugeCurrent >= player.GaugeMax)
+                    {
+                        if (player.ChargePoint < 3)
+                        {
+                            player.ChargePoint++;
+                        }
+                        player.GaugeCurrent = player.ChargePoint < 3 ? (player.GaugeCurrent - player.GaugeMax) : 0;
+                    }
+                    byte[] chargePkt = YogurtingPackets.MakeGameChargePointUpdateNtf(player.ChargePoint, player.GaugeMax, player.GaugeCurrent);
+                    await state.Session.SendAsync(chargePkt);
 
                     // Synchronously process monster kills immediately following 0x791A (matching Delphi Quartet pipeline)
                     if (killedMonsters.Count > 0)
@@ -287,7 +324,7 @@ namespace Yogurting.Server.Handlers.Field
                         (int)player.Position.Y,
                         0,
                         false,
-                        comboStep - 1,
+                        player.ComboCount,
                         weaponCategory: weaponCat,
                         skillId: attackSkillId,
                         addDexExp: 0);
@@ -350,7 +387,8 @@ namespace Yogurting.Server.Handlers.Field
                 player.CharacterId,
                 expEarned,
                 (int)player.CurrentExp,
-                lootList);
+                lootList,
+                monster.MonsterType);
             await state.Session.SendAsync(deadNtf);
             await _broadcastDelegate(state, deadNtf);
 
@@ -382,10 +420,10 @@ namespace Yogurting.Server.Handlers.Field
                 await state.Session.SendAsync(YogurtingPackets.MakeGameSetHpNtf((ushort)player.CurrentHp));
             }
 
-            // Persist player progression
+            // Persist player progression asynchronously to avoid combat thread disk I/O lag
             if (_repository != null)
             {
-                await _repository.SaveAccountAsync(player);
+                _ = Task.Run(() => _repository.SaveAccountAsync(player));
             }
 
             // Schedule Monster Respawn after delay (default 5s)
@@ -426,43 +464,6 @@ namespace Yogurting.Server.Handlers.Field
         }
 
         /// <summary>
-        /// 0xA413 (42003): MsgGameCapsuleBuyReq - Capsule Vending Machine Purchase
-        /// </summary>
-        [PacketHandler(PacketOpcode.MsgGameCapsuleBuyReq)]
-        public async Task HandleCapsuleBuyReqAsync(PlayerSessionState state, byte[] packetData)
-        {
-            try
-            {
-                var player = state.Player;
-                if (player == null) return;
-
-                int machineSn = packetData.Length >= 10 ? BitConverter.ToInt32(packetData, 6) : 0;
-                Logger.Info($"[Capsule] '{player.CharacterName}' pulled Capsule Vending Machine #{machineSn}.");
-
-                // Send success response (0xA414)
-                using var writer = PacketWriter.Create(PacketOpcode.MsgGameCapsuleBuyAns);
-                writer.WriteInt32(0); // Success
-                writer.WriteInt32(machineSn);
-                writer.WriteInt32(200001); // Beginner Bread reward
-                writer.WriteInt32(1); // Quantity
-                await state.Session.SendAsync(writer.Build());
-            }
-            catch (Exception ex)
-            {
-                Logger.Error($"[Capsule] HandleCapsuleBuyReq failed: {ex.Message}");
-            }
-        }
-
-        /// <summary>
-        /// 0xA415 (42005): MsgGameCapsuleExitNtf - Capsule Vending Machine Exit
-        /// </summary>
-        [PacketHandler(PacketOpcode.MsgGameCapsuleExitNtf)]
-        public Task HandleCapsuleExitNtfAsync(PlayerSessionState state, byte[] packetData)
-        {
-            return Task.CompletedTask;
-        }
-
-        /// <summary>
         /// 0x7923 (31011): MsgGameSkillCastReq - Player Active Combat Skill Cast
         /// </summary>
         [PacketHandler(PacketOpcode.MsgGameSkillCastReq)]
@@ -482,7 +483,7 @@ namespace Yogurting.Server.Handlers.Field
                 byte flag = packetData.Length >= 31 ? packetData[30] : (byte)0;
                 ushort targetsCount = packetData.Length >= 33 ? BitConverter.ToUInt16(packetData, 31) : (ushort)0;
 
-                int weaponCat = 1; // Default Blade
+                int weaponCat = 1; // Default Blade (1=Blade, 2=Glove, 3=Muffler/Blunt, 4=Spirit/Shooting)
                 if (player.EquippedSlotUids != null && player.EquippedSlotUids.Length > 4 && player.EquippedSlotUids[4] != 0)
                 {
                     var weaponItem = player.Inventory?.Find(i => i.Id == player.EquippedSlotUids[4]);
@@ -499,6 +500,13 @@ namespace Yogurting.Server.Handlers.Field
                 player.GaugeCurrent = 0;
                 await state.Session.SendAsync(YogurtingPackets.MakeGameChargePointUpdateNtf(player.ChargePoint, player.GaugeMax, player.GaugeCurrent));
 
+                // Retrieve dynamic skill power multiplier from SkillDesc2.txt
+                int skillPower = 100;
+                if (_gameDb != null && _gameDb.SkillDesc2s.TryGetValue(skillId, out var sDesc2) && sDesc2.Power > 0)
+                {
+                    skillPower = sDesc2.Power;
+                }
+
                 // Resolve splash damage for all hit targets
                 var targetResults = new List<(int targetType, int targetId, int targetX, int targetY, int damage, byte hitType)>();
                 var killedMonsters = new List<FieldMonster>();
@@ -512,9 +520,9 @@ namespace Yogurting.Server.Handlers.Field
                     int tY = BitConverter.ToInt32(packetData, targetOffset + 12);
                     targetOffset += 16;
 
-                    // Skill damage calculation (2.5x base weapon attack + variance)
-                    int baseAtk = player.Pow + 20;
-                    int dmg = Math.Max(10, (int)(baseAtk * 2.5f + _random.Next(-3, 8)));
+                    // Dynamic Skill damage calculation (based on SkillDesc2.Power & player POW)
+                    int baseAtk = player.Pow + (player.Level * 2);
+                    int dmg = Math.Max(10, (int)((baseAtk * (skillPower / 100.0f)) + _random.Next(-3, 8)));
                     bool isCrit = _random.Next(0, 100) < 30;
                     if (isCrit) dmg = (int)(dmg * 1.5f);
 
@@ -542,8 +550,8 @@ namespace Yogurting.Server.Handlers.Field
                 // If single-target (targetsCount == 0) and targetMainId > 0 (valid target entity)
                 if (targetResults.Count == 0 && targetMainId > 0)
                 {
-                    int baseAtk = player.Pow + 20;
-                    int dmg = Math.Max(10, (int)(baseAtk * 2.5f + _random.Next(-3, 8)));
+                    int baseAtk = player.Pow + (player.Level * 2);
+                    int dmg = Math.Max(10, (int)((baseAtk * (skillPower / 100.0f)) + _random.Next(-3, 8)));
                     bool isCrit = _random.Next(0, 100) < 30;
                     if (isCrit) dmg = (int)(dmg * 1.5f);
 
@@ -566,8 +574,6 @@ namespace Yogurting.Server.Handlers.Field
                         }
                     }
                 }
-
-
 
                 // Dispatch 0x7924 (MsgGameSkillCastAns)
                 byte[] skillAns = YogurtingPackets.MakeGameSkillCastAns(
@@ -597,10 +603,10 @@ namespace Yogurting.Server.Handlers.Field
                     {
                         skillDelayMs = weaponCat switch
                         {
-                            1 => 450, // Blade skill
-                            2 => 550, // Blunt skill
-                            3 => 650, // Staff skill
-                            4 => 320, // Gun skill
+                            1 => 450, // Blade (刀/剣)
+                            2 => 550, // Glove (グローブ)
+                            3 => 650, // Muffler / Blunt (マフラー/鈍器)
+                            4 => 320, // Spirit / Shooting (霊/銃・楽器)
                             _ => 500
                         };
                     }
@@ -703,13 +709,20 @@ namespace Yogurting.Server.Handlers.Field
                 int selectedBoxIndex = packetData.Length >= 10 ? BitConverter.ToInt32(packetData, 6) : 0;
                 Logger.Info($"[Combat] '{player.CharacterName}' opened Booty Box #{selectedBoxIndex}! Unboxing reward...");
 
-                // Award reward item (e.g. Rare Uniform / Consumable)
-                int rewardTypeId = selectedBoxIndex switch
+                // Award reward item dynamically (e.g. Monster drop item, field reward, or valid database item)
+                int rewardTypeId = 10001; // Triangle Milk default
+                if (_gameDb != null && _gameDb.Fields.TryGetValue(player.FieldId, out var curF) && curF.Monsters.Count > 0)
                 {
-                    1 => 110001, // Gym Uniform
-                    2 => 310001, // Potion
-                    _ => 140001  // Blade Weapon
-                };
+                    var dropMon = curF.Monsters.Find(m => m.DropItemType > 0);
+                    if (dropMon != null)
+                    {
+                        rewardTypeId = dropMon.DropItemType;
+                    }
+                }
+                else if (_gameDb != null && _gameDb.ShopItems.Count > 0)
+                {
+                    rewardTypeId = _gameDb.ShopItems[Math.Abs(selectedBoxIndex) % _gameDb.ShopItems.Count].ItemId;
+                }
 
                 player.Inventory.Add(new Item
                 {

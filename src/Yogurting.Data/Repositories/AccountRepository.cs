@@ -16,6 +16,7 @@ namespace Yogurting.Data.Repositories
         Task<Player?> GetAccountAsync(string accountId);
         Task<Player?> GetByUsernameAsync(string username);
         Task<Player?> GetByCharacterNameAsync(string characterName);
+        Task<Player?> GetBySessionKeyAsync(int sessionKey);
         Task<Player> CreateAccountAsync(string accountId, string password, string characterName, SchoolType school, GenderType gender, WeaponClass weapon);
         Task SaveAccountAsync(Player player);
         Task SaveAsync(Player player);
@@ -140,6 +141,21 @@ namespace Yogurting.Data.Repositories
                 if (string.Equals(player.CharacterName, characterName, StringComparison.OrdinalIgnoreCase))
                 {
                     return Task.FromResult<Player?>(player);
+                }
+            }
+            return Task.FromResult<Player?>(null);
+        }
+
+        public Task<Player?> GetBySessionKeyAsync(int sessionKey)
+        {
+            if (sessionKey != 0)
+            {
+                foreach (var player in _cache.Values)
+                {
+                    if (player.SessionKey == sessionKey)
+                    {
+                        return Task.FromResult<Player?>(player);
+                    }
                 }
             }
             return Task.FromResult<Player?>(null);
