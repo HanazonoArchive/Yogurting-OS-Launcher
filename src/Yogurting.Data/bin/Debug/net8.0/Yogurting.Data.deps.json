@@ -1,0 +1,54 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v8.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v8.0": {
+      "Yogurting.Data/1.0.0": {
+        "dependencies": {
+          "Yogurting.Core": "1.0.0"
+        },
+        "runtime": {
+          "Yogurting.Data.dll": {}
+        }
+      },
+      "System.IO.Pipelines/10.0.11": {
+        "runtime": {
+          "lib/net8.0/System.IO.Pipelines.dll": {
+            "assemblyVersion": "10.0.0.0",
+            "fileVersion": "10.0.1126.37416"
+          }
+        }
+      },
+      "Yogurting.Core/1.0.0": {
+        "dependencies": {
+          "System.IO.Pipelines": "10.0.11"
+        },
+        "runtime": {
+          "Yogurting.Core.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "Yogurting.Data/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "System.IO.Pipelines/10.0.11": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-rg8LPOZ62quw3aTnsQNh9rssncaMs69WEM1DiJdDkV+o4Llb2s5Pasy5Bulfm8zL+pE4gDcSQo7V2zW2jvxwYg==",
+      "path": "system.io.pipelines/10.0.11",
+      "hashPath": "system.io.pipelines.10.0.11.nupkg.sha512"
+    },
+    "Yogurting.Core/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

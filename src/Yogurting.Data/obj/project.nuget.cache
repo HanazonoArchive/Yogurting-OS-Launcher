@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "TWOcU/7Dd7Y=",
+  "success": true,
+  "projectFilePath": "C:\\Users\\Hanazono Archive\\Desktop\\Yogurting Game\\server_modern\\src\\Yogurting.Data\\Yogurting.Data.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Hanazono Archive\\.nuget\\packages\\system.io.pipelines\\10.0.11\\system.io.pipelines.10.0.11.nupkg.sha512"
+  ],
+  "logs": []
+}
