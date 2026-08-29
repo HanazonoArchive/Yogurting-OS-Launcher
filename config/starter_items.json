@@ -6,15 +6,14 @@
     "MaxHp": 260,
     "CurrentMp": 195,
     "MaxMp": 195,
-    "Money": 10000,
-    "TaffPoints": 0,
-    "StarPoints": 0
+    "TaffPoints": 100000,
+    "StarPoints": 100000
   },
   "SpawnPoints": {
     "EstivaAcademy": {
-      "FieldId": 91,
-      "X": 220.0,
-      "Y": 99.0
+      "FieldId": 1,
+      "X": 76.0,
+      "Y": 104.0
     },
     "SoilAcademy": {
       "FieldId": 90,
@@ -25,57 +24,212 @@
   "Profiles": {
     "Estiva_Male": {
       "Equipped": [
-        { "SlotIndex": 4, "ItemId": 120001, "Name": "Starter Estiva Red Glove", "Quantity": 1 },
-        { "SlotIndex": 7, "ItemId": 150001, "Name": "Estiva Winter Top (M)", "Quantity": 1 },
-        { "SlotIndex": 8, "ItemId": 150002, "Name": "Estiva Winter Bottom (M)", "Quantity": 1 },
-        { "SlotIndex": 9, "ItemId": 150003, "Name": "Estiva Winter Shoes (M)", "Quantity": 1 }
+        {
+          "SlotIndex": 4,
+          "ItemId": 120001,
+          "Name": "Starter Estiva Red Glove",
+          "Quantity": 1
+        },
+        {
+          "SlotIndex": 7,
+          "ItemId": 150001,
+          "Name": "Estiva Winter Top (M)",
+          "Quantity": 1
+        },
+        {
+          "SlotIndex": 8,
+          "ItemId": 150002,
+          "Name": "Estiva Winter Bottom (M)",
+          "Quantity": 1
+        },
+        {
+          "SlotIndex": 9,
+          "ItemId": 150003,
+          "Name": "Estiva Winter Shoes (M)",
+          "Quantity": 1
+        }
       ],
       "Inventory": [
-        { "SlotIndex": 4, "ItemId": 150007, "Name": "Estiva Summer Top (M)", "Quantity": 1 },
-        { "SlotIndex": 5, "ItemId": 150008, "Name": "Estiva Summer Bottom (M)", "Quantity": 1 },
-        { "SlotIndex": 6, "ItemId": 150009, "Name": "Estiva Summer Shoes (M)", "Quantity": 1 },
-        { "SlotIndex": 7, "ItemId": 200001, "Name": "Beginner Bread", "Quantity": 20 }
+        {
+          "SlotIndex": 4,
+          "ItemId": 150007,
+          "Name": "Estiva Summer Top (M)",
+          "Quantity": 1
+        },
+        {
+          "SlotIndex": 5,
+          "ItemId": 150008,
+          "Name": "Estiva Summer Bottom (M)",
+          "Quantity": 1
+        },
+        {
+          "SlotIndex": 6,
+          "ItemId": 150009,
+          "Name": "Estiva Summer Shoes (M)",
+          "Quantity": 1
+        },
+        {
+          "SlotIndex": 7,
+          "ItemId": 200001,
+          "Name": "Beginner Bread",
+          "Quantity": 20
+        }
       ]
     },
     "Estiva_Female": {
       "Equipped": [
-        { "SlotIndex": 4, "ItemId": 140001, "Name": "Starter Estiva Blue Glove", "Quantity": 1 },
-        { "SlotIndex": 7, "ItemId": 150004, "Name": "Estiva Winter Top (F)", "Quantity": 1 },
-        { "SlotIndex": 8, "ItemId": 150005, "Name": "Estiva Winter Bottom (F)", "Quantity": 1 },
-        { "SlotIndex": 9, "ItemId": 150006, "Name": "Estiva Winter Shoes (F)", "Quantity": 1 }
+        {
+          "SlotIndex": 4,
+          "ItemId": 140001,
+          "Name": "Starter Estiva Blue Glove",
+          "Quantity": 1
+        },
+        {
+          "SlotIndex": 7,
+          "ItemId": 150004,
+          "Name": "Estiva Winter Top (F)",
+          "Quantity": 1
+        },
+        {
+          "SlotIndex": 8,
+          "ItemId": 150005,
+          "Name": "Estiva Winter Bottom (F)",
+          "Quantity": 1
+        },
+        {
+          "SlotIndex": 9,
+          "ItemId": 150006,
+          "Name": "Estiva Winter Shoes (F)",
+          "Quantity": 1
+        }
       ],
       "Inventory": [
-        { "SlotIndex": 4, "ItemId": 150010, "Name": "Estiva Summer Top (F)", "Quantity": 1 },
-        { "SlotIndex": 5, "ItemId": 150011, "Name": "Estiva Summer Bottom (F)", "Quantity": 1 },
-        { "SlotIndex": 6, "ItemId": 150012, "Name": "Estiva Summer Shoes (F)", "Quantity": 1 },
-        { "SlotIndex": 7, "ItemId": 200001, "Name": "Beginner Bread", "Quantity": 20 }
+        {
+          "SlotIndex": 4,
+          "ItemId": 150010,
+          "Name": "Estiva Summer Top (F)",
+          "Quantity": 1
+        },
+        {
+          "SlotIndex": 5,
+          "ItemId": 150011,
+          "Name": "Estiva Summer Bottom (F)",
+          "Quantity": 1
+        },
+        {
+          "SlotIndex": 6,
+          "ItemId": 150012,
+          "Name": "Estiva Summer Shoes (F)",
+          "Quantity": 1
+        },
+        {
+          "SlotIndex": 7,
+          "ItemId": 200001,
+          "Name": "Beginner Bread",
+          "Quantity": 20
+        }
       ]
     },
     "Soil_Male": {
       "Equipped": [
-        { "SlotIndex": 4, "ItemId": 110001, "Name": "Starter Blade", "Quantity": 1 },
-        { "SlotIndex": 7, "ItemId": 150060, "Name": "So-il Winter Top (M)", "Quantity": 1 },
-        { "SlotIndex": 8, "ItemId": 150061, "Name": "So-il Winter Bottom (M)", "Quantity": 1 },
-        { "SlotIndex": 9, "ItemId": 150062, "Name": "So-il Winter Shoes (M)", "Quantity": 1 }
+        {
+          "SlotIndex": 4,
+          "ItemId": 110001,
+          "Name": "Starter Blade",
+          "Quantity": 1
+        },
+        {
+          "SlotIndex": 7,
+          "ItemId": 150060,
+          "Name": "So-il Winter Top (M)",
+          "Quantity": 1
+        },
+        {
+          "SlotIndex": 8,
+          "ItemId": 150061,
+          "Name": "So-il Winter Bottom (M)",
+          "Quantity": 1
+        },
+        {
+          "SlotIndex": 9,
+          "ItemId": 150062,
+          "Name": "So-il Winter Shoes (M)",
+          "Quantity": 1
+        }
       ],
       "Inventory": [
-        { "SlotIndex": 4, "ItemId": 150066, "Name": "So-il Summer Top (M)", "Quantity": 1 },
-        { "SlotIndex": 5, "ItemId": 150067, "Name": "So-il Summer Bottom (M)", "Quantity": 1 },
-        { "SlotIndex": 6, "ItemId": 150068, "Name": "So-il Summer Shoes (M)", "Quantity": 1 },
-        { "SlotIndex": 7, "ItemId": 200001, "Name": "Beginner Bread", "Quantity": 20 }
+        {
+          "SlotIndex": 4,
+          "ItemId": 150066,
+          "Name": "So-il Summer Top (M)",
+          "Quantity": 1
+        },
+        {
+          "SlotIndex": 5,
+          "ItemId": 150067,
+          "Name": "So-il Summer Bottom (M)",
+          "Quantity": 1
+        },
+        {
+          "SlotIndex": 6,
+          "ItemId": 150068,
+          "Name": "So-il Summer Shoes (M)",
+          "Quantity": 1
+        },
+        {
+          "SlotIndex": 7,
+          "ItemId": 200001,
+          "Name": "Beginner Bread",
+          "Quantity": 20
+        }
       ]
     },
     "Soil_Female": {
       "Equipped": [
-        { "SlotIndex": 4, "ItemId": 110001, "Name": "Starter Blade", "Quantity": 1 },
-        { "SlotIndex": 7, "ItemId": 150063, "Name": "So-il Winter Top (F)", "Quantity": 1 },
-        { "SlotIndex": 8, "ItemId": 150064, "Name": "So-il Winter Bottom (F)", "Quantity": 1 },
-        { "SlotIndex": 9, "ItemId": 150065, "Name": "So-il Winter Shoes (F)", "Quantity": 1 }
+        {
+          "SlotIndex": 4,
+          "ItemId": 110001,
+          "Name": "Starter Blade",
+          "Quantity": 1
+        },
+        {
+          "SlotIndex": 7,
+          "ItemId": 150063,
+          "Name": "So-il Winter Top (F)",
+          "Quantity": 1
+        },
+        {
+          "SlotIndex": 8,
+          "ItemId": 150064,
+          "Name": "So-il Winter Bottom (F)",
+          "Quantity": 1
+        },
+        {
+          "SlotIndex": 9,
+          "ItemId": 150065,
+          "Name": "So-il Winter Shoes (F)",
+          "Quantity": 1
+        }
       ],
       "Inventory": [
-        { "SlotIndex": 4, "ItemId": 150069, "Name": "So-il Summer Dress (F)", "Quantity": 1 },
-        { "SlotIndex": 5, "ItemId": 150070, "Name": "So-il Summer Shoes (F)", "Quantity": 1 },
-        { "SlotIndex": 6, "ItemId": 200001, "Name": "Beginner Bread", "Quantity": 20 }
+        {
+          "SlotIndex": 4,
+          "ItemId": 150069,
+          "Name": "So-il Summer Dress (F)",
+          "Quantity": 1
+        },
+        {
+          "SlotIndex": 5,
+          "ItemId": 150070,
+          "Name": "So-il Summer Shoes (F)",
+          "Quantity": 1
+        },
+        {
+          "SlotIndex": 6,
+          "ItemId": 200001,
+          "Name": "Beginner Bread",
+          "Quantity": 20
+        }
       ]
     }
   }

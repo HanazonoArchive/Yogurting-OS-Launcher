@@ -20,9 +20,8 @@ namespace Yogurting.Core.Models
         public int MaxHp { get; set; } = 260;
         public int CurrentMp { get; set; } = 195;
         public int MaxMp { get; set; } = 195;
-        public long Money { get; set; } = 10000;
-        public int TaffPoints { get; set; } = 0;
-        public int StarPoints { get; set; } = 0;
+        public long TaffPoints { get; set; } = 100000;
+        public int StarPoints { get; set; } = 100000;
     }
 
     public class StarterSpawnPoint
@@ -285,7 +284,6 @@ namespace Yogurting.Core.Models
             player.MaxHp = def.MaxHp;
             player.CurrentMp = def.CurrentMp;
             player.MaxMp = def.MaxMp;
-            player.Money = def.Money;
             player.TaffPoints = def.TaffPoints;
             player.StarPoints = def.StarPoints;
 

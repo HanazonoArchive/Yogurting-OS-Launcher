@@ -10,3 +10,4 @@ C:\Users\Hanazono Archive\Desktop\Yogurting Game\server_modern\src\Yogurting.Cor
 C:\Users\Hanazono Archive\Desktop\Yogurting Game\server_modern\src\Yogurting.Core\obj\Debug\net8.0\refint\Yogurting.Core.dll
 C:\Users\Hanazono Archive\Desktop\Yogurting Game\server_modern\src\Yogurting.Core\obj\Debug\net8.0\Yogurting.Core.pdb
 C:\Users\Hanazono Archive\Desktop\Yogurting Game\server_modern\src\Yogurting.Core\obj\Debug\net8.0\ref\Yogurting.Core.dll
+C:\Users\Hanazono Archive\Desktop\Yogurting Game\server_modern\src\Yogurting.Core\obj\Debug\net8.0\Yogurting.Core.sourcelink.json

@@ -122,9 +122,8 @@ namespace Yogurting.Core.Models
         public int Sp { get => CurrentMp; set => CurrentMp = value; }
         public int MaxMp { get; set; } = 195;
         public int MaxSp { get => MaxMp; set => MaxMp = value; }
-        public long Money { get; set; } = 9999999;
-        public int StarPoints { get; set; } = 9999999;
-        public int TaffPoints { get => StarPoints; set => StarPoints = value; }
+        public long TaffPoints { get; set; } = 100000;
+        public int StarPoints { get; set; } = 100000;
 
         /// <summary>
         /// Speed Multipliers calculated exactly from Delphi _Unit49.pas:20342:

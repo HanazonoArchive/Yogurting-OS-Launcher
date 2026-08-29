@@ -128,12 +128,7 @@ namespace Yogurting.Server.Handlers.Field
                 int price = product?.Price ?? 5000;
                 int period = product?.Period ?? 0;
 
-                // 2. Validate Player Star Points (StarPoints / Money)
-                if (player.StarPoints < price && player.Money >= price)
-                {
-                    player.StarPoints = (int)Math.Min(player.Money, int.MaxValue);
-                }
-
+                // 2. Validate Player Star Points
                 if (player.StarPoints < price)
                 {
                     Logger.Warn($"[FieldServer] Star purchase rejected: '{player.CharacterName}' has {player.StarPoints} Star Points, but Product #{productId} costs {price}!");
@@ -142,12 +137,8 @@ namespace Yogurting.Server.Handlers.Field
                     return;
                 }
 
-                // 3. Deduct Currency (Keep both StarPoints and Money synchronized)
+                // 3. Deduct Currency (StarPoints)
                 player.StarPoints -= price;
-                if (player.Money >= price)
-                {
-                    player.Money -= price;
-                }
 
                 // 4. Create and Deliver Purchased Items (Supports both single items and bundle packages from ProductList.xml)
                 var deliveredItems = new List<Item>();
@@ -341,9 +332,9 @@ namespace Yogurting.Server.Handlers.Field
                 int[] prizePool = { 30002, 1001, 1002, 110001, 120001, 130001, 140001 };
                 int rolledItem = prizePool[Random.Shared.Next(prizePool.Length)];
 
-                if (player.Money >= price)
+                if (player.TaffPoints >= price)
                 {
-                    player.Money -= price;
+                    player.TaffPoints -= price;
                 }
 
                 // Add rolled prize to inventory
@@ -368,7 +359,7 @@ namespace Yogurting.Server.Handlers.Field
                 Logger.Info($"[Shop] '{player.CharacterName}' bought capsule from Machine {machineSn}, received Item #{rolledItem}!");
 
                 // Reply with 0xA414 (Capsule Buy Answer)
-                await state.Session.SendAsync(YogurtingPackets.MakeGameCapsuleBuyAns(0, rolledItem, 1, price, player.Money));
+                await state.Session.SendAsync(YogurtingPackets.MakeGameCapsuleBuyAns(0, rolledItem, 1, price, player.TaffPoints));
                 await state.Session.SendAsync(YogurtingPackets.MakeGameSetStateNtf(player));
 
                 if (_repository != null)

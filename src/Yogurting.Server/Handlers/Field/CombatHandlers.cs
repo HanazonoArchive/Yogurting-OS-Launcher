@@ -38,25 +38,29 @@ namespace Yogurting.Server.Handlers.Field
                 var player = state.Player;
                 if (player == null) return;
 
-                // 0x7919 Payload layout (_Unit67.pas:19595-19612):
-                // Header (6B): Size(2B) + Opcode(4B)
-                // Offset 6:  targetMainType (4B Int32)
-                // Offset 10: targetMainId   (4B Int32)
-                // Offset 14: targetMainX    (4B Int32)
-                // Offset 18: targetMainY    (4B Int32)
-                // Offset 22: flag           (1B Byte)
-                // Offset 23: targetsCount   (2B UInt16)
-                // Offset 25: targets array (16B each: type, id, x, y)
-                int targetMainType = packetData.Length >= 10 ? BitConverter.ToInt32(packetData, 6) : 2;
-                int targetMainId   = packetData.Length >= 14 ? BitConverter.ToInt32(packetData, 10) : -1;
-                int targetMainX    = packetData.Length >= 18 ? BitConverter.ToInt32(packetData, 14) : (int)player.Position.X;
-                int targetMainY    = packetData.Length >= 22 ? BitConverter.ToInt32(packetData, 18) : (int)player.Position.Y;
-                byte flag          = packetData.Length >= 23 ? packetData[22] : (byte)0;
-                ushort targetsCount = packetData.Length >= 25 ? BitConverter.ToUInt16(packetData, 23) : (ushort)0;
+                // 0x7919 Payload layout (Verified against raw packet stream & Delphi):
+                // Header (6B): Size(2B) + Reserved(2B) + Opcode(2B: 0x7919)
+                // Offset 6:  charaId        (4B Int32)
+                // Offset 10: animId         (1B Byte)
+                // Offset 11: targetMainType (4B Int32)
+                // Offset 15: targetMainId   (4B Int32)
+                // Offset 19: targetMainX    (4B Int32)
+                // Offset 23: targetMainY    (4B Int32)
+                // Offset 27: flag           (1B Byte)
+                // Offset 28: targetsCount   (2B UInt16)
+                // Offset 30: targets array (16B each: type[4B], id[4B], x[4B], y[4B])
+                int charaId        = packetData.Length >= 10 ? BitConverter.ToInt32(packetData, 6) : player.CharacterId;
+                byte animId        = packetData.Length >= 11 ? packetData[10] : (byte)0;
+                int targetMainType = packetData.Length >= 15 ? BitConverter.ToInt32(packetData, 11) : 2;
+                int targetMainId   = packetData.Length >= 19 ? BitConverter.ToInt32(packetData, 15) : -1;
+                int targetMainX    = packetData.Length >= 23 ? BitConverter.ToInt32(packetData, 19) : (int)player.Position.X;
+                int targetMainY    = packetData.Length >= 27 ? BitConverter.ToInt32(packetData, 23) : (int)player.Position.Y;
+                byte flag          = packetData.Length >= 28 ? packetData[27] : (byte)0;
+                ushort targetsCount = packetData.Length >= 30 ? BitConverter.ToUInt16(packetData, 28) : (ushort)0;
 
-                // Read all targets in list (Delphi TSchoolSession.sub_006C17DC / _Unit67.pas:19624-19646: 16 bytes per target)
+                // Read all targets in list (16 bytes per target)
                 var reqTargets = new List<(int type, int entityId, int x, int y)>();
-                int targetOffset = 25;
+                int targetOffset = 30;
                 for (int i = 0; i < targetsCount && targetOffset + 16 <= packetData.Length; i++)
                 {
                     int tType = BitConverter.ToInt32(packetData, targetOffset);

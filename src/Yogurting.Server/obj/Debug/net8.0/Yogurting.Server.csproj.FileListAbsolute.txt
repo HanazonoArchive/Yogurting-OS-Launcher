@@ -19,3 +19,4 @@ C:\Users\Hanazono Archive\Desktop\Yogurting Game\server_modern\src\Yogurting.Ser
 C:\Users\Hanazono Archive\Desktop\Yogurting Game\server_modern\src\Yogurting.Server\obj\Debug\net8.0\Yogurting.Server.pdb
 C:\Users\Hanazono Archive\Desktop\Yogurting Game\server_modern\src\Yogurting.Server\obj\Debug\net8.0\Yogurting.Server.genruntimeconfig.cache
 C:\Users\Hanazono Archive\Desktop\Yogurting Game\server_modern\src\Yogurting.Server\obj\Debug\net8.0\ref\Yogurting.Server.dll
+C:\Users\Hanazono Archive\Desktop\Yogurting Game\server_modern\src\Yogurting.Server\obj\Debug\net8.0\Yogurting.Server.sourcelink.json

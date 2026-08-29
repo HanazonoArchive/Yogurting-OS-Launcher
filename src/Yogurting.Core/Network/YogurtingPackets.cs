@@ -156,7 +156,7 @@ namespace Yogurting.Core.Network
             writer.WriteByte(0xCC);
             writer.WriteByte(0xCC);
             writer.WriteUInt32(uint.TryParse(player.TelNumber, out var tel) ? tel : 3456); // TelNumber
-            writer.WriteInt64(player.Money);                // Money (Taff)
+            writer.WriteInt64(player.TaffPoints);           // TAFF
             writer.WriteUInt32((uint)player.Gender);        // Gender (0 = Male, 1 = Female)
             writer.WriteUInt32((uint)player.FaceId);        // Face ID
             writer.WriteUInt32((uint)player.HairId);        // Hair ID
@@ -519,9 +519,9 @@ namespace Yogurting.Core.Network
             writer.WriteByte((byte)player.Grade);           // Grade (byte)
             writer.WriteInt32(0);                           // Padding
             writer.WriteInt32(0);                           // Padding
-            writer.WriteInt64(player.Money);                // Taff (Int64)
+            writer.WriteInt64(player.TaffPoints);           // TAFF (Int64)
             writer.WriteInt64(0);                           // Exp (Int64)
-            writer.WriteInt32(player.TaffPoints);           // ShopPoint
+            writer.WriteInt32((int)Math.Min(int.MaxValue, player.TaffPoints)); // ShopPoint / Taff
             writer.WriteInt32(player.Hp);                   // Current HP (0x0060DD94)
             writer.WriteInt32(player.Sp);                   // Current SP (0x0060FE00)
             writer.WriteInt32(0);                           // 0x0060DDA4
