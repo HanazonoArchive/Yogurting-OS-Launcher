@@ -1,5 +1,0 @@
-C:\Users\Hanazono Archive\Desktop\Yogurting Game\server_modern\src\obj\Debug\net8.0\VerifyCombatEngine.csproj.AssemblyReference.cache
-C:\Users\Hanazono Archive\Desktop\Yogurting Game\server_modern\src\obj\Debug\net8.0\VerifyCombatEngine.GeneratedMSBuildEditorConfig.editorconfig
-C:\Users\Hanazono Archive\Desktop\Yogurting Game\server_modern\src\obj\Debug\net8.0\VerifyCombatEngine.AssemblyInfoInputs.cache
-C:\Users\Hanazono Archive\Desktop\Yogurting Game\server_modern\src\obj\Debug\net8.0\VerifyCombatEngine.AssemblyInfo.cs
-C:\Users\Hanazono Archive\Desktop\Yogurting Game\server_modern\src\obj\Debug\net8.0\VerifyCombatEngine.csproj.CoreCompileInputs.cache
