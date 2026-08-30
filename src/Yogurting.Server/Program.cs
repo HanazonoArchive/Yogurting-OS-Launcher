@@ -149,7 +149,7 @@ namespace Yogurting.Server
             var accountRepo = new JsonAccountRepository(saveDir);
 
             // 4. Initialize World Manager
-            var worldManager = new WorldManager();
+            var worldManager = new WorldManager(gameDb);
 
             // 5. Initialize Server Handlers
             string clientHost = config.Network.BindAddress == "0.0.0.0" ? "127.0.0.1" : config.Network.BindAddress;

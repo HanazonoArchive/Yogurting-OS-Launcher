@@ -33,9 +33,17 @@ namespace Yogurting.Server.Handlers.Field
         }
 
         /// <summary>
-        /// 0x4E21 (20001): MsgCheckVersionNtf - Client Time/Version Sync
+        /// 0x4E21 (20001): MsgCheckVersionNtf - Client version check notification
         /// </summary>
         [PacketHandler(PacketOpcode.MsgCheckVersionNtf)]
+        public Task HandleCheckVersionAsync(PlayerSessionState state, byte[] packetData)
+        {
+            return Task.CompletedTask;
+        }
+
+        /// <summary>
+        /// 0x4E26 (20006): MsgTimeNtf - Client Time Ping / Echo
+        /// </summary>
         [PacketHandler(PacketOpcode.MsgTimeNtf)]
         public async Task HandleTimeSyncAsync(PlayerSessionState state, byte[] packetData)
         {
@@ -385,20 +393,6 @@ namespace Yogurting.Server.Handlers.Field
                 await state.Session.SendAsync(YogurtingPackets.MakeGameFadeOutNtf());
                 await state.Session.SendAsync(YogurtingPackets.MakeGameSetHpNtf((ushort)state.Player.CurrentHp));
                 await state.Session.SendAsync(YogurtingPackets.MakeGameWarpStartNtf(targetField, targetPos.X, targetPos.Y, isHuntField, huntFieldId));
-
-                // If entering a Mob / Hunt Field, request weapon socket frame info (0x5273)
-                // This initializes combat stance and activates the Cardboard Box HUD (LuCGameItemDropCateFrame / bootybox.tga)
-                if (isHuntField)
-                {
-                    int weaponSlot = 4;
-                    int weaponUid = state.Player.EquippedSlotUids.Length > weaponSlot ? state.Player.EquippedSlotUids[weaponSlot] : 1;
-                    if (weaponUid == 0) weaponUid = 1;
-
-                    int weaponTypeId = YogurtingPackets.GetPlayerItemTypeId(state.Player, weaponUid, (ushort)weaponSlot);
-                    if (weaponTypeId == 0) weaponTypeId = 140001; // Starter Blade
-
-                    await state.Session.SendAsync(YogurtingPackets.MakeGameWeaponFrameInfoReq(weaponTypeId, weaponUid));
-                }
             }
             catch (Exception ex)
             {
@@ -557,19 +551,19 @@ namespace Yogurting.Server.Handlers.Field
                 float regainRate = (totalSpeed > 0 ? totalSpeed : 34) / 10.0f;
                 await state.Session.SendAsync(YogurtingPackets.MakeGameFieldEnterStatReadyNtf(regainRate));
 
-                // 4. Field Monsters (0x796E MonInfo + 0x7969 MonMove) for Hunt Maps
+                // 4. Field View Range (0x79D4 / 400)
+                await state.Session.SendAsync(YogurtingPackets.MakeGameFieldViewRangeNtf(400));
+
+                // 5. Background Music for New Field (0x795C / Action 0x27)
+                int bgm = _gameDb != null ? _gameDb.GetFieldBgm(targetField) : 6;
+                await state.Session.SendAsync(YogurtingPackets.MakeGameTriggerBgmNtf(bgm));
+
+                // 6. Field Monsters (0x796E MonInfo + 0x7969 MonMove) for Hunt Maps
                 if (isHunt && _worldManager != null)
                 {
                     var targetInstance = _worldManager.GetOrCreateField(targetField);
                     await targetInstance.SpawnMonstersAsync(state.Session, _gameDb);
                 }
-
-                // 5. Field View Range (0x79D4 / 400)
-                await state.Session.SendAsync(YogurtingPackets.MakeGameFieldViewRangeNtf(400));
-
-                // 6. Background Music for New Field (0x795C / Action 0x27)
-                int bgm = _gameDb != null ? _gameDb.GetFieldBgm(targetField) : 6;
-                await state.Session.SendAsync(YogurtingPackets.MakeGameTriggerBgmNtf(bgm));
 
                 // 7. Warp Result (0x7968) - Signals client to fade in and render character at new location
                 await state.Session.SendAsync(YogurtingPackets.MakeGameWarpResultNtf(targetField, targetPos.X, targetPos.Y));

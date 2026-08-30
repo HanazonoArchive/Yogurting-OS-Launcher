@@ -117,6 +117,7 @@ namespace Yogurting.Server.Handlers.Field
                 }
                 player.ComboCount = Math.Min(999, player.ComboCount + 1);
                 player.LastAttackTime = now;
+                player.LastCombatTime = DateTime.UtcNow;
 
                 // Calculate authentic weapon combo attack skill ID (SkillWeapon.txt / AtkWeapon.txt: 10101..10104 for Blade, 70101..70104 for Spirit)
                 int attackSkillId = weaponCat switch
@@ -128,9 +129,30 @@ namespace Yogurting.Server.Handlers.Field
                     _ => 10101 + (int)animId
                 };
 
-                // Check if swinging in empty air (no target selected and target list is empty)
-                bool isEmptySwing = (targetMainId <= 0 || targetMainId == -1) && targetsCount == 0 && reqTargets.Count == 0;
-                if (isEmptySwing)
+                // Check field monsters (Only hit explicit targets requested by client in MsgGameAttackReq)
+                var hitMonsters = new List<FieldMonster>();
+                if (_gameDb != null && _gameDb.Fields.TryGetValue(player.FieldId, out var fieldDef))
+                {
+                    lock (fieldDef.Monsters)
+                    {
+                        if (reqTargets.Count > 0)
+                        {
+                            foreach (var rt in reqTargets)
+                            {
+                                var m = fieldDef.Monsters.Find(mon => mon.EntityId == rt.entityId && !mon.IsDead);
+                                if (m != null && !hitMonsters.Contains(m)) hitMonsters.Add(m);
+                            }
+                        }
+                        else if (targetMainId > 0 && targetMainId != unchecked((int)0xFFFFFFFF))
+                        {
+                            var m = fieldDef.Monsters.Find(mon => mon.EntityId == targetMainId && !mon.IsDead);
+                            if (m != null && !hitMonsters.Contains(m)) hitMonsters.Add(m);
+                        }
+                    }
+                }
+
+                // Empty swing if no valid targets were hit
+                if (hitMonsters.Count == 0)
                 {
                     byte[] swingAns = YogurtingPackets.MakeGameAttackAns(
                         player.CharacterId,
@@ -146,56 +168,6 @@ namespace Yogurting.Server.Handlers.Field
                     await state.Session.SendAsync(swingAns);
                     await _broadcastDelegate(state, swingAns);
                     return;
-                }
-
-                // Check field monsters (Collect all monsters in attack cone / targets list / melee range)
-                var hitMonsters = new List<FieldMonster>();
-                if (_gameDb != null && _gameDb.Fields.TryGetValue(player.FieldId, out var fieldDef))
-                {
-                    lock (fieldDef.Monsters)
-                    {
-                        // 1. Exact match by targetMainId
-                        if (targetMainId > 0)
-                        {
-                            var m = fieldDef.Monsters.Find(mon => mon.EntityId == targetMainId && !mon.IsDead);
-                            if (m != null) hitMonsters.Add(m);
-                        }
-
-                        // 2. Exact match by any target in list
-                        if (reqTargets.Count > 0)
-                        {
-                            foreach (var rt in reqTargets)
-                            {
-                                var m = fieldDef.Monsters.Find(mon => mon.EntityId == rt.entityId && !mon.IsDead);
-                                if (m != null && !hitMonsters.Contains(m)) hitMonsters.Add(m);
-                            }
-                        }
-                        else if (targetMainId > 0 && targetMainId != unchecked((int)0xFFFFFFFF))
-                        {
-                            var m = fieldDef.Monsters.Find(mon => mon.EntityId == targetMainId && !mon.IsDead);
-                            if (m != null && !hitMonsters.Contains(m)) hitMonsters.Add(m);
-                        }
-
-                        // Proximity fallback only if no explicit targets were specified by client
-                        if (hitMonsters.Count == 0)
-                        {
-                            float pX = (float)player.Position.X;
-                            float pY = (float)player.Position.Y;
-                            float cleaveRangeSq = 3.0f * 3.0f;
-
-                            foreach (var mon in fieldDef.Monsters)
-                            {
-                                if (mon.IsDead || hitMonsters.Contains(mon)) continue;
-                                float dx = mon.X - pX;
-                                float dy = mon.Y - pY;
-                                if (dx * dx + dy * dy <= cleaveRangeSq)
-                                {
-                                    hitMonsters.Add(mon);
-                                    break; // Single primary melee target
-                                }
-                            }
-                        }
-                    }
                 }
 
                 if (hitMonsters.Count > 0)
@@ -245,17 +217,9 @@ namespace Yogurting.Server.Handlers.Field
                         // Wake up monster into Chase state immediately
                         if (!targetMonster.IsDead)
                         {
+                            targetMonster.TargetPlayerId = player.CharacterId;
                             targetMonster.State = MonsterState.Chase;
                             targetMonster.Frame = 6; // Force immediate path broadcast on next AI tick
-                        }
-
-                        // If monster wasn't previously targeting this player, notify Ownership Acquired (0x7A00 - Green Circle on feet)
-                        if (targetMonster.TargetPlayerId != player.CharacterId && !targetMonster.IsDead)
-                        {
-                            targetMonster.TargetPlayerId = player.CharacterId;
-                            byte[] lockPkt = YogurtingPackets.MakeGameMonsterOwnershipAcquiredNtf(targetMonster.EntityId);
-                            _ = state.Session.SendAsync(lockPkt);
-                            _ = _broadcastDelegate(state, lockPkt);
                         }
 
                         targetEntries.Add((targetMonster.EntityId, (int)targetMonster.X, (int)targetMonster.Y, damage, isCrit));
@@ -268,7 +232,18 @@ namespace Yogurting.Server.Handlers.Field
                         }
                     }
 
-                    // 1. Broadcast attack answer & floating damage numbers across all hit enemies (0x791A)
+                    // 1. Dispatch Monster Target Lock / Ownership (0x7A00) for each surviving hit monster
+                    foreach (var targetMonster in hitMonsters)
+                    {
+                        if (!targetMonster.IsDead)
+                        {
+                            byte[] lockPkt = YogurtingPackets.MakeGameMonsterOwnershipAcquiredNtf(targetMonster.EntityId);
+                            await state.Session.SendAsync(lockPkt);
+                            await _broadcastDelegate(state, lockPkt);
+                        }
+                    }
+
+                    // 2. Broadcast attack answer & floating damage numbers across all hit enemies (0x791A)
                     byte[] atkAns = YogurtingPackets.MakeGameAttackAns(
                         player.CharacterId,
                         targetEntries,
@@ -280,19 +255,8 @@ namespace Yogurting.Server.Handlers.Field
                     await state.Session.SendAsync(atkAns);
                     await _broadcastDelegate(state, atkAns);
 
-                    // 2. Real-time Overhead HP update for damaged living monsters (0x79E8 - Delphi 0x005AFAE4)
-                    foreach (var hMon in hitMonsters)
-                    {
-                        if (!hMon.IsDead)
-                        {
-                            byte[] monHpPkt = YogurtingPackets.MakeGameMonHpInfoNtf(hMon.EntityId, hMon.CurrentHp, hMon.MaxHp);
-                            await state.Session.SendAsync(monHpPkt);
-                            await _broadcastDelegate(state, monHpPkt);
-                        }
-                    }
-
-                    // 3. Charge Point & Skill Gauge Update on Hit (_Unit49.pas:22236-22258)
-                    player.GaugeCurrent += 7000 + (player.ComboCount * 150);
+                    // 2. Charge Point & Skill Gauge Update on Hit (_Unit49.pas:22236-22258)
+                    player.GaugeCurrent += 600 + (player.ComboCount * 15);
                     if (player.GaugeMax <= 0) player.GaugeMax = 70000;
                     if (player.GaugeCurrent >= player.GaugeMax)
                     {
@@ -379,7 +343,12 @@ namespace Yogurting.Server.Handlers.Field
             player.CurrentExp += expEarned;
             Logger.Info($"[Combat] '{monster.Name}' defeated by '{player.CharacterName}'! Gained {expEarned} EXP. Total EXP: {player.CurrentExp}/{player.MaxExp}");
 
-            // 1. Broadcast Monster Dead & Loot Delivery to Top-Right Cardboard Booty Box (0x5276)
+            // 1. Release client monster ownership / target lock (0x7A01 - Delphi TMsgGameMonsterOwnershipLostNtf)
+            byte[] unlockPkt = YogurtingPackets.MakeGameMonsterOwnershipLostNtf(monster.EntityId);
+            await state.Session.SendAsync(unlockPkt);
+            await _broadcastDelegate(state, unlockPkt);
+
+            // 2. Broadcast Monster Dead & Loot Delivery to Top-Right Cardboard Booty Box (0x5276)
             byte[] deadNtf = YogurtingPackets.MakeGameHuntMonDeadNtf(
                 monster.EntityId,
                 (ushort)monster.X,
@@ -392,7 +361,17 @@ namespace Yogurting.Server.Handlers.Field
             await state.Session.SendAsync(deadNtf);
             await _broadcastDelegate(state, deadNtf);
 
-            // 2. Send EXP Gain notice (0x5277) to update client EXP bar (_Unit47.pas:49068)
+            // 3. Broadcast Monster Dead Status (0x796C - Delphi TMsgGameMonDeadNtf)
+            byte[] monDeadPkt = YogurtingPackets.MakeGameMonDeadNtf(
+                monster.EntityId,
+                (ushort)monster.X,
+                (ushort)monster.Y,
+                (ushort)(lootList.Count > 0 ? lootList[0].count : 0),
+                lootList.Count > 0 ? lootList[0].itemId : 0);
+            await state.Session.SendAsync(monDeadPkt);
+            await _broadcastDelegate(state, monDeadPkt);
+
+            // 4. Send EXP Gain notice (0x5277) to update client EXP bar (_Unit47.pas:49068)
             byte[] expNtf = YogurtingPackets.MakeGameHuntCharExpUpNtf((int)player.CurrentExp);
             await state.Session.SendAsync(expNtf);
 
@@ -425,22 +404,6 @@ namespace Yogurting.Server.Handlers.Field
             {
                 _ = Task.Run(() => _repository.SaveAccountAsync(player));
             }
-
-            // Schedule Monster Respawn after delay (default 5s)
-            _ = Task.Run(async () =>
-            {
-                try
-                {
-                    await Task.Delay(TimeSpan.FromSeconds(monster.RespawnSeconds));
-                    monster.Respawn();
-                    monster.Frame = (uint)monster.NextWanderInterval; // Active movement immediately on respawn
-                    byte[] respawnNtf = YogurtingPackets.MakeGameMonInfoNtf(monster);
-                    await state.Session.SendAsync(respawnNtf);
-                    await _broadcastDelegate(state, respawnNtf);
-                    Logger.Debug($"[Combat] '{monster.Name}' respawned at ({monster.X}, {monster.Y}).");
-                }
-                catch { }
-            });
         }
 
         /// <summary>
@@ -484,12 +447,31 @@ namespace Yogurting.Server.Handlers.Field
                 ushort targetsCount = packetData.Length >= 33 ? BitConverter.ToUInt16(packetData, 31) : (ushort)0;
 
                 int weaponCat = 1; // Default Blade (1=Blade, 2=Glove, 3=Muffler/Blunt, 4=Spirit/Shooting)
+                int weaponTypeId = 0;
                 if (player.EquippedSlotUids != null && player.EquippedSlotUids.Length > 4 && player.EquippedSlotUids[4] != 0)
                 {
-                    var weaponItem = player.Inventory?.Find(i => i.Id == player.EquippedSlotUids[4]);
-                    if (weaponItem != null && _gameDb?.Items.TryGetValue(weaponItem.TypeId, out var wDef) == true)
+                    int wUid = player.EquippedSlotUids[4];
+                    var weaponItem = player.StarBeItems?.Find(i => i.Id == wUid || i.SerialId == wUid || (i.TypeId > 0 && i.TypeId == wUid))
+                                  ?? player.Inventory?.Find(i => i.Id == wUid);
+                    if (weaponItem != null)
                     {
-                        weaponCat = Math.Max(1, wDef.WeaponType);
+                        weaponTypeId = weaponItem.TypeId > 0 ? weaponItem.TypeId : weaponItem.ItemId;
+                        if (_gameDb?.Items.TryGetValue(weaponTypeId, out var wDef) == true && wDef.WeaponType > 0)
+                        {
+                            weaponCat = wDef.WeaponType;
+                        }
+                        else
+                        {
+                            weaponCat = (weaponTypeId / 10000) switch
+                            {
+                                11 => 1, // Blade
+                                12 => 2, // Glove
+                                13 => 3, // Blunt
+                                14 => 4, // Spirit / Gun
+                                140 => 4, // Star Spirit
+                                _ => 1
+                            };
+                        }
                     }
                 }
 
@@ -542,6 +524,11 @@ namespace Yogurting.Server.Handlers.Field
                                 {
                                     killedMonsters.Add(mon);
                                 }
+                                else
+                                {
+                                    mon.State = MonsterState.Chase;
+                                    mon.Frame = 6;
+                                }
                             }
                         }
                     }
@@ -569,6 +556,11 @@ namespace Yogurting.Server.Handlers.Field
                                 if (mon.IsDead)
                                 {
                                     killedMonsters.Add(mon);
+                                }
+                                else
+                                {
+                                    mon.State = MonsterState.Chase;
+                                    mon.Frame = 6;
                                 }
                             }
                         }

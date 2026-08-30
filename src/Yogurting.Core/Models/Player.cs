@@ -125,6 +125,7 @@ namespace Yogurting.Core.Models
         public long TaffPoints { get; set; } = 100000;
         public int StarPoints { get; set; } = 100000;
         public float HpRegainAccumulator { get; set; } = 0f;
+        public DateTime LastCombatTime { get; set; } = DateTime.MinValue;
 
         /// <summary>
         /// Speed Multipliers calculated exactly from Delphi _Unit49.pas:20342:
@@ -145,7 +146,7 @@ namespace Yogurting.Core.Models
 
             int newBaseHp = Math.Max(28, Pow * 7);
             MaxHp = Math.Max(260, newBaseHp + equipHpBonus);
-            CurrentHp = MaxHp;
+            CurrentHp = Math.Clamp(CurrentHp > 0 ? CurrentHp : MaxHp, 1, MaxHp);
         }
 
         // Target lock tracking

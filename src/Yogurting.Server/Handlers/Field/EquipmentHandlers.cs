@@ -608,6 +608,9 @@ namespace Yogurting.Server.Handlers.Field
                 await state.Session.SendAsync(YogurtingPackets.MakeGameSetStateNtf(player));
                 await state.Session.SendAsync(YogurtingPackets.MakeGameChargePointUpdateNtf(player.ChargePoint, player.GaugeMax, player.GaugeCurrent));
                 await state.Session.SendAsync(YogurtingPackets.MakeGameAtkMovChangeNtf(player.CharaId, player.AtkSpeedF, player.MoveSpeedF));
+
+                // 3. Exact Quartet response to 0x5274: Weapon Frame Request (0x5273)
+                await state.Session.SendAsync(YogurtingPackets.MakeGameWeaponFrameInfoReq(rawType > 0 ? rawType : weaponTypeId, (int)weaponUid));
             }
             catch (Exception ex)
             {

@@ -83,6 +83,7 @@ namespace Yogurting.Core.Network
         MsgGameWarpGateReq          = 0x7967, // 31079: Warp gate request
         MsgGameWarpResultNtf        = 0x7968, // 31080: Warp Gate success notice
         MsgGameMonActionNtf         = 0x796A, // 31082: Monster Action / Death / Attack Animation (Delphi 0x005AE01C)
+        MsgGameMonDeadNtf           = 0x796C, // 31084: Monster Death Notification (Delphi 0x005AE0BC)
         MsgGameMonStatusNtf         = 0x796D, // 31085: Monster Status / Live Overhead HP Update (Delphi 0x005AE185)
         MsgGameMonHpInfoNtf         = 0x79E8, // 31208: Monster HP & Target State Update (Delphi 0x005AFAE4)
         MsgGameMonsterOwnershipAcquiredNtf = 0x7A00, // 31232: Monster Target Ownership Acquired / Green Ring (Delphi TMsgGameMonsterOwnershipAcquiredNtf)

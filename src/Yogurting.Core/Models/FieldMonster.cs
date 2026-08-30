@@ -35,7 +35,7 @@ namespace Yogurting.Core.Models
         public int DropRate { get; set; }
         public bool IsDead { get; set; }
         public DateTime DeathTime { get; set; }
-        public int RespawnSeconds { get; set; } = 5;
+        public int RespawnSeconds { get; set; } = 15;
         public int TargetPlayerId { get; set; }
         public int AttackPower { get; set; } = 8;
         public int MotionType { get; set; } = 300011;
@@ -72,6 +72,10 @@ namespace Yogurting.Core.Models
             CurrentHp = MaxHp;
             X = SpawnX;
             Y = SpawnY;
+            DestX = SpawnX;
+            DestY = SpawnY;
+            StartX = SpawnX;
+            StartY = SpawnY;
             TargetPlayerId = 0;
             State = MonsterState.Wait;
             Frame = 0;

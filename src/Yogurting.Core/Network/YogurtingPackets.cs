@@ -1153,7 +1153,7 @@ namespace Yogurting.Core.Network
         /// </summary>
         public static byte[] MakeGameSetStateNtf(Player player)
         {
-            int maxHp = Math.Max(28, player.Pow * 7);
+            int maxHp = player.MaxHp;
             int atk = (player.Pow + 15) * 64;
             int def = player.Defense * 64;
             int hit = 100 * 64;
@@ -1167,7 +1167,7 @@ namespace Yogurting.Core.Network
             writer.WriteByte((byte)player.Grade);           // Grade
             writer.WriteByte(0xCC);                         // Padding
             writer.WriteUInt16((ushort)player.Level);       // Level
-            writer.WriteUInt16((ushort)maxHp);              // FMaxHP (_Unit49.pas:0060DD94: Pow * 7)
+            writer.WriteUInt16((ushort)maxHp);              // FMaxHP (TChara.FMaxHP)
             writer.WriteUInt16((ushort)player.Pow);         // FPow
             writer.WriteUInt16((ushort)player.Speed);       // FSpeed
             writer.WriteUInt16((ushort)player.Skill);       // FSkill
@@ -2170,7 +2170,25 @@ namespace Yogurting.Core.Network
             return writer.Build();
         }
 
-        public static byte[] MakeGameMonDeadNtf(int monsterEntityId) => MakeGameMonsterOwnershipAcquiredNtf(monsterEntityId);
+        /// <summary>
+        /// 0x796C (31084): MsgGameMonDeadNtf - Monster Death Notice
+        /// Exact layout from Delphi TMsgGameMonDeadNtf.Create (0x005AE0BC):
+        ///   WriteID(0x796C)
+        ///   WriteInt32(Monster.FId)
+        ///   WriteMapPoint(Monster.FPoint) -> UInt16 X, UInt16 Y
+        ///   WriteWord(DropCount)
+        ///   WriteInt32(DropItemId)
+        /// </summary>
+        public static byte[] MakeGameMonDeadNtf(int monsterEntityId, ushort x = 0, ushort y = 0, ushort dropCount = 0, int dropItemId = 0)
+        {
+            using var writer = PacketWriter.Create(PacketOpcode.MsgGameMonDeadNtf);
+            writer.WriteInt32(monsterEntityId);
+            writer.WriteUInt16(x);
+            writer.WriteUInt16(y);
+            writer.WriteUInt16(dropCount);
+            writer.WriteInt32(dropItemId);
+            return writer.Build();
+        }
 
         /// <summary>
         /// 0x7A01 (31233): MsgGameMonsterOwnershipLostNtf - Monster Target Ownership Dropped

@@ -73,6 +73,7 @@ namespace Yogurting.Data.Loaders
             LoadShopItemList(Path.Combine(dbDir, "ShopItemList.txt"));
             LoadHuntMonsters(Path.Combine(dbDir, "HuntMon.txt"));
             LoadFields(Path.Combine(dbDir, "Field.txt"));
+            MapGridManager.Initialize(Path.Combine(dbDir, "map.db"), Fields);
             LoadAtkWeapons(Path.Combine(dbDir, "AtkWeapon.txt"));
             LoadSkillWeapons(Path.Combine(dbDir, "SkillWeapon.txt"));
             LoadSkillDescs(Path.Combine(dbDir, "SkillDesc.txt"));
@@ -883,17 +884,19 @@ namespace Yogurting.Data.Loaders
                                     for (int i = 0; i < spawnCount; i++, ptIdx++)
                                     {
                                         var pt = gen.Points[ptIdx % gen.Points.Count];
-                                        // Distribute monsters naturally around generator anchor (matching Delphi territory distribution)
-                                        double angle = (2.0 * Math.PI * i) / Math.Max(1, spawnCount);
-                                        float radius = 1.8f + ((i % 3) * 1.5f);
-                                        float spawnX = pt.X + (float)Math.Cos(angle) * radius;
-                                        float spawnY = pt.Y + (float)Math.Sin(angle) * radius;
+                                        float spawnX = pt.X;
+                                        float spawnY = pt.Y;
 
-                                        // Immediate wander destination on entry (matching Delphi active field state)
-                                        float offX = Random.Shared.Next(-6, 7);
-                                        float offY = Random.Shared.Next(-6, 7);
-                                        float destX = Math.Clamp(spawnX + offX, 5f, 95f);
-                                        float destY = Math.Clamp(spawnY + offY, 5f, 95f);
+                                        // Natural territory distribution around generator anchor (verified against map grid collision)
+                                        double angle = (2.0 * Math.PI * i) / Math.Max(1, spawnCount);
+                                        float radius = 1.2f + ((i % 3) * 0.8f);
+                                        float tryX = pt.X + (float)Math.Cos(angle) * radius;
+                                        float tryY = pt.Y + (float)Math.Sin(angle) * radius;
+                                        if (MapGridManager.IsWalkable(field.Id, tryX, tryY))
+                                        {
+                                            spawnX = tryX;
+                                            spawnY = tryY;
+                                        }
 
                                         var monster = new FieldMonster
                                         {
@@ -911,9 +914,9 @@ namespace Yogurting.Data.Loaders
                                             DirY = 1,
                                             StartX = spawnX,
                                             StartY = spawnY,
-                                            DestX = destX,
-                                            DestY = destY,
-                                            State = MonsterState.Walk, // Active moving on field entry!
+                                            DestX = spawnX,
+                                            DestY = spawnY,
+                                            State = MonsterState.Wait, // Idle at spawn (matching Delphi TMonster initialization)
                                             MoveMotion = 1,
                                             MoveSpeedRate = 80,
                                             AttackPower = Math.Max(5, monDef.Level * 4),
@@ -922,9 +925,9 @@ namespace Yogurting.Data.Loaders
                                             DropItemType = monDef.DropItemType,
                                             DropCount = monDef.DropCount,
                                             DropRate = monDef.DropRate,
-                                            RespawnSeconds = 5,
-                                            Frame = (uint)Random.Shared.Next(0, 4),
-                                            NextWanderInterval = Random.Shared.Next(2, 6)
+                                            RespawnSeconds = 15,
+                                            Frame = (uint)Random.Shared.Next(0, 15),
+                                            NextWanderInterval = Random.Shared.Next(10, 30)
                                         };
                                         field.Monsters.Add(monster);
                                         totalMonsters++;
