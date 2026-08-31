@@ -1,6 +1,6 @@
 # 🎓 Yogurting Online - Modern Server Engine (.NET 8)
 
-> **The Definitive Open-Source Server Implementation for Yogurting Online (ヨーグルティング / 요구르팅)**
+> **Open-Source Server Implementation for Yogurting Online (ヨーグルティング / 요구르팅)**
 
 This repository houses the modern, high-performance, asynchronous server backend for **Yogurting Online**. Built with **C# and .NET 8**, it replaces the legacy Delphi server architecture with a modular, data-driven, and scalable distributed system.
 
