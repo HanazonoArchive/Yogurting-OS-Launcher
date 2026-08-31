@@ -1,5 +1,5 @@
 # 📖 The Yogurting Online Revival Encyclopedia
-### *The Definitive Standalone Protocol, Architecture & Data Specification*
+### *Standalone Protocol, Architecture & Data Specification*
 
 Welcome to the **Yogurting Revival Encyclopedia**. This comprehensive technical dictionary documents the entire architecture, network protocol, state machines, binary packet layouts, formulas, and client-server workflows of *Yogurting Online*.
 
