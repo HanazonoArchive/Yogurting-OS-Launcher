@@ -72,17 +72,12 @@ namespace Yogurting.Server.World
                 return;
             }
 
-            // 1. Episode Kiosks and Terminal Objects (0x521B + 0x5227) - only for episode / hunt fields
-            if (fieldDef.IsEpisode || fieldDef.IsHuntField)
+            // 1. Episode Gates, Hairdressers, and Campus Terminal Objects (0x521B + 0x5227)
+            foreach (var obj in fieldDef.TerminalObjects)
             {
-                foreach (var obj in fieldDef.TerminalObjects)
-                {
-                    float worldX = obj.X * 4.0f;
-                    float worldY = obj.Y * 4.0f;
-                    await session.SendAsync(YogurtingPackets.MakeObjectCreateNtf(
-                        obj.ObjectId, obj.ObjectType, obj.SubId, obj.CliId, obj.ShellId, worldX, worldY, (byte)obj.Dir, 1, 1));
-                    await session.SendAsync(YogurtingPackets.MakeGameObjectStateNtf(obj.ObjectId, 1));
-                }
+                await session.SendAsync(YogurtingPackets.MakeObjectCreateNtf(
+                    obj.ObjectId, obj.ObjectType, obj.SubId, obj.CliId, obj.ShellId, obj.X, obj.Y, (byte)obj.Dir, 1, 1));
+                await session.SendAsync(YogurtingPackets.MakeGameObjectStateNtf(obj.ObjectId, 1));
             }
 
             // 2. Visual and Campus NPCs (0x7942)

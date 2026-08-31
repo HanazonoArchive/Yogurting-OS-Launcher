@@ -177,6 +177,7 @@ namespace Yogurting.Core.Models
         public List<int> CompletedEpisodes { get; set; } = new();
         public int EpisodeYoi { get; set; } = 0;
         public int EpisodeEs { get; set; } = 0;
+        public Dictionary<string, int> ScriptVariables { get; set; } = new(StringComparer.OrdinalIgnoreCase);
         public List<int> UnlockedTitles { get; set; } = new();
         public List<ActiveBuff> ActiveBuffs { get; set; } = new();
 

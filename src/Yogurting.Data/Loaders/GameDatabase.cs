@@ -955,28 +955,31 @@ namespace Yogurting.Data.Loaders
 
                         string text = File.ReadAllText(f, Encoding.GetEncoding("Shift_JIS"));
 
-                        // 1. Spawn all field NPCs defined in this XML
-                        foreach (System.Text.RegularExpressions.Match m in System.Text.RegularExpressions.Regex.Matches(text, @"<npc\s+([^>]+)>", System.Text.RegularExpressions.RegexOptions.IgnoreCase))
+                        // 1. Spawn field NPCs defined in this XML (skip xx_ GM debug book props from physical NPC list)
+                        if (!fname.StartsWith("xx_", StringComparison.OrdinalIgnoreCase))
                         {
-                            string attr = m.Groups[1].Value;
-                            int id = GetIntAttr(attr, "id");
-                            int shell = GetIntAttr(attr, "shell");
-                            int x = GetIntAttr(attr, "x");
-                            int y = GetIntAttr(attr, "y");
-                            int dir = GetIntAttr(attr, "dir");
-
-                            if (id > 0)
+                            foreach (System.Text.RegularExpressions.Match m in System.Text.RegularExpressions.Regex.Matches(text, @"<npc\s+([^>]+)>", System.Text.RegularExpressions.RegexOptions.IgnoreCase))
                             {
-                                field.Npcs.Add(new FieldNpcSpawn
+                                string attr = m.Groups[1].Value;
+                                int id = GetIntAttr(attr, "id");
+                                int shell = GetIntAttr(attr, "shell");
+                                int x = GetIntAttr(attr, "x");
+                                int y = GetIntAttr(attr, "y");
+                                int dir = GetIntAttr(attr, "dir");
+
+                                if (id > 0 && !field.Npcs.Any(n => n.NpcId == id))
                                 {
-                                    NpcId = id,
-                                    ShellType = shell,
-                                    X = (ushort)x,
-                                    Y = (ushort)y,
-                                    Dir = dir,
-                                    InitScript = GetStringAttr(attr, "init")
-                                });
-                                totalNpcs++;
+                                    field.Npcs.Add(new FieldNpcSpawn
+                                    {
+                                        NpcId = id,
+                                        ShellType = shell,
+                                        X = (ushort)x,
+                                        Y = (ushort)y,
+                                        Dir = dir,
+                                        InitScript = GetStringAttr(attr, "init")
+                                    });
+                                    totalNpcs++;
+                                }
                             }
                         }
 
@@ -1067,10 +1070,16 @@ namespace Yogurting.Data.Loaders
                                 string selAttr = sm.Groups[1].Value;
                                 string selText = GetStringAttr(selAttr, "text");
                                 string selNext = GetStringAttr(selAttr, "next");
+                                string selOp = GetStringAttr(selAttr, "op");
+                                string selVarName = GetStringAttr(selAttr, "varname");
+                                int selVal = GetIntAttr(selAttr, "value");
                                 dlgDef.Selections.Add(new NpcDialogSelectionDef
                                 {
                                     Text = selText,
-                                    Next = selNext
+                                    Next = selNext,
+                                    Op = selOp,
+                                    VarName = selVarName,
+                                    Value = selVal
                                 });
                             }
 
@@ -1120,6 +1129,9 @@ namespace Yogurting.Data.Loaders
     {
         public string Text { get; set; } = string.Empty;
         public string Next { get; set; } = string.Empty;
+        public string Op { get; set; } = string.Empty;
+        public string VarName { get; set; } = string.Empty;
+        public int Value { get; set; } = 0;
     }
 
     public sealed class NpcDialogDef
@@ -1141,10 +1153,10 @@ namespace Yogurting.Data.Loaders
         public System.Collections.Generic.Dictionary<string, NpcDialogDef> Dialogs { get; set; } = new(StringComparer.OrdinalIgnoreCase);
 
         /// <summary>
-        /// Evaluates official XML <script name="init"> conditionals against player attributes
+        /// Evaluates official XML <script name="init"> conditionals against player attributes & persistent script variables
         /// matching Delphi TNpcScriptRunner.
         /// </summary>
-        public string EvaluateInit(int school, int level, int grade, int epiYoi, int epiEs)
+        public string EvaluateInit(int school, int level, int grade, int epiYoi, int epiEs, Dictionary<string, int>? scriptVars = null)
         {
             if (string.IsNullOrWhiteSpace(InitScriptBody))
             {
@@ -1160,7 +1172,27 @@ namespace Yogurting.Data.Loaders
                 ["peke.epi.es"] = school == 1 ? epiEs : -1
             };
 
+            if (scriptVars != null)
+            {
+                foreach (var kvp in scriptVars)
+                {
+                    vars[kvp.Key] = kvp.Value;
+                }
+            }
+
             string? targetJump = EvaluateBlock(InitScriptBody, vars);
+
+            if (scriptVars != null)
+            {
+                foreach (var kvp in vars)
+                {
+                    if (!kvp.Key.StartsWith("local.", StringComparison.OrdinalIgnoreCase))
+                    {
+                        scriptVars[kvp.Key] = kvp.Value;
+                    }
+                }
+            }
+
             if (!string.IsNullOrEmpty(targetJump))
             {
                 return ResolveToDialog(targetJump, vars);
@@ -1173,7 +1205,7 @@ namespace Yogurting.Data.Loaders
         /// Resolves a dialogue selection target label, executing any intermediate <script> blocks (e.g. epi_es_up, look)
         /// until reaching a concrete <dialog> node.
         /// </summary>
-        public string ResolveNext(string nextLabel, int school, int level, int grade, ref int epiYoi, ref int epiEs)
+        public string ResolveNext(string nextLabel, int school, int level, int grade, ref int epiYoi, ref int epiEs, Dictionary<string, int>? scriptVars = null)
         {
             var vars = new Dictionary<string, int>(StringComparer.OrdinalIgnoreCase)
             {
@@ -1184,9 +1216,29 @@ namespace Yogurting.Data.Loaders
                 ["peke.epi.es"] = epiEs
             };
 
+            if (scriptVars != null)
+            {
+                foreach (var kvp in scriptVars)
+                {
+                    vars[kvp.Key] = kvp.Value;
+                }
+            }
+
             string result = ResolveToDialog(nextLabel, vars);
-            epiYoi = vars["peke.epi.yoi"];
-            epiEs = vars["peke.epi.es"];
+            if (vars.TryGetValue("peke.epi.yoi", out int yoiVal)) epiYoi = yoiVal;
+            if (vars.TryGetValue("peke.epi.es", out int esVal)) epiEs = esVal;
+
+            if (scriptVars != null)
+            {
+                foreach (var kvp in vars)
+                {
+                    if (!kvp.Key.StartsWith("local.", StringComparison.OrdinalIgnoreCase))
+                    {
+                        scriptVars[kvp.Key] = kvp.Value;
+                    }
+                }
+            }
+
             return result;
         }
 
@@ -1220,7 +1272,7 @@ namespace Yogurting.Data.Loaders
 
         private static string? EvaluateBlock(string xmlBlock, Dictionary<string, int> vars)
         {
-            var matches = System.Text.RegularExpressions.Regex.Matches(xmlBlock, @"<(?<tag>ifeq|ifne|ifge|ifle|ifgt|iflt|jump|set|inc|dec)\s+([^>]+?)(?:>(.*?)</\k<tag>>|/>)", System.Text.RegularExpressions.RegexOptions.Singleline | System.Text.RegularExpressions.RegexOptions.IgnoreCase);
+            var matches = System.Text.RegularExpressions.Regex.Matches(xmlBlock, @"<(?<tag>ifeq|ifne|ifge|ifle|ifgt|iflt|ifdef|ifndef|switch|case|jump|set|inc|dec)\s*([^>]*?)(?:>(.*?)</\k<tag>>|/>)", System.Text.RegularExpressions.RegexOptions.Singleline | System.Text.RegularExpressions.RegexOptions.IgnoreCase);
 
             foreach (System.Text.RegularExpressions.Match m in matches)
             {
@@ -1250,6 +1302,38 @@ namespace Yogurting.Data.Loaders
                     string varname = GetAttr(attr, "varname");
                     int curr = vars.TryGetValue(varname, out var v) ? v : 0;
                     vars[varname] = curr - 1;
+                }
+                else if (tag == "ifndef")
+                {
+                    string varname = GetAttr(attr, "varname");
+                    if (!vars.ContainsKey(varname))
+                    {
+                        string? j = EvaluateBlock(inner, vars);
+                        if (!string.IsNullOrEmpty(j)) return j;
+                    }
+                }
+                else if (tag == "ifdef")
+                {
+                    string varname = GetAttr(attr, "varname");
+                    if (vars.ContainsKey(varname))
+                    {
+                        string? j = EvaluateBlock(inner, vars);
+                        if (!string.IsNullOrEmpty(j)) return j;
+                    }
+                }
+                else if (tag == "switch")
+                {
+                    string varname = GetAttr(attr, "varname");
+                    int currentVal = vars.TryGetValue(varname, out var v) ? v : 0;
+                    var cases = System.Text.RegularExpressions.Regex.Matches(inner, @"<case\s+value=""?(\d+)""?\s*>(.*?)</case>", System.Text.RegularExpressions.RegexOptions.Singleline | System.Text.RegularExpressions.RegexOptions.IgnoreCase);
+                    foreach (System.Text.RegularExpressions.Match cm in cases)
+                    {
+                        if (int.TryParse(cm.Groups[1].Value, out int caseVal) && caseVal == currentVal)
+                        {
+                            string? j = EvaluateBlock(cm.Groups[2].Value, vars);
+                            if (!string.IsNullOrEmpty(j)) return j;
+                        }
+                    }
                 }
                 else if (tag.StartsWith("if"))
                 {

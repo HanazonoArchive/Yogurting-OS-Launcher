@@ -60,8 +60,9 @@ namespace Yogurting.Server.Handlers.Field
 
                 if (script != null && (script.Dialogs.Count > 0 || script.Scripts.Count > 0))
                 {
+                    player.ScriptVariables ??= new(StringComparer.OrdinalIgnoreCase);
                     // Evaluate authentic XML init script conditionals dynamically against live player stats & episode progress
-                    string initialNode = script.EvaluateInit((int)player.School, player.Level, player.Grade, player.EpisodeYoi, player.EpisodeEs);
+                    string initialNode = script.EvaluateInit((int)player.School, player.Level, player.Grade, player.EpisodeYoi, player.EpisodeEs, player.ScriptVariables);
 
                     if (!string.IsNullOrEmpty(initialNode) && script.Dialogs.TryGetValue(initialNode, out var initialDlg))
                     {
@@ -174,11 +175,32 @@ namespace Yogurting.Server.Handlers.Field
                             return;
                         }
 
+                        player.ScriptVariables ??= new(StringComparer.OrdinalIgnoreCase);
+                        if (!string.IsNullOrEmpty(selection.VarName))
+                        {
+                            if (string.Equals(selection.Op, "set", StringComparison.OrdinalIgnoreCase) || string.IsNullOrEmpty(selection.Op))
+                            {
+                                player.ScriptVariables[selection.VarName] = selection.Value;
+                            }
+                            else if (string.Equals(selection.Op, "inc", StringComparison.OrdinalIgnoreCase))
+                            {
+                                player.ScriptVariables[selection.VarName] = player.ScriptVariables.TryGetValue(selection.VarName, out var v) ? v + 1 : 1;
+                            }
+                            else if (string.Equals(selection.Op, "dec", StringComparison.OrdinalIgnoreCase))
+                            {
+                                player.ScriptVariables[selection.VarName] = player.ScriptVariables.TryGetValue(selection.VarName, out var v) ? v - 1 : 0;
+                            }
+                            if (_repository != null)
+                            {
+                                _ = _repository.SaveAccountAsync(player);
+                            }
+                        }
+
                         if (!string.IsNullOrEmpty(selection.Next))
                         {
                             int epiYoi = player.EpisodeYoi;
                             int epiEs = player.EpisodeEs;
-                            string nextNode = script.ResolveNext(selection.Next, (int)player.School, player.Level, player.Grade, ref epiYoi, ref epiEs);
+                            string nextNode = script.ResolveNext(selection.Next, (int)player.School, player.Level, player.Grade, ref epiYoi, ref epiEs, player.ScriptVariables);
 
                             if (epiYoi != player.EpisodeYoi || epiEs != player.EpisodeEs)
                             {
