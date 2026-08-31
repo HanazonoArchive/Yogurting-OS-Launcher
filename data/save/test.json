@@ -7,7 +7,7 @@
   "HasCharacter": true,
   "CharaId": 256,
   "CharacterId": 256,
-  "SessionKey": 516994,
+  "SessionKey": 979643,
   "School": 1,
   "Gender": 2,
   "FaceId": 11,
@@ -17,12 +17,12 @@
   "BirthDay": 29,
   "BloodType": 1,
   "NametagColor": 0,
-  "Level": 6,
+  "Level": 8,
   "Grade": 1,
-  "Pow": 25,
-  "Speed": 19,
-  "Skill": 19,
-  "Luck": 12,
+  "Pow": 33,
+  "Speed": 25,
+  "Skill": 25,
+  "Luck": 17,
   "DexLevel": 1,
   "DexExp": 0,
   "DexLevels": [
@@ -39,34 +39,34 @@
     0,
     0
   ],
-  "ComboCount": 8,
-  "LastAttackTime": 353218718,
-  "ChargePoint": 0,
+  "ComboCount": 5,
+  "LastAttackTime": 7017046,
+  "ChargePoint": 1,
   "GaugeMax": 70000,
-  "GaugeCurrent": 52905,
-  "SkillPoint": 8,
+  "GaugeCurrent": 12980,
+  "SkillPoint": 10,
   "Defense": 2,
-  "CurrentExp": 33,
-  "Exp": 33,
-  "MaxExp": 35,
-  "CurrentHp": 379,
-  "Hp": 379,
-  "MaxHp": 379,
+  "CurrentExp": 4,
+  "Exp": 4,
+  "MaxExp": 54,
+  "CurrentHp": 435,
+  "Hp": 435,
+  "MaxHp": 435,
   "CurrentMp": 195,
   "Sp": 195,
   "MaxMp": 195,
   "MaxSp": 195,
   "TaffPoints": 1000,
   "StarPoints": 0,
-  "HpRegainAccumulator": 0,
-  "LastCombatTime": "2026-08-31T10:28:27.9326888Z",
-  "AtkSpeedF": 1.003705,
-  "MoveSpeedF": 1.003705,
+  "HpRegainAccumulator": 0.25,
+  "LastCombatTime": "2026-08-31T22:12:26.4133868Z",
+  "AtkSpeedF": 1.004875,
+  "MoveSpeedF": 1.004875,
   "TargetMonsterId": 0,
   "FieldId": 1,
   "Position": {
     "X": 68,
-    "Y": 98,
+    "Y": 104,
     "Z": 0,
     "Heading": 0
   },
@@ -83,24 +83,24 @@
     0,
     0,
     0,
-    8,
+    102,
+    108,
     0,
+    104,
     0,
-    2,
-    3,
-    4
+    106
   ],
   "EquippedSlotIsStar": [
     false,
     false,
     false,
     false,
+    true,
+    true,
     false,
+    true,
     false,
-    false,
-    false,
-    false,
-    false
+    true
   ],
   "Equips": [],
   "Inventory": [
@@ -129,11 +129,11 @@
       "TypeId": 150004,
       "Name": "\u51AC\u670D\u4E0A\u7740 (Estiva Winter Top F)",
       "SlotIndex": 7,
-      "SlotType": 1,
+      "SlotType": 0,
       "SerialId": 0,
       "Quantity": 1,
       "EnchantLevel": 0,
-      "IsEquipped": true,
+      "IsEquipped": false,
       "SocketSlots": [
         0,
         0,
@@ -148,11 +148,11 @@
       "TypeId": 150005,
       "Name": "\u51AC\u670D\u30B9\u30AB\u30FC\u30C8 (Estiva Winter Skirt F)",
       "SlotIndex": 8,
-      "SlotType": 1,
+      "SlotType": 0,
       "SerialId": 0,
       "Quantity": 1,
       "EnchantLevel": 0,
-      "IsEquipped": true,
+      "IsEquipped": false,
       "SocketSlots": [
         0,
         0,
@@ -167,11 +167,11 @@
       "TypeId": 150006,
       "Name": "\u51AC\u7528\u30D6\u30FC\u30C4 (Estiva Winter Boots F)",
       "SlotIndex": 9,
-      "SlotType": 1,
+      "SlotType": 0,
       "SerialId": 0,
       "Quantity": 1,
       "EnchantLevel": 0,
-      "IsEquipped": true,
+      "IsEquipped": false,
       "SocketSlots": [
         0,
         0,
@@ -243,11 +243,11 @@
       "TypeId": 120001,
       "Name": "\u6709\u5099\u7121\u60A3 (Starter Glove)",
       "SlotIndex": 4,
-      "SlotType": 1,
+      "SlotType": 0,
       "SerialId": 0,
       "Quantity": 1,
       "EnchantLevel": 0,
-      "IsEquipped": true,
+      "IsEquipped": false,
       "SocketSlots": [
         0,
         0,
@@ -280,7 +280,7 @@
       "ItemId": 140001,
       "TypeId": 140001,
       "Name": "\u30A2\u30AF\u30A2\u30DE\u30EA\u30F3 (Starter Spirit)",
-      "SlotIndex": 6,
+      "SlotIndex": 4,
       "SlotType": 0,
       "SerialId": 0,
       "Quantity": 1,
@@ -414,6 +414,120 @@
       "TypeId": 30002,
       "Name": "\u6298\u308A\u7D19",
       "SlotIndex": 16,
+      "SlotType": 0,
+      "SerialId": 0,
+      "Quantity": 1,
+      "EnchantLevel": 0,
+      "IsEquipped": false,
+      "SocketSlots": [
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "Id": 18,
+      "ItemId": 30002,
+      "TypeId": 30002,
+      "Name": "\u6298\u308A\u7D19",
+      "SlotIndex": 17,
+      "SlotType": 0,
+      "SerialId": 0,
+      "Quantity": 1,
+      "EnchantLevel": 0,
+      "IsEquipped": false,
+      "SocketSlots": [
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "Id": 19,
+      "ItemId": 30008,
+      "TypeId": 30008,
+      "Name": "\u30E9\u30C3\u30C1\u30E5\u30FC\u306E\u3057\u3063\u307D",
+      "SlotIndex": 18,
+      "SlotType": 0,
+      "SerialId": 0,
+      "Quantity": 1,
+      "EnchantLevel": 0,
+      "IsEquipped": false,
+      "SocketSlots": [
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "Id": 20,
+      "ItemId": 30008,
+      "TypeId": 30008,
+      "Name": "\u30E9\u30C3\u30C1\u30E5\u30FC\u306E\u3057\u3063\u307D",
+      "SlotIndex": 19,
+      "SlotType": 0,
+      "SerialId": 0,
+      "Quantity": 1,
+      "EnchantLevel": 0,
+      "IsEquipped": false,
+      "SocketSlots": [
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "Id": 21,
+      "ItemId": 30002,
+      "TypeId": 30002,
+      "Name": "\u6298\u308A\u7D19",
+      "SlotIndex": 20,
+      "SlotType": 0,
+      "SerialId": 0,
+      "Quantity": 1,
+      "EnchantLevel": 0,
+      "IsEquipped": false,
+      "SocketSlots": [
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "Id": 22,
+      "ItemId": 30002,
+      "TypeId": 30002,
+      "Name": "\u6298\u308A\u7D19",
+      "SlotIndex": 21,
+      "SlotType": 0,
+      "SerialId": 0,
+      "Quantity": 1,
+      "EnchantLevel": 0,
+      "IsEquipped": false,
+      "SocketSlots": [
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "Id": 23,
+      "ItemId": 30002,
+      "TypeId": 30002,
+      "Name": "\u6298\u308A\u7D19",
+      "SlotIndex": 22,
       "SlotType": 0,
       "SerialId": 0,
       "Quantity": 1,
@@ -725,73 +839,73 @@
       "EffectType": 7300,
       "DurationSeconds": 2592000,
       "ActivatedAt": "2026-08-30T05:31:41.2797429Z",
-      "RemainingSeconds": 2487638
+      "RemainingSeconds": 2445490
     },
     {
       "EffectType": 7400,
       "DurationSeconds": 2592000,
       "ActivatedAt": "2026-08-30T05:31:42.3678492Z",
-      "RemainingSeconds": 2487640
+      "RemainingSeconds": 2445491
     },
     {
       "EffectType": 7000,
       "DurationSeconds": 5184000,
       "ActivatedAt": "2026-08-30T05:31:42.7958016Z",
-      "RemainingSeconds": 5079640
+      "RemainingSeconds": 5037491
     },
     {
       "EffectType": 7100,
       "DurationSeconds": 2592000,
       "ActivatedAt": "2026-08-30T05:31:43.1761469Z",
-      "RemainingSeconds": 2487640
+      "RemainingSeconds": 2445492
     },
     {
       "EffectType": 7200,
       "DurationSeconds": 2592000,
       "ActivatedAt": "2026-08-30T05:31:43.5516324Z",
-      "RemainingSeconds": 2487641
+      "RemainingSeconds": 2445492
     },
     {
       "EffectType": 7500,
       "DurationSeconds": 2592000,
       "ActivatedAt": "2026-08-30T05:31:43.9440198Z",
-      "RemainingSeconds": 2487641
+      "RemainingSeconds": 2445493
     },
     {
       "EffectType": 4100,
       "DurationSeconds": 2592000,
       "ActivatedAt": "2026-08-30T05:36:12.8163106Z",
-      "RemainingSeconds": 2487910
+      "RemainingSeconds": 2445761
     },
     {
       "EffectType": 4110,
       "DurationSeconds": 18144000,
       "ActivatedAt": "2026-08-30T05:36:14.9412779Z",
-      "RemainingSeconds": 18039912
+      "RemainingSeconds": 17997764
     },
     {
       "EffectType": 4200,
       "DurationSeconds": 2592000,
       "ActivatedAt": "2026-08-30T05:36:19.7023848Z",
-      "RemainingSeconds": 2487917
+      "RemainingSeconds": 2445768
     },
     {
       "EffectType": 6100,
       "DurationSeconds": 2592000,
       "ActivatedAt": "2026-08-30T05:36:20.6716723Z",
-      "RemainingSeconds": 2487918
+      "RemainingSeconds": 2445769
     },
     {
       "EffectType": 4300,
       "DurationSeconds": 2592000,
       "ActivatedAt": "2026-08-30T05:36:21.4892307Z",
-      "RemainingSeconds": 2487919
+      "RemainingSeconds": 2445770
     },
     {
       "EffectType": 2100,
       "DurationSeconds": 2592000,
       "ActivatedAt": "2026-08-30T05:36:22.2623351Z",
-      "RemainingSeconds": 2487919
+      "RemainingSeconds": 2445771
     }
   ]
 }

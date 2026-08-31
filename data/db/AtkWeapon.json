@@ -1,0 +1,4709 @@
+[
+  {
+    "Id": 10101,
+    "_comment": "Weapon Attack Profile 10101 (Category: 1, Ratio: 102031, Range: 22, Angle: 63)",
+    "Range": 1,
+    "Area": 102031,
+    "Param1": 22,
+    "Param2": 22,
+    "Power": 63
+  },
+  {
+    "Id": 10102,
+    "_comment": "Weapon Attack Profile 10102 (Category: 1, Ratio: 102031, Range: 22, Angle: 63)",
+    "Range": 1,
+    "Area": 102031,
+    "Param1": 22,
+    "Param2": 22,
+    "Power": 63
+  },
+  {
+    "Id": 10103,
+    "_comment": "Weapon Attack Profile 10103 (Category: 1, Ratio: 102031, Range: 22, Angle: 63)",
+    "Range": 1,
+    "Area": 102031,
+    "Param1": 22,
+    "Param2": 22,
+    "Power": 63
+  },
+  {
+    "Id": 10201,
+    "_comment": "Weapon Attack Profile 10201 (Category: 1, Ratio: 102031, Range: 22, Angle: 63)",
+    "Range": 1,
+    "Area": 102031,
+    "Param1": 22,
+    "Param2": 22,
+    "Power": 63
+  },
+  {
+    "Id": 10202,
+    "_comment": "Weapon Attack Profile 10202 (Category: 1, Ratio: 102031, Range: 22, Angle: 63)",
+    "Range": 1,
+    "Area": 102031,
+    "Param1": 22,
+    "Param2": 22,
+    "Power": 63
+  },
+  {
+    "Id": 10203,
+    "_comment": "Weapon Attack Profile 10203 (Category: 1, Ratio: 102031, Range: 22, Angle: 63)",
+    "Range": 1,
+    "Area": 102031,
+    "Param1": 22,
+    "Param2": 22,
+    "Power": 63
+  },
+  {
+    "Id": 10301,
+    "_comment": "Weapon Attack Profile 10301 (Category: 1, Ratio: 102031, Range: 22, Angle: 0)",
+    "Range": 1,
+    "Area": 102031,
+    "Param1": 22,
+    "Param2": 22,
+    "Power": 0
+  },
+  {
+    "Id": 10302,
+    "_comment": "Weapon Attack Profile 10302 (Category: 1, Ratio: 102031, Range: 22, Angle: 0)",
+    "Range": 1,
+    "Area": 102031,
+    "Param1": 22,
+    "Param2": 22,
+    "Power": 0
+  },
+  {
+    "Id": 10303,
+    "_comment": "Weapon Attack Profile 10303 (Category: 1, Ratio: 102031, Range: 22, Angle: 0)",
+    "Range": 1,
+    "Area": 102031,
+    "Param1": 22,
+    "Param2": 22,
+    "Power": 0
+  },
+  {
+    "Id": 10401,
+    "_comment": "Weapon Attack Profile 10401 (Category: 1, Ratio: 102031, Range: 22, Angle: 57)",
+    "Range": 1,
+    "Area": 102031,
+    "Param1": 22,
+    "Param2": 22,
+    "Power": 57
+  },
+  {
+    "Id": 10402,
+    "_comment": "Weapon Attack Profile 10402 (Category: 1, Ratio: 102031, Range: 22, Angle: 57)",
+    "Range": 1,
+    "Area": 102031,
+    "Param1": 22,
+    "Param2": 22,
+    "Power": 57
+  },
+  {
+    "Id": 10403,
+    "_comment": "Weapon Attack Profile 10403 (Category: 1, Ratio: 102031, Range: 22, Angle: 57)",
+    "Range": 1,
+    "Area": 102031,
+    "Param1": 22,
+    "Param2": 22,
+    "Power": 57
+  },
+  {
+    "Id": 30101,
+    "_comment": "Weapon Attack Profile 30101 (Category: 1, Ratio: 101032, Range: 22, Angle: 53)",
+    "Range": 1,
+    "Area": 101032,
+    "Param1": 22,
+    "Param2": 22,
+    "Power": 53
+  },
+  {
+    "Id": 30102,
+    "_comment": "Weapon Attack Profile 30102 (Category: 1, Ratio: 101032, Range: 22, Angle: 50)",
+    "Range": 1,
+    "Area": 101032,
+    "Param1": 22,
+    "Param2": 22,
+    "Power": 50
+  },
+  {
+    "Id": 30103,
+    "_comment": "Weapon Attack Profile 30103 (Category: 1, Ratio: 101032, Range: 22, Angle: 47)",
+    "Range": 1,
+    "Area": 101032,
+    "Param1": 22,
+    "Param2": 22,
+    "Power": 47
+  },
+  {
+    "Id": 30201,
+    "_comment": "Weapon Attack Profile 30201 (Category: 1, Ratio: 101032, Range: 22, Angle: 53)",
+    "Range": 1,
+    "Area": 101032,
+    "Param1": 22,
+    "Param2": 22,
+    "Power": 53
+  },
+  {
+    "Id": 30202,
+    "_comment": "Weapon Attack Profile 30202 (Category: 1, Ratio: 101032, Range: 22, Angle: 50)",
+    "Range": 1,
+    "Area": 101032,
+    "Param1": 22,
+    "Param2": 22,
+    "Power": 50
+  },
+  {
+    "Id": 30203,
+    "_comment": "Weapon Attack Profile 30203 (Category: 1, Ratio: 101032, Range: 22, Angle: 47)",
+    "Range": 1,
+    "Area": 101032,
+    "Param1": 22,
+    "Param2": 22,
+    "Power": 47
+  },
+  {
+    "Id": 30301,
+    "_comment": "Weapon Attack Profile 30301 (Category: 1, Ratio: 101032, Range: 22, Angle: 53)",
+    "Range": 1,
+    "Area": 101032,
+    "Param1": 22,
+    "Param2": 22,
+    "Power": 53
+  },
+  {
+    "Id": 30302,
+    "_comment": "Weapon Attack Profile 30302 (Category: 1, Ratio: 101032, Range: 22, Angle: 50)",
+    "Range": 1,
+    "Area": 101032,
+    "Param1": 22,
+    "Param2": 22,
+    "Power": 50
+  },
+  {
+    "Id": 30303,
+    "_comment": "Weapon Attack Profile 30303 (Category: 1, Ratio: 101032, Range: 22, Angle: 47)",
+    "Range": 1,
+    "Area": 101032,
+    "Param1": 22,
+    "Param2": 22,
+    "Power": 47
+  },
+  {
+    "Id": 30401,
+    "_comment": "Weapon Attack Profile 30401 (Category: 1, Ratio: 101032, Range: 22, Angle: 53)",
+    "Range": 1,
+    "Area": 101032,
+    "Param1": 22,
+    "Param2": 22,
+    "Power": 53
+  },
+  {
+    "Id": 30402,
+    "_comment": "Weapon Attack Profile 30402 (Category: 1, Ratio: 101032, Range: 22, Angle: 50)",
+    "Range": 1,
+    "Area": 101032,
+    "Param1": 22,
+    "Param2": 22,
+    "Power": 50
+  },
+  {
+    "Id": 30403,
+    "_comment": "Weapon Attack Profile 30403 (Category: 1, Ratio: 101032, Range: 22, Angle: 47)",
+    "Range": 1,
+    "Area": 101032,
+    "Param1": 22,
+    "Param2": 22,
+    "Power": 47
+  },
+  {
+    "Id": 50101,
+    "_comment": "Weapon Attack Profile 50101 (Category: 3, Ratio: 101011, Range: 22, Angle: 77)",
+    "Range": 3,
+    "Area": 101011,
+    "Param1": 22,
+    "Param2": 22,
+    "Power": 77
+  },
+  {
+    "Id": 50102,
+    "_comment": "Weapon Attack Profile 50102 (Category: 3, Ratio: 101011, Range: 22, Angle: 77)",
+    "Range": 3,
+    "Area": 101011,
+    "Param1": 22,
+    "Param2": 22,
+    "Power": 77
+  },
+  {
+    "Id": 50103,
+    "_comment": "Weapon Attack Profile 50103 (Category: 3, Ratio: 101011, Range: 22, Angle: 77)",
+    "Range": 3,
+    "Area": 101011,
+    "Param1": 22,
+    "Param2": 22,
+    "Power": 77
+  },
+  {
+    "Id": 50201,
+    "_comment": "Weapon Attack Profile 50201 (Category: 3, Ratio: 101011, Range: 22, Angle: 77)",
+    "Range": 3,
+    "Area": 101011,
+    "Param1": 22,
+    "Param2": 22,
+    "Power": 77
+  },
+  {
+    "Id": 50202,
+    "_comment": "Weapon Attack Profile 50202 (Category: 3, Ratio: 101011, Range: 22, Angle: 77)",
+    "Range": 3,
+    "Area": 101011,
+    "Param1": 22,
+    "Param2": 22,
+    "Power": 77
+  },
+  {
+    "Id": 50203,
+    "_comment": "Weapon Attack Profile 50203 (Category: 3, Ratio: 101011, Range: 22, Angle: 77)",
+    "Range": 3,
+    "Area": 101011,
+    "Param1": 22,
+    "Param2": 22,
+    "Power": 77
+  },
+  {
+    "Id": 50301,
+    "_comment": "Weapon Attack Profile 50301 (Category: 3, Ratio: 101011, Range: 22, Angle: 77)",
+    "Range": 3,
+    "Area": 101011,
+    "Param1": 22,
+    "Param2": 22,
+    "Power": 77
+  },
+  {
+    "Id": 50302,
+    "_comment": "Weapon Attack Profile 50302 (Category: 3, Ratio: 101011, Range: 22, Angle: 77)",
+    "Range": 3,
+    "Area": 101011,
+    "Param1": 22,
+    "Param2": 22,
+    "Power": 77
+  },
+  {
+    "Id": 50303,
+    "_comment": "Weapon Attack Profile 50303 (Category: 3, Ratio: 101011, Range: 22, Angle: 77)",
+    "Range": 3,
+    "Area": 101011,
+    "Param1": 22,
+    "Param2": 22,
+    "Power": 77
+  },
+  {
+    "Id": 50401,
+    "_comment": "Weapon Attack Profile 50401 (Category: 3, Ratio: 101011, Range: 22, Angle: 77)",
+    "Range": 3,
+    "Area": 101011,
+    "Param1": 22,
+    "Param2": 22,
+    "Power": 77
+  },
+  {
+    "Id": 50402,
+    "_comment": "Weapon Attack Profile 50402 (Category: 3, Ratio: 101011, Range: 22, Angle: 77)",
+    "Range": 3,
+    "Area": 101011,
+    "Param1": 22,
+    "Param2": 22,
+    "Power": 77
+  },
+  {
+    "Id": 50403,
+    "_comment": "Weapon Attack Profile 50403 (Category: 3, Ratio: 101011, Range: 22, Angle: 77)",
+    "Range": 3,
+    "Area": 101011,
+    "Param1": 22,
+    "Param2": 22,
+    "Power": 77
+  },
+  {
+    "Id": 50501,
+    "_comment": "Weapon Attack Profile 50501 (Category: 3, Ratio: 101011, Range: 22, Angle: 77)",
+    "Range": 3,
+    "Area": 101011,
+    "Param1": 22,
+    "Param2": 22,
+    "Power": 77
+  },
+  {
+    "Id": 50502,
+    "_comment": "Weapon Attack Profile 50502 (Category: 3, Ratio: 101011, Range: 22, Angle: 77)",
+    "Range": 3,
+    "Area": 101011,
+    "Param1": 22,
+    "Param2": 22,
+    "Power": 77
+  },
+  {
+    "Id": 50503,
+    "_comment": "Weapon Attack Profile 50503 (Category: 3, Ratio: 101011, Range: 22, Angle: 77)",
+    "Range": 3,
+    "Area": 101011,
+    "Param1": 22,
+    "Param2": 22,
+    "Power": 77
+  },
+  {
+    "Id": 50601,
+    "_comment": "Weapon Attack Profile 50601 (Category: 3, Ratio: 101011, Range: 22, Angle: 63)",
+    "Range": 3,
+    "Area": 101011,
+    "Param1": 22,
+    "Param2": 22,
+    "Power": 63
+  },
+  {
+    "Id": 50602,
+    "_comment": "Weapon Attack Profile 50602 (Category: 3, Ratio: 101011, Range: 22, Angle: 63)",
+    "Range": 3,
+    "Area": 101011,
+    "Param1": 22,
+    "Param2": 22,
+    "Power": 63
+  },
+  {
+    "Id": 50603,
+    "_comment": "Weapon Attack Profile 50603 (Category: 3, Ratio: 101011, Range: 22, Angle: 63)",
+    "Range": 3,
+    "Area": 101011,
+    "Param1": 22,
+    "Param2": 22,
+    "Power": 63
+  },
+  {
+    "Id": 70101,
+    "_comment": "Weapon Attack Profile 70101 (Category: 4, Ratio: 101011, Range: 22, Angle: 77)",
+    "Range": 4,
+    "Area": 101011,
+    "Param1": 22,
+    "Param2": 22,
+    "Power": 77
+  },
+  {
+    "Id": 70102,
+    "_comment": "Weapon Attack Profile 70102 (Category: 4, Ratio: 101011, Range: 22, Angle: 77)",
+    "Range": 4,
+    "Area": 101011,
+    "Param1": 22,
+    "Param2": 22,
+    "Power": 77
+  },
+  {
+    "Id": 70103,
+    "_comment": "Weapon Attack Profile 70103 (Category: 4, Ratio: 101011, Range: 22, Angle: 77)",
+    "Range": 4,
+    "Area": 101011,
+    "Param1": 22,
+    "Param2": 22,
+    "Power": 77
+  },
+  {
+    "Id": 70201,
+    "_comment": "Weapon Attack Profile 70201 (Category: 4, Ratio: 101011, Range: 22, Angle: 77)",
+    "Range": 4,
+    "Area": 101011,
+    "Param1": 22,
+    "Param2": 22,
+    "Power": 77
+  },
+  {
+    "Id": 70202,
+    "_comment": "Weapon Attack Profile 70202 (Category: 4, Ratio: 101011, Range: 22, Angle: 77)",
+    "Range": 4,
+    "Area": 101011,
+    "Param1": 22,
+    "Param2": 22,
+    "Power": 77
+  },
+  {
+    "Id": 70203,
+    "_comment": "Weapon Attack Profile 70203 (Category: 4, Ratio: 101011, Range: 22, Angle: 77)",
+    "Range": 4,
+    "Area": 101011,
+    "Param1": 22,
+    "Param2": 22,
+    "Power": 77
+  },
+  {
+    "Id": 70301,
+    "_comment": "Weapon Attack Profile 70301 (Category: 4, Ratio: 101011, Range: 22, Angle: 77)",
+    "Range": 4,
+    "Area": 101011,
+    "Param1": 22,
+    "Param2": 22,
+    "Power": 77
+  },
+  {
+    "Id": 70302,
+    "_comment": "Weapon Attack Profile 70302 (Category: 4, Ratio: 101011, Range: 22, Angle: 77)",
+    "Range": 4,
+    "Area": 101011,
+    "Param1": 22,
+    "Param2": 22,
+    "Power": 77
+  },
+  {
+    "Id": 70303,
+    "_comment": "Weapon Attack Profile 70303 (Category: 4, Ratio: 101011, Range: 22, Angle: 77)",
+    "Range": 4,
+    "Area": 101011,
+    "Param1": 22,
+    "Param2": 22,
+    "Power": 77
+  },
+  {
+    "Id": 10104,
+    "_comment": "Weapon Attack Profile 10104 (Category: 1, Ratio: 105062, Range: 22, Angle: 245)",
+    "Range": 1,
+    "Area": 105062,
+    "Param1": 22,
+    "Param2": 22,
+    "Power": 245
+  },
+  {
+    "Id": 10204,
+    "_comment": "Weapon Attack Profile 10204 (Category: 1, Ratio: 105062, Range: 22, Angle: 170)",
+    "Range": 1,
+    "Area": 105062,
+    "Param1": 22,
+    "Param2": 22,
+    "Power": 170
+  },
+  {
+    "Id": 10304,
+    "_comment": "Weapon Attack Profile 10304 (Category: 1, Ratio: 105062, Range: 22, Angle: 0)",
+    "Range": 1,
+    "Area": 105062,
+    "Param1": 22,
+    "Param2": 22,
+    "Power": 0
+  },
+  {
+    "Id": 10404,
+    "_comment": "Weapon Attack Profile 10404 (Category: 1, Ratio: 105062, Range: 22, Angle: 145)",
+    "Range": 1,
+    "Area": 105062,
+    "Param1": 22,
+    "Param2": 22,
+    "Power": 145
+  },
+  {
+    "Id": 30104,
+    "_comment": "Weapon Attack Profile 30104 (Category: 1, Ratio: 105062, Range: 22, Angle: 145)",
+    "Range": 1,
+    "Area": 105062,
+    "Param1": 22,
+    "Param2": 22,
+    "Power": 145
+  },
+  {
+    "Id": 30204,
+    "_comment": "Weapon Attack Profile 30204 (Category: 1, Ratio: 105062, Range: 22, Angle: 145)",
+    "Range": 1,
+    "Area": 105062,
+    "Param1": 22,
+    "Param2": 22,
+    "Power": 145
+  },
+  {
+    "Id": 30304,
+    "_comment": "Weapon Attack Profile 30304 (Category: 1, Ratio: 105062, Range: 22, Angle: 145)",
+    "Range": 1,
+    "Area": 105062,
+    "Param1": 22,
+    "Param2": 22,
+    "Power": 145
+  },
+  {
+    "Id": 30404,
+    "_comment": "Weapon Attack Profile 30404 (Category: 1, Ratio: 105062, Range: 22, Angle: 145)",
+    "Range": 1,
+    "Area": 105062,
+    "Param1": 22,
+    "Param2": 22,
+    "Power": 145
+  },
+  {
+    "Id": 50104,
+    "_comment": "Weapon Attack Profile 50104 (Category: 3, Ratio: 105062, Range: 22, Angle: 170)",
+    "Range": 3,
+    "Area": 105062,
+    "Param1": 22,
+    "Param2": 22,
+    "Power": 170
+  },
+  {
+    "Id": 50204,
+    "_comment": "Weapon Attack Profile 50204 (Category: 3, Ratio: 105062, Range: 22, Angle: 170)",
+    "Range": 3,
+    "Area": 105062,
+    "Param1": 22,
+    "Param2": 22,
+    "Power": 170
+  },
+  {
+    "Id": 50304,
+    "_comment": "Weapon Attack Profile 50304 (Category: 3, Ratio: 105062, Range: 22, Angle: 170)",
+    "Range": 3,
+    "Area": 105062,
+    "Param1": 22,
+    "Param2": 22,
+    "Power": 170
+  },
+  {
+    "Id": 50404,
+    "_comment": "Weapon Attack Profile 50404 (Category: 3, Ratio: 105062, Range: 22, Angle: 170)",
+    "Range": 3,
+    "Area": 105062,
+    "Param1": 22,
+    "Param2": 22,
+    "Power": 170
+  },
+  {
+    "Id": 50504,
+    "_comment": "Weapon Attack Profile 50504 (Category: 3, Ratio: 105062, Range: 22, Angle: 170)",
+    "Range": 3,
+    "Area": 105062,
+    "Param1": 22,
+    "Param2": 22,
+    "Power": 170
+  },
+  {
+    "Id": 50604,
+    "_comment": "Weapon Attack Profile 50604 (Category: 3, Ratio: 105062, Range: 22, Angle: 300)",
+    "Range": 3,
+    "Area": 105062,
+    "Param1": 22,
+    "Param2": 22,
+    "Power": 300
+  },
+  {
+    "Id": 70104,
+    "_comment": "Weapon Attack Profile 70104 (Category: 4, Ratio: 105062, Range: 22, Angle: 170)",
+    "Range": 4,
+    "Area": 105062,
+    "Param1": 22,
+    "Param2": 22,
+    "Power": 170
+  },
+  {
+    "Id": 70204,
+    "_comment": "Weapon Attack Profile 70204 (Category: 4, Ratio: 105062, Range: 22, Angle: 170)",
+    "Range": 4,
+    "Area": 105062,
+    "Param1": 22,
+    "Param2": 22,
+    "Power": 170
+  },
+  {
+    "Id": 70304,
+    "_comment": "Weapon Attack Profile 70304 (Category: 4, Ratio: 105062, Range: 22, Angle: 170)",
+    "Range": 4,
+    "Area": 105062,
+    "Param1": 22,
+    "Param2": 22,
+    "Power": 170
+  },
+  {
+    "Id": 41001,
+    "_comment": "Weapon Attack Profile 41001 (Category: 1, Ratio: 102031, Range: 32, Angle: 217)",
+    "Range": 1,
+    "Area": 102031,
+    "Param1": 22,
+    "Param2": 32,
+    "Power": 217
+  },
+  {
+    "Id": 41002,
+    "_comment": "Weapon Attack Profile 41002 (Category: 1, Ratio: 102031, Range: 32, Angle: 217)",
+    "Range": 1,
+    "Area": 102031,
+    "Param1": 22,
+    "Param2": 32,
+    "Power": 217
+  },
+  {
+    "Id": 41003,
+    "_comment": "Weapon Attack Profile 41003 (Category: 1, Ratio: 102031, Range: 32, Angle: 217)",
+    "Range": 1,
+    "Area": 102031,
+    "Param1": 22,
+    "Param2": 32,
+    "Power": 217
+  },
+  {
+    "Id": 41004,
+    "_comment": "Weapon Attack Profile 41004 (Category: 1, Ratio: 102031, Range: 32, Angle: 217)",
+    "Range": 1,
+    "Area": 102031,
+    "Param1": 22,
+    "Param2": 32,
+    "Power": 217
+  },
+  {
+    "Id": 41005,
+    "_comment": "Weapon Attack Profile 41005 (Category: 1, Ratio: 102031, Range: 32, Angle: 217)",
+    "Range": 1,
+    "Area": 102031,
+    "Param1": 22,
+    "Param2": 32,
+    "Power": 217
+  },
+  {
+    "Id": 41006,
+    "_comment": "Weapon Attack Profile 41006 (Category: 1, Ratio: 102031, Range: 32, Angle: 217)",
+    "Range": 1,
+    "Area": 102031,
+    "Param1": 22,
+    "Param2": 32,
+    "Power": 217
+  },
+  {
+    "Id": 41007,
+    "_comment": "Weapon Attack Profile 41007 (Category: 1, Ratio: 102031, Range: 32, Angle: 217)",
+    "Range": 1,
+    "Area": 102031,
+    "Param1": 22,
+    "Param2": 32,
+    "Power": 217
+  },
+  {
+    "Id": 41008,
+    "_comment": "Weapon Attack Profile 41008 (Category: 1, Ratio: 102031, Range: 32, Angle: 217)",
+    "Range": 1,
+    "Area": 102031,
+    "Param1": 22,
+    "Param2": 32,
+    "Power": 217
+  },
+  {
+    "Id": 41009,
+    "_comment": "Weapon Attack Profile 41009 (Category: 1, Ratio: 102031, Range: 32, Angle: 217)",
+    "Range": 1,
+    "Area": 102031,
+    "Param1": 22,
+    "Param2": 32,
+    "Power": 217
+  },
+  {
+    "Id": 41010,
+    "_comment": "Weapon Attack Profile 41010 (Category: 1, Ratio: 102031, Range: 32, Angle: 217)",
+    "Range": 1,
+    "Area": 102031,
+    "Param1": 22,
+    "Param2": 32,
+    "Power": 217
+  },
+  {
+    "Id": 41011,
+    "_comment": "Weapon Attack Profile 41011 (Category: 1, Ratio: 102031, Range: 32, Angle: 217)",
+    "Range": 1,
+    "Area": 102031,
+    "Param1": 22,
+    "Param2": 32,
+    "Power": 217
+  },
+  {
+    "Id": 41012,
+    "_comment": "Weapon Attack Profile 41012 (Category: 1, Ratio: 102031, Range: 32, Angle: 217)",
+    "Range": 1,
+    "Area": 102031,
+    "Param1": 22,
+    "Param2": 32,
+    "Power": 217
+  },
+  {
+    "Id": 41013,
+    "_comment": "Weapon Attack Profile 41013 (Category: 1, Ratio: 102031, Range: 32, Angle: 217)",
+    "Range": 1,
+    "Area": 102031,
+    "Param1": 22,
+    "Param2": 32,
+    "Power": 217
+  },
+  {
+    "Id": 41014,
+    "_comment": "Weapon Attack Profile 41014 (Category: 1, Ratio: 102031, Range: 32, Angle: 217)",
+    "Range": 1,
+    "Area": 102031,
+    "Param1": 22,
+    "Param2": 32,
+    "Power": 217
+  },
+  {
+    "Id": 41015,
+    "_comment": "Weapon Attack Profile 41015 (Category: 1, Ratio: 102031, Range: 32, Angle: 217)",
+    "Range": 1,
+    "Area": 102031,
+    "Param1": 22,
+    "Param2": 32,
+    "Power": 217
+  },
+  {
+    "Id": 41016,
+    "_comment": "Weapon Attack Profile 41016 (Category: 1, Ratio: 102031, Range: 32, Angle: 217)",
+    "Range": 1,
+    "Area": 102031,
+    "Param1": 22,
+    "Param2": 32,
+    "Power": 217
+  },
+  {
+    "Id": 41017,
+    "_comment": "Weapon Attack Profile 41017 (Category: 1, Ratio: 102031, Range: 32, Angle: 217)",
+    "Range": 1,
+    "Area": 102031,
+    "Param1": 22,
+    "Param2": 32,
+    "Power": 217
+  },
+  {
+    "Id": 41018,
+    "_comment": "Weapon Attack Profile 41018 (Category: 1, Ratio: 102031, Range: 32, Angle: 217)",
+    "Range": 1,
+    "Area": 102031,
+    "Param1": 22,
+    "Param2": 32,
+    "Power": 217
+  },
+  {
+    "Id": 41019,
+    "_comment": "Weapon Attack Profile 41019 (Category: 1, Ratio: 102031, Range: 32, Angle: 217)",
+    "Range": 1,
+    "Area": 102031,
+    "Param1": 22,
+    "Param2": 32,
+    "Power": 217
+  },
+  {
+    "Id": 41020,
+    "_comment": "Weapon Attack Profile 41020 (Category: 1, Ratio: 102031, Range: 32, Angle: 217)",
+    "Range": 1,
+    "Area": 102031,
+    "Param1": 22,
+    "Param2": 32,
+    "Power": 217
+  },
+  {
+    "Id": 41021,
+    "_comment": "Weapon Attack Profile 41021 (Category: 1, Ratio: 102031, Range: 32, Angle: 217)",
+    "Range": 1,
+    "Area": 102031,
+    "Param1": 22,
+    "Param2": 32,
+    "Power": 217
+  },
+  {
+    "Id": 41022,
+    "_comment": "Weapon Attack Profile 41022 (Category: 1, Ratio: 102031, Range: 32, Angle: 217)",
+    "Range": 1,
+    "Area": 102031,
+    "Param1": 22,
+    "Param2": 32,
+    "Power": 217
+  },
+  {
+    "Id": 41023,
+    "_comment": "Weapon Attack Profile 41023 (Category: 1, Ratio: 102031, Range: 32, Angle: 217)",
+    "Range": 1,
+    "Area": 102031,
+    "Param1": 22,
+    "Param2": 32,
+    "Power": 217
+  },
+  {
+    "Id": 41024,
+    "_comment": "Weapon Attack Profile 41024 (Category: 1, Ratio: 102031, Range: 32, Angle: 217)",
+    "Range": 1,
+    "Area": 102031,
+    "Param1": 22,
+    "Param2": 32,
+    "Power": 217
+  },
+  {
+    "Id": 41025,
+    "_comment": "Weapon Attack Profile 41025 (Category: 1, Ratio: 102031, Range: 32, Angle: 217)",
+    "Range": 1,
+    "Area": 102031,
+    "Param1": 22,
+    "Param2": 32,
+    "Power": 217
+  },
+  {
+    "Id": 41026,
+    "_comment": "Weapon Attack Profile 41026 (Category: 1, Ratio: 102031, Range: 32, Angle: 217)",
+    "Range": 1,
+    "Area": 102031,
+    "Param1": 22,
+    "Param2": 32,
+    "Power": 217
+  },
+  {
+    "Id": 41027,
+    "_comment": "Weapon Attack Profile 41027 (Category: 1, Ratio: 102031, Range: 32, Angle: 217)",
+    "Range": 1,
+    "Area": 102031,
+    "Param1": 22,
+    "Param2": 32,
+    "Power": 217
+  },
+  {
+    "Id": 41028,
+    "_comment": "Weapon Attack Profile 41028 (Category: 1, Ratio: 102031, Range: 32, Angle: 217)",
+    "Range": 1,
+    "Area": 102031,
+    "Param1": 22,
+    "Param2": 32,
+    "Power": 217
+  },
+  {
+    "Id": 41029,
+    "_comment": "Weapon Attack Profile 41029 (Category: 1, Ratio: 102031, Range: 32, Angle: 217)",
+    "Range": 1,
+    "Area": 102031,
+    "Param1": 22,
+    "Param2": 32,
+    "Power": 217
+  },
+  {
+    "Id": 41030,
+    "_comment": "Weapon Attack Profile 41030 (Category: 1, Ratio: 102031, Range: 32, Angle: 217)",
+    "Range": 1,
+    "Area": 102031,
+    "Param1": 22,
+    "Param2": 32,
+    "Power": 217
+  },
+  {
+    "Id": 41031,
+    "_comment": "Weapon Attack Profile 41031 (Category: 2, Ratio: 102031, Range: 32, Angle: 0)",
+    "Range": 2,
+    "Area": 102031,
+    "Param1": 9,
+    "Param2": 32,
+    "Power": 0
+  },
+  {
+    "Id": 41032,
+    "_comment": "Weapon Attack Profile 41032 (Category: 2, Ratio: 102031, Range: 32, Angle: 0)",
+    "Range": 2,
+    "Area": 102031,
+    "Param1": 9,
+    "Param2": 32,
+    "Power": 0
+  },
+  {
+    "Id": 41033,
+    "_comment": "Weapon Attack Profile 41033 (Category: 2, Ratio: 102031, Range: 32, Angle: 0)",
+    "Range": 2,
+    "Area": 102031,
+    "Param1": 9,
+    "Param2": 32,
+    "Power": 0
+  },
+  {
+    "Id": 41034,
+    "_comment": "Weapon Attack Profile 41034 (Category: 2, Ratio: 102031, Range: 32, Angle: 0)",
+    "Range": 2,
+    "Area": 102031,
+    "Param1": 9,
+    "Param2": 32,
+    "Power": 0
+  },
+  {
+    "Id": 41035,
+    "_comment": "Weapon Attack Profile 41035 (Category: 2, Ratio: 102031, Range: 32, Angle: 0)",
+    "Range": 2,
+    "Area": 102031,
+    "Param1": 9,
+    "Param2": 32,
+    "Power": 0
+  },
+  {
+    "Id": 41036,
+    "_comment": "Weapon Attack Profile 41036 (Category: 2, Ratio: 102031, Range: 32, Angle: 0)",
+    "Range": 2,
+    "Area": 102031,
+    "Param1": 9,
+    "Param2": 32,
+    "Power": 0
+  },
+  {
+    "Id": 41037,
+    "_comment": "Weapon Attack Profile 41037 (Category: 2, Ratio: 102031, Range: 32, Angle: 0)",
+    "Range": 2,
+    "Area": 102031,
+    "Param1": 9,
+    "Param2": 32,
+    "Power": 0
+  },
+  {
+    "Id": 41038,
+    "_comment": "Weapon Attack Profile 41038 (Category: 2, Ratio: 102031, Range: 32, Angle: 0)",
+    "Range": 2,
+    "Area": 102031,
+    "Param1": 9,
+    "Param2": 32,
+    "Power": 0
+  },
+  {
+    "Id": 41039,
+    "_comment": "Weapon Attack Profile 41039 (Category: 2, Ratio: 102031, Range: 32, Angle: 0)",
+    "Range": 2,
+    "Area": 102031,
+    "Param1": 9,
+    "Param2": 32,
+    "Power": 0
+  },
+  {
+    "Id": 41040,
+    "_comment": "Weapon Attack Profile 41040 (Category: 2, Ratio: 102031, Range: 32, Angle: 0)",
+    "Range": 2,
+    "Area": 102031,
+    "Param1": 9,
+    "Param2": 32,
+    "Power": 0
+  },
+  {
+    "Id": 41041,
+    "_comment": "Weapon Attack Profile 41041 (Category: 2, Ratio: 102031, Range: 32, Angle: 0)",
+    "Range": 2,
+    "Area": 102031,
+    "Param1": 9,
+    "Param2": 32,
+    "Power": 0
+  },
+  {
+    "Id": 41042,
+    "_comment": "Weapon Attack Profile 41042 (Category: 2, Ratio: 102031, Range: 32, Angle: 0)",
+    "Range": 2,
+    "Area": 102031,
+    "Param1": 9,
+    "Param2": 32,
+    "Power": 0
+  },
+  {
+    "Id": 41043,
+    "_comment": "Weapon Attack Profile 41043 (Category: 2, Ratio: 102031, Range: 32, Angle: 0)",
+    "Range": 2,
+    "Area": 102031,
+    "Param1": 9,
+    "Param2": 32,
+    "Power": 0
+  },
+  {
+    "Id": 41044,
+    "_comment": "Weapon Attack Profile 41044 (Category: 2, Ratio: 102031, Range: 32, Angle: 0)",
+    "Range": 2,
+    "Area": 102031,
+    "Param1": 9,
+    "Param2": 32,
+    "Power": 0
+  },
+  {
+    "Id": 41045,
+    "_comment": "Weapon Attack Profile 41045 (Category: 2, Ratio: 102031, Range: 32, Angle: 0)",
+    "Range": 2,
+    "Area": 102031,
+    "Param1": 9,
+    "Param2": 32,
+    "Power": 0
+  },
+  {
+    "Id": 41046,
+    "_comment": "Weapon Attack Profile 41046 (Category: 2, Ratio: 102031, Range: 32, Angle: 0)",
+    "Range": 2,
+    "Area": 102031,
+    "Param1": 9,
+    "Param2": 32,
+    "Power": 0
+  },
+  {
+    "Id": 41047,
+    "_comment": "Weapon Attack Profile 41047 (Category: 2, Ratio: 102031, Range: 32, Angle: 0)",
+    "Range": 2,
+    "Area": 102031,
+    "Param1": 9,
+    "Param2": 32,
+    "Power": 0
+  },
+  {
+    "Id": 41048,
+    "_comment": "Weapon Attack Profile 41048 (Category: 2, Ratio: 102031, Range: 32, Angle: 0)",
+    "Range": 2,
+    "Area": 102031,
+    "Param1": 9,
+    "Param2": 32,
+    "Power": 0
+  },
+  {
+    "Id": 41049,
+    "_comment": "Weapon Attack Profile 41049 (Category: 2, Ratio: 102031, Range: 32, Angle: 0)",
+    "Range": 2,
+    "Area": 102031,
+    "Param1": 9,
+    "Param2": 32,
+    "Power": 0
+  },
+  {
+    "Id": 41050,
+    "_comment": "Weapon Attack Profile 41050 (Category: 2, Ratio: 102031, Range: 32, Angle: 0)",
+    "Range": 2,
+    "Area": 102031,
+    "Param1": 9,
+    "Param2": 32,
+    "Power": 0
+  },
+  {
+    "Id": 41051,
+    "_comment": "Weapon Attack Profile 41051 (Category: 0, Ratio: 101011, Range: 32, Angle: 0)",
+    "Range": 0,
+    "Area": 101011,
+    "Param1": 1,
+    "Param2": 32,
+    "Power": 0
+  },
+  {
+    "Id": 41052,
+    "_comment": "Weapon Attack Profile 41052 (Category: 0, Ratio: 101011, Range: 32, Angle: 0)",
+    "Range": 0,
+    "Area": 101011,
+    "Param1": 1,
+    "Param2": 32,
+    "Power": 0
+  },
+  {
+    "Id": 41053,
+    "_comment": "Weapon Attack Profile 41053 (Category: 0, Ratio: 101011, Range: 32, Angle: 0)",
+    "Range": 0,
+    "Area": 101011,
+    "Param1": 1,
+    "Param2": 32,
+    "Power": 0
+  },
+  {
+    "Id": 41054,
+    "_comment": "Weapon Attack Profile 41054 (Category: 0, Ratio: 101011, Range: 32, Angle: 0)",
+    "Range": 0,
+    "Area": 101011,
+    "Param1": 1,
+    "Param2": 32,
+    "Power": 0
+  },
+  {
+    "Id": 41055,
+    "_comment": "Weapon Attack Profile 41055 (Category: 0, Ratio: 101011, Range: 32, Angle: 0)",
+    "Range": 0,
+    "Area": 101011,
+    "Param1": 1,
+    "Param2": 32,
+    "Power": 0
+  },
+  {
+    "Id": 41056,
+    "_comment": "Weapon Attack Profile 41056 (Category: 0, Ratio: 101011, Range: 32, Angle: 0)",
+    "Range": 0,
+    "Area": 101011,
+    "Param1": 1,
+    "Param2": 32,
+    "Power": 0
+  },
+  {
+    "Id": 41057,
+    "_comment": "Weapon Attack Profile 41057 (Category: 0, Ratio: 101011, Range: 32, Angle: 0)",
+    "Range": 0,
+    "Area": 101011,
+    "Param1": 1,
+    "Param2": 32,
+    "Power": 0
+  },
+  {
+    "Id": 41058,
+    "_comment": "Weapon Attack Profile 41058 (Category: 0, Ratio: 101011, Range: 32, Angle: 0)",
+    "Range": 0,
+    "Area": 101011,
+    "Param1": 1,
+    "Param2": 32,
+    "Power": 0
+  },
+  {
+    "Id": 41059,
+    "_comment": "Weapon Attack Profile 41059 (Category: 0, Ratio: 101011, Range: 32, Angle: 0)",
+    "Range": 0,
+    "Area": 101011,
+    "Param1": 1,
+    "Param2": 32,
+    "Power": 0
+  },
+  {
+    "Id": 41060,
+    "_comment": "Weapon Attack Profile 41060 (Category: 0, Ratio: 101011, Range: 32, Angle: 0)",
+    "Range": 0,
+    "Area": 101011,
+    "Param1": 1,
+    "Param2": 32,
+    "Power": 0
+  },
+  {
+    "Id": 41091,
+    "_comment": "Weapon Attack Profile 41091 (Category: 0, Ratio: 101011, Range: 0, Angle: 0)",
+    "Range": 0,
+    "Area": 101011,
+    "Param1": 0,
+    "Param2": 0,
+    "Power": 0
+  },
+  {
+    "Id": 41092,
+    "_comment": "Weapon Attack Profile 41092 (Category: 0, Ratio: 101011, Range: 0, Angle: 0)",
+    "Range": 0,
+    "Area": 101011,
+    "Param1": 0,
+    "Param2": 0,
+    "Power": 0
+  },
+  {
+    "Id": 41093,
+    "_comment": "Weapon Attack Profile 41093 (Category: 0, Ratio: 101011, Range: 0, Angle: 0)",
+    "Range": 0,
+    "Area": 101011,
+    "Param1": 0,
+    "Param2": 0,
+    "Power": 0
+  },
+  {
+    "Id": 41094,
+    "_comment": "Weapon Attack Profile 41094 (Category: 0, Ratio: 101011, Range: 0, Angle: 0)",
+    "Range": 0,
+    "Area": 101011,
+    "Param1": 0,
+    "Param2": 0,
+    "Power": 0
+  },
+  {
+    "Id": 41095,
+    "_comment": "Weapon Attack Profile 41095 (Category: 0, Ratio: 101011, Range: 0, Angle: 0)",
+    "Range": 0,
+    "Area": 101011,
+    "Param1": 0,
+    "Param2": 0,
+    "Power": 0
+  },
+  {
+    "Id": 41096,
+    "_comment": "Weapon Attack Profile 41096 (Category: 0, Ratio: 101011, Range: 0, Angle: 0)",
+    "Range": 0,
+    "Area": 101011,
+    "Param1": 0,
+    "Param2": 0,
+    "Power": 0
+  },
+  {
+    "Id": 41097,
+    "_comment": "Weapon Attack Profile 41097 (Category: 0, Ratio: 101011, Range: 0, Angle: 0)",
+    "Range": 0,
+    "Area": 101011,
+    "Param1": 0,
+    "Param2": 0,
+    "Power": 0
+  },
+  {
+    "Id": 41098,
+    "_comment": "Weapon Attack Profile 41098 (Category: 0, Ratio: 101011, Range: 0, Angle: 0)",
+    "Range": 0,
+    "Area": 101011,
+    "Param1": 0,
+    "Param2": 0,
+    "Power": 0
+  },
+  {
+    "Id": 41099,
+    "_comment": "Weapon Attack Profile 41099 (Category: 0, Ratio: 101011, Range: 0, Angle: 0)",
+    "Range": 0,
+    "Area": 101011,
+    "Param1": 0,
+    "Param2": 0,
+    "Power": 0
+  },
+  {
+    "Id": 41100,
+    "_comment": "Weapon Attack Profile 41100 (Category: 0, Ratio: 101011, Range: 0, Angle: 0)",
+    "Range": 0,
+    "Area": 101011,
+    "Param1": 0,
+    "Param2": 0,
+    "Power": 0
+  },
+  {
+    "Id": 41101,
+    "_comment": "Weapon Attack Profile 41101 (Category: 0, Ratio: 101011, Range: 0, Angle: 0)",
+    "Range": 0,
+    "Area": 101011,
+    "Param1": 0,
+    "Param2": 0,
+    "Power": 0
+  },
+  {
+    "Id": 41102,
+    "_comment": "Weapon Attack Profile 41102 (Category: 0, Ratio: 101011, Range: 0, Angle: 0)",
+    "Range": 0,
+    "Area": 101011,
+    "Param1": 0,
+    "Param2": 0,
+    "Power": 0
+  },
+  {
+    "Id": 41103,
+    "_comment": "Weapon Attack Profile 41103 (Category: 0, Ratio: 101011, Range: 0, Angle: 0)",
+    "Range": 0,
+    "Area": 101011,
+    "Param1": 0,
+    "Param2": 0,
+    "Power": 0
+  },
+  {
+    "Id": 41104,
+    "_comment": "Weapon Attack Profile 41104 (Category: 0, Ratio: 101011, Range: 0, Angle: 0)",
+    "Range": 0,
+    "Area": 101011,
+    "Param1": 0,
+    "Param2": 0,
+    "Power": 0
+  },
+  {
+    "Id": 41105,
+    "_comment": "Weapon Attack Profile 41105 (Category: 0, Ratio: 101011, Range: 0, Angle: 0)",
+    "Range": 0,
+    "Area": 101011,
+    "Param1": 0,
+    "Param2": 0,
+    "Power": 0
+  },
+  {
+    "Id": 41106,
+    "_comment": "Weapon Attack Profile 41106 (Category: 0, Ratio: 101011, Range: 0, Angle: 0)",
+    "Range": 0,
+    "Area": 101011,
+    "Param1": 0,
+    "Param2": 0,
+    "Power": 0
+  },
+  {
+    "Id": 41107,
+    "_comment": "Weapon Attack Profile 41107 (Category: 0, Ratio: 101011, Range: 0, Angle: 0)",
+    "Range": 0,
+    "Area": 101011,
+    "Param1": 0,
+    "Param2": 0,
+    "Power": 0
+  },
+  {
+    "Id": 41108,
+    "_comment": "Weapon Attack Profile 41108 (Category: 0, Ratio: 101011, Range: 0, Angle: 0)",
+    "Range": 0,
+    "Area": 101011,
+    "Param1": 0,
+    "Param2": 0,
+    "Power": 0
+  },
+  {
+    "Id": 41109,
+    "_comment": "Weapon Attack Profile 41109 (Category: 0, Ratio: 101011, Range: 0, Angle: 0)",
+    "Range": 0,
+    "Area": 101011,
+    "Param1": 0,
+    "Param2": 0,
+    "Power": 0
+  },
+  {
+    "Id": 41110,
+    "_comment": "Weapon Attack Profile 41110 (Category: 0, Ratio: 101011, Range: 0, Angle: 0)",
+    "Range": 0,
+    "Area": 101011,
+    "Param1": 0,
+    "Param2": 0,
+    "Power": 0
+  },
+  {
+    "Id": 41111,
+    "_comment": "Weapon Attack Profile 41111 (Category: 0, Ratio: 101011, Range: 0, Angle: 0)",
+    "Range": 0,
+    "Area": 101011,
+    "Param1": 0,
+    "Param2": 0,
+    "Power": 0
+  },
+  {
+    "Id": 41112,
+    "_comment": "Weapon Attack Profile 41112 (Category: 0, Ratio: 101011, Range: 0, Angle: 0)",
+    "Range": 0,
+    "Area": 101011,
+    "Param1": 0,
+    "Param2": 0,
+    "Power": 0
+  },
+  {
+    "Id": 41113,
+    "_comment": "Weapon Attack Profile 41113 (Category: 0, Ratio: 101011, Range: 0, Angle: 0)",
+    "Range": 0,
+    "Area": 101011,
+    "Param1": 0,
+    "Param2": 0,
+    "Power": 0
+  },
+  {
+    "Id": 41114,
+    "_comment": "Weapon Attack Profile 41114 (Category: 0, Ratio: 101011, Range: 0, Angle: 0)",
+    "Range": 0,
+    "Area": 101011,
+    "Param1": 0,
+    "Param2": 0,
+    "Power": 0
+  },
+  {
+    "Id": 41115,
+    "_comment": "Weapon Attack Profile 41115 (Category: 0, Ratio: 101011, Range: 0, Angle: 0)",
+    "Range": 0,
+    "Area": 101011,
+    "Param1": 0,
+    "Param2": 0,
+    "Power": 0
+  },
+  {
+    "Id": 41116,
+    "_comment": "Weapon Attack Profile 41116 (Category: 0, Ratio: 101011, Range: 0, Angle: 0)",
+    "Range": 0,
+    "Area": 101011,
+    "Param1": 0,
+    "Param2": 0,
+    "Power": 0
+  },
+  {
+    "Id": 41117,
+    "_comment": "Weapon Attack Profile 41117 (Category: 0, Ratio: 101011, Range: 0, Angle: 0)",
+    "Range": 0,
+    "Area": 101011,
+    "Param1": 0,
+    "Param2": 0,
+    "Power": 0
+  },
+  {
+    "Id": 41118,
+    "_comment": "Weapon Attack Profile 41118 (Category: 0, Ratio: 101011, Range: 0, Angle: 0)",
+    "Range": 0,
+    "Area": 101011,
+    "Param1": 0,
+    "Param2": 0,
+    "Power": 0
+  },
+  {
+    "Id": 41119,
+    "_comment": "Weapon Attack Profile 41119 (Category: 0, Ratio: 101011, Range: 0, Angle: 0)",
+    "Range": 0,
+    "Area": 101011,
+    "Param1": 0,
+    "Param2": 0,
+    "Power": 0
+  },
+  {
+    "Id": 41120,
+    "_comment": "Weapon Attack Profile 41120 (Category: 0, Ratio: 101011, Range: 0, Angle: 0)",
+    "Range": 0,
+    "Area": 101011,
+    "Param1": 0,
+    "Param2": 0,
+    "Power": 0
+  },
+  {
+    "Id": 61001,
+    "_comment": "Weapon Attack Profile 61001 (Category: 3, Ratio: 115092, Range: 32, Angle: 152)",
+    "Range": 3,
+    "Area": 115092,
+    "Param1": 22,
+    "Param2": 32,
+    "Power": 152
+  },
+  {
+    "Id": 61002,
+    "_comment": "Weapon Attack Profile 61002 (Category: 3, Ratio: 115092, Range: 32, Angle: 152)",
+    "Range": 3,
+    "Area": 115092,
+    "Param1": 22,
+    "Param2": 32,
+    "Power": 152
+  },
+  {
+    "Id": 61003,
+    "_comment": "Weapon Attack Profile 61003 (Category: 3, Ratio: 115092, Range: 32, Angle: 152)",
+    "Range": 3,
+    "Area": 115092,
+    "Param1": 22,
+    "Param2": 32,
+    "Power": 152
+  },
+  {
+    "Id": 61004,
+    "_comment": "Weapon Attack Profile 61004 (Category: 3, Ratio: 115092, Range: 32, Angle: 152)",
+    "Range": 3,
+    "Area": 115092,
+    "Param1": 22,
+    "Param2": 32,
+    "Power": 152
+  },
+  {
+    "Id": 61005,
+    "_comment": "Weapon Attack Profile 61005 (Category: 3, Ratio: 115092, Range: 32, Angle: 152)",
+    "Range": 3,
+    "Area": 115092,
+    "Param1": 22,
+    "Param2": 32,
+    "Power": 152
+  },
+  {
+    "Id": 61006,
+    "_comment": "Weapon Attack Profile 61006 (Category: 3, Ratio: 115092, Range: 32, Angle: 152)",
+    "Range": 3,
+    "Area": 115092,
+    "Param1": 22,
+    "Param2": 32,
+    "Power": 152
+  },
+  {
+    "Id": 61007,
+    "_comment": "Weapon Attack Profile 61007 (Category: 3, Ratio: 115092, Range: 32, Angle: 152)",
+    "Range": 3,
+    "Area": 115092,
+    "Param1": 22,
+    "Param2": 32,
+    "Power": 152
+  },
+  {
+    "Id": 61008,
+    "_comment": "Weapon Attack Profile 61008 (Category: 3, Ratio: 115092, Range: 32, Angle: 152)",
+    "Range": 3,
+    "Area": 115092,
+    "Param1": 22,
+    "Param2": 32,
+    "Power": 152
+  },
+  {
+    "Id": 61009,
+    "_comment": "Weapon Attack Profile 61009 (Category: 3, Ratio: 115092, Range: 32, Angle: 152)",
+    "Range": 3,
+    "Area": 115092,
+    "Param1": 22,
+    "Param2": 32,
+    "Power": 152
+  },
+  {
+    "Id": 61010,
+    "_comment": "Weapon Attack Profile 61010 (Category: 3, Ratio: 115092, Range: 32, Angle: 152)",
+    "Range": 3,
+    "Area": 115092,
+    "Param1": 22,
+    "Param2": 32,
+    "Power": 152
+  },
+  {
+    "Id": 61011,
+    "_comment": "Weapon Attack Profile 61011 (Category: 3, Ratio: 115092, Range: 32, Angle: 152)",
+    "Range": 3,
+    "Area": 115092,
+    "Param1": 22,
+    "Param2": 32,
+    "Power": 152
+  },
+  {
+    "Id": 61012,
+    "_comment": "Weapon Attack Profile 61012 (Category: 3, Ratio: 115092, Range: 32, Angle: 152)",
+    "Range": 3,
+    "Area": 115092,
+    "Param1": 22,
+    "Param2": 32,
+    "Power": 152
+  },
+  {
+    "Id": 61013,
+    "_comment": "Weapon Attack Profile 61013 (Category: 3, Ratio: 115092, Range: 32, Angle: 152)",
+    "Range": 3,
+    "Area": 115092,
+    "Param1": 22,
+    "Param2": 32,
+    "Power": 152
+  },
+  {
+    "Id": 61014,
+    "_comment": "Weapon Attack Profile 61014 (Category: 3, Ratio: 115092, Range: 32, Angle: 152)",
+    "Range": 3,
+    "Area": 115092,
+    "Param1": 22,
+    "Param2": 32,
+    "Power": 152
+  },
+  {
+    "Id": 61015,
+    "_comment": "Weapon Attack Profile 61015 (Category: 3, Ratio: 115092, Range: 32, Angle: 152)",
+    "Range": 3,
+    "Area": 115092,
+    "Param1": 22,
+    "Param2": 32,
+    "Power": 152
+  },
+  {
+    "Id": 61016,
+    "_comment": "Weapon Attack Profile 61016 (Category: 3, Ratio: 115092, Range: 32, Angle: 152)",
+    "Range": 3,
+    "Area": 115092,
+    "Param1": 22,
+    "Param2": 32,
+    "Power": 152
+  },
+  {
+    "Id": 61017,
+    "_comment": "Weapon Attack Profile 61017 (Category: 3, Ratio: 115092, Range: 32, Angle: 152)",
+    "Range": 3,
+    "Area": 115092,
+    "Param1": 22,
+    "Param2": 32,
+    "Power": 152
+  },
+  {
+    "Id": 61018,
+    "_comment": "Weapon Attack Profile 61018 (Category: 3, Ratio: 115092, Range: 32, Angle: 152)",
+    "Range": 3,
+    "Area": 115092,
+    "Param1": 22,
+    "Param2": 32,
+    "Power": 152
+  },
+  {
+    "Id": 61019,
+    "_comment": "Weapon Attack Profile 61019 (Category: 3, Ratio: 115092, Range: 32, Angle: 152)",
+    "Range": 3,
+    "Area": 115092,
+    "Param1": 22,
+    "Param2": 32,
+    "Power": 152
+  },
+  {
+    "Id": 61020,
+    "_comment": "Weapon Attack Profile 61020 (Category: 3, Ratio: 115092, Range: 32, Angle: 152)",
+    "Range": 3,
+    "Area": 115092,
+    "Param1": 22,
+    "Param2": 32,
+    "Power": 152
+  },
+  {
+    "Id": 61021,
+    "_comment": "Weapon Attack Profile 61021 (Category: 3, Ratio: 115092, Range: 32, Angle: 0)",
+    "Range": 3,
+    "Area": 115092,
+    "Param1": 9,
+    "Param2": 32,
+    "Power": 0
+  },
+  {
+    "Id": 61022,
+    "_comment": "Weapon Attack Profile 61022 (Category: 3, Ratio: 115092, Range: 32, Angle: 0)",
+    "Range": 3,
+    "Area": 115092,
+    "Param1": 9,
+    "Param2": 32,
+    "Power": 0
+  },
+  {
+    "Id": 61023,
+    "_comment": "Weapon Attack Profile 61023 (Category: 3, Ratio: 115092, Range: 32, Angle: 0)",
+    "Range": 3,
+    "Area": 115092,
+    "Param1": 9,
+    "Param2": 32,
+    "Power": 0
+  },
+  {
+    "Id": 61024,
+    "_comment": "Weapon Attack Profile 61024 (Category: 3, Ratio: 115092, Range: 32, Angle: 0)",
+    "Range": 3,
+    "Area": 115092,
+    "Param1": 9,
+    "Param2": 32,
+    "Power": 0
+  },
+  {
+    "Id": 61025,
+    "_comment": "Weapon Attack Profile 61025 (Category: 3, Ratio: 115092, Range: 32, Angle: 0)",
+    "Range": 3,
+    "Area": 115092,
+    "Param1": 9,
+    "Param2": 32,
+    "Power": 0
+  },
+  {
+    "Id": 61026,
+    "_comment": "Weapon Attack Profile 61026 (Category: 3, Ratio: 115092, Range: 32, Angle: 0)",
+    "Range": 3,
+    "Area": 115092,
+    "Param1": 9,
+    "Param2": 32,
+    "Power": 0
+  },
+  {
+    "Id": 61027,
+    "_comment": "Weapon Attack Profile 61027 (Category: 3, Ratio: 115092, Range: 32, Angle: 0)",
+    "Range": 3,
+    "Area": 115092,
+    "Param1": 9,
+    "Param2": 32,
+    "Power": 0
+  },
+  {
+    "Id": 61028,
+    "_comment": "Weapon Attack Profile 61028 (Category: 3, Ratio: 115092, Range: 32, Angle: 0)",
+    "Range": 3,
+    "Area": 115092,
+    "Param1": 9,
+    "Param2": 32,
+    "Power": 0
+  },
+  {
+    "Id": 61029,
+    "_comment": "Weapon Attack Profile 61029 (Category: 3, Ratio: 115092, Range: 32, Angle: 0)",
+    "Range": 3,
+    "Area": 115092,
+    "Param1": 9,
+    "Param2": 32,
+    "Power": 0
+  },
+  {
+    "Id": 61030,
+    "_comment": "Weapon Attack Profile 61030 (Category: 3, Ratio: 115092, Range: 32, Angle: 0)",
+    "Range": 3,
+    "Area": 115092,
+    "Param1": 9,
+    "Param2": 32,
+    "Power": 0
+  },
+  {
+    "Id": 61031,
+    "_comment": "Weapon Attack Profile 61031 (Category: 3, Ratio: 115092, Range: 32, Angle: 0)",
+    "Range": 3,
+    "Area": 115092,
+    "Param1": 9,
+    "Param2": 32,
+    "Power": 0
+  },
+  {
+    "Id": 61032,
+    "_comment": "Weapon Attack Profile 61032 (Category: 3, Ratio: 115092, Range: 32, Angle: 0)",
+    "Range": 3,
+    "Area": 115092,
+    "Param1": 9,
+    "Param2": 32,
+    "Power": 0
+  },
+  {
+    "Id": 61033,
+    "_comment": "Weapon Attack Profile 61033 (Category: 3, Ratio: 115092, Range: 32, Angle: 0)",
+    "Range": 3,
+    "Area": 115092,
+    "Param1": 9,
+    "Param2": 32,
+    "Power": 0
+  },
+  {
+    "Id": 61034,
+    "_comment": "Weapon Attack Profile 61034 (Category: 3, Ratio: 115092, Range: 32, Angle: 0)",
+    "Range": 3,
+    "Area": 115092,
+    "Param1": 9,
+    "Param2": 32,
+    "Power": 0
+  },
+  {
+    "Id": 61035,
+    "_comment": "Weapon Attack Profile 61035 (Category: 3, Ratio: 115092, Range: 32, Angle: 0)",
+    "Range": 3,
+    "Area": 115092,
+    "Param1": 9,
+    "Param2": 32,
+    "Power": 0
+  },
+  {
+    "Id": 61036,
+    "_comment": "Weapon Attack Profile 61036 (Category: 3, Ratio: 115092, Range: 32, Angle: 0)",
+    "Range": 3,
+    "Area": 115092,
+    "Param1": 9,
+    "Param2": 32,
+    "Power": 0
+  },
+  {
+    "Id": 61037,
+    "_comment": "Weapon Attack Profile 61037 (Category: 3, Ratio: 115092, Range: 32, Angle: 0)",
+    "Range": 3,
+    "Area": 115092,
+    "Param1": 9,
+    "Param2": 32,
+    "Power": 0
+  },
+  {
+    "Id": 61038,
+    "_comment": "Weapon Attack Profile 61038 (Category: 3, Ratio: 115092, Range: 32, Angle: 0)",
+    "Range": 3,
+    "Area": 115092,
+    "Param1": 9,
+    "Param2": 32,
+    "Power": 0
+  },
+  {
+    "Id": 61039,
+    "_comment": "Weapon Attack Profile 61039 (Category: 3, Ratio: 115092, Range: 32, Angle: 0)",
+    "Range": 3,
+    "Area": 115092,
+    "Param1": 9,
+    "Param2": 32,
+    "Power": 0
+  },
+  {
+    "Id": 61040,
+    "_comment": "Weapon Attack Profile 61040 (Category: 3, Ratio: 115092, Range: 32, Angle: 0)",
+    "Range": 3,
+    "Area": 115092,
+    "Param1": 9,
+    "Param2": 32,
+    "Power": 0
+  },
+  {
+    "Id": 61041,
+    "_comment": "Weapon Attack Profile 61041 (Category: 3, Ratio: 115092, Range: 32, Angle: 0)",
+    "Range": 3,
+    "Area": 115092,
+    "Param1": 9,
+    "Param2": 32,
+    "Power": 0
+  },
+  {
+    "Id": 61042,
+    "_comment": "Weapon Attack Profile 61042 (Category: 3, Ratio: 115092, Range: 32, Angle: 0)",
+    "Range": 3,
+    "Area": 115092,
+    "Param1": 9,
+    "Param2": 32,
+    "Power": 0
+  },
+  {
+    "Id": 61043,
+    "_comment": "Weapon Attack Profile 61043 (Category: 3, Ratio: 115092, Range: 32, Angle: 0)",
+    "Range": 3,
+    "Area": 115092,
+    "Param1": 9,
+    "Param2": 32,
+    "Power": 0
+  },
+  {
+    "Id": 61044,
+    "_comment": "Weapon Attack Profile 61044 (Category: 3, Ratio: 115092, Range: 32, Angle: 0)",
+    "Range": 3,
+    "Area": 115092,
+    "Param1": 9,
+    "Param2": 32,
+    "Power": 0
+  },
+  {
+    "Id": 61045,
+    "_comment": "Weapon Attack Profile 61045 (Category: 3, Ratio: 115092, Range: 32, Angle: 0)",
+    "Range": 3,
+    "Area": 115092,
+    "Param1": 9,
+    "Param2": 32,
+    "Power": 0
+  },
+  {
+    "Id": 61046,
+    "_comment": "Weapon Attack Profile 61046 (Category: 3, Ratio: 115092, Range: 32, Angle: 0)",
+    "Range": 3,
+    "Area": 115092,
+    "Param1": 9,
+    "Param2": 32,
+    "Power": 0
+  },
+  {
+    "Id": 61047,
+    "_comment": "Weapon Attack Profile 61047 (Category: 3, Ratio: 115092, Range: 32, Angle: 0)",
+    "Range": 3,
+    "Area": 115092,
+    "Param1": 9,
+    "Param2": 32,
+    "Power": 0
+  },
+  {
+    "Id": 61048,
+    "_comment": "Weapon Attack Profile 61048 (Category: 3, Ratio: 115092, Range: 32, Angle: 0)",
+    "Range": 3,
+    "Area": 115092,
+    "Param1": 9,
+    "Param2": 32,
+    "Power": 0
+  },
+  {
+    "Id": 61049,
+    "_comment": "Weapon Attack Profile 61049 (Category: 3, Ratio: 115092, Range: 32, Angle: 0)",
+    "Range": 3,
+    "Area": 115092,
+    "Param1": 9,
+    "Param2": 32,
+    "Power": 0
+  },
+  {
+    "Id": 61050,
+    "_comment": "Weapon Attack Profile 61050 (Category: 3, Ratio: 115092, Range: 32, Angle: 0)",
+    "Range": 3,
+    "Area": 115092,
+    "Param1": 9,
+    "Param2": 32,
+    "Power": 0
+  },
+  {
+    "Id": 61121,
+    "_comment": "Weapon Attack Profile 61121 (Category: 0, Ratio: 101011, Range: 0, Angle: 0)",
+    "Range": 0,
+    "Area": 101011,
+    "Param1": 0,
+    "Param2": 0,
+    "Power": 0
+  },
+  {
+    "Id": 61122,
+    "_comment": "Weapon Attack Profile 61122 (Category: 0, Ratio: 101011, Range: 0, Angle: 0)",
+    "Range": 0,
+    "Area": 101011,
+    "Param1": 0,
+    "Param2": 0,
+    "Power": 0
+  },
+  {
+    "Id": 61123,
+    "_comment": "Weapon Attack Profile 61123 (Category: 0, Ratio: 101011, Range: 0, Angle: 0)",
+    "Range": 0,
+    "Area": 101011,
+    "Param1": 0,
+    "Param2": 0,
+    "Power": 0
+  },
+  {
+    "Id": 61124,
+    "_comment": "Weapon Attack Profile 61124 (Category: 0, Ratio: 101011, Range: 0, Angle: 0)",
+    "Range": 0,
+    "Area": 101011,
+    "Param1": 0,
+    "Param2": 0,
+    "Power": 0
+  },
+  {
+    "Id": 61125,
+    "_comment": "Weapon Attack Profile 61125 (Category: 0, Ratio: 101011, Range: 0, Angle: 0)",
+    "Range": 0,
+    "Area": 101011,
+    "Param1": 0,
+    "Param2": 0,
+    "Power": 0
+  },
+  {
+    "Id": 61126,
+    "_comment": "Weapon Attack Profile 61126 (Category: 0, Ratio: 101011, Range: 0, Angle: 0)",
+    "Range": 0,
+    "Area": 101011,
+    "Param1": 0,
+    "Param2": 0,
+    "Power": 0
+  },
+  {
+    "Id": 61127,
+    "_comment": "Weapon Attack Profile 61127 (Category: 0, Ratio: 101011, Range: 0, Angle: 0)",
+    "Range": 0,
+    "Area": 101011,
+    "Param1": 0,
+    "Param2": 0,
+    "Power": 0
+  },
+  {
+    "Id": 61128,
+    "_comment": "Weapon Attack Profile 61128 (Category: 0, Ratio: 101011, Range: 0, Angle: 0)",
+    "Range": 0,
+    "Area": 101011,
+    "Param1": 0,
+    "Param2": 0,
+    "Power": 0
+  },
+  {
+    "Id": 61129,
+    "_comment": "Weapon Attack Profile 61129 (Category: 0, Ratio: 101011, Range: 0, Angle: 0)",
+    "Range": 0,
+    "Area": 101011,
+    "Param1": 0,
+    "Param2": 0,
+    "Power": 0
+  },
+  {
+    "Id": 61130,
+    "_comment": "Weapon Attack Profile 61130 (Category: 0, Ratio: 101011, Range: 0, Angle: 0)",
+    "Range": 0,
+    "Area": 101011,
+    "Param1": 0,
+    "Param2": 0,
+    "Power": 0
+  },
+  {
+    "Id": 61131,
+    "_comment": "Weapon Attack Profile 61131 (Category: 0, Ratio: 101011, Range: 0, Angle: 0)",
+    "Range": 0,
+    "Area": 101011,
+    "Param1": 0,
+    "Param2": 0,
+    "Power": 0
+  },
+  {
+    "Id": 61132,
+    "_comment": "Weapon Attack Profile 61132 (Category: 0, Ratio: 101011, Range: 0, Angle: 0)",
+    "Range": 0,
+    "Area": 101011,
+    "Param1": 0,
+    "Param2": 0,
+    "Power": 0
+  },
+  {
+    "Id": 61133,
+    "_comment": "Weapon Attack Profile 61133 (Category: 0, Ratio: 101011, Range: 0, Angle: 0)",
+    "Range": 0,
+    "Area": 101011,
+    "Param1": 0,
+    "Param2": 0,
+    "Power": 0
+  },
+  {
+    "Id": 61134,
+    "_comment": "Weapon Attack Profile 61134 (Category: 0, Ratio: 101011, Range: 0, Angle: 0)",
+    "Range": 0,
+    "Area": 101011,
+    "Param1": 0,
+    "Param2": 0,
+    "Power": 0
+  },
+  {
+    "Id": 61135,
+    "_comment": "Weapon Attack Profile 61135 (Category: 0, Ratio: 101011, Range: 0, Angle: 0)",
+    "Range": 0,
+    "Area": 101011,
+    "Param1": 0,
+    "Param2": 0,
+    "Power": 0
+  },
+  {
+    "Id": 61136,
+    "_comment": "Weapon Attack Profile 61136 (Category: 0, Ratio: 101011, Range: 0, Angle: 0)",
+    "Range": 0,
+    "Area": 101011,
+    "Param1": 0,
+    "Param2": 0,
+    "Power": 0
+  },
+  {
+    "Id": 61137,
+    "_comment": "Weapon Attack Profile 61137 (Category: 0, Ratio: 101011, Range: 0, Angle: 0)",
+    "Range": 0,
+    "Area": 101011,
+    "Param1": 0,
+    "Param2": 0,
+    "Power": 0
+  },
+  {
+    "Id": 61138,
+    "_comment": "Weapon Attack Profile 61138 (Category: 0, Ratio: 101011, Range: 0, Angle: 0)",
+    "Range": 0,
+    "Area": 101011,
+    "Param1": 0,
+    "Param2": 0,
+    "Power": 0
+  },
+  {
+    "Id": 61139,
+    "_comment": "Weapon Attack Profile 61139 (Category: 0, Ratio: 101011, Range: 0, Angle: 0)",
+    "Range": 0,
+    "Area": 101011,
+    "Param1": 0,
+    "Param2": 0,
+    "Power": 0
+  },
+  {
+    "Id": 61140,
+    "_comment": "Weapon Attack Profile 61140 (Category: 0, Ratio: 101011, Range: 0, Angle: 0)",
+    "Range": 0,
+    "Area": 101011,
+    "Param1": 0,
+    "Param2": 0,
+    "Power": 0
+  },
+  {
+    "Id": 21001,
+    "_comment": "Weapon Attack Profile 21001 (Category: 1, Ratio: 103042, Range: 32, Angle: 173)",
+    "Range": 1,
+    "Area": 103042,
+    "Param1": 22,
+    "Param2": 32,
+    "Power": 173
+  },
+  {
+    "Id": 21002,
+    "_comment": "Weapon Attack Profile 21002 (Category: 1, Ratio: 103042, Range: 32, Angle: 173)",
+    "Range": 1,
+    "Area": 103042,
+    "Param1": 22,
+    "Param2": 32,
+    "Power": 173
+  },
+  {
+    "Id": 21003,
+    "_comment": "Weapon Attack Profile 21003 (Category: 1, Ratio: 103042, Range: 32, Angle: 173)",
+    "Range": 1,
+    "Area": 103042,
+    "Param1": 22,
+    "Param2": 32,
+    "Power": 173
+  },
+  {
+    "Id": 21004,
+    "_comment": "Weapon Attack Profile 21004 (Category: 1, Ratio: 103042, Range: 32, Angle: 173)",
+    "Range": 1,
+    "Area": 103042,
+    "Param1": 22,
+    "Param2": 32,
+    "Power": 173
+  },
+  {
+    "Id": 21005,
+    "_comment": "Weapon Attack Profile 21005 (Category: 1, Ratio: 103042, Range: 32, Angle: 173)",
+    "Range": 1,
+    "Area": 103042,
+    "Param1": 22,
+    "Param2": 32,
+    "Power": 173
+  },
+  {
+    "Id": 21006,
+    "_comment": "Weapon Attack Profile 21006 (Category: 1, Ratio: 103042, Range: 32, Angle: 173)",
+    "Range": 1,
+    "Area": 103042,
+    "Param1": 22,
+    "Param2": 32,
+    "Power": 173
+  },
+  {
+    "Id": 21007,
+    "_comment": "Weapon Attack Profile 21007 (Category: 1, Ratio: 103042, Range: 32, Angle: 173)",
+    "Range": 1,
+    "Area": 103042,
+    "Param1": 22,
+    "Param2": 32,
+    "Power": 173
+  },
+  {
+    "Id": 21008,
+    "_comment": "Weapon Attack Profile 21008 (Category: 1, Ratio: 103042, Range: 32, Angle: 173)",
+    "Range": 1,
+    "Area": 103042,
+    "Param1": 22,
+    "Param2": 32,
+    "Power": 173
+  },
+  {
+    "Id": 21009,
+    "_comment": "Weapon Attack Profile 21009 (Category: 1, Ratio: 103042, Range: 32, Angle: 173)",
+    "Range": 1,
+    "Area": 103042,
+    "Param1": 22,
+    "Param2": 32,
+    "Power": 173
+  },
+  {
+    "Id": 21010,
+    "_comment": "Weapon Attack Profile 21010 (Category: 1, Ratio: 103042, Range: 32, Angle: 173)",
+    "Range": 1,
+    "Area": 103042,
+    "Param1": 22,
+    "Param2": 32,
+    "Power": 173
+  },
+  {
+    "Id": 21011,
+    "_comment": "Weapon Attack Profile 21011 (Category: 1, Ratio: 103042, Range: 32, Angle: 173)",
+    "Range": 1,
+    "Area": 103042,
+    "Param1": 22,
+    "Param2": 32,
+    "Power": 173
+  },
+  {
+    "Id": 21012,
+    "_comment": "Weapon Attack Profile 21012 (Category: 1, Ratio: 103042, Range: 32, Angle: 173)",
+    "Range": 1,
+    "Area": 103042,
+    "Param1": 22,
+    "Param2": 32,
+    "Power": 173
+  },
+  {
+    "Id": 21013,
+    "_comment": "Weapon Attack Profile 21013 (Category: 1, Ratio: 103042, Range: 32, Angle: 173)",
+    "Range": 1,
+    "Area": 103042,
+    "Param1": 22,
+    "Param2": 32,
+    "Power": 173
+  },
+  {
+    "Id": 21014,
+    "_comment": "Weapon Attack Profile 21014 (Category: 1, Ratio: 103042, Range: 32, Angle: 173)",
+    "Range": 1,
+    "Area": 103042,
+    "Param1": 22,
+    "Param2": 32,
+    "Power": 173
+  },
+  {
+    "Id": 21015,
+    "_comment": "Weapon Attack Profile 21015 (Category: 1, Ratio: 103042, Range: 32, Angle: 173)",
+    "Range": 1,
+    "Area": 103042,
+    "Param1": 22,
+    "Param2": 32,
+    "Power": 173
+  },
+  {
+    "Id": 21016,
+    "_comment": "Weapon Attack Profile 21016 (Category: 1, Ratio: 103042, Range: 32, Angle: 173)",
+    "Range": 1,
+    "Area": 103042,
+    "Param1": 22,
+    "Param2": 32,
+    "Power": 173
+  },
+  {
+    "Id": 21017,
+    "_comment": "Weapon Attack Profile 21017 (Category: 1, Ratio: 103042, Range: 32, Angle: 173)",
+    "Range": 1,
+    "Area": 103042,
+    "Param1": 22,
+    "Param2": 32,
+    "Power": 173
+  },
+  {
+    "Id": 21018,
+    "_comment": "Weapon Attack Profile 21018 (Category: 1, Ratio: 103042, Range: 32, Angle: 173)",
+    "Range": 1,
+    "Area": 103042,
+    "Param1": 22,
+    "Param2": 32,
+    "Power": 173
+  },
+  {
+    "Id": 21019,
+    "_comment": "Weapon Attack Profile 21019 (Category: 1, Ratio: 103042, Range: 32, Angle: 173)",
+    "Range": 1,
+    "Area": 103042,
+    "Param1": 22,
+    "Param2": 32,
+    "Power": 173
+  },
+  {
+    "Id": 21020,
+    "_comment": "Weapon Attack Profile 21020 (Category: 1, Ratio: 103042, Range: 32, Angle: 173)",
+    "Range": 1,
+    "Area": 103042,
+    "Param1": 22,
+    "Param2": 32,
+    "Power": 173
+  },
+  {
+    "Id": 21021,
+    "_comment": "Weapon Attack Profile 21021 (Category: 1, Ratio: 103042, Range: 32, Angle: 173)",
+    "Range": 1,
+    "Area": 103042,
+    "Param1": 22,
+    "Param2": 32,
+    "Power": 173
+  },
+  {
+    "Id": 21022,
+    "_comment": "Weapon Attack Profile 21022 (Category: 1, Ratio: 103042, Range: 32, Angle: 173)",
+    "Range": 1,
+    "Area": 103042,
+    "Param1": 22,
+    "Param2": 32,
+    "Power": 173
+  },
+  {
+    "Id": 21023,
+    "_comment": "Weapon Attack Profile 21023 (Category: 1, Ratio: 103042, Range: 32, Angle: 173)",
+    "Range": 1,
+    "Area": 103042,
+    "Param1": 22,
+    "Param2": 32,
+    "Power": 173
+  },
+  {
+    "Id": 21024,
+    "_comment": "Weapon Attack Profile 21024 (Category: 1, Ratio: 103042, Range: 32, Angle: 173)",
+    "Range": 1,
+    "Area": 103042,
+    "Param1": 22,
+    "Param2": 32,
+    "Power": 173
+  },
+  {
+    "Id": 21025,
+    "_comment": "Weapon Attack Profile 21025 (Category: 1, Ratio: 103042, Range: 32, Angle: 173)",
+    "Range": 1,
+    "Area": 103042,
+    "Param1": 22,
+    "Param2": 32,
+    "Power": 173
+  },
+  {
+    "Id": 21026,
+    "_comment": "Weapon Attack Profile 21026 (Category: 1, Ratio: 103042, Range: 32, Angle: 173)",
+    "Range": 1,
+    "Area": 103042,
+    "Param1": 22,
+    "Param2": 32,
+    "Power": 173
+  },
+  {
+    "Id": 21027,
+    "_comment": "Weapon Attack Profile 21027 (Category: 1, Ratio: 103042, Range: 32, Angle: 173)",
+    "Range": 1,
+    "Area": 103042,
+    "Param1": 22,
+    "Param2": 32,
+    "Power": 173
+  },
+  {
+    "Id": 21028,
+    "_comment": "Weapon Attack Profile 21028 (Category: 1, Ratio: 103042, Range: 32, Angle: 173)",
+    "Range": 1,
+    "Area": 103042,
+    "Param1": 22,
+    "Param2": 32,
+    "Power": 173
+  },
+  {
+    "Id": 21029,
+    "_comment": "Weapon Attack Profile 21029 (Category: 1, Ratio: 103042, Range: 32, Angle: 173)",
+    "Range": 1,
+    "Area": 103042,
+    "Param1": 22,
+    "Param2": 32,
+    "Power": 173
+  },
+  {
+    "Id": 21030,
+    "_comment": "Weapon Attack Profile 21030 (Category: 1, Ratio: 103042, Range: 32, Angle: 173)",
+    "Range": 1,
+    "Area": 103042,
+    "Param1": 22,
+    "Param2": 32,
+    "Power": 173
+  },
+  {
+    "Id": 21031,
+    "_comment": "Weapon Attack Profile 21031 (Category: 2, Ratio: 103042, Range: 32, Angle: 0)",
+    "Range": 2,
+    "Area": 103042,
+    "Param1": 9,
+    "Param2": 32,
+    "Power": 0
+  },
+  {
+    "Id": 21032,
+    "_comment": "Weapon Attack Profile 21032 (Category: 2, Ratio: 103042, Range: 32, Angle: 0)",
+    "Range": 2,
+    "Area": 103042,
+    "Param1": 9,
+    "Param2": 32,
+    "Power": 0
+  },
+  {
+    "Id": 21033,
+    "_comment": "Weapon Attack Profile 21033 (Category: 2, Ratio: 103042, Range: 32, Angle: 0)",
+    "Range": 2,
+    "Area": 103042,
+    "Param1": 9,
+    "Param2": 32,
+    "Power": 0
+  },
+  {
+    "Id": 21034,
+    "_comment": "Weapon Attack Profile 21034 (Category: 2, Ratio: 103042, Range: 32, Angle: 0)",
+    "Range": 2,
+    "Area": 103042,
+    "Param1": 9,
+    "Param2": 32,
+    "Power": 0
+  },
+  {
+    "Id": 21035,
+    "_comment": "Weapon Attack Profile 21035 (Category: 2, Ratio: 103042, Range: 32, Angle: 0)",
+    "Range": 2,
+    "Area": 103042,
+    "Param1": 9,
+    "Param2": 32,
+    "Power": 0
+  },
+  {
+    "Id": 21036,
+    "_comment": "Weapon Attack Profile 21036 (Category: 2, Ratio: 103042, Range: 32, Angle: 0)",
+    "Range": 2,
+    "Area": 103042,
+    "Param1": 9,
+    "Param2": 32,
+    "Power": 0
+  },
+  {
+    "Id": 21037,
+    "_comment": "Weapon Attack Profile 21037 (Category: 2, Ratio: 103042, Range: 32, Angle: 0)",
+    "Range": 2,
+    "Area": 103042,
+    "Param1": 9,
+    "Param2": 32,
+    "Power": 0
+  },
+  {
+    "Id": 21038,
+    "_comment": "Weapon Attack Profile 21038 (Category: 2, Ratio: 103042, Range: 32, Angle: 0)",
+    "Range": 2,
+    "Area": 103042,
+    "Param1": 9,
+    "Param2": 32,
+    "Power": 0
+  },
+  {
+    "Id": 21039,
+    "_comment": "Weapon Attack Profile 21039 (Category: 2, Ratio: 103042, Range: 32, Angle: 0)",
+    "Range": 2,
+    "Area": 103042,
+    "Param1": 9,
+    "Param2": 32,
+    "Power": 0
+  },
+  {
+    "Id": 21040,
+    "_comment": "Weapon Attack Profile 21040 (Category: 2, Ratio: 103042, Range: 32, Angle: 0)",
+    "Range": 2,
+    "Area": 103042,
+    "Param1": 9,
+    "Param2": 32,
+    "Power": 0
+  },
+  {
+    "Id": 21041,
+    "_comment": "Weapon Attack Profile 21041 (Category: 2, Ratio: 103042, Range: 32, Angle: 0)",
+    "Range": 2,
+    "Area": 103042,
+    "Param1": 9,
+    "Param2": 32,
+    "Power": 0
+  },
+  {
+    "Id": 21042,
+    "_comment": "Weapon Attack Profile 21042 (Category: 2, Ratio: 103042, Range: 32, Angle: 0)",
+    "Range": 2,
+    "Area": 103042,
+    "Param1": 9,
+    "Param2": 32,
+    "Power": 0
+  },
+  {
+    "Id": 21043,
+    "_comment": "Weapon Attack Profile 21043 (Category: 2, Ratio: 103042, Range: 32, Angle: 0)",
+    "Range": 2,
+    "Area": 103042,
+    "Param1": 9,
+    "Param2": 32,
+    "Power": 0
+  },
+  {
+    "Id": 21044,
+    "_comment": "Weapon Attack Profile 21044 (Category: 2, Ratio: 103042, Range: 32, Angle: 0)",
+    "Range": 2,
+    "Area": 103042,
+    "Param1": 9,
+    "Param2": 32,
+    "Power": 0
+  },
+  {
+    "Id": 21045,
+    "_comment": "Weapon Attack Profile 21045 (Category: 2, Ratio: 103042, Range: 32, Angle: 0)",
+    "Range": 2,
+    "Area": 103042,
+    "Param1": 9,
+    "Param2": 32,
+    "Power": 0
+  },
+  {
+    "Id": 21046,
+    "_comment": "Weapon Attack Profile 21046 (Category: 2, Ratio: 103042, Range: 32, Angle: 0)",
+    "Range": 2,
+    "Area": 103042,
+    "Param1": 9,
+    "Param2": 32,
+    "Power": 0
+  },
+  {
+    "Id": 21047,
+    "_comment": "Weapon Attack Profile 21047 (Category: 2, Ratio: 103042, Range: 32, Angle: 0)",
+    "Range": 2,
+    "Area": 103042,
+    "Param1": 9,
+    "Param2": 32,
+    "Power": 0
+  },
+  {
+    "Id": 21048,
+    "_comment": "Weapon Attack Profile 21048 (Category: 2, Ratio: 103042, Range: 32, Angle: 0)",
+    "Range": 2,
+    "Area": 103042,
+    "Param1": 9,
+    "Param2": 32,
+    "Power": 0
+  },
+  {
+    "Id": 21049,
+    "_comment": "Weapon Attack Profile 21049 (Category: 2, Ratio: 103042, Range: 32, Angle: 0)",
+    "Range": 2,
+    "Area": 103042,
+    "Param1": 9,
+    "Param2": 32,
+    "Power": 0
+  },
+  {
+    "Id": 21050,
+    "_comment": "Weapon Attack Profile 21050 (Category: 2, Ratio: 103042, Range: 32, Angle: 0)",
+    "Range": 2,
+    "Area": 103042,
+    "Param1": 9,
+    "Param2": 32,
+    "Power": 0
+  },
+  {
+    "Id": 21051,
+    "_comment": "Weapon Attack Profile 21051 (Category: 0, Ratio: 101011, Range: 32, Angle: 0)",
+    "Range": 0,
+    "Area": 101011,
+    "Param1": 1,
+    "Param2": 32,
+    "Power": 0
+  },
+  {
+    "Id": 21052,
+    "_comment": "Weapon Attack Profile 21052 (Category: 0, Ratio: 101011, Range: 32, Angle: 0)",
+    "Range": 0,
+    "Area": 101011,
+    "Param1": 1,
+    "Param2": 32,
+    "Power": 0
+  },
+  {
+    "Id": 21053,
+    "_comment": "Weapon Attack Profile 21053 (Category: 0, Ratio: 101011, Range: 32, Angle: 0)",
+    "Range": 0,
+    "Area": 101011,
+    "Param1": 1,
+    "Param2": 32,
+    "Power": 0
+  },
+  {
+    "Id": 21054,
+    "_comment": "Weapon Attack Profile 21054 (Category: 0, Ratio: 101011, Range: 32, Angle: 0)",
+    "Range": 0,
+    "Area": 101011,
+    "Param1": 1,
+    "Param2": 32,
+    "Power": 0
+  },
+  {
+    "Id": 21055,
+    "_comment": "Weapon Attack Profile 21055 (Category: 0, Ratio: 101011, Range: 32, Angle: 0)",
+    "Range": 0,
+    "Area": 101011,
+    "Param1": 1,
+    "Param2": 32,
+    "Power": 0
+  },
+  {
+    "Id": 21056,
+    "_comment": "Weapon Attack Profile 21056 (Category: 0, Ratio: 101011, Range: 32, Angle: 0)",
+    "Range": 0,
+    "Area": 101011,
+    "Param1": 1,
+    "Param2": 32,
+    "Power": 0
+  },
+  {
+    "Id": 21057,
+    "_comment": "Weapon Attack Profile 21057 (Category: 0, Ratio: 101011, Range: 32, Angle: 0)",
+    "Range": 0,
+    "Area": 101011,
+    "Param1": 1,
+    "Param2": 32,
+    "Power": 0
+  },
+  {
+    "Id": 21058,
+    "_comment": "Weapon Attack Profile 21058 (Category: 0, Ratio: 101011, Range: 32, Angle: 0)",
+    "Range": 0,
+    "Area": 101011,
+    "Param1": 1,
+    "Param2": 32,
+    "Power": 0
+  },
+  {
+    "Id": 21059,
+    "_comment": "Weapon Attack Profile 21059 (Category: 0, Ratio: 101011, Range: 32, Angle: 0)",
+    "Range": 0,
+    "Area": 101011,
+    "Param1": 1,
+    "Param2": 32,
+    "Power": 0
+  },
+  {
+    "Id": 21060,
+    "_comment": "Weapon Attack Profile 21060 (Category: 0, Ratio: 101011, Range: 32, Angle: 0)",
+    "Range": 0,
+    "Area": 101011,
+    "Param1": 1,
+    "Param2": 32,
+    "Power": 0
+  },
+  {
+    "Id": 21091,
+    "_comment": "Weapon Attack Profile 21091 (Category: 0, Ratio: 101011, Range: 0, Angle: 0)",
+    "Range": 0,
+    "Area": 101011,
+    "Param1": 0,
+    "Param2": 0,
+    "Power": 0
+  },
+  {
+    "Id": 21092,
+    "_comment": "Weapon Attack Profile 21092 (Category: 0, Ratio: 101011, Range: 0, Angle: 0)",
+    "Range": 0,
+    "Area": 101011,
+    "Param1": 0,
+    "Param2": 0,
+    "Power": 0
+  },
+  {
+    "Id": 21093,
+    "_comment": "Weapon Attack Profile 21093 (Category: 0, Ratio: 101011, Range: 0, Angle: 0)",
+    "Range": 0,
+    "Area": 101011,
+    "Param1": 0,
+    "Param2": 0,
+    "Power": 0
+  },
+  {
+    "Id": 21094,
+    "_comment": "Weapon Attack Profile 21094 (Category: 0, Ratio: 101011, Range: 0, Angle: 0)",
+    "Range": 0,
+    "Area": 101011,
+    "Param1": 0,
+    "Param2": 0,
+    "Power": 0
+  },
+  {
+    "Id": 21095,
+    "_comment": "Weapon Attack Profile 21095 (Category: 0, Ratio: 101011, Range: 0, Angle: 0)",
+    "Range": 0,
+    "Area": 101011,
+    "Param1": 0,
+    "Param2": 0,
+    "Power": 0
+  },
+  {
+    "Id": 21096,
+    "_comment": "Weapon Attack Profile 21096 (Category: 0, Ratio: 101011, Range: 0, Angle: 0)",
+    "Range": 0,
+    "Area": 101011,
+    "Param1": 0,
+    "Param2": 0,
+    "Power": 0
+  },
+  {
+    "Id": 21097,
+    "_comment": "Weapon Attack Profile 21097 (Category: 0, Ratio: 101011, Range: 0, Angle: 0)",
+    "Range": 0,
+    "Area": 101011,
+    "Param1": 0,
+    "Param2": 0,
+    "Power": 0
+  },
+  {
+    "Id": 21098,
+    "_comment": "Weapon Attack Profile 21098 (Category: 0, Ratio: 101011, Range: 0, Angle: 0)",
+    "Range": 0,
+    "Area": 101011,
+    "Param1": 0,
+    "Param2": 0,
+    "Power": 0
+  },
+  {
+    "Id": 21099,
+    "_comment": "Weapon Attack Profile 21099 (Category: 0, Ratio: 101011, Range: 0, Angle: 0)",
+    "Range": 0,
+    "Area": 101011,
+    "Param1": 0,
+    "Param2": 0,
+    "Power": 0
+  },
+  {
+    "Id": 21100,
+    "_comment": "Weapon Attack Profile 21100 (Category: 0, Ratio: 101011, Range: 0, Angle: 0)",
+    "Range": 0,
+    "Area": 101011,
+    "Param1": 0,
+    "Param2": 0,
+    "Power": 0
+  },
+  {
+    "Id": 21101,
+    "_comment": "Weapon Attack Profile 21101 (Category: 0, Ratio: 101011, Range: 0, Angle: 0)",
+    "Range": 0,
+    "Area": 101011,
+    "Param1": 0,
+    "Param2": 0,
+    "Power": 0
+  },
+  {
+    "Id": 21102,
+    "_comment": "Weapon Attack Profile 21102 (Category: 0, Ratio: 101011, Range: 0, Angle: 0)",
+    "Range": 0,
+    "Area": 101011,
+    "Param1": 0,
+    "Param2": 0,
+    "Power": 0
+  },
+  {
+    "Id": 21103,
+    "_comment": "Weapon Attack Profile 21103 (Category: 0, Ratio: 101011, Range: 0, Angle: 0)",
+    "Range": 0,
+    "Area": 101011,
+    "Param1": 0,
+    "Param2": 0,
+    "Power": 0
+  },
+  {
+    "Id": 21104,
+    "_comment": "Weapon Attack Profile 21104 (Category: 0, Ratio: 101011, Range: 0, Angle: 0)",
+    "Range": 0,
+    "Area": 101011,
+    "Param1": 0,
+    "Param2": 0,
+    "Power": 0
+  },
+  {
+    "Id": 21105,
+    "_comment": "Weapon Attack Profile 21105 (Category: 0, Ratio: 101011, Range: 0, Angle: 0)",
+    "Range": 0,
+    "Area": 101011,
+    "Param1": 0,
+    "Param2": 0,
+    "Power": 0
+  },
+  {
+    "Id": 21106,
+    "_comment": "Weapon Attack Profile 21106 (Category: 0, Ratio: 101011, Range: 0, Angle: 0)",
+    "Range": 0,
+    "Area": 101011,
+    "Param1": 0,
+    "Param2": 0,
+    "Power": 0
+  },
+  {
+    "Id": 21107,
+    "_comment": "Weapon Attack Profile 21107 (Category: 0, Ratio: 101011, Range: 0, Angle: 0)",
+    "Range": 0,
+    "Area": 101011,
+    "Param1": 0,
+    "Param2": 0,
+    "Power": 0
+  },
+  {
+    "Id": 21108,
+    "_comment": "Weapon Attack Profile 21108 (Category: 0, Ratio: 101011, Range: 0, Angle: 0)",
+    "Range": 0,
+    "Area": 101011,
+    "Param1": 0,
+    "Param2": 0,
+    "Power": 0
+  },
+  {
+    "Id": 21109,
+    "_comment": "Weapon Attack Profile 21109 (Category: 0, Ratio: 101011, Range: 0, Angle: 0)",
+    "Range": 0,
+    "Area": 101011,
+    "Param1": 0,
+    "Param2": 0,
+    "Power": 0
+  },
+  {
+    "Id": 21110,
+    "_comment": "Weapon Attack Profile 21110 (Category: 0, Ratio: 101011, Range: 0, Angle: 0)",
+    "Range": 0,
+    "Area": 101011,
+    "Param1": 0,
+    "Param2": 0,
+    "Power": 0
+  },
+  {
+    "Id": 21111,
+    "_comment": "Weapon Attack Profile 21111 (Category: 0, Ratio: 101011, Range: 0, Angle: 0)",
+    "Range": 0,
+    "Area": 101011,
+    "Param1": 0,
+    "Param2": 0,
+    "Power": 0
+  },
+  {
+    "Id": 21112,
+    "_comment": "Weapon Attack Profile 21112 (Category: 0, Ratio: 101011, Range: 0, Angle: 0)",
+    "Range": 0,
+    "Area": 101011,
+    "Param1": 0,
+    "Param2": 0,
+    "Power": 0
+  },
+  {
+    "Id": 21113,
+    "_comment": "Weapon Attack Profile 21113 (Category: 0, Ratio: 101011, Range: 0, Angle: 0)",
+    "Range": 0,
+    "Area": 101011,
+    "Param1": 0,
+    "Param2": 0,
+    "Power": 0
+  },
+  {
+    "Id": 21114,
+    "_comment": "Weapon Attack Profile 21114 (Category: 0, Ratio: 101011, Range: 0, Angle: 0)",
+    "Range": 0,
+    "Area": 101011,
+    "Param1": 0,
+    "Param2": 0,
+    "Power": 0
+  },
+  {
+    "Id": 21115,
+    "_comment": "Weapon Attack Profile 21115 (Category: 0, Ratio: 101011, Range: 0, Angle: 0)",
+    "Range": 0,
+    "Area": 101011,
+    "Param1": 0,
+    "Param2": 0,
+    "Power": 0
+  },
+  {
+    "Id": 21116,
+    "_comment": "Weapon Attack Profile 21116 (Category: 0, Ratio: 101011, Range: 0, Angle: 0)",
+    "Range": 0,
+    "Area": 101011,
+    "Param1": 0,
+    "Param2": 0,
+    "Power": 0
+  },
+  {
+    "Id": 21117,
+    "_comment": "Weapon Attack Profile 21117 (Category: 0, Ratio: 101011, Range: 0, Angle: 0)",
+    "Range": 0,
+    "Area": 101011,
+    "Param1": 0,
+    "Param2": 0,
+    "Power": 0
+  },
+  {
+    "Id": 21118,
+    "_comment": "Weapon Attack Profile 21118 (Category: 0, Ratio: 101011, Range: 0, Angle: 0)",
+    "Range": 0,
+    "Area": 101011,
+    "Param1": 0,
+    "Param2": 0,
+    "Power": 0
+  },
+  {
+    "Id": 21119,
+    "_comment": "Weapon Attack Profile 21119 (Category: 0, Ratio: 101011, Range: 0, Angle: 0)",
+    "Range": 0,
+    "Area": 101011,
+    "Param1": 0,
+    "Param2": 0,
+    "Power": 0
+  },
+  {
+    "Id": 21120,
+    "_comment": "Weapon Attack Profile 21120 (Category: 0, Ratio: 101011, Range: 0, Angle: 0)",
+    "Range": 0,
+    "Area": 101011,
+    "Param1": 0,
+    "Param2": 0,
+    "Power": 0
+  },
+  {
+    "Id": 81001,
+    "_comment": "Weapon Attack Profile 81001 (Category: 3, Ratio: 115092, Range: 32, Angle: 152)",
+    "Range": 3,
+    "Area": 115092,
+    "Param1": 22,
+    "Param2": 32,
+    "Power": 152
+  },
+  {
+    "Id": 81002,
+    "_comment": "Weapon Attack Profile 81002 (Category: 3, Ratio: 115092, Range: 32, Angle: 152)",
+    "Range": 3,
+    "Area": 115092,
+    "Param1": 22,
+    "Param2": 32,
+    "Power": 152
+  },
+  {
+    "Id": 81003,
+    "_comment": "Weapon Attack Profile 81003 (Category: 3, Ratio: 115092, Range: 32, Angle: 152)",
+    "Range": 3,
+    "Area": 115092,
+    "Param1": 22,
+    "Param2": 32,
+    "Power": 152
+  },
+  {
+    "Id": 81004,
+    "_comment": "Weapon Attack Profile 81004 (Category: 3, Ratio: 115092, Range: 32, Angle: 152)",
+    "Range": 3,
+    "Area": 115092,
+    "Param1": 22,
+    "Param2": 32,
+    "Power": 152
+  },
+  {
+    "Id": 81005,
+    "_comment": "Weapon Attack Profile 81005 (Category: 3, Ratio: 115092, Range: 32, Angle: 152)",
+    "Range": 3,
+    "Area": 115092,
+    "Param1": 22,
+    "Param2": 32,
+    "Power": 152
+  },
+  {
+    "Id": 81006,
+    "_comment": "Weapon Attack Profile 81006 (Category: 3, Ratio: 115092, Range: 32, Angle: 152)",
+    "Range": 3,
+    "Area": 115092,
+    "Param1": 22,
+    "Param2": 32,
+    "Power": 152
+  },
+  {
+    "Id": 81007,
+    "_comment": "Weapon Attack Profile 81007 (Category: 3, Ratio: 115092, Range: 32, Angle: 152)",
+    "Range": 3,
+    "Area": 115092,
+    "Param1": 22,
+    "Param2": 32,
+    "Power": 152
+  },
+  {
+    "Id": 81008,
+    "_comment": "Weapon Attack Profile 81008 (Category: 3, Ratio: 115092, Range: 32, Angle: 152)",
+    "Range": 3,
+    "Area": 115092,
+    "Param1": 22,
+    "Param2": 32,
+    "Power": 152
+  },
+  {
+    "Id": 81009,
+    "_comment": "Weapon Attack Profile 81009 (Category: 3, Ratio: 115092, Range: 32, Angle: 152)",
+    "Range": 3,
+    "Area": 115092,
+    "Param1": 22,
+    "Param2": 32,
+    "Power": 152
+  },
+  {
+    "Id": 81010,
+    "_comment": "Weapon Attack Profile 81010 (Category: 3, Ratio: 115092, Range: 32, Angle: 152)",
+    "Range": 3,
+    "Area": 115092,
+    "Param1": 22,
+    "Param2": 32,
+    "Power": 152
+  },
+  {
+    "Id": 81011,
+    "_comment": "Weapon Attack Profile 81011 (Category: 3, Ratio: 115092, Range: 32, Angle: 152)",
+    "Range": 3,
+    "Area": 115092,
+    "Param1": 22,
+    "Param2": 32,
+    "Power": 152
+  },
+  {
+    "Id": 81012,
+    "_comment": "Weapon Attack Profile 81012 (Category: 3, Ratio: 115092, Range: 32, Angle: 152)",
+    "Range": 3,
+    "Area": 115092,
+    "Param1": 22,
+    "Param2": 32,
+    "Power": 152
+  },
+  {
+    "Id": 81013,
+    "_comment": "Weapon Attack Profile 81013 (Category: 3, Ratio: 115092, Range: 32, Angle: 152)",
+    "Range": 3,
+    "Area": 115092,
+    "Param1": 22,
+    "Param2": 32,
+    "Power": 152
+  },
+  {
+    "Id": 81014,
+    "_comment": "Weapon Attack Profile 81014 (Category: 3, Ratio: 115092, Range: 32, Angle: 152)",
+    "Range": 3,
+    "Area": 115092,
+    "Param1": 22,
+    "Param2": 32,
+    "Power": 152
+  },
+  {
+    "Id": 81015,
+    "_comment": "Weapon Attack Profile 81015 (Category: 3, Ratio: 115092, Range: 32, Angle: 152)",
+    "Range": 3,
+    "Area": 115092,
+    "Param1": 22,
+    "Param2": 32,
+    "Power": 152
+  },
+  {
+    "Id": 81016,
+    "_comment": "Weapon Attack Profile 81016 (Category: 3, Ratio: 115092, Range: 32, Angle: 152)",
+    "Range": 3,
+    "Area": 115092,
+    "Param1": 22,
+    "Param2": 32,
+    "Power": 152
+  },
+  {
+    "Id": 81017,
+    "_comment": "Weapon Attack Profile 81017 (Category: 3, Ratio: 115092, Range: 32, Angle: 152)",
+    "Range": 3,
+    "Area": 115092,
+    "Param1": 22,
+    "Param2": 32,
+    "Power": 152
+  },
+  {
+    "Id": 81018,
+    "_comment": "Weapon Attack Profile 81018 (Category: 3, Ratio: 115092, Range: 32, Angle: 152)",
+    "Range": 3,
+    "Area": 115092,
+    "Param1": 22,
+    "Param2": 32,
+    "Power": 152
+  },
+  {
+    "Id": 81019,
+    "_comment": "Weapon Attack Profile 81019 (Category: 3, Ratio: 115092, Range: 32, Angle: 152)",
+    "Range": 3,
+    "Area": 115092,
+    "Param1": 22,
+    "Param2": 32,
+    "Power": 152
+  },
+  {
+    "Id": 81020,
+    "_comment": "Weapon Attack Profile 81020 (Category: 3, Ratio: 115092, Range: 32, Angle: 152)",
+    "Range": 3,
+    "Area": 115092,
+    "Param1": 22,
+    "Param2": 32,
+    "Power": 152
+  },
+  {
+    "Id": 81021,
+    "_comment": "Weapon Attack Profile 81021 (Category: 3, Ratio: 115092, Range: 32, Angle: 0)",
+    "Range": 3,
+    "Area": 115092,
+    "Param1": 9,
+    "Param2": 32,
+    "Power": 0
+  },
+  {
+    "Id": 81022,
+    "_comment": "Weapon Attack Profile 81022 (Category: 3, Ratio: 115092, Range: 32, Angle: 0)",
+    "Range": 3,
+    "Area": 115092,
+    "Param1": 9,
+    "Param2": 32,
+    "Power": 0
+  },
+  {
+    "Id": 81023,
+    "_comment": "Weapon Attack Profile 81023 (Category: 3, Ratio: 115092, Range: 32, Angle: 0)",
+    "Range": 3,
+    "Area": 115092,
+    "Param1": 9,
+    "Param2": 32,
+    "Power": 0
+  },
+  {
+    "Id": 81024,
+    "_comment": "Weapon Attack Profile 81024 (Category: 3, Ratio: 115092, Range: 32, Angle: 0)",
+    "Range": 3,
+    "Area": 115092,
+    "Param1": 9,
+    "Param2": 32,
+    "Power": 0
+  },
+  {
+    "Id": 81025,
+    "_comment": "Weapon Attack Profile 81025 (Category: 3, Ratio: 115092, Range: 32, Angle: 0)",
+    "Range": 3,
+    "Area": 115092,
+    "Param1": 9,
+    "Param2": 32,
+    "Power": 0
+  },
+  {
+    "Id": 81026,
+    "_comment": "Weapon Attack Profile 81026 (Category: 3, Ratio: 115092, Range: 32, Angle: 0)",
+    "Range": 3,
+    "Area": 115092,
+    "Param1": 9,
+    "Param2": 32,
+    "Power": 0
+  },
+  {
+    "Id": 81027,
+    "_comment": "Weapon Attack Profile 81027 (Category: 3, Ratio: 115092, Range: 32, Angle: 0)",
+    "Range": 3,
+    "Area": 115092,
+    "Param1": 9,
+    "Param2": 32,
+    "Power": 0
+  },
+  {
+    "Id": 81028,
+    "_comment": "Weapon Attack Profile 81028 (Category: 3, Ratio: 115092, Range: 32, Angle: 0)",
+    "Range": 3,
+    "Area": 115092,
+    "Param1": 9,
+    "Param2": 32,
+    "Power": 0
+  },
+  {
+    "Id": 81029,
+    "_comment": "Weapon Attack Profile 81029 (Category: 3, Ratio: 115092, Range: 32, Angle: 0)",
+    "Range": 3,
+    "Area": 115092,
+    "Param1": 9,
+    "Param2": 32,
+    "Power": 0
+  },
+  {
+    "Id": 81030,
+    "_comment": "Weapon Attack Profile 81030 (Category: 3, Ratio: 115092, Range: 32, Angle: 0)",
+    "Range": 3,
+    "Area": 115092,
+    "Param1": 9,
+    "Param2": 32,
+    "Power": 0
+  },
+  {
+    "Id": 81031,
+    "_comment": "Weapon Attack Profile 81031 (Category: 3, Ratio: 115092, Range: 32, Angle: 0)",
+    "Range": 3,
+    "Area": 115092,
+    "Param1": 9,
+    "Param2": 32,
+    "Power": 0
+  },
+  {
+    "Id": 81032,
+    "_comment": "Weapon Attack Profile 81032 (Category: 3, Ratio: 115092, Range: 32, Angle: 0)",
+    "Range": 3,
+    "Area": 115092,
+    "Param1": 9,
+    "Param2": 32,
+    "Power": 0
+  },
+  {
+    "Id": 81033,
+    "_comment": "Weapon Attack Profile 81033 (Category: 3, Ratio: 115092, Range: 32, Angle: 0)",
+    "Range": 3,
+    "Area": 115092,
+    "Param1": 9,
+    "Param2": 32,
+    "Power": 0
+  },
+  {
+    "Id": 81034,
+    "_comment": "Weapon Attack Profile 81034 (Category: 3, Ratio: 115092, Range: 32, Angle: 0)",
+    "Range": 3,
+    "Area": 115092,
+    "Param1": 9,
+    "Param2": 32,
+    "Power": 0
+  },
+  {
+    "Id": 81035,
+    "_comment": "Weapon Attack Profile 81035 (Category: 3, Ratio: 115092, Range: 32, Angle: 0)",
+    "Range": 3,
+    "Area": 115092,
+    "Param1": 9,
+    "Param2": 32,
+    "Power": 0
+  },
+  {
+    "Id": 81036,
+    "_comment": "Weapon Attack Profile 81036 (Category: 3, Ratio: 115092, Range: 32, Angle: 0)",
+    "Range": 3,
+    "Area": 115092,
+    "Param1": 9,
+    "Param2": 32,
+    "Power": 0
+  },
+  {
+    "Id": 81037,
+    "_comment": "Weapon Attack Profile 81037 (Category: 3, Ratio: 115092, Range: 32, Angle: 0)",
+    "Range": 3,
+    "Area": 115092,
+    "Param1": 9,
+    "Param2": 32,
+    "Power": 0
+  },
+  {
+    "Id": 81038,
+    "_comment": "Weapon Attack Profile 81038 (Category: 3, Ratio: 115092, Range: 32, Angle: 0)",
+    "Range": 3,
+    "Area": 115092,
+    "Param1": 9,
+    "Param2": 32,
+    "Power": 0
+  },
+  {
+    "Id": 81039,
+    "_comment": "Weapon Attack Profile 81039 (Category: 3, Ratio: 115092, Range: 32, Angle: 0)",
+    "Range": 3,
+    "Area": 115092,
+    "Param1": 9,
+    "Param2": 32,
+    "Power": 0
+  },
+  {
+    "Id": 81040,
+    "_comment": "Weapon Attack Profile 81040 (Category: 3, Ratio: 115092, Range: 32, Angle: 0)",
+    "Range": 3,
+    "Area": 115092,
+    "Param1": 9,
+    "Param2": 32,
+    "Power": 0
+  },
+  {
+    "Id": 81041,
+    "_comment": "Weapon Attack Profile 81041 (Category: 3, Ratio: 115092, Range: 32, Angle: 0)",
+    "Range": 3,
+    "Area": 115092,
+    "Param1": 9,
+    "Param2": 32,
+    "Power": 0
+  },
+  {
+    "Id": 81042,
+    "_comment": "Weapon Attack Profile 81042 (Category: 3, Ratio: 115092, Range: 32, Angle: 0)",
+    "Range": 3,
+    "Area": 115092,
+    "Param1": 9,
+    "Param2": 32,
+    "Power": 0
+  },
+  {
+    "Id": 81043,
+    "_comment": "Weapon Attack Profile 81043 (Category: 3, Ratio: 115092, Range: 32, Angle: 0)",
+    "Range": 3,
+    "Area": 115092,
+    "Param1": 9,
+    "Param2": 32,
+    "Power": 0
+  },
+  {
+    "Id": 81044,
+    "_comment": "Weapon Attack Profile 81044 (Category: 3, Ratio: 115092, Range: 32, Angle: 0)",
+    "Range": 3,
+    "Area": 115092,
+    "Param1": 9,
+    "Param2": 32,
+    "Power": 0
+  },
+  {
+    "Id": 81045,
+    "_comment": "Weapon Attack Profile 81045 (Category: 3, Ratio: 115092, Range: 32, Angle: 0)",
+    "Range": 3,
+    "Area": 115092,
+    "Param1": 9,
+    "Param2": 32,
+    "Power": 0
+  },
+  {
+    "Id": 81046,
+    "_comment": "Weapon Attack Profile 81046 (Category: 3, Ratio: 115092, Range: 32, Angle: 0)",
+    "Range": 3,
+    "Area": 115092,
+    "Param1": 9,
+    "Param2": 32,
+    "Power": 0
+  },
+  {
+    "Id": 81047,
+    "_comment": "Weapon Attack Profile 81047 (Category: 3, Ratio: 115092, Range: 32, Angle: 0)",
+    "Range": 3,
+    "Area": 115092,
+    "Param1": 9,
+    "Param2": 32,
+    "Power": 0
+  },
+  {
+    "Id": 81048,
+    "_comment": "Weapon Attack Profile 81048 (Category: 3, Ratio: 115092, Range: 32, Angle: 0)",
+    "Range": 3,
+    "Area": 115092,
+    "Param1": 9,
+    "Param2": 32,
+    "Power": 0
+  },
+  {
+    "Id": 81049,
+    "_comment": "Weapon Attack Profile 81049 (Category: 3, Ratio: 115092, Range: 32, Angle: 0)",
+    "Range": 3,
+    "Area": 115092,
+    "Param1": 9,
+    "Param2": 32,
+    "Power": 0
+  },
+  {
+    "Id": 81050,
+    "_comment": "Weapon Attack Profile 81050 (Category: 3, Ratio: 115092, Range: 32, Angle: 0)",
+    "Range": 3,
+    "Area": 115092,
+    "Param1": 9,
+    "Param2": 32,
+    "Power": 0
+  },
+  {
+    "Id": 81121,
+    "_comment": "Weapon Attack Profile 81121 (Category: 0, Ratio: 101011, Range: 0, Angle: 0)",
+    "Range": 0,
+    "Area": 101011,
+    "Param1": 0,
+    "Param2": 0,
+    "Power": 0
+  },
+  {
+    "Id": 81122,
+    "_comment": "Weapon Attack Profile 81122 (Category: 0, Ratio: 101011, Range: 0, Angle: 0)",
+    "Range": 0,
+    "Area": 101011,
+    "Param1": 0,
+    "Param2": 0,
+    "Power": 0
+  },
+  {
+    "Id": 81123,
+    "_comment": "Weapon Attack Profile 81123 (Category: 0, Ratio: 101011, Range: 0, Angle: 0)",
+    "Range": 0,
+    "Area": 101011,
+    "Param1": 0,
+    "Param2": 0,
+    "Power": 0
+  },
+  {
+    "Id": 81124,
+    "_comment": "Weapon Attack Profile 81124 (Category: 0, Ratio: 101011, Range: 0, Angle: 0)",
+    "Range": 0,
+    "Area": 101011,
+    "Param1": 0,
+    "Param2": 0,
+    "Power": 0
+  },
+  {
+    "Id": 81125,
+    "_comment": "Weapon Attack Profile 81125 (Category: 0, Ratio: 101011, Range: 0, Angle: 0)",
+    "Range": 0,
+    "Area": 101011,
+    "Param1": 0,
+    "Param2": 0,
+    "Power": 0
+  },
+  {
+    "Id": 81126,
+    "_comment": "Weapon Attack Profile 81126 (Category: 0, Ratio: 101011, Range: 0, Angle: 0)",
+    "Range": 0,
+    "Area": 101011,
+    "Param1": 0,
+    "Param2": 0,
+    "Power": 0
+  },
+  {
+    "Id": 81127,
+    "_comment": "Weapon Attack Profile 81127 (Category: 0, Ratio: 101011, Range: 0, Angle: 0)",
+    "Range": 0,
+    "Area": 101011,
+    "Param1": 0,
+    "Param2": 0,
+    "Power": 0
+  },
+  {
+    "Id": 81128,
+    "_comment": "Weapon Attack Profile 81128 (Category: 0, Ratio: 101011, Range: 0, Angle: 0)",
+    "Range": 0,
+    "Area": 101011,
+    "Param1": 0,
+    "Param2": 0,
+    "Power": 0
+  },
+  {
+    "Id": 81129,
+    "_comment": "Weapon Attack Profile 81129 (Category: 0, Ratio: 101011, Range: 0, Angle: 0)",
+    "Range": 0,
+    "Area": 101011,
+    "Param1": 0,
+    "Param2": 0,
+    "Power": 0
+  },
+  {
+    "Id": 81130,
+    "_comment": "Weapon Attack Profile 81130 (Category: 0, Ratio: 101011, Range: 0, Angle: 0)",
+    "Range": 0,
+    "Area": 101011,
+    "Param1": 0,
+    "Param2": 0,
+    "Power": 0
+  },
+  {
+    "Id": 81131,
+    "_comment": "Weapon Attack Profile 81131 (Category: 0, Ratio: 101011, Range: 0, Angle: 0)",
+    "Range": 0,
+    "Area": 101011,
+    "Param1": 0,
+    "Param2": 0,
+    "Power": 0
+  },
+  {
+    "Id": 81132,
+    "_comment": "Weapon Attack Profile 81132 (Category: 0, Ratio: 101011, Range: 0, Angle: 0)",
+    "Range": 0,
+    "Area": 101011,
+    "Param1": 0,
+    "Param2": 0,
+    "Power": 0
+  },
+  {
+    "Id": 81133,
+    "_comment": "Weapon Attack Profile 81133 (Category: 0, Ratio: 101011, Range: 0, Angle: 0)",
+    "Range": 0,
+    "Area": 101011,
+    "Param1": 0,
+    "Param2": 0,
+    "Power": 0
+  },
+  {
+    "Id": 81134,
+    "_comment": "Weapon Attack Profile 81134 (Category: 0, Ratio: 101011, Range: 0, Angle: 0)",
+    "Range": 0,
+    "Area": 101011,
+    "Param1": 0,
+    "Param2": 0,
+    "Power": 0
+  },
+  {
+    "Id": 81135,
+    "_comment": "Weapon Attack Profile 81135 (Category: 0, Ratio: 101011, Range: 0, Angle: 0)",
+    "Range": 0,
+    "Area": 101011,
+    "Param1": 0,
+    "Param2": 0,
+    "Power": 0
+  },
+  {
+    "Id": 81136,
+    "_comment": "Weapon Attack Profile 81136 (Category: 0, Ratio: 101011, Range: 0, Angle: 0)",
+    "Range": 0,
+    "Area": 101011,
+    "Param1": 0,
+    "Param2": 0,
+    "Power": 0
+  },
+  {
+    "Id": 81137,
+    "_comment": "Weapon Attack Profile 81137 (Category: 0, Ratio: 101011, Range: 0, Angle: 0)",
+    "Range": 0,
+    "Area": 101011,
+    "Param1": 0,
+    "Param2": 0,
+    "Power": 0
+  },
+  {
+    "Id": 81138,
+    "_comment": "Weapon Attack Profile 81138 (Category: 0, Ratio: 101011, Range: 0, Angle: 0)",
+    "Range": 0,
+    "Area": 101011,
+    "Param1": 0,
+    "Param2": 0,
+    "Power": 0
+  },
+  {
+    "Id": 81139,
+    "_comment": "Weapon Attack Profile 81139 (Category: 0, Ratio: 101011, Range: 0, Angle: 0)",
+    "Range": 0,
+    "Area": 101011,
+    "Param1": 0,
+    "Param2": 0,
+    "Power": 0
+  },
+  {
+    "Id": 81140,
+    "_comment": "Weapon Attack Profile 81140 (Category: 0, Ratio: 101011, Range: 0, Angle: 0)",
+    "Range": 0,
+    "Area": 101011,
+    "Param1": 0,
+    "Param2": 0,
+    "Power": 0
+  },
+  {
+    "Id": 20001,
+    "_comment": "Weapon Attack Profile 20001 (Category: 1, Ratio: 115092, Range: 32, Angle: 70)",
+    "Range": 1,
+    "Area": 115092,
+    "Param1": 22,
+    "Param2": 32,
+    "Power": 70
+  },
+  {
+    "Id": 20002,
+    "_comment": "Weapon Attack Profile 20002 (Category: 1, Ratio: 105062, Range: 32, Angle: 80)",
+    "Range": 1,
+    "Area": 105062,
+    "Param1": 22,
+    "Param2": 32,
+    "Power": 80
+  },
+  {
+    "Id": 20003,
+    "_comment": "Weapon Attack Profile 20003 (Category: 1, Ratio: 101011, Range: 32, Angle: 1)",
+    "Range": 1,
+    "Area": 101011,
+    "Param1": 22,
+    "Param2": 32,
+    "Power": 1
+  },
+  {
+    "Id": 20004,
+    "_comment": "Weapon Attack Profile 20004 (Category: 1, Ratio: 105062, Range: 32, Angle: 80)",
+    "Range": 1,
+    "Area": 105062,
+    "Param1": 22,
+    "Param2": 32,
+    "Power": 80
+  },
+  {
+    "Id": 20005,
+    "_comment": "Weapon Attack Profile 20005 (Category: 1, Ratio: 101011, Range: 32, Angle: 1)",
+    "Range": 1,
+    "Area": 101011,
+    "Param1": 22,
+    "Param2": 32,
+    "Power": 1
+  },
+  {
+    "Id": 20006,
+    "_comment": "Weapon Attack Profile 20006 (Category: 1, Ratio: 110062, Range: 32, Angle: 80)",
+    "Range": 1,
+    "Area": 110062,
+    "Param1": 22,
+    "Param2": 32,
+    "Power": 80
+  },
+  {
+    "Id": 20007,
+    "_comment": "Weapon Attack Profile 20007 (Category: 1, Ratio: 101011, Range: 32, Angle: 1)",
+    "Range": 1,
+    "Area": 101011,
+    "Param1": 22,
+    "Param2": 32,
+    "Power": 1
+  },
+  {
+    "Id": 20008,
+    "_comment": "Weapon Attack Profile 20008 (Category: 1, Ratio: 105062, Range: 32, Angle: 80)",
+    "Range": 1,
+    "Area": 105062,
+    "Param1": 22,
+    "Param2": 32,
+    "Power": 80
+  },
+  {
+    "Id": 20009,
+    "_comment": "Weapon Attack Profile 20009 (Category: 1, Ratio: 101011, Range: 32, Angle: 1)",
+    "Range": 1,
+    "Area": 101011,
+    "Param1": 22,
+    "Param2": 32,
+    "Power": 1
+  },
+  {
+    "Id": 20010,
+    "_comment": "Weapon Attack Profile 20010 (Category: 1, Ratio: 101011, Range: 32, Angle: 1)",
+    "Range": 1,
+    "Area": 101011,
+    "Param1": 22,
+    "Param2": 32,
+    "Power": 1
+  },
+  {
+    "Id": 20011,
+    "_comment": "Weapon Attack Profile 20011 (Category: 1, Ratio: 101011, Range: 32, Angle: 1)",
+    "Range": 1,
+    "Area": 101011,
+    "Param1": 22,
+    "Param2": 32,
+    "Power": 1
+  },
+  {
+    "Id": 20012,
+    "_comment": "Weapon Attack Profile 20012 (Category: 1, Ratio: 101011, Range: 32, Angle: 1)",
+    "Range": 1,
+    "Area": 101011,
+    "Param1": 22,
+    "Param2": 32,
+    "Power": 1
+  },
+  {
+    "Id": 20013,
+    "_comment": "Weapon Attack Profile 20013 (Category: 1, Ratio: 101011, Range: 32, Angle: 1)",
+    "Range": 1,
+    "Area": 101011,
+    "Param1": 22,
+    "Param2": 32,
+    "Power": 1
+  },
+  {
+    "Id": 20014,
+    "_comment": "Weapon Attack Profile 20014 (Category: 1, Ratio: 101011, Range: 32, Angle: 1)",
+    "Range": 1,
+    "Area": 101011,
+    "Param1": 22,
+    "Param2": 32,
+    "Power": 1
+  },
+  {
+    "Id": 20015,
+    "_comment": "Weapon Attack Profile 20015 (Category: 1, Ratio: 108104, Range: 32, Angle: 65)",
+    "Range": 1,
+    "Area": 108104,
+    "Param1": 22,
+    "Param2": 32,
+    "Power": 65
+  },
+  {
+    "Id": 20016,
+    "_comment": "Weapon Attack Profile 20016 (Category: 1, Ratio: 108104, Range: 32, Angle: 65)",
+    "Range": 1,
+    "Area": 108104,
+    "Param1": 22,
+    "Param2": 32,
+    "Power": 65
+  },
+  {
+    "Id": 20017,
+    "_comment": "Weapon Attack Profile 20017 (Category: 1, Ratio: 101011, Range: 32, Angle: 1)",
+    "Range": 1,
+    "Area": 101011,
+    "Param1": 22,
+    "Param2": 32,
+    "Power": 1
+  },
+  {
+    "Id": 20018,
+    "_comment": "Weapon Attack Profile 20018 (Category: 1, Ratio: 111082, Range: 32, Angle: 70)",
+    "Range": 1,
+    "Area": 111082,
+    "Param1": 22,
+    "Param2": 32,
+    "Power": 70
+  },
+  {
+    "Id": 20019,
+    "_comment": "Weapon Attack Profile 20019 (Category: 1, Ratio: 101011, Range: 32, Angle: 1)",
+    "Range": 1,
+    "Area": 101011,
+    "Param1": 22,
+    "Param2": 32,
+    "Power": 1
+  },
+  {
+    "Id": 20020,
+    "_comment": "Weapon Attack Profile 20020 (Category: 1, Ratio: 101011, Range: 32, Angle: 1)",
+    "Range": 1,
+    "Area": 101011,
+    "Param1": 22,
+    "Param2": 32,
+    "Power": 1
+  },
+  {
+    "Id": 20021,
+    "_comment": "Weapon Attack Profile 20021 (Category: 1, Ratio: 105062, Range: 32, Angle: 80)",
+    "Range": 1,
+    "Area": 105062,
+    "Param1": 22,
+    "Param2": 32,
+    "Power": 80
+  },
+  {
+    "Id": 20022,
+    "_comment": "Weapon Attack Profile 20022 (Category: 1, Ratio: 101011, Range: 32, Angle: 1)",
+    "Range": 1,
+    "Area": 101011,
+    "Param1": 22,
+    "Param2": 32,
+    "Power": 1
+  },
+  {
+    "Id": 20023,
+    "_comment": "Weapon Attack Profile 20023 (Category: 1, Ratio: 106073, Range: 32, Angle: 70)",
+    "Range": 1,
+    "Area": 106073,
+    "Param1": 22,
+    "Param2": 32,
+    "Power": 70
+  },
+  {
+    "Id": 20024,
+    "_comment": "Weapon Attack Profile 20024 (Category: 1, Ratio: 101011, Range: 32, Angle: 1)",
+    "Range": 1,
+    "Area": 101011,
+    "Param1": 22,
+    "Param2": 32,
+    "Power": 1
+  },
+  {
+    "Id": 20025,
+    "_comment": "Weapon Attack Profile 20025 (Category: 1, Ratio: 101011, Range: 32, Angle: 1)",
+    "Range": 1,
+    "Area": 101011,
+    "Param1": 22,
+    "Param2": 32,
+    "Power": 1
+  },
+  {
+    "Id": 20026,
+    "_comment": "Weapon Attack Profile 20026 (Category: 1, Ratio: 101011, Range: 32, Angle: 1)",
+    "Range": 1,
+    "Area": 101011,
+    "Param1": 22,
+    "Param2": 32,
+    "Power": 1
+  },
+  {
+    "Id": 20027,
+    "_comment": "Weapon Attack Profile 20027 (Category: 1, Ratio: 101011, Range: 32, Angle: 1)",
+    "Range": 1,
+    "Area": 101011,
+    "Param1": 22,
+    "Param2": 32,
+    "Power": 1
+  },
+  {
+    "Id": 20028,
+    "_comment": "Weapon Attack Profile 20028 (Category: 1, Ratio: 106073, Range: 32, Angle: 70)",
+    "Range": 1,
+    "Area": 106073,
+    "Param1": 22,
+    "Param2": 32,
+    "Power": 70
+  },
+  {
+    "Id": 20029,
+    "_comment": "Weapon Attack Profile 20029 (Category: 1, Ratio: 107093, Range: 32, Angle: 70)",
+    "Range": 1,
+    "Area": 107093,
+    "Param1": 22,
+    "Param2": 32,
+    "Power": 70
+  },
+  {
+    "Id": 20030,
+    "_comment": "Weapon Attack Profile 20030 (Category: 1, Ratio: 106073, Range: 32, Angle: 70)",
+    "Range": 1,
+    "Area": 106073,
+    "Param1": 22,
+    "Param2": 32,
+    "Power": 70
+  },
+  {
+    "Id": 20031,
+    "_comment": "Weapon Attack Profile 20031 (Category: 1, Ratio: 101011, Range: 32, Angle: 1)",
+    "Range": 1,
+    "Area": 101011,
+    "Param1": 22,
+    "Param2": 32,
+    "Power": 1
+  },
+  {
+    "Id": 20032,
+    "_comment": "Weapon Attack Profile 20032 (Category: 1, Ratio: 107093, Range: 32, Angle: 70)",
+    "Range": 1,
+    "Area": 107093,
+    "Param1": 22,
+    "Param2": 32,
+    "Power": 70
+  },
+  {
+    "Id": 20033,
+    "_comment": "Weapon Attack Profile 20033 (Category: 1, Ratio: 107093, Range: 32, Angle: 70)",
+    "Range": 1,
+    "Area": 107093,
+    "Param1": 22,
+    "Param2": 32,
+    "Power": 70
+  },
+  {
+    "Id": 20034,
+    "_comment": "Weapon Attack Profile 20034 (Category: 1, Ratio: 114124, Range: 32, Angle: 65)",
+    "Range": 1,
+    "Area": 114124,
+    "Param1": 22,
+    "Param2": 32,
+    "Power": 65
+  },
+  {
+    "Id": 20035,
+    "_comment": "Weapon Attack Profile 20035 (Category: 1, Ratio: 116133, Range: 32, Angle: 65)",
+    "Range": 1,
+    "Area": 116133,
+    "Param1": 22,
+    "Param2": 32,
+    "Power": 65
+  },
+  {
+    "Id": 20036,
+    "_comment": "Weapon Attack Profile 20036 (Category: 1, Ratio: 116133, Range: 32, Angle: 65)",
+    "Range": 1,
+    "Area": 116133,
+    "Param1": 22,
+    "Param2": 32,
+    "Power": 65
+  },
+  {
+    "Id": 40001,
+    "_comment": "Weapon Attack Profile 40001 (Category: 1, Ratio: 103042, Range: 32, Angle: 80)",
+    "Range": 1,
+    "Area": 103042,
+    "Param1": 22,
+    "Param2": 32,
+    "Power": 80
+  },
+  {
+    "Id": 40002,
+    "_comment": "Weapon Attack Profile 40002 (Category: 1, Ratio: 105062, Range: 32, Angle: 80)",
+    "Range": 1,
+    "Area": 105062,
+    "Param1": 22,
+    "Param2": 32,
+    "Power": 80
+  },
+  {
+    "Id": 40003,
+    "_comment": "Weapon Attack Profile 40003 (Category: 1, Ratio: 103042, Range: 32, Angle: 80)",
+    "Range": 1,
+    "Area": 103042,
+    "Param1": 22,
+    "Param2": 32,
+    "Power": 80
+  },
+  {
+    "Id": 40004,
+    "_comment": "Weapon Attack Profile 40004 (Category: 1, Ratio: 101011, Range: 32, Angle: 1)",
+    "Range": 1,
+    "Area": 101011,
+    "Param1": 22,
+    "Param2": 32,
+    "Power": 1
+  },
+  {
+    "Id": 40005,
+    "_comment": "Weapon Attack Profile 40005 (Category: 1, Ratio: 101011, Range: 32, Angle: 1)",
+    "Range": 1,
+    "Area": 101011,
+    "Param1": 22,
+    "Param2": 32,
+    "Power": 1
+  },
+  {
+    "Id": 40006,
+    "_comment": "Weapon Attack Profile 40006 (Category: 1, Ratio: 103042, Range: 32, Angle: 80)",
+    "Range": 1,
+    "Area": 103042,
+    "Param1": 22,
+    "Param2": 32,
+    "Power": 80
+  },
+  {
+    "Id": 40007,
+    "_comment": "Weapon Attack Profile 40007 (Category: 1, Ratio: 101011, Range: 32, Angle: 1)",
+    "Range": 1,
+    "Area": 101011,
+    "Param1": 22,
+    "Param2": 32,
+    "Power": 1
+  },
+  {
+    "Id": 40008,
+    "_comment": "Weapon Attack Profile 40008 (Category: 1, Ratio: 101011, Range: 32, Angle: 1)",
+    "Range": 1,
+    "Area": 101011,
+    "Param1": 22,
+    "Param2": 32,
+    "Power": 1
+  },
+  {
+    "Id": 40009,
+    "_comment": "Weapon Attack Profile 40009 (Category: 1, Ratio: 105062, Range: 32, Angle: 80)",
+    "Range": 1,
+    "Area": 105062,
+    "Param1": 22,
+    "Param2": 32,
+    "Power": 80
+  },
+  {
+    "Id": 40010,
+    "_comment": "Weapon Attack Profile 40010 (Category: 1, Ratio: 103042, Range: 32, Angle: 80)",
+    "Range": 1,
+    "Area": 103042,
+    "Param1": 22,
+    "Param2": 32,
+    "Power": 80
+  },
+  {
+    "Id": 40011,
+    "_comment": "Weapon Attack Profile 40011 (Category: 1, Ratio: 115092, Range: 32, Angle: 70)",
+    "Range": 1,
+    "Area": 115092,
+    "Param1": 22,
+    "Param2": 32,
+    "Power": 70
+  },
+  {
+    "Id": 40012,
+    "_comment": "Weapon Attack Profile 40012 (Category: 1, Ratio: 106073, Range: 32, Angle: 70)",
+    "Range": 1,
+    "Area": 106073,
+    "Param1": 22,
+    "Param2": 32,
+    "Power": 70
+  },
+  {
+    "Id": 40013,
+    "_comment": "Weapon Attack Profile 40013 (Category: 1, Ratio: 107093, Range: 32, Angle: 70)",
+    "Range": 1,
+    "Area": 107093,
+    "Param1": 22,
+    "Param2": 32,
+    "Power": 70
+  },
+  {
+    "Id": 40014,
+    "_comment": "Weapon Attack Profile 40014 (Category: 1, Ratio: 103042, Range: 32, Angle: 80)",
+    "Range": 1,
+    "Area": 103042,
+    "Param1": 22,
+    "Param2": 32,
+    "Power": 80
+  },
+  {
+    "Id": 40015,
+    "_comment": "Weapon Attack Profile 40015 (Category: 1, Ratio: 101011, Range: 32, Angle: 1)",
+    "Range": 1,
+    "Area": 101011,
+    "Param1": 22,
+    "Param2": 32,
+    "Power": 1
+  },
+  {
+    "Id": 40016,
+    "_comment": "Weapon Attack Profile 40016 (Category: 1, Ratio: 106073, Range: 32, Angle: 70)",
+    "Range": 1,
+    "Area": 106073,
+    "Param1": 22,
+    "Param2": 32,
+    "Power": 70
+  },
+  {
+    "Id": 40017,
+    "_comment": "Weapon Attack Profile 40017 (Category: 1, Ratio: 101011, Range: 32, Angle: 1)",
+    "Range": 1,
+    "Area": 101011,
+    "Param1": 22,
+    "Param2": 32,
+    "Power": 1
+  },
+  {
+    "Id": 40018,
+    "_comment": "Weapon Attack Profile 40018 (Category: 1, Ratio: 103042, Range: 32, Angle: 80)",
+    "Range": 1,
+    "Area": 103042,
+    "Param1": 22,
+    "Param2": 32,
+    "Power": 80
+  },
+  {
+    "Id": 40019,
+    "_comment": "Weapon Attack Profile 40019 (Category: 1, Ratio: 101011, Range: 32, Angle: 1)",
+    "Range": 1,
+    "Area": 101011,
+    "Param1": 22,
+    "Param2": 32,
+    "Power": 1
+  },
+  {
+    "Id": 40020,
+    "_comment": "Weapon Attack Profile 40020 (Category: 1, Ratio: 101011, Range: 32, Angle: 1)",
+    "Range": 1,
+    "Area": 101011,
+    "Param1": 22,
+    "Param2": 32,
+    "Power": 1
+  },
+  {
+    "Id": 40021,
+    "_comment": "Weapon Attack Profile 40021 (Category: 1, Ratio: 107093, Range: 32, Angle: 70)",
+    "Range": 1,
+    "Area": 107093,
+    "Param1": 22,
+    "Param2": 32,
+    "Power": 70
+  },
+  {
+    "Id": 40022,
+    "_comment": "Weapon Attack Profile 40022 (Category: 1, Ratio: 101011, Range: 32, Angle: 1)",
+    "Range": 1,
+    "Area": 101011,
+    "Param1": 22,
+    "Param2": 32,
+    "Power": 1
+  },
+  {
+    "Id": 40023,
+    "_comment": "Weapon Attack Profile 40023 (Category: 1, Ratio: 105062, Range: 32, Angle: 80)",
+    "Range": 1,
+    "Area": 105062,
+    "Param1": 22,
+    "Param2": 32,
+    "Power": 80
+  },
+  {
+    "Id": 40024,
+    "_comment": "Weapon Attack Profile 40024 (Category: 1, Ratio: 101011, Range: 32, Angle: 1)",
+    "Range": 1,
+    "Area": 101011,
+    "Param1": 22,
+    "Param2": 32,
+    "Power": 1
+  },
+  {
+    "Id": 40025,
+    "_comment": "Weapon Attack Profile 40025 (Category: 1, Ratio: 101011, Range: 32, Angle: 1)",
+    "Range": 1,
+    "Area": 101011,
+    "Param1": 22,
+    "Param2": 32,
+    "Power": 1
+  },
+  {
+    "Id": 40026,
+    "_comment": "Weapon Attack Profile 40026 (Category: 1, Ratio: 101011, Range: 32, Angle: 1)",
+    "Range": 1,
+    "Area": 101011,
+    "Param1": 22,
+    "Param2": 32,
+    "Power": 1
+  },
+  {
+    "Id": 40027,
+    "_comment": "Weapon Attack Profile 40027 (Category: 1, Ratio: 101011, Range: 32, Angle: 1)",
+    "Range": 1,
+    "Area": 101011,
+    "Param1": 22,
+    "Param2": 32,
+    "Power": 1
+  },
+  {
+    "Id": 40028,
+    "_comment": "Weapon Attack Profile 40028 (Category: 1, Ratio: 108104, Range: 32, Angle: 65)",
+    "Range": 1,
+    "Area": 108104,
+    "Param1": 22,
+    "Param2": 32,
+    "Power": 65
+  },
+  {
+    "Id": 40029,
+    "_comment": "Weapon Attack Profile 40029 (Category: 1, Ratio: 101011, Range: 32, Angle: 1)",
+    "Range": 1,
+    "Area": 101011,
+    "Param1": 22,
+    "Param2": 32,
+    "Power": 1
+  },
+  {
+    "Id": 40030,
+    "_comment": "Weapon Attack Profile 40030 (Category: 1, Ratio: 101011, Range: 32, Angle: 1)",
+    "Range": 1,
+    "Area": 101011,
+    "Param1": 22,
+    "Param2": 32,
+    "Power": 1
+  },
+  {
+    "Id": 40031,
+    "_comment": "Weapon Attack Profile 40031 (Category: 1, Ratio: 108104, Range: 32, Angle: 65)",
+    "Range": 1,
+    "Area": 108104,
+    "Param1": 22,
+    "Param2": 32,
+    "Power": 65
+  },
+  {
+    "Id": 40032,
+    "_comment": "Weapon Attack Profile 40032 (Category: 1, Ratio: 108104, Range: 32, Angle: 65)",
+    "Range": 1,
+    "Area": 108104,
+    "Param1": 22,
+    "Param2": 32,
+    "Power": 65
+  },
+  {
+    "Id": 40033,
+    "_comment": "Weapon Attack Profile 40033 (Category: 1, Ratio: 112093, Range: 32, Angle: 70)",
+    "Range": 1,
+    "Area": 112093,
+    "Param1": 22,
+    "Param2": 32,
+    "Power": 70
+  },
+  {
+    "Id": 40034,
+    "_comment": "Weapon Attack Profile 40034 (Category: 1, Ratio: 114124, Range: 32, Angle: 65)",
+    "Range": 1,
+    "Area": 114124,
+    "Param1": 22,
+    "Param2": 32,
+    "Power": 65
+  },
+  {
+    "Id": 60001,
+    "_comment": "Weapon Attack Profile 60001 (Category: 3, Ratio: 116133, Range: 32, Angle: 65)",
+    "Range": 3,
+    "Area": 116133,
+    "Param1": 22,
+    "Param2": 32,
+    "Power": 65
+  },
+  {
+    "Id": 60002,
+    "_comment": "Weapon Attack Profile 60002 (Category: 3, Ratio: 116133, Range: 32, Angle: 65)",
+    "Range": 3,
+    "Area": 116133,
+    "Param1": 22,
+    "Param2": 32,
+    "Power": 65
+  },
+  {
+    "Id": 60003,
+    "_comment": "Weapon Attack Profile 60003 (Category: 3, Ratio: 116133, Range: 32, Angle: 65)",
+    "Range": 3,
+    "Area": 116133,
+    "Param1": 22,
+    "Param2": 32,
+    "Power": 65
+  },
+  {
+    "Id": 60004,
+    "_comment": "Weapon Attack Profile 60004 (Category: 3, Ratio: 116133, Range: 32, Angle: 65)",
+    "Range": 3,
+    "Area": 116133,
+    "Param1": 22,
+    "Param2": 32,
+    "Power": 65
+  },
+  {
+    "Id": 60005,
+    "_comment": "Weapon Attack Profile 60005 (Category: 3, Ratio: 116133, Range: 32, Angle: 65)",
+    "Range": 3,
+    "Area": 116133,
+    "Param1": 22,
+    "Param2": 32,
+    "Power": 65
+  },
+  {
+    "Id": 60006,
+    "_comment": "Weapon Attack Profile 60006 (Category: 3, Ratio: 116133, Range: 32, Angle: 65)",
+    "Range": 3,
+    "Area": 116133,
+    "Param1": 22,
+    "Param2": 32,
+    "Power": 65
+  },
+  {
+    "Id": 60007,
+    "_comment": "Weapon Attack Profile 60007 (Category: 3, Ratio: 116133, Range: 32, Angle: 65)",
+    "Range": 3,
+    "Area": 116133,
+    "Param1": 22,
+    "Param2": 32,
+    "Power": 65
+  },
+  {
+    "Id": 60008,
+    "_comment": "Weapon Attack Profile 60008 (Category: 3, Ratio: 116133, Range: 32, Angle: 65)",
+    "Range": 3,
+    "Area": 116133,
+    "Param1": 22,
+    "Param2": 32,
+    "Power": 65
+  },
+  {
+    "Id": 60009,
+    "_comment": "Weapon Attack Profile 60009 (Category: 3, Ratio: 116133, Range: 32, Angle: 65)",
+    "Range": 3,
+    "Area": 116133,
+    "Param1": 22,
+    "Param2": 32,
+    "Power": 65
+  },
+  {
+    "Id": 60010,
+    "_comment": "Weapon Attack Profile 60010 (Category: 3, Ratio: 116133, Range: 32, Angle: 65)",
+    "Range": 3,
+    "Area": 116133,
+    "Param1": 22,
+    "Param2": 32,
+    "Power": 65
+  },
+  {
+    "Id": 60011,
+    "_comment": "Weapon Attack Profile 60011 (Category: 3, Ratio: 116133, Range: 32, Angle: 65)",
+    "Range": 3,
+    "Area": 116133,
+    "Param1": 22,
+    "Param2": 32,
+    "Power": 65
+  },
+  {
+    "Id": 60012,
+    "_comment": "Weapon Attack Profile 60012 (Category: 3, Ratio: 116133, Range: 32, Angle: 65)",
+    "Range": 3,
+    "Area": 116133,
+    "Param1": 22,
+    "Param2": 32,
+    "Power": 65
+  },
+  {
+    "Id": 60013,
+    "_comment": "Weapon Attack Profile 60013 (Category: 3, Ratio: 116133, Range: 32, Angle: 65)",
+    "Range": 3,
+    "Area": 116133,
+    "Param1": 22,
+    "Param2": 32,
+    "Power": 65
+  },
+  {
+    "Id": 60014,
+    "_comment": "Weapon Attack Profile 60014 (Category: 3, Ratio: 116133, Range: 32, Angle: 65)",
+    "Range": 3,
+    "Area": 116133,
+    "Param1": 22,
+    "Param2": 32,
+    "Power": 65
+  },
+  {
+    "Id": 60015,
+    "_comment": "Weapon Attack Profile 60015 (Category: 3, Ratio: 116133, Range: 32, Angle: 65)",
+    "Range": 3,
+    "Area": 116133,
+    "Param1": 22,
+    "Param2": 32,
+    "Power": 65
+  },
+  {
+    "Id": 60016,
+    "_comment": "Weapon Attack Profile 60016 (Category: 3, Ratio: 116133, Range: 32, Angle: 65)",
+    "Range": 3,
+    "Area": 116133,
+    "Param1": 22,
+    "Param2": 32,
+    "Power": 65
+  },
+  {
+    "Id": 60017,
+    "_comment": "Weapon Attack Profile 60017 (Category: 3, Ratio: 116133, Range: 32, Angle: 65)",
+    "Range": 3,
+    "Area": 116133,
+    "Param1": 22,
+    "Param2": 32,
+    "Power": 65
+  },
+  {
+    "Id": 60018,
+    "_comment": "Weapon Attack Profile 60018 (Category: 3, Ratio: 116133, Range: 32, Angle: 65)",
+    "Range": 3,
+    "Area": 116133,
+    "Param1": 22,
+    "Param2": 32,
+    "Power": 65
+  },
+  {
+    "Id": 60019,
+    "_comment": "Weapon Attack Profile 60019 (Category: 3, Ratio: 116133, Range: 32, Angle: 65)",
+    "Range": 3,
+    "Area": 116133,
+    "Param1": 22,
+    "Param2": 32,
+    "Power": 65
+  },
+  {
+    "Id": 60020,
+    "_comment": "Weapon Attack Profile 60020 (Category: 3, Ratio: 116133, Range: 32, Angle: 65)",
+    "Range": 3,
+    "Area": 116133,
+    "Param1": 22,
+    "Param2": 32,
+    "Power": 65
+  },
+  {
+    "Id": 60021,
+    "_comment": "Weapon Attack Profile 60021 (Category: 3, Ratio: 116133, Range: 32, Angle: 65)",
+    "Range": 3,
+    "Area": 116133,
+    "Param1": 22,
+    "Param2": 32,
+    "Power": 65
+  },
+  {
+    "Id": 60022,
+    "_comment": "Weapon Attack Profile 60022 (Category: 3, Ratio: 116133, Range: 32, Angle: 65)",
+    "Range": 3,
+    "Area": 116133,
+    "Param1": 22,
+    "Param2": 32,
+    "Power": 65
+  },
+  {
+    "Id": 60023,
+    "_comment": "Weapon Attack Profile 60023 (Category: 3, Ratio: 116133, Range: 32, Angle: 65)",
+    "Range": 3,
+    "Area": 116133,
+    "Param1": 22,
+    "Param2": 32,
+    "Power": 65
+  },
+  {
+    "Id": 60024,
+    "_comment": "Weapon Attack Profile 60024 (Category: 3, Ratio: 116133, Range: 32, Angle: 65)",
+    "Range": 3,
+    "Area": 116133,
+    "Param1": 22,
+    "Param2": 32,
+    "Power": 65
+  },
+  {
+    "Id": 60025,
+    "_comment": "Weapon Attack Profile 60025 (Category: 3, Ratio: 116133, Range: 32, Angle: 65)",
+    "Range": 3,
+    "Area": 116133,
+    "Param1": 22,
+    "Param2": 32,
+    "Power": 65
+  },
+  {
+    "Id": 60026,
+    "_comment": "Weapon Attack Profile 60026 (Category: 3, Ratio: 116133, Range: 32, Angle: 65)",
+    "Range": 3,
+    "Area": 116133,
+    "Param1": 22,
+    "Param2": 32,
+    "Power": 65
+  },
+  {
+    "Id": 60027,
+    "_comment": "Weapon Attack Profile 60027 (Category: 3, Ratio: 115092, Range: 32, Angle: 70)",
+    "Range": 3,
+    "Area": 115092,
+    "Param1": 22,
+    "Param2": 32,
+    "Power": 70
+  },
+  {
+    "Id": 60028,
+    "_comment": "Weapon Attack Profile 60028 (Category: 3, Ratio: 116133, Range: 32, Angle: 65)",
+    "Range": 3,
+    "Area": 116133,
+    "Param1": 22,
+    "Param2": 32,
+    "Power": 65
+  },
+  {
+    "Id": 60029,
+    "_comment": "Weapon Attack Profile 60029 (Category: 3, Ratio: 116133, Range: 32, Angle: 65)",
+    "Range": 3,
+    "Area": 116133,
+    "Param1": 22,
+    "Param2": 32,
+    "Power": 65
+  },
+  {
+    "Id": 60030,
+    "_comment": "Weapon Attack Profile 60030 (Category: 3, Ratio: 116133, Range: 32, Angle: 65)",
+    "Range": 3,
+    "Area": 116133,
+    "Param1": 22,
+    "Param2": 32,
+    "Power": 65
+  },
+  {
+    "Id": 60031,
+    "_comment": "Weapon Attack Profile 60031 (Category: 3, Ratio: 116133, Range: 32, Angle: 65)",
+    "Range": 3,
+    "Area": 116133,
+    "Param1": 22,
+    "Param2": 32,
+    "Power": 65
+  },
+  {
+    "Id": 60032,
+    "_comment": "Weapon Attack Profile 60032 (Category: 3, Ratio: 116133, Range: 32, Angle: 65)",
+    "Range": 3,
+    "Area": 116133,
+    "Param1": 22,
+    "Param2": 32,
+    "Power": 65
+  },
+  {
+    "Id": 60033,
+    "_comment": "Weapon Attack Profile 60033 (Category: 3, Ratio: 115092, Range: 32, Angle: 70)",
+    "Range": 3,
+    "Area": 115092,
+    "Param1": 22,
+    "Param2": 32,
+    "Power": 70
+  },
+  {
+    "Id": 60034,
+    "_comment": "Weapon Attack Profile 60034 (Category: 3, Ratio: 116133, Range: 32, Angle: 65)",
+    "Range": 3,
+    "Area": 116133,
+    "Param1": 22,
+    "Param2": 32,
+    "Power": 65
+  },
+  {
+    "Id": 80001,
+    "_comment": "Weapon Attack Profile 80001 (Category: 3, Ratio: 115092, Range: 32, Angle: 70)",
+    "Range": 3,
+    "Area": 115092,
+    "Param1": 22,
+    "Param2": 32,
+    "Power": 70
+  },
+  {
+    "Id": 80002,
+    "_comment": "Weapon Attack Profile 80002 (Category: 3, Ratio: 115092, Range: 32, Angle: 70)",
+    "Range": 3,
+    "Area": 115092,
+    "Param1": 22,
+    "Param2": 32,
+    "Power": 70
+  },
+  {
+    "Id": 80003,
+    "_comment": "Weapon Attack Profile 80003 (Category: 3, Ratio: 115092, Range: 32, Angle: 70)",
+    "Range": 3,
+    "Area": 115092,
+    "Param1": 22,
+    "Param2": 32,
+    "Power": 70
+  },
+  {
+    "Id": 80004,
+    "_comment": "Weapon Attack Profile 80004 (Category: 3, Ratio: 115092, Range: 32, Angle: 70)",
+    "Range": 3,
+    "Area": 115092,
+    "Param1": 22,
+    "Param2": 32,
+    "Power": 70
+  },
+  {
+    "Id": 80005,
+    "_comment": "Weapon Attack Profile 80005 (Category: 3, Ratio: 101011, Range: 32, Angle: 1)",
+    "Range": 3,
+    "Area": 101011,
+    "Param1": 22,
+    "Param2": 32,
+    "Power": 1
+  },
+  {
+    "Id": 80006,
+    "_comment": "Weapon Attack Profile 80006 (Category: 3, Ratio: 115092, Range: 32, Angle: 70)",
+    "Range": 3,
+    "Area": 115092,
+    "Param1": 22,
+    "Param2": 32,
+    "Power": 70
+  },
+  {
+    "Id": 80007,
+    "_comment": "Weapon Attack Profile 80007 (Category: 3, Ratio: 115092, Range: 32, Angle: 70)",
+    "Range": 3,
+    "Area": 115092,
+    "Param1": 22,
+    "Param2": 32,
+    "Power": 70
+  },
+  {
+    "Id": 80008,
+    "_comment": "Weapon Attack Profile 80008 (Category: 3, Ratio: 101011, Range: 32, Angle: 1)",
+    "Range": 3,
+    "Area": 101011,
+    "Param1": 22,
+    "Param2": 32,
+    "Power": 1
+  },
+  {
+    "Id": 80009,
+    "_comment": "Weapon Attack Profile 80009 (Category: 3, Ratio: 115092, Range: 32, Angle: 70)",
+    "Range": 3,
+    "Area": 115092,
+    "Param1": 22,
+    "Param2": 32,
+    "Power": 70
+  },
+  {
+    "Id": 80010,
+    "_comment": "Weapon Attack Profile 80010 (Category: 3, Ratio: 115092, Range: 32, Angle: 70)",
+    "Range": 3,
+    "Area": 115092,
+    "Param1": 22,
+    "Param2": 32,
+    "Power": 70
+  },
+  {
+    "Id": 80011,
+    "_comment": "Weapon Attack Profile 80011 (Category: 3, Ratio: 115092, Range: 32, Angle: 70)",
+    "Range": 3,
+    "Area": 115092,
+    "Param1": 22,
+    "Param2": 32,
+    "Power": 70
+  },
+  {
+    "Id": 80012,
+    "_comment": "Weapon Attack Profile 80012 (Category: 3, Ratio: 101011, Range: 32, Angle: 1)",
+    "Range": 3,
+    "Area": 101011,
+    "Param1": 22,
+    "Param2": 32,
+    "Power": 1
+  },
+  {
+    "Id": 80013,
+    "_comment": "Weapon Attack Profile 80013 (Category: 3, Ratio: 115092, Range: 32, Angle: 70)",
+    "Range": 3,
+    "Area": 115092,
+    "Param1": 22,
+    "Param2": 32,
+    "Power": 70
+  },
+  {
+    "Id": 80014,
+    "_comment": "Weapon Attack Profile 80014 (Category: 3, Ratio: 115092, Range: 32, Angle: 70)",
+    "Range": 3,
+    "Area": 115092,
+    "Param1": 22,
+    "Param2": 32,
+    "Power": 70
+  },
+  {
+    "Id": 80015,
+    "_comment": "Weapon Attack Profile 80015 (Category: 3, Ratio: 115092, Range: 32, Angle: 70)",
+    "Range": 3,
+    "Area": 115092,
+    "Param1": 22,
+    "Param2": 32,
+    "Power": 70
+  },
+  {
+    "Id": 80016,
+    "_comment": "Weapon Attack Profile 80016 (Category: 3, Ratio: 101011, Range: 32, Angle: 1)",
+    "Range": 3,
+    "Area": 101011,
+    "Param1": 22,
+    "Param2": 32,
+    "Power": 1
+  },
+  {
+    "Id": 80017,
+    "_comment": "Weapon Attack Profile 80017 (Category: 3, Ratio: 115092, Range: 32, Angle: 70)",
+    "Range": 3,
+    "Area": 115092,
+    "Param1": 22,
+    "Param2": 32,
+    "Power": 70
+  },
+  {
+    "Id": 80018,
+    "_comment": "Weapon Attack Profile 80018 (Category: 3, Ratio: 101011, Range: 32, Angle: 1)",
+    "Range": 3,
+    "Area": 101011,
+    "Param1": 22,
+    "Param2": 32,
+    "Power": 1
+  },
+  {
+    "Id": 80019,
+    "_comment": "Weapon Attack Profile 80019 (Category: 3, Ratio: 115092, Range: 32, Angle: 70)",
+    "Range": 3,
+    "Area": 115092,
+    "Param1": 22,
+    "Param2": 32,
+    "Power": 70
+  },
+  {
+    "Id": 80020,
+    "_comment": "Weapon Attack Profile 80020 (Category: 3, Ratio: 101011, Range: 32, Angle: 1)",
+    "Range": 3,
+    "Area": 101011,
+    "Param1": 22,
+    "Param2": 32,
+    "Power": 1
+  },
+  {
+    "Id": 80021,
+    "_comment": "Weapon Attack Profile 80021 (Category: 3, Ratio: 101011, Range: 32, Angle: 1)",
+    "Range": 3,
+    "Area": 101011,
+    "Param1": 22,
+    "Param2": 32,
+    "Power": 1
+  },
+  {
+    "Id": 80022,
+    "_comment": "Weapon Attack Profile 80022 (Category: 3, Ratio: 101011, Range: 32, Angle: 1)",
+    "Range": 3,
+    "Area": 101011,
+    "Param1": 22,
+    "Param2": 32,
+    "Power": 1
+  },
+  {
+    "Id": 80023,
+    "_comment": "Weapon Attack Profile 80023 (Category: 3, Ratio: 101011, Range: 32, Angle: 1)",
+    "Range": 3,
+    "Area": 101011,
+    "Param1": 22,
+    "Param2": 32,
+    "Power": 1
+  },
+  {
+    "Id": 80024,
+    "_comment": "Weapon Attack Profile 80024 (Category: 3, Ratio: 101011, Range: 32, Angle: 1)",
+    "Range": 3,
+    "Area": 101011,
+    "Param1": 22,
+    "Param2": 32,
+    "Power": 1
+  },
+  {
+    "Id": 80025,
+    "_comment": "Weapon Attack Profile 80025 (Category: 3, Ratio: 115092, Range: 32, Angle: 70)",
+    "Range": 3,
+    "Area": 115092,
+    "Param1": 22,
+    "Param2": 32,
+    "Power": 70
+  },
+  {
+    "Id": 80026,
+    "_comment": "Weapon Attack Profile 80026 (Category: 3, Ratio: 101011, Range: 32, Angle: 1)",
+    "Range": 3,
+    "Area": 101011,
+    "Param1": 22,
+    "Param2": 32,
+    "Power": 1
+  },
+  {
+    "Id": 80027,
+    "_comment": "Weapon Attack Profile 80027 (Category: 3, Ratio: 115092, Range: 32, Angle: 70)",
+    "Range": 3,
+    "Area": 115092,
+    "Param1": 22,
+    "Param2": 32,
+    "Power": 70
+  },
+  {
+    "Id": 80028,
+    "_comment": "Weapon Attack Profile 80028 (Category: 3, Ratio: 115092, Range: 32, Angle: 70)",
+    "Range": 3,
+    "Area": 115092,
+    "Param1": 22,
+    "Param2": 32,
+    "Power": 70
+  },
+  {
+    "Id": 80029,
+    "_comment": "Weapon Attack Profile 80029 (Category: 3, Ratio: 115092, Range: 32, Angle: 70)",
+    "Range": 3,
+    "Area": 115092,
+    "Param1": 22,
+    "Param2": 32,
+    "Power": 70
+  },
+  {
+    "Id": 80030,
+    "_comment": "Weapon Attack Profile 80030 (Category: 3, Ratio: 115092, Range: 32, Angle: 70)",
+    "Range": 3,
+    "Area": 115092,
+    "Param1": 22,
+    "Param2": 32,
+    "Power": 70
+  },
+  {
+    "Id": 80031,
+    "_comment": "Weapon Attack Profile 80031 (Category: 3, Ratio: 115092, Range: 32, Angle: 70)",
+    "Range": 3,
+    "Area": 115092,
+    "Param1": 22,
+    "Param2": 32,
+    "Power": 70
+  }
+]

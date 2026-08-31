@@ -1,0 +1,457 @@
+[
+  {
+    "ItemId": 3202804,
+    "_comment": "Shop Item 3202804 - Price: 5000 GP, Grade: 0, Category: 0",
+    "Price": 5000,
+    "Grade": 0,
+    "Category": 0
+  },
+  {
+    "ItemId": 3202704,
+    "_comment": "Shop Item 3202704 - Price: 5000 GP, Grade: 0, Category: 0",
+    "Price": 5000,
+    "Grade": 0,
+    "Category": 0
+  },
+  {
+    "ItemId": 3102804,
+    "_comment": "Shop Item 3102804 - Price: 5000 GP, Grade: 0, Category: 0",
+    "Price": 5000,
+    "Grade": 0,
+    "Category": 0
+  },
+  {
+    "ItemId": 3102704,
+    "_comment": "Shop Item 3102704 - Price: 5000 GP, Grade: 0, Category: 0",
+    "Price": 5000,
+    "Grade": 0,
+    "Category": 0
+  },
+  {
+    "ItemId": 1400214,
+    "_comment": "Shop Item 1400214 - Price: 7800 GP, Grade: 2, Category: 0",
+    "Price": 7800,
+    "Grade": 2,
+    "Category": 0
+  },
+  {
+    "ItemId": 1400164,
+    "_comment": "Shop Item 1400164 - Price: 7800 GP, Grade: 0, Category: 0",
+    "Price": 7800,
+    "Grade": 0,
+    "Category": 0
+  },
+  {
+    "ItemId": 1400094,
+    "_comment": "Shop Item 1400094 - Price: 7800 GP, Grade: 0, Category: 0",
+    "Price": 7800,
+    "Grade": 0,
+    "Category": 0
+  },
+  {
+    "ItemId": 1400044,
+    "_comment": "Shop Item 1400044 - Price: 7800 GP, Grade: 0, Category: 0",
+    "Price": 7800,
+    "Grade": 0,
+    "Category": 0
+  },
+  {
+    "ItemId": 1300234,
+    "_comment": "Shop Item 1300234 - Price: 7800 GP, Grade: 2, Category: 0",
+    "Price": 7800,
+    "Grade": 2,
+    "Category": 0
+  },
+  {
+    "ItemId": 1300214,
+    "_comment": "Shop Item 1300214 - Price: 7800 GP, Grade: 0, Category: 0",
+    "Price": 7800,
+    "Grade": 0,
+    "Category": 0
+  },
+  {
+    "ItemId": 1300174,
+    "_comment": "Shop Item 1300174 - Price: 7800 GP, Grade: 0, Category: 0",
+    "Price": 7800,
+    "Grade": 0,
+    "Category": 0
+  },
+  {
+    "ItemId": 1300044,
+    "_comment": "Shop Item 1300044 - Price: 7800 GP, Grade: 0, Category: 0",
+    "Price": 7800,
+    "Grade": 0,
+    "Category": 0
+  },
+  {
+    "ItemId": 1200174,
+    "_comment": "Shop Item 1200174 - Price: 7800 GP, Grade: 2, Category: 0",
+    "Price": 7800,
+    "Grade": 2,
+    "Category": 0
+  },
+  {
+    "ItemId": 1200134,
+    "_comment": "Shop Item 1200134 - Price: 7800 GP, Grade: 0, Category: 0",
+    "Price": 7800,
+    "Grade": 0,
+    "Category": 0
+  },
+  {
+    "ItemId": 1200064,
+    "_comment": "Shop Item 1200064 - Price: 7800 GP, Grade: 0, Category: 0",
+    "Price": 7800,
+    "Grade": 0,
+    "Category": 0
+  },
+  {
+    "ItemId": 1200054,
+    "_comment": "Shop Item 1200054 - Price: 7800 GP, Grade: 0, Category: 0",
+    "Price": 7800,
+    "Grade": 0,
+    "Category": 0
+  },
+  {
+    "ItemId": 1100244,
+    "_comment": "Shop Item 1100244 - Price: 7800 GP, Grade: 2, Category: 0",
+    "Price": 7800,
+    "Grade": 2,
+    "Category": 0
+  },
+  {
+    "ItemId": 1100234,
+    "_comment": "Shop Item 1100234 - Price: 7800 GP, Grade: 0, Category: 0",
+    "Price": 7800,
+    "Grade": 0,
+    "Category": 0
+  },
+  {
+    "ItemId": 1100214,
+    "_comment": "Shop Item 1100214 - Price: 7800 GP, Grade: 0, Category: 0",
+    "Price": 7800,
+    "Grade": 0,
+    "Category": 0
+  },
+  {
+    "ItemId": 1100204,
+    "_comment": "Shop Item 1100204 - Price: 7800 GP, Grade: 0, Category: 0",
+    "Price": 7800,
+    "Grade": 0,
+    "Category": 0
+  },
+  {
+    "ItemId": 345,
+    "_comment": "Shop Item 345 - Price: 3000 GP, Grade: 0, Category: 0",
+    "Price": 3000,
+    "Grade": 0,
+    "Category": 0
+  },
+  {
+    "ItemId": 344,
+    "_comment": "Shop Item 344 - Price: 3000 GP, Grade: 0, Category: 0",
+    "Price": 3000,
+    "Grade": 0,
+    "Category": 0
+  },
+  {
+    "ItemId": 343,
+    "_comment": "Shop Item 343 - Price: 3000 GP, Grade: 0, Category: 0",
+    "Price": 3000,
+    "Grade": 0,
+    "Category": 0
+  },
+  {
+    "ItemId": 342,
+    "_comment": "Shop Item 342 - Price: 3000 GP, Grade: 0, Category: 0",
+    "Price": 3000,
+    "Grade": 0,
+    "Category": 0
+  },
+  {
+    "ItemId": 220,
+    "_comment": "Shop Item 220 - Price: 24800 GP, Grade: 1, Category: 0",
+    "Price": 24800,
+    "Grade": 1,
+    "Category": 0
+  },
+  {
+    "ItemId": 219,
+    "_comment": "Shop Item 219 - Price: 24800 GP, Grade: 1, Category: 0",
+    "Price": 24800,
+    "Grade": 1,
+    "Category": 0
+  },
+  {
+    "ItemId": 218,
+    "_comment": "Shop Item 218 - Price: 3000 GP, Grade: 0, Category: 0",
+    "Price": 3000,
+    "Grade": 0,
+    "Category": 0
+  },
+  {
+    "ItemId": 217,
+    "_comment": "Shop Item 217 - Price: 3000 GP, Grade: 0, Category: 0",
+    "Price": 3000,
+    "Grade": 0,
+    "Category": 0
+  },
+  {
+    "ItemId": 216,
+    "_comment": "Shop Item 216 - Price: 3000 GP, Grade: 0, Category: 0",
+    "Price": 3000,
+    "Grade": 0,
+    "Category": 0
+  },
+  {
+    "ItemId": 215,
+    "_comment": "Shop Item 215 - Price: 3000 GP, Grade: 0, Category: 0",
+    "Price": 3000,
+    "Grade": 0,
+    "Category": 0
+  },
+  {
+    "ItemId": 214,
+    "_comment": "Shop Item 214 - Price: 3000 GP, Grade: 0, Category: 0",
+    "Price": 3000,
+    "Grade": 0,
+    "Category": 0
+  },
+  {
+    "ItemId": 213,
+    "_comment": "Shop Item 213 - Price: 3000 GP, Grade: 0, Category: 0",
+    "Price": 3000,
+    "Grade": 0,
+    "Category": 0
+  },
+  {
+    "ItemId": 212,
+    "_comment": "Shop Item 212 - Price: 3000 GP, Grade: 0, Category: 0",
+    "Price": 3000,
+    "Grade": 0,
+    "Category": 0
+  },
+  {
+    "ItemId": 211,
+    "_comment": "Shop Item 211 - Price: 3000 GP, Grade: 0, Category: 0",
+    "Price": 3000,
+    "Grade": 0,
+    "Category": 0
+  },
+  {
+    "ItemId": 210,
+    "_comment": "Shop Item 210 - Price: 6800 GP, Grade: 1, Category: 0",
+    "Price": 6800,
+    "Grade": 1,
+    "Category": 0
+  },
+  {
+    "ItemId": 209,
+    "_comment": "Shop Item 209 - Price: 8800 GP, Grade: 1, Category: 0",
+    "Price": 8800,
+    "Grade": 1,
+    "Category": 0
+  },
+  {
+    "ItemId": 208,
+    "_comment": "Shop Item 208 - Price: 4500 GP, Grade: 2, Category: 0",
+    "Price": 4500,
+    "Grade": 2,
+    "Category": 0
+  },
+  {
+    "ItemId": 207,
+    "_comment": "Shop Item 207 - Price: 24800 GP, Grade: 1, Category: 0",
+    "Price": 24800,
+    "Grade": 1,
+    "Category": 0
+  },
+  {
+    "ItemId": 206,
+    "_comment": "Shop Item 206 - Price: 14800 GP, Grade: 1, Category: 0",
+    "Price": 14800,
+    "Grade": 1,
+    "Category": 0
+  },
+  {
+    "ItemId": 205,
+    "_comment": "Shop Item 205 - Price: 7800 GP, Grade: 1, Category: 0",
+    "Price": 7800,
+    "Grade": 1,
+    "Category": 0
+  },
+  {
+    "ItemId": 196,
+    "_comment": "Shop Item 196 - Price: 9800 GP, Grade: 0, Category: 0",
+    "Price": 9800,
+    "Grade": 0,
+    "Category": 0
+  },
+  {
+    "ItemId": 195,
+    "_comment": "Shop Item 195 - Price: 3500 GP, Grade: 0, Category: 0",
+    "Price": 3500,
+    "Grade": 0,
+    "Category": 0
+  },
+  {
+    "ItemId": 189,
+    "_comment": "Shop Item 189 - Price: 7800 GP, Grade: 0, Category: 0",
+    "Price": 7800,
+    "Grade": 0,
+    "Category": 0
+  },
+  {
+    "ItemId": 188,
+    "_comment": "Shop Item 188 - Price: 2100 GP, Grade: 0, Category: 0",
+    "Price": 2100,
+    "Grade": 0,
+    "Category": 0
+  },
+  {
+    "ItemId": 182,
+    "_comment": "Shop Item 182 - Price: 7800 GP, Grade: 0, Category: 0",
+    "Price": 7800,
+    "Grade": 0,
+    "Category": 0
+  },
+  {
+    "ItemId": 181,
+    "_comment": "Shop Item 181 - Price: 2100 GP, Grade: 0, Category: 0",
+    "Price": 2100,
+    "Grade": 0,
+    "Category": 0
+  },
+  {
+    "ItemId": 175,
+    "_comment": "Shop Item 175 - Price: 9800 GP, Grade: 0, Category: 0",
+    "Price": 9800,
+    "Grade": 0,
+    "Category": 0
+  },
+  {
+    "ItemId": 174,
+    "_comment": "Shop Item 174 - Price: 2800 GP, Grade: 0, Category: 0",
+    "Price": 2800,
+    "Grade": 0,
+    "Category": 0
+  },
+  {
+    "ItemId": 168,
+    "_comment": "Shop Item 168 - Price: 9800 GP, Grade: 0, Category: 0",
+    "Price": 9800,
+    "Grade": 0,
+    "Category": 0
+  },
+  {
+    "ItemId": 167,
+    "_comment": "Shop Item 167 - Price: 2800 GP, Grade: 0, Category: 0",
+    "Price": 2800,
+    "Grade": 0,
+    "Category": 0
+  },
+  {
+    "ItemId": 154,
+    "_comment": "Shop Item 154 - Price: 3000 GP, Grade: 0, Category: 0",
+    "Price": 3000,
+    "Grade": 0,
+    "Category": 0
+  },
+  {
+    "ItemId": 147,
+    "_comment": "Shop Item 147 - Price: 3000 GP, Grade: 0, Category: 0",
+    "Price": 3000,
+    "Grade": 0,
+    "Category": 0
+  },
+  {
+    "ItemId": 140,
+    "_comment": "Shop Item 140 - Price: 3000 GP, Grade: 0, Category: 0",
+    "Price": 3000,
+    "Grade": 0,
+    "Category": 0
+  },
+  {
+    "ItemId": 133,
+    "_comment": "Shop Item 133 - Price: 3000 GP, Grade: 0, Category: 0",
+    "Price": 3000,
+    "Grade": 0,
+    "Category": 0
+  },
+  {
+    "ItemId": 126,
+    "_comment": "Shop Item 126 - Price: 3000 GP, Grade: 0, Category: 0",
+    "Price": 3000,
+    "Grade": 0,
+    "Category": 0
+  },
+  {
+    "ItemId": 119,
+    "_comment": "Shop Item 119 - Price: 3000 GP, Grade: 0, Category: 0",
+    "Price": 3000,
+    "Grade": 0,
+    "Category": 0
+  },
+  {
+    "ItemId": 112,
+    "_comment": "Shop Item 112 - Price: 3000 GP, Grade: 0, Category: 0",
+    "Price": 3000,
+    "Grade": 0,
+    "Category": 0
+  },
+  {
+    "ItemId": 105,
+    "_comment": "Shop Item 105 - Price: 3000 GP, Grade: 0, Category: 0",
+    "Price": 3000,
+    "Grade": 0,
+    "Category": 0
+  },
+  {
+    "ItemId": 70,
+    "_comment": "Shop Item 70 - Price: 2000 GP, Grade: 0, Category: 0",
+    "Price": 2000,
+    "Grade": 0,
+    "Category": 0
+  },
+  {
+    "ItemId": 54,
+    "_comment": "Shop Item 54 - Price: 1500 GP, Grade: 0, Category: 0",
+    "Price": 1500,
+    "Grade": 0,
+    "Category": 0
+  },
+  {
+    "ItemId": 48,
+    "_comment": "Shop Item 48 - Price: 3000 GP, Grade: 0, Category: 0",
+    "Price": 3000,
+    "Grade": 0,
+    "Category": 0
+  },
+  {
+    "ItemId": 44,
+    "_comment": "Shop Item 44 - Price: 1000 GP, Grade: 0, Category: 0",
+    "Price": 1000,
+    "Grade": 0,
+    "Category": 0
+  },
+  {
+    "ItemId": 31,
+    "_comment": "Shop Item 31 - Price: 2000 GP, Grade: 0, Category: 0",
+    "Price": 2000,
+    "Grade": 0,
+    "Category": 0
+  },
+  {
+    "ItemId": 27,
+    "_comment": "Shop Item 27 - Price: 2000 GP, Grade: 0, Category: 0",
+    "Price": 2000,
+    "Grade": 0,
+    "Category": 0
+  },
+  {
+    "ItemId": 23,
+    "_comment": "Shop Item 23 - Price: 1000 GP, Grade: 0, Category: 0",
+    "Price": 1000,
+    "Grade": 0,
+    "Category": 0
+  }
+]

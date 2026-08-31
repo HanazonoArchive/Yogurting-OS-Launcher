@@ -41,8 +41,6 @@ namespace Yogurting.Server
     public class PathInfo
     {
         public string DbDirectory { get; set; } = "data/db";
-        public string DbJsonDirectory { get; set; } = "data/dbJson";
-        public string DatabaseFormat { get; set; } = "Json";
         public string ScoreDirectory { get; set; } = "data/score";
         public string SaveDirectory { get; set; } = "data/save";
     }
@@ -132,8 +130,8 @@ namespace Yogurting.Server
             string rootDataDir = Path.Combine(projectRoot, "data");
             string saveDir = Path.Combine(projectRoot, config.Paths.SaveDirectory);
 
-            // 1. Initialize Database Engine (Dual Engine: JSON Primary with TXT Fallback)
-            var gameDb = GameDatabase.Create(rootDataDir, config.Paths.DatabaseFormat);
+            // 1. Initialize Database Engine (JSON Engine)
+            var gameDb = GameDatabase.Create(rootDataDir);
 
             // 2. Initialize Starter Items & Character Configuration
             string starterConfigPath = Path.Combine(projectRoot, "config", "starter_items.json");
@@ -250,10 +248,8 @@ namespace Yogurting.Server
                         break;
 
                     case "reload":
-                        Logger.Info("[System] Reloading database tables...");
-                        string activeDbDir = config.Paths.DatabaseFormat.Equals("Json", StringComparison.OrdinalIgnoreCase)
-                            ? Path.Combine(projectRoot, config.Paths.DbJsonDirectory)
-                            : Path.Combine(projectRoot, config.Paths.DbDirectory);
+                        Logger.Info("[System] Reloading database tables from JSON dataset...");
+                        string activeDbDir = Path.Combine(projectRoot, config.Paths.DbDirectory);
                         if (Directory.Exists(activeDbDir)) gameDb.LoadAll(activeDbDir);
                         Logger.Info("[System] Database reloaded successfully!");
                         break;

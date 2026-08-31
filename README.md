@@ -278,13 +278,13 @@ Specifies the initial starter items, clothing, and weapons granted to new charac
 All game mechanics, items, spawn coordinates, and dialog lines are dynamically parsed from `data/db/` at startup.
 
 Key database tables include:
-- **`BeItemType.txt` / `ByulItemType.txt` / `CoItemType.txt`**: Complete item parameters, equipment stat requirements, and consumable effects.
-- **`BeItemSlot.txt`**: Mapping of visual equipment slots (Weapon, Head, Face, Top, Bottom, Shoes, Backpack, Accessories).
-- **`Field.txt`**: Field metadata, campus names, music tracks, background ambient IDs, and monster spawn generators.
-- **`MonsterBasis.txt` / `MON.txt` / `HuntMon.txt`**: Monster templates, stats, aggression types, AI behaviors, and drop tables.
-- **`DexTable.txt` / `StatusTable.txt` / `ExpTable.txt`**: Level progression curves, stat caps, and weapon proficiency requirements.
-- **`SkillDesc.txt` / `SkillWeapon.txt`**: Weapon skill definitions, cooldowns, and damage multipliers.
-- **`Episode.txt` / `EpisodeDetail.txt` / `EpisodeMonster.txt`**: Episode stages, clear conditions, time limits, and enemy waves.
+- **`BeItemType.json` / `ByulItemType.json` / `CoItemType.json`**: Complete item parameters, equipment stat requirements, and consumable effects.
+- **`BeItemSlot.json`**: Mapping of visual equipment slots (Weapon, Head, Face, Top, Bottom, Shoes, Backpack, Accessories).
+- **`Field.json`**: Field metadata, campus names, music tracks, background ambient IDs, and monster spawn generators.
+- **`MonsterBasis.json` / `MON.json` / `HuntMon.json`**: Monster templates, stats, aggression types, AI behaviors, and drop tables.
+- **`DexTable.json` / `StatusTable.json` / `ExpTable.json`**: Level progression curves, stat caps, and weapon proficiency requirements.
+- **`SkillDesc.json` / `SkillWeapon.json`**: Weapon skill definitions, cooldowns, and damage multipliers.
+- **`Episode.json` / `EpisodeDetail.json` / `EpisodeMonster.json`**: Episode stages, clear conditions, time limits, and enemy waves.
 - **`map.db`**: Binary navigation and spatial grid definition.
 
 ---

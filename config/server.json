@@ -15,8 +15,6 @@
   },
   "Paths": {
     "DbDirectory": "data/db",
-    "DbJsonDirectory": "data/dbJson",
-    "DatabaseFormat": "Json",
     "ScoreDirectory": "data/score",
     "SaveDirectory": "data/save"
   },
