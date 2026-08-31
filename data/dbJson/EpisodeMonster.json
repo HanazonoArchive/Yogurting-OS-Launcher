@@ -1,0 +1,6554 @@
+[
+  {
+    "Id": 1,
+    "_comment": "Episode 26 Mob - ソソ (Basis: 1, Normal Mob)",
+    "BasisMobId": 1,
+    "Name": "ソソ",
+    "IsBoss": false,
+    "EpisodeId": 26,
+    "Param5": -1
+  },
+  {
+    "Id": 2,
+    "_comment": "Episode 26 Mob - アンモネラ (Basis: 2, Normal Mob)",
+    "BasisMobId": 2,
+    "Name": "アンモネラ",
+    "IsBoss": false,
+    "EpisodeId": 26,
+    "Param5": -1
+  },
+  {
+    "Id": 3,
+    "_comment": "Episode 26 Mob - マルシュ (Basis: 3, Normal Mob)",
+    "BasisMobId": 3,
+    "Name": "マルシュ",
+    "IsBoss": false,
+    "EpisodeId": 26,
+    "Param5": -1
+  },
+  {
+    "Id": 4,
+    "_comment": "Episode 26 Mob - テディ (Basis: 4, Normal Mob)",
+    "BasisMobId": 4,
+    "Name": "テディ",
+    "IsBoss": false,
+    "EpisodeId": 26,
+    "Param5": -1
+  },
+  {
+    "Id": 5,
+    "_comment": "Episode 26 Mob - ボボカン (Basis: 5, Normal Mob)",
+    "BasisMobId": 5,
+    "Name": "ボボカン",
+    "IsBoss": false,
+    "EpisodeId": 26,
+    "Param5": -1
+  },
+  {
+    "Id": 6,
+    "_comment": "Episode 26 Mob - ワイルドウッドヘリアン (Basis: 6, Normal Mob)",
+    "BasisMobId": 6,
+    "Name": "ワイルドウッドヘリアン",
+    "IsBoss": false,
+    "EpisodeId": 26,
+    "Param5": -1
+  },
+  {
+    "Id": 7,
+    "_comment": "Episode 26 Mob - ラッチュー (Basis: 7, Normal Mob)",
+    "BasisMobId": 7,
+    "Name": "ラッチュー",
+    "IsBoss": false,
+    "EpisodeId": 26,
+    "Param5": -1
+  },
+  {
+    "Id": 8,
+    "_comment": "Episode 26 Mob - 書架足 3号 (Basis: 15, Normal Mob)",
+    "BasisMobId": 15,
+    "Name": "書架足 3号",
+    "IsBoss": false,
+    "EpisodeId": 26,
+    "Param5": -1
+  },
+  {
+    "Id": 9,
+    "_comment": "Episode 26 Mob - メカドロシー 3号 (Basis: 16, Episode Boss / Unique)",
+    "BasisMobId": 16,
+    "Name": "メカドロシー 3号",
+    "IsBoss": true,
+    "EpisodeId": 26,
+    "Param5": -1
+  },
+  {
+    "Id": 1001,
+    "_comment": "Episode 26 Mob - メカドロシー 3号 (Basis: 16, Episode Boss / Unique)",
+    "BasisMobId": 16,
+    "Name": "メカドロシー 3号",
+    "IsBoss": true,
+    "EpisodeId": 26,
+    "Param5": -1
+  },
+  {
+    "Id": 10,
+    "_comment": "Episode 26 Mob - ドロシー (Basis: 51, Normal Mob)",
+    "BasisMobId": 51,
+    "Name": "ドロシー",
+    "IsBoss": false,
+    "EpisodeId": 26,
+    "Param5": -1
+  },
+  {
+    "Id": 11,
+    "_comment": "Episode 87 Mob - ソソ (Basis: 1, Normal Mob)",
+    "BasisMobId": 1,
+    "Name": "ソソ",
+    "IsBoss": false,
+    "EpisodeId": 87,
+    "Param5": -1
+  },
+  {
+    "Id": 12,
+    "_comment": "Episode 87 Mob - ゲトー (Basis: 8, Normal Mob)",
+    "BasisMobId": 8,
+    "Name": "ゲトー",
+    "IsBoss": false,
+    "EpisodeId": 87,
+    "Param5": -1
+  },
+  {
+    "Id": 13,
+    "_comment": "Episode 87 Mob - モネラ (Basis: 9, Normal Mob)",
+    "BasisMobId": 9,
+    "Name": "モネラ",
+    "IsBoss": false,
+    "EpisodeId": 87,
+    "Param5": -1
+  },
+  {
+    "Id": 14,
+    "_comment": "Episode 87 Mob - ウッド (Basis: 10, Normal Mob)",
+    "BasisMobId": 10,
+    "Name": "ウッド",
+    "IsBoss": false,
+    "EpisodeId": 87,
+    "Param5": -1
+  },
+  {
+    "Id": 15,
+    "_comment": "Episode 87 Mob - バラウス (Basis: 11, Normal Mob)",
+    "BasisMobId": 11,
+    "Name": "バラウス",
+    "IsBoss": false,
+    "EpisodeId": 87,
+    "Param5": -1
+  },
+  {
+    "Id": 16,
+    "_comment": "Episode 87 Mob - ハイバラウス (Basis: 12, Normal Mob)",
+    "BasisMobId": 12,
+    "Name": "ハイバラウス",
+    "IsBoss": false,
+    "EpisodeId": 87,
+    "Param5": -1
+  },
+  {
+    "Id": 17,
+    "_comment": "Episode 87 Mob - グレートバラウス (Basis: 13, Normal Mob)",
+    "BasisMobId": 13,
+    "Name": "グレートバラウス",
+    "IsBoss": false,
+    "EpisodeId": 87,
+    "Param5": -1
+  },
+  {
+    "Id": 1002,
+    "_comment": "Episode 87 Mob - グレートバラウス (Basis: 13, Normal Mob)",
+    "BasisMobId": 13,
+    "Name": "グレートバラウス",
+    "IsBoss": false,
+    "EpisodeId": 87,
+    "Param5": -1
+  },
+  {
+    "Id": 45,
+    "_comment": "Episode 87 Mob - グレートバラウス (Basis: 13, Episode Boss / Unique)",
+    "BasisMobId": 13,
+    "Name": "グレートバラウス",
+    "IsBoss": true,
+    "EpisodeId": 87,
+    "Param5": -1
+  },
+  {
+    "Id": 1009,
+    "_comment": "Episode 87 Mob - グレートバラウス (Basis: 13, Episode Boss / Unique)",
+    "BasisMobId": 13,
+    "Name": "グレートバラウス",
+    "IsBoss": true,
+    "EpisodeId": 87,
+    "Param5": -1
+  },
+  {
+    "Id": 18,
+    "_comment": "Episode 52 Mob - ワルグマー (Basis: 17, Normal Mob)",
+    "BasisMobId": 17,
+    "Name": "ワルグマー",
+    "IsBoss": false,
+    "EpisodeId": 52,
+    "Param5": -1
+  },
+  {
+    "Id": 19,
+    "_comment": "Episode 52 Mob - ドワルグマー (Basis: 18, Normal Mob)",
+    "BasisMobId": 18,
+    "Name": "ドワルグマー",
+    "IsBoss": false,
+    "EpisodeId": 52,
+    "Param5": -1
+  },
+  {
+    "Id": 21,
+    "_comment": "Episode 52 Mob - ホームキーパー mk-2 (Basis: 20, Normal Mob)",
+    "BasisMobId": 20,
+    "Name": "ホームキーパー mk-2",
+    "IsBoss": false,
+    "EpisodeId": 52,
+    "Param5": -1
+  },
+  {
+    "Id": 20,
+    "_comment": "Episode 52 Mob - 変熊 (Basis: 19, Episode Boss / Unique)",
+    "BasisMobId": 19,
+    "Name": "変熊",
+    "IsBoss": true,
+    "EpisodeId": 52,
+    "Param5": -1
+  },
+  {
+    "Id": 1005,
+    "_comment": "Episode 52 Mob - 変熊 (Basis: 19, Episode Boss / Unique)",
+    "BasisMobId": 19,
+    "Name": "変熊",
+    "IsBoss": true,
+    "EpisodeId": 52,
+    "Param5": -1
+  },
+  {
+    "Id": 23,
+    "_comment": "Episode 52 Mob - カルテ (Basis: 22, Normal Mob)",
+    "BasisMobId": 22,
+    "Name": "カルテ",
+    "IsBoss": false,
+    "EpisodeId": 52,
+    "Param5": -1
+  },
+  {
+    "Id": 24,
+    "_comment": "Episode 52 Mob - チャート (Basis: 23, Normal Mob)",
+    "BasisMobId": 23,
+    "Name": "チャート",
+    "IsBoss": false,
+    "EpisodeId": 52,
+    "Param5": -1
+  },
+  {
+    "Id": 22,
+    "_comment": "Episode 52 Mob - ステファノ (Basis: 21, Episode Boss / Unique)",
+    "BasisMobId": 21,
+    "Name": "ステファノ",
+    "IsBoss": true,
+    "EpisodeId": 52,
+    "Param5": -1
+  },
+  {
+    "Id": 1003,
+    "_comment": "Episode 52 Mob - ステファノ (Basis: 21, Episode Boss / Unique)",
+    "BasisMobId": 21,
+    "Name": "ステファノ",
+    "IsBoss": true,
+    "EpisodeId": 52,
+    "Param5": -1
+  },
+  {
+    "Id": 26,
+    "_comment": "Episode 52 Mob - ラッチュー (Basis: 7, Normal Mob)",
+    "BasisMobId": 7,
+    "Name": "ラッチュー",
+    "IsBoss": false,
+    "EpisodeId": 52,
+    "Param5": -1
+  },
+  {
+    "Id": 27,
+    "_comment": "Episode 52 Mob - ボボカン (Basis: 5, Normal Mob)",
+    "BasisMobId": 5,
+    "Name": "ボボカン",
+    "IsBoss": false,
+    "EpisodeId": 52,
+    "Param5": -1
+  },
+  {
+    "Id": 25,
+    "_comment": "Episode 52 Mob - ビアンカ (Basis: 24, Episode Boss / Unique)",
+    "BasisMobId": 24,
+    "Name": "ビアンカ",
+    "IsBoss": true,
+    "EpisodeId": 52,
+    "Param5": -1
+  },
+  {
+    "Id": 1004,
+    "_comment": "Episode 52 Mob - ビアンカ (Basis: 24, Episode Boss / Unique)",
+    "BasisMobId": 24,
+    "Name": "ビアンカ",
+    "IsBoss": true,
+    "EpisodeId": 52,
+    "Param5": -1
+  },
+  {
+    "Id": 28,
+    "_comment": "Episode 69 Mob - ボボカン (Basis: 5, Normal Mob)",
+    "BasisMobId": 5,
+    "Name": "ボボカン",
+    "IsBoss": false,
+    "EpisodeId": 69,
+    "Param5": -1
+  },
+  {
+    "Id": 29,
+    "_comment": "Episode 69 Mob - ホームキーパー mk-2 (Basis: 20, Normal Mob)",
+    "BasisMobId": 20,
+    "Name": "ホームキーパー mk-2",
+    "IsBoss": false,
+    "EpisodeId": 69,
+    "Param5": -1
+  },
+  {
+    "Id": 30,
+    "_comment": "Episode 69 Mob - ステファノ (Basis: 21, Episode Boss / Unique)",
+    "BasisMobId": 21,
+    "Name": "ステファノ",
+    "IsBoss": true,
+    "EpisodeId": 69,
+    "Param5": -1
+  },
+  {
+    "Id": 1006,
+    "_comment": "Episode 69 Mob - ステファノ (Basis: 21, Episode Boss / Unique)",
+    "BasisMobId": 21,
+    "Name": "ステファノ",
+    "IsBoss": true,
+    "EpisodeId": 69,
+    "Param5": -1
+  },
+  {
+    "Id": 32,
+    "_comment": "Episode 69 Mob - チャート (Basis: 23, Normal Mob)",
+    "BasisMobId": 23,
+    "Name": "チャート",
+    "IsBoss": false,
+    "EpisodeId": 69,
+    "Param5": -1
+  },
+  {
+    "Id": 33,
+    "_comment": "Episode 69 Mob - カルテ (Basis: 22, Normal Mob)",
+    "BasisMobId": 22,
+    "Name": "カルテ",
+    "IsBoss": false,
+    "EpisodeId": 69,
+    "Param5": -1
+  },
+  {
+    "Id": 34,
+    "_comment": "Episode 69 Mob - ドワルグマー (Basis: 18, Normal Mob)",
+    "BasisMobId": 18,
+    "Name": "ドワルグマー",
+    "IsBoss": false,
+    "EpisodeId": 69,
+    "Param5": -1
+  },
+  {
+    "Id": 31,
+    "_comment": "Episode 69 Mob - ビアンカ (Basis: 24, Episode Boss / Unique)",
+    "BasisMobId": 24,
+    "Name": "ビアンカ",
+    "IsBoss": true,
+    "EpisodeId": 69,
+    "Param5": -1
+  },
+  {
+    "Id": 1007,
+    "_comment": "Episode 69 Mob - ビアンカ (Basis: 24, Episode Boss / Unique)",
+    "BasisMobId": 24,
+    "Name": "ビアンカ",
+    "IsBoss": true,
+    "EpisodeId": 69,
+    "Param5": -1
+  },
+  {
+    "Id": 36,
+    "_comment": "Episode 69 Mob - ワルグマー (Basis: 17, Normal Mob)",
+    "BasisMobId": 17,
+    "Name": "ワルグマー",
+    "IsBoss": false,
+    "EpisodeId": 69,
+    "Param5": -1
+  },
+  {
+    "Id": 35,
+    "_comment": "Episode 69 Mob - 変熊 (Basis: 19, Episode Boss / Unique)",
+    "BasisMobId": 19,
+    "Name": "変熊",
+    "IsBoss": true,
+    "EpisodeId": 69,
+    "Param5": -1
+  },
+  {
+    "Id": 1008,
+    "_comment": "Episode 69 Mob - 変熊 (Basis: 19, Episode Boss / Unique)",
+    "BasisMobId": 19,
+    "Name": "変熊",
+    "IsBoss": true,
+    "EpisodeId": 69,
+    "Param5": -1
+  },
+  {
+    "Id": 37,
+    "_comment": "Episode 1 Mob - ソソ (Basis: 1, Normal Mob)",
+    "BasisMobId": 1,
+    "Name": "ソソ",
+    "IsBoss": false,
+    "EpisodeId": 1,
+    "Param5": -1
+  },
+  {
+    "Id": 9037,
+    "_comment": "Episode 1 Mob - デカソソ (Basis: 148, Normal Mob)",
+    "BasisMobId": 148,
+    "Name": "デカソソ",
+    "IsBoss": false,
+    "EpisodeId": 1,
+    "Param5": -1
+  },
+  {
+    "Id": 38,
+    "_comment": "Episode 5 Mob - ラッチュー (Basis: 7, Normal Mob)",
+    "BasisMobId": 7,
+    "Name": "ラッチュー",
+    "IsBoss": false,
+    "EpisodeId": 5,
+    "Param5": -1
+  },
+  {
+    "Id": 9038,
+    "_comment": "Episode 5 Mob - デカルシュ (Basis: 149, Normal Mob)",
+    "BasisMobId": 149,
+    "Name": "デカルシュ",
+    "IsBoss": false,
+    "EpisodeId": 5,
+    "Param5": -1
+  },
+  {
+    "Id": 39,
+    "_comment": "Episode 46 Mob - バラウス (Basis: 11, Normal Mob)",
+    "BasisMobId": 11,
+    "Name": "バラウス",
+    "IsBoss": false,
+    "EpisodeId": 46,
+    "Param5": -1
+  },
+  {
+    "Id": 40,
+    "_comment": "Episode 46 Mob - ウッド (Basis: 10, Normal Mob)",
+    "BasisMobId": 10,
+    "Name": "ウッド",
+    "IsBoss": false,
+    "EpisodeId": 46,
+    "Param5": -1
+  },
+  {
+    "Id": 46,
+    "_comment": "Episode 46 Mob - ゲトー (Basis: 8, Normal Mob)",
+    "BasisMobId": 8,
+    "Name": "ゲトー",
+    "IsBoss": false,
+    "EpisodeId": 46,
+    "Param5": -1
+  },
+  {
+    "Id": 47,
+    "_comment": "Episode 46 Mob - ハイバラウス (Basis: 12, Normal Mob)",
+    "BasisMobId": 12,
+    "Name": "ハイバラウス",
+    "IsBoss": false,
+    "EpisodeId": 46,
+    "Param5": -1
+  },
+  {
+    "Id": 9039,
+    "_comment": "Episode 46 Mob - デカルシュ (Basis: 149, Normal Mob)",
+    "BasisMobId": 149,
+    "Name": "デカルシュ",
+    "IsBoss": false,
+    "EpisodeId": 46,
+    "Param5": -1
+  },
+  {
+    "Id": 41,
+    "_comment": "Episode 36 Mob - ドロシー (Basis: 51, Normal Mob)",
+    "BasisMobId": 51,
+    "Name": "ドロシー",
+    "IsBoss": false,
+    "EpisodeId": 36,
+    "Param5": -1
+  },
+  {
+    "Id": 42,
+    "_comment": "Episode 36 Mob - マルシュ (Basis: 3, Normal Mob)",
+    "BasisMobId": 3,
+    "Name": "マルシュ",
+    "IsBoss": false,
+    "EpisodeId": 36,
+    "Param5": -1
+  },
+  {
+    "Id": 43,
+    "_comment": "Episode 36 Mob - アンモネラ (Basis: 2, Normal Mob)",
+    "BasisMobId": 2,
+    "Name": "アンモネラ",
+    "IsBoss": false,
+    "EpisodeId": 36,
+    "Param5": -1
+  },
+  {
+    "Id": 44,
+    "_comment": "Episode 36 Mob - ドロシー (Basis: 51, Episode Boss / Unique)",
+    "BasisMobId": 51,
+    "Name": "ドロシー",
+    "IsBoss": true,
+    "EpisodeId": 36,
+    "Param5": -1
+  },
+  {
+    "Id": 92,
+    "_comment": "Episode 35 Mob - ゲートキーパー (Basis: 26, Episode Boss / Unique)",
+    "BasisMobId": 26,
+    "Name": "ゲートキーパー",
+    "IsBoss": true,
+    "EpisodeId": 35,
+    "Param5": -1
+  },
+  {
+    "Id": 86,
+    "_comment": "Episode 35 Mob - ハッコウモリ (Basis: 46, Normal Mob)",
+    "BasisMobId": 46,
+    "Name": "ハッコウモリ",
+    "IsBoss": false,
+    "EpisodeId": 35,
+    "Param5": -1
+  },
+  {
+    "Id": 87,
+    "_comment": "Episode 35 Mob - ☆ソソ☆ (Basis: 63, Normal Mob)",
+    "BasisMobId": 63,
+    "Name": "☆ソソ☆",
+    "IsBoss": false,
+    "EpisodeId": 35,
+    "Param5": -1
+  },
+  {
+    "Id": 88,
+    "_comment": "Episode 35 Mob - ネイバー (Basis: 30, Normal Mob)",
+    "BasisMobId": 30,
+    "Name": "ネイバー",
+    "IsBoss": false,
+    "EpisodeId": 35,
+    "Param5": -1
+  },
+  {
+    "Id": 89,
+    "_comment": "Episode 35 Mob - リトルクロコ (Basis: 47, Normal Mob)",
+    "BasisMobId": 47,
+    "Name": "リトルクロコ",
+    "IsBoss": false,
+    "EpisodeId": 35,
+    "Param5": -1
+  },
+  {
+    "Id": 90,
+    "_comment": "Episode 35 Mob - クロコ (Basis: 33, Normal Mob)",
+    "BasisMobId": 33,
+    "Name": "クロコ",
+    "IsBoss": false,
+    "EpisodeId": 35,
+    "Param5": -1
+  },
+  {
+    "Id": 91,
+    "_comment": "Episode 35 Mob - ブラービー (Basis: 25, Normal Mob)",
+    "BasisMobId": 25,
+    "Name": "ブラービー",
+    "IsBoss": false,
+    "EpisodeId": 35,
+    "Param5": -1
+  },
+  {
+    "Id": 125,
+    "_comment": "Episode 35 Mob - アンティーク柱 (Basis: 64, Normal Mob)",
+    "BasisMobId": 64,
+    "Name": "アンティーク柱",
+    "IsBoss": false,
+    "EpisodeId": 35,
+    "Param5": -1
+  },
+  {
+    "Id": 48,
+    "_comment": "Episode 55 Mob - バラウス (Basis: 11, Normal Mob)",
+    "BasisMobId": 11,
+    "Name": "バラウス",
+    "IsBoss": false,
+    "EpisodeId": 55,
+    "Param5": -1
+  },
+  {
+    "Id": 49,
+    "_comment": "Episode 55 Mob - ハイバラウス (Basis: 12, Normal Mob)",
+    "BasisMobId": 12,
+    "Name": "ハイバラウス",
+    "IsBoss": false,
+    "EpisodeId": 55,
+    "Param5": -1
+  },
+  {
+    "Id": 9048,
+    "_comment": "Episode 55 Mob - デカソソ (Basis: 148, Normal Mob)",
+    "BasisMobId": 148,
+    "Name": "デカソソ",
+    "IsBoss": false,
+    "EpisodeId": 55,
+    "Param5": -1
+  },
+  {
+    "Id": 77,
+    "_comment": "Episode 75 Mob - ミュロビー (Basis: 29, Normal Mob)",
+    "BasisMobId": 29,
+    "Name": "ミュロビー",
+    "IsBoss": false,
+    "EpisodeId": 75,
+    "Param5": -1
+  },
+  {
+    "Id": 78,
+    "_comment": "Episode 75 Mob - 怒ったミュロビー (Basis: 120, Normal Mob)",
+    "BasisMobId": 120,
+    "Name": "怒ったミュロビー",
+    "IsBoss": false,
+    "EpisodeId": 75,
+    "Param5": -1
+  },
+  {
+    "Id": 9077,
+    "_comment": "Episode 75 Mob - デカルシュ (Basis: 149, Normal Mob)",
+    "BasisMobId": 149,
+    "Name": "デカルシュ",
+    "IsBoss": false,
+    "EpisodeId": 75,
+    "Param5": -1
+  },
+  {
+    "Id": 96,
+    "_comment": "Episode 100 Mob - フランソワ (Basis: 28, Episode Boss / Unique)",
+    "BasisMobId": 28,
+    "Name": "フランソワ",
+    "IsBoss": true,
+    "EpisodeId": 100,
+    "Param5": -1
+  },
+  {
+    "Id": 93,
+    "_comment": "Episode 100 Mob - リトルクロコ (Basis: 47, Normal Mob)",
+    "BasisMobId": 47,
+    "Name": "リトルクロコ",
+    "IsBoss": false,
+    "EpisodeId": 100,
+    "Param5": -1
+  },
+  {
+    "Id": 94,
+    "_comment": "Episode 100 Mob - クロコ (Basis: 33, Normal Mob)",
+    "BasisMobId": 33,
+    "Name": "クロコ",
+    "IsBoss": false,
+    "EpisodeId": 100,
+    "Param5": -1
+  },
+  {
+    "Id": 95,
+    "_comment": "Episode 100 Mob - グロービー (Basis: 27, Normal Mob)",
+    "BasisMobId": 27,
+    "Name": "グロービー",
+    "IsBoss": false,
+    "EpisodeId": 100,
+    "Param5": -1
+  },
+  {
+    "Id": 101,
+    "_comment": "Episode 63 Mob - サイクロコ (Basis: 34, Episode Boss / Unique)",
+    "BasisMobId": 34,
+    "Name": "サイクロコ",
+    "IsBoss": true,
+    "EpisodeId": 63,
+    "Param5": -1
+  },
+  {
+    "Id": 97,
+    "_comment": "Episode 63 Mob - テディ (Basis: 4, Normal Mob)",
+    "BasisMobId": 4,
+    "Name": "テディ",
+    "IsBoss": false,
+    "EpisodeId": 63,
+    "Param5": -1
+  },
+  {
+    "Id": 98,
+    "_comment": "Episode 63 Mob - ラッチュー (Basis: 7, Normal Mob)",
+    "BasisMobId": 7,
+    "Name": "ラッチュー",
+    "IsBoss": false,
+    "EpisodeId": 63,
+    "Param5": -1
+  },
+  {
+    "Id": 99,
+    "_comment": "Episode 63 Mob - ワイルドウッドヘリアン (Basis: 6, Normal Mob)",
+    "BasisMobId": 6,
+    "Name": "ワイルドウッドヘリアン",
+    "IsBoss": false,
+    "EpisodeId": 63,
+    "Param5": -1
+  },
+  {
+    "Id": 100,
+    "_comment": "Episode 63 Mob - クロコ (Basis: 33, Normal Mob)",
+    "BasisMobId": 33,
+    "Name": "クロコ",
+    "IsBoss": false,
+    "EpisodeId": 63,
+    "Param5": -1
+  },
+  {
+    "Id": 102,
+    "_comment": "Episode 63 Mob - リトルクロコ (Basis: 47, Normal Mob)",
+    "BasisMobId": 47,
+    "Name": "リトルクロコ",
+    "IsBoss": false,
+    "EpisodeId": 63,
+    "Param5": -1
+  },
+  {
+    "Id": 103,
+    "_comment": "Episode 63 Mob - ハイバラウス (Basis: 12, Normal Mob)",
+    "BasisMobId": 12,
+    "Name": "ハイバラウス",
+    "IsBoss": false,
+    "EpisodeId": 63,
+    "Param5": -1
+  },
+  {
+    "Id": 104,
+    "_comment": "Episode 63 Mob - バラウス (Basis: 11, Normal Mob)",
+    "BasisMobId": 11,
+    "Name": "バラウス",
+    "IsBoss": false,
+    "EpisodeId": 63,
+    "Param5": -1
+  },
+  {
+    "Id": 212,
+    "_comment": "Episode 63 Mob - ハイバラウス (Basis: 12, Normal Mob)",
+    "BasisMobId": 12,
+    "Name": "ハイバラウス",
+    "IsBoss": false,
+    "EpisodeId": 63,
+    "Param5": -1
+  },
+  {
+    "Id": 9104,
+    "_comment": "Episode 63 Mob - デカセブン (Basis: 150, Normal Mob)",
+    "BasisMobId": 150,
+    "Name": "デカセブン",
+    "IsBoss": false,
+    "EpisodeId": 63,
+    "Param5": -1
+  },
+  {
+    "Id": 105,
+    "_comment": "Episode 34 Mob - ゲトー (Basis: 8, Normal Mob)",
+    "BasisMobId": 8,
+    "Name": "ゲトー",
+    "IsBoss": false,
+    "EpisodeId": 34,
+    "Param5": -1
+  },
+  {
+    "Id": 106,
+    "_comment": "Episode 34 Mob - モネラ (Basis: 9, Normal Mob)",
+    "BasisMobId": 9,
+    "Name": "モネラ",
+    "IsBoss": false,
+    "EpisodeId": 34,
+    "Param5": -1
+  },
+  {
+    "Id": 107,
+    "_comment": "Episode 34 Mob - ウッド (Basis: 10, Normal Mob)",
+    "BasisMobId": 10,
+    "Name": "ウッド",
+    "IsBoss": false,
+    "EpisodeId": 34,
+    "Param5": -1
+  },
+  {
+    "Id": 9106,
+    "_comment": "Episode 34 Mob - デカセブン (Basis: 150, Normal Mob)",
+    "BasisMobId": 150,
+    "Name": "デカセブン",
+    "IsBoss": false,
+    "EpisodeId": 34,
+    "Param5": -1
+  },
+  {
+    "Id": 50,
+    "_comment": "Episode 14 Mob - ソソ (Basis: 1, Normal Mob)",
+    "BasisMobId": 1,
+    "Name": "ソソ",
+    "IsBoss": false,
+    "EpisodeId": 14,
+    "Param5": -1
+  },
+  {
+    "Id": 51,
+    "_comment": "Episode 14 Mob - ラッチュー (Basis: 7, Normal Mob)",
+    "BasisMobId": 7,
+    "Name": "ラッチュー",
+    "IsBoss": false,
+    "EpisodeId": 14,
+    "Param5": -1
+  },
+  {
+    "Id": 9050,
+    "_comment": "Episode 14 Mob - デカソソ (Basis: 148, Normal Mob)",
+    "BasisMobId": 148,
+    "Name": "デカソソ",
+    "IsBoss": false,
+    "EpisodeId": 14,
+    "Param5": -1
+  },
+  {
+    "Id": 56,
+    "_comment": "Episode 40 Mob - テディ (Basis: 4, Normal Mob)",
+    "BasisMobId": 4,
+    "Name": "テディ",
+    "IsBoss": false,
+    "EpisodeId": 40,
+    "Param5": -1
+  },
+  {
+    "Id": 57,
+    "_comment": "Episode 40 Mob - バラウス (Basis: 11, Normal Mob)",
+    "BasisMobId": 11,
+    "Name": "バラウス",
+    "IsBoss": false,
+    "EpisodeId": 40,
+    "Param5": -1
+  },
+  {
+    "Id": 58,
+    "_comment": "Episode 40 Mob - ハイバラウス (Basis: 12, Normal Mob)",
+    "BasisMobId": 12,
+    "Name": "ハイバラウス",
+    "IsBoss": false,
+    "EpisodeId": 40,
+    "Param5": -1
+  },
+  {
+    "Id": 59,
+    "_comment": "Episode 40 Mob - マルシュ (Basis: 3, Normal Mob)",
+    "BasisMobId": 3,
+    "Name": "マルシュ",
+    "IsBoss": false,
+    "EpisodeId": 40,
+    "Param5": -1
+  },
+  {
+    "Id": 60,
+    "_comment": "Episode 40 Mob - ゲトー (Basis: 8, Normal Mob)",
+    "BasisMobId": 8,
+    "Name": "ゲトー",
+    "IsBoss": false,
+    "EpisodeId": 40,
+    "Param5": -1
+  },
+  {
+    "Id": 192,
+    "_comment": "Episode 40 Mob - ソソ (Basis: 1, Normal Mob)",
+    "BasisMobId": 1,
+    "Name": "ソソ",
+    "IsBoss": false,
+    "EpisodeId": 40,
+    "Param5": -1
+  },
+  {
+    "Id": 9059,
+    "_comment": "Episode 40 Mob - デカルシュ (Basis: 149, Normal Mob)",
+    "BasisMobId": 149,
+    "Name": "デカルシュ",
+    "IsBoss": false,
+    "EpisodeId": 40,
+    "Param5": -1
+  },
+  {
+    "Id": 52,
+    "_comment": "Episode 3 Mob - ゲトー (Basis: 8, Normal Mob)",
+    "BasisMobId": 8,
+    "Name": "ゲトー",
+    "IsBoss": false,
+    "EpisodeId": 3,
+    "Param5": -1
+  },
+  {
+    "Id": 9052,
+    "_comment": "Episode 3 Mob - デカルシュ (Basis: 149, Normal Mob)",
+    "BasisMobId": 149,
+    "Name": "デカルシュ",
+    "IsBoss": false,
+    "EpisodeId": 3,
+    "Param5": -1
+  },
+  {
+    "Id": 61,
+    "_comment": "Episode 7 Mob - マルシュ (Basis: 3, Normal Mob)",
+    "BasisMobId": 3,
+    "Name": "マルシュ",
+    "IsBoss": false,
+    "EpisodeId": 7,
+    "Param5": -1
+  },
+  {
+    "Id": 62,
+    "_comment": "Episode 7 Mob - ゲトー (Basis: 8, Normal Mob)",
+    "BasisMobId": 8,
+    "Name": "ゲトー",
+    "IsBoss": false,
+    "EpisodeId": 7,
+    "Param5": -1
+  },
+  {
+    "Id": 9061,
+    "_comment": "Episode 7 Mob - デカルシュ (Basis: 149, Normal Mob)",
+    "BasisMobId": 149,
+    "Name": "デカルシュ",
+    "IsBoss": false,
+    "EpisodeId": 7,
+    "Param5": -1
+  },
+  {
+    "Id": 108,
+    "_comment": "Episode 98 Mob - ミュロビー (Basis: 29, Normal Mob)",
+    "BasisMobId": 29,
+    "Name": "ミュロビー",
+    "IsBoss": false,
+    "EpisodeId": 98,
+    "Param5": -1
+  },
+  {
+    "Id": 109,
+    "_comment": "Episode 98 Mob - 怒ったミュロビー (Basis: 120, Normal Mob)",
+    "BasisMobId": 120,
+    "Name": "怒ったミュロビー",
+    "IsBoss": false,
+    "EpisodeId": 98,
+    "Param5": -1
+  },
+  {
+    "Id": 128,
+    "_comment": "Episode 98 Mob - 温室の石 (Basis: 61, Normal Mob)",
+    "BasisMobId": 61,
+    "Name": "温室の石",
+    "IsBoss": false,
+    "EpisodeId": 98,
+    "Param5": -1
+  },
+  {
+    "Id": 9108,
+    "_comment": "Episode 98 Mob - デカルシュ (Basis: 149, Normal Mob)",
+    "BasisMobId": 149,
+    "Name": "デカルシュ",
+    "IsBoss": false,
+    "EpisodeId": 98,
+    "Param5": -1
+  },
+  {
+    "Id": 110,
+    "_comment": "Episode 81 Mob - スパービー (Basis: 31, Normal Mob)",
+    "BasisMobId": 31,
+    "Name": "スパービー",
+    "IsBoss": false,
+    "EpisodeId": 81,
+    "Param5": -1
+  },
+  {
+    "Id": 111,
+    "_comment": "Episode 81 Mob - キングスパービー (Basis: 32, Normal Mob)",
+    "BasisMobId": 32,
+    "Name": "キングスパービー",
+    "IsBoss": false,
+    "EpisodeId": 81,
+    "Param5": -1
+  },
+  {
+    "Id": 130,
+    "_comment": "Episode 81 Mob - ヤンヤン (Basis: 52, Normal Mob)",
+    "BasisMobId": 52,
+    "Name": "ヤンヤン",
+    "IsBoss": false,
+    "EpisodeId": 81,
+    "Param5": -1
+  },
+  {
+    "Id": 81,
+    "_comment": "Episode 108 Mob - ネイバー (Basis: 30, Normal Mob)",
+    "BasisMobId": 30,
+    "Name": "ネイバー",
+    "IsBoss": false,
+    "EpisodeId": 108,
+    "Param5": -1
+  },
+  {
+    "Id": 82,
+    "_comment": "Episode 108 Mob - ☆ソソ☆ (Basis: 63, Normal Mob)",
+    "BasisMobId": 63,
+    "Name": "☆ソソ☆",
+    "IsBoss": false,
+    "EpisodeId": 108,
+    "Param5": -1
+  },
+  {
+    "Id": 83,
+    "_comment": "Episode 108 Mob - マルシュ (Basis: 3, Normal Mob)",
+    "BasisMobId": 3,
+    "Name": "マルシュ",
+    "IsBoss": false,
+    "EpisodeId": 108,
+    "Param5": -1
+  },
+  {
+    "Id": 84,
+    "_comment": "Episode 108 Mob - ラッチュー (Basis: 7, Normal Mob)",
+    "BasisMobId": 7,
+    "Name": "ラッチュー",
+    "IsBoss": false,
+    "EpisodeId": 108,
+    "Param5": -1
+  },
+  {
+    "Id": 85,
+    "_comment": "Episode 108 Mob - ハッコウモリ (Basis: 46, Normal Mob)",
+    "BasisMobId": 46,
+    "Name": "ハッコウモリ",
+    "IsBoss": false,
+    "EpisodeId": 108,
+    "Param5": -1
+  },
+  {
+    "Id": 164,
+    "_comment": "Episode 108 Mob - ボボカン (Basis: 5, Normal Mob)",
+    "BasisMobId": 5,
+    "Name": "ボボカン",
+    "IsBoss": false,
+    "EpisodeId": 108,
+    "Param5": -1
+  },
+  {
+    "Id": 165,
+    "_comment": "Episode 108 Mob - バラウス (Basis: 11, Normal Mob)",
+    "BasisMobId": 11,
+    "Name": "バラウス",
+    "IsBoss": false,
+    "EpisodeId": 108,
+    "Param5": -1
+  },
+  {
+    "Id": 166,
+    "_comment": "Episode 108 Mob - ハイバラウス (Basis: 12, Normal Mob)",
+    "BasisMobId": 12,
+    "Name": "ハイバラウス",
+    "IsBoss": false,
+    "EpisodeId": 108,
+    "Param5": -1
+  },
+  {
+    "Id": 71,
+    "_comment": "Episode 73 Mob - ネイバー (Basis: 30, Normal Mob)",
+    "BasisMobId": 30,
+    "Name": "ネイバー",
+    "IsBoss": false,
+    "EpisodeId": 73,
+    "Param5": -1
+  },
+  {
+    "Id": 72,
+    "_comment": "Episode 73 Mob - ☆ソソ☆ (Basis: 63, Normal Mob)",
+    "BasisMobId": 63,
+    "Name": "☆ソソ☆",
+    "IsBoss": false,
+    "EpisodeId": 73,
+    "Param5": -1
+  },
+  {
+    "Id": 73,
+    "_comment": "Episode 73 Mob - ボボカン (Basis: 5, Normal Mob)",
+    "BasisMobId": 5,
+    "Name": "ボボカン",
+    "IsBoss": false,
+    "EpisodeId": 73,
+    "Param5": -1
+  },
+  {
+    "Id": 74,
+    "_comment": "Episode 73 Mob - ラッチュー (Basis: 7, Normal Mob)",
+    "BasisMobId": 7,
+    "Name": "ラッチュー",
+    "IsBoss": false,
+    "EpisodeId": 73,
+    "Param5": -1
+  },
+  {
+    "Id": 75,
+    "_comment": "Episode 73 Mob - ドロシー (Basis: 51, Normal Mob)",
+    "BasisMobId": 51,
+    "Name": "ドロシー",
+    "IsBoss": false,
+    "EpisodeId": 73,
+    "Param5": -1
+  },
+  {
+    "Id": 76,
+    "_comment": "Episode 73 Mob - マルシュ (Basis: 3, Normal Mob)",
+    "BasisMobId": 3,
+    "Name": "マルシュ",
+    "IsBoss": false,
+    "EpisodeId": 73,
+    "Param5": -1
+  },
+  {
+    "Id": 79,
+    "_comment": "Episode 11 Mob - ヤンヤン (Basis: 52, Normal Mob)",
+    "BasisMobId": 52,
+    "Name": "ヤンヤン",
+    "IsBoss": false,
+    "EpisodeId": 11,
+    "Param5": -1
+  },
+  {
+    "Id": 80,
+    "_comment": "Episode 11 Mob - 子ヤンヤン (Basis: 53, Normal Mob)",
+    "BasisMobId": 53,
+    "Name": "子ヤンヤン",
+    "IsBoss": false,
+    "EpisodeId": 11,
+    "Param5": -1
+  },
+  {
+    "Id": 9079,
+    "_comment": "Episode 11 Mob - デカルシュ (Basis: 149, Normal Mob)",
+    "BasisMobId": 149,
+    "Name": "デカルシュ",
+    "IsBoss": false,
+    "EpisodeId": 11,
+    "Param5": -1
+  },
+  {
+    "Id": 53,
+    "_comment": "Episode 67 Mob - ワルグマー (Basis: 17, Normal Mob)",
+    "BasisMobId": 17,
+    "Name": "ワルグマー",
+    "IsBoss": false,
+    "EpisodeId": 67,
+    "Param5": -1
+  },
+  {
+    "Id": 54,
+    "_comment": "Episode 67 Mob - ドワルグマー (Basis: 18, Normal Mob)",
+    "BasisMobId": 18,
+    "Name": "ドワルグマー",
+    "IsBoss": false,
+    "EpisodeId": 67,
+    "Param5": -1
+  },
+  {
+    "Id": 55,
+    "_comment": "Episode 67 Mob - 変熊 (Basis: 19, Episode Boss / Unique)",
+    "BasisMobId": 19,
+    "Name": "変熊",
+    "IsBoss": true,
+    "EpisodeId": 67,
+    "Param5": -1
+  },
+  {
+    "Id": 112,
+    "_comment": "Episode 65 Mob - バラウス (Basis: 11, Normal Mob)",
+    "BasisMobId": 11,
+    "Name": "バラウス",
+    "IsBoss": false,
+    "EpisodeId": 65,
+    "Param5": -1
+  },
+  {
+    "Id": 113,
+    "_comment": "Episode 65 Mob - クロコ (Basis: 33, Normal Mob)",
+    "BasisMobId": 33,
+    "Name": "クロコ",
+    "IsBoss": false,
+    "EpisodeId": 65,
+    "Param5": -1
+  },
+  {
+    "Id": 114,
+    "_comment": "Episode 65 Mob - リトルクロコ (Basis: 47, Normal Mob)",
+    "BasisMobId": 47,
+    "Name": "リトルクロコ",
+    "IsBoss": false,
+    "EpisodeId": 65,
+    "Param5": -1
+  },
+  {
+    "Id": 115,
+    "_comment": "Episode 65 Mob - ゲトー (Basis: 8, Normal Mob)",
+    "BasisMobId": 8,
+    "Name": "ゲトー",
+    "IsBoss": false,
+    "EpisodeId": 65,
+    "Param5": -1
+  },
+  {
+    "Id": 123,
+    "_comment": "Episode 65 Mob - ハイバラウス (Basis: 12, Normal Mob)",
+    "BasisMobId": 12,
+    "Name": "ハイバラウス",
+    "IsBoss": false,
+    "EpisodeId": 65,
+    "Param5": -1
+  },
+  {
+    "Id": 124,
+    "_comment": "Episode 65 Mob - グロービー (Basis: 27, Normal Mob)",
+    "BasisMobId": 27,
+    "Name": "グロービー",
+    "IsBoss": false,
+    "EpisodeId": 65,
+    "Param5": -1
+  },
+  {
+    "Id": 127,
+    "_comment": "Episode 65 Mob - 破壊されるレバー (Basis: 62, Normal Mob)",
+    "BasisMobId": 62,
+    "Name": "破壊されるレバー",
+    "IsBoss": false,
+    "EpisodeId": 65,
+    "Param5": -1
+  },
+  {
+    "Id": 9113,
+    "_comment": "Episode 65 Mob - デカソソ (Basis: 148, Normal Mob)",
+    "BasisMobId": 148,
+    "Name": "デカソソ",
+    "IsBoss": false,
+    "EpisodeId": 65,
+    "Param5": -1
+  },
+  {
+    "Id": 116,
+    "_comment": "Episode 71 Mob - グロービー (Basis: 27, Normal Mob)",
+    "BasisMobId": 27,
+    "Name": "グロービー",
+    "IsBoss": false,
+    "EpisodeId": 71,
+    "Param5": -1
+  },
+  {
+    "Id": 117,
+    "_comment": "Episode 71 Mob - フランソワ (Basis: 28, Episode Boss / Unique)",
+    "BasisMobId": 28,
+    "Name": "フランソワ",
+    "IsBoss": true,
+    "EpisodeId": 71,
+    "Param5": -1
+  },
+  {
+    "Id": 118,
+    "_comment": "Episode 71 Mob - クロコ (Basis: 33, Normal Mob)",
+    "BasisMobId": 33,
+    "Name": "クロコ",
+    "IsBoss": false,
+    "EpisodeId": 71,
+    "Param5": -1
+  },
+  {
+    "Id": 119,
+    "_comment": "Episode 71 Mob - リトルクロコ (Basis: 47, Normal Mob)",
+    "BasisMobId": 47,
+    "Name": "リトルクロコ",
+    "IsBoss": false,
+    "EpisodeId": 71,
+    "Param5": -1
+  },
+  {
+    "Id": 120,
+    "_comment": "Episode 71 Mob - サイクロコ (Basis: 34, Episode Boss / Unique)",
+    "BasisMobId": 34,
+    "Name": "サイクロコ",
+    "IsBoss": true,
+    "EpisodeId": 71,
+    "Param5": -1
+  },
+  {
+    "Id": 129,
+    "_comment": "Episode 71 Mob - ヤンヤン (Basis: 52, Normal Mob)",
+    "BasisMobId": 52,
+    "Name": "ヤンヤン",
+    "IsBoss": false,
+    "EpisodeId": 71,
+    "Param5": -1
+  },
+  {
+    "Id": 63,
+    "_comment": "Episode 20 Mob - ヤンヤン (Basis: 52, Normal Mob)",
+    "BasisMobId": 52,
+    "Name": "ヤンヤン",
+    "IsBoss": false,
+    "EpisodeId": 20,
+    "Param5": -1
+  },
+  {
+    "Id": 64,
+    "_comment": "Episode 20 Mob - 子ヤンヤン (Basis: 53, Normal Mob)",
+    "BasisMobId": 53,
+    "Name": "子ヤンヤン",
+    "IsBoss": false,
+    "EpisodeId": 20,
+    "Param5": -1
+  },
+  {
+    "Id": 65,
+    "_comment": "Episode 20 Mob - モネラ (Basis: 9, Normal Mob)",
+    "BasisMobId": 9,
+    "Name": "モネラ",
+    "IsBoss": false,
+    "EpisodeId": 20,
+    "Param5": -1
+  },
+  {
+    "Id": 248,
+    "_comment": "Episode 20 Mob - バラウス (Basis: 11, Normal Mob)",
+    "BasisMobId": 11,
+    "Name": "バラウス",
+    "IsBoss": false,
+    "EpisodeId": 20,
+    "Param5": -1
+  },
+  {
+    "Id": 249,
+    "_comment": "Episode 20 Mob - バラウス (Basis: 11, Normal Mob)",
+    "BasisMobId": 11,
+    "Name": "バラウス",
+    "IsBoss": false,
+    "EpisodeId": 20,
+    "Param5": -1
+  },
+  {
+    "Id": 9249,
+    "_comment": "Episode 20 Mob - デカルシュ (Basis: 149, Normal Mob)",
+    "BasisMobId": 149,
+    "Name": "デカルシュ",
+    "IsBoss": false,
+    "EpisodeId": 20,
+    "Param5": -1
+  },
+  {
+    "Id": 121,
+    "_comment": "Episode 105 Mob - スパービー (Basis: 31, Normal Mob)",
+    "BasisMobId": 31,
+    "Name": "スパービー",
+    "IsBoss": false,
+    "EpisodeId": 105,
+    "Param5": -1
+  },
+  {
+    "Id": 122,
+    "_comment": "Episode 105 Mob - キングスパービー (Basis: 32, Normal Mob)",
+    "BasisMobId": 32,
+    "Name": "キングスパービー",
+    "IsBoss": false,
+    "EpisodeId": 105,
+    "Param5": -1
+  },
+  {
+    "Id": 126,
+    "_comment": "Episode 105 Mob - ゲトー (Basis: 8, Normal Mob)",
+    "BasisMobId": 8,
+    "Name": "ゲトー",
+    "IsBoss": false,
+    "EpisodeId": 105,
+    "Param5": -1
+  },
+  {
+    "Id": 131,
+    "_comment": "Episode 105 Mob - 温室の石 (Basis: 61, Normal Mob)",
+    "BasisMobId": 61,
+    "Name": "温室の石",
+    "IsBoss": false,
+    "EpisodeId": 105,
+    "Param5": -1
+  },
+  {
+    "Id": 9121,
+    "_comment": "Episode 105 Mob - デカソソ (Basis: 148, Normal Mob)",
+    "BasisMobId": 148,
+    "Name": "デカソソ",
+    "IsBoss": false,
+    "EpisodeId": 105,
+    "Param5": -1
+  },
+  {
+    "Id": 66,
+    "_comment": "Episode 38 Mob - ワルグマー (Basis: 17, Normal Mob)",
+    "BasisMobId": 17,
+    "Name": "ワルグマー",
+    "IsBoss": false,
+    "EpisodeId": 38,
+    "Param5": -1
+  },
+  {
+    "Id": 67,
+    "_comment": "Episode 38 Mob - ドワルグマー (Basis: 18, Normal Mob)",
+    "BasisMobId": 18,
+    "Name": "ドワルグマー",
+    "IsBoss": false,
+    "EpisodeId": 38,
+    "Param5": -1
+  },
+  {
+    "Id": 9066,
+    "_comment": "Episode 38 Mob - デカセブン (Basis: 150, Normal Mob)",
+    "BasisMobId": 150,
+    "Name": "デカセブン",
+    "IsBoss": false,
+    "EpisodeId": 38,
+    "Param5": -1
+  },
+  {
+    "Id": 68,
+    "_comment": "Episode 32 Mob - ヤンヤン (Basis: 52, Normal Mob)",
+    "BasisMobId": 52,
+    "Name": "ヤンヤン",
+    "IsBoss": false,
+    "EpisodeId": 32,
+    "Param5": -1
+  },
+  {
+    "Id": 69,
+    "_comment": "Episode 32 Mob - 子ヤンヤン (Basis: 53, Normal Mob)",
+    "BasisMobId": 53,
+    "Name": "子ヤンヤン",
+    "IsBoss": false,
+    "EpisodeId": 32,
+    "Param5": -1
+  },
+  {
+    "Id": 70,
+    "_comment": "Episode 32 Mob - バラウス (Basis: 11, Normal Mob)",
+    "BasisMobId": 11,
+    "Name": "バラウス",
+    "IsBoss": false,
+    "EpisodeId": 32,
+    "Param5": -1
+  },
+  {
+    "Id": 220,
+    "_comment": "Episode 32 Mob - モネラ (Basis: 9, Normal Mob)",
+    "BasisMobId": 9,
+    "Name": "モネラ",
+    "IsBoss": false,
+    "EpisodeId": 32,
+    "Param5": -1
+  },
+  {
+    "Id": 221,
+    "_comment": "Episode 32 Mob - ゲトー (Basis: 8, Normal Mob)",
+    "BasisMobId": 8,
+    "Name": "ゲトー",
+    "IsBoss": false,
+    "EpisodeId": 32,
+    "Param5": -1
+  },
+  {
+    "Id": 9221,
+    "_comment": "Episode 32 Mob - デカソソ (Basis: 148, Normal Mob)",
+    "BasisMobId": 148,
+    "Name": "デカソソ",
+    "IsBoss": false,
+    "EpisodeId": 32,
+    "Param5": -1
+  },
+  {
+    "Id": 132,
+    "_comment": "Episode 20 Mob - レイス (Basis: 58, Normal Mob)",
+    "BasisMobId": 58,
+    "Name": "レイス",
+    "IsBoss": false,
+    "EpisodeId": 20,
+    "Param5": -1
+  },
+  {
+    "Id": 133,
+    "_comment": "Episode 20 Mob - ゼロセブン (Basis: 57, Normal Mob)",
+    "BasisMobId": 57,
+    "Name": "ゼロセブン",
+    "IsBoss": false,
+    "EpisodeId": 20,
+    "Param5": -1
+  },
+  {
+    "Id": 9133,
+    "_comment": "Episode 20 Mob - デカセブン (Basis: 150, Normal Mob)",
+    "BasisMobId": 150,
+    "Name": "デカセブン",
+    "IsBoss": false,
+    "EpisodeId": 20,
+    "Param5": -1
+  },
+  {
+    "Id": 134,
+    "_comment": "Episode 11 Mob - ゲトー (Basis: 8, Normal Mob)",
+    "BasisMobId": 8,
+    "Name": "ゲトー",
+    "IsBoss": false,
+    "EpisodeId": 11,
+    "Param5": -1
+  },
+  {
+    "Id": 135,
+    "_comment": "Episode 11 Mob - ゼロセブン (Basis: 57, Normal Mob)",
+    "BasisMobId": 57,
+    "Name": "ゼロセブン",
+    "IsBoss": false,
+    "EpisodeId": 11,
+    "Param5": -1
+  },
+  {
+    "Id": 9135,
+    "_comment": "Episode 11 Mob - デカセブン (Basis: 150, Normal Mob)",
+    "BasisMobId": 150,
+    "Name": "デカセブン",
+    "IsBoss": false,
+    "EpisodeId": 11,
+    "Param5": -1
+  },
+  {
+    "Id": 136,
+    "_comment": "Episode 3 Mob - ソソ (Basis: 1, Normal Mob)",
+    "BasisMobId": 1,
+    "Name": "ソソ",
+    "IsBoss": false,
+    "EpisodeId": 3,
+    "Param5": -1
+  },
+  {
+    "Id": 137,
+    "_comment": "Episode 3 Mob - ラッチュー (Basis: 7, Normal Mob)",
+    "BasisMobId": 7,
+    "Name": "ラッチュー",
+    "IsBoss": false,
+    "EpisodeId": 3,
+    "Param5": -1
+  },
+  {
+    "Id": 9137,
+    "_comment": "Episode 3 Mob - デカソソ (Basis: 148, Normal Mob)",
+    "BasisMobId": 148,
+    "Name": "デカソソ",
+    "IsBoss": false,
+    "EpisodeId": 3,
+    "Param5": -1
+  },
+  {
+    "Id": 138,
+    "_comment": "Episode 14 Mob - ソソ (Basis: 1, Normal Mob)",
+    "BasisMobId": 1,
+    "Name": "ソソ",
+    "IsBoss": false,
+    "EpisodeId": 14,
+    "Param5": -1
+  },
+  {
+    "Id": 139,
+    "_comment": "Episode 14 Mob - ソソスケルトン (Basis: 55, Normal Mob)",
+    "BasisMobId": 55,
+    "Name": "ソソスケルトン",
+    "IsBoss": false,
+    "EpisodeId": 14,
+    "Param5": -1
+  },
+  {
+    "Id": 140,
+    "_comment": "Episode 14 Mob - ゼロセブン (Basis: 57, Normal Mob)",
+    "BasisMobId": 57,
+    "Name": "ゼロセブン",
+    "IsBoss": false,
+    "EpisodeId": 14,
+    "Param5": -1
+  },
+  {
+    "Id": 9140,
+    "_comment": "Episode 14 Mob - デカセブン (Basis: 150, Normal Mob)",
+    "BasisMobId": 150,
+    "Name": "デカセブン",
+    "IsBoss": false,
+    "EpisodeId": 14,
+    "Param5": -1
+  },
+  {
+    "Id": 193,
+    "_comment": "Episode 67 Mob - リトルクロコ (Basis: 47, Normal Mob)",
+    "BasisMobId": 47,
+    "Name": "リトルクロコ",
+    "IsBoss": false,
+    "EpisodeId": 67,
+    "Param5": -1
+  },
+  {
+    "Id": 194,
+    "_comment": "Episode 67 Mob - クロコ (Basis: 33, Normal Mob)",
+    "BasisMobId": 33,
+    "Name": "クロコ",
+    "IsBoss": false,
+    "EpisodeId": 67,
+    "Param5": -1
+  },
+  {
+    "Id": 9194,
+    "_comment": "Episode 67 Mob - デカセブン (Basis: 150, Normal Mob)",
+    "BasisMobId": 150,
+    "Name": "デカセブン",
+    "IsBoss": false,
+    "EpisodeId": 67,
+    "Param5": -1
+  },
+  {
+    "Id": 167,
+    "_comment": "Episode 49 Mob - レイス (Basis: 58, Normal Mob)",
+    "BasisMobId": 58,
+    "Name": "レイス",
+    "IsBoss": false,
+    "EpisodeId": 49,
+    "Param5": -1
+  },
+  {
+    "Id": 168,
+    "_comment": "Episode 49 Mob - ゼロセブン (Basis: 57, Normal Mob)",
+    "BasisMobId": 57,
+    "Name": "ゼロセブン",
+    "IsBoss": false,
+    "EpisodeId": 49,
+    "Param5": -1
+  },
+  {
+    "Id": 169,
+    "_comment": "Episode 49 Mob - フォクシー (Basis: 54, Normal Mob)",
+    "BasisMobId": 54,
+    "Name": "フォクシー",
+    "IsBoss": false,
+    "EpisodeId": 49,
+    "Param5": -1
+  },
+  {
+    "Id": 170,
+    "_comment": "Episode 49 Mob - ハロウィーン (Basis: 56, Normal Mob)",
+    "BasisMobId": 56,
+    "Name": "ハロウィーン",
+    "IsBoss": false,
+    "EpisodeId": 49,
+    "Param5": -1
+  },
+  {
+    "Id": 9168,
+    "_comment": "Episode 49 Mob - デカセブン (Basis: 150, Normal Mob)",
+    "BasisMobId": 150,
+    "Name": "デカセブン",
+    "IsBoss": false,
+    "EpisodeId": 49,
+    "Param5": -1
+  },
+  {
+    "Id": 250,
+    "_comment": "Episode 69 Mob - エミリー (Basis: 72, Normal Mob)",
+    "BasisMobId": 72,
+    "Name": "エミリー",
+    "IsBoss": false,
+    "EpisodeId": 69,
+    "Param5": -1
+  },
+  {
+    "Id": 9250,
+    "_comment": "Episode 69 Mob - デカルシュ (Basis: 149, Normal Mob)",
+    "BasisMobId": 149,
+    "Name": "デカルシュ",
+    "IsBoss": false,
+    "EpisodeId": 69,
+    "Param5": -1
+  },
+  {
+    "Id": 222,
+    "_comment": "Episode 43 Mob - ゼロセブン (Basis: 57, Normal Mob)",
+    "BasisMobId": 57,
+    "Name": "ゼロセブン",
+    "IsBoss": false,
+    "EpisodeId": 43,
+    "Param5": -1
+  },
+  {
+    "Id": 223,
+    "_comment": "Episode 43 Mob - ナイトウォーカー (Basis: 84, Normal Mob)",
+    "BasisMobId": 84,
+    "Name": "ナイトウォーカー",
+    "IsBoss": false,
+    "EpisodeId": 43,
+    "Param5": -1
+  },
+  {
+    "Id": 224,
+    "_comment": "Episode 43 Mob - ソソスケルトン (Basis: 55, Normal Mob)",
+    "BasisMobId": 55,
+    "Name": "ソソスケルトン",
+    "IsBoss": false,
+    "EpisodeId": 43,
+    "Param5": -1
+  },
+  {
+    "Id": 225,
+    "_comment": "Episode 43 Mob - リーグ (Basis: 65, Normal Mob)",
+    "BasisMobId": 65,
+    "Name": "リーグ",
+    "IsBoss": false,
+    "EpisodeId": 43,
+    "Param5": -1
+  },
+  {
+    "Id": 226,
+    "_comment": "Episode 43 Mob - ビーオ (Basis: 66, Normal Mob)",
+    "BasisMobId": 66,
+    "Name": "ビーオ",
+    "IsBoss": false,
+    "EpisodeId": 43,
+    "Param5": -1
+  },
+  {
+    "Id": 9222,
+    "_comment": "Episode 43 Mob - デカセブン (Basis: 150, Normal Mob)",
+    "BasisMobId": 150,
+    "Name": "デカセブン",
+    "IsBoss": false,
+    "EpisodeId": 43,
+    "Param5": -1
+  },
+  {
+    "Id": 141,
+    "_comment": "Episode 32 Mob - レイス (Basis: 58, Normal Mob)",
+    "BasisMobId": 58,
+    "Name": "レイス",
+    "IsBoss": false,
+    "EpisodeId": 32,
+    "Param5": -1
+  },
+  {
+    "Id": 9141,
+    "_comment": "Episode 32 Mob - デカセブン (Basis: 150, Normal Mob)",
+    "BasisMobId": 150,
+    "Name": "デカセブン",
+    "IsBoss": false,
+    "EpisodeId": 32,
+    "Param5": -1
+  },
+  {
+    "Id": 227,
+    "_comment": "Episode 1 Mob - レディ (Basis: 36, Normal Mob)",
+    "BasisMobId": 36,
+    "Name": "レディ",
+    "IsBoss": false,
+    "EpisodeId": 1,
+    "Param5": -1
+  },
+  {
+    "Id": 228,
+    "_comment": "Episode 1 Mob - ステディ (Basis: 37, Normal Mob)",
+    "BasisMobId": 37,
+    "Name": "ステディ",
+    "IsBoss": false,
+    "EpisodeId": 1,
+    "Param5": -1
+  },
+  {
+    "Id": 229,
+    "_comment": "Episode 1 Mob - ゴウ (Basis: 38, Normal Mob)",
+    "BasisMobId": 38,
+    "Name": "ゴウ",
+    "IsBoss": false,
+    "EpisodeId": 1,
+    "Param5": -1
+  },
+  {
+    "Id": 230,
+    "_comment": "Episode 1 Mob - ヤンヤン (Basis: 52, Normal Mob)",
+    "BasisMobId": 52,
+    "Name": "ヤンヤン",
+    "IsBoss": false,
+    "EpisodeId": 1,
+    "Param5": -1
+  },
+  {
+    "Id": 142,
+    "_comment": "Episode 7 Mob - ラッチュー (Basis: 7, Normal Mob)",
+    "BasisMobId": 7,
+    "Name": "ラッチュー",
+    "IsBoss": false,
+    "EpisodeId": 7,
+    "Param5": -1
+  },
+  {
+    "Id": 143,
+    "_comment": "Episode 7 Mob - モネラ (Basis: 9, Normal Mob)",
+    "BasisMobId": 9,
+    "Name": "モネラ",
+    "IsBoss": false,
+    "EpisodeId": 7,
+    "Param5": -1
+  },
+  {
+    "Id": 9143,
+    "_comment": "Episode 7 Mob - デカセブン (Basis: 150, Normal Mob)",
+    "BasisMobId": 150,
+    "Name": "デカセブン",
+    "IsBoss": false,
+    "EpisodeId": 7,
+    "Param5": -1
+  },
+  {
+    "Id": 231,
+    "_comment": "Episode 66 Mob - フライングドクロ (Basis: 67, Normal Mob)",
+    "BasisMobId": 67,
+    "Name": "フライングドクロ",
+    "IsBoss": false,
+    "EpisodeId": 66,
+    "Param5": -1
+  },
+  {
+    "Id": 232,
+    "_comment": "Episode 66 Mob - ファントム (Basis: 85, Normal Mob)",
+    "BasisMobId": 85,
+    "Name": "ファントム",
+    "IsBoss": false,
+    "EpisodeId": 66,
+    "Param5": -1
+  },
+  {
+    "Id": 251,
+    "_comment": "Episode 66 Mob - ハッコウモリ (Basis: 46, Normal Mob)",
+    "BasisMobId": 46,
+    "Name": "ハッコウモリ",
+    "IsBoss": false,
+    "EpisodeId": 66,
+    "Param5": -1
+  },
+  {
+    "Id": 144,
+    "_comment": "Episode 46 Mob - フォクシー (Basis: 54, Normal Mob)",
+    "BasisMobId": 54,
+    "Name": "フォクシー",
+    "IsBoss": false,
+    "EpisodeId": 46,
+    "Param5": -1
+  },
+  {
+    "Id": 145,
+    "_comment": "Episode 46 Mob - ピギー (Basis: 93, Normal Mob)",
+    "BasisMobId": 93,
+    "Name": "ピギー",
+    "IsBoss": false,
+    "EpisodeId": 46,
+    "Param5": -1
+  },
+  {
+    "Id": 146,
+    "_comment": "Episode 46 Mob - ゼリーデリー (Basis: 101, Normal Mob)",
+    "BasisMobId": 101,
+    "Name": "ゼリーデリー",
+    "IsBoss": false,
+    "EpisodeId": 46,
+    "Param5": -1
+  },
+  {
+    "Id": 9144,
+    "_comment": "Episode 46 Mob - デカルシュ (Basis: 149, Normal Mob)",
+    "BasisMobId": 149,
+    "Name": "デカルシュ",
+    "IsBoss": false,
+    "EpisodeId": 46,
+    "Param5": -1
+  },
+  {
+    "Id": 180,
+    "_comment": "Episode 38 Mob - リーグ (Basis: 65, Normal Mob)",
+    "BasisMobId": 65,
+    "Name": "リーグ",
+    "IsBoss": false,
+    "EpisodeId": 38,
+    "Param5": -1
+  },
+  {
+    "Id": 181,
+    "_comment": "Episode 38 Mob - ビーオ (Basis: 66, Normal Mob)",
+    "BasisMobId": 66,
+    "Name": "ビーオ",
+    "IsBoss": false,
+    "EpisodeId": 38,
+    "Param5": -1
+  },
+  {
+    "Id": 182,
+    "_comment": "Episode 38 Mob - アンモネラ (Basis: 2, Normal Mob)",
+    "BasisMobId": 2,
+    "Name": "アンモネラ",
+    "IsBoss": false,
+    "EpisodeId": 38,
+    "Param5": -1
+  },
+  {
+    "Id": 183,
+    "_comment": "Episode 38 Mob - ハロウィーン (Basis: 56, Normal Mob)",
+    "BasisMobId": 56,
+    "Name": "ハロウィーン",
+    "IsBoss": false,
+    "EpisodeId": 38,
+    "Param5": -1
+  },
+  {
+    "Id": 9180,
+    "_comment": "Episode 38 Mob - デカソソ (Basis: 148, Normal Mob)",
+    "BasisMobId": 148,
+    "Name": "デカソソ",
+    "IsBoss": false,
+    "EpisodeId": 38,
+    "Param5": -1
+  },
+  {
+    "Id": 211,
+    "_comment": "Episode 55 Mob - ナインフォックス (Basis: 59, Episode Boss / Unique)",
+    "BasisMobId": 59,
+    "Name": "ナインフォックス",
+    "IsBoss": true,
+    "EpisodeId": 55,
+    "Param5": -1
+  },
+  {
+    "Id": 205,
+    "_comment": "Episode 55 Mob - アンモネラ (Basis: 2, Normal Mob)",
+    "BasisMobId": 2,
+    "Name": "アンモネラ",
+    "IsBoss": false,
+    "EpisodeId": 55,
+    "Param5": -1
+  },
+  {
+    "Id": 206,
+    "_comment": "Episode 55 Mob - フォクシー (Basis: 54, Normal Mob)",
+    "BasisMobId": 54,
+    "Name": "フォクシー",
+    "IsBoss": false,
+    "EpisodeId": 55,
+    "Param5": -1
+  },
+  {
+    "Id": 207,
+    "_comment": "Episode 55 Mob - ゼロセブン (Basis: 57, Normal Mob)",
+    "BasisMobId": 57,
+    "Name": "ゼロセブン",
+    "IsBoss": false,
+    "EpisodeId": 55,
+    "Param5": -1
+  },
+  {
+    "Id": 208,
+    "_comment": "Episode 55 Mob - レイス (Basis: 58, Normal Mob)",
+    "BasisMobId": 58,
+    "Name": "レイス",
+    "IsBoss": false,
+    "EpisodeId": 55,
+    "Param5": -1
+  },
+  {
+    "Id": 209,
+    "_comment": "Episode 55 Mob - リーグ (Basis: 65, Normal Mob)",
+    "BasisMobId": 65,
+    "Name": "リーグ",
+    "IsBoss": false,
+    "EpisodeId": 55,
+    "Param5": -1
+  },
+  {
+    "Id": 210,
+    "_comment": "Episode 55 Mob - ビーオ (Basis: 66, Normal Mob)",
+    "BasisMobId": 66,
+    "Name": "ビーオ",
+    "IsBoss": false,
+    "EpisodeId": 55,
+    "Param5": -1
+  },
+  {
+    "Id": 9207,
+    "_comment": "Episode 55 Mob - デカセブン (Basis: 150, Normal Mob)",
+    "BasisMobId": 150,
+    "Name": "デカセブン",
+    "IsBoss": false,
+    "EpisodeId": 55,
+    "Param5": -1
+  },
+  {
+    "Id": 213,
+    "_comment": "Episode 30 Mob - ナイトウォーカー (Basis: 84, Normal Mob)",
+    "BasisMobId": 84,
+    "Name": "ナイトウォーカー",
+    "IsBoss": false,
+    "EpisodeId": 30,
+    "Param5": -1
+  },
+  {
+    "Id": 214,
+    "_comment": "Episode 30 Mob - リーグ (Basis: 65, Normal Mob)",
+    "BasisMobId": 65,
+    "Name": "リーグ",
+    "IsBoss": false,
+    "EpisodeId": 30,
+    "Param5": -1
+  },
+  {
+    "Id": 215,
+    "_comment": "Episode 30 Mob - ビーオ (Basis: 66, Normal Mob)",
+    "BasisMobId": 66,
+    "Name": "ビーオ",
+    "IsBoss": false,
+    "EpisodeId": 30,
+    "Param5": -1
+  },
+  {
+    "Id": 174,
+    "_comment": "Episode 68 Mob - もんたる (Basis: 71, Normal Mob)",
+    "BasisMobId": 71,
+    "Name": "もんたる",
+    "IsBoss": false,
+    "EpisodeId": 68,
+    "Param5": -1
+  },
+  {
+    "Id": 175,
+    "_comment": "Episode 68 Mob - 仙女 (Basis: 69, Normal Mob)",
+    "BasisMobId": 69,
+    "Name": "仙女",
+    "IsBoss": false,
+    "EpisodeId": 68,
+    "Param5": -1
+  },
+  {
+    "Id": 176,
+    "_comment": "Episode 68 Mob - 金大鑑 (Basis: 70, Normal Mob)",
+    "BasisMobId": 70,
+    "Name": "金大鑑",
+    "IsBoss": false,
+    "EpisodeId": 68,
+    "Param5": -1
+  },
+  {
+    "Id": 195,
+    "_comment": "Episode 73 Mob - もんたる (Basis: 71, Normal Mob)",
+    "BasisMobId": 71,
+    "Name": "もんたる",
+    "IsBoss": false,
+    "EpisodeId": 73,
+    "Param5": -1
+  },
+  {
+    "Id": 196,
+    "_comment": "Episode 73 Mob - 仙女 (Basis: 69, Normal Mob)",
+    "BasisMobId": 69,
+    "Name": "仙女",
+    "IsBoss": false,
+    "EpisodeId": 73,
+    "Param5": -1
+  },
+  {
+    "Id": 197,
+    "_comment": "Episode 73 Mob - 金大鑑 (Basis: 70, Normal Mob)",
+    "BasisMobId": 70,
+    "Name": "金大鑑",
+    "IsBoss": false,
+    "EpisodeId": 73,
+    "Param5": -1
+  },
+  {
+    "Id": 198,
+    "_comment": "Episode 73 Mob - フクのカメ (Basis: 82, Normal Mob)",
+    "BasisMobId": 82,
+    "Name": "フクのカメ",
+    "IsBoss": false,
+    "EpisodeId": 73,
+    "Param5": -1
+  },
+  {
+    "Id": 199,
+    "_comment": "Episode 73 Mob - 下郎蛙 (Basis: 80, Normal Mob)",
+    "BasisMobId": 80,
+    "Name": "下郎蛙",
+    "IsBoss": false,
+    "EpisodeId": 73,
+    "Param5": -1
+  },
+  {
+    "Id": 200,
+    "_comment": "Episode 73 Mob - 狐子 (Basis: 68, Normal Mob)",
+    "BasisMobId": 68,
+    "Name": "狐子",
+    "IsBoss": false,
+    "EpisodeId": 73,
+    "Param5": -1
+  },
+  {
+    "Id": 201,
+    "_comment": "Episode 73 Mob - デンプ (Basis: 81, Normal Mob)",
+    "BasisMobId": 81,
+    "Name": "デンプ",
+    "IsBoss": false,
+    "EpisodeId": 73,
+    "Param5": -1
+  },
+  {
+    "Id": 147,
+    "_comment": "Episode 63 Mob - グロービー (Basis: 27, Normal Mob)",
+    "BasisMobId": 27,
+    "Name": "グロービー",
+    "IsBoss": false,
+    "EpisodeId": 63,
+    "Param5": -1
+  },
+  {
+    "Id": 148,
+    "_comment": "Episode 63 Mob - ハッコウモリ (Basis: 46, Normal Mob)",
+    "BasisMobId": 46,
+    "Name": "ハッコウモリ",
+    "IsBoss": false,
+    "EpisodeId": 63,
+    "Param5": -1
+  },
+  {
+    "Id": 149,
+    "_comment": "Episode 63 Mob - クロコ (Basis: 33, Normal Mob)",
+    "BasisMobId": 33,
+    "Name": "クロコ",
+    "IsBoss": false,
+    "EpisodeId": 63,
+    "Param5": -1
+  },
+  {
+    "Id": 150,
+    "_comment": "Episode 63 Mob - サイクロコ (Basis: 34, Episode Boss / Unique)",
+    "BasisMobId": 34,
+    "Name": "サイクロコ",
+    "IsBoss": true,
+    "EpisodeId": 63,
+    "Param5": -1
+  },
+  {
+    "Id": 173,
+    "_comment": "Episode 94 Mob - サイクロコ (Basis: 34, Episode Boss / Unique)",
+    "BasisMobId": 34,
+    "Name": "サイクロコ",
+    "IsBoss": true,
+    "EpisodeId": 94,
+    "Param5": -1
+  },
+  {
+    "Id": 171,
+    "_comment": "Episode 94 Mob - リトルクロコ (Basis: 47, Normal Mob)",
+    "BasisMobId": 47,
+    "Name": "リトルクロコ",
+    "IsBoss": false,
+    "EpisodeId": 94,
+    "Param5": -1
+  },
+  {
+    "Id": 172,
+    "_comment": "Episode 94 Mob - クロコ (Basis: 33, Normal Mob)",
+    "BasisMobId": 33,
+    "Name": "クロコ",
+    "IsBoss": false,
+    "EpisodeId": 94,
+    "Param5": -1
+  },
+  {
+    "Id": 151,
+    "_comment": "Episode 89 Mob - ハロウィーン (Basis: 56, Normal Mob)",
+    "BasisMobId": 56,
+    "Name": "ハロウィーン",
+    "IsBoss": false,
+    "EpisodeId": 89,
+    "Param5": -1
+  },
+  {
+    "Id": 152,
+    "_comment": "Episode 89 Mob - アンモネラ (Basis: 2, Normal Mob)",
+    "BasisMobId": 2,
+    "Name": "アンモネラ",
+    "IsBoss": false,
+    "EpisodeId": 89,
+    "Param5": -1
+  },
+  {
+    "Id": 153,
+    "_comment": "Episode 89 Mob - フォクシー (Basis: 54, Normal Mob)",
+    "BasisMobId": 54,
+    "Name": "フォクシー",
+    "IsBoss": false,
+    "EpisodeId": 89,
+    "Param5": -1
+  },
+  {
+    "Id": 154,
+    "_comment": "Episode 89 Mob - ナイトウォーカー (Basis: 84, Normal Mob)",
+    "BasisMobId": 84,
+    "Name": "ナイトウォーカー",
+    "IsBoss": false,
+    "EpisodeId": 89,
+    "Param5": -1
+  },
+  {
+    "Id": 155,
+    "_comment": "Episode 89 Mob - ゼロセブン (Basis: 57, Normal Mob)",
+    "BasisMobId": 57,
+    "Name": "ゼロセブン",
+    "IsBoss": false,
+    "EpisodeId": 89,
+    "Param5": -1
+  },
+  {
+    "Id": 156,
+    "_comment": "Episode 89 Mob - レディ (Basis: 36, Normal Mob)",
+    "BasisMobId": 36,
+    "Name": "レディ",
+    "IsBoss": false,
+    "EpisodeId": 89,
+    "Param5": -1
+  },
+  {
+    "Id": 157,
+    "_comment": "Episode 89 Mob - ステディ (Basis: 37, Normal Mob)",
+    "BasisMobId": 37,
+    "Name": "ステディ",
+    "IsBoss": false,
+    "EpisodeId": 89,
+    "Param5": -1
+  },
+  {
+    "Id": 158,
+    "_comment": "Episode 89 Mob - ゴウ (Basis: 38, Normal Mob)",
+    "BasisMobId": 38,
+    "Name": "ゴウ",
+    "IsBoss": false,
+    "EpisodeId": 89,
+    "Param5": -1
+  },
+  {
+    "Id": 159,
+    "_comment": "Episode 89 Mob - ファントム (Basis: 85, Normal Mob)",
+    "BasisMobId": 85,
+    "Name": "ファントム",
+    "IsBoss": false,
+    "EpisodeId": 89,
+    "Param5": -1
+  },
+  {
+    "Id": 160,
+    "_comment": "Episode 89 Mob - リーグ (Basis: 65, Normal Mob)",
+    "BasisMobId": 65,
+    "Name": "リーグ",
+    "IsBoss": false,
+    "EpisodeId": 89,
+    "Param5": -1
+  },
+  {
+    "Id": 161,
+    "_comment": "Episode 89 Mob - ビーオ (Basis: 66, Normal Mob)",
+    "BasisMobId": 66,
+    "Name": "ビーオ",
+    "IsBoss": false,
+    "EpisodeId": 89,
+    "Param5": -1
+  },
+  {
+    "Id": 162,
+    "_comment": "Episode 89 Mob - メガデス (Basis: 60, Episode Boss / Unique)",
+    "BasisMobId": 60,
+    "Name": "メガデス",
+    "IsBoss": true,
+    "EpisodeId": 89,
+    "Param5": -1
+  },
+  {
+    "Id": 163,
+    "_comment": "Episode 89 Mob - メガデス (Basis: 60, Episode Boss / Unique)",
+    "BasisMobId": 60,
+    "Name": "メガデス",
+    "IsBoss": true,
+    "EpisodeId": 89,
+    "Param5": -1
+  },
+  {
+    "Id": 184,
+    "_comment": "Episode 77 Mob - 仙女 (Basis: 69, Normal Mob)",
+    "BasisMobId": 69,
+    "Name": "仙女",
+    "IsBoss": false,
+    "EpisodeId": 77,
+    "Param5": -1
+  },
+  {
+    "Id": 185,
+    "_comment": "Episode 77 Mob - 金大鑑 (Basis: 70, Normal Mob)",
+    "BasisMobId": 70,
+    "Name": "金大鑑",
+    "IsBoss": false,
+    "EpisodeId": 77,
+    "Param5": -1
+  },
+  {
+    "Id": 186,
+    "_comment": "Episode 77 Mob - もんたる (Basis: 71, Normal Mob)",
+    "BasisMobId": 71,
+    "Name": "もんたる",
+    "IsBoss": false,
+    "EpisodeId": 77,
+    "Param5": -1
+  },
+  {
+    "Id": 187,
+    "_comment": "Episode 77 Mob - 狐子 (Basis: 68, Normal Mob)",
+    "BasisMobId": 68,
+    "Name": "狐子",
+    "IsBoss": false,
+    "EpisodeId": 77,
+    "Param5": -1
+  },
+  {
+    "Id": 188,
+    "_comment": "Episode 77 Mob - デンプ (Basis: 81, Normal Mob)",
+    "BasisMobId": 81,
+    "Name": "デンプ",
+    "IsBoss": false,
+    "EpisodeId": 77,
+    "Param5": -1
+  },
+  {
+    "Id": 189,
+    "_comment": "Episode 77 Mob - 下郎蛙 (Basis: 80, Normal Mob)",
+    "BasisMobId": 80,
+    "Name": "下郎蛙",
+    "IsBoss": false,
+    "EpisodeId": 77,
+    "Param5": -1
+  },
+  {
+    "Id": 190,
+    "_comment": "Episode 77 Mob - フクのカメ (Basis: 82, Normal Mob)",
+    "BasisMobId": 82,
+    "Name": "フクのカメ",
+    "IsBoss": false,
+    "EpisodeId": 77,
+    "Param5": -1
+  },
+  {
+    "Id": 191,
+    "_comment": "Episode 77 Mob - 守護仙女 (Basis: 79, Episode Boss / Unique)",
+    "BasisMobId": 79,
+    "Name": "守護仙女",
+    "IsBoss": true,
+    "EpisodeId": 77,
+    "Param5": -1
+  },
+  {
+    "Id": 177,
+    "_comment": "Episode 29 Mob - ゼロセブン (Basis: 57, Normal Mob)",
+    "BasisMobId": 57,
+    "Name": "ゼロセブン",
+    "IsBoss": false,
+    "EpisodeId": 29,
+    "Param5": -1
+  },
+  {
+    "Id": 178,
+    "_comment": "Episode 29 Mob - ソソスケルトン (Basis: 55, Normal Mob)",
+    "BasisMobId": 55,
+    "Name": "ソソスケルトン",
+    "IsBoss": false,
+    "EpisodeId": 29,
+    "Param5": -1
+  },
+  {
+    "Id": 179,
+    "_comment": "Episode 29 Mob - ファントム (Basis: 85, Episode Boss / Unique)",
+    "BasisMobId": 85,
+    "Name": "ファントム",
+    "IsBoss": true,
+    "EpisodeId": 29,
+    "Param5": -1
+  },
+  {
+    "Id": 216,
+    "_comment": "Episode 79 Mob - レディ (Basis: 36, Normal Mob)",
+    "BasisMobId": 36,
+    "Name": "レディ",
+    "IsBoss": false,
+    "EpisodeId": 79,
+    "Param5": -1
+  },
+  {
+    "Id": 217,
+    "_comment": "Episode 79 Mob - ステディ (Basis: 37, Normal Mob)",
+    "BasisMobId": 37,
+    "Name": "ステディ",
+    "IsBoss": false,
+    "EpisodeId": 79,
+    "Param5": -1
+  },
+  {
+    "Id": 218,
+    "_comment": "Episode 79 Mob - ヤンヤン (Basis: 52, Normal Mob)",
+    "BasisMobId": 52,
+    "Name": "ヤンヤン",
+    "IsBoss": false,
+    "EpisodeId": 79,
+    "Param5": -1
+  },
+  {
+    "Id": 219,
+    "_comment": "Episode 79 Mob - クロコ (Basis: 33, Normal Mob)",
+    "BasisMobId": 33,
+    "Name": "クロコ",
+    "IsBoss": false,
+    "EpisodeId": 79,
+    "Param5": -1
+  },
+  {
+    "Id": 9216,
+    "_comment": "Episode 79 Mob - デカセブン (Basis: 150, Normal Mob)",
+    "BasisMobId": 150,
+    "Name": "デカセブン",
+    "IsBoss": false,
+    "EpisodeId": 79,
+    "Param5": -1
+  },
+  {
+    "Id": 233,
+    "_comment": "Episode 111 Mob - レディ (Basis: 36, Normal Mob)",
+    "BasisMobId": 36,
+    "Name": "レディ",
+    "IsBoss": false,
+    "EpisodeId": 111,
+    "Param5": -1
+  },
+  {
+    "Id": 234,
+    "_comment": "Episode 111 Mob - ステディ (Basis: 37, Normal Mob)",
+    "BasisMobId": 37,
+    "Name": "ステディ",
+    "IsBoss": false,
+    "EpisodeId": 111,
+    "Param5": -1
+  },
+  {
+    "Id": 235,
+    "_comment": "Episode 111 Mob - ゴウ (Basis: 38, Normal Mob)",
+    "BasisMobId": 38,
+    "Name": "ゴウ",
+    "IsBoss": false,
+    "EpisodeId": 111,
+    "Param5": -1
+  },
+  {
+    "Id": 236,
+    "_comment": "Episode 111 Mob - バラウス (Basis: 11, Normal Mob)",
+    "BasisMobId": 11,
+    "Name": "バラウス",
+    "IsBoss": false,
+    "EpisodeId": 111,
+    "Param5": -1
+  },
+  {
+    "Id": 237,
+    "_comment": "Episode 111 Mob - ハイバラウス (Basis: 12, Normal Mob)",
+    "BasisMobId": 12,
+    "Name": "ハイバラウス",
+    "IsBoss": false,
+    "EpisodeId": 111,
+    "Param5": -1
+  },
+  {
+    "Id": 238,
+    "_comment": "Episode 111 Mob - ヤンヤン (Basis: 52, Normal Mob)",
+    "BasisMobId": 52,
+    "Name": "ヤンヤン",
+    "IsBoss": false,
+    "EpisodeId": 111,
+    "Param5": -1
+  },
+  {
+    "Id": 239,
+    "_comment": "Episode 111 Mob - 子ヤンヤン (Basis: 53, Normal Mob)",
+    "BasisMobId": 53,
+    "Name": "子ヤンヤン",
+    "IsBoss": false,
+    "EpisodeId": 111,
+    "Param5": -1
+  },
+  {
+    "Id": 240,
+    "_comment": "Episode 111 Mob - ウェアウルフ (Basis: 39, Episode Boss / Unique)",
+    "BasisMobId": 39,
+    "Name": "ウェアウルフ",
+    "IsBoss": true,
+    "EpisodeId": 111,
+    "Param5": -1
+  },
+  {
+    "Id": 202,
+    "_comment": "Episode 83 Mob - スパービー (Basis: 31, Normal Mob)",
+    "BasisMobId": 31,
+    "Name": "スパービー",
+    "IsBoss": false,
+    "EpisodeId": 83,
+    "Param5": -1
+  },
+  {
+    "Id": 203,
+    "_comment": "Episode 83 Mob - ステディ (Basis: 37, Normal Mob)",
+    "BasisMobId": 37,
+    "Name": "ステディ",
+    "IsBoss": false,
+    "EpisodeId": 83,
+    "Param5": -1
+  },
+  {
+    "Id": 204,
+    "_comment": "Episode 83 Mob - レディ (Basis: 36, Normal Mob)",
+    "BasisMobId": 36,
+    "Name": "レディ",
+    "IsBoss": false,
+    "EpisodeId": 83,
+    "Param5": -1
+  },
+  {
+    "Id": 9202,
+    "_comment": "Episode 83 Mob - デカセブン (Basis: 150, Normal Mob)",
+    "BasisMobId": 150,
+    "Name": "デカセブン",
+    "IsBoss": false,
+    "EpisodeId": 83,
+    "Param5": -1
+  },
+  {
+    "Id": 241,
+    "_comment": "Episode 92 Mob - ハイバラウス (Basis: 12, Normal Mob)",
+    "BasisMobId": 12,
+    "Name": "ハイバラウス",
+    "IsBoss": false,
+    "EpisodeId": 92,
+    "Param5": -1
+  },
+  {
+    "Id": 242,
+    "_comment": "Episode 92 Mob - ミュロビー (Basis: 29, Normal Mob)",
+    "BasisMobId": 29,
+    "Name": "ミュロビー",
+    "IsBoss": false,
+    "EpisodeId": 92,
+    "Param5": -1
+  },
+  {
+    "Id": 243,
+    "_comment": "Episode 92 Mob - ハッコウモリ (Basis: 46, Normal Mob)",
+    "BasisMobId": 46,
+    "Name": "ハッコウモリ",
+    "IsBoss": false,
+    "EpisodeId": 92,
+    "Param5": -1
+  },
+  {
+    "Id": 244,
+    "_comment": "Episode 92 Mob - クロコ (Basis: 33, Normal Mob)",
+    "BasisMobId": 33,
+    "Name": "クロコ",
+    "IsBoss": false,
+    "EpisodeId": 92,
+    "Param5": -1
+  },
+  {
+    "Id": 245,
+    "_comment": "Episode 92 Mob - グロービー (Basis: 27, Normal Mob)",
+    "BasisMobId": 27,
+    "Name": "グロービー",
+    "IsBoss": false,
+    "EpisodeId": 92,
+    "Param5": -1
+  },
+  {
+    "Id": 246,
+    "_comment": "Episode 92 Mob - フランソワ (Basis: 28, Episode Boss / Unique)",
+    "BasisMobId": 28,
+    "Name": "フランソワ",
+    "IsBoss": true,
+    "EpisodeId": 92,
+    "Param5": -1
+  },
+  {
+    "Id": 247,
+    "_comment": "Episode 1 Mob - ソソ (Basis: 1, Normal Mob)",
+    "BasisMobId": 1,
+    "Name": "ソソ",
+    "IsBoss": false,
+    "EpisodeId": 1,
+    "Param5": -1
+  },
+  {
+    "Id": 9247,
+    "_comment": "Episode 1 Mob - デカソソ (Basis: 148, Normal Mob)",
+    "BasisMobId": 148,
+    "Name": "デカソソ",
+    "IsBoss": false,
+    "EpisodeId": 1,
+    "Param5": -1
+  },
+  {
+    "Id": 281,
+    "_comment": "Episode 23 Mob - アンモネラ (Basis: 2, Normal Mob)",
+    "BasisMobId": 2,
+    "Name": "アンモネラ",
+    "IsBoss": false,
+    "EpisodeId": 23,
+    "Param5": -1
+  },
+  {
+    "Id": 282,
+    "_comment": "Episode 23 Mob - モネラ (Basis: 9, Normal Mob)",
+    "BasisMobId": 9,
+    "Name": "モネラ",
+    "IsBoss": false,
+    "EpisodeId": 23,
+    "Param5": -1
+  },
+  {
+    "Id": 283,
+    "_comment": "Episode 23 Mob - ラッチュー (Basis: 7, Normal Mob)",
+    "BasisMobId": 7,
+    "Name": "ラッチュー",
+    "IsBoss": false,
+    "EpisodeId": 23,
+    "Param5": -1
+  },
+  {
+    "Id": 284,
+    "_comment": "Episode 23 Mob - ボボカン (Basis: 5, Normal Mob)",
+    "BasisMobId": 5,
+    "Name": "ボボカン",
+    "IsBoss": false,
+    "EpisodeId": 23,
+    "Param5": -1
+  },
+  {
+    "Id": 9284,
+    "_comment": "Episode 23 Mob - デカルシュ (Basis: 149, Normal Mob)",
+    "BasisMobId": 149,
+    "Name": "デカルシュ",
+    "IsBoss": false,
+    "EpisodeId": 23,
+    "Param5": -1
+  },
+  {
+    "Id": 285,
+    "_comment": "Episode 29 Mob - アンモネラ (Basis: 2, Normal Mob)",
+    "BasisMobId": 2,
+    "Name": "アンモネラ",
+    "IsBoss": false,
+    "EpisodeId": 29,
+    "Param5": -1
+  },
+  {
+    "Id": 286,
+    "_comment": "Episode 29 Mob - ラッチュー (Basis: 7, Normal Mob)",
+    "BasisMobId": 7,
+    "Name": "ラッチュー",
+    "IsBoss": false,
+    "EpisodeId": 29,
+    "Param5": -1
+  },
+  {
+    "Id": 287,
+    "_comment": "Episode 29 Mob - マルシュ (Basis: 3, Normal Mob)",
+    "BasisMobId": 3,
+    "Name": "マルシュ",
+    "IsBoss": false,
+    "EpisodeId": 29,
+    "Param5": -1
+  },
+  {
+    "Id": 288,
+    "_comment": "Episode 29 Mob - ボボカン (Basis: 5, Normal Mob)",
+    "BasisMobId": 5,
+    "Name": "ボボカン",
+    "IsBoss": false,
+    "EpisodeId": 29,
+    "Param5": -1
+  },
+  {
+    "Id": 294,
+    "_comment": "Episode 29 Mob - ドロシー (Basis: 51, Normal Mob)",
+    "BasisMobId": 51,
+    "Name": "ドロシー",
+    "IsBoss": false,
+    "EpisodeId": 29,
+    "Param5": -1
+  },
+  {
+    "Id": 9287,
+    "_comment": "Episode 29 Mob - デカルシュ (Basis: 149, Normal Mob)",
+    "BasisMobId": 149,
+    "Name": "デカルシュ",
+    "IsBoss": false,
+    "EpisodeId": 29,
+    "Param5": -1
+  },
+  {
+    "Id": 254,
+    "_comment": "Episode 49 Mob - マルシュ (Basis: 3, Normal Mob)",
+    "BasisMobId": 3,
+    "Name": "マルシュ",
+    "IsBoss": false,
+    "EpisodeId": 49,
+    "Param5": -1
+  },
+  {
+    "Id": 255,
+    "_comment": "Episode 49 Mob - テディ (Basis: 4, Normal Mob)",
+    "BasisMobId": 4,
+    "Name": "テディ",
+    "IsBoss": false,
+    "EpisodeId": 49,
+    "Param5": -1
+  },
+  {
+    "Id": 256,
+    "_comment": "Episode 49 Mob - ボボカン (Basis: 5, Normal Mob)",
+    "BasisMobId": 5,
+    "Name": "ボボカン",
+    "IsBoss": false,
+    "EpisodeId": 49,
+    "Param5": -1
+  },
+  {
+    "Id": 257,
+    "_comment": "Episode 49 Mob - ドロシー (Basis: 51, Normal Mob)",
+    "BasisMobId": 51,
+    "Name": "ドロシー",
+    "IsBoss": false,
+    "EpisodeId": 49,
+    "Param5": -1
+  },
+  {
+    "Id": 9254,
+    "_comment": "Episode 49 Mob - デカルシュ (Basis: 149, Normal Mob)",
+    "BasisMobId": 149,
+    "Name": "デカルシュ",
+    "IsBoss": false,
+    "EpisodeId": 49,
+    "Param5": -1
+  },
+  {
+    "Id": 252,
+    "_comment": "Episode 43 Mob - ワルグマー (Basis: 17, Normal Mob)",
+    "BasisMobId": 17,
+    "Name": "ワルグマー",
+    "IsBoss": false,
+    "EpisodeId": 43,
+    "Param5": -1
+  },
+  {
+    "Id": 253,
+    "_comment": "Episode 43 Mob - ドワルグマー (Basis: 18, Normal Mob)",
+    "BasisMobId": 18,
+    "Name": "ドワルグマー",
+    "IsBoss": false,
+    "EpisodeId": 43,
+    "Param5": -1
+  },
+  {
+    "Id": 9252,
+    "_comment": "Episode 43 Mob - デカソソ (Basis: 148, Normal Mob)",
+    "BasisMobId": 148,
+    "Name": "デカソソ",
+    "IsBoss": false,
+    "EpisodeId": 43,
+    "Param5": -1
+  },
+  {
+    "Id": 315,
+    "_comment": "Episode 59 Mob - ヤンヤン (Basis: 52, Normal Mob)",
+    "BasisMobId": 52,
+    "Name": "ヤンヤン",
+    "IsBoss": false,
+    "EpisodeId": 59,
+    "Param5": -1
+  },
+  {
+    "Id": 316,
+    "_comment": "Episode 59 Mob - モネラ (Basis: 9, Normal Mob)",
+    "BasisMobId": 9,
+    "Name": "モネラ",
+    "IsBoss": false,
+    "EpisodeId": 59,
+    "Param5": -1
+  },
+  {
+    "Id": 317,
+    "_comment": "Episode 59 Mob - 4次元ウッドヘリアン (Basis: 117, Normal Mob)",
+    "BasisMobId": 117,
+    "Name": "4次元ウッドヘリアン",
+    "IsBoss": false,
+    "EpisodeId": 59,
+    "Param5": -1
+  },
+  {
+    "Id": 318,
+    "_comment": "Episode 59 Mob - ウッド (Basis: 10, Normal Mob)",
+    "BasisMobId": 10,
+    "Name": "ウッド",
+    "IsBoss": false,
+    "EpisodeId": 59,
+    "Param5": -1
+  },
+  {
+    "Id": 329,
+    "_comment": "Episode 59 Mob - ゼリーデリー (Basis: 101, Normal Mob)",
+    "BasisMobId": 101,
+    "Name": "ゼリーデリー",
+    "IsBoss": false,
+    "EpisodeId": 59,
+    "Param5": -1
+  },
+  {
+    "Id": 6317,
+    "_comment": "Episode 59 Mob - デカソソ (Basis: 148, Normal Mob)",
+    "BasisMobId": 148,
+    "Name": "デカソソ",
+    "IsBoss": false,
+    "EpisodeId": 59,
+    "Param5": -1
+  },
+  {
+    "Id": 266,
+    "_comment": "Episode 5 Mob - ゲトー (Basis: 8, Normal Mob)",
+    "BasisMobId": 8,
+    "Name": "ゲトー",
+    "IsBoss": false,
+    "EpisodeId": 5,
+    "Param5": -1
+  },
+  {
+    "Id": 267,
+    "_comment": "Episode 5 Mob - ソソスケルトン (Basis: 55, Normal Mob)",
+    "BasisMobId": 55,
+    "Name": "ソソスケルトン",
+    "IsBoss": false,
+    "EpisodeId": 5,
+    "Param5": -1
+  },
+  {
+    "Id": 9267,
+    "_comment": "Episode 5 Mob - デカセブン (Basis: 150, Normal Mob)",
+    "BasisMobId": 150,
+    "Name": "デカセブン",
+    "IsBoss": false,
+    "EpisodeId": 5,
+    "Param5": -1
+  },
+  {
+    "Id": 258,
+    "_comment": "Episode 17 Mob - ラッチュー (Basis: 7, Normal Mob)",
+    "BasisMobId": 7,
+    "Name": "ラッチュー",
+    "IsBoss": false,
+    "EpisodeId": 17,
+    "Param5": -1
+  },
+  {
+    "Id": 9258,
+    "_comment": "Episode 17 Mob - デカセブン (Basis: 150, Normal Mob)",
+    "BasisMobId": 150,
+    "Name": "デカセブン",
+    "IsBoss": false,
+    "EpisodeId": 17,
+    "Param5": -1
+  },
+  {
+    "Id": 268,
+    "_comment": "Episode 26 Mob - モネラ (Basis: 9, Normal Mob)",
+    "BasisMobId": 9,
+    "Name": "モネラ",
+    "IsBoss": false,
+    "EpisodeId": 26,
+    "Param5": -1
+  },
+  {
+    "Id": 269,
+    "_comment": "Episode 26 Mob - ゼリーデリー (Basis: 101, Normal Mob)",
+    "BasisMobId": 101,
+    "Name": "ゼリーデリー",
+    "IsBoss": false,
+    "EpisodeId": 26,
+    "Param5": -1
+  },
+  {
+    "Id": 270,
+    "_comment": "Episode 26 Mob - ラッチュー (Basis: 7, Normal Mob)",
+    "BasisMobId": 7,
+    "Name": "ラッチュー",
+    "IsBoss": false,
+    "EpisodeId": 26,
+    "Param5": -1
+  },
+  {
+    "Id": 9270,
+    "_comment": "Episode 26 Mob - デカソソ (Basis: 148, Normal Mob)",
+    "BasisMobId": 148,
+    "Name": "デカソソ",
+    "IsBoss": false,
+    "EpisodeId": 26,
+    "Param5": -1
+  },
+  {
+    "Id": 259,
+    "_comment": "Episode 52 Mob - ソソマミー (Basis: 96, Normal Mob)",
+    "BasisMobId": 96,
+    "Name": "ソソマミー",
+    "IsBoss": false,
+    "EpisodeId": 52,
+    "Param5": -1
+  },
+  {
+    "Id": 260,
+    "_comment": "Episode 52 Mob - ハロウィーン (Basis: 56, Normal Mob)",
+    "BasisMobId": 56,
+    "Name": "ハロウィーン",
+    "IsBoss": false,
+    "EpisodeId": 52,
+    "Param5": -1
+  },
+  {
+    "Id": 261,
+    "_comment": "Episode 52 Mob - リーグ (Basis: 65, Normal Mob)",
+    "BasisMobId": 65,
+    "Name": "リーグ",
+    "IsBoss": false,
+    "EpisodeId": 52,
+    "Param5": -1
+  },
+  {
+    "Id": 262,
+    "_comment": "Episode 52 Mob - ビーオ (Basis: 66, Normal Mob)",
+    "BasisMobId": 66,
+    "Name": "ビーオ",
+    "IsBoss": false,
+    "EpisodeId": 52,
+    "Param5": -1
+  },
+  {
+    "Id": 9261,
+    "_comment": "Episode 52 Mob - デカソソ (Basis: 148, Normal Mob)",
+    "BasisMobId": 148,
+    "Name": "デカソソ",
+    "IsBoss": false,
+    "EpisodeId": 52,
+    "Param5": -1
+  },
+  {
+    "Id": 263,
+    "_comment": "Episode 34 Mob - ゼロセブン (Basis: 57, Normal Mob)",
+    "BasisMobId": 57,
+    "Name": "ゼロセブン",
+    "IsBoss": false,
+    "EpisodeId": 34,
+    "Param5": -1
+  },
+  {
+    "Id": 264,
+    "_comment": "Episode 34 Mob - ソソスケルトン (Basis: 55, Normal Mob)",
+    "BasisMobId": 55,
+    "Name": "ソソスケルトン",
+    "IsBoss": false,
+    "EpisodeId": 34,
+    "Param5": -1
+  },
+  {
+    "Id": 265,
+    "_comment": "Episode 34 Mob - フォクシー (Basis: 54, Normal Mob)",
+    "BasisMobId": 54,
+    "Name": "フォクシー",
+    "IsBoss": false,
+    "EpisodeId": 34,
+    "Param5": -1
+  },
+  {
+    "Id": 9263,
+    "_comment": "Episode 34 Mob - デカセブン (Basis: 150, Normal Mob)",
+    "BasisMobId": 150,
+    "Name": "デカセブン",
+    "IsBoss": false,
+    "EpisodeId": 34,
+    "Param5": -1
+  },
+  {
+    "Id": 319,
+    "_comment": "Episode 36 Mob - ソソスケルトン (Basis: 55, Normal Mob)",
+    "BasisMobId": 55,
+    "Name": "ソソスケルトン",
+    "IsBoss": false,
+    "EpisodeId": 36,
+    "Param5": -1
+  },
+  {
+    "Id": 320,
+    "_comment": "Episode 36 Mob - アンモネラ (Basis: 2, Normal Mob)",
+    "BasisMobId": 2,
+    "Name": "アンモネラ",
+    "IsBoss": false,
+    "EpisodeId": 36,
+    "Param5": -1
+  },
+  {
+    "Id": 321,
+    "_comment": "Episode 36 Mob - ゼロセブン (Basis: 57, Normal Mob)",
+    "BasisMobId": 57,
+    "Name": "ゼロセブン",
+    "IsBoss": false,
+    "EpisodeId": 36,
+    "Param5": -1
+  },
+  {
+    "Id": 322,
+    "_comment": "Episode 36 Mob - フォクシー (Basis: 54, Normal Mob)",
+    "BasisMobId": 54,
+    "Name": "フォクシー",
+    "IsBoss": false,
+    "EpisodeId": 36,
+    "Param5": -1
+  },
+  {
+    "Id": 9321,
+    "_comment": "Episode 36 Mob - デカセブン (Basis: 150, Normal Mob)",
+    "BasisMobId": 150,
+    "Name": "デカセブン",
+    "IsBoss": false,
+    "EpisodeId": 36,
+    "Param5": -1
+  },
+  {
+    "Id": 271,
+    "_comment": "Episode 40 Mob - リーグ (Basis: 65, Normal Mob)",
+    "BasisMobId": 65,
+    "Name": "リーグ",
+    "IsBoss": false,
+    "EpisodeId": 40,
+    "Param5": -1
+  },
+  {
+    "Id": 272,
+    "_comment": "Episode 40 Mob - ビーオ (Basis: 66, Normal Mob)",
+    "BasisMobId": 66,
+    "Name": "ビーオ",
+    "IsBoss": false,
+    "EpisodeId": 40,
+    "Param5": -1
+  },
+  {
+    "Id": 273,
+    "_comment": "Episode 40 Mob - ソソスケルトン (Basis: 55, Normal Mob)",
+    "BasisMobId": 55,
+    "Name": "ソソスケルトン",
+    "IsBoss": false,
+    "EpisodeId": 40,
+    "Param5": -1
+  },
+  {
+    "Id": 274,
+    "_comment": "Episode 40 Mob - ゼロセブン (Basis: 57, Normal Mob)",
+    "BasisMobId": 57,
+    "Name": "ゼロセブン",
+    "IsBoss": false,
+    "EpisodeId": 40,
+    "Param5": -1
+  },
+  {
+    "Id": 462,
+    "_comment": "Episode 40 Mob - レイス (Basis: 58, Normal Mob)",
+    "BasisMobId": 58,
+    "Name": "レイス",
+    "IsBoss": false,
+    "EpisodeId": 40,
+    "Param5": -1
+  },
+  {
+    "Id": 9274,
+    "_comment": "Episode 40 Mob - デカセブン (Basis: 150, Normal Mob)",
+    "BasisMobId": 150,
+    "Name": "デカセブン",
+    "IsBoss": false,
+    "EpisodeId": 40,
+    "Param5": -1
+  },
+  {
+    "Id": 276,
+    "_comment": "Episode 17 Mob - ラッチュー (Basis: 7, Normal Mob)",
+    "BasisMobId": 7,
+    "Name": "ラッチュー",
+    "IsBoss": false,
+    "EpisodeId": 17,
+    "Param5": -1
+  },
+  {
+    "Id": 9276,
+    "_comment": "Episode 17 Mob - デカソソ (Basis: 148, Normal Mob)",
+    "BasisMobId": 148,
+    "Name": "デカソソ",
+    "IsBoss": false,
+    "EpisodeId": 17,
+    "Param5": -1
+  },
+  {
+    "Id": 277,
+    "_comment": "Episode 23 Mob - モネラ (Basis: 9, Normal Mob)",
+    "BasisMobId": 9,
+    "Name": "モネラ",
+    "IsBoss": false,
+    "EpisodeId": 23,
+    "Param5": -1
+  },
+  {
+    "Id": 278,
+    "_comment": "Episode 23 Mob - ゼリーデリー (Basis: 101, Normal Mob)",
+    "BasisMobId": 101,
+    "Name": "ゼリーデリー",
+    "IsBoss": false,
+    "EpisodeId": 23,
+    "Param5": -1
+  },
+  {
+    "Id": 9278,
+    "_comment": "Episode 23 Mob - デカソソ (Basis: 148, Normal Mob)",
+    "BasisMobId": 148,
+    "Name": "デカソソ",
+    "IsBoss": false,
+    "EpisodeId": 23,
+    "Param5": -1
+  },
+  {
+    "Id": 323,
+    "_comment": "Episode 59 Mob - ソソスケルトン (Basis: 55, Normal Mob)",
+    "BasisMobId": 55,
+    "Name": "ソソスケルトン",
+    "IsBoss": false,
+    "EpisodeId": 59,
+    "Param5": -1
+  },
+  {
+    "Id": 324,
+    "_comment": "Episode 59 Mob - ピギー (Basis: 93, Normal Mob)",
+    "BasisMobId": 93,
+    "Name": "ピギー",
+    "IsBoss": false,
+    "EpisodeId": 59,
+    "Param5": -1
+  },
+  {
+    "Id": 325,
+    "_comment": "Episode 59 Mob - 4次元ウッドヘリアン (Basis: 117, Normal Mob)",
+    "BasisMobId": 117,
+    "Name": "4次元ウッドヘリアン",
+    "IsBoss": false,
+    "EpisodeId": 59,
+    "Param5": -1
+  },
+  {
+    "Id": 326,
+    "_comment": "Episode 59 Mob - リーグ (Basis: 65, Normal Mob)",
+    "BasisMobId": 65,
+    "Name": "リーグ",
+    "IsBoss": false,
+    "EpisodeId": 59,
+    "Param5": -1
+  },
+  {
+    "Id": 327,
+    "_comment": "Episode 59 Mob - ビーオ (Basis: 66, Normal Mob)",
+    "BasisMobId": 66,
+    "Name": "ビーオ",
+    "IsBoss": false,
+    "EpisodeId": 59,
+    "Param5": -1
+  },
+  {
+    "Id": 328,
+    "_comment": "Episode 59 Mob - ゼリーデリー (Basis: 101, Normal Mob)",
+    "BasisMobId": 101,
+    "Name": "ゼリーデリー",
+    "IsBoss": false,
+    "EpisodeId": 59,
+    "Param5": -1
+  },
+  {
+    "Id": 9326,
+    "_comment": "Episode 59 Mob - デカソソ (Basis: 148, Normal Mob)",
+    "BasisMobId": 148,
+    "Name": "デカソソ",
+    "IsBoss": false,
+    "EpisodeId": 59,
+    "Param5": -1
+  },
+  {
+    "Id": 275,
+    "_comment": "Episode 2 Mob - ソソ (Basis: 1, Normal Mob)",
+    "BasisMobId": 1,
+    "Name": "ソソ",
+    "IsBoss": false,
+    "EpisodeId": 2,
+    "Param5": -1
+  },
+  {
+    "Id": 9275,
+    "_comment": "Episode 2 Mob - デカソソ (Basis: 148, Normal Mob)",
+    "BasisMobId": 148,
+    "Name": "デカソソ",
+    "IsBoss": false,
+    "EpisodeId": 2,
+    "Param5": -1
+  },
+  {
+    "Id": 279,
+    "_comment": "Episode 2 Mob - ソソ (Basis: 1, Normal Mob)",
+    "BasisMobId": 1,
+    "Name": "ソソ",
+    "IsBoss": false,
+    "EpisodeId": 2,
+    "Param5": -1
+  },
+  {
+    "Id": 9279,
+    "_comment": "Episode 2 Mob - デカソソ (Basis: 148, Normal Mob)",
+    "BasisMobId": 148,
+    "Name": "デカソソ",
+    "IsBoss": false,
+    "EpisodeId": 2,
+    "Param5": -1
+  },
+  {
+    "Id": 346,
+    "_comment": "Episode 89 Mob - バラウス (Basis: 11, Normal Mob)",
+    "BasisMobId": 11,
+    "Name": "バラウス",
+    "IsBoss": false,
+    "EpisodeId": 89,
+    "Param5": -1
+  },
+  {
+    "Id": 347,
+    "_comment": "Episode 89 Mob - ハイバラウス (Basis: 12, Normal Mob)",
+    "BasisMobId": 12,
+    "Name": "ハイバラウス",
+    "IsBoss": false,
+    "EpisodeId": 89,
+    "Param5": -1
+  },
+  {
+    "Id": 9346,
+    "_comment": "Episode 89 Mob - デカソソ (Basis: 148, Normal Mob)",
+    "BasisMobId": 148,
+    "Name": "デカソソ",
+    "IsBoss": false,
+    "EpisodeId": 89,
+    "Param5": -1
+  },
+  {
+    "Id": 436,
+    "_comment": "Episode 89 Mob - PTA 26 (Basis: 119, Normal Mob)",
+    "BasisMobId": 119,
+    "Name": "PTA 26",
+    "IsBoss": false,
+    "EpisodeId": 89,
+    "Param5": -1
+  },
+  {
+    "Id": 437,
+    "_comment": "Episode 89 Mob - PTA 41 (Basis: 118, Normal Mob)",
+    "BasisMobId": 118,
+    "Name": "PTA 41",
+    "IsBoss": false,
+    "EpisodeId": 89,
+    "Param5": -1
+  },
+  {
+    "Id": 438,
+    "_comment": "Episode 89 Mob - パトロボ (Basis: 95, Normal Mob)",
+    "BasisMobId": 95,
+    "Name": "パトロボ",
+    "IsBoss": false,
+    "EpisodeId": 89,
+    "Param5": -1
+  },
+  {
+    "Id": 439,
+    "_comment": "Episode 89 Mob - グロービー (Basis: 27, Normal Mob)",
+    "BasisMobId": 27,
+    "Name": "グロービー",
+    "IsBoss": false,
+    "EpisodeId": 89,
+    "Param5": -1
+  },
+  {
+    "Id": 440,
+    "_comment": "Episode 89 Mob - クロコ (Basis: 33, Normal Mob)",
+    "BasisMobId": 33,
+    "Name": "クロコ",
+    "IsBoss": false,
+    "EpisodeId": 89,
+    "Param5": -1
+  },
+  {
+    "Id": 348,
+    "_comment": "Episode 92 Mob - ニーナ (Basis: 73, Normal Mob)",
+    "BasisMobId": 73,
+    "Name": "ニーナ",
+    "IsBoss": false,
+    "EpisodeId": 92,
+    "Param5": -1
+  },
+  {
+    "Id": 349,
+    "_comment": "Episode 92 Mob - ニーノ (Basis: 74, Normal Mob)",
+    "BasisMobId": 74,
+    "Name": "ニーノ",
+    "IsBoss": false,
+    "EpisodeId": 92,
+    "Param5": -1
+  },
+  {
+    "Id": 350,
+    "_comment": "Episode 92 Mob - カマイタチ (Basis: 86, Normal Mob)",
+    "BasisMobId": 86,
+    "Name": "カマイタチ",
+    "IsBoss": false,
+    "EpisodeId": 92,
+    "Param5": -1
+  },
+  {
+    "Id": 9350,
+    "_comment": "Episode 92 Mob - デカルシュ (Basis: 149, Normal Mob)",
+    "BasisMobId": 149,
+    "Name": "デカルシュ",
+    "IsBoss": false,
+    "EpisodeId": 92,
+    "Param5": -1
+  },
+  {
+    "Id": 375,
+    "_comment": "Episode 94 Mob - ニーナ (Basis: 73, Normal Mob)",
+    "BasisMobId": 73,
+    "Name": "ニーナ",
+    "IsBoss": false,
+    "EpisodeId": 94,
+    "Param5": -1
+  },
+  {
+    "Id": 376,
+    "_comment": "Episode 94 Mob - ニーノ (Basis: 74, Normal Mob)",
+    "BasisMobId": 74,
+    "Name": "ニーノ",
+    "IsBoss": false,
+    "EpisodeId": 94,
+    "Param5": -1
+  },
+  {
+    "Id": 377,
+    "_comment": "Episode 94 Mob - カマイタチ (Basis: 86, Normal Mob)",
+    "BasisMobId": 86,
+    "Name": "カマイタチ",
+    "IsBoss": false,
+    "EpisodeId": 94,
+    "Param5": -1
+  },
+  {
+    "Id": 9377,
+    "_comment": "Episode 94 Mob - デカソソ (Basis: 148, Normal Mob)",
+    "BasisMobId": 148,
+    "Name": "デカソソ",
+    "IsBoss": false,
+    "EpisodeId": 94,
+    "Param5": -1
+  },
+  {
+    "Id": 389,
+    "_comment": "Episode 100 Mob - パペットマスター (Basis: 77, Normal Mob)",
+    "BasisMobId": 77,
+    "Name": "パペットマスター",
+    "IsBoss": false,
+    "EpisodeId": 100,
+    "Param5": -1
+  },
+  {
+    "Id": 390,
+    "_comment": "Episode 100 Mob - ホギーパペット (Basis: 76, Normal Mob)",
+    "BasisMobId": 76,
+    "Name": "ホギーパペット",
+    "IsBoss": false,
+    "EpisodeId": 100,
+    "Param5": -1
+  },
+  {
+    "Id": 391,
+    "_comment": "Episode 100 Mob - パペット (Basis: 75, Normal Mob)",
+    "BasisMobId": 75,
+    "Name": "パペット",
+    "IsBoss": false,
+    "EpisodeId": 100,
+    "Param5": -1
+  },
+  {
+    "Id": 9391,
+    "_comment": "Episode 100 Mob - デカセブン (Basis: 150, Normal Mob)",
+    "BasisMobId": 150,
+    "Name": "デカセブン",
+    "IsBoss": false,
+    "EpisodeId": 100,
+    "Param5": -1
+  },
+  {
+    "Id": 449,
+    "_comment": "Episode 108 Mob - オルゴールソソ (Basis: 99, Normal Mob)",
+    "BasisMobId": 99,
+    "Name": "オルゴールソソ",
+    "IsBoss": false,
+    "EpisodeId": 108,
+    "Param5": -1
+  },
+  {
+    "Id": 450,
+    "_comment": "Episode 108 Mob - ニーナ (Basis: 73, Normal Mob)",
+    "BasisMobId": 73,
+    "Name": "ニーナ",
+    "IsBoss": false,
+    "EpisodeId": 108,
+    "Param5": -1
+  },
+  {
+    "Id": 451,
+    "_comment": "Episode 108 Mob - ニーノ (Basis: 74, Normal Mob)",
+    "BasisMobId": 74,
+    "Name": "ニーノ",
+    "IsBoss": false,
+    "EpisodeId": 108,
+    "Param5": -1
+  },
+  {
+    "Id": 452,
+    "_comment": "Episode 108 Mob - 黒後家蜘蛛 (Basis: 106, Normal Mob)",
+    "BasisMobId": 106,
+    "Name": "黒後家蜘蛛",
+    "IsBoss": false,
+    "EpisodeId": 108,
+    "Param5": -1
+  },
+  {
+    "Id": 453,
+    "_comment": "Episode 108 Mob - カマイタチ (Basis: 86, Normal Mob)",
+    "BasisMobId": 86,
+    "Name": "カマイタチ",
+    "IsBoss": false,
+    "EpisodeId": 108,
+    "Param5": -1
+  },
+  {
+    "Id": 454,
+    "_comment": "Episode 108 Mob - パペット (Basis: 75, Normal Mob)",
+    "BasisMobId": 75,
+    "Name": "パペット",
+    "IsBoss": false,
+    "EpisodeId": 108,
+    "Param5": -1
+  },
+  {
+    "Id": 455,
+    "_comment": "Episode 108 Mob - ホギーパペット (Basis: 76, Normal Mob)",
+    "BasisMobId": 76,
+    "Name": "ホギーパペット",
+    "IsBoss": false,
+    "EpisodeId": 108,
+    "Param5": -1
+  },
+  {
+    "Id": 456,
+    "_comment": "Episode 108 Mob - パペットマスター (Basis: 77, Normal Mob)",
+    "BasisMobId": 77,
+    "Name": "パペットマスター",
+    "IsBoss": false,
+    "EpisodeId": 108,
+    "Param5": -1
+  },
+  {
+    "Id": 9454,
+    "_comment": "Episode 108 Mob - デカルシュ (Basis: 149, Normal Mob)",
+    "BasisMobId": 149,
+    "Name": "デカルシュ",
+    "IsBoss": false,
+    "EpisodeId": 108,
+    "Param5": -1
+  },
+  {
+    "Id": 413,
+    "_comment": "Episode 121 Mob - パペットマスター (Basis: 77, Episode Boss / Unique)",
+    "BasisMobId": 77,
+    "Name": "パペットマスター",
+    "IsBoss": true,
+    "EpisodeId": 121,
+    "Param5": -1
+  },
+  {
+    "Id": 414,
+    "_comment": "Episode 121 Mob - パペットマスター (Basis: 77, Episode Boss / Unique)",
+    "BasisMobId": 77,
+    "Name": "パペットマスター",
+    "IsBoss": true,
+    "EpisodeId": 121,
+    "Param5": -1
+  },
+  {
+    "Id": 415,
+    "_comment": "Episode 121 Mob - パペットマスター (Basis: 77, Episode Boss / Unique)",
+    "BasisMobId": 77,
+    "Name": "パペットマスター",
+    "IsBoss": true,
+    "EpisodeId": 121,
+    "Param5": -1
+  },
+  {
+    "Id": 408,
+    "_comment": "Episode 121 Mob - 忍者 (Basis: 103, Normal Mob)",
+    "BasisMobId": 103,
+    "Name": "忍者",
+    "IsBoss": false,
+    "EpisodeId": 121,
+    "Param5": -1
+  },
+  {
+    "Id": 409,
+    "_comment": "Episode 121 Mob - ニーナ (Basis: 73, Normal Mob)",
+    "BasisMobId": 73,
+    "Name": "ニーナ",
+    "IsBoss": false,
+    "EpisodeId": 121,
+    "Param5": -1
+  },
+  {
+    "Id": 410,
+    "_comment": "Episode 121 Mob - ニーノ (Basis: 74, Normal Mob)",
+    "BasisMobId": 74,
+    "Name": "ニーノ",
+    "IsBoss": false,
+    "EpisodeId": 121,
+    "Param5": -1
+  },
+  {
+    "Id": 411,
+    "_comment": "Episode 121 Mob - パペット (Basis: 75, Normal Mob)",
+    "BasisMobId": 75,
+    "Name": "パペット",
+    "IsBoss": false,
+    "EpisodeId": 121,
+    "Param5": -1
+  },
+  {
+    "Id": 412,
+    "_comment": "Episode 121 Mob - ホギーパペット (Basis: 76, Normal Mob)",
+    "BasisMobId": 76,
+    "Name": "ホギーパペット",
+    "IsBoss": false,
+    "EpisodeId": 121,
+    "Param5": -1
+  },
+  {
+    "Id": 9411,
+    "_comment": "Episode 121 Mob - デカソソ (Basis: 148, Normal Mob)",
+    "BasisMobId": 148,
+    "Name": "デカソソ",
+    "IsBoss": false,
+    "EpisodeId": 121,
+    "Param5": -1
+  },
+  {
+    "Id": 289,
+    "_comment": "Episode 77 Mob - スパービー (Basis: 31, Normal Mob)",
+    "BasisMobId": 31,
+    "Name": "スパービー",
+    "IsBoss": false,
+    "EpisodeId": 77,
+    "Param5": -1
+  },
+  {
+    "Id": 290,
+    "_comment": "Episode 77 Mob - ワルグマー (Basis: 17, Normal Mob)",
+    "BasisMobId": 17,
+    "Name": "ワルグマー",
+    "IsBoss": false,
+    "EpisodeId": 77,
+    "Param5": -1
+  },
+  {
+    "Id": 291,
+    "_comment": "Episode 77 Mob - ドワルグマー (Basis: 18, Normal Mob)",
+    "BasisMobId": 18,
+    "Name": "ドワルグマー",
+    "IsBoss": false,
+    "EpisodeId": 77,
+    "Param5": -1
+  },
+  {
+    "Id": 9290,
+    "_comment": "Episode 77 Mob - デカセブン (Basis: 150, Normal Mob)",
+    "BasisMobId": 150,
+    "Name": "デカセブン",
+    "IsBoss": false,
+    "EpisodeId": 77,
+    "Param5": -1
+  },
+  {
+    "Id": 427,
+    "_comment": "Episode 114 Mob - ミュロビー (Basis: 29, Normal Mob)",
+    "BasisMobId": 29,
+    "Name": "ミュロビー",
+    "IsBoss": false,
+    "EpisodeId": 114,
+    "Param5": -1
+  },
+  {
+    "Id": 428,
+    "_comment": "Episode 114 Mob - ソソプラネット (Basis: 108, Normal Mob)",
+    "BasisMobId": 108,
+    "Name": "ソソプラネット",
+    "IsBoss": false,
+    "EpisodeId": 114,
+    "Param5": -1
+  },
+  {
+    "Id": 429,
+    "_comment": "Episode 114 Mob - イスファイター (Basis: 110, Normal Mob)",
+    "BasisMobId": 110,
+    "Name": "イスファイター",
+    "IsBoss": false,
+    "EpisodeId": 114,
+    "Param5": -1
+  },
+  {
+    "Id": 430,
+    "_comment": "Episode 114 Mob - シャドウビースト (Basis: 112, Normal Mob)",
+    "BasisMobId": 112,
+    "Name": "シャドウビースト",
+    "IsBoss": false,
+    "EpisodeId": 114,
+    "Param5": -1
+  },
+  {
+    "Id": 431,
+    "_comment": "Episode 114 Mob - ツクエミミック (Basis: 109, Normal Mob)",
+    "BasisMobId": 109,
+    "Name": "ツクエミミック",
+    "IsBoss": false,
+    "EpisodeId": 114,
+    "Param5": -1
+  },
+  {
+    "Id": 9428,
+    "_comment": "Episode 114 Mob - デカソソ (Basis: 148, Normal Mob)",
+    "BasisMobId": 148,
+    "Name": "デカソソ",
+    "IsBoss": false,
+    "EpisodeId": 114,
+    "Param5": -1
+  },
+  {
+    "Id": 313,
+    "_comment": "Episode 63 Mob - ムジナ守衛 (Basis: 78, Normal Mob)",
+    "BasisMobId": 78,
+    "Name": "ムジナ守衛",
+    "IsBoss": false,
+    "EpisodeId": 63,
+    "Param5": -1
+  },
+  {
+    "Id": 314,
+    "_comment": "Episode 63 Mob - カマイタチ (Basis: 86, Normal Mob)",
+    "BasisMobId": 86,
+    "Name": "カマイタチ",
+    "IsBoss": false,
+    "EpisodeId": 63,
+    "Param5": -1
+  },
+  {
+    "Id": 469,
+    "_comment": "Episode 63 Mob - ムジナ守衛 (Basis: 78, Normal Mob)",
+    "BasisMobId": 78,
+    "Name": "ムジナ守衛",
+    "IsBoss": false,
+    "EpisodeId": 63,
+    "Param5": -1
+  },
+  {
+    "Id": 9314,
+    "_comment": "Episode 63 Mob - デカルシュ (Basis: 149, Normal Mob)",
+    "BasisMobId": 149,
+    "Name": "デカルシュ",
+    "IsBoss": false,
+    "EpisodeId": 63,
+    "Param5": -1
+  },
+  {
+    "Id": 280,
+    "_comment": "Episode 65 Mob - カマイタチ (Basis: 86, Normal Mob)",
+    "BasisMobId": 86,
+    "Name": "カマイタチ",
+    "IsBoss": false,
+    "EpisodeId": 65,
+    "Param5": -1
+  },
+  {
+    "Id": 9280,
+    "_comment": "Episode 65 Mob - デカセブン (Basis: 150, Normal Mob)",
+    "BasisMobId": 150,
+    "Name": "デカセブン",
+    "IsBoss": false,
+    "EpisodeId": 65,
+    "Param5": -1
+  },
+  {
+    "Id": 394,
+    "_comment": "Episode 96 Mob - オルゴールソソ (Basis: 99, Normal Mob)",
+    "BasisMobId": 99,
+    "Name": "オルゴールソソ",
+    "IsBoss": false,
+    "EpisodeId": 96,
+    "Param5": -1
+  },
+  {
+    "Id": 395,
+    "_comment": "Episode 96 Mob - 忍者 (Basis: 103, Normal Mob)",
+    "BasisMobId": 103,
+    "Name": "忍者",
+    "IsBoss": false,
+    "EpisodeId": 96,
+    "Param5": -1
+  },
+  {
+    "Id": 396,
+    "_comment": "Episode 96 Mob - ムジナ守衛 (Basis: 78, Normal Mob)",
+    "BasisMobId": 78,
+    "Name": "ムジナ守衛",
+    "IsBoss": false,
+    "EpisodeId": 96,
+    "Param5": -1
+  },
+  {
+    "Id": 397,
+    "_comment": "Episode 96 Mob - 幽霊教頭スターリン (Basis: 134, Normal Mob)",
+    "BasisMobId": 134,
+    "Name": "幽霊教頭スターリン",
+    "IsBoss": false,
+    "EpisodeId": 96,
+    "Param5": -1
+  },
+  {
+    "Id": 9394,
+    "_comment": "Episode 96 Mob - デカソソ (Basis: 148, Normal Mob)",
+    "BasisMobId": 148,
+    "Name": "デカソソ",
+    "IsBoss": false,
+    "EpisodeId": 96,
+    "Param5": -1
+  },
+  {
+    "Id": 335,
+    "_comment": "Episode 87 Mob - リトルクロコ (Basis: 47, Normal Mob)",
+    "BasisMobId": 47,
+    "Name": "リトルクロコ",
+    "IsBoss": false,
+    "EpisodeId": 87,
+    "Param5": -1
+  },
+  {
+    "Id": 336,
+    "_comment": "Episode 87 Mob - クロコ (Basis: 33, Normal Mob)",
+    "BasisMobId": 33,
+    "Name": "クロコ",
+    "IsBoss": false,
+    "EpisodeId": 87,
+    "Param5": -1
+  },
+  {
+    "Id": 337,
+    "_comment": "Episode 87 Mob - グロービー (Basis: 27, Normal Mob)",
+    "BasisMobId": 27,
+    "Name": "グロービー",
+    "IsBoss": false,
+    "EpisodeId": 87,
+    "Param5": -1
+  },
+  {
+    "Id": 338,
+    "_comment": "Episode 87 Mob - ハッコウモリ (Basis: 46, Normal Mob)",
+    "BasisMobId": 46,
+    "Name": "ハッコウモリ",
+    "IsBoss": false,
+    "EpisodeId": 87,
+    "Param5": -1
+  },
+  {
+    "Id": 9338,
+    "_comment": "Episode 87 Mob - デカルシュ (Basis: 149, Normal Mob)",
+    "BasisMobId": 149,
+    "Name": "デカルシュ",
+    "IsBoss": false,
+    "EpisodeId": 87,
+    "Param5": -1
+  },
+  {
+    "Id": 339,
+    "_comment": "Episode 85 Mob - チャート (Basis: 23, Normal Mob)",
+    "BasisMobId": 23,
+    "Name": "チャート",
+    "IsBoss": false,
+    "EpisodeId": 85,
+    "Param5": -1
+  },
+  {
+    "Id": 340,
+    "_comment": "Episode 85 Mob - ハッコウモリ (Basis: 46, Normal Mob)",
+    "BasisMobId": 46,
+    "Name": "ハッコウモリ",
+    "IsBoss": false,
+    "EpisodeId": 85,
+    "Param5": -1
+  },
+  {
+    "Id": 341,
+    "_comment": "Episode 85 Mob - トホホ (Basis: 94, Normal Mob)",
+    "BasisMobId": 94,
+    "Name": "トホホ",
+    "IsBoss": false,
+    "EpisodeId": 85,
+    "Param5": -1
+  },
+  {
+    "Id": 9340,
+    "_comment": "Episode 85 Mob - デカセブン (Basis: 150, Normal Mob)",
+    "BasisMobId": 150,
+    "Name": "デカセブン",
+    "IsBoss": false,
+    "EpisodeId": 85,
+    "Param5": -1
+  },
+  {
+    "Id": 334,
+    "_comment": "Episode 96 Mob - ソソファイア (Basis: 122, Normal Mob)",
+    "BasisMobId": 122,
+    "Name": "ソソファイア",
+    "IsBoss": false,
+    "EpisodeId": 96,
+    "Param5": -1
+  },
+  {
+    "Id": 9334,
+    "_comment": "Episode 96 Mob - デカソソ (Basis: 148, Normal Mob)",
+    "BasisMobId": 148,
+    "Name": "デカソソ",
+    "IsBoss": false,
+    "EpisodeId": 96,
+    "Param5": -1
+  },
+  {
+    "Id": 381,
+    "_comment": "Episode 117 Mob - ミュロビー (Basis: 29, Normal Mob)",
+    "BasisMobId": 29,
+    "Name": "ミュロビー",
+    "IsBoss": false,
+    "EpisodeId": 117,
+    "Param5": -1
+  },
+  {
+    "Id": 380,
+    "_comment": "Episode 117 Mob - ステファノ (Basis: 21, Episode Boss / Unique)",
+    "BasisMobId": 21,
+    "Name": "ステファノ",
+    "IsBoss": true,
+    "EpisodeId": 117,
+    "Param5": -1
+  },
+  {
+    "Id": 9381,
+    "_comment": "Episode 117 Mob - デカルシュ (Basis: 149, Normal Mob)",
+    "BasisMobId": 149,
+    "Name": "デカルシュ",
+    "IsBoss": false,
+    "EpisodeId": 117,
+    "Param5": -1
+  },
+  {
+    "Id": 382,
+    "_comment": "Episode 125 Mob - パトロボ (Basis: 95, Normal Mob)",
+    "BasisMobId": 95,
+    "Name": "パトロボ",
+    "IsBoss": false,
+    "EpisodeId": 125,
+    "Param5": -1
+  },
+  {
+    "Id": 383,
+    "_comment": "Episode 125 Mob - ワルグマー (Basis: 17, Normal Mob)",
+    "BasisMobId": 17,
+    "Name": "ワルグマー",
+    "IsBoss": false,
+    "EpisodeId": 125,
+    "Param5": -1
+  },
+  {
+    "Id": 384,
+    "_comment": "Episode 125 Mob - ドワルグマー (Basis: 18, Normal Mob)",
+    "BasisMobId": 18,
+    "Name": "ドワルグマー",
+    "IsBoss": false,
+    "EpisodeId": 125,
+    "Param5": -1
+  },
+  {
+    "Id": 9383,
+    "_comment": "Episode 125 Mob - デカセブン (Basis: 150, Normal Mob)",
+    "BasisMobId": 150,
+    "Name": "デカセブン",
+    "IsBoss": false,
+    "EpisodeId": 125,
+    "Param5": -1
+  },
+  {
+    "Id": 351,
+    "_comment": "Episode 79 Mob - ミュロビー (Basis: 29, Normal Mob)",
+    "BasisMobId": 29,
+    "Name": "ミュロビー",
+    "IsBoss": false,
+    "EpisodeId": 79,
+    "Param5": -1
+  },
+  {
+    "Id": 352,
+    "_comment": "Episode 79 Mob - 怒ったミュロビー (Basis: 120, Normal Mob)",
+    "BasisMobId": 120,
+    "Name": "怒ったミュロビー",
+    "IsBoss": false,
+    "EpisodeId": 79,
+    "Param5": -1
+  },
+  {
+    "Id": 9351,
+    "_comment": "Episode 79 Mob - デカソソ (Basis: 148, Normal Mob)",
+    "BasisMobId": 148,
+    "Name": "デカソソ",
+    "IsBoss": false,
+    "EpisodeId": 79,
+    "Param5": -1
+  },
+  {
+    "Id": 422,
+    "_comment": "Episode 117 Mob - ソソスケルトン (Basis: 55, Normal Mob)",
+    "BasisMobId": 55,
+    "Name": "ソソスケルトン",
+    "IsBoss": false,
+    "EpisodeId": 117,
+    "Param5": -1
+  },
+  {
+    "Id": 423,
+    "_comment": "Episode 117 Mob - ソソマミー (Basis: 96, Normal Mob)",
+    "BasisMobId": 96,
+    "Name": "ソソマミー",
+    "IsBoss": false,
+    "EpisodeId": 117,
+    "Param5": -1
+  },
+  {
+    "Id": 424,
+    "_comment": "Episode 117 Mob - ピギー (Basis: 93, Normal Mob)",
+    "BasisMobId": 93,
+    "Name": "ピギー",
+    "IsBoss": false,
+    "EpisodeId": 117,
+    "Param5": -1
+  },
+  {
+    "Id": 425,
+    "_comment": "Episode 117 Mob - 黒後家蜘蛛 (Basis: 106, Normal Mob)",
+    "BasisMobId": 106,
+    "Name": "黒後家蜘蛛",
+    "IsBoss": false,
+    "EpisodeId": 117,
+    "Param5": -1
+  },
+  {
+    "Id": 426,
+    "_comment": "Episode 117 Mob - オルゴールソソ (Basis: 99, Normal Mob)",
+    "BasisMobId": 99,
+    "Name": "オルゴールソソ",
+    "IsBoss": false,
+    "EpisodeId": 117,
+    "Param5": -1
+  },
+  {
+    "Id": 9190,
+    "_comment": "Episode 117 Mob - デカソソ (Basis: 148, Normal Mob)",
+    "BasisMobId": 148,
+    "Name": "デカソソ",
+    "IsBoss": false,
+    "EpisodeId": 117,
+    "Param5": -1
+  },
+  {
+    "Id": 416,
+    "_comment": "Episode 114 Mob - ソソマミー (Basis: 96, Normal Mob)",
+    "BasisMobId": 96,
+    "Name": "ソソマミー",
+    "IsBoss": false,
+    "EpisodeId": 114,
+    "Param5": -1
+  },
+  {
+    "Id": 417,
+    "_comment": "Episode 114 Mob - ゼリーデリー (Basis: 101, Normal Mob)",
+    "BasisMobId": 101,
+    "Name": "ゼリーデリー",
+    "IsBoss": false,
+    "EpisodeId": 114,
+    "Param5": -1
+  },
+  {
+    "Id": 418,
+    "_comment": "Episode 114 Mob - ピギー (Basis: 93, Normal Mob)",
+    "BasisMobId": 93,
+    "Name": "ピギー",
+    "IsBoss": false,
+    "EpisodeId": 114,
+    "Param5": -1
+  },
+  {
+    "Id": 9416,
+    "_comment": "Episode 114 Mob - デカソソ (Basis: 148, Normal Mob)",
+    "BasisMobId": 148,
+    "Name": "デカソソ",
+    "IsBoss": false,
+    "EpisodeId": 114,
+    "Param5": -1
+  },
+  {
+    "Id": 353,
+    "_comment": "Episode 60 Mob - レッドソソ (Basis: 123, Normal Mob)",
+    "BasisMobId": 123,
+    "Name": "レッドソソ",
+    "IsBoss": false,
+    "EpisodeId": 60,
+    "Param5": -1
+  },
+  {
+    "Id": 354,
+    "_comment": "Episode 60 Mob - ブルーソソ (Basis: 124, Normal Mob)",
+    "BasisMobId": 124,
+    "Name": "ブルーソソ",
+    "IsBoss": false,
+    "EpisodeId": 60,
+    "Param5": -1
+  },
+  {
+    "Id": 392,
+    "_comment": "Episode 98 Mob - パペット (Basis: 75, Normal Mob)",
+    "BasisMobId": 75,
+    "Name": "パペット",
+    "IsBoss": false,
+    "EpisodeId": 98,
+    "Param5": -1
+  },
+  {
+    "Id": 393,
+    "_comment": "Episode 98 Mob - ホギーパペット (Basis: 76, Normal Mob)",
+    "BasisMobId": 76,
+    "Name": "ホギーパペット",
+    "IsBoss": false,
+    "EpisodeId": 98,
+    "Param5": -1
+  },
+  {
+    "Id": 9392,
+    "_comment": "Episode 98 Mob - デカセブン (Basis: 150, Normal Mob)",
+    "BasisMobId": 150,
+    "Name": "デカセブン",
+    "IsBoss": false,
+    "EpisodeId": 98,
+    "Param5": -1
+  },
+  {
+    "Id": 398,
+    "_comment": "Episode 102 Mob - ブラービー (Basis: 25, Normal Mob)",
+    "BasisMobId": 25,
+    "Name": "ブラービー",
+    "IsBoss": false,
+    "EpisodeId": 102,
+    "Param5": -1
+  },
+  {
+    "Id": 399,
+    "_comment": "Episode 102 Mob - 次元魚 (Basis: 111, Normal Mob)",
+    "BasisMobId": 111,
+    "Name": "次元魚",
+    "IsBoss": false,
+    "EpisodeId": 102,
+    "Param5": -1
+  },
+  {
+    "Id": 400,
+    "_comment": "Episode 102 Mob - イスファイター (Basis: 110, Normal Mob)",
+    "BasisMobId": 110,
+    "Name": "イスファイター",
+    "IsBoss": false,
+    "EpisodeId": 102,
+    "Param5": -1
+  },
+  {
+    "Id": 401,
+    "_comment": "Episode 102 Mob - ツクエミミック (Basis: 109, Normal Mob)",
+    "BasisMobId": 109,
+    "Name": "ツクエミミック",
+    "IsBoss": false,
+    "EpisodeId": 102,
+    "Param5": -1
+  },
+  {
+    "Id": 9398,
+    "_comment": "Episode 102 Mob - デカルシュ (Basis: 149, Normal Mob)",
+    "BasisMobId": 149,
+    "Name": "デカルシュ",
+    "IsBoss": false,
+    "EpisodeId": 102,
+    "Param5": -1
+  },
+  {
+    "Id": 330,
+    "_comment": "Episode 102 Mob - ニーナ (Basis: 73, Normal Mob)",
+    "BasisMobId": 73,
+    "Name": "ニーナ",
+    "IsBoss": false,
+    "EpisodeId": 102,
+    "Param5": -1
+  },
+  {
+    "Id": 331,
+    "_comment": "Episode 102 Mob - ニーノ (Basis: 74, Normal Mob)",
+    "BasisMobId": 74,
+    "Name": "ニーノ",
+    "IsBoss": false,
+    "EpisodeId": 102,
+    "Param5": -1
+  },
+  {
+    "Id": 332,
+    "_comment": "Episode 102 Mob - パペット (Basis: 75, Normal Mob)",
+    "BasisMobId": 75,
+    "Name": "パペット",
+    "IsBoss": false,
+    "EpisodeId": 102,
+    "Param5": -1
+  },
+  {
+    "Id": 333,
+    "_comment": "Episode 102 Mob - ムジナ守衛 (Basis: 78, Normal Mob)",
+    "BasisMobId": 78,
+    "Name": "ムジナ守衛",
+    "IsBoss": false,
+    "EpisodeId": 102,
+    "Param5": -1
+  },
+  {
+    "Id": 9332,
+    "_comment": "Episode 102 Mob - デカセブン (Basis: 150, Normal Mob)",
+    "BasisMobId": 150,
+    "Name": "デカセブン",
+    "IsBoss": false,
+    "EpisodeId": 102,
+    "Param5": -1
+  },
+  {
+    "Id": 295,
+    "_comment": "Episode 9 Mob - ラッチュー (Basis: 7, Normal Mob)",
+    "BasisMobId": 7,
+    "Name": "ラッチュー",
+    "IsBoss": false,
+    "EpisodeId": 9,
+    "Param5": -1
+  },
+  {
+    "Id": 296,
+    "_comment": "Episode 9 Mob - モネラ (Basis: 9, Normal Mob)",
+    "BasisMobId": 9,
+    "Name": "モネラ",
+    "IsBoss": false,
+    "EpisodeId": 9,
+    "Param5": -1
+  },
+  {
+    "Id": 292,
+    "_comment": "Episode 9 Mob - ラッチュー (Basis: 7, Normal Mob)",
+    "BasisMobId": 7,
+    "Name": "ラッチュー",
+    "IsBoss": false,
+    "EpisodeId": 9,
+    "Param5": -1
+  },
+  {
+    "Id": 293,
+    "_comment": "Episode 9 Mob - モネラ (Basis: 9, Normal Mob)",
+    "BasisMobId": 9,
+    "Name": "モネラ",
+    "IsBoss": false,
+    "EpisodeId": 9,
+    "Param5": -1
+  },
+  {
+    "Id": 441,
+    "_comment": "Episode 129 Mob - メカドロシー 4号 (Basis: 16, Episode Boss / Unique)",
+    "BasisMobId": 16,
+    "Name": "メカドロシー 4号",
+    "IsBoss": true,
+    "EpisodeId": 129,
+    "Param5": -1
+  },
+  {
+    "Id": 442,
+    "_comment": "Episode 129 Mob - 宵月学院男子生徒 (Basis: 128, Normal Mob)",
+    "BasisMobId": 128,
+    "Name": "宵月学院男子生徒",
+    "IsBoss": false,
+    "EpisodeId": 129,
+    "Param5": -1
+  },
+  {
+    "Id": 443,
+    "_comment": "Episode 129 Mob - 宵月学院女生徒 (Basis: 129, Normal Mob)",
+    "BasisMobId": 129,
+    "Name": "宵月学院女生徒",
+    "IsBoss": false,
+    "EpisodeId": 129,
+    "Param5": -1
+  },
+  {
+    "Id": 444,
+    "_comment": "Episode 129 Mob - マルシュ (Basis: 3, Normal Mob)",
+    "BasisMobId": 3,
+    "Name": "マルシュ",
+    "IsBoss": false,
+    "EpisodeId": 129,
+    "Param5": -1
+  },
+  {
+    "Id": 445,
+    "_comment": "Episode 129 Mob - グロービー (Basis: 27, Normal Mob)",
+    "BasisMobId": 27,
+    "Name": "グロービー",
+    "IsBoss": false,
+    "EpisodeId": 129,
+    "Param5": -1
+  },
+  {
+    "Id": 446,
+    "_comment": "Episode 129 Mob - クロコ (Basis: 33, Normal Mob)",
+    "BasisMobId": 33,
+    "Name": "クロコ",
+    "IsBoss": false,
+    "EpisodeId": 129,
+    "Param5": -1
+  },
+  {
+    "Id": 447,
+    "_comment": "Episode 129 Mob - 宵月学院女生徒 (Basis: 129, Normal Mob)",
+    "BasisMobId": 129,
+    "Name": "宵月学院女生徒",
+    "IsBoss": false,
+    "EpisodeId": 129,
+    "Param5": -1
+  },
+  {
+    "Id": 448,
+    "_comment": "Episode 129 Mob - 宵月学院男子生徒 (Basis: 128, Normal Mob)",
+    "BasisMobId": 128,
+    "Name": "宵月学院男子生徒",
+    "IsBoss": false,
+    "EpisodeId": 129,
+    "Param5": -1
+  },
+  {
+    "Id": 9442,
+    "_comment": "Episode 129 Mob - デカソソ (Basis: 148, Normal Mob)",
+    "BasisMobId": 148,
+    "Name": "デカソソ",
+    "IsBoss": false,
+    "EpisodeId": 129,
+    "Param5": -1
+  },
+  {
+    "Id": 463,
+    "_comment": "Episode 89 Mob - 宵月学院男子生徒 (Basis: 128, Normal Mob)",
+    "BasisMobId": 128,
+    "Name": "宵月学院男子生徒",
+    "IsBoss": false,
+    "EpisodeId": 89,
+    "Param5": -1
+  },
+  {
+    "Id": 464,
+    "_comment": "Episode 89 Mob - 宵月学院女生徒 (Basis: 129, Normal Mob)",
+    "BasisMobId": 129,
+    "Name": "宵月学院女生徒",
+    "IsBoss": false,
+    "EpisodeId": 89,
+    "Param5": -1
+  },
+  {
+    "Id": 297,
+    "_comment": "Episode 1 Mob - ラッチュー (Basis: 7, Normal Mob)",
+    "BasisMobId": 7,
+    "Name": "ラッチュー",
+    "IsBoss": false,
+    "EpisodeId": 1,
+    "Param5": -1
+  },
+  {
+    "Id": 298,
+    "_comment": "Episode 1 Mob - テディ (Basis: 4, Normal Mob)",
+    "BasisMobId": 4,
+    "Name": "テディ",
+    "IsBoss": false,
+    "EpisodeId": 1,
+    "Param5": -1
+  },
+  {
+    "Id": 299,
+    "_comment": "Episode 1 Mob - ラッチュー (Basis: 7, Normal Mob)",
+    "BasisMobId": 7,
+    "Name": "ラッチュー",
+    "IsBoss": false,
+    "EpisodeId": 1,
+    "Param5": -1
+  },
+  {
+    "Id": 300,
+    "_comment": "Episode 1 Mob - テディ (Basis: 4, Normal Mob)",
+    "BasisMobId": 4,
+    "Name": "テディ",
+    "IsBoss": false,
+    "EpisodeId": 1,
+    "Param5": -1
+  },
+  {
+    "Id": 301,
+    "_comment": "Episode 1 Mob - ラッチュー (Basis: 7, Normal Mob)",
+    "BasisMobId": 7,
+    "Name": "ラッチュー",
+    "IsBoss": false,
+    "EpisodeId": 1,
+    "Param5": -1
+  },
+  {
+    "Id": 302,
+    "_comment": "Episode 1 Mob - テディ (Basis: 4, Normal Mob)",
+    "BasisMobId": 4,
+    "Name": "テディ",
+    "IsBoss": false,
+    "EpisodeId": 1,
+    "Param5": -1
+  },
+  {
+    "Id": 303,
+    "_comment": "Episode 1 Mob - ラッチュー (Basis: 7, Normal Mob)",
+    "BasisMobId": 7,
+    "Name": "ラッチュー",
+    "IsBoss": false,
+    "EpisodeId": 1,
+    "Param5": -1
+  },
+  {
+    "Id": 304,
+    "_comment": "Episode 1 Mob - テディ (Basis: 4, Normal Mob)",
+    "BasisMobId": 4,
+    "Name": "テディ",
+    "IsBoss": false,
+    "EpisodeId": 1,
+    "Param5": -1
+  },
+  {
+    "Id": 305,
+    "_comment": "Episode 1 Mob - モネラ (Basis: 9, Normal Mob)",
+    "BasisMobId": 9,
+    "Name": "モネラ",
+    "IsBoss": false,
+    "EpisodeId": 1,
+    "Param5": -1
+  },
+  {
+    "Id": 306,
+    "_comment": "Episode 1 Mob - レイス (Basis: 58, Normal Mob)",
+    "BasisMobId": 58,
+    "Name": "レイス",
+    "IsBoss": false,
+    "EpisodeId": 1,
+    "Param5": -1
+  },
+  {
+    "Id": 307,
+    "_comment": "Episode 1 Mob - モネラ (Basis: 9, Normal Mob)",
+    "BasisMobId": 9,
+    "Name": "モネラ",
+    "IsBoss": false,
+    "EpisodeId": 1,
+    "Param5": -1
+  },
+  {
+    "Id": 308,
+    "_comment": "Episode 1 Mob - レイス (Basis: 58, Normal Mob)",
+    "BasisMobId": 58,
+    "Name": "レイス",
+    "IsBoss": false,
+    "EpisodeId": 1,
+    "Param5": -1
+  },
+  {
+    "Id": 309,
+    "_comment": "Episode 1 Mob - モネラ (Basis: 9, Normal Mob)",
+    "BasisMobId": 9,
+    "Name": "モネラ",
+    "IsBoss": false,
+    "EpisodeId": 1,
+    "Param5": -1
+  },
+  {
+    "Id": 310,
+    "_comment": "Episode 1 Mob - レイス (Basis: 58, Normal Mob)",
+    "BasisMobId": 58,
+    "Name": "レイス",
+    "IsBoss": false,
+    "EpisodeId": 1,
+    "Param5": -1
+  },
+  {
+    "Id": 311,
+    "_comment": "Episode 1 Mob - モネラ (Basis: 9, Normal Mob)",
+    "BasisMobId": 9,
+    "Name": "モネラ",
+    "IsBoss": false,
+    "EpisodeId": 1,
+    "Param5": -1
+  },
+  {
+    "Id": 312,
+    "_comment": "Episode 1 Mob - レイス (Basis: 58, Normal Mob)",
+    "BasisMobId": 58,
+    "Name": "レイス",
+    "IsBoss": false,
+    "EpisodeId": 1,
+    "Param5": -1
+  },
+  {
+    "Id": 355,
+    "_comment": "Episode 75 Mob - スパービー (Basis: 31, Normal Mob)",
+    "BasisMobId": 31,
+    "Name": "スパービー",
+    "IsBoss": false,
+    "EpisodeId": 75,
+    "Param5": -1
+  },
+  {
+    "Id": 356,
+    "_comment": "Episode 75 Mob - コッコー (Basis: 126, Normal Mob)",
+    "BasisMobId": 126,
+    "Name": "コッコー",
+    "IsBoss": false,
+    "EpisodeId": 75,
+    "Param5": -1
+  },
+  {
+    "Id": 358,
+    "_comment": "Episode 75 Mob - ソソマミー (Basis: 96, Normal Mob)",
+    "BasisMobId": 96,
+    "Name": "ソソマミー",
+    "IsBoss": false,
+    "EpisodeId": 75,
+    "Param5": -1
+  },
+  {
+    "Id": 359,
+    "_comment": "Episode 75 Mob - 黒後家蜘蛛 (Basis: 106, Normal Mob)",
+    "BasisMobId": 106,
+    "Name": "黒後家蜘蛛",
+    "IsBoss": false,
+    "EpisodeId": 75,
+    "Param5": -1
+  },
+  {
+    "Id": 357,
+    "_comment": "Episode 75 Mob - ファイアコッコー (Basis: 131, Episode Boss / Unique)",
+    "BasisMobId": 131,
+    "Name": "ファイアコッコー",
+    "IsBoss": true,
+    "EpisodeId": 75,
+    "Param5": -1
+  },
+  {
+    "Id": 9358,
+    "_comment": "Episode 75 Mob - デカソソ (Basis: 148, Normal Mob)",
+    "BasisMobId": 148,
+    "Name": "デカソソ",
+    "IsBoss": false,
+    "EpisodeId": 75,
+    "Param5": -1
+  },
+  {
+    "Id": 368,
+    "_comment": "Episode 73 Mob - 宵月学院男子生徒 (Basis: 128, Normal Mob)",
+    "BasisMobId": 128,
+    "Name": "宵月学院男子生徒",
+    "IsBoss": false,
+    "EpisodeId": 73,
+    "Param5": -1
+  },
+  {
+    "Id": 369,
+    "_comment": "Episode 73 Mob - 宵月学院女生徒 (Basis: 129, Normal Mob)",
+    "BasisMobId": 129,
+    "Name": "宵月学院女生徒",
+    "IsBoss": false,
+    "EpisodeId": 73,
+    "Param5": -1
+  },
+  {
+    "Id": 370,
+    "_comment": "Episode 73 Mob - ニーナ (Basis: 73, Normal Mob)",
+    "BasisMobId": 73,
+    "Name": "ニーナ",
+    "IsBoss": false,
+    "EpisodeId": 73,
+    "Param5": -1
+  },
+  {
+    "Id": 371,
+    "_comment": "Episode 73 Mob - ニーノ (Basis: 74, Normal Mob)",
+    "BasisMobId": 74,
+    "Name": "ニーノ",
+    "IsBoss": false,
+    "EpisodeId": 73,
+    "Param5": -1
+  },
+  {
+    "Id": 372,
+    "_comment": "Episode 73 Mob - ラッチュー (Basis: 7, Normal Mob)",
+    "BasisMobId": 7,
+    "Name": "ラッチュー",
+    "IsBoss": false,
+    "EpisodeId": 73,
+    "Param5": -1
+  },
+  {
+    "Id": 9370,
+    "_comment": "Episode 73 Mob - デカルシュ (Basis: 149, Normal Mob)",
+    "BasisMobId": 149,
+    "Name": "デカルシュ",
+    "IsBoss": false,
+    "EpisodeId": 73,
+    "Param5": -1
+  },
+  {
+    "Id": 419,
+    "_comment": "Episode 111 Mob - ラッチュー (Basis: 7, Normal Mob)",
+    "BasisMobId": 7,
+    "Name": "ラッチュー",
+    "IsBoss": false,
+    "EpisodeId": 111,
+    "Param5": -1
+  },
+  {
+    "Id": 420,
+    "_comment": "Episode 111 Mob - ニーナ (Basis: 73, Normal Mob)",
+    "BasisMobId": 73,
+    "Name": "ニーナ",
+    "IsBoss": false,
+    "EpisodeId": 111,
+    "Param5": -1
+  },
+  {
+    "Id": 421,
+    "_comment": "Episode 111 Mob - ニーノ (Basis: 74, Normal Mob)",
+    "BasisMobId": 74,
+    "Name": "ニーノ",
+    "IsBoss": false,
+    "EpisodeId": 111,
+    "Param5": -1
+  },
+  {
+    "Id": 9420,
+    "_comment": "Episode 111 Mob - デカセブン (Basis: 150, Normal Mob)",
+    "BasisMobId": 150,
+    "Name": "デカセブン",
+    "IsBoss": false,
+    "EpisodeId": 111,
+    "Param5": -1
+  },
+  {
+    "Id": 360,
+    "_comment": "Episode 71 Mob - ピギー (Basis: 93, Normal Mob)",
+    "BasisMobId": 93,
+    "Name": "ピギー",
+    "IsBoss": false,
+    "EpisodeId": 71,
+    "Param5": -1
+  },
+  {
+    "Id": 361,
+    "_comment": "Episode 71 Mob - ソソマミー (Basis: 96, Normal Mob)",
+    "BasisMobId": 96,
+    "Name": "ソソマミー",
+    "IsBoss": false,
+    "EpisodeId": 71,
+    "Param5": -1
+  },
+  {
+    "Id": 362,
+    "_comment": "Episode 71 Mob - レディ (Basis: 36, Normal Mob)",
+    "BasisMobId": 36,
+    "Name": "レディ",
+    "IsBoss": false,
+    "EpisodeId": 71,
+    "Param5": -1
+  },
+  {
+    "Id": 363,
+    "_comment": "Episode 71 Mob - ステディ (Basis: 37, Normal Mob)",
+    "BasisMobId": 37,
+    "Name": "ステディ",
+    "IsBoss": false,
+    "EpisodeId": 71,
+    "Param5": -1
+  },
+  {
+    "Id": 364,
+    "_comment": "Episode 71 Mob - ゴウ (Basis: 38, Normal Mob)",
+    "BasisMobId": 38,
+    "Name": "ゴウ",
+    "IsBoss": false,
+    "EpisodeId": 71,
+    "Param5": -1
+  },
+  {
+    "Id": 9361,
+    "_comment": "Episode 71 Mob - デカソソ (Basis: 148, Normal Mob)",
+    "BasisMobId": 148,
+    "Name": "デカソソ",
+    "IsBoss": false,
+    "EpisodeId": 71,
+    "Param5": -1
+  },
+  {
+    "Id": 378,
+    "_comment": "Episode 77 Mob - 宵月学院男子生徒 (Basis: 128, Normal Mob)",
+    "BasisMobId": 128,
+    "Name": "宵月学院男子生徒",
+    "IsBoss": false,
+    "EpisodeId": 77,
+    "Param5": -1
+  },
+  {
+    "Id": 379,
+    "_comment": "Episode 77 Mob - 宵月学院女生徒 (Basis: 129, Normal Mob)",
+    "BasisMobId": 129,
+    "Name": "宵月学院女生徒",
+    "IsBoss": false,
+    "EpisodeId": 77,
+    "Param5": -1
+  },
+  {
+    "Id": 9378,
+    "_comment": "Episode 77 Mob - デカセブン (Basis: 150, Normal Mob)",
+    "BasisMobId": 150,
+    "Name": "デカセブン",
+    "IsBoss": false,
+    "EpisodeId": 77,
+    "Param5": -1
+  },
+  {
+    "Id": 468,
+    "_comment": "Episode 129 Mob - 教官ステファノ (Basis: 130, Episode Boss / Unique)",
+    "BasisMobId": 130,
+    "Name": "教官ステファノ",
+    "IsBoss": true,
+    "EpisodeId": 129,
+    "Param5": -1
+  },
+  {
+    "Id": 465,
+    "_comment": "Episode 129 Mob - ボボカン (Basis: 5, Normal Mob)",
+    "BasisMobId": 5,
+    "Name": "ボボカン",
+    "IsBoss": false,
+    "EpisodeId": 129,
+    "Param5": -1
+  },
+  {
+    "Id": 466,
+    "_comment": "Episode 129 Mob - ホームキーパー mk-2 (Basis: 20, Normal Mob)",
+    "BasisMobId": 20,
+    "Name": "ホームキーパー mk-2",
+    "IsBoss": false,
+    "EpisodeId": 129,
+    "Param5": -1
+  },
+  {
+    "Id": 467,
+    "_comment": "Episode 129 Mob - パトロボ (Basis: 95, Normal Mob)",
+    "BasisMobId": 95,
+    "Name": "パトロボ",
+    "IsBoss": false,
+    "EpisodeId": 129,
+    "Param5": -1
+  },
+  {
+    "Id": 9465,
+    "_comment": "Episode 129 Mob - デカセブン (Basis: 150, Normal Mob)",
+    "BasisMobId": 150,
+    "Name": "デカセブン",
+    "IsBoss": false,
+    "EpisodeId": 129,
+    "Param5": -1
+  },
+  {
+    "Id": 432,
+    "_comment": "Episode 125 Mob - ゼリーデリー (Basis: 101, Normal Mob)",
+    "BasisMobId": 101,
+    "Name": "ゼリーデリー",
+    "IsBoss": false,
+    "EpisodeId": 125,
+    "Param5": -1
+  },
+  {
+    "Id": 433,
+    "_comment": "Episode 125 Mob - ピギー (Basis: 93, Normal Mob)",
+    "BasisMobId": 93,
+    "Name": "ピギー",
+    "IsBoss": false,
+    "EpisodeId": 125,
+    "Param5": -1
+  },
+  {
+    "Id": 434,
+    "_comment": "Episode 125 Mob - フォクシー (Basis: 54, Normal Mob)",
+    "BasisMobId": 54,
+    "Name": "フォクシー",
+    "IsBoss": false,
+    "EpisodeId": 125,
+    "Param5": -1
+  },
+  {
+    "Id": 435,
+    "_comment": "Episode 125 Mob - ナインフォックス (Basis: 59, Normal Mob)",
+    "BasisMobId": 59,
+    "Name": "ナインフォックス",
+    "IsBoss": false,
+    "EpisodeId": 125,
+    "Param5": -1
+  },
+  {
+    "Id": 9432,
+    "_comment": "Episode 125 Mob - デカルシュ (Basis: 149, Normal Mob)",
+    "BasisMobId": 149,
+    "Name": "デカルシュ",
+    "IsBoss": false,
+    "EpisodeId": 125,
+    "Param5": -1
+  },
+  {
+    "Id": 342,
+    "_comment": "Episode 83 Mob - コッコー (Basis: 126, Normal Mob)",
+    "BasisMobId": 126,
+    "Name": "コッコー",
+    "IsBoss": false,
+    "EpisodeId": 83,
+    "Param5": -1
+  },
+  {
+    "Id": 343,
+    "_comment": "Episode 83 Mob - レディ (Basis: 36, Normal Mob)",
+    "BasisMobId": 36,
+    "Name": "レディ",
+    "IsBoss": false,
+    "EpisodeId": 83,
+    "Param5": -1
+  },
+  {
+    "Id": 344,
+    "_comment": "Episode 83 Mob - ステディ (Basis: 37, Normal Mob)",
+    "BasisMobId": 37,
+    "Name": "ステディ",
+    "IsBoss": false,
+    "EpisodeId": 83,
+    "Param5": -1
+  },
+  {
+    "Id": 345,
+    "_comment": "Episode 83 Mob - ゴウ (Basis: 38, Normal Mob)",
+    "BasisMobId": 38,
+    "Name": "ゴウ",
+    "IsBoss": false,
+    "EpisodeId": 83,
+    "Param5": -1
+  },
+  {
+    "Id": 9343,
+    "_comment": "Episode 83 Mob - デカセブン (Basis: 150, Normal Mob)",
+    "BasisMobId": 150,
+    "Name": "デカセブン",
+    "IsBoss": false,
+    "EpisodeId": 83,
+    "Param5": -1
+  },
+  {
+    "Id": 373,
+    "_comment": "Episode 81 Mob - ナイトウォーカー (Basis: 84, Normal Mob)",
+    "BasisMobId": 84,
+    "Name": "ナイトウォーカー",
+    "IsBoss": false,
+    "EpisodeId": 81,
+    "Param5": -1
+  },
+  {
+    "Id": 374,
+    "_comment": "Episode 81 Mob - ハロウィーン (Basis: 56, Normal Mob)",
+    "BasisMobId": 56,
+    "Name": "ハロウィーン",
+    "IsBoss": false,
+    "EpisodeId": 81,
+    "Param5": -1
+  },
+  {
+    "Id": 9374,
+    "_comment": "Episode 81 Mob - デカソソ (Basis: 148, Normal Mob)",
+    "BasisMobId": 148,
+    "Name": "デカソソ",
+    "IsBoss": false,
+    "EpisodeId": 81,
+    "Param5": -1
+  },
+  {
+    "Id": 365,
+    "_comment": "Episode 85 Mob - 昔の男子生徒 (Basis: 132, Normal Mob)",
+    "BasisMobId": 132,
+    "Name": "昔の男子生徒",
+    "IsBoss": false,
+    "EpisodeId": 85,
+    "Param5": -1
+  },
+  {
+    "Id": 366,
+    "_comment": "Episode 85 Mob - 昔の女生徒 (Basis: 133, Normal Mob)",
+    "BasisMobId": 133,
+    "Name": "昔の女生徒",
+    "IsBoss": false,
+    "EpisodeId": 85,
+    "Param5": -1
+  },
+  {
+    "Id": 367,
+    "_comment": "Episode 85 Mob - エミリー (Basis: 72, Normal Mob)",
+    "BasisMobId": 72,
+    "Name": "エミリー",
+    "IsBoss": false,
+    "EpisodeId": 85,
+    "Param5": -1
+  },
+  {
+    "Id": 9365,
+    "_comment": "Episode 85 Mob - デカセブン (Basis: 150, Normal Mob)",
+    "BasisMobId": 150,
+    "Name": "デカセブン",
+    "IsBoss": false,
+    "EpisodeId": 85,
+    "Param5": -1
+  },
+  {
+    "Id": 385,
+    "_comment": "Episode 2 Mob - ピギー (Basis: 93, Normal Mob)",
+    "BasisMobId": 93,
+    "Name": "ピギー",
+    "IsBoss": false,
+    "EpisodeId": 2,
+    "Param5": -1
+  },
+  {
+    "Id": 386,
+    "_comment": "Episode 2 Mob - シャドウビースト (Basis: 112, Normal Mob)",
+    "BasisMobId": 112,
+    "Name": "シャドウビースト",
+    "IsBoss": false,
+    "EpisodeId": 2,
+    "Param5": -1
+  },
+  {
+    "Id": 387,
+    "_comment": "Episode 2 Mob - ロルレクス (Basis: 100, Normal Mob)",
+    "BasisMobId": 100,
+    "Name": "ロルレクス",
+    "IsBoss": false,
+    "EpisodeId": 2,
+    "Param5": -1
+  },
+  {
+    "Id": 388,
+    "_comment": "Episode 2 Mob - ゼリーデリー (Basis: 101, Normal Mob)",
+    "BasisMobId": 101,
+    "Name": "ゼリーデリー",
+    "IsBoss": false,
+    "EpisodeId": 2,
+    "Param5": -1
+  },
+  {
+    "Id": 403,
+    "_comment": "Episode 105 Mob - 影入道 (Basis: 125, Normal Mob)",
+    "BasisMobId": 125,
+    "Name": "影入道",
+    "IsBoss": false,
+    "EpisodeId": 105,
+    "Param5": -1
+  },
+  {
+    "Id": 404,
+    "_comment": "Episode 105 Mob - 忍者 (Basis: 103, Normal Mob)",
+    "BasisMobId": 103,
+    "Name": "忍者",
+    "IsBoss": false,
+    "EpisodeId": 105,
+    "Param5": -1
+  },
+  {
+    "Id": 405,
+    "_comment": "Episode 105 Mob - ムジナ守衛 (Basis: 78, Normal Mob)",
+    "BasisMobId": 78,
+    "Name": "ムジナ守衛",
+    "IsBoss": false,
+    "EpisodeId": 105,
+    "Param5": -1
+  },
+  {
+    "Id": 406,
+    "_comment": "Episode 105 Mob - ニーナ (Basis: 73, Normal Mob)",
+    "BasisMobId": 73,
+    "Name": "ニーナ",
+    "IsBoss": false,
+    "EpisodeId": 105,
+    "Param5": -1
+  },
+  {
+    "Id": 407,
+    "_comment": "Episode 105 Mob - ニーノ (Basis: 74, Normal Mob)",
+    "BasisMobId": 74,
+    "Name": "ニーノ",
+    "IsBoss": false,
+    "EpisodeId": 105,
+    "Param5": -1
+  },
+  {
+    "Id": 402,
+    "_comment": "Episode 105 Mob - 幽霊教頭スターリン (Basis: 134, Episode Boss / Unique)",
+    "BasisMobId": 134,
+    "Name": "幽霊教頭スターリン",
+    "IsBoss": true,
+    "EpisodeId": 105,
+    "Param5": -1
+  },
+  {
+    "Id": 9404,
+    "_comment": "Episode 105 Mob - デカセブン (Basis: 150, Normal Mob)",
+    "BasisMobId": 150,
+    "Name": "デカセブン",
+    "IsBoss": false,
+    "EpisodeId": 105,
+    "Param5": -1
+  },
+  {
+    "Id": 457,
+    "_comment": "Episode 121 Mob - ソソプラネット (Basis: 108, Normal Mob)",
+    "BasisMobId": 108,
+    "Name": "ソソプラネット",
+    "IsBoss": false,
+    "EpisodeId": 121,
+    "Param5": -1
+  },
+  {
+    "Id": 458,
+    "_comment": "Episode 121 Mob - イスファイター (Basis: 110, Normal Mob)",
+    "BasisMobId": 110,
+    "Name": "イスファイター",
+    "IsBoss": false,
+    "EpisodeId": 121,
+    "Param5": -1
+  },
+  {
+    "Id": 459,
+    "_comment": "Episode 121 Mob - ツクエミミック (Basis: 109, Normal Mob)",
+    "BasisMobId": 109,
+    "Name": "ツクエミミック",
+    "IsBoss": false,
+    "EpisodeId": 121,
+    "Param5": -1
+  },
+  {
+    "Id": 460,
+    "_comment": "Episode 121 Mob - お掃除ハカセ (Basis: 113, Normal Mob)",
+    "BasisMobId": 113,
+    "Name": "お掃除ハカセ",
+    "IsBoss": false,
+    "EpisodeId": 121,
+    "Param5": -1
+  },
+  {
+    "Id": 461,
+    "_comment": "Episode 121 Mob - 次元魚 (Basis: 111, Normal Mob)",
+    "BasisMobId": 111,
+    "Name": "次元魚",
+    "IsBoss": false,
+    "EpisodeId": 121,
+    "Param5": -1
+  },
+  {
+    "Id": 9457,
+    "_comment": "Episode 121 Mob - デカソソ (Basis: 148, Normal Mob)",
+    "BasisMobId": 148,
+    "Name": "デカソソ",
+    "IsBoss": false,
+    "EpisodeId": 121,
+    "Param5": -1
+  },
+  {
+    "Id": 470,
+    "_comment": "Episode 135 Mob - PTA 41 (Basis: 118, Normal Mob)",
+    "BasisMobId": 118,
+    "Name": "PTA 41",
+    "IsBoss": false,
+    "EpisodeId": 135,
+    "Param5": -1
+  },
+  {
+    "Id": 471,
+    "_comment": "Episode 135 Mob - PTA 26 (Basis: 119, Normal Mob)",
+    "BasisMobId": 119,
+    "Name": "PTA 26",
+    "IsBoss": false,
+    "EpisodeId": 135,
+    "Param5": -1
+  },
+  {
+    "Id": 472,
+    "_comment": "Episode 135 Mob - クロコ (Basis: 33, Normal Mob)",
+    "BasisMobId": 33,
+    "Name": "クロコ",
+    "IsBoss": false,
+    "EpisodeId": 135,
+    "Param5": -1
+  },
+  {
+    "Id": 473,
+    "_comment": "Episode 135 Mob - パトロボ (Basis: 95, Normal Mob)",
+    "BasisMobId": 95,
+    "Name": "パトロボ",
+    "IsBoss": false,
+    "EpisodeId": 135,
+    "Param5": -1
+  },
+  {
+    "Id": 9473,
+    "_comment": "Episode 135 Mob - デカルシュ (Basis: 149, Normal Mob)",
+    "BasisMobId": 149,
+    "Name": "デカルシュ",
+    "IsBoss": false,
+    "EpisodeId": 135,
+    "Param5": -1
+  },
+  {
+    "Id": 476,
+    "_comment": "Episode 135 Mob - PTA 41 (Basis: 118, Normal Mob)",
+    "BasisMobId": 118,
+    "Name": "PTA 41",
+    "IsBoss": false,
+    "EpisodeId": 135,
+    "Param5": -1
+  },
+  {
+    "Id": 477,
+    "_comment": "Episode 135 Mob - PTA 26 (Basis: 119, Normal Mob)",
+    "BasisMobId": 119,
+    "Name": "PTA 26",
+    "IsBoss": false,
+    "EpisodeId": 135,
+    "Param5": -1
+  },
+  {
+    "Id": 478,
+    "_comment": "Episode 135 Mob - クロコ (Basis: 33, Normal Mob)",
+    "BasisMobId": 33,
+    "Name": "クロコ",
+    "IsBoss": false,
+    "EpisodeId": 135,
+    "Param5": -1
+  },
+  {
+    "Id": 479,
+    "_comment": "Episode 135 Mob - パトロボ (Basis: 95, Normal Mob)",
+    "BasisMobId": 95,
+    "Name": "パトロボ",
+    "IsBoss": false,
+    "EpisodeId": 135,
+    "Param5": -1
+  },
+  {
+    "Id": 9478,
+    "_comment": "Episode 135 Mob - デカルシュ (Basis: 149, Normal Mob)",
+    "BasisMobId": 149,
+    "Name": "デカルシュ",
+    "IsBoss": false,
+    "EpisodeId": 135,
+    "Param5": -1
+  },
+  {
+    "Id": 474,
+    "_comment": "Episode 141 Mob - 宵月学院女生徒 (Basis: 129, Normal Mob)",
+    "BasisMobId": 129,
+    "Name": "宵月学院女生徒",
+    "IsBoss": false,
+    "EpisodeId": 141,
+    "Param5": -1
+  },
+  {
+    "Id": 475,
+    "_comment": "Episode 141 Mob - 宵月学院男子生徒 (Basis: 128, Normal Mob)",
+    "BasisMobId": 128,
+    "Name": "宵月学院男子生徒",
+    "IsBoss": false,
+    "EpisodeId": 141,
+    "Param5": -1
+  },
+  {
+    "Id": 9474,
+    "_comment": "Episode 141 Mob - デカソソ (Basis: 148, Normal Mob)",
+    "BasisMobId": 148,
+    "Name": "デカソソ",
+    "IsBoss": false,
+    "EpisodeId": 141,
+    "Param5": -1
+  },
+  {
+    "Id": 492,
+    "_comment": "Episode 141 Mob - ボボカン (Basis: 5, Normal Mob)",
+    "BasisMobId": 5,
+    "Name": "ボボカン",
+    "IsBoss": false,
+    "EpisodeId": 141,
+    "Param5": -1
+  },
+  {
+    "Id": 493,
+    "_comment": "Episode 141 Mob - ボンボ (Basis: 90, Normal Mob)",
+    "BasisMobId": 90,
+    "Name": "ボンボ",
+    "IsBoss": false,
+    "EpisodeId": 141,
+    "Param5": -1
+  },
+  {
+    "Id": 494,
+    "_comment": "Episode 141 Mob - トホホ (Basis: 94, Normal Mob)",
+    "BasisMobId": 94,
+    "Name": "トホホ",
+    "IsBoss": false,
+    "EpisodeId": 141,
+    "Param5": -1
+  },
+  {
+    "Id": 495,
+    "_comment": "Episode 141 Mob - パトロボ (Basis: 95, Normal Mob)",
+    "BasisMobId": 95,
+    "Name": "パトロボ",
+    "IsBoss": false,
+    "EpisodeId": 141,
+    "Param5": -1
+  },
+  {
+    "Id": 9494,
+    "_comment": "Episode 141 Mob - デカセブン (Basis: 150, Normal Mob)",
+    "BasisMobId": 150,
+    "Name": "デカセブン",
+    "IsBoss": false,
+    "EpisodeId": 141,
+    "Param5": -1
+  },
+  {
+    "Id": 503,
+    "_comment": "Episode 147 Mob - 守護仙女 (Basis: 79, Episode Boss / Unique)",
+    "BasisMobId": 79,
+    "Name": "守護仙女",
+    "IsBoss": true,
+    "EpisodeId": 147,
+    "Param5": -1
+  },
+  {
+    "Id": 497,
+    "_comment": "Episode 147 Mob - フライングドクロ (Basis: 67, Normal Mob)",
+    "BasisMobId": 67,
+    "Name": "フライングドクロ",
+    "IsBoss": false,
+    "EpisodeId": 147,
+    "Param5": -1
+  },
+  {
+    "Id": 498,
+    "_comment": "Episode 147 Mob - 影入道 (Basis: 125, Normal Mob)",
+    "BasisMobId": 125,
+    "Name": "影入道",
+    "IsBoss": false,
+    "EpisodeId": 147,
+    "Param5": -1
+  },
+  {
+    "Id": 499,
+    "_comment": "Episode 147 Mob - コータ (Basis: 104, Normal Mob)",
+    "BasisMobId": 104,
+    "Name": "コータ",
+    "IsBoss": false,
+    "EpisodeId": 147,
+    "Param5": -1
+  },
+  {
+    "Id": 500,
+    "_comment": "Episode 147 Mob - 金大鑑 (Basis: 70, Normal Mob)",
+    "BasisMobId": 70,
+    "Name": "金大鑑",
+    "IsBoss": false,
+    "EpisodeId": 147,
+    "Param5": -1
+  },
+  {
+    "Id": 501,
+    "_comment": "Episode 147 Mob - もんたる (Basis: 71, Normal Mob)",
+    "BasisMobId": 71,
+    "Name": "もんたる",
+    "IsBoss": false,
+    "EpisodeId": 147,
+    "Param5": -1
+  },
+  {
+    "Id": 502,
+    "_comment": "Episode 147 Mob - 仙女 (Basis: 69, Normal Mob)",
+    "BasisMobId": 69,
+    "Name": "仙女",
+    "IsBoss": false,
+    "EpisodeId": 147,
+    "Param5": -1
+  },
+  {
+    "Id": 9500,
+    "_comment": "Episode 147 Mob - デカソソ (Basis: 148, Normal Mob)",
+    "BasisMobId": 148,
+    "Name": "デカソソ",
+    "IsBoss": false,
+    "EpisodeId": 147,
+    "Param5": -1
+  },
+  {
+    "Id": 484,
+    "_comment": "Episode 147 Mob - ボボカン (Basis: 5, Normal Mob)",
+    "BasisMobId": 5,
+    "Name": "ボボカン",
+    "IsBoss": false,
+    "EpisodeId": 147,
+    "Param5": -1
+  },
+  {
+    "Id": 485,
+    "_comment": "Episode 147 Mob - ハイバラウス (Basis: 12, Normal Mob)",
+    "BasisMobId": 12,
+    "Name": "ハイバラウス",
+    "IsBoss": false,
+    "EpisodeId": 147,
+    "Param5": -1
+  },
+  {
+    "Id": 486,
+    "_comment": "Episode 147 Mob - ボンボ (Basis: 90, Normal Mob)",
+    "BasisMobId": 90,
+    "Name": "ボンボ",
+    "IsBoss": false,
+    "EpisodeId": 147,
+    "Param5": -1
+  },
+  {
+    "Id": 487,
+    "_comment": "Episode 147 Mob - イスファイター (Basis: 110, Normal Mob)",
+    "BasisMobId": 110,
+    "Name": "イスファイター",
+    "IsBoss": false,
+    "EpisodeId": 147,
+    "Param5": -1
+  },
+  {
+    "Id": 488,
+    "_comment": "Episode 147 Mob - ツクエミミック (Basis: 109, Normal Mob)",
+    "BasisMobId": 109,
+    "Name": "ツクエミミック",
+    "IsBoss": false,
+    "EpisodeId": 147,
+    "Param5": -1
+  },
+  {
+    "Id": 489,
+    "_comment": "Episode 147 Mob - ホームキーパー mk-2 (Basis: 20, Normal Mob)",
+    "BasisMobId": 20,
+    "Name": "ホームキーパー mk-2",
+    "IsBoss": false,
+    "EpisodeId": 147,
+    "Param5": -1
+  },
+  {
+    "Id": 490,
+    "_comment": "Episode 147 Mob - ブラービー (Basis: 25, Normal Mob)",
+    "BasisMobId": 25,
+    "Name": "ブラービー",
+    "IsBoss": false,
+    "EpisodeId": 147,
+    "Param5": -1
+  },
+  {
+    "Id": 9487,
+    "_comment": "Episode 147 Mob - デカセブン (Basis: 150, Normal Mob)",
+    "BasisMobId": 150,
+    "Name": "デカセブン",
+    "IsBoss": false,
+    "EpisodeId": 147,
+    "Param5": -1
+  },
+  {
+    "Id": 491,
+    "_comment": "Episode 147 Mob - ゲートキーパー (Basis: 26, Episode Boss / Unique)",
+    "BasisMobId": 26,
+    "Name": "ゲートキーパー",
+    "IsBoss": true,
+    "EpisodeId": 147,
+    "Param5": -1
+  },
+  {
+    "Id": 480,
+    "_comment": "Episode 153 Mob - リトルクロコ (Basis: 47, Normal Mob)",
+    "BasisMobId": 47,
+    "Name": "リトルクロコ",
+    "IsBoss": false,
+    "EpisodeId": 153,
+    "Param5": -1
+  },
+  {
+    "Id": 481,
+    "_comment": "Episode 153 Mob - クロコ (Basis: 33, Normal Mob)",
+    "BasisMobId": 33,
+    "Name": "クロコ",
+    "IsBoss": false,
+    "EpisodeId": 153,
+    "Param5": -1
+  },
+  {
+    "Id": 482,
+    "_comment": "Episode 153 Mob - ハッコウモリ (Basis: 46, Normal Mob)",
+    "BasisMobId": 46,
+    "Name": "ハッコウモリ",
+    "IsBoss": false,
+    "EpisodeId": 153,
+    "Param5": -1
+  },
+  {
+    "Id": 483,
+    "_comment": "Episode 153 Mob - 4次元ウッドヘリアン (Basis: 117, Normal Mob)",
+    "BasisMobId": 117,
+    "Name": "4次元ウッドヘリアン",
+    "IsBoss": false,
+    "EpisodeId": 153,
+    "Param5": -1
+  },
+  {
+    "Id": 496,
+    "_comment": "Episode 153 Mob - サイクロコ (Basis: 34, Episode Boss / Unique)",
+    "BasisMobId": 34,
+    "Name": "サイクロコ",
+    "IsBoss": true,
+    "EpisodeId": 153,
+    "Param5": -1
+  },
+  {
+    "Id": 9481,
+    "_comment": "Episode 153 Mob - デカルシュ (Basis: 149, Normal Mob)",
+    "BasisMobId": 149,
+    "Name": "デカルシュ",
+    "IsBoss": false,
+    "EpisodeId": 153,
+    "Param5": -1
+  },
+  {
+    "Id": 510,
+    "_comment": "Episode 153 Mob - リトルクロコ (Basis: 47, Normal Mob)",
+    "BasisMobId": 47,
+    "Name": "リトルクロコ",
+    "IsBoss": false,
+    "EpisodeId": 153,
+    "Param5": -1
+  },
+  {
+    "Id": 511,
+    "_comment": "Episode 153 Mob - クロコ (Basis: 33, Normal Mob)",
+    "BasisMobId": 33,
+    "Name": "クロコ",
+    "IsBoss": false,
+    "EpisodeId": 153,
+    "Param5": -1
+  },
+  {
+    "Id": 512,
+    "_comment": "Episode 153 Mob - ボンボ (Basis: 90, Normal Mob)",
+    "BasisMobId": 90,
+    "Name": "ボンボ",
+    "IsBoss": false,
+    "EpisodeId": 153,
+    "Param5": -1
+  },
+  {
+    "Id": 513,
+    "_comment": "Episode 153 Mob - サイクロコ (Basis: 34, Episode Boss / Unique)",
+    "BasisMobId": 34,
+    "Name": "サイクロコ",
+    "IsBoss": true,
+    "EpisodeId": 153,
+    "Param5": -1
+  },
+  {
+    "Id": 514,
+    "_comment": "Episode 153 Mob - ロージー (Basis: 127, Normal Mob)",
+    "BasisMobId": 127,
+    "Name": "ロージー",
+    "IsBoss": false,
+    "EpisodeId": 153,
+    "Param5": -1
+  },
+  {
+    "Id": 515,
+    "_comment": "Episode 153 Mob - コッコー (Basis: 126, Normal Mob)",
+    "BasisMobId": 126,
+    "Name": "コッコー",
+    "IsBoss": false,
+    "EpisodeId": 153,
+    "Param5": -1
+  },
+  {
+    "Id": 543,
+    "_comment": "Episode 153 Mob - リトルクロコ (Basis: 47, Normal Mob)",
+    "BasisMobId": 47,
+    "Name": "リトルクロコ",
+    "IsBoss": false,
+    "EpisodeId": 153,
+    "Param5": -1
+  },
+  {
+    "Id": 544,
+    "_comment": "Episode 153 Mob - クロコ (Basis: 33, Normal Mob)",
+    "BasisMobId": 33,
+    "Name": "クロコ",
+    "IsBoss": false,
+    "EpisodeId": 153,
+    "Param5": -1
+  },
+  {
+    "Id": 9511,
+    "_comment": "Episode 153 Mob - デカセブン (Basis: 150, Normal Mob)",
+    "BasisMobId": 150,
+    "Name": "デカセブン",
+    "IsBoss": false,
+    "EpisodeId": 153,
+    "Param5": -1
+  },
+  {
+    "Id": 504,
+    "_comment": "Episode 160 Mob - フライングドクロ (Basis: 67, Normal Mob)",
+    "BasisMobId": 67,
+    "Name": "フライングドクロ",
+    "IsBoss": false,
+    "EpisodeId": 160,
+    "Param5": -1
+  },
+  {
+    "Id": 505,
+    "_comment": "Episode 160 Mob - ハッコウモリ (Basis: 46, Normal Mob)",
+    "BasisMobId": 46,
+    "Name": "ハッコウモリ",
+    "IsBoss": false,
+    "EpisodeId": 160,
+    "Param5": -1
+  },
+  {
+    "Id": 506,
+    "_comment": "Episode 160 Mob - 下郎蛙 (Basis: 80, Normal Mob)",
+    "BasisMobId": 80,
+    "Name": "下郎蛙",
+    "IsBoss": false,
+    "EpisodeId": 160,
+    "Param5": -1
+  },
+  {
+    "Id": 507,
+    "_comment": "Episode 160 Mob - ざるかぶり (Basis: 92, Normal Mob)",
+    "BasisMobId": 92,
+    "Name": "ざるかぶり",
+    "IsBoss": false,
+    "EpisodeId": 160,
+    "Param5": -1
+  },
+  {
+    "Id": 508,
+    "_comment": "Episode 160 Mob - 火之輪入道 (Basis: 105, Normal Mob)",
+    "BasisMobId": 105,
+    "Name": "火之輪入道",
+    "IsBoss": false,
+    "EpisodeId": 160,
+    "Param5": -1
+  },
+  {
+    "Id": 9504,
+    "_comment": "Episode 160 Mob - デカソソ (Basis: 148, Normal Mob)",
+    "BasisMobId": 148,
+    "Name": "デカソソ",
+    "IsBoss": false,
+    "EpisodeId": 160,
+    "Param5": -1
+  },
+  {
+    "Id": 509,
+    "_comment": "Episode 160 Mob - フクのカメ (Basis: 82, Normal Mob)",
+    "BasisMobId": 82,
+    "Name": "フクのカメ",
+    "IsBoss": false,
+    "EpisodeId": 160,
+    "Param5": -1
+  },
+  {
+    "Id": 519,
+    "_comment": "Episode 160 Mob - 怒ったミュロビー (Basis: 120, Normal Mob)",
+    "BasisMobId": 120,
+    "Name": "怒ったミュロビー",
+    "IsBoss": false,
+    "EpisodeId": 160,
+    "Param5": -1
+  },
+  {
+    "Id": 520,
+    "_comment": "Episode 160 Mob - ボボカンデラックス (Basis: 5, Normal Mob)",
+    "BasisMobId": 5,
+    "Name": "ボボカンデラックス",
+    "IsBoss": false,
+    "EpisodeId": 160,
+    "Param5": -1
+  },
+  {
+    "Id": 521,
+    "_comment": "Episode 160 Mob - パトロボ (Basis: 95, Normal Mob)",
+    "BasisMobId": 95,
+    "Name": "パトロボ",
+    "IsBoss": false,
+    "EpisodeId": 160,
+    "Param5": -1
+  },
+  {
+    "Id": 522,
+    "_comment": "Episode 160 Mob - ワルグマー (Basis: 17, Normal Mob)",
+    "BasisMobId": 17,
+    "Name": "ワルグマー",
+    "IsBoss": false,
+    "EpisodeId": 160,
+    "Param5": -1
+  },
+  {
+    "Id": 523,
+    "_comment": "Episode 160 Mob - ドワルグマー (Basis: 18, Normal Mob)",
+    "BasisMobId": 18,
+    "Name": "ドワルグマー",
+    "IsBoss": false,
+    "EpisodeId": 160,
+    "Param5": -1
+  },
+  {
+    "Id": 9522,
+    "_comment": "Episode 160 Mob - デカセブン (Basis: 150, Normal Mob)",
+    "BasisMobId": 150,
+    "Name": "デカセブン",
+    "IsBoss": false,
+    "EpisodeId": 160,
+    "Param5": -1
+  },
+  {
+    "Id": 550,
+    "_comment": "Episode 174 Mob - アースクウェイク (Basis: 107, Episode Boss / Unique)",
+    "BasisMobId": 107,
+    "Name": "アースクウェイク",
+    "IsBoss": true,
+    "EpisodeId": 174,
+    "Param5": -1
+  },
+  {
+    "Id": 545,
+    "_comment": "Episode 174 Mob - ソソ (Basis: 1, Normal Mob)",
+    "BasisMobId": 1,
+    "Name": "ソソ",
+    "IsBoss": false,
+    "EpisodeId": 174,
+    "Param5": -1
+  },
+  {
+    "Id": 546,
+    "_comment": "Episode 174 Mob - ソソスケルトン (Basis: 55, Normal Mob)",
+    "BasisMobId": 55,
+    "Name": "ソソスケルトン",
+    "IsBoss": false,
+    "EpisodeId": 174,
+    "Param5": -1
+  },
+  {
+    "Id": 547,
+    "_comment": "Episode 174 Mob - ソソマミー (Basis: 96, Normal Mob)",
+    "BasisMobId": 96,
+    "Name": "ソソマミー",
+    "IsBoss": false,
+    "EpisodeId": 174,
+    "Param5": -1
+  },
+  {
+    "Id": 548,
+    "_comment": "Episode 174 Mob - ソソプラネット (Basis: 108, Normal Mob)",
+    "BasisMobId": 108,
+    "Name": "ソソプラネット",
+    "IsBoss": false,
+    "EpisodeId": 174,
+    "Param5": -1
+  },
+  {
+    "Id": 549,
+    "_comment": "Episode 174 Mob - ソソファイア (Basis: 122, Normal Mob)",
+    "BasisMobId": 122,
+    "Name": "ソソファイア",
+    "IsBoss": false,
+    "EpisodeId": 174,
+    "Param5": -1
+  },
+  {
+    "Id": 551,
+    "_comment": "Episode 174 Mob - ソソマミー (Basis: 96, Normal Mob)",
+    "BasisMobId": 96,
+    "Name": "ソソマミー",
+    "IsBoss": false,
+    "EpisodeId": 174,
+    "Param5": -1
+  },
+  {
+    "Id": 552,
+    "_comment": "Episode 174 Mob - ソソプラネット (Basis: 108, Normal Mob)",
+    "BasisMobId": 108,
+    "Name": "ソソプラネット",
+    "IsBoss": false,
+    "EpisodeId": 174,
+    "Param5": -1
+  },
+  {
+    "Id": 553,
+    "_comment": "Episode 174 Mob - ソソファイア (Basis: 122, Normal Mob)",
+    "BasisMobId": 122,
+    "Name": "ソソファイア",
+    "IsBoss": false,
+    "EpisodeId": 174,
+    "Param5": -1
+  },
+  {
+    "Id": 516,
+    "_comment": "Episode 181 Mob - PTA 41 (Basis: 118, Normal Mob)",
+    "BasisMobId": 118,
+    "Name": "PTA 41",
+    "IsBoss": false,
+    "EpisodeId": 181,
+    "Param5": -1
+  },
+  {
+    "Id": 517,
+    "_comment": "Episode 181 Mob - PTA 26 (Basis: 119, Normal Mob)",
+    "BasisMobId": 119,
+    "Name": "PTA 26",
+    "IsBoss": false,
+    "EpisodeId": 181,
+    "Param5": -1
+  },
+  {
+    "Id": 518,
+    "_comment": "Episode 181 Mob - 生徒 A (Basis: 151, Normal Mob)",
+    "BasisMobId": 151,
+    "Name": "生徒 A",
+    "IsBoss": false,
+    "EpisodeId": 181,
+    "Param5": -1
+  },
+  {
+    "Id": 594,
+    "_comment": "Episode 167 Mob - パペットマスター (Basis: 77, Episode Boss / Unique)",
+    "BasisMobId": 77,
+    "Name": "パペットマスター",
+    "IsBoss": true,
+    "EpisodeId": 167,
+    "Param5": -1
+  },
+  {
+    "Id": 588,
+    "_comment": "Episode 167 Mob - スパービー (Basis: 31, Normal Mob)",
+    "BasisMobId": 31,
+    "Name": "スパービー",
+    "IsBoss": false,
+    "EpisodeId": 167,
+    "Param5": -1
+  },
+  {
+    "Id": 589,
+    "_comment": "Episode 167 Mob - フライングドクロ (Basis: 67, Normal Mob)",
+    "BasisMobId": 67,
+    "Name": "フライングドクロ",
+    "IsBoss": false,
+    "EpisodeId": 167,
+    "Param5": -1
+  },
+  {
+    "Id": 590,
+    "_comment": "Episode 167 Mob - ハッコウモリ (Basis: 46, Normal Mob)",
+    "BasisMobId": 46,
+    "Name": "ハッコウモリ",
+    "IsBoss": false,
+    "EpisodeId": 167,
+    "Param5": -1
+  },
+  {
+    "Id": 591,
+    "_comment": "Episode 167 Mob - パペット (Basis: 75, Normal Mob)",
+    "BasisMobId": 75,
+    "Name": "パペット",
+    "IsBoss": false,
+    "EpisodeId": 167,
+    "Param5": -1
+  },
+  {
+    "Id": 592,
+    "_comment": "Episode 167 Mob - パペット (Basis: 75, Normal Mob)",
+    "BasisMobId": 75,
+    "Name": "パペット",
+    "IsBoss": false,
+    "EpisodeId": 167,
+    "Param5": -1
+  },
+  {
+    "Id": 593,
+    "_comment": "Episode 167 Mob - ホギーパペット (Basis: 76, Normal Mob)",
+    "BasisMobId": 76,
+    "Name": "ホギーパペット",
+    "IsBoss": false,
+    "EpisodeId": 167,
+    "Param5": -1
+  },
+  {
+    "Id": 9591,
+    "_comment": "Episode 167 Mob - デカルシュ (Basis: 149, Normal Mob)",
+    "BasisMobId": 149,
+    "Name": "デカルシュ",
+    "IsBoss": false,
+    "EpisodeId": 167,
+    "Param5": -1
+  },
+  {
+    "Id": 524,
+    "_comment": "Episode 167 Mob - キンググロービー (Basis: 28, Normal Mob)",
+    "BasisMobId": 28,
+    "Name": "キンググロービー",
+    "IsBoss": false,
+    "EpisodeId": 167,
+    "Param5": -1
+  },
+  {
+    "Id": 525,
+    "_comment": "Episode 167 Mob - グロービー (Basis: 27, Normal Mob)",
+    "BasisMobId": 27,
+    "Name": "グロービー",
+    "IsBoss": false,
+    "EpisodeId": 167,
+    "Param5": -1
+  },
+  {
+    "Id": 526,
+    "_comment": "Episode 167 Mob - トホホ (Basis: 94, Normal Mob)",
+    "BasisMobId": 94,
+    "Name": "トホホ",
+    "IsBoss": false,
+    "EpisodeId": 167,
+    "Param5": -1
+  },
+  {
+    "Id": 528,
+    "_comment": "Episode 167 Mob - ボンボ (Basis: 90, Normal Mob)",
+    "BasisMobId": 90,
+    "Name": "ボンボ",
+    "IsBoss": false,
+    "EpisodeId": 167,
+    "Param5": -1
+  },
+  {
+    "Id": 529,
+    "_comment": "Episode 167 Mob - ボボカンデラックス (Basis: 5, Normal Mob)",
+    "BasisMobId": 5,
+    "Name": "ボボカンデラックス",
+    "IsBoss": false,
+    "EpisodeId": 167,
+    "Param5": -1
+  },
+  {
+    "Id": 530,
+    "_comment": "Episode 167 Mob - ホームキーパー mk-2 (Basis: 20, Normal Mob)",
+    "BasisMobId": 20,
+    "Name": "ホームキーパー mk-2",
+    "IsBoss": false,
+    "EpisodeId": 167,
+    "Param5": -1
+  },
+  {
+    "Id": 527,
+    "_comment": "Episode 167 Mob - ナイトロー (Basis: 102, Episode Boss / Unique)",
+    "BasisMobId": 102,
+    "Name": "ナイトロー",
+    "IsBoss": true,
+    "EpisodeId": 167,
+    "Param5": -1
+  },
+  {
+    "Id": 9528,
+    "_comment": "Episode 167 Mob - デカセブン (Basis: 150, Normal Mob)",
+    "BasisMobId": 150,
+    "Name": "デカセブン",
+    "IsBoss": false,
+    "EpisodeId": 167,
+    "Param5": -1
+  },
+  {
+    "Id": 595,
+    "_comment": "Episode 167 Mob - ボボカンデラックス (Basis: 5, Normal Mob)",
+    "BasisMobId": 5,
+    "Name": "ボボカンデラックス",
+    "IsBoss": false,
+    "EpisodeId": 167,
+    "Param5": -1
+  },
+  {
+    "Id": 531,
+    "_comment": "Episode 204 Mob - PTA 41 (Basis: 118, Normal Mob)",
+    "BasisMobId": 118,
+    "Name": "PTA 41",
+    "IsBoss": false,
+    "EpisodeId": 204,
+    "Param5": -1
+  },
+  {
+    "Id": 532,
+    "_comment": "Episode 204 Mob - PTA 26 (Basis: 119, Normal Mob)",
+    "BasisMobId": 119,
+    "Name": "PTA 26",
+    "IsBoss": false,
+    "EpisodeId": 204,
+    "Param5": -1
+  },
+  {
+    "Id": 533,
+    "_comment": "Episode 204 Mob - ブラービー (Basis: 25, Normal Mob)",
+    "BasisMobId": 25,
+    "Name": "ブラービー",
+    "IsBoss": false,
+    "EpisodeId": 204,
+    "Param5": -1
+  },
+  {
+    "Id": 534,
+    "_comment": "Episode 204 Mob - ゲートキーパー (Basis: 26, Normal Mob)",
+    "BasisMobId": 26,
+    "Name": "ゲートキーパー",
+    "IsBoss": false,
+    "EpisodeId": 204,
+    "Param5": -1
+  },
+  {
+    "Id": 601,
+    "_comment": "Episode 204 Mob - ブラービー (Basis: 25, Normal Mob)",
+    "BasisMobId": 25,
+    "Name": "ブラービー",
+    "IsBoss": false,
+    "EpisodeId": 204,
+    "Param5": -1
+  },
+  {
+    "Id": 554,
+    "_comment": "Episode 188 Mob - もんたる (Basis: 71, Normal Mob)",
+    "BasisMobId": 71,
+    "Name": "もんたる",
+    "IsBoss": false,
+    "EpisodeId": 188,
+    "Param5": -1
+  },
+  {
+    "Id": 555,
+    "_comment": "Episode 188 Mob - コータ (Basis: 104, Normal Mob)",
+    "BasisMobId": 104,
+    "Name": "コータ",
+    "IsBoss": false,
+    "EpisodeId": 188,
+    "Param5": -1
+  },
+  {
+    "Id": 556,
+    "_comment": "Episode 188 Mob - フクのカメ (Basis: 82, Normal Mob)",
+    "BasisMobId": 82,
+    "Name": "フクのカメ",
+    "IsBoss": false,
+    "EpisodeId": 188,
+    "Param5": -1
+  },
+  {
+    "Id": 557,
+    "_comment": "Episode 188 Mob - 影入道 (Basis: 125, Normal Mob)",
+    "BasisMobId": 125,
+    "Name": "影入道",
+    "IsBoss": false,
+    "EpisodeId": 188,
+    "Param5": -1
+  },
+  {
+    "Id": 558,
+    "_comment": "Episode 188 Mob - プリズナー (Basis: 91, Normal Mob)",
+    "BasisMobId": 91,
+    "Name": "プリズナー",
+    "IsBoss": false,
+    "EpisodeId": 188,
+    "Param5": -1
+  },
+  {
+    "Id": 559,
+    "_comment": "Episode 188 Mob - フライングドクロ (Basis: 67, Normal Mob)",
+    "BasisMobId": 67,
+    "Name": "フライングドクロ",
+    "IsBoss": false,
+    "EpisodeId": 188,
+    "Param5": -1
+  },
+  {
+    "Id": 560,
+    "_comment": "Episode 188 Mob - 金大鑑 (Basis: 70, Normal Mob)",
+    "BasisMobId": 70,
+    "Name": "金大鑑",
+    "IsBoss": false,
+    "EpisodeId": 188,
+    "Param5": -1
+  },
+  {
+    "Id": 561,
+    "_comment": "Episode 188 Mob - 仙女 (Basis: 69, Normal Mob)",
+    "BasisMobId": 69,
+    "Name": "仙女",
+    "IsBoss": false,
+    "EpisodeId": 188,
+    "Param5": -1
+  },
+  {
+    "Id": 562,
+    "_comment": "Episode 188 Mob - デンプ (Basis: 81, Normal Mob)",
+    "BasisMobId": 81,
+    "Name": "デンプ",
+    "IsBoss": false,
+    "EpisodeId": 188,
+    "Param5": -1
+  },
+  {
+    "Id": 563,
+    "_comment": "Episode 188 Mob - 狐子 (Basis: 68, Normal Mob)",
+    "BasisMobId": 68,
+    "Name": "狐子",
+    "IsBoss": false,
+    "EpisodeId": 188,
+    "Param5": -1
+  },
+  {
+    "Id": 564,
+    "_comment": "Episode 188 Mob - 下郎蛙 (Basis: 80, Normal Mob)",
+    "BasisMobId": 80,
+    "Name": "下郎蛙",
+    "IsBoss": false,
+    "EpisodeId": 188,
+    "Param5": -1
+  },
+  {
+    "Id": 565,
+    "_comment": "Episode 188 Mob - 火之輪入道 (Basis: 105, Normal Mob)",
+    "BasisMobId": 105,
+    "Name": "火之輪入道",
+    "IsBoss": false,
+    "EpisodeId": 188,
+    "Param5": -1
+  },
+  {
+    "Id": 566,
+    "_comment": "Episode 188 Mob - ざるかぶり (Basis: 92, Normal Mob)",
+    "BasisMobId": 92,
+    "Name": "ざるかぶり",
+    "IsBoss": false,
+    "EpisodeId": 188,
+    "Param5": -1
+  },
+  {
+    "Id": 567,
+    "_comment": "Episode 188 Mob - 守護仙女 (Basis: 79, Episode Boss / Unique)",
+    "BasisMobId": 79,
+    "Name": "守護仙女",
+    "IsBoss": true,
+    "EpisodeId": 188,
+    "Param5": -1
+  },
+  {
+    "Id": 568,
+    "_comment": "Episode 188 Mob - 千年狐 (Basis: 83, Episode Boss / Unique)",
+    "BasisMobId": 83,
+    "Name": "千年狐",
+    "IsBoss": true,
+    "EpisodeId": 188,
+    "Param5": 4
+  },
+  {
+    "Id": 602,
+    "_comment": "Episode 188 Mob - 守護天女 (Basis: 79, Normal Mob)",
+    "BasisMobId": 79,
+    "Name": "守護天女",
+    "IsBoss": false,
+    "EpisodeId": 188,
+    "Param5": -1
+  },
+  {
+    "Id": 616,
+    "_comment": "Episode 188 Mob - アマクィラ (Basis: 115, Episode Boss / Unique)",
+    "BasisMobId": 115,
+    "Name": "アマクィラ",
+    "IsBoss": true,
+    "EpisodeId": 188,
+    "Param5": -1
+  },
+  {
+    "Id": 597,
+    "_comment": "Episode 188 Mob - 4次元ウッドヘリアン (Basis: 117, Normal Mob)",
+    "BasisMobId": 117,
+    "Name": "4次元ウッドヘリアン",
+    "IsBoss": false,
+    "EpisodeId": 188,
+    "Param5": -1
+  },
+  {
+    "Id": 598,
+    "_comment": "Episode 188 Mob - クィラ (Basis: 116, Normal Mob)",
+    "BasisMobId": 116,
+    "Name": "クィラ",
+    "IsBoss": false,
+    "EpisodeId": 188,
+    "Param5": -1
+  },
+  {
+    "Id": 600,
+    "_comment": "Episode 188 Mob - 4次元ウッドヘリアン (Basis: 117, Normal Mob)",
+    "BasisMobId": 117,
+    "Name": "4次元ウッドヘリアン",
+    "IsBoss": false,
+    "EpisodeId": 188,
+    "Param5": -1
+  },
+  {
+    "Id": 9597,
+    "_comment": "Episode 188 Mob - デカセブン (Basis: 150, Normal Mob)",
+    "BasisMobId": 150,
+    "Name": "デカセブン",
+    "IsBoss": false,
+    "EpisodeId": 188,
+    "Param5": -1
+  },
+  {
+    "Id": 535,
+    "_comment": "Episode 212 Mob - PTA 41 (Basis: 118, Normal Mob)",
+    "BasisMobId": 118,
+    "Name": "PTA 41",
+    "IsBoss": false,
+    "EpisodeId": 212,
+    "Param5": -1
+  },
+  {
+    "Id": 536,
+    "_comment": "Episode 212 Mob - PTA 26 (Basis: 119, Normal Mob)",
+    "BasisMobId": 119,
+    "Name": "PTA 26",
+    "IsBoss": false,
+    "EpisodeId": 212,
+    "Param5": -1
+  },
+  {
+    "Id": 537,
+    "_comment": "Episode 212 Mob - PTA 41 (Basis: 118, Normal Mob)",
+    "BasisMobId": 118,
+    "Name": "PTA 41",
+    "IsBoss": false,
+    "EpisodeId": 212,
+    "Param5": -1
+  },
+  {
+    "Id": 538,
+    "_comment": "Episode 212 Mob - PTA 26 (Basis: 119, Normal Mob)",
+    "BasisMobId": 119,
+    "Name": "PTA 26",
+    "IsBoss": false,
+    "EpisodeId": 212,
+    "Param5": -1
+  },
+  {
+    "Id": 539,
+    "_comment": "Episode 212 Mob - ステディ (Basis: 37, Normal Mob)",
+    "BasisMobId": 37,
+    "Name": "ステディ",
+    "IsBoss": false,
+    "EpisodeId": 212,
+    "Param5": -1
+  },
+  {
+    "Id": 540,
+    "_comment": "Episode 212 Mob - ゴウ (Basis: 38, Normal Mob)",
+    "BasisMobId": 38,
+    "Name": "ゴウ",
+    "IsBoss": false,
+    "EpisodeId": 212,
+    "Param5": -1
+  },
+  {
+    "Id": 541,
+    "_comment": "Episode 212 Mob - レディ (Basis: 36, Normal Mob)",
+    "BasisMobId": 36,
+    "Name": "レディ",
+    "IsBoss": false,
+    "EpisodeId": 212,
+    "Param5": -1
+  },
+  {
+    "Id": 542,
+    "_comment": "Episode 212 Mob - ステファノ (Basis: 21, Episode Boss / Unique)",
+    "BasisMobId": 21,
+    "Name": "ステファノ",
+    "IsBoss": true,
+    "EpisodeId": 212,
+    "Param5": -1
+  },
+  {
+    "Id": 622,
+    "_comment": "Episode 220 Mob - ゲートキーパー完全体 (Basis: 141, Episode Boss / Unique)",
+    "BasisMobId": 141,
+    "Name": "ゲートキーパー完全体",
+    "IsBoss": true,
+    "EpisodeId": 220,
+    "Param5": -1
+  },
+  {
+    "Id": 617,
+    "_comment": "Episode 220 Mob - もんたる (Basis: 71, Normal Mob)",
+    "BasisMobId": 71,
+    "Name": "もんたる",
+    "IsBoss": false,
+    "EpisodeId": 220,
+    "Param5": -1
+  },
+  {
+    "Id": 618,
+    "_comment": "Episode 220 Mob - プリズナー (Basis: 91, Normal Mob)",
+    "BasisMobId": 91,
+    "Name": "プリズナー",
+    "IsBoss": false,
+    "EpisodeId": 220,
+    "Param5": -1
+  },
+  {
+    "Id": 619,
+    "_comment": "Episode 220 Mob - 影入道 (Basis: 125, Normal Mob)",
+    "BasisMobId": 125,
+    "Name": "影入道",
+    "IsBoss": false,
+    "EpisodeId": 220,
+    "Param5": -1
+  },
+  {
+    "Id": 620,
+    "_comment": "Episode 220 Mob - グレゴリーII世 (Basis: 98, Normal Mob)",
+    "BasisMobId": 98,
+    "Name": "グレゴリーII世",
+    "IsBoss": false,
+    "EpisodeId": 220,
+    "Param5": -1
+  },
+  {
+    "Id": 621,
+    "_comment": "Episode 220 Mob - ロルレクス (Basis: 100, Normal Mob)",
+    "BasisMobId": 100,
+    "Name": "ロルレクス",
+    "IsBoss": false,
+    "EpisodeId": 220,
+    "Param5": -1
+  },
+  {
+    "Id": 623,
+    "_comment": "Episode 220 Mob - ブラービー (Basis: 25, Normal Mob)",
+    "BasisMobId": 25,
+    "Name": "ブラービー",
+    "IsBoss": false,
+    "EpisodeId": 220,
+    "Param5": -1
+  },
+  {
+    "Id": 624,
+    "_comment": "Episode 220 Mob - アンティークガード (Basis: 142, Normal Mob)",
+    "BasisMobId": 142,
+    "Name": "アンティークガード",
+    "IsBoss": false,
+    "EpisodeId": 220,
+    "Param5": -1
+  },
+  {
+    "Id": 611,
+    "_comment": "Episode 230 Mob - 破壊のアンティーククイーン (Basis: 143, Episode Boss / Unique)",
+    "BasisMobId": 143,
+    "Name": "破壊のアンティーククイーン",
+    "IsBoss": true,
+    "EpisodeId": 230,
+    "Param5": 4
+  },
+  {
+    "Id": 603,
+    "_comment": "Episode 230 Mob - ブラービー (Basis: 25, Normal Mob)",
+    "BasisMobId": 25,
+    "Name": "ブラービー",
+    "IsBoss": false,
+    "EpisodeId": 230,
+    "Param5": -1
+  },
+  {
+    "Id": 604,
+    "_comment": "Episode 230 Mob - グレゴリー (Basis: 97, Normal Mob)",
+    "BasisMobId": 97,
+    "Name": "グレゴリー",
+    "IsBoss": false,
+    "EpisodeId": 230,
+    "Param5": -1
+  },
+  {
+    "Id": 605,
+    "_comment": "Episode 230 Mob - グレゴリーII世 (Basis: 98, Normal Mob)",
+    "BasisMobId": 98,
+    "Name": "グレゴリーII世",
+    "IsBoss": false,
+    "EpisodeId": 230,
+    "Param5": -1
+  },
+  {
+    "Id": 606,
+    "_comment": "Episode 230 Mob - トホホ (Basis: 94, Normal Mob)",
+    "BasisMobId": 94,
+    "Name": "トホホ",
+    "IsBoss": false,
+    "EpisodeId": 230,
+    "Param5": -1
+  },
+  {
+    "Id": 607,
+    "_comment": "Episode 230 Mob - ボンボ (Basis: 90, Normal Mob)",
+    "BasisMobId": 90,
+    "Name": "ボンボ",
+    "IsBoss": false,
+    "EpisodeId": 230,
+    "Param5": -1
+  },
+  {
+    "Id": 608,
+    "_comment": "Episode 230 Mob - キャタツラー (Basis: 114, Normal Mob)",
+    "BasisMobId": 114,
+    "Name": "キャタツラー",
+    "IsBoss": false,
+    "EpisodeId": 230,
+    "Param5": -1
+  },
+  {
+    "Id": 609,
+    "_comment": "Episode 230 Mob - 次元魚 (Basis: 111, Normal Mob)",
+    "BasisMobId": 111,
+    "Name": "次元魚",
+    "IsBoss": false,
+    "EpisodeId": 230,
+    "Param5": -1
+  },
+  {
+    "Id": 610,
+    "_comment": "Episode 230 Mob - シャドウビースト (Basis: 112, Normal Mob)",
+    "BasisMobId": 112,
+    "Name": "シャドウビースト",
+    "IsBoss": false,
+    "EpisodeId": 230,
+    "Param5": -1
+  },
+  {
+    "Id": 612,
+    "_comment": "Episode 230 Mob - 救済のアンティーククイーン (Basis: 144, Episode Boss / Unique)",
+    "BasisMobId": 144,
+    "Name": "救済のアンティーククイーン",
+    "IsBoss": true,
+    "EpisodeId": 230,
+    "Param5": 4
+  },
+  {
+    "Id": 615,
+    "_comment": "Episode 230 Mob - アンティーククイーン完全体 (Basis: 147, Episode Boss / Unique)",
+    "BasisMobId": 147,
+    "Name": "アンティーククイーン完全体",
+    "IsBoss": true,
+    "EpisodeId": 230,
+    "Param5": 4
+  },
+  {
+    "Id": 613,
+    "_comment": "Episode 230 Mob - アンティーククイーンの第一侍従 (Basis: 145, Normal Mob)",
+    "BasisMobId": 145,
+    "Name": "アンティーククイーンの第一侍従",
+    "IsBoss": false,
+    "EpisodeId": 230,
+    "Param5": -1
+  },
+  {
+    "Id": 614,
+    "_comment": "Episode 230 Mob - アンティーククイーンの第二侍従 (Basis: 146, Normal Mob)",
+    "BasisMobId": 146,
+    "Name": "アンティーククイーンの第二侍従",
+    "IsBoss": false,
+    "EpisodeId": 230,
+    "Param5": -1
+  },
+  {
+    "Id": 569,
+    "_comment": "Episode 196 Mob - マルシュ (Basis: 3, Normal Mob)",
+    "BasisMobId": 3,
+    "Name": "マルシュ",
+    "IsBoss": false,
+    "EpisodeId": 196,
+    "Param5": -1
+  },
+  {
+    "Id": 570,
+    "_comment": "Episode 196 Mob - バラウス (Basis: 11, Normal Mob)",
+    "BasisMobId": 11,
+    "Name": "バラウス",
+    "IsBoss": false,
+    "EpisodeId": 196,
+    "Param5": -1
+  },
+  {
+    "Id": 571,
+    "_comment": "Episode 196 Mob - ハイバラウス (Basis: 12, Normal Mob)",
+    "BasisMobId": 12,
+    "Name": "ハイバラウス",
+    "IsBoss": false,
+    "EpisodeId": 196,
+    "Param5": -1
+  },
+  {
+    "Id": 573,
+    "_comment": "Episode 196 Mob - ネイバー (Basis: 30, Normal Mob)",
+    "BasisMobId": 30,
+    "Name": "ネイバー",
+    "IsBoss": false,
+    "EpisodeId": 196,
+    "Param5": -1
+  },
+  {
+    "Id": 575,
+    "_comment": "Episode 196 Mob - ボボカン (Basis: 5, Normal Mob)",
+    "BasisMobId": 5,
+    "Name": "ボボカン",
+    "IsBoss": false,
+    "EpisodeId": 196,
+    "Param5": -1
+  },
+  {
+    "Id": 576,
+    "_comment": "Episode 196 Mob - ホームキーパー mk-2 (Basis: 20, Normal Mob)",
+    "BasisMobId": 20,
+    "Name": "ホームキーパー mk-2",
+    "IsBoss": false,
+    "EpisodeId": 196,
+    "Param5": -1
+  },
+  {
+    "Id": 577,
+    "_comment": "Episode 196 Mob - ワルグマー (Basis: 17, Normal Mob)",
+    "BasisMobId": 17,
+    "Name": "ワルグマー",
+    "IsBoss": false,
+    "EpisodeId": 196,
+    "Param5": -1
+  },
+  {
+    "Id": 582,
+    "_comment": "Episode 196 Mob - ゼロセブン (Basis: 57, Normal Mob)",
+    "BasisMobId": 57,
+    "Name": "ゼロセブン",
+    "IsBoss": false,
+    "EpisodeId": 196,
+    "Param5": -1
+  },
+  {
+    "Id": 583,
+    "_comment": "Episode 196 Mob - ナイトウォーカー (Basis: 84, Normal Mob)",
+    "BasisMobId": 84,
+    "Name": "ナイトウォーカー",
+    "IsBoss": false,
+    "EpisodeId": 196,
+    "Param5": -1
+  },
+  {
+    "Id": 584,
+    "_comment": "Episode 196 Mob - ハロウィーン (Basis: 56, Normal Mob)",
+    "BasisMobId": 56,
+    "Name": "ハロウィーン",
+    "IsBoss": false,
+    "EpisodeId": 196,
+    "Param5": -1
+  },
+  {
+    "Id": 585,
+    "_comment": "Episode 196 Mob - ファントム (Basis: 85, Normal Mob)",
+    "BasisMobId": 85,
+    "Name": "ファントム",
+    "IsBoss": false,
+    "EpisodeId": 196,
+    "Param5": -1
+  },
+  {
+    "Id": 586,
+    "_comment": "Episode 196 Mob - ビーオ (Basis: 66, Normal Mob)",
+    "BasisMobId": 66,
+    "Name": "ビーオ",
+    "IsBoss": false,
+    "EpisodeId": 196,
+    "Param5": -1
+  },
+  {
+    "Id": 580,
+    "_comment": "Episode 196 Mob - ナインフォックス (Basis: 59, Episode Boss / Unique)",
+    "BasisMobId": 59,
+    "Name": "ナインフォックス",
+    "IsBoss": true,
+    "EpisodeId": 196,
+    "Param5": -1
+  },
+  {
+    "Id": 587,
+    "_comment": "Episode 196 Mob - メガデス (Basis: 60, Episode Boss / Unique)",
+    "BasisMobId": 60,
+    "Name": "メガデス",
+    "IsBoss": true,
+    "EpisodeId": 196,
+    "Param5": -1
+  },
+  {
+    "Id": 599,
+    "_comment": "Episode 196 Mob - アマクィラ (Basis: 115, Episode Boss / Unique)",
+    "BasisMobId": 115,
+    "Name": "アマクィラ",
+    "IsBoss": true,
+    "EpisodeId": 196,
+    "Param5": -1
+  },
+  {
+    "Id": 625,
+    "_comment": "Episode 66 Mob - レッドソソ (Basis: 123, Normal Mob)",
+    "BasisMobId": 123,
+    "Name": "レッドソソ",
+    "IsBoss": false,
+    "EpisodeId": 66,
+    "Param5": -1
+  },
+  {
+    "Id": 626,
+    "_comment": "Episode 66 Mob - ブルーソソ (Basis: 124, Normal Mob)",
+    "BasisMobId": 124,
+    "Name": "ブルーソソ",
+    "IsBoss": false,
+    "EpisodeId": 66,
+    "Param5": -1
+  }
+]

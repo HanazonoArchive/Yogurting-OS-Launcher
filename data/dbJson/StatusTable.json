@@ -1,0 +1,2402 @@
+[
+  {
+    "Level": 1,
+    "_comment": "Level 1 Base Stats - POW: 4, SPD: 3, SKL: 3, LCK: 2",
+    "Power": 4,
+    "Speed": 3,
+    "Skill": 3,
+    "Luck": 2
+  },
+  {
+    "Level": 2,
+    "_comment": "Level 2 Base Stats - POW: 8, SPD: 6, SKL: 6, LCK: 4",
+    "Power": 8,
+    "Speed": 6,
+    "Skill": 6,
+    "Luck": 4
+  },
+  {
+    "Level": 3,
+    "_comment": "Level 3 Base Stats - POW: 13, SPD: 9, SKL: 9, LCK: 6",
+    "Power": 13,
+    "Speed": 9,
+    "Skill": 9,
+    "Luck": 6
+  },
+  {
+    "Level": 4,
+    "_comment": "Level 4 Base Stats - POW: 17, SPD: 13, SKL: 13, LCK: 8",
+    "Power": 17,
+    "Speed": 13,
+    "Skill": 13,
+    "Luck": 8
+  },
+  {
+    "Level": 5,
+    "_comment": "Level 5 Base Stats - POW: 21, SPD: 16, SKL: 16, LCK: 10",
+    "Power": 21,
+    "Speed": 16,
+    "Skill": 16,
+    "Luck": 10
+  },
+  {
+    "Level": 6,
+    "_comment": "Level 6 Base Stats - POW: 25, SPD: 19, SKL: 19, LCK: 12",
+    "Power": 25,
+    "Speed": 19,
+    "Skill": 19,
+    "Luck": 12
+  },
+  {
+    "Level": 7,
+    "_comment": "Level 7 Base Stats - POW: 29, SPD: 22, SKL: 22, LCK: 15",
+    "Power": 29,
+    "Speed": 22,
+    "Skill": 22,
+    "Luck": 15
+  },
+  {
+    "Level": 8,
+    "_comment": "Level 8 Base Stats - POW: 33, SPD: 25, SKL: 25, LCK: 17",
+    "Power": 33,
+    "Speed": 25,
+    "Skill": 25,
+    "Luck": 17
+  },
+  {
+    "Level": 9,
+    "_comment": "Level 9 Base Stats - POW: 38, SPD: 28, SKL: 28, LCK: 19",
+    "Power": 38,
+    "Speed": 28,
+    "Skill": 28,
+    "Luck": 19
+  },
+  {
+    "Level": 10,
+    "_comment": "Level 10 Base Stats - POW: 42, SPD: 31, SKL: 31, LCK: 21",
+    "Power": 42,
+    "Speed": 31,
+    "Skill": 31,
+    "Luck": 21
+  },
+  {
+    "Level": 11,
+    "_comment": "Level 11 Base Stats - POW: 46, SPD: 34, SKL: 34, LCK: 23",
+    "Power": 46,
+    "Speed": 34,
+    "Skill": 34,
+    "Luck": 23
+  },
+  {
+    "Level": 12,
+    "_comment": "Level 12 Base Stats - POW: 50, SPD: 38, SKL: 38, LCK: 25",
+    "Power": 50,
+    "Speed": 38,
+    "Skill": 38,
+    "Luck": 25
+  },
+  {
+    "Level": 13,
+    "_comment": "Level 13 Base Stats - POW: 54, SPD: 41, SKL: 41, LCK: 27",
+    "Power": 54,
+    "Speed": 41,
+    "Skill": 41,
+    "Luck": 27
+  },
+  {
+    "Level": 14,
+    "_comment": "Level 14 Base Stats - POW: 58, SPD: 44, SKL: 44, LCK: 29",
+    "Power": 58,
+    "Speed": 44,
+    "Skill": 44,
+    "Luck": 29
+  },
+  {
+    "Level": 15,
+    "_comment": "Level 15 Base Stats - POW: 63, SPD: 47, SKL: 47, LCK: 31",
+    "Power": 63,
+    "Speed": 47,
+    "Skill": 47,
+    "Luck": 31
+  },
+  {
+    "Level": 16,
+    "_comment": "Level 16 Base Stats - POW: 67, SPD: 50, SKL: 50, LCK: 33",
+    "Power": 67,
+    "Speed": 50,
+    "Skill": 50,
+    "Luck": 33
+  },
+  {
+    "Level": 17,
+    "_comment": "Level 17 Base Stats - POW: 71, SPD: 53, SKL: 53, LCK: 35",
+    "Power": 71,
+    "Speed": 53,
+    "Skill": 53,
+    "Luck": 35
+  },
+  {
+    "Level": 18,
+    "_comment": "Level 18 Base Stats - POW: 75, SPD: 56, SKL: 56, LCK: 37",
+    "Power": 75,
+    "Speed": 56,
+    "Skill": 56,
+    "Luck": 37
+  },
+  {
+    "Level": 19,
+    "_comment": "Level 19 Base Stats - POW: 79, SPD: 59, SKL: 59, LCK: 40",
+    "Power": 79,
+    "Speed": 59,
+    "Skill": 59,
+    "Luck": 40
+  },
+  {
+    "Level": 20,
+    "_comment": "Level 20 Base Stats - POW: 83, SPD: 63, SKL: 63, LCK: 42",
+    "Power": 83,
+    "Speed": 63,
+    "Skill": 63,
+    "Luck": 42
+  },
+  {
+    "Level": 21,
+    "_comment": "Level 21 Base Stats - POW: 88, SPD: 66, SKL: 66, LCK: 44",
+    "Power": 88,
+    "Speed": 66,
+    "Skill": 66,
+    "Luck": 44
+  },
+  {
+    "Level": 22,
+    "_comment": "Level 22 Base Stats - POW: 92, SPD: 69, SKL: 69, LCK: 46",
+    "Power": 92,
+    "Speed": 69,
+    "Skill": 69,
+    "Luck": 46
+  },
+  {
+    "Level": 23,
+    "_comment": "Level 23 Base Stats - POW: 96, SPD: 72, SKL: 72, LCK: 48",
+    "Power": 96,
+    "Speed": 72,
+    "Skill": 72,
+    "Luck": 48
+  },
+  {
+    "Level": 24,
+    "_comment": "Level 24 Base Stats - POW: 100, SPD: 75, SKL: 75, LCK: 50",
+    "Power": 100,
+    "Speed": 75,
+    "Skill": 75,
+    "Luck": 50
+  },
+  {
+    "Level": 25,
+    "_comment": "Level 25 Base Stats - POW: 104, SPD: 78, SKL: 78, LCK: 52",
+    "Power": 104,
+    "Speed": 78,
+    "Skill": 78,
+    "Luck": 52
+  },
+  {
+    "Level": 26,
+    "_comment": "Level 26 Base Stats - POW: 108, SPD: 81, SKL: 81, LCK: 54",
+    "Power": 108,
+    "Speed": 81,
+    "Skill": 81,
+    "Luck": 54
+  },
+  {
+    "Level": 27,
+    "_comment": "Level 27 Base Stats - POW: 113, SPD: 84, SKL: 84, LCK: 56",
+    "Power": 113,
+    "Speed": 84,
+    "Skill": 84,
+    "Luck": 56
+  },
+  {
+    "Level": 28,
+    "_comment": "Level 28 Base Stats - POW: 117, SPD: 88, SKL: 88, LCK: 58",
+    "Power": 117,
+    "Speed": 88,
+    "Skill": 88,
+    "Luck": 58
+  },
+  {
+    "Level": 29,
+    "_comment": "Level 29 Base Stats - POW: 121, SPD: 91, SKL: 91, LCK: 60",
+    "Power": 121,
+    "Speed": 91,
+    "Skill": 91,
+    "Luck": 60
+  },
+  {
+    "Level": 30,
+    "_comment": "Level 30 Base Stats - POW: 125, SPD: 94, SKL: 94, LCK: 62",
+    "Power": 125,
+    "Speed": 94,
+    "Skill": 94,
+    "Luck": 62
+  },
+  {
+    "Level": 31,
+    "_comment": "Level 31 Base Stats - POW: 129, SPD: 97, SKL: 97, LCK: 65",
+    "Power": 129,
+    "Speed": 97,
+    "Skill": 97,
+    "Luck": 65
+  },
+  {
+    "Level": 32,
+    "_comment": "Level 32 Base Stats - POW: 133, SPD: 100, SKL: 100, LCK: 67",
+    "Power": 133,
+    "Speed": 100,
+    "Skill": 100,
+    "Luck": 67
+  },
+  {
+    "Level": 33,
+    "_comment": "Level 33 Base Stats - POW: 138, SPD: 103, SKL: 103, LCK: 69",
+    "Power": 138,
+    "Speed": 103,
+    "Skill": 103,
+    "Luck": 69
+  },
+  {
+    "Level": 34,
+    "_comment": "Level 34 Base Stats - POW: 142, SPD: 106, SKL: 106, LCK: 71",
+    "Power": 142,
+    "Speed": 106,
+    "Skill": 106,
+    "Luck": 71
+  },
+  {
+    "Level": 35,
+    "_comment": "Level 35 Base Stats - POW: 146, SPD: 109, SKL: 109, LCK: 73",
+    "Power": 146,
+    "Speed": 109,
+    "Skill": 109,
+    "Luck": 73
+  },
+  {
+    "Level": 36,
+    "_comment": "Level 36 Base Stats - POW: 150, SPD: 113, SKL: 113, LCK: 75",
+    "Power": 150,
+    "Speed": 113,
+    "Skill": 113,
+    "Luck": 75
+  },
+  {
+    "Level": 37,
+    "_comment": "Level 37 Base Stats - POW: 154, SPD: 116, SKL: 116, LCK: 77",
+    "Power": 154,
+    "Speed": 116,
+    "Skill": 116,
+    "Luck": 77
+  },
+  {
+    "Level": 38,
+    "_comment": "Level 38 Base Stats - POW: 158, SPD: 119, SKL: 119, LCK: 79",
+    "Power": 158,
+    "Speed": 119,
+    "Skill": 119,
+    "Luck": 79
+  },
+  {
+    "Level": 39,
+    "_comment": "Level 39 Base Stats - POW: 163, SPD: 122, SKL: 122, LCK: 81",
+    "Power": 163,
+    "Speed": 122,
+    "Skill": 122,
+    "Luck": 81
+  },
+  {
+    "Level": 40,
+    "_comment": "Level 40 Base Stats - POW: 167, SPD: 125, SKL: 125, LCK: 83",
+    "Power": 167,
+    "Speed": 125,
+    "Skill": 125,
+    "Luck": 83
+  },
+  {
+    "Level": 41,
+    "_comment": "Level 41 Base Stats - POW: 171, SPD: 128, SKL: 128, LCK: 85",
+    "Power": 171,
+    "Speed": 128,
+    "Skill": 128,
+    "Luck": 85
+  },
+  {
+    "Level": 42,
+    "_comment": "Level 42 Base Stats - POW: 175, SPD: 131, SKL: 131, LCK: 87",
+    "Power": 175,
+    "Speed": 131,
+    "Skill": 131,
+    "Luck": 87
+  },
+  {
+    "Level": 43,
+    "_comment": "Level 43 Base Stats - POW: 179, SPD: 134, SKL: 134, LCK: 89",
+    "Power": 179,
+    "Speed": 134,
+    "Skill": 134,
+    "Luck": 89
+  },
+  {
+    "Level": 44,
+    "_comment": "Level 44 Base Stats - POW: 183, SPD: 138, SKL: 138, LCK: 92",
+    "Power": 183,
+    "Speed": 138,
+    "Skill": 138,
+    "Luck": 92
+  },
+  {
+    "Level": 45,
+    "_comment": "Level 45 Base Stats - POW: 188, SPD: 141, SKL: 141, LCK: 94",
+    "Power": 188,
+    "Speed": 141,
+    "Skill": 141,
+    "Luck": 94
+  },
+  {
+    "Level": 46,
+    "_comment": "Level 46 Base Stats - POW: 192, SPD: 144, SKL: 144, LCK: 96",
+    "Power": 192,
+    "Speed": 144,
+    "Skill": 144,
+    "Luck": 96
+  },
+  {
+    "Level": 47,
+    "_comment": "Level 47 Base Stats - POW: 196, SPD: 147, SKL: 147, LCK: 98",
+    "Power": 196,
+    "Speed": 147,
+    "Skill": 147,
+    "Luck": 98
+  },
+  {
+    "Level": 48,
+    "_comment": "Level 48 Base Stats - POW: 200, SPD: 150, SKL: 150, LCK: 100",
+    "Power": 200,
+    "Speed": 150,
+    "Skill": 150,
+    "Luck": 100
+  },
+  {
+    "Level": 49,
+    "_comment": "Level 49 Base Stats - POW: 204, SPD: 153, SKL: 153, LCK: 102",
+    "Power": 204,
+    "Speed": 153,
+    "Skill": 153,
+    "Luck": 102
+  },
+  {
+    "Level": 50,
+    "_comment": "Level 50 Base Stats - POW: 208, SPD: 156, SKL: 156, LCK: 104",
+    "Power": 208,
+    "Speed": 156,
+    "Skill": 156,
+    "Luck": 104
+  },
+  {
+    "Level": 51,
+    "_comment": "Level 51 Base Stats - POW: 213, SPD: 159, SKL: 159, LCK: 106",
+    "Power": 213,
+    "Speed": 159,
+    "Skill": 159,
+    "Luck": 106
+  },
+  {
+    "Level": 52,
+    "_comment": "Level 52 Base Stats - POW: 217, SPD: 163, SKL: 163, LCK: 108",
+    "Power": 217,
+    "Speed": 163,
+    "Skill": 163,
+    "Luck": 108
+  },
+  {
+    "Level": 53,
+    "_comment": "Level 53 Base Stats - POW: 221, SPD: 166, SKL: 166, LCK: 110",
+    "Power": 221,
+    "Speed": 166,
+    "Skill": 166,
+    "Luck": 110
+  },
+  {
+    "Level": 54,
+    "_comment": "Level 54 Base Stats - POW: 225, SPD: 169, SKL: 169, LCK: 112",
+    "Power": 225,
+    "Speed": 169,
+    "Skill": 169,
+    "Luck": 112
+  },
+  {
+    "Level": 55,
+    "_comment": "Level 55 Base Stats - POW: 229, SPD: 172, SKL: 172, LCK: 114",
+    "Power": 229,
+    "Speed": 172,
+    "Skill": 172,
+    "Luck": 114
+  },
+  {
+    "Level": 56,
+    "_comment": "Level 56 Base Stats - POW: 233, SPD: 175, SKL: 175, LCK: 117",
+    "Power": 233,
+    "Speed": 175,
+    "Skill": 175,
+    "Luck": 117
+  },
+  {
+    "Level": 57,
+    "_comment": "Level 57 Base Stats - POW: 238, SPD: 178, SKL: 178, LCK: 119",
+    "Power": 238,
+    "Speed": 178,
+    "Skill": 178,
+    "Luck": 119
+  },
+  {
+    "Level": 58,
+    "_comment": "Level 58 Base Stats - POW: 242, SPD: 181, SKL: 181, LCK: 121",
+    "Power": 242,
+    "Speed": 181,
+    "Skill": 181,
+    "Luck": 121
+  },
+  {
+    "Level": 59,
+    "_comment": "Level 59 Base Stats - POW: 246, SPD: 184, SKL: 184, LCK: 123",
+    "Power": 246,
+    "Speed": 184,
+    "Skill": 184,
+    "Luck": 123
+  },
+  {
+    "Level": 60,
+    "_comment": "Level 60 Base Stats - POW: 250, SPD: 188, SKL: 188, LCK: 125",
+    "Power": 250,
+    "Speed": 188,
+    "Skill": 188,
+    "Luck": 125
+  },
+  {
+    "Level": 61,
+    "_comment": "Level 61 Base Stats - POW: 253, SPD: 190, SKL: 190, LCK: 127",
+    "Power": 253,
+    "Speed": 190,
+    "Skill": 190,
+    "Luck": 127
+  },
+  {
+    "Level": 62,
+    "_comment": "Level 62 Base Stats - POW: 257, SPD: 193, SKL: 193, LCK: 128",
+    "Power": 257,
+    "Speed": 193,
+    "Skill": 193,
+    "Luck": 128
+  },
+  {
+    "Level": 63,
+    "_comment": "Level 63 Base Stats - POW: 260, SPD: 195, SKL: 195, LCK: 130",
+    "Power": 260,
+    "Speed": 195,
+    "Skill": 195,
+    "Luck": 130
+  },
+  {
+    "Level": 64,
+    "_comment": "Level 64 Base Stats - POW: 263, SPD: 198, SKL: 198, LCK: 132",
+    "Power": 263,
+    "Speed": 198,
+    "Skill": 198,
+    "Luck": 132
+  },
+  {
+    "Level": 65,
+    "_comment": "Level 65 Base Stats - POW: 267, SPD: 200, SKL: 200, LCK: 133",
+    "Power": 267,
+    "Speed": 200,
+    "Skill": 200,
+    "Luck": 133
+  },
+  {
+    "Level": 66,
+    "_comment": "Level 66 Base Stats - POW: 270, SPD: 203, SKL: 203, LCK: 135",
+    "Power": 270,
+    "Speed": 203,
+    "Skill": 203,
+    "Luck": 135
+  },
+  {
+    "Level": 67,
+    "_comment": "Level 67 Base Stats - POW: 273, SPD: 205, SKL: 205, LCK: 137",
+    "Power": 273,
+    "Speed": 205,
+    "Skill": 205,
+    "Luck": 137
+  },
+  {
+    "Level": 68,
+    "_comment": "Level 68 Base Stats - POW: 277, SPD: 208, SKL: 208, LCK: 138",
+    "Power": 277,
+    "Speed": 208,
+    "Skill": 208,
+    "Luck": 138
+  },
+  {
+    "Level": 69,
+    "_comment": "Level 69 Base Stats - POW: 280, SPD: 210, SKL: 210, LCK: 140",
+    "Power": 280,
+    "Speed": 210,
+    "Skill": 210,
+    "Luck": 140
+  },
+  {
+    "Level": 70,
+    "_comment": "Level 70 Base Stats - POW: 283, SPD: 213, SKL: 213, LCK: 142",
+    "Power": 283,
+    "Speed": 213,
+    "Skill": 213,
+    "Luck": 142
+  },
+  {
+    "Level": 71,
+    "_comment": "Level 71 Base Stats - POW: 287, SPD: 215, SKL: 215, LCK: 143",
+    "Power": 287,
+    "Speed": 215,
+    "Skill": 215,
+    "Luck": 143
+  },
+  {
+    "Level": 72,
+    "_comment": "Level 72 Base Stats - POW: 290, SPD: 218, SKL: 218, LCK: 145",
+    "Power": 290,
+    "Speed": 218,
+    "Skill": 218,
+    "Luck": 145
+  },
+  {
+    "Level": 73,
+    "_comment": "Level 73 Base Stats - POW: 293, SPD: 220, SKL: 220, LCK: 147",
+    "Power": 293,
+    "Speed": 220,
+    "Skill": 220,
+    "Luck": 147
+  },
+  {
+    "Level": 74,
+    "_comment": "Level 74 Base Stats - POW: 297, SPD: 223, SKL: 223, LCK: 148",
+    "Power": 297,
+    "Speed": 223,
+    "Skill": 223,
+    "Luck": 148
+  },
+  {
+    "Level": 75,
+    "_comment": "Level 75 Base Stats - POW: 300, SPD: 225, SKL: 225, LCK: 150",
+    "Power": 300,
+    "Speed": 225,
+    "Skill": 225,
+    "Luck": 150
+  },
+  {
+    "Level": 76,
+    "_comment": "Level 76 Base Stats - POW: 303, SPD: 228, SKL: 228, LCK: 152",
+    "Power": 303,
+    "Speed": 228,
+    "Skill": 228,
+    "Luck": 152
+  },
+  {
+    "Level": 77,
+    "_comment": "Level 77 Base Stats - POW: 307, SPD: 230, SKL: 230, LCK: 153",
+    "Power": 307,
+    "Speed": 230,
+    "Skill": 230,
+    "Luck": 153
+  },
+  {
+    "Level": 78,
+    "_comment": "Level 78 Base Stats - POW: 310, SPD: 233, SKL: 233, LCK: 155",
+    "Power": 310,
+    "Speed": 233,
+    "Skill": 233,
+    "Luck": 155
+  },
+  {
+    "Level": 79,
+    "_comment": "Level 79 Base Stats - POW: 313, SPD: 235, SKL: 235, LCK: 157",
+    "Power": 313,
+    "Speed": 235,
+    "Skill": 235,
+    "Luck": 157
+  },
+  {
+    "Level": 80,
+    "_comment": "Level 80 Base Stats - POW: 317, SPD: 238, SKL: 238, LCK: 158",
+    "Power": 317,
+    "Speed": 238,
+    "Skill": 238,
+    "Luck": 158
+  },
+  {
+    "Level": 81,
+    "_comment": "Level 81 Base Stats - POW: 320, SPD: 240, SKL: 240, LCK: 160",
+    "Power": 320,
+    "Speed": 240,
+    "Skill": 240,
+    "Luck": 160
+  },
+  {
+    "Level": 82,
+    "_comment": "Level 82 Base Stats - POW: 323, SPD: 243, SKL: 243, LCK: 162",
+    "Power": 323,
+    "Speed": 243,
+    "Skill": 243,
+    "Luck": 162
+  },
+  {
+    "Level": 83,
+    "_comment": "Level 83 Base Stats - POW: 327, SPD: 245, SKL: 245, LCK: 163",
+    "Power": 327,
+    "Speed": 245,
+    "Skill": 245,
+    "Luck": 163
+  },
+  {
+    "Level": 84,
+    "_comment": "Level 84 Base Stats - POW: 330, SPD: 248, SKL: 248, LCK: 165",
+    "Power": 330,
+    "Speed": 248,
+    "Skill": 248,
+    "Luck": 165
+  },
+  {
+    "Level": 85,
+    "_comment": "Level 85 Base Stats - POW: 333, SPD: 250, SKL: 250, LCK: 167",
+    "Power": 333,
+    "Speed": 250,
+    "Skill": 250,
+    "Luck": 167
+  },
+  {
+    "Level": 86,
+    "_comment": "Level 86 Base Stats - POW: 337, SPD: 253, SKL: 253, LCK: 168",
+    "Power": 337,
+    "Speed": 253,
+    "Skill": 253,
+    "Luck": 168
+  },
+  {
+    "Level": 87,
+    "_comment": "Level 87 Base Stats - POW: 340, SPD: 255, SKL: 255, LCK: 170",
+    "Power": 340,
+    "Speed": 255,
+    "Skill": 255,
+    "Luck": 170
+  },
+  {
+    "Level": 88,
+    "_comment": "Level 88 Base Stats - POW: 343, SPD: 258, SKL: 258, LCK: 171",
+    "Power": 343,
+    "Speed": 258,
+    "Skill": 258,
+    "Luck": 171
+  },
+  {
+    "Level": 89,
+    "_comment": "Level 89 Base Stats - POW: 347, SPD: 260, SKL: 260, LCK: 173",
+    "Power": 347,
+    "Speed": 260,
+    "Skill": 260,
+    "Luck": 173
+  },
+  {
+    "Level": 90,
+    "_comment": "Level 90 Base Stats - POW: 350, SPD: 263, SKL: 263, LCK: 175",
+    "Power": 350,
+    "Speed": 263,
+    "Skill": 263,
+    "Luck": 175
+  },
+  {
+    "Level": 91,
+    "_comment": "Level 91 Base Stats - POW: 353, SPD: 265, SKL: 265, LCK: 176",
+    "Power": 353,
+    "Speed": 265,
+    "Skill": 265,
+    "Luck": 176
+  },
+  {
+    "Level": 92,
+    "_comment": "Level 92 Base Stats - POW: 357, SPD: 268, SKL: 268, LCK: 178",
+    "Power": 357,
+    "Speed": 268,
+    "Skill": 268,
+    "Luck": 178
+  },
+  {
+    "Level": 93,
+    "_comment": "Level 93 Base Stats - POW: 360, SPD: 270, SKL: 270, LCK: 180",
+    "Power": 360,
+    "Speed": 270,
+    "Skill": 270,
+    "Luck": 180
+  },
+  {
+    "Level": 94,
+    "_comment": "Level 94 Base Stats - POW: 363, SPD: 273, SKL: 273, LCK: 181",
+    "Power": 363,
+    "Speed": 273,
+    "Skill": 273,
+    "Luck": 181
+  },
+  {
+    "Level": 95,
+    "_comment": "Level 95 Base Stats - POW: 367, SPD: 275, SKL: 275, LCK: 183",
+    "Power": 367,
+    "Speed": 275,
+    "Skill": 275,
+    "Luck": 183
+  },
+  {
+    "Level": 96,
+    "_comment": "Level 96 Base Stats - POW: 370, SPD: 278, SKL: 278, LCK: 185",
+    "Power": 370,
+    "Speed": 278,
+    "Skill": 278,
+    "Luck": 185
+  },
+  {
+    "Level": 97,
+    "_comment": "Level 97 Base Stats - POW: 373, SPD: 280, SKL: 280, LCK: 186",
+    "Power": 373,
+    "Speed": 280,
+    "Skill": 280,
+    "Luck": 186
+  },
+  {
+    "Level": 98,
+    "_comment": "Level 98 Base Stats - POW: 377, SPD: 283, SKL: 283, LCK: 188",
+    "Power": 377,
+    "Speed": 283,
+    "Skill": 283,
+    "Luck": 188
+  },
+  {
+    "Level": 99,
+    "_comment": "Level 99 Base Stats - POW: 380, SPD: 285, SKL: 285, LCK: 190",
+    "Power": 380,
+    "Speed": 285,
+    "Skill": 285,
+    "Luck": 190
+  },
+  {
+    "Level": 100,
+    "_comment": "Level 100 Base Stats - POW: 383, SPD: 288, SKL: 288, LCK: 191",
+    "Power": 383,
+    "Speed": 288,
+    "Skill": 288,
+    "Luck": 191
+  },
+  {
+    "Level": 101,
+    "_comment": "Level 101 Base Stats - POW: 387, SPD: 290, SKL: 290, LCK: 193",
+    "Power": 387,
+    "Speed": 290,
+    "Skill": 290,
+    "Luck": 193
+  },
+  {
+    "Level": 102,
+    "_comment": "Level 102 Base Stats - POW: 390, SPD: 293, SKL: 293, LCK: 195",
+    "Power": 390,
+    "Speed": 293,
+    "Skill": 293,
+    "Luck": 195
+  },
+  {
+    "Level": 103,
+    "_comment": "Level 103 Base Stats - POW: 393, SPD: 295, SKL: 295, LCK: 196",
+    "Power": 393,
+    "Speed": 295,
+    "Skill": 295,
+    "Luck": 196
+  },
+  {
+    "Level": 104,
+    "_comment": "Level 104 Base Stats - POW: 397, SPD: 298, SKL: 298, LCK: 198",
+    "Power": 397,
+    "Speed": 298,
+    "Skill": 298,
+    "Luck": 198
+  },
+  {
+    "Level": 105,
+    "_comment": "Level 105 Base Stats - POW: 400, SPD: 300, SKL: 300, LCK: 200",
+    "Power": 400,
+    "Speed": 300,
+    "Skill": 300,
+    "Luck": 200
+  },
+  {
+    "Level": 106,
+    "_comment": "Level 106 Base Stats - POW: 403, SPD: 303, SKL: 303, LCK: 201",
+    "Power": 403,
+    "Speed": 303,
+    "Skill": 303,
+    "Luck": 201
+  },
+  {
+    "Level": 107,
+    "_comment": "Level 107 Base Stats - POW: 407, SPD: 305, SKL: 305, LCK: 203",
+    "Power": 407,
+    "Speed": 305,
+    "Skill": 305,
+    "Luck": 203
+  },
+  {
+    "Level": 108,
+    "_comment": "Level 108 Base Stats - POW: 410, SPD: 308, SKL: 308, LCK: 205",
+    "Power": 410,
+    "Speed": 308,
+    "Skill": 308,
+    "Luck": 205
+  },
+  {
+    "Level": 109,
+    "_comment": "Level 109 Base Stats - POW: 413, SPD: 310, SKL: 310, LCK: 206",
+    "Power": 413,
+    "Speed": 310,
+    "Skill": 310,
+    "Luck": 206
+  },
+  {
+    "Level": 110,
+    "_comment": "Level 110 Base Stats - POW: 417, SPD: 313, SKL: 313, LCK: 208",
+    "Power": 417,
+    "Speed": 313,
+    "Skill": 313,
+    "Luck": 208
+  },
+  {
+    "Level": 111,
+    "_comment": "Level 111 Base Stats - POW: 420, SPD: 315, SKL: 315, LCK: 210",
+    "Power": 420,
+    "Speed": 315,
+    "Skill": 315,
+    "Luck": 210
+  },
+  {
+    "Level": 112,
+    "_comment": "Level 112 Base Stats - POW: 423, SPD: 318, SKL: 318, LCK: 211",
+    "Power": 423,
+    "Speed": 318,
+    "Skill": 318,
+    "Luck": 211
+  },
+  {
+    "Level": 113,
+    "_comment": "Level 113 Base Stats - POW: 427, SPD: 320, SKL: 320, LCK: 213",
+    "Power": 427,
+    "Speed": 320,
+    "Skill": 320,
+    "Luck": 213
+  },
+  {
+    "Level": 114,
+    "_comment": "Level 114 Base Stats - POW: 430, SPD: 323, SKL: 323, LCK: 215",
+    "Power": 430,
+    "Speed": 323,
+    "Skill": 323,
+    "Luck": 215
+  },
+  {
+    "Level": 115,
+    "_comment": "Level 115 Base Stats - POW: 433, SPD: 325, SKL: 325, LCK: 216",
+    "Power": 433,
+    "Speed": 325,
+    "Skill": 325,
+    "Luck": 216
+  },
+  {
+    "Level": 116,
+    "_comment": "Level 116 Base Stats - POW: 437, SPD: 328, SKL: 328, LCK: 218",
+    "Power": 437,
+    "Speed": 328,
+    "Skill": 328,
+    "Luck": 218
+  },
+  {
+    "Level": 117,
+    "_comment": "Level 117 Base Stats - POW: 440, SPD: 330, SKL: 330, LCK: 220",
+    "Power": 440,
+    "Speed": 330,
+    "Skill": 330,
+    "Luck": 220
+  },
+  {
+    "Level": 118,
+    "_comment": "Level 118 Base Stats - POW: 443, SPD: 333, SKL: 333, LCK: 221",
+    "Power": 443,
+    "Speed": 333,
+    "Skill": 333,
+    "Luck": 221
+  },
+  {
+    "Level": 119,
+    "_comment": "Level 119 Base Stats - POW: 447, SPD: 335, SKL: 335, LCK: 223",
+    "Power": 447,
+    "Speed": 335,
+    "Skill": 335,
+    "Luck": 223
+  },
+  {
+    "Level": 120,
+    "_comment": "Level 120 Base Stats - POW: 450, SPD: 338, SKL: 338, LCK: 225",
+    "Power": 450,
+    "Speed": 338,
+    "Skill": 338,
+    "Luck": 225
+  },
+  {
+    "Level": 121,
+    "_comment": "Level 121 Base Stats - POW: 452, SPD: 339, SKL: 339, LCK: 226",
+    "Power": 452,
+    "Speed": 339,
+    "Skill": 339,
+    "Luck": 226
+  },
+  {
+    "Level": 122,
+    "_comment": "Level 122 Base Stats - POW: 455, SPD: 341, SKL: 341, LCK: 227",
+    "Power": 455,
+    "Speed": 341,
+    "Skill": 341,
+    "Luck": 227
+  },
+  {
+    "Level": 123,
+    "_comment": "Level 123 Base Stats - POW: 457, SPD: 343, SKL: 343, LCK: 229",
+    "Power": 457,
+    "Speed": 343,
+    "Skill": 343,
+    "Luck": 229
+  },
+  {
+    "Level": 124,
+    "_comment": "Level 124 Base Stats - POW: 460, SPD: 345, SKL: 345, LCK: 230",
+    "Power": 460,
+    "Speed": 345,
+    "Skill": 345,
+    "Luck": 230
+  },
+  {
+    "Level": 125,
+    "_comment": "Level 125 Base Stats - POW: 462, SPD: 347, SKL: 347, LCK: 231",
+    "Power": 462,
+    "Speed": 347,
+    "Skill": 347,
+    "Luck": 231
+  },
+  {
+    "Level": 126,
+    "_comment": "Level 126 Base Stats - POW: 465, SPD: 349, SKL: 349, LCK: 232",
+    "Power": 465,
+    "Speed": 349,
+    "Skill": 349,
+    "Luck": 232
+  },
+  {
+    "Level": 127,
+    "_comment": "Level 127 Base Stats - POW: 467, SPD: 351, SKL: 351, LCK: 234",
+    "Power": 467,
+    "Speed": 351,
+    "Skill": 351,
+    "Luck": 234
+  },
+  {
+    "Level": 128,
+    "_comment": "Level 128 Base Stats - POW: 470, SPD: 353, SKL: 353, LCK: 235",
+    "Power": 470,
+    "Speed": 353,
+    "Skill": 353,
+    "Luck": 235
+  },
+  {
+    "Level": 129,
+    "_comment": "Level 129 Base Stats - POW: 472, SPD: 354, SKL: 354, LCK: 236",
+    "Power": 472,
+    "Speed": 354,
+    "Skill": 354,
+    "Luck": 236
+  },
+  {
+    "Level": 130,
+    "_comment": "Level 130 Base Stats - POW: 475, SPD: 356, SKL: 356, LCK: 237",
+    "Power": 475,
+    "Speed": 356,
+    "Skill": 356,
+    "Luck": 237
+  },
+  {
+    "Level": 131,
+    "_comment": "Level 131 Base Stats - POW: 477, SPD: 358, SKL: 358, LCK: 239",
+    "Power": 477,
+    "Speed": 358,
+    "Skill": 358,
+    "Luck": 239
+  },
+  {
+    "Level": 132,
+    "_comment": "Level 132 Base Stats - POW: 480, SPD: 360, SKL: 360, LCK: 240",
+    "Power": 480,
+    "Speed": 360,
+    "Skill": 360,
+    "Luck": 240
+  },
+  {
+    "Level": 133,
+    "_comment": "Level 133 Base Stats - POW: 482, SPD: 362, SKL: 362, LCK: 241",
+    "Power": 482,
+    "Speed": 362,
+    "Skill": 362,
+    "Luck": 241
+  },
+  {
+    "Level": 134,
+    "_comment": "Level 134 Base Stats - POW: 485, SPD: 364, SKL: 364, LCK: 242",
+    "Power": 485,
+    "Speed": 364,
+    "Skill": 364,
+    "Luck": 242
+  },
+  {
+    "Level": 135,
+    "_comment": "Level 135 Base Stats - POW: 487, SPD: 366, SKL: 366, LCK: 244",
+    "Power": 487,
+    "Speed": 366,
+    "Skill": 366,
+    "Luck": 244
+  },
+  {
+    "Level": 136,
+    "_comment": "Level 136 Base Stats - POW: 490, SPD: 368, SKL: 368, LCK: 245",
+    "Power": 490,
+    "Speed": 368,
+    "Skill": 368,
+    "Luck": 245
+  },
+  {
+    "Level": 137,
+    "_comment": "Level 137 Base Stats - POW: 492, SPD: 369, SKL: 369, LCK: 246",
+    "Power": 492,
+    "Speed": 369,
+    "Skill": 369,
+    "Luck": 246
+  },
+  {
+    "Level": 138,
+    "_comment": "Level 138 Base Stats - POW: 495, SPD: 371, SKL: 371, LCK: 247",
+    "Power": 495,
+    "Speed": 371,
+    "Skill": 371,
+    "Luck": 247
+  },
+  {
+    "Level": 139,
+    "_comment": "Level 139 Base Stats - POW: 497, SPD: 373, SKL: 373, LCK: 249",
+    "Power": 497,
+    "Speed": 373,
+    "Skill": 373,
+    "Luck": 249
+  },
+  {
+    "Level": 140,
+    "_comment": "Level 140 Base Stats - POW: 500, SPD: 375, SKL: 375, LCK: 250",
+    "Power": 500,
+    "Speed": 375,
+    "Skill": 375,
+    "Luck": 250
+  },
+  {
+    "Level": 141,
+    "_comment": "Level 141 Base Stats - POW: 502, SPD: 377, SKL: 377, LCK: 251",
+    "Power": 502,
+    "Speed": 377,
+    "Skill": 377,
+    "Luck": 251
+  },
+  {
+    "Level": 142,
+    "_comment": "Level 142 Base Stats - POW: 505, SPD: 379, SKL: 379, LCK: 252",
+    "Power": 505,
+    "Speed": 379,
+    "Skill": 379,
+    "Luck": 252
+  },
+  {
+    "Level": 143,
+    "_comment": "Level 143 Base Stats - POW: 507, SPD: 381, SKL: 381, LCK: 253",
+    "Power": 507,
+    "Speed": 381,
+    "Skill": 381,
+    "Luck": 253
+  },
+  {
+    "Level": 144,
+    "_comment": "Level 144 Base Stats - POW: 510, SPD: 383, SKL: 383, LCK: 255",
+    "Power": 510,
+    "Speed": 383,
+    "Skill": 383,
+    "Luck": 255
+  },
+  {
+    "Level": 145,
+    "_comment": "Level 145 Base Stats - POW: 512, SPD: 384, SKL: 384, LCK: 256",
+    "Power": 512,
+    "Speed": 384,
+    "Skill": 384,
+    "Luck": 256
+  },
+  {
+    "Level": 146,
+    "_comment": "Level 146 Base Stats - POW: 515, SPD: 386, SKL: 386, LCK: 257",
+    "Power": 515,
+    "Speed": 386,
+    "Skill": 386,
+    "Luck": 257
+  },
+  {
+    "Level": 147,
+    "_comment": "Level 147 Base Stats - POW: 517, SPD: 388, SKL: 388, LCK: 258",
+    "Power": 517,
+    "Speed": 388,
+    "Skill": 388,
+    "Luck": 258
+  },
+  {
+    "Level": 148,
+    "_comment": "Level 148 Base Stats - POW: 520, SPD: 390, SKL: 390, LCK: 260",
+    "Power": 520,
+    "Speed": 390,
+    "Skill": 390,
+    "Luck": 260
+  },
+  {
+    "Level": 149,
+    "_comment": "Level 149 Base Stats - POW: 522, SPD: 392, SKL: 392, LCK: 261",
+    "Power": 522,
+    "Speed": 392,
+    "Skill": 392,
+    "Luck": 261
+  },
+  {
+    "Level": 150,
+    "_comment": "Level 150 Base Stats - POW: 525, SPD: 394, SKL: 394, LCK: 262",
+    "Power": 525,
+    "Speed": 394,
+    "Skill": 394,
+    "Luck": 262
+  },
+  {
+    "Level": 151,
+    "_comment": "Level 151 Base Stats - POW: 527, SPD: 396, SKL: 396, LCK: 263",
+    "Power": 527,
+    "Speed": 396,
+    "Skill": 396,
+    "Luck": 263
+  },
+  {
+    "Level": 152,
+    "_comment": "Level 152 Base Stats - POW: 530, SPD: 398, SKL: 398, LCK: 265",
+    "Power": 530,
+    "Speed": 398,
+    "Skill": 398,
+    "Luck": 265
+  },
+  {
+    "Level": 153,
+    "_comment": "Level 153 Base Stats - POW: 532, SPD: 399, SKL: 399, LCK: 266",
+    "Power": 532,
+    "Speed": 399,
+    "Skill": 399,
+    "Luck": 266
+  },
+  {
+    "Level": 154,
+    "_comment": "Level 154 Base Stats - POW: 535, SPD: 401, SKL: 401, LCK: 267",
+    "Power": 535,
+    "Speed": 401,
+    "Skill": 401,
+    "Luck": 267
+  },
+  {
+    "Level": 155,
+    "_comment": "Level 155 Base Stats - POW: 537, SPD: 403, SKL: 403, LCK: 268",
+    "Power": 537,
+    "Speed": 403,
+    "Skill": 403,
+    "Luck": 268
+  },
+  {
+    "Level": 156,
+    "_comment": "Level 156 Base Stats - POW: 540, SPD: 405, SKL: 405, LCK: 270",
+    "Power": 540,
+    "Speed": 405,
+    "Skill": 405,
+    "Luck": 270
+  },
+  {
+    "Level": 157,
+    "_comment": "Level 157 Base Stats - POW: 542, SPD: 407, SKL: 407, LCK: 271",
+    "Power": 542,
+    "Speed": 407,
+    "Skill": 407,
+    "Luck": 271
+  },
+  {
+    "Level": 158,
+    "_comment": "Level 158 Base Stats - POW: 545, SPD: 409, SKL: 409, LCK: 272",
+    "Power": 545,
+    "Speed": 409,
+    "Skill": 409,
+    "Luck": 272
+  },
+  {
+    "Level": 159,
+    "_comment": "Level 159 Base Stats - POW: 547, SPD: 411, SKL: 411, LCK: 273",
+    "Power": 547,
+    "Speed": 411,
+    "Skill": 411,
+    "Luck": 273
+  },
+  {
+    "Level": 160,
+    "_comment": "Level 160 Base Stats - POW: 550, SPD: 413, SKL: 413, LCK: 275",
+    "Power": 550,
+    "Speed": 413,
+    "Skill": 413,
+    "Luck": 275
+  },
+  {
+    "Level": 161,
+    "_comment": "Level 161 Base Stats - POW: 552, SPD: 414, SKL: 414, LCK: 276",
+    "Power": 552,
+    "Speed": 414,
+    "Skill": 414,
+    "Luck": 276
+  },
+  {
+    "Level": 162,
+    "_comment": "Level 162 Base Stats - POW: 555, SPD: 416, SKL: 416, LCK: 277",
+    "Power": 555,
+    "Speed": 416,
+    "Skill": 416,
+    "Luck": 277
+  },
+  {
+    "Level": 163,
+    "_comment": "Level 163 Base Stats - POW: 557, SPD: 418, SKL: 418, LCK: 278",
+    "Power": 557,
+    "Speed": 418,
+    "Skill": 418,
+    "Luck": 278
+  },
+  {
+    "Level": 164,
+    "_comment": "Level 164 Base Stats - POW: 560, SPD: 420, SKL: 420, LCK: 280",
+    "Power": 560,
+    "Speed": 420,
+    "Skill": 420,
+    "Luck": 280
+  },
+  {
+    "Level": 165,
+    "_comment": "Level 165 Base Stats - POW: 562, SPD: 422, SKL: 422, LCK: 281",
+    "Power": 562,
+    "Speed": 422,
+    "Skill": 422,
+    "Luck": 281
+  },
+  {
+    "Level": 166,
+    "_comment": "Level 166 Base Stats - POW: 565, SPD: 424, SKL: 424, LCK: 282",
+    "Power": 565,
+    "Speed": 424,
+    "Skill": 424,
+    "Luck": 282
+  },
+  {
+    "Level": 167,
+    "_comment": "Level 167 Base Stats - POW: 567, SPD: 426, SKL: 426, LCK: 283",
+    "Power": 567,
+    "Speed": 426,
+    "Skill": 426,
+    "Luck": 283
+  },
+  {
+    "Level": 168,
+    "_comment": "Level 168 Base Stats - POW: 570, SPD: 428, SKL: 428, LCK: 285",
+    "Power": 570,
+    "Speed": 428,
+    "Skill": 428,
+    "Luck": 285
+  },
+  {
+    "Level": 169,
+    "_comment": "Level 169 Base Stats - POW: 572, SPD: 429, SKL: 429, LCK: 286",
+    "Power": 572,
+    "Speed": 429,
+    "Skill": 429,
+    "Luck": 286
+  },
+  {
+    "Level": 170,
+    "_comment": "Level 170 Base Stats - POW: 575, SPD: 431, SKL: 431, LCK: 287",
+    "Power": 575,
+    "Speed": 431,
+    "Skill": 431,
+    "Luck": 287
+  },
+  {
+    "Level": 171,
+    "_comment": "Level 171 Base Stats - POW: 577, SPD: 433, SKL: 433, LCK: 288",
+    "Power": 577,
+    "Speed": 433,
+    "Skill": 433,
+    "Luck": 288
+  },
+  {
+    "Level": 172,
+    "_comment": "Level 172 Base Stats - POW: 580, SPD: 435, SKL: 435, LCK: 290",
+    "Power": 580,
+    "Speed": 435,
+    "Skill": 435,
+    "Luck": 290
+  },
+  {
+    "Level": 173,
+    "_comment": "Level 173 Base Stats - POW: 582, SPD: 437, SKL: 437, LCK: 291",
+    "Power": 582,
+    "Speed": 437,
+    "Skill": 437,
+    "Luck": 291
+  },
+  {
+    "Level": 174,
+    "_comment": "Level 174 Base Stats - POW: 585, SPD: 439, SKL: 439, LCK: 292",
+    "Power": 585,
+    "Speed": 439,
+    "Skill": 439,
+    "Luck": 292
+  },
+  {
+    "Level": 175,
+    "_comment": "Level 175 Base Stats - POW: 587, SPD: 441, SKL: 441, LCK: 293",
+    "Power": 587,
+    "Speed": 441,
+    "Skill": 441,
+    "Luck": 293
+  },
+  {
+    "Level": 176,
+    "_comment": "Level 176 Base Stats - POW: 590, SPD: 443, SKL: 443, LCK: 295",
+    "Power": 590,
+    "Speed": 443,
+    "Skill": 443,
+    "Luck": 295
+  },
+  {
+    "Level": 177,
+    "_comment": "Level 177 Base Stats - POW: 592, SPD: 444, SKL: 444, LCK: 296",
+    "Power": 592,
+    "Speed": 444,
+    "Skill": 444,
+    "Luck": 296
+  },
+  {
+    "Level": 178,
+    "_comment": "Level 178 Base Stats - POW: 595, SPD: 446, SKL: 446, LCK: 297",
+    "Power": 595,
+    "Speed": 446,
+    "Skill": 446,
+    "Luck": 297
+  },
+  {
+    "Level": 179,
+    "_comment": "Level 179 Base Stats - POW: 597, SPD: 448, SKL: 448, LCK: 298",
+    "Power": 597,
+    "Speed": 448,
+    "Skill": 448,
+    "Luck": 298
+  },
+  {
+    "Level": 180,
+    "_comment": "Level 180 Base Stats - POW: 600, SPD: 450, SKL: 450, LCK: 300",
+    "Power": 600,
+    "Speed": 450,
+    "Skill": 450,
+    "Luck": 300
+  },
+  {
+    "Level": 181,
+    "_comment": "Level 181 Base Stats - POW: 602, SPD: 451, SKL: 451, LCK: 301",
+    "Power": 602,
+    "Speed": 451,
+    "Skill": 451,
+    "Luck": 301
+  },
+  {
+    "Level": 182,
+    "_comment": "Level 182 Base Stats - POW: 603, SPD: 453, SKL: 453, LCK: 301",
+    "Power": 603,
+    "Speed": 453,
+    "Skill": 453,
+    "Luck": 301
+  },
+  {
+    "Level": 183,
+    "_comment": "Level 183 Base Stats - POW: 605, SPD: 454, SKL: 454, LCK: 302",
+    "Power": 605,
+    "Speed": 454,
+    "Skill": 454,
+    "Luck": 302
+  },
+  {
+    "Level": 184,
+    "_comment": "Level 184 Base Stats - POW: 607, SPD: 455, SKL: 455, LCK: 303",
+    "Power": 607,
+    "Speed": 455,
+    "Skill": 455,
+    "Luck": 303
+  },
+  {
+    "Level": 185,
+    "_comment": "Level 185 Base Stats - POW: 608, SPD: 456, SKL: 456, LCK: 304",
+    "Power": 608,
+    "Speed": 456,
+    "Skill": 456,
+    "Luck": 304
+  },
+  {
+    "Level": 186,
+    "_comment": "Level 186 Base Stats - POW: 610, SPD: 458, SKL: 458, LCK: 305",
+    "Power": 610,
+    "Speed": 458,
+    "Skill": 458,
+    "Luck": 305
+  },
+  {
+    "Level": 187,
+    "_comment": "Level 187 Base Stats - POW: 612, SPD: 459, SKL: 459, LCK: 306",
+    "Power": 612,
+    "Speed": 459,
+    "Skill": 459,
+    "Luck": 306
+  },
+  {
+    "Level": 188,
+    "_comment": "Level 188 Base Stats - POW: 613, SPD: 460, SKL: 460, LCK: 306",
+    "Power": 613,
+    "Speed": 460,
+    "Skill": 460,
+    "Luck": 306
+  },
+  {
+    "Level": 189,
+    "_comment": "Level 189 Base Stats - POW: 615, SPD: 461, SKL: 461, LCK: 307",
+    "Power": 615,
+    "Speed": 461,
+    "Skill": 461,
+    "Luck": 307
+  },
+  {
+    "Level": 190,
+    "_comment": "Level 190 Base Stats - POW: 617, SPD: 463, SKL: 463, LCK: 308",
+    "Power": 617,
+    "Speed": 463,
+    "Skill": 463,
+    "Luck": 308
+  },
+  {
+    "Level": 191,
+    "_comment": "Level 191 Base Stats - POW: 618, SPD: 464, SKL: 464, LCK: 309",
+    "Power": 618,
+    "Speed": 464,
+    "Skill": 464,
+    "Luck": 309
+  },
+  {
+    "Level": 192,
+    "_comment": "Level 192 Base Stats - POW: 620, SPD: 465, SKL: 465, LCK: 310",
+    "Power": 620,
+    "Speed": 465,
+    "Skill": 465,
+    "Luck": 310
+  },
+  {
+    "Level": 193,
+    "_comment": "Level 193 Base Stats - POW: 622, SPD: 466, SKL: 466, LCK: 311",
+    "Power": 622,
+    "Speed": 466,
+    "Skill": 466,
+    "Luck": 311
+  },
+  {
+    "Level": 194,
+    "_comment": "Level 194 Base Stats - POW: 623, SPD: 468, SKL: 468, LCK: 311",
+    "Power": 623,
+    "Speed": 468,
+    "Skill": 468,
+    "Luck": 311
+  },
+  {
+    "Level": 195,
+    "_comment": "Level 195 Base Stats - POW: 625, SPD: 469, SKL: 469, LCK: 312",
+    "Power": 625,
+    "Speed": 469,
+    "Skill": 469,
+    "Luck": 312
+  },
+  {
+    "Level": 196,
+    "_comment": "Level 196 Base Stats - POW: 627, SPD: 470, SKL: 470, LCK: 313",
+    "Power": 627,
+    "Speed": 470,
+    "Skill": 470,
+    "Luck": 313
+  },
+  {
+    "Level": 197,
+    "_comment": "Level 197 Base Stats - POW: 628, SPD: 471, SKL: 471, LCK: 314",
+    "Power": 628,
+    "Speed": 471,
+    "Skill": 471,
+    "Luck": 314
+  },
+  {
+    "Level": 198,
+    "_comment": "Level 198 Base Stats - POW: 630, SPD: 473, SKL: 473, LCK: 315",
+    "Power": 630,
+    "Speed": 473,
+    "Skill": 473,
+    "Luck": 315
+  },
+  {
+    "Level": 199,
+    "_comment": "Level 199 Base Stats - POW: 632, SPD: 474, SKL: 474, LCK: 316",
+    "Power": 632,
+    "Speed": 474,
+    "Skill": 474,
+    "Luck": 316
+  },
+  {
+    "Level": 200,
+    "_comment": "Level 200 Base Stats - POW: 633, SPD: 475, SKL: 475, LCK: 316",
+    "Power": 633,
+    "Speed": 475,
+    "Skill": 475,
+    "Luck": 316
+  },
+  {
+    "Level": 201,
+    "_comment": "Level 201 Base Stats - POW: 635, SPD: 476, SKL: 476, LCK: 317",
+    "Power": 635,
+    "Speed": 476,
+    "Skill": 476,
+    "Luck": 317
+  },
+  {
+    "Level": 202,
+    "_comment": "Level 202 Base Stats - POW: 637, SPD: 478, SKL: 478, LCK: 318",
+    "Power": 637,
+    "Speed": 478,
+    "Skill": 478,
+    "Luck": 318
+  },
+  {
+    "Level": 203,
+    "_comment": "Level 203 Base Stats - POW: 638, SPD: 479, SKL: 479, LCK: 319",
+    "Power": 638,
+    "Speed": 479,
+    "Skill": 479,
+    "Luck": 319
+  },
+  {
+    "Level": 204,
+    "_comment": "Level 204 Base Stats - POW: 640, SPD: 480, SKL: 480, LCK: 320",
+    "Power": 640,
+    "Speed": 480,
+    "Skill": 480,
+    "Luck": 320
+  },
+  {
+    "Level": 205,
+    "_comment": "Level 205 Base Stats - POW: 642, SPD: 481, SKL: 481, LCK: 321",
+    "Power": 642,
+    "Speed": 481,
+    "Skill": 481,
+    "Luck": 321
+  },
+  {
+    "Level": 206,
+    "_comment": "Level 206 Base Stats - POW: 643, SPD: 483, SKL: 483, LCK: 321",
+    "Power": 643,
+    "Speed": 483,
+    "Skill": 483,
+    "Luck": 321
+  },
+  {
+    "Level": 207,
+    "_comment": "Level 207 Base Stats - POW: 645, SPD: 484, SKL: 484, LCK: 322",
+    "Power": 645,
+    "Speed": 484,
+    "Skill": 484,
+    "Luck": 322
+  },
+  {
+    "Level": 208,
+    "_comment": "Level 208 Base Stats - POW: 647, SPD: 485, SKL: 485, LCK: 323",
+    "Power": 647,
+    "Speed": 485,
+    "Skill": 485,
+    "Luck": 323
+  },
+  {
+    "Level": 209,
+    "_comment": "Level 209 Base Stats - POW: 648, SPD: 486, SKL: 486, LCK: 324",
+    "Power": 648,
+    "Speed": 486,
+    "Skill": 486,
+    "Luck": 324
+  },
+  {
+    "Level": 210,
+    "_comment": "Level 210 Base Stats - POW: 650, SPD: 488, SKL: 488, LCK: 325",
+    "Power": 650,
+    "Speed": 488,
+    "Skill": 488,
+    "Luck": 325
+  },
+  {
+    "Level": 211,
+    "_comment": "Level 211 Base Stats - POW: 652, SPD: 489, SKL: 489, LCK: 326",
+    "Power": 652,
+    "Speed": 489,
+    "Skill": 489,
+    "Luck": 326
+  },
+  {
+    "Level": 212,
+    "_comment": "Level 212 Base Stats - POW: 653, SPD: 490, SKL: 490, LCK: 326",
+    "Power": 653,
+    "Speed": 490,
+    "Skill": 490,
+    "Luck": 326
+  },
+  {
+    "Level": 213,
+    "_comment": "Level 213 Base Stats - POW: 655, SPD: 491, SKL: 491, LCK: 327",
+    "Power": 655,
+    "Speed": 491,
+    "Skill": 491,
+    "Luck": 327
+  },
+  {
+    "Level": 214,
+    "_comment": "Level 214 Base Stats - POW: 657, SPD: 493, SKL: 493, LCK: 328",
+    "Power": 657,
+    "Speed": 493,
+    "Skill": 493,
+    "Luck": 328
+  },
+  {
+    "Level": 215,
+    "_comment": "Level 215 Base Stats - POW: 658, SPD: 494, SKL: 494, LCK: 329",
+    "Power": 658,
+    "Speed": 494,
+    "Skill": 494,
+    "Luck": 329
+  },
+  {
+    "Level": 216,
+    "_comment": "Level 216 Base Stats - POW: 660, SPD: 495, SKL: 495, LCK: 330",
+    "Power": 660,
+    "Speed": 495,
+    "Skill": 495,
+    "Luck": 330
+  },
+  {
+    "Level": 217,
+    "_comment": "Level 217 Base Stats - POW: 662, SPD: 496, SKL: 496, LCK: 331",
+    "Power": 662,
+    "Speed": 496,
+    "Skill": 496,
+    "Luck": 331
+  },
+  {
+    "Level": 218,
+    "_comment": "Level 218 Base Stats - POW: 663, SPD: 498, SKL: 498, LCK: 331",
+    "Power": 663,
+    "Speed": 498,
+    "Skill": 498,
+    "Luck": 331
+  },
+  {
+    "Level": 219,
+    "_comment": "Level 219 Base Stats - POW: 665, SPD: 499, SKL: 499, LCK: 332",
+    "Power": 665,
+    "Speed": 499,
+    "Skill": 499,
+    "Luck": 332
+  },
+  {
+    "Level": 220,
+    "_comment": "Level 220 Base Stats - POW: 667, SPD: 500, SKL: 500, LCK: 333",
+    "Power": 667,
+    "Speed": 500,
+    "Skill": 500,
+    "Luck": 333
+  },
+  {
+    "Level": 221,
+    "_comment": "Level 221 Base Stats - POW: 668, SPD: 501, SKL: 501, LCK: 334",
+    "Power": 668,
+    "Speed": 501,
+    "Skill": 501,
+    "Luck": 334
+  },
+  {
+    "Level": 222,
+    "_comment": "Level 222 Base Stats - POW: 670, SPD: 503, SKL: 503, LCK: 335",
+    "Power": 670,
+    "Speed": 503,
+    "Skill": 503,
+    "Luck": 335
+  },
+  {
+    "Level": 223,
+    "_comment": "Level 223 Base Stats - POW: 672, SPD: 504, SKL: 504, LCK: 336",
+    "Power": 672,
+    "Speed": 504,
+    "Skill": 504,
+    "Luck": 336
+  },
+  {
+    "Level": 224,
+    "_comment": "Level 224 Base Stats - POW: 673, SPD: 505, SKL: 505, LCK: 336",
+    "Power": 673,
+    "Speed": 505,
+    "Skill": 505,
+    "Luck": 336
+  },
+  {
+    "Level": 225,
+    "_comment": "Level 225 Base Stats - POW: 675, SPD: 506, SKL: 506, LCK: 337",
+    "Power": 675,
+    "Speed": 506,
+    "Skill": 506,
+    "Luck": 337
+  },
+  {
+    "Level": 226,
+    "_comment": "Level 226 Base Stats - POW: 677, SPD: 508, SKL: 508, LCK: 338",
+    "Power": 677,
+    "Speed": 508,
+    "Skill": 508,
+    "Luck": 338
+  },
+  {
+    "Level": 227,
+    "_comment": "Level 227 Base Stats - POW: 678, SPD: 509, SKL: 509, LCK: 339",
+    "Power": 678,
+    "Speed": 509,
+    "Skill": 509,
+    "Luck": 339
+  },
+  {
+    "Level": 228,
+    "_comment": "Level 228 Base Stats - POW: 680, SPD: 510, SKL: 510, LCK: 340",
+    "Power": 680,
+    "Speed": 510,
+    "Skill": 510,
+    "Luck": 340
+  },
+  {
+    "Level": 229,
+    "_comment": "Level 229 Base Stats - POW: 682, SPD: 511, SKL: 511, LCK: 341",
+    "Power": 682,
+    "Speed": 511,
+    "Skill": 511,
+    "Luck": 341
+  },
+  {
+    "Level": 230,
+    "_comment": "Level 230 Base Stats - POW: 683, SPD: 513, SKL: 513, LCK: 341",
+    "Power": 683,
+    "Speed": 513,
+    "Skill": 513,
+    "Luck": 341
+  },
+  {
+    "Level": 231,
+    "_comment": "Level 231 Base Stats - POW: 685, SPD: 514, SKL: 514, LCK: 342",
+    "Power": 685,
+    "Speed": 514,
+    "Skill": 514,
+    "Luck": 342
+  },
+  {
+    "Level": 232,
+    "_comment": "Level 232 Base Stats - POW: 687, SPD: 515, SKL: 515, LCK: 343",
+    "Power": 687,
+    "Speed": 515,
+    "Skill": 515,
+    "Luck": 343
+  },
+  {
+    "Level": 233,
+    "_comment": "Level 233 Base Stats - POW: 688, SPD: 516, SKL: 516, LCK: 344",
+    "Power": 688,
+    "Speed": 516,
+    "Skill": 516,
+    "Luck": 344
+  },
+  {
+    "Level": 234,
+    "_comment": "Level 234 Base Stats - POW: 690, SPD: 518, SKL: 518, LCK: 345",
+    "Power": 690,
+    "Speed": 518,
+    "Skill": 518,
+    "Luck": 345
+  },
+  {
+    "Level": 235,
+    "_comment": "Level 235 Base Stats - POW: 692, SPD: 519, SKL: 519, LCK: 346",
+    "Power": 692,
+    "Speed": 519,
+    "Skill": 519,
+    "Luck": 346
+  },
+  {
+    "Level": 236,
+    "_comment": "Level 236 Base Stats - POW: 693, SPD: 520, SKL: 520, LCK: 346",
+    "Power": 693,
+    "Speed": 520,
+    "Skill": 520,
+    "Luck": 346
+  },
+  {
+    "Level": 237,
+    "_comment": "Level 237 Base Stats - POW: 695, SPD: 521, SKL: 521, LCK: 347",
+    "Power": 695,
+    "Speed": 521,
+    "Skill": 521,
+    "Luck": 347
+  },
+  {
+    "Level": 238,
+    "_comment": "Level 238 Base Stats - POW: 697, SPD: 523, SKL: 523, LCK: 348",
+    "Power": 697,
+    "Speed": 523,
+    "Skill": 523,
+    "Luck": 348
+  },
+  {
+    "Level": 239,
+    "_comment": "Level 239 Base Stats - POW: 698, SPD: 524, SKL: 524, LCK: 349",
+    "Power": 698,
+    "Speed": 524,
+    "Skill": 524,
+    "Luck": 349
+  },
+  {
+    "Level": 240,
+    "_comment": "Level 240 Base Stats - POW: 700, SPD: 525, SKL: 525, LCK: 350",
+    "Power": 700,
+    "Speed": 525,
+    "Skill": 525,
+    "Luck": 350
+  },
+  {
+    "Level": 241,
+    "_comment": "Level 241 Base Stats - POW: 701, SPD: 526, SKL: 526, LCK: 350",
+    "Power": 701,
+    "Speed": 526,
+    "Skill": 526,
+    "Luck": 350
+  },
+  {
+    "Level": 242,
+    "_comment": "Level 242 Base Stats - POW: 701, SPD: 526, SKL: 526, LCK: 350",
+    "Power": 701,
+    "Speed": 526,
+    "Skill": 526,
+    "Luck": 350
+  },
+  {
+    "Level": 243,
+    "_comment": "Level 243 Base Stats - POW: 702, SPD: 527, SKL: 527, LCK: 350",
+    "Power": 702,
+    "Speed": 527,
+    "Skill": 527,
+    "Luck": 350
+  },
+  {
+    "Level": 244,
+    "_comment": "Level 244 Base Stats - POW: 703, SPD: 528, SKL: 528, LCK: 350",
+    "Power": 703,
+    "Speed": 528,
+    "Skill": 528,
+    "Luck": 350
+  },
+  {
+    "Level": 245,
+    "_comment": "Level 245 Base Stats - POW: 704, SPD: 529, SKL: 529, LCK: 350",
+    "Power": 704,
+    "Speed": 529,
+    "Skill": 529,
+    "Luck": 350
+  },
+  {
+    "Level": 246,
+    "_comment": "Level 246 Base Stats - POW: 705, SPD: 529, SKL: 529, LCK: 350",
+    "Power": 705,
+    "Speed": 529,
+    "Skill": 529,
+    "Luck": 350
+  },
+  {
+    "Level": 247,
+    "_comment": "Level 247 Base Stats - POW: 706, SPD: 530, SKL: 530, LCK: 350",
+    "Power": 706,
+    "Speed": 530,
+    "Skill": 530,
+    "Luck": 350
+  },
+  {
+    "Level": 248,
+    "_comment": "Level 248 Base Stats - POW: 706, SPD: 530, SKL: 530, LCK: 350",
+    "Power": 706,
+    "Speed": 530,
+    "Skill": 530,
+    "Luck": 350
+  },
+  {
+    "Level": 249,
+    "_comment": "Level 249 Base Stats - POW: 707, SPD: 531, SKL: 531, LCK: 350",
+    "Power": 707,
+    "Speed": 531,
+    "Skill": 531,
+    "Luck": 350
+  },
+  {
+    "Level": 250,
+    "_comment": "Level 250 Base Stats - POW: 708, SPD: 531, SKL: 531, LCK: 350",
+    "Power": 708,
+    "Speed": 531,
+    "Skill": 531,
+    "Luck": 350
+  },
+  {
+    "Level": 251,
+    "_comment": "Level 251 Base Stats - POW: 709, SPD: 532, SKL: 532, LCK: 350",
+    "Power": 709,
+    "Speed": 532,
+    "Skill": 532,
+    "Luck": 350
+  },
+  {
+    "Level": 252,
+    "_comment": "Level 252 Base Stats - POW: 710, SPD: 533, SKL: 533, LCK: 350",
+    "Power": 710,
+    "Speed": 533,
+    "Skill": 533,
+    "Luck": 350
+  },
+  {
+    "Level": 253,
+    "_comment": "Level 253 Base Stats - POW: 711, SPD: 534, SKL: 534, LCK: 350",
+    "Power": 711,
+    "Speed": 534,
+    "Skill": 534,
+    "Luck": 350
+  },
+  {
+    "Level": 254,
+    "_comment": "Level 254 Base Stats - POW: 711, SPD: 534, SKL: 534, LCK: 350",
+    "Power": 711,
+    "Speed": 534,
+    "Skill": 534,
+    "Luck": 350
+  },
+  {
+    "Level": 255,
+    "_comment": "Level 255 Base Stats - POW: 712, SPD: 535, SKL: 535, LCK: 350",
+    "Power": 712,
+    "Speed": 535,
+    "Skill": 535,
+    "Luck": 350
+  },
+  {
+    "Level": 256,
+    "_comment": "Level 256 Base Stats - POW: 713, SPD: 535, SKL: 535, LCK: 350",
+    "Power": 713,
+    "Speed": 535,
+    "Skill": 535,
+    "Luck": 350
+  },
+  {
+    "Level": 257,
+    "_comment": "Level 257 Base Stats - POW: 714, SPD: 536, SKL: 536, LCK: 350",
+    "Power": 714,
+    "Speed": 536,
+    "Skill": 536,
+    "Luck": 350
+  },
+  {
+    "Level": 258,
+    "_comment": "Level 258 Base Stats - POW: 715, SPD: 536, SKL: 536, LCK: 350",
+    "Power": 715,
+    "Speed": 536,
+    "Skill": 536,
+    "Luck": 350
+  },
+  {
+    "Level": 259,
+    "_comment": "Level 259 Base Stats - POW: 716, SPD: 537, SKL: 537, LCK: 350",
+    "Power": 716,
+    "Speed": 537,
+    "Skill": 537,
+    "Luck": 350
+  },
+  {
+    "Level": 260,
+    "_comment": "Level 260 Base Stats - POW: 716, SPD: 538, SKL: 538, LCK: 350",
+    "Power": 716,
+    "Speed": 538,
+    "Skill": 538,
+    "Luck": 350
+  },
+  {
+    "Level": 261,
+    "_comment": "Level 261 Base Stats - POW: 717, SPD: 539, SKL: 539, LCK: 350",
+    "Power": 717,
+    "Speed": 539,
+    "Skill": 539,
+    "Luck": 350
+  },
+  {
+    "Level": 262,
+    "_comment": "Level 262 Base Stats - POW: 718, SPD: 539, SKL: 539, LCK: 350",
+    "Power": 718,
+    "Speed": 539,
+    "Skill": 539,
+    "Luck": 350
+  },
+  {
+    "Level": 263,
+    "_comment": "Level 263 Base Stats - POW: 719, SPD: 540, SKL: 540, LCK: 350",
+    "Power": 719,
+    "Speed": 540,
+    "Skill": 540,
+    "Luck": 350
+  },
+  {
+    "Level": 264,
+    "_comment": "Level 264 Base Stats - POW: 720, SPD: 540, SKL: 540, LCK: 350",
+    "Power": 720,
+    "Speed": 540,
+    "Skill": 540,
+    "Luck": 350
+  },
+  {
+    "Level": 265,
+    "_comment": "Level 265 Base Stats - POW: 721, SPD: 541, SKL: 541, LCK: 350",
+    "Power": 721,
+    "Speed": 541,
+    "Skill": 541,
+    "Luck": 350
+  },
+  {
+    "Level": 266,
+    "_comment": "Level 266 Base Stats - POW: 721, SPD: 541, SKL: 541, LCK: 350",
+    "Power": 721,
+    "Speed": 541,
+    "Skill": 541,
+    "Luck": 350
+  },
+  {
+    "Level": 267,
+    "_comment": "Level 267 Base Stats - POW: 722, SPD: 542, SKL: 542, LCK: 350",
+    "Power": 722,
+    "Speed": 542,
+    "Skill": 542,
+    "Luck": 350
+  },
+  {
+    "Level": 268,
+    "_comment": "Level 268 Base Stats - POW: 723, SPD: 543, SKL: 543, LCK: 350",
+    "Power": 723,
+    "Speed": 543,
+    "Skill": 543,
+    "Luck": 350
+  },
+  {
+    "Level": 269,
+    "_comment": "Level 269 Base Stats - POW: 724, SPD: 544, SKL: 544, LCK: 350",
+    "Power": 724,
+    "Speed": 544,
+    "Skill": 544,
+    "Luck": 350
+  },
+  {
+    "Level": 270,
+    "_comment": "Level 270 Base Stats - POW: 725, SPD: 544, SKL: 544, LCK: 350",
+    "Power": 725,
+    "Speed": 544,
+    "Skill": 544,
+    "Luck": 350
+  },
+  {
+    "Level": 271,
+    "_comment": "Level 271 Base Stats - POW: 726, SPD: 545, SKL: 545, LCK: 350",
+    "Power": 726,
+    "Speed": 545,
+    "Skill": 545,
+    "Luck": 350
+  },
+  {
+    "Level": 272,
+    "_comment": "Level 272 Base Stats - POW: 726, SPD: 545, SKL: 545, LCK: 350",
+    "Power": 726,
+    "Speed": 545,
+    "Skill": 545,
+    "Luck": 350
+  },
+  {
+    "Level": 273,
+    "_comment": "Level 273 Base Stats - POW: 727, SPD: 546, SKL: 546, LCK: 350",
+    "Power": 727,
+    "Speed": 546,
+    "Skill": 546,
+    "Luck": 350
+  },
+  {
+    "Level": 274,
+    "_comment": "Level 274 Base Stats - POW: 728, SPD: 546, SKL: 546, LCK: 350",
+    "Power": 728,
+    "Speed": 546,
+    "Skill": 546,
+    "Luck": 350
+  },
+  {
+    "Level": 275,
+    "_comment": "Level 275 Base Stats - POW: 729, SPD: 547, SKL: 547, LCK: 350",
+    "Power": 729,
+    "Speed": 547,
+    "Skill": 547,
+    "Luck": 350
+  },
+  {
+    "Level": 276,
+    "_comment": "Level 276 Base Stats - POW: 730, SPD: 548, SKL: 548, LCK: 350",
+    "Power": 730,
+    "Speed": 548,
+    "Skill": 548,
+    "Luck": 350
+  },
+  {
+    "Level": 277,
+    "_comment": "Level 277 Base Stats - POW: 731, SPD: 549, SKL: 549, LCK: 350",
+    "Power": 731,
+    "Speed": 549,
+    "Skill": 549,
+    "Luck": 350
+  },
+  {
+    "Level": 278,
+    "_comment": "Level 278 Base Stats - POW: 731, SPD: 549, SKL: 549, LCK: 350",
+    "Power": 731,
+    "Speed": 549,
+    "Skill": 549,
+    "Luck": 350
+  },
+  {
+    "Level": 279,
+    "_comment": "Level 279 Base Stats - POW: 732, SPD: 550, SKL: 550, LCK: 350",
+    "Power": 732,
+    "Speed": 550,
+    "Skill": 550,
+    "Luck": 350
+  },
+  {
+    "Level": 280,
+    "_comment": "Level 280 Base Stats - POW: 733, SPD: 550, SKL: 550, LCK: 350",
+    "Power": 733,
+    "Speed": 550,
+    "Skill": 550,
+    "Luck": 350
+  },
+  {
+    "Level": 281,
+    "_comment": "Level 281 Base Stats - POW: 734, SPD: 551, SKL: 551, LCK: 350",
+    "Power": 734,
+    "Speed": 551,
+    "Skill": 551,
+    "Luck": 350
+  },
+  {
+    "Level": 282,
+    "_comment": "Level 282 Base Stats - POW: 735, SPD: 551, SKL: 551, LCK: 350",
+    "Power": 735,
+    "Speed": 551,
+    "Skill": 551,
+    "Luck": 350
+  },
+  {
+    "Level": 283,
+    "_comment": "Level 283 Base Stats - POW: 736, SPD: 552, SKL: 552, LCK: 350",
+    "Power": 736,
+    "Speed": 552,
+    "Skill": 552,
+    "Luck": 350
+  },
+  {
+    "Level": 284,
+    "_comment": "Level 284 Base Stats - POW: 736, SPD: 553, SKL: 553, LCK: 350",
+    "Power": 736,
+    "Speed": 553,
+    "Skill": 553,
+    "Luck": 350
+  },
+  {
+    "Level": 285,
+    "_comment": "Level 285 Base Stats - POW: 737, SPD: 554, SKL: 554, LCK: 350",
+    "Power": 737,
+    "Speed": 554,
+    "Skill": 554,
+    "Luck": 350
+  },
+  {
+    "Level": 286,
+    "_comment": "Level 286 Base Stats - POW: 738, SPD: 554, SKL: 554, LCK: 350",
+    "Power": 738,
+    "Speed": 554,
+    "Skill": 554,
+    "Luck": 350
+  },
+  {
+    "Level": 287,
+    "_comment": "Level 287 Base Stats - POW: 739, SPD: 555, SKL: 555, LCK: 350",
+    "Power": 739,
+    "Speed": 555,
+    "Skill": 555,
+    "Luck": 350
+  },
+  {
+    "Level": 288,
+    "_comment": "Level 288 Base Stats - POW: 740, SPD: 555, SKL: 555, LCK: 350",
+    "Power": 740,
+    "Speed": 555,
+    "Skill": 555,
+    "Luck": 350
+  },
+  {
+    "Level": 289,
+    "_comment": "Level 289 Base Stats - POW: 741, SPD: 556, SKL: 556, LCK: 350",
+    "Power": 741,
+    "Speed": 556,
+    "Skill": 556,
+    "Luck": 350
+  },
+  {
+    "Level": 290,
+    "_comment": "Level 290 Base Stats - POW: 741, SPD: 556, SKL: 556, LCK: 350",
+    "Power": 741,
+    "Speed": 556,
+    "Skill": 556,
+    "Luck": 350
+  },
+  {
+    "Level": 291,
+    "_comment": "Level 291 Base Stats - POW: 742, SPD: 557, SKL: 557, LCK: 350",
+    "Power": 742,
+    "Speed": 557,
+    "Skill": 557,
+    "Luck": 350
+  },
+  {
+    "Level": 292,
+    "_comment": "Level 292 Base Stats - POW: 743, SPD: 558, SKL: 558, LCK: 350",
+    "Power": 743,
+    "Speed": 558,
+    "Skill": 558,
+    "Luck": 350
+  },
+  {
+    "Level": 293,
+    "_comment": "Level 293 Base Stats - POW: 744, SPD: 559, SKL: 559, LCK: 350",
+    "Power": 744,
+    "Speed": 559,
+    "Skill": 559,
+    "Luck": 350
+  },
+  {
+    "Level": 294,
+    "_comment": "Level 294 Base Stats - POW: 745, SPD: 559, SKL: 559, LCK: 350",
+    "Power": 745,
+    "Speed": 559,
+    "Skill": 559,
+    "Luck": 350
+  },
+  {
+    "Level": 295,
+    "_comment": "Level 295 Base Stats - POW: 746, SPD: 560, SKL: 560, LCK: 350",
+    "Power": 746,
+    "Speed": 560,
+    "Skill": 560,
+    "Luck": 350
+  },
+  {
+    "Level": 296,
+    "_comment": "Level 296 Base Stats - POW: 746, SPD: 560, SKL: 560, LCK: 350",
+    "Power": 746,
+    "Speed": 560,
+    "Skill": 560,
+    "Luck": 350
+  },
+  {
+    "Level": 297,
+    "_comment": "Level 297 Base Stats - POW: 747, SPD: 561, SKL: 561, LCK: 350",
+    "Power": 747,
+    "Speed": 561,
+    "Skill": 561,
+    "Luck": 350
+  },
+  {
+    "Level": 298,
+    "_comment": "Level 298 Base Stats - POW: 748, SPD: 561, SKL: 561, LCK: 350",
+    "Power": 748,
+    "Speed": 561,
+    "Skill": 561,
+    "Luck": 350
+  },
+  {
+    "Level": 299,
+    "_comment": "Level 299 Base Stats - POW: 749, SPD: 562, SKL: 562, LCK: 350",
+    "Power": 749,
+    "Speed": 562,
+    "Skill": 562,
+    "Luck": 350
+  },
+  {
+    "Level": 300,
+    "_comment": "Level 300 Base Stats - POW: 750, SPD: 563, SKL: 563, LCK: 350",
+    "Power": 750,
+    "Speed": 563,
+    "Skill": 563,
+    "Luck": 350
+  }
+]

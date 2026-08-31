@@ -7,7 +7,7 @@
   "HasCharacter": true,
   "CharaId": 256,
   "CharacterId": 256,
-  "SessionKey": 669698,
+  "SessionKey": 995955,
   "School": 1,
   "Gender": 2,
   "FaceId": 11,
@@ -17,12 +17,12 @@
   "BirthDay": 29,
   "BloodType": 1,
   "NametagColor": 0,
-  "Level": 2,
+  "Level": 3,
   "Grade": 1,
-  "Pow": 8,
-  "Speed": 6,
-  "Skill": 6,
-  "Luck": 4,
+  "Pow": 13,
+  "Speed": 9,
+  "Skill": 9,
+  "Luck": 6,
   "DexLevel": 1,
   "DexExp": 0,
   "DexLevels": [
@@ -39,19 +39,19 @@
     0,
     0
   ],
-  "ComboCount": 24,
-  "LastAttackTime": 325608937,
+  "ComboCount": 12,
+  "LastAttackTime": 331903937,
   "ChargePoint": 0,
   "GaugeMax": 70000,
-  "GaugeCurrent": 39420,
-  "SkillPoint": 4,
+  "GaugeCurrent": 54630,
+  "SkillPoint": 5,
   "Defense": 2,
   "CurrentExp": 6,
   "Exp": 6,
-  "MaxExp": 12,
-  "CurrentHp": 260,
-  "Hp": 260,
-  "MaxHp": 260,
+  "MaxExp": 16,
+  "CurrentHp": 212,
+  "Hp": 212,
+  "MaxHp": 295,
   "CurrentMp": 195,
   "Sp": 195,
   "MaxMp": 195,
@@ -59,21 +59,21 @@
   "TaffPoints": 1000,
   "StarPoints": 0,
   "HpRegainAccumulator": 0,
-  "LastCombatTime": "2026-08-31T02:48:18.1544337Z",
-  "AtkSpeedF": 1.00117,
-  "MoveSpeedF": 1.00117,
+  "LastCombatTime": "2026-08-31T04:33:13.1478598Z",
+  "AtkSpeedF": 1.001755,
+  "MoveSpeedF": 1.001755,
   "TargetMonsterId": 0,
-  "FieldId": 1,
+  "FieldId": 2,
   "Position": {
-    "X": 63,
-    "Y": 105,
+    "X": 27,
+    "Y": 101,
     "Z": 0,
     "Heading": 0
   },
-  "SaveFieldId": 1,
+  "SaveFieldId": 2,
   "SavePosition": {
-    "X": 75,
-    "Y": 105,
+    "X": 27,
+    "Y": 101,
     "Z": 0,
     "Heading": 0
   },
@@ -319,6 +319,25 @@
       "TypeId": 30002,
       "Name": "\u6298\u308A\u7D19",
       "SlotIndex": 11,
+      "SlotType": 0,
+      "SerialId": 0,
+      "Quantity": 1,
+      "EnchantLevel": 0,
+      "IsEquipped": false,
+      "SocketSlots": [
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "Id": 13,
+      "ItemId": 30002,
+      "TypeId": 30002,
+      "Name": "\u6298\u308A\u7D19",
+      "SlotIndex": 12,
       "SlotType": 0,
       "SerialId": 0,
       "Quantity": 1,
@@ -629,73 +648,73 @@
       "EffectType": 7300,
       "DurationSeconds": 2592000,
       "ActivatedAt": "2026-08-30T05:31:41.2797429Z",
-      "RemainingSeconds": 2513591
+      "RemainingSeconds": 2509099
     },
     {
       "EffectType": 7400,
       "DurationSeconds": 2592000,
       "ActivatedAt": "2026-08-30T05:31:42.3678492Z",
-      "RemainingSeconds": 2513592
+      "RemainingSeconds": 2509100
     },
     {
       "EffectType": 7000,
       "DurationSeconds": 5184000,
       "ActivatedAt": "2026-08-30T05:31:42.7958016Z",
-      "RemainingSeconds": 5105593
+      "RemainingSeconds": 5101100
     },
     {
       "EffectType": 7100,
       "DurationSeconds": 2592000,
       "ActivatedAt": "2026-08-30T05:31:43.1761469Z",
-      "RemainingSeconds": 2513593
+      "RemainingSeconds": 2509100
     },
     {
       "EffectType": 7200,
       "DurationSeconds": 2592000,
       "ActivatedAt": "2026-08-30T05:31:43.5516324Z",
-      "RemainingSeconds": 2513593
+      "RemainingSeconds": 2509101
     },
     {
       "EffectType": 7500,
       "DurationSeconds": 2592000,
       "ActivatedAt": "2026-08-30T05:31:43.9440198Z",
-      "RemainingSeconds": 2513594
+      "RemainingSeconds": 2509101
     },
     {
       "EffectType": 4100,
       "DurationSeconds": 2592000,
       "ActivatedAt": "2026-08-30T05:36:12.8163106Z",
-      "RemainingSeconds": 2513863
+      "RemainingSeconds": 2509370
     },
     {
       "EffectType": 4110,
       "DurationSeconds": 18144000,
       "ActivatedAt": "2026-08-30T05:36:14.9412779Z",
-      "RemainingSeconds": 18065865
+      "RemainingSeconds": 18061372
     },
     {
       "EffectType": 4200,
       "DurationSeconds": 2592000,
       "ActivatedAt": "2026-08-30T05:36:19.7023848Z",
-      "RemainingSeconds": 2513869
+      "RemainingSeconds": 2509377
     },
     {
       "EffectType": 6100,
       "DurationSeconds": 2592000,
       "ActivatedAt": "2026-08-30T05:36:20.6716723Z",
-      "RemainingSeconds": 2513870
+      "RemainingSeconds": 2509378
     },
     {
       "EffectType": 4300,
       "DurationSeconds": 2592000,
       "ActivatedAt": "2026-08-30T05:36:21.4892307Z",
-      "RemainingSeconds": 2513871
+      "RemainingSeconds": 2509379
     },
     {
       "EffectType": 2100,
       "DurationSeconds": 2592000,
       "ActivatedAt": "2026-08-30T05:36:22.2623351Z",
-      "RemainingSeconds": 2513872
+      "RemainingSeconds": 2509380
     }
   ]
 }

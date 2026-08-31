@@ -1,0 +1,4709 @@
+[
+  {
+    "Id": 10101,
+    "_comment": "Blade (剣) - Group 101, Swing 1",
+    "Range": 1,
+    "Area": 102031,
+    "Param1": 22,
+    "Param2": 22,
+    "Power": 63
+  },
+  {
+    "Id": 10102,
+    "_comment": "Blade (剣) - Group 101, Swing 2",
+    "Range": 1,
+    "Area": 102031,
+    "Param1": 22,
+    "Param2": 22,
+    "Power": 63
+  },
+  {
+    "Id": 10103,
+    "_comment": "Blade (剣) - Group 101, Swing 3",
+    "Range": 1,
+    "Area": 102031,
+    "Param1": 22,
+    "Param2": 22,
+    "Power": 63
+  },
+  {
+    "Id": 10201,
+    "_comment": "Blade (剣) - Group 102, Swing 1",
+    "Range": 1,
+    "Area": 102031,
+    "Param1": 22,
+    "Param2": 22,
+    "Power": 63
+  },
+  {
+    "Id": 10202,
+    "_comment": "Blade (剣) - Group 102, Swing 2",
+    "Range": 1,
+    "Area": 102031,
+    "Param1": 22,
+    "Param2": 22,
+    "Power": 63
+  },
+  {
+    "Id": 10203,
+    "_comment": "Blade (剣) - Group 102, Swing 3",
+    "Range": 1,
+    "Area": 102031,
+    "Param1": 22,
+    "Param2": 22,
+    "Power": 63
+  },
+  {
+    "Id": 10301,
+    "_comment": "Blade (剣) - Group 103, Swing 1",
+    "Range": 1,
+    "Area": 102031,
+    "Param1": 22,
+    "Param2": 22,
+    "Power": 0
+  },
+  {
+    "Id": 10302,
+    "_comment": "Blade (剣) - Group 103, Swing 2",
+    "Range": 1,
+    "Area": 102031,
+    "Param1": 22,
+    "Param2": 22,
+    "Power": 0
+  },
+  {
+    "Id": 10303,
+    "_comment": "Blade (剣) - Group 103, Swing 3",
+    "Range": 1,
+    "Area": 102031,
+    "Param1": 22,
+    "Param2": 22,
+    "Power": 0
+  },
+  {
+    "Id": 10401,
+    "_comment": "Blade (剣) - Group 104, Swing 1",
+    "Range": 1,
+    "Area": 102031,
+    "Param1": 22,
+    "Param2": 22,
+    "Power": 57
+  },
+  {
+    "Id": 10402,
+    "_comment": "Blade (剣) - Group 104, Swing 2",
+    "Range": 1,
+    "Area": 102031,
+    "Param1": 22,
+    "Param2": 22,
+    "Power": 57
+  },
+  {
+    "Id": 10403,
+    "_comment": "Blade (剣) - Group 104, Swing 3",
+    "Range": 1,
+    "Area": 102031,
+    "Param1": 22,
+    "Param2": 22,
+    "Power": 57
+  },
+  {
+    "Id": 30101,
+    "_comment": "Blunt (鈍器) - Group 301, Swing 1",
+    "Range": 1,
+    "Area": 101032,
+    "Param1": 22,
+    "Param2": 22,
+    "Power": 53
+  },
+  {
+    "Id": 30102,
+    "_comment": "Blunt (鈍器) - Group 301, Swing 2",
+    "Range": 1,
+    "Area": 101032,
+    "Param1": 22,
+    "Param2": 22,
+    "Power": 50
+  },
+  {
+    "Id": 30103,
+    "_comment": "Blunt (鈍器) - Group 301, Swing 3",
+    "Range": 1,
+    "Area": 101032,
+    "Param1": 22,
+    "Param2": 22,
+    "Power": 47
+  },
+  {
+    "Id": 30201,
+    "_comment": "Blunt (鈍器) - Group 302, Swing 1",
+    "Range": 1,
+    "Area": 101032,
+    "Param1": 22,
+    "Param2": 22,
+    "Power": 53
+  },
+  {
+    "Id": 30202,
+    "_comment": "Blunt (鈍器) - Group 302, Swing 2",
+    "Range": 1,
+    "Area": 101032,
+    "Param1": 22,
+    "Param2": 22,
+    "Power": 50
+  },
+  {
+    "Id": 30203,
+    "_comment": "Blunt (鈍器) - Group 302, Swing 3",
+    "Range": 1,
+    "Area": 101032,
+    "Param1": 22,
+    "Param2": 22,
+    "Power": 47
+  },
+  {
+    "Id": 30301,
+    "_comment": "Blunt (鈍器) - Group 303, Swing 1",
+    "Range": 1,
+    "Area": 101032,
+    "Param1": 22,
+    "Param2": 22,
+    "Power": 53
+  },
+  {
+    "Id": 30302,
+    "_comment": "Blunt (鈍器) - Group 303, Swing 2",
+    "Range": 1,
+    "Area": 101032,
+    "Param1": 22,
+    "Param2": 22,
+    "Power": 50
+  },
+  {
+    "Id": 30303,
+    "_comment": "Blunt (鈍器) - Group 303, Swing 3",
+    "Range": 1,
+    "Area": 101032,
+    "Param1": 22,
+    "Param2": 22,
+    "Power": 47
+  },
+  {
+    "Id": 30401,
+    "_comment": "Blunt (鈍器) - Group 304, Swing 1",
+    "Range": 1,
+    "Area": 101032,
+    "Param1": 22,
+    "Param2": 22,
+    "Power": 53
+  },
+  {
+    "Id": 30402,
+    "_comment": "Blunt (鈍器) - Group 304, Swing 2",
+    "Range": 1,
+    "Area": 101032,
+    "Param1": 22,
+    "Param2": 22,
+    "Power": 50
+  },
+  {
+    "Id": 30403,
+    "_comment": "Blunt (鈍器) - Group 304, Swing 3",
+    "Range": 1,
+    "Area": 101032,
+    "Param1": 22,
+    "Param2": 22,
+    "Power": 47
+  },
+  {
+    "Id": 50101,
+    "_comment": "Monster (モンスター攻撃) - Group 501, Swing 1",
+    "Range": 3,
+    "Area": 101011,
+    "Param1": 22,
+    "Param2": 22,
+    "Power": 77
+  },
+  {
+    "Id": 50102,
+    "_comment": "Monster (モンスター攻撃) - Group 501, Swing 2",
+    "Range": 3,
+    "Area": 101011,
+    "Param1": 22,
+    "Param2": 22,
+    "Power": 77
+  },
+  {
+    "Id": 50103,
+    "_comment": "Monster (モンスター攻撃) - Group 501, Swing 3",
+    "Range": 3,
+    "Area": 101011,
+    "Param1": 22,
+    "Param2": 22,
+    "Power": 77
+  },
+  {
+    "Id": 50201,
+    "_comment": "Monster (モンスター攻撃) - Group 502, Swing 1",
+    "Range": 3,
+    "Area": 101011,
+    "Param1": 22,
+    "Param2": 22,
+    "Power": 77
+  },
+  {
+    "Id": 50202,
+    "_comment": "Monster (モンスター攻撃) - Group 502, Swing 2",
+    "Range": 3,
+    "Area": 101011,
+    "Param1": 22,
+    "Param2": 22,
+    "Power": 77
+  },
+  {
+    "Id": 50203,
+    "_comment": "Monster (モンスター攻撃) - Group 502, Swing 3",
+    "Range": 3,
+    "Area": 101011,
+    "Param1": 22,
+    "Param2": 22,
+    "Power": 77
+  },
+  {
+    "Id": 50301,
+    "_comment": "Monster (モンスター攻撃) - Group 503, Swing 1",
+    "Range": 3,
+    "Area": 101011,
+    "Param1": 22,
+    "Param2": 22,
+    "Power": 77
+  },
+  {
+    "Id": 50302,
+    "_comment": "Monster (モンスター攻撃) - Group 503, Swing 2",
+    "Range": 3,
+    "Area": 101011,
+    "Param1": 22,
+    "Param2": 22,
+    "Power": 77
+  },
+  {
+    "Id": 50303,
+    "_comment": "Monster (モンスター攻撃) - Group 503, Swing 3",
+    "Range": 3,
+    "Area": 101011,
+    "Param1": 22,
+    "Param2": 22,
+    "Power": 77
+  },
+  {
+    "Id": 50401,
+    "_comment": "Monster (モンスター攻撃) - Group 504, Swing 1",
+    "Range": 3,
+    "Area": 101011,
+    "Param1": 22,
+    "Param2": 22,
+    "Power": 77
+  },
+  {
+    "Id": 50402,
+    "_comment": "Monster (モンスター攻撃) - Group 504, Swing 2",
+    "Range": 3,
+    "Area": 101011,
+    "Param1": 22,
+    "Param2": 22,
+    "Power": 77
+  },
+  {
+    "Id": 50403,
+    "_comment": "Monster (モンスター攻撃) - Group 504, Swing 3",
+    "Range": 3,
+    "Area": 101011,
+    "Param1": 22,
+    "Param2": 22,
+    "Power": 77
+  },
+  {
+    "Id": 50501,
+    "_comment": "Monster (モンスター攻撃) - Group 505, Swing 1",
+    "Range": 3,
+    "Area": 101011,
+    "Param1": 22,
+    "Param2": 22,
+    "Power": 77
+  },
+  {
+    "Id": 50502,
+    "_comment": "Monster (モンスター攻撃) - Group 505, Swing 2",
+    "Range": 3,
+    "Area": 101011,
+    "Param1": 22,
+    "Param2": 22,
+    "Power": 77
+  },
+  {
+    "Id": 50503,
+    "_comment": "Monster (モンスター攻撃) - Group 505, Swing 3",
+    "Range": 3,
+    "Area": 101011,
+    "Param1": 22,
+    "Param2": 22,
+    "Power": 77
+  },
+  {
+    "Id": 50601,
+    "_comment": "Monster (モンスター攻撃) - Group 506, Swing 1",
+    "Range": 3,
+    "Area": 101011,
+    "Param1": 22,
+    "Param2": 22,
+    "Power": 63
+  },
+  {
+    "Id": 50602,
+    "_comment": "Monster (モンスター攻撃) - Group 506, Swing 2",
+    "Range": 3,
+    "Area": 101011,
+    "Param1": 22,
+    "Param2": 22,
+    "Power": 63
+  },
+  {
+    "Id": 50603,
+    "_comment": "Monster (モンスター攻撃) - Group 506, Swing 3",
+    "Range": 3,
+    "Area": 101011,
+    "Param1": 22,
+    "Param2": 22,
+    "Power": 63
+  },
+  {
+    "Id": 70101,
+    "_comment": "Type 7 - Group 701, Swing 1",
+    "Range": 4,
+    "Area": 101011,
+    "Param1": 22,
+    "Param2": 22,
+    "Power": 77
+  },
+  {
+    "Id": 70102,
+    "_comment": "Type 7 - Group 701, Swing 2",
+    "Range": 4,
+    "Area": 101011,
+    "Param1": 22,
+    "Param2": 22,
+    "Power": 77
+  },
+  {
+    "Id": 70103,
+    "_comment": "Type 7 - Group 701, Swing 3",
+    "Range": 4,
+    "Area": 101011,
+    "Param1": 22,
+    "Param2": 22,
+    "Power": 77
+  },
+  {
+    "Id": 70201,
+    "_comment": "Type 7 - Group 702, Swing 1",
+    "Range": 4,
+    "Area": 101011,
+    "Param1": 22,
+    "Param2": 22,
+    "Power": 77
+  },
+  {
+    "Id": 70202,
+    "_comment": "Type 7 - Group 702, Swing 2",
+    "Range": 4,
+    "Area": 101011,
+    "Param1": 22,
+    "Param2": 22,
+    "Power": 77
+  },
+  {
+    "Id": 70203,
+    "_comment": "Type 7 - Group 702, Swing 3",
+    "Range": 4,
+    "Area": 101011,
+    "Param1": 22,
+    "Param2": 22,
+    "Power": 77
+  },
+  {
+    "Id": 70301,
+    "_comment": "Type 7 - Group 703, Swing 1",
+    "Range": 4,
+    "Area": 101011,
+    "Param1": 22,
+    "Param2": 22,
+    "Power": 77
+  },
+  {
+    "Id": 70302,
+    "_comment": "Type 7 - Group 703, Swing 2",
+    "Range": 4,
+    "Area": 101011,
+    "Param1": 22,
+    "Param2": 22,
+    "Power": 77
+  },
+  {
+    "Id": 70303,
+    "_comment": "Type 7 - Group 703, Swing 3",
+    "Range": 4,
+    "Area": 101011,
+    "Param1": 22,
+    "Param2": 22,
+    "Power": 77
+  },
+  {
+    "Id": 10104,
+    "_comment": "Blade (剣) - Group 101, Swing 4",
+    "Range": 1,
+    "Area": 105062,
+    "Param1": 22,
+    "Param2": 22,
+    "Power": 245
+  },
+  {
+    "Id": 10204,
+    "_comment": "Blade (剣) - Group 102, Swing 4",
+    "Range": 1,
+    "Area": 105062,
+    "Param1": 22,
+    "Param2": 22,
+    "Power": 170
+  },
+  {
+    "Id": 10304,
+    "_comment": "Blade (剣) - Group 103, Swing 4",
+    "Range": 1,
+    "Area": 105062,
+    "Param1": 22,
+    "Param2": 22,
+    "Power": 0
+  },
+  {
+    "Id": 10404,
+    "_comment": "Blade (剣) - Group 104, Swing 4",
+    "Range": 1,
+    "Area": 105062,
+    "Param1": 22,
+    "Param2": 22,
+    "Power": 145
+  },
+  {
+    "Id": 30104,
+    "_comment": "Blunt (鈍器) - Group 301, Swing 4",
+    "Range": 1,
+    "Area": 105062,
+    "Param1": 22,
+    "Param2": 22,
+    "Power": 145
+  },
+  {
+    "Id": 30204,
+    "_comment": "Blunt (鈍器) - Group 302, Swing 4",
+    "Range": 1,
+    "Area": 105062,
+    "Param1": 22,
+    "Param2": 22,
+    "Power": 145
+  },
+  {
+    "Id": 30304,
+    "_comment": "Blunt (鈍器) - Group 303, Swing 4",
+    "Range": 1,
+    "Area": 105062,
+    "Param1": 22,
+    "Param2": 22,
+    "Power": 145
+  },
+  {
+    "Id": 30404,
+    "_comment": "Blunt (鈍器) - Group 304, Swing 4",
+    "Range": 1,
+    "Area": 105062,
+    "Param1": 22,
+    "Param2": 22,
+    "Power": 145
+  },
+  {
+    "Id": 50104,
+    "_comment": "Monster (モンスター攻撃) - Group 501, Swing 4",
+    "Range": 3,
+    "Area": 105062,
+    "Param1": 22,
+    "Param2": 22,
+    "Power": 170
+  },
+  {
+    "Id": 50204,
+    "_comment": "Monster (モンスター攻撃) - Group 502, Swing 4",
+    "Range": 3,
+    "Area": 105062,
+    "Param1": 22,
+    "Param2": 22,
+    "Power": 170
+  },
+  {
+    "Id": 50304,
+    "_comment": "Monster (モンスター攻撃) - Group 503, Swing 4",
+    "Range": 3,
+    "Area": 105062,
+    "Param1": 22,
+    "Param2": 22,
+    "Power": 170
+  },
+  {
+    "Id": 50404,
+    "_comment": "Monster (モンスター攻撃) - Group 504, Swing 4",
+    "Range": 3,
+    "Area": 105062,
+    "Param1": 22,
+    "Param2": 22,
+    "Power": 170
+  },
+  {
+    "Id": 50504,
+    "_comment": "Monster (モンスター攻撃) - Group 505, Swing 4",
+    "Range": 3,
+    "Area": 105062,
+    "Param1": 22,
+    "Param2": 22,
+    "Power": 170
+  },
+  {
+    "Id": 50604,
+    "_comment": "Monster (モンスター攻撃) - Group 506, Swing 4",
+    "Range": 3,
+    "Area": 105062,
+    "Param1": 22,
+    "Param2": 22,
+    "Power": 300
+  },
+  {
+    "Id": 70104,
+    "_comment": "Type 7 - Group 701, Swing 4",
+    "Range": 4,
+    "Area": 105062,
+    "Param1": 22,
+    "Param2": 22,
+    "Power": 170
+  },
+  {
+    "Id": 70204,
+    "_comment": "Type 7 - Group 702, Swing 4",
+    "Range": 4,
+    "Area": 105062,
+    "Param1": 22,
+    "Param2": 22,
+    "Power": 170
+  },
+  {
+    "Id": 70304,
+    "_comment": "Type 7 - Group 703, Swing 4",
+    "Range": 4,
+    "Area": 105062,
+    "Param1": 22,
+    "Param2": 22,
+    "Power": 170
+  },
+  {
+    "Id": 41001,
+    "_comment": "Spirit (魔導具) - Group 410, Swing 1",
+    "Range": 1,
+    "Area": 102031,
+    "Param1": 22,
+    "Param2": 32,
+    "Power": 217
+  },
+  {
+    "Id": 41002,
+    "_comment": "Spirit (魔導具) - Group 410, Swing 2",
+    "Range": 1,
+    "Area": 102031,
+    "Param1": 22,
+    "Param2": 32,
+    "Power": 217
+  },
+  {
+    "Id": 41003,
+    "_comment": "Spirit (魔導具) - Group 410, Swing 3",
+    "Range": 1,
+    "Area": 102031,
+    "Param1": 22,
+    "Param2": 32,
+    "Power": 217
+  },
+  {
+    "Id": 41004,
+    "_comment": "Spirit (魔導具) - Group 410, Swing 4",
+    "Range": 1,
+    "Area": 102031,
+    "Param1": 22,
+    "Param2": 32,
+    "Power": 217
+  },
+  {
+    "Id": 41005,
+    "_comment": "Spirit (魔導具) - Group 410, Swing 5",
+    "Range": 1,
+    "Area": 102031,
+    "Param1": 22,
+    "Param2": 32,
+    "Power": 217
+  },
+  {
+    "Id": 41006,
+    "_comment": "Spirit (魔導具) - Group 410, Swing 6",
+    "Range": 1,
+    "Area": 102031,
+    "Param1": 22,
+    "Param2": 32,
+    "Power": 217
+  },
+  {
+    "Id": 41007,
+    "_comment": "Spirit (魔導具) - Group 410, Swing 7",
+    "Range": 1,
+    "Area": 102031,
+    "Param1": 22,
+    "Param2": 32,
+    "Power": 217
+  },
+  {
+    "Id": 41008,
+    "_comment": "Spirit (魔導具) - Group 410, Swing 8",
+    "Range": 1,
+    "Area": 102031,
+    "Param1": 22,
+    "Param2": 32,
+    "Power": 217
+  },
+  {
+    "Id": 41009,
+    "_comment": "Spirit (魔導具) - Group 410, Swing 9",
+    "Range": 1,
+    "Area": 102031,
+    "Param1": 22,
+    "Param2": 32,
+    "Power": 217
+  },
+  {
+    "Id": 41010,
+    "_comment": "Spirit (魔導具) - Group 410, Swing 10",
+    "Range": 1,
+    "Area": 102031,
+    "Param1": 22,
+    "Param2": 32,
+    "Power": 217
+  },
+  {
+    "Id": 41011,
+    "_comment": "Spirit (魔導具) - Group 410, Swing 11",
+    "Range": 1,
+    "Area": 102031,
+    "Param1": 22,
+    "Param2": 32,
+    "Power": 217
+  },
+  {
+    "Id": 41012,
+    "_comment": "Spirit (魔導具) - Group 410, Swing 12",
+    "Range": 1,
+    "Area": 102031,
+    "Param1": 22,
+    "Param2": 32,
+    "Power": 217
+  },
+  {
+    "Id": 41013,
+    "_comment": "Spirit (魔導具) - Group 410, Swing 13",
+    "Range": 1,
+    "Area": 102031,
+    "Param1": 22,
+    "Param2": 32,
+    "Power": 217
+  },
+  {
+    "Id": 41014,
+    "_comment": "Spirit (魔導具) - Group 410, Swing 14",
+    "Range": 1,
+    "Area": 102031,
+    "Param1": 22,
+    "Param2": 32,
+    "Power": 217
+  },
+  {
+    "Id": 41015,
+    "_comment": "Spirit (魔導具) - Group 410, Swing 15",
+    "Range": 1,
+    "Area": 102031,
+    "Param1": 22,
+    "Param2": 32,
+    "Power": 217
+  },
+  {
+    "Id": 41016,
+    "_comment": "Spirit (魔導具) - Group 410, Swing 16",
+    "Range": 1,
+    "Area": 102031,
+    "Param1": 22,
+    "Param2": 32,
+    "Power": 217
+  },
+  {
+    "Id": 41017,
+    "_comment": "Spirit (魔導具) - Group 410, Swing 17",
+    "Range": 1,
+    "Area": 102031,
+    "Param1": 22,
+    "Param2": 32,
+    "Power": 217
+  },
+  {
+    "Id": 41018,
+    "_comment": "Spirit (魔導具) - Group 410, Swing 18",
+    "Range": 1,
+    "Area": 102031,
+    "Param1": 22,
+    "Param2": 32,
+    "Power": 217
+  },
+  {
+    "Id": 41019,
+    "_comment": "Spirit (魔導具) - Group 410, Swing 19",
+    "Range": 1,
+    "Area": 102031,
+    "Param1": 22,
+    "Param2": 32,
+    "Power": 217
+  },
+  {
+    "Id": 41020,
+    "_comment": "Spirit (魔導具) - Group 410, Swing 20",
+    "Range": 1,
+    "Area": 102031,
+    "Param1": 22,
+    "Param2": 32,
+    "Power": 217
+  },
+  {
+    "Id": 41021,
+    "_comment": "Spirit (魔導具) - Group 410, Swing 21",
+    "Range": 1,
+    "Area": 102031,
+    "Param1": 22,
+    "Param2": 32,
+    "Power": 217
+  },
+  {
+    "Id": 41022,
+    "_comment": "Spirit (魔導具) - Group 410, Swing 22",
+    "Range": 1,
+    "Area": 102031,
+    "Param1": 22,
+    "Param2": 32,
+    "Power": 217
+  },
+  {
+    "Id": 41023,
+    "_comment": "Spirit (魔導具) - Group 410, Swing 23",
+    "Range": 1,
+    "Area": 102031,
+    "Param1": 22,
+    "Param2": 32,
+    "Power": 217
+  },
+  {
+    "Id": 41024,
+    "_comment": "Spirit (魔導具) - Group 410, Swing 24",
+    "Range": 1,
+    "Area": 102031,
+    "Param1": 22,
+    "Param2": 32,
+    "Power": 217
+  },
+  {
+    "Id": 41025,
+    "_comment": "Spirit (魔導具) - Group 410, Swing 25",
+    "Range": 1,
+    "Area": 102031,
+    "Param1": 22,
+    "Param2": 32,
+    "Power": 217
+  },
+  {
+    "Id": 41026,
+    "_comment": "Spirit (魔導具) - Group 410, Swing 26",
+    "Range": 1,
+    "Area": 102031,
+    "Param1": 22,
+    "Param2": 32,
+    "Power": 217
+  },
+  {
+    "Id": 41027,
+    "_comment": "Spirit (魔導具) - Group 410, Swing 27",
+    "Range": 1,
+    "Area": 102031,
+    "Param1": 22,
+    "Param2": 32,
+    "Power": 217
+  },
+  {
+    "Id": 41028,
+    "_comment": "Spirit (魔導具) - Group 410, Swing 28",
+    "Range": 1,
+    "Area": 102031,
+    "Param1": 22,
+    "Param2": 32,
+    "Power": 217
+  },
+  {
+    "Id": 41029,
+    "_comment": "Spirit (魔導具) - Group 410, Swing 29",
+    "Range": 1,
+    "Area": 102031,
+    "Param1": 22,
+    "Param2": 32,
+    "Power": 217
+  },
+  {
+    "Id": 41030,
+    "_comment": "Spirit (魔導具) - Group 410, Swing 30",
+    "Range": 1,
+    "Area": 102031,
+    "Param1": 22,
+    "Param2": 32,
+    "Power": 217
+  },
+  {
+    "Id": 41031,
+    "_comment": "Spirit (魔導具) - Group 410, Swing 31",
+    "Range": 2,
+    "Area": 102031,
+    "Param1": 9,
+    "Param2": 32,
+    "Power": 0
+  },
+  {
+    "Id": 41032,
+    "_comment": "Spirit (魔導具) - Group 410, Swing 32",
+    "Range": 2,
+    "Area": 102031,
+    "Param1": 9,
+    "Param2": 32,
+    "Power": 0
+  },
+  {
+    "Id": 41033,
+    "_comment": "Spirit (魔導具) - Group 410, Swing 33",
+    "Range": 2,
+    "Area": 102031,
+    "Param1": 9,
+    "Param2": 32,
+    "Power": 0
+  },
+  {
+    "Id": 41034,
+    "_comment": "Spirit (魔導具) - Group 410, Swing 34",
+    "Range": 2,
+    "Area": 102031,
+    "Param1": 9,
+    "Param2": 32,
+    "Power": 0
+  },
+  {
+    "Id": 41035,
+    "_comment": "Spirit (魔導具) - Group 410, Swing 35",
+    "Range": 2,
+    "Area": 102031,
+    "Param1": 9,
+    "Param2": 32,
+    "Power": 0
+  },
+  {
+    "Id": 41036,
+    "_comment": "Spirit (魔導具) - Group 410, Swing 36",
+    "Range": 2,
+    "Area": 102031,
+    "Param1": 9,
+    "Param2": 32,
+    "Power": 0
+  },
+  {
+    "Id": 41037,
+    "_comment": "Spirit (魔導具) - Group 410, Swing 37",
+    "Range": 2,
+    "Area": 102031,
+    "Param1": 9,
+    "Param2": 32,
+    "Power": 0
+  },
+  {
+    "Id": 41038,
+    "_comment": "Spirit (魔導具) - Group 410, Swing 38",
+    "Range": 2,
+    "Area": 102031,
+    "Param1": 9,
+    "Param2": 32,
+    "Power": 0
+  },
+  {
+    "Id": 41039,
+    "_comment": "Spirit (魔導具) - Group 410, Swing 39",
+    "Range": 2,
+    "Area": 102031,
+    "Param1": 9,
+    "Param2": 32,
+    "Power": 0
+  },
+  {
+    "Id": 41040,
+    "_comment": "Spirit (魔導具) - Group 410, Swing 40",
+    "Range": 2,
+    "Area": 102031,
+    "Param1": 9,
+    "Param2": 32,
+    "Power": 0
+  },
+  {
+    "Id": 41041,
+    "_comment": "Spirit (魔導具) - Group 410, Swing 41",
+    "Range": 2,
+    "Area": 102031,
+    "Param1": 9,
+    "Param2": 32,
+    "Power": 0
+  },
+  {
+    "Id": 41042,
+    "_comment": "Spirit (魔導具) - Group 410, Swing 42",
+    "Range": 2,
+    "Area": 102031,
+    "Param1": 9,
+    "Param2": 32,
+    "Power": 0
+  },
+  {
+    "Id": 41043,
+    "_comment": "Spirit (魔導具) - Group 410, Swing 43",
+    "Range": 2,
+    "Area": 102031,
+    "Param1": 9,
+    "Param2": 32,
+    "Power": 0
+  },
+  {
+    "Id": 41044,
+    "_comment": "Spirit (魔導具) - Group 410, Swing 44",
+    "Range": 2,
+    "Area": 102031,
+    "Param1": 9,
+    "Param2": 32,
+    "Power": 0
+  },
+  {
+    "Id": 41045,
+    "_comment": "Spirit (魔導具) - Group 410, Swing 45",
+    "Range": 2,
+    "Area": 102031,
+    "Param1": 9,
+    "Param2": 32,
+    "Power": 0
+  },
+  {
+    "Id": 41046,
+    "_comment": "Spirit (魔導具) - Group 410, Swing 46",
+    "Range": 2,
+    "Area": 102031,
+    "Param1": 9,
+    "Param2": 32,
+    "Power": 0
+  },
+  {
+    "Id": 41047,
+    "_comment": "Spirit (魔導具) - Group 410, Swing 47",
+    "Range": 2,
+    "Area": 102031,
+    "Param1": 9,
+    "Param2": 32,
+    "Power": 0
+  },
+  {
+    "Id": 41048,
+    "_comment": "Spirit (魔導具) - Group 410, Swing 48",
+    "Range": 2,
+    "Area": 102031,
+    "Param1": 9,
+    "Param2": 32,
+    "Power": 0
+  },
+  {
+    "Id": 41049,
+    "_comment": "Spirit (魔導具) - Group 410, Swing 49",
+    "Range": 2,
+    "Area": 102031,
+    "Param1": 9,
+    "Param2": 32,
+    "Power": 0
+  },
+  {
+    "Id": 41050,
+    "_comment": "Spirit (魔導具) - Group 410, Swing 50",
+    "Range": 2,
+    "Area": 102031,
+    "Param1": 9,
+    "Param2": 32,
+    "Power": 0
+  },
+  {
+    "Id": 41051,
+    "_comment": "Spirit (魔導具) - Group 410, Swing 51",
+    "Range": 0,
+    "Area": 101011,
+    "Param1": 1,
+    "Param2": 32,
+    "Power": 0
+  },
+  {
+    "Id": 41052,
+    "_comment": "Spirit (魔導具) - Group 410, Swing 52",
+    "Range": 0,
+    "Area": 101011,
+    "Param1": 1,
+    "Param2": 32,
+    "Power": 0
+  },
+  {
+    "Id": 41053,
+    "_comment": "Spirit (魔導具) - Group 410, Swing 53",
+    "Range": 0,
+    "Area": 101011,
+    "Param1": 1,
+    "Param2": 32,
+    "Power": 0
+  },
+  {
+    "Id": 41054,
+    "_comment": "Spirit (魔導具) - Group 410, Swing 54",
+    "Range": 0,
+    "Area": 101011,
+    "Param1": 1,
+    "Param2": 32,
+    "Power": 0
+  },
+  {
+    "Id": 41055,
+    "_comment": "Spirit (魔導具) - Group 410, Swing 55",
+    "Range": 0,
+    "Area": 101011,
+    "Param1": 1,
+    "Param2": 32,
+    "Power": 0
+  },
+  {
+    "Id": 41056,
+    "_comment": "Spirit (魔導具) - Group 410, Swing 56",
+    "Range": 0,
+    "Area": 101011,
+    "Param1": 1,
+    "Param2": 32,
+    "Power": 0
+  },
+  {
+    "Id": 41057,
+    "_comment": "Spirit (魔導具) - Group 410, Swing 57",
+    "Range": 0,
+    "Area": 101011,
+    "Param1": 1,
+    "Param2": 32,
+    "Power": 0
+  },
+  {
+    "Id": 41058,
+    "_comment": "Spirit (魔導具) - Group 410, Swing 58",
+    "Range": 0,
+    "Area": 101011,
+    "Param1": 1,
+    "Param2": 32,
+    "Power": 0
+  },
+  {
+    "Id": 41059,
+    "_comment": "Spirit (魔導具) - Group 410, Swing 59",
+    "Range": 0,
+    "Area": 101011,
+    "Param1": 1,
+    "Param2": 32,
+    "Power": 0
+  },
+  {
+    "Id": 41060,
+    "_comment": "Spirit (魔導具) - Group 410, Swing 60",
+    "Range": 0,
+    "Area": 101011,
+    "Param1": 1,
+    "Param2": 32,
+    "Power": 0
+  },
+  {
+    "Id": 41091,
+    "_comment": "Spirit (魔導具) - Group 410, Swing 91",
+    "Range": 0,
+    "Area": 101011,
+    "Param1": 0,
+    "Param2": 0,
+    "Power": 0
+  },
+  {
+    "Id": 41092,
+    "_comment": "Spirit (魔導具) - Group 410, Swing 92",
+    "Range": 0,
+    "Area": 101011,
+    "Param1": 0,
+    "Param2": 0,
+    "Power": 0
+  },
+  {
+    "Id": 41093,
+    "_comment": "Spirit (魔導具) - Group 410, Swing 93",
+    "Range": 0,
+    "Area": 101011,
+    "Param1": 0,
+    "Param2": 0,
+    "Power": 0
+  },
+  {
+    "Id": 41094,
+    "_comment": "Spirit (魔導具) - Group 410, Swing 94",
+    "Range": 0,
+    "Area": 101011,
+    "Param1": 0,
+    "Param2": 0,
+    "Power": 0
+  },
+  {
+    "Id": 41095,
+    "_comment": "Spirit (魔導具) - Group 410, Swing 95",
+    "Range": 0,
+    "Area": 101011,
+    "Param1": 0,
+    "Param2": 0,
+    "Power": 0
+  },
+  {
+    "Id": 41096,
+    "_comment": "Spirit (魔導具) - Group 410, Swing 96",
+    "Range": 0,
+    "Area": 101011,
+    "Param1": 0,
+    "Param2": 0,
+    "Power": 0
+  },
+  {
+    "Id": 41097,
+    "_comment": "Spirit (魔導具) - Group 410, Swing 97",
+    "Range": 0,
+    "Area": 101011,
+    "Param1": 0,
+    "Param2": 0,
+    "Power": 0
+  },
+  {
+    "Id": 41098,
+    "_comment": "Spirit (魔導具) - Group 410, Swing 98",
+    "Range": 0,
+    "Area": 101011,
+    "Param1": 0,
+    "Param2": 0,
+    "Power": 0
+  },
+  {
+    "Id": 41099,
+    "_comment": "Spirit (魔導具) - Group 410, Swing 99",
+    "Range": 0,
+    "Area": 101011,
+    "Param1": 0,
+    "Param2": 0,
+    "Power": 0
+  },
+  {
+    "Id": 41100,
+    "_comment": "Spirit (魔導具) - Group 411, Swing 0",
+    "Range": 0,
+    "Area": 101011,
+    "Param1": 0,
+    "Param2": 0,
+    "Power": 0
+  },
+  {
+    "Id": 41101,
+    "_comment": "Spirit (魔導具) - Group 411, Swing 1",
+    "Range": 0,
+    "Area": 101011,
+    "Param1": 0,
+    "Param2": 0,
+    "Power": 0
+  },
+  {
+    "Id": 41102,
+    "_comment": "Spirit (魔導具) - Group 411, Swing 2",
+    "Range": 0,
+    "Area": 101011,
+    "Param1": 0,
+    "Param2": 0,
+    "Power": 0
+  },
+  {
+    "Id": 41103,
+    "_comment": "Spirit (魔導具) - Group 411, Swing 3",
+    "Range": 0,
+    "Area": 101011,
+    "Param1": 0,
+    "Param2": 0,
+    "Power": 0
+  },
+  {
+    "Id": 41104,
+    "_comment": "Spirit (魔導具) - Group 411, Swing 4",
+    "Range": 0,
+    "Area": 101011,
+    "Param1": 0,
+    "Param2": 0,
+    "Power": 0
+  },
+  {
+    "Id": 41105,
+    "_comment": "Spirit (魔導具) - Group 411, Swing 5",
+    "Range": 0,
+    "Area": 101011,
+    "Param1": 0,
+    "Param2": 0,
+    "Power": 0
+  },
+  {
+    "Id": 41106,
+    "_comment": "Spirit (魔導具) - Group 411, Swing 6",
+    "Range": 0,
+    "Area": 101011,
+    "Param1": 0,
+    "Param2": 0,
+    "Power": 0
+  },
+  {
+    "Id": 41107,
+    "_comment": "Spirit (魔導具) - Group 411, Swing 7",
+    "Range": 0,
+    "Area": 101011,
+    "Param1": 0,
+    "Param2": 0,
+    "Power": 0
+  },
+  {
+    "Id": 41108,
+    "_comment": "Spirit (魔導具) - Group 411, Swing 8",
+    "Range": 0,
+    "Area": 101011,
+    "Param1": 0,
+    "Param2": 0,
+    "Power": 0
+  },
+  {
+    "Id": 41109,
+    "_comment": "Spirit (魔導具) - Group 411, Swing 9",
+    "Range": 0,
+    "Area": 101011,
+    "Param1": 0,
+    "Param2": 0,
+    "Power": 0
+  },
+  {
+    "Id": 41110,
+    "_comment": "Spirit (魔導具) - Group 411, Swing 10",
+    "Range": 0,
+    "Area": 101011,
+    "Param1": 0,
+    "Param2": 0,
+    "Power": 0
+  },
+  {
+    "Id": 41111,
+    "_comment": "Spirit (魔導具) - Group 411, Swing 11",
+    "Range": 0,
+    "Area": 101011,
+    "Param1": 0,
+    "Param2": 0,
+    "Power": 0
+  },
+  {
+    "Id": 41112,
+    "_comment": "Spirit (魔導具) - Group 411, Swing 12",
+    "Range": 0,
+    "Area": 101011,
+    "Param1": 0,
+    "Param2": 0,
+    "Power": 0
+  },
+  {
+    "Id": 41113,
+    "_comment": "Spirit (魔導具) - Group 411, Swing 13",
+    "Range": 0,
+    "Area": 101011,
+    "Param1": 0,
+    "Param2": 0,
+    "Power": 0
+  },
+  {
+    "Id": 41114,
+    "_comment": "Spirit (魔導具) - Group 411, Swing 14",
+    "Range": 0,
+    "Area": 101011,
+    "Param1": 0,
+    "Param2": 0,
+    "Power": 0
+  },
+  {
+    "Id": 41115,
+    "_comment": "Spirit (魔導具) - Group 411, Swing 15",
+    "Range": 0,
+    "Area": 101011,
+    "Param1": 0,
+    "Param2": 0,
+    "Power": 0
+  },
+  {
+    "Id": 41116,
+    "_comment": "Spirit (魔導具) - Group 411, Swing 16",
+    "Range": 0,
+    "Area": 101011,
+    "Param1": 0,
+    "Param2": 0,
+    "Power": 0
+  },
+  {
+    "Id": 41117,
+    "_comment": "Spirit (魔導具) - Group 411, Swing 17",
+    "Range": 0,
+    "Area": 101011,
+    "Param1": 0,
+    "Param2": 0,
+    "Power": 0
+  },
+  {
+    "Id": 41118,
+    "_comment": "Spirit (魔導具) - Group 411, Swing 18",
+    "Range": 0,
+    "Area": 101011,
+    "Param1": 0,
+    "Param2": 0,
+    "Power": 0
+  },
+  {
+    "Id": 41119,
+    "_comment": "Spirit (魔導具) - Group 411, Swing 19",
+    "Range": 0,
+    "Area": 101011,
+    "Param1": 0,
+    "Param2": 0,
+    "Power": 0
+  },
+  {
+    "Id": 41120,
+    "_comment": "Spirit (魔導具) - Group 411, Swing 20",
+    "Range": 0,
+    "Area": 101011,
+    "Param1": 0,
+    "Param2": 0,
+    "Power": 0
+  },
+  {
+    "Id": 61001,
+    "_comment": "Type 6 - Group 610, Swing 1",
+    "Range": 3,
+    "Area": 115092,
+    "Param1": 22,
+    "Param2": 32,
+    "Power": 152
+  },
+  {
+    "Id": 61002,
+    "_comment": "Type 6 - Group 610, Swing 2",
+    "Range": 3,
+    "Area": 115092,
+    "Param1": 22,
+    "Param2": 32,
+    "Power": 152
+  },
+  {
+    "Id": 61003,
+    "_comment": "Type 6 - Group 610, Swing 3",
+    "Range": 3,
+    "Area": 115092,
+    "Param1": 22,
+    "Param2": 32,
+    "Power": 152
+  },
+  {
+    "Id": 61004,
+    "_comment": "Type 6 - Group 610, Swing 4",
+    "Range": 3,
+    "Area": 115092,
+    "Param1": 22,
+    "Param2": 32,
+    "Power": 152
+  },
+  {
+    "Id": 61005,
+    "_comment": "Type 6 - Group 610, Swing 5",
+    "Range": 3,
+    "Area": 115092,
+    "Param1": 22,
+    "Param2": 32,
+    "Power": 152
+  },
+  {
+    "Id": 61006,
+    "_comment": "Type 6 - Group 610, Swing 6",
+    "Range": 3,
+    "Area": 115092,
+    "Param1": 22,
+    "Param2": 32,
+    "Power": 152
+  },
+  {
+    "Id": 61007,
+    "_comment": "Type 6 - Group 610, Swing 7",
+    "Range": 3,
+    "Area": 115092,
+    "Param1": 22,
+    "Param2": 32,
+    "Power": 152
+  },
+  {
+    "Id": 61008,
+    "_comment": "Type 6 - Group 610, Swing 8",
+    "Range": 3,
+    "Area": 115092,
+    "Param1": 22,
+    "Param2": 32,
+    "Power": 152
+  },
+  {
+    "Id": 61009,
+    "_comment": "Type 6 - Group 610, Swing 9",
+    "Range": 3,
+    "Area": 115092,
+    "Param1": 22,
+    "Param2": 32,
+    "Power": 152
+  },
+  {
+    "Id": 61010,
+    "_comment": "Type 6 - Group 610, Swing 10",
+    "Range": 3,
+    "Area": 115092,
+    "Param1": 22,
+    "Param2": 32,
+    "Power": 152
+  },
+  {
+    "Id": 61011,
+    "_comment": "Type 6 - Group 610, Swing 11",
+    "Range": 3,
+    "Area": 115092,
+    "Param1": 22,
+    "Param2": 32,
+    "Power": 152
+  },
+  {
+    "Id": 61012,
+    "_comment": "Type 6 - Group 610, Swing 12",
+    "Range": 3,
+    "Area": 115092,
+    "Param1": 22,
+    "Param2": 32,
+    "Power": 152
+  },
+  {
+    "Id": 61013,
+    "_comment": "Type 6 - Group 610, Swing 13",
+    "Range": 3,
+    "Area": 115092,
+    "Param1": 22,
+    "Param2": 32,
+    "Power": 152
+  },
+  {
+    "Id": 61014,
+    "_comment": "Type 6 - Group 610, Swing 14",
+    "Range": 3,
+    "Area": 115092,
+    "Param1": 22,
+    "Param2": 32,
+    "Power": 152
+  },
+  {
+    "Id": 61015,
+    "_comment": "Type 6 - Group 610, Swing 15",
+    "Range": 3,
+    "Area": 115092,
+    "Param1": 22,
+    "Param2": 32,
+    "Power": 152
+  },
+  {
+    "Id": 61016,
+    "_comment": "Type 6 - Group 610, Swing 16",
+    "Range": 3,
+    "Area": 115092,
+    "Param1": 22,
+    "Param2": 32,
+    "Power": 152
+  },
+  {
+    "Id": 61017,
+    "_comment": "Type 6 - Group 610, Swing 17",
+    "Range": 3,
+    "Area": 115092,
+    "Param1": 22,
+    "Param2": 32,
+    "Power": 152
+  },
+  {
+    "Id": 61018,
+    "_comment": "Type 6 - Group 610, Swing 18",
+    "Range": 3,
+    "Area": 115092,
+    "Param1": 22,
+    "Param2": 32,
+    "Power": 152
+  },
+  {
+    "Id": 61019,
+    "_comment": "Type 6 - Group 610, Swing 19",
+    "Range": 3,
+    "Area": 115092,
+    "Param1": 22,
+    "Param2": 32,
+    "Power": 152
+  },
+  {
+    "Id": 61020,
+    "_comment": "Type 6 - Group 610, Swing 20",
+    "Range": 3,
+    "Area": 115092,
+    "Param1": 22,
+    "Param2": 32,
+    "Power": 152
+  },
+  {
+    "Id": 61021,
+    "_comment": "Type 6 - Group 610, Swing 21",
+    "Range": 3,
+    "Area": 115092,
+    "Param1": 9,
+    "Param2": 32,
+    "Power": 0
+  },
+  {
+    "Id": 61022,
+    "_comment": "Type 6 - Group 610, Swing 22",
+    "Range": 3,
+    "Area": 115092,
+    "Param1": 9,
+    "Param2": 32,
+    "Power": 0
+  },
+  {
+    "Id": 61023,
+    "_comment": "Type 6 - Group 610, Swing 23",
+    "Range": 3,
+    "Area": 115092,
+    "Param1": 9,
+    "Param2": 32,
+    "Power": 0
+  },
+  {
+    "Id": 61024,
+    "_comment": "Type 6 - Group 610, Swing 24",
+    "Range": 3,
+    "Area": 115092,
+    "Param1": 9,
+    "Param2": 32,
+    "Power": 0
+  },
+  {
+    "Id": 61025,
+    "_comment": "Type 6 - Group 610, Swing 25",
+    "Range": 3,
+    "Area": 115092,
+    "Param1": 9,
+    "Param2": 32,
+    "Power": 0
+  },
+  {
+    "Id": 61026,
+    "_comment": "Type 6 - Group 610, Swing 26",
+    "Range": 3,
+    "Area": 115092,
+    "Param1": 9,
+    "Param2": 32,
+    "Power": 0
+  },
+  {
+    "Id": 61027,
+    "_comment": "Type 6 - Group 610, Swing 27",
+    "Range": 3,
+    "Area": 115092,
+    "Param1": 9,
+    "Param2": 32,
+    "Power": 0
+  },
+  {
+    "Id": 61028,
+    "_comment": "Type 6 - Group 610, Swing 28",
+    "Range": 3,
+    "Area": 115092,
+    "Param1": 9,
+    "Param2": 32,
+    "Power": 0
+  },
+  {
+    "Id": 61029,
+    "_comment": "Type 6 - Group 610, Swing 29",
+    "Range": 3,
+    "Area": 115092,
+    "Param1": 9,
+    "Param2": 32,
+    "Power": 0
+  },
+  {
+    "Id": 61030,
+    "_comment": "Type 6 - Group 610, Swing 30",
+    "Range": 3,
+    "Area": 115092,
+    "Param1": 9,
+    "Param2": 32,
+    "Power": 0
+  },
+  {
+    "Id": 61031,
+    "_comment": "Type 6 - Group 610, Swing 31",
+    "Range": 3,
+    "Area": 115092,
+    "Param1": 9,
+    "Param2": 32,
+    "Power": 0
+  },
+  {
+    "Id": 61032,
+    "_comment": "Type 6 - Group 610, Swing 32",
+    "Range": 3,
+    "Area": 115092,
+    "Param1": 9,
+    "Param2": 32,
+    "Power": 0
+  },
+  {
+    "Id": 61033,
+    "_comment": "Type 6 - Group 610, Swing 33",
+    "Range": 3,
+    "Area": 115092,
+    "Param1": 9,
+    "Param2": 32,
+    "Power": 0
+  },
+  {
+    "Id": 61034,
+    "_comment": "Type 6 - Group 610, Swing 34",
+    "Range": 3,
+    "Area": 115092,
+    "Param1": 9,
+    "Param2": 32,
+    "Power": 0
+  },
+  {
+    "Id": 61035,
+    "_comment": "Type 6 - Group 610, Swing 35",
+    "Range": 3,
+    "Area": 115092,
+    "Param1": 9,
+    "Param2": 32,
+    "Power": 0
+  },
+  {
+    "Id": 61036,
+    "_comment": "Type 6 - Group 610, Swing 36",
+    "Range": 3,
+    "Area": 115092,
+    "Param1": 9,
+    "Param2": 32,
+    "Power": 0
+  },
+  {
+    "Id": 61037,
+    "_comment": "Type 6 - Group 610, Swing 37",
+    "Range": 3,
+    "Area": 115092,
+    "Param1": 9,
+    "Param2": 32,
+    "Power": 0
+  },
+  {
+    "Id": 61038,
+    "_comment": "Type 6 - Group 610, Swing 38",
+    "Range": 3,
+    "Area": 115092,
+    "Param1": 9,
+    "Param2": 32,
+    "Power": 0
+  },
+  {
+    "Id": 61039,
+    "_comment": "Type 6 - Group 610, Swing 39",
+    "Range": 3,
+    "Area": 115092,
+    "Param1": 9,
+    "Param2": 32,
+    "Power": 0
+  },
+  {
+    "Id": 61040,
+    "_comment": "Type 6 - Group 610, Swing 40",
+    "Range": 3,
+    "Area": 115092,
+    "Param1": 9,
+    "Param2": 32,
+    "Power": 0
+  },
+  {
+    "Id": 61041,
+    "_comment": "Type 6 - Group 610, Swing 41",
+    "Range": 3,
+    "Area": 115092,
+    "Param1": 9,
+    "Param2": 32,
+    "Power": 0
+  },
+  {
+    "Id": 61042,
+    "_comment": "Type 6 - Group 610, Swing 42",
+    "Range": 3,
+    "Area": 115092,
+    "Param1": 9,
+    "Param2": 32,
+    "Power": 0
+  },
+  {
+    "Id": 61043,
+    "_comment": "Type 6 - Group 610, Swing 43",
+    "Range": 3,
+    "Area": 115092,
+    "Param1": 9,
+    "Param2": 32,
+    "Power": 0
+  },
+  {
+    "Id": 61044,
+    "_comment": "Type 6 - Group 610, Swing 44",
+    "Range": 3,
+    "Area": 115092,
+    "Param1": 9,
+    "Param2": 32,
+    "Power": 0
+  },
+  {
+    "Id": 61045,
+    "_comment": "Type 6 - Group 610, Swing 45",
+    "Range": 3,
+    "Area": 115092,
+    "Param1": 9,
+    "Param2": 32,
+    "Power": 0
+  },
+  {
+    "Id": 61046,
+    "_comment": "Type 6 - Group 610, Swing 46",
+    "Range": 3,
+    "Area": 115092,
+    "Param1": 9,
+    "Param2": 32,
+    "Power": 0
+  },
+  {
+    "Id": 61047,
+    "_comment": "Type 6 - Group 610, Swing 47",
+    "Range": 3,
+    "Area": 115092,
+    "Param1": 9,
+    "Param2": 32,
+    "Power": 0
+  },
+  {
+    "Id": 61048,
+    "_comment": "Type 6 - Group 610, Swing 48",
+    "Range": 3,
+    "Area": 115092,
+    "Param1": 9,
+    "Param2": 32,
+    "Power": 0
+  },
+  {
+    "Id": 61049,
+    "_comment": "Type 6 - Group 610, Swing 49",
+    "Range": 3,
+    "Area": 115092,
+    "Param1": 9,
+    "Param2": 32,
+    "Power": 0
+  },
+  {
+    "Id": 61050,
+    "_comment": "Type 6 - Group 610, Swing 50",
+    "Range": 3,
+    "Area": 115092,
+    "Param1": 9,
+    "Param2": 32,
+    "Power": 0
+  },
+  {
+    "Id": 61121,
+    "_comment": "Type 6 - Group 611, Swing 21",
+    "Range": 0,
+    "Area": 101011,
+    "Param1": 0,
+    "Param2": 0,
+    "Power": 0
+  },
+  {
+    "Id": 61122,
+    "_comment": "Type 6 - Group 611, Swing 22",
+    "Range": 0,
+    "Area": 101011,
+    "Param1": 0,
+    "Param2": 0,
+    "Power": 0
+  },
+  {
+    "Id": 61123,
+    "_comment": "Type 6 - Group 611, Swing 23",
+    "Range": 0,
+    "Area": 101011,
+    "Param1": 0,
+    "Param2": 0,
+    "Power": 0
+  },
+  {
+    "Id": 61124,
+    "_comment": "Type 6 - Group 611, Swing 24",
+    "Range": 0,
+    "Area": 101011,
+    "Param1": 0,
+    "Param2": 0,
+    "Power": 0
+  },
+  {
+    "Id": 61125,
+    "_comment": "Type 6 - Group 611, Swing 25",
+    "Range": 0,
+    "Area": 101011,
+    "Param1": 0,
+    "Param2": 0,
+    "Power": 0
+  },
+  {
+    "Id": 61126,
+    "_comment": "Type 6 - Group 611, Swing 26",
+    "Range": 0,
+    "Area": 101011,
+    "Param1": 0,
+    "Param2": 0,
+    "Power": 0
+  },
+  {
+    "Id": 61127,
+    "_comment": "Type 6 - Group 611, Swing 27",
+    "Range": 0,
+    "Area": 101011,
+    "Param1": 0,
+    "Param2": 0,
+    "Power": 0
+  },
+  {
+    "Id": 61128,
+    "_comment": "Type 6 - Group 611, Swing 28",
+    "Range": 0,
+    "Area": 101011,
+    "Param1": 0,
+    "Param2": 0,
+    "Power": 0
+  },
+  {
+    "Id": 61129,
+    "_comment": "Type 6 - Group 611, Swing 29",
+    "Range": 0,
+    "Area": 101011,
+    "Param1": 0,
+    "Param2": 0,
+    "Power": 0
+  },
+  {
+    "Id": 61130,
+    "_comment": "Type 6 - Group 611, Swing 30",
+    "Range": 0,
+    "Area": 101011,
+    "Param1": 0,
+    "Param2": 0,
+    "Power": 0
+  },
+  {
+    "Id": 61131,
+    "_comment": "Type 6 - Group 611, Swing 31",
+    "Range": 0,
+    "Area": 101011,
+    "Param1": 0,
+    "Param2": 0,
+    "Power": 0
+  },
+  {
+    "Id": 61132,
+    "_comment": "Type 6 - Group 611, Swing 32",
+    "Range": 0,
+    "Area": 101011,
+    "Param1": 0,
+    "Param2": 0,
+    "Power": 0
+  },
+  {
+    "Id": 61133,
+    "_comment": "Type 6 - Group 611, Swing 33",
+    "Range": 0,
+    "Area": 101011,
+    "Param1": 0,
+    "Param2": 0,
+    "Power": 0
+  },
+  {
+    "Id": 61134,
+    "_comment": "Type 6 - Group 611, Swing 34",
+    "Range": 0,
+    "Area": 101011,
+    "Param1": 0,
+    "Param2": 0,
+    "Power": 0
+  },
+  {
+    "Id": 61135,
+    "_comment": "Type 6 - Group 611, Swing 35",
+    "Range": 0,
+    "Area": 101011,
+    "Param1": 0,
+    "Param2": 0,
+    "Power": 0
+  },
+  {
+    "Id": 61136,
+    "_comment": "Type 6 - Group 611, Swing 36",
+    "Range": 0,
+    "Area": 101011,
+    "Param1": 0,
+    "Param2": 0,
+    "Power": 0
+  },
+  {
+    "Id": 61137,
+    "_comment": "Type 6 - Group 611, Swing 37",
+    "Range": 0,
+    "Area": 101011,
+    "Param1": 0,
+    "Param2": 0,
+    "Power": 0
+  },
+  {
+    "Id": 61138,
+    "_comment": "Type 6 - Group 611, Swing 38",
+    "Range": 0,
+    "Area": 101011,
+    "Param1": 0,
+    "Param2": 0,
+    "Power": 0
+  },
+  {
+    "Id": 61139,
+    "_comment": "Type 6 - Group 611, Swing 39",
+    "Range": 0,
+    "Area": 101011,
+    "Param1": 0,
+    "Param2": 0,
+    "Power": 0
+  },
+  {
+    "Id": 61140,
+    "_comment": "Type 6 - Group 611, Swing 40",
+    "Range": 0,
+    "Area": 101011,
+    "Param1": 0,
+    "Param2": 0,
+    "Power": 0
+  },
+  {
+    "Id": 21001,
+    "_comment": "Glove (グローブ) - Group 210, Swing 1",
+    "Range": 1,
+    "Area": 103042,
+    "Param1": 22,
+    "Param2": 32,
+    "Power": 173
+  },
+  {
+    "Id": 21002,
+    "_comment": "Glove (グローブ) - Group 210, Swing 2",
+    "Range": 1,
+    "Area": 103042,
+    "Param1": 22,
+    "Param2": 32,
+    "Power": 173
+  },
+  {
+    "Id": 21003,
+    "_comment": "Glove (グローブ) - Group 210, Swing 3",
+    "Range": 1,
+    "Area": 103042,
+    "Param1": 22,
+    "Param2": 32,
+    "Power": 173
+  },
+  {
+    "Id": 21004,
+    "_comment": "Glove (グローブ) - Group 210, Swing 4",
+    "Range": 1,
+    "Area": 103042,
+    "Param1": 22,
+    "Param2": 32,
+    "Power": 173
+  },
+  {
+    "Id": 21005,
+    "_comment": "Glove (グローブ) - Group 210, Swing 5",
+    "Range": 1,
+    "Area": 103042,
+    "Param1": 22,
+    "Param2": 32,
+    "Power": 173
+  },
+  {
+    "Id": 21006,
+    "_comment": "Glove (グローブ) - Group 210, Swing 6",
+    "Range": 1,
+    "Area": 103042,
+    "Param1": 22,
+    "Param2": 32,
+    "Power": 173
+  },
+  {
+    "Id": 21007,
+    "_comment": "Glove (グローブ) - Group 210, Swing 7",
+    "Range": 1,
+    "Area": 103042,
+    "Param1": 22,
+    "Param2": 32,
+    "Power": 173
+  },
+  {
+    "Id": 21008,
+    "_comment": "Glove (グローブ) - Group 210, Swing 8",
+    "Range": 1,
+    "Area": 103042,
+    "Param1": 22,
+    "Param2": 32,
+    "Power": 173
+  },
+  {
+    "Id": 21009,
+    "_comment": "Glove (グローブ) - Group 210, Swing 9",
+    "Range": 1,
+    "Area": 103042,
+    "Param1": 22,
+    "Param2": 32,
+    "Power": 173
+  },
+  {
+    "Id": 21010,
+    "_comment": "Glove (グローブ) - Group 210, Swing 10",
+    "Range": 1,
+    "Area": 103042,
+    "Param1": 22,
+    "Param2": 32,
+    "Power": 173
+  },
+  {
+    "Id": 21011,
+    "_comment": "Glove (グローブ) - Group 210, Swing 11",
+    "Range": 1,
+    "Area": 103042,
+    "Param1": 22,
+    "Param2": 32,
+    "Power": 173
+  },
+  {
+    "Id": 21012,
+    "_comment": "Glove (グローブ) - Group 210, Swing 12",
+    "Range": 1,
+    "Area": 103042,
+    "Param1": 22,
+    "Param2": 32,
+    "Power": 173
+  },
+  {
+    "Id": 21013,
+    "_comment": "Glove (グローブ) - Group 210, Swing 13",
+    "Range": 1,
+    "Area": 103042,
+    "Param1": 22,
+    "Param2": 32,
+    "Power": 173
+  },
+  {
+    "Id": 21014,
+    "_comment": "Glove (グローブ) - Group 210, Swing 14",
+    "Range": 1,
+    "Area": 103042,
+    "Param1": 22,
+    "Param2": 32,
+    "Power": 173
+  },
+  {
+    "Id": 21015,
+    "_comment": "Glove (グローブ) - Group 210, Swing 15",
+    "Range": 1,
+    "Area": 103042,
+    "Param1": 22,
+    "Param2": 32,
+    "Power": 173
+  },
+  {
+    "Id": 21016,
+    "_comment": "Glove (グローブ) - Group 210, Swing 16",
+    "Range": 1,
+    "Area": 103042,
+    "Param1": 22,
+    "Param2": 32,
+    "Power": 173
+  },
+  {
+    "Id": 21017,
+    "_comment": "Glove (グローブ) - Group 210, Swing 17",
+    "Range": 1,
+    "Area": 103042,
+    "Param1": 22,
+    "Param2": 32,
+    "Power": 173
+  },
+  {
+    "Id": 21018,
+    "_comment": "Glove (グローブ) - Group 210, Swing 18",
+    "Range": 1,
+    "Area": 103042,
+    "Param1": 22,
+    "Param2": 32,
+    "Power": 173
+  },
+  {
+    "Id": 21019,
+    "_comment": "Glove (グローブ) - Group 210, Swing 19",
+    "Range": 1,
+    "Area": 103042,
+    "Param1": 22,
+    "Param2": 32,
+    "Power": 173
+  },
+  {
+    "Id": 21020,
+    "_comment": "Glove (グローブ) - Group 210, Swing 20",
+    "Range": 1,
+    "Area": 103042,
+    "Param1": 22,
+    "Param2": 32,
+    "Power": 173
+  },
+  {
+    "Id": 21021,
+    "_comment": "Glove (グローブ) - Group 210, Swing 21",
+    "Range": 1,
+    "Area": 103042,
+    "Param1": 22,
+    "Param2": 32,
+    "Power": 173
+  },
+  {
+    "Id": 21022,
+    "_comment": "Glove (グローブ) - Group 210, Swing 22",
+    "Range": 1,
+    "Area": 103042,
+    "Param1": 22,
+    "Param2": 32,
+    "Power": 173
+  },
+  {
+    "Id": 21023,
+    "_comment": "Glove (グローブ) - Group 210, Swing 23",
+    "Range": 1,
+    "Area": 103042,
+    "Param1": 22,
+    "Param2": 32,
+    "Power": 173
+  },
+  {
+    "Id": 21024,
+    "_comment": "Glove (グローブ) - Group 210, Swing 24",
+    "Range": 1,
+    "Area": 103042,
+    "Param1": 22,
+    "Param2": 32,
+    "Power": 173
+  },
+  {
+    "Id": 21025,
+    "_comment": "Glove (グローブ) - Group 210, Swing 25",
+    "Range": 1,
+    "Area": 103042,
+    "Param1": 22,
+    "Param2": 32,
+    "Power": 173
+  },
+  {
+    "Id": 21026,
+    "_comment": "Glove (グローブ) - Group 210, Swing 26",
+    "Range": 1,
+    "Area": 103042,
+    "Param1": 22,
+    "Param2": 32,
+    "Power": 173
+  },
+  {
+    "Id": 21027,
+    "_comment": "Glove (グローブ) - Group 210, Swing 27",
+    "Range": 1,
+    "Area": 103042,
+    "Param1": 22,
+    "Param2": 32,
+    "Power": 173
+  },
+  {
+    "Id": 21028,
+    "_comment": "Glove (グローブ) - Group 210, Swing 28",
+    "Range": 1,
+    "Area": 103042,
+    "Param1": 22,
+    "Param2": 32,
+    "Power": 173
+  },
+  {
+    "Id": 21029,
+    "_comment": "Glove (グローブ) - Group 210, Swing 29",
+    "Range": 1,
+    "Area": 103042,
+    "Param1": 22,
+    "Param2": 32,
+    "Power": 173
+  },
+  {
+    "Id": 21030,
+    "_comment": "Glove (グローブ) - Group 210, Swing 30",
+    "Range": 1,
+    "Area": 103042,
+    "Param1": 22,
+    "Param2": 32,
+    "Power": 173
+  },
+  {
+    "Id": 21031,
+    "_comment": "Glove (グローブ) - Group 210, Swing 31",
+    "Range": 2,
+    "Area": 103042,
+    "Param1": 9,
+    "Param2": 32,
+    "Power": 0
+  },
+  {
+    "Id": 21032,
+    "_comment": "Glove (グローブ) - Group 210, Swing 32",
+    "Range": 2,
+    "Area": 103042,
+    "Param1": 9,
+    "Param2": 32,
+    "Power": 0
+  },
+  {
+    "Id": 21033,
+    "_comment": "Glove (グローブ) - Group 210, Swing 33",
+    "Range": 2,
+    "Area": 103042,
+    "Param1": 9,
+    "Param2": 32,
+    "Power": 0
+  },
+  {
+    "Id": 21034,
+    "_comment": "Glove (グローブ) - Group 210, Swing 34",
+    "Range": 2,
+    "Area": 103042,
+    "Param1": 9,
+    "Param2": 32,
+    "Power": 0
+  },
+  {
+    "Id": 21035,
+    "_comment": "Glove (グローブ) - Group 210, Swing 35",
+    "Range": 2,
+    "Area": 103042,
+    "Param1": 9,
+    "Param2": 32,
+    "Power": 0
+  },
+  {
+    "Id": 21036,
+    "_comment": "Glove (グローブ) - Group 210, Swing 36",
+    "Range": 2,
+    "Area": 103042,
+    "Param1": 9,
+    "Param2": 32,
+    "Power": 0
+  },
+  {
+    "Id": 21037,
+    "_comment": "Glove (グローブ) - Group 210, Swing 37",
+    "Range": 2,
+    "Area": 103042,
+    "Param1": 9,
+    "Param2": 32,
+    "Power": 0
+  },
+  {
+    "Id": 21038,
+    "_comment": "Glove (グローブ) - Group 210, Swing 38",
+    "Range": 2,
+    "Area": 103042,
+    "Param1": 9,
+    "Param2": 32,
+    "Power": 0
+  },
+  {
+    "Id": 21039,
+    "_comment": "Glove (グローブ) - Group 210, Swing 39",
+    "Range": 2,
+    "Area": 103042,
+    "Param1": 9,
+    "Param2": 32,
+    "Power": 0
+  },
+  {
+    "Id": 21040,
+    "_comment": "Glove (グローブ) - Group 210, Swing 40",
+    "Range": 2,
+    "Area": 103042,
+    "Param1": 9,
+    "Param2": 32,
+    "Power": 0
+  },
+  {
+    "Id": 21041,
+    "_comment": "Glove (グローブ) - Group 210, Swing 41",
+    "Range": 2,
+    "Area": 103042,
+    "Param1": 9,
+    "Param2": 32,
+    "Power": 0
+  },
+  {
+    "Id": 21042,
+    "_comment": "Glove (グローブ) - Group 210, Swing 42",
+    "Range": 2,
+    "Area": 103042,
+    "Param1": 9,
+    "Param2": 32,
+    "Power": 0
+  },
+  {
+    "Id": 21043,
+    "_comment": "Glove (グローブ) - Group 210, Swing 43",
+    "Range": 2,
+    "Area": 103042,
+    "Param1": 9,
+    "Param2": 32,
+    "Power": 0
+  },
+  {
+    "Id": 21044,
+    "_comment": "Glove (グローブ) - Group 210, Swing 44",
+    "Range": 2,
+    "Area": 103042,
+    "Param1": 9,
+    "Param2": 32,
+    "Power": 0
+  },
+  {
+    "Id": 21045,
+    "_comment": "Glove (グローブ) - Group 210, Swing 45",
+    "Range": 2,
+    "Area": 103042,
+    "Param1": 9,
+    "Param2": 32,
+    "Power": 0
+  },
+  {
+    "Id": 21046,
+    "_comment": "Glove (グローブ) - Group 210, Swing 46",
+    "Range": 2,
+    "Area": 103042,
+    "Param1": 9,
+    "Param2": 32,
+    "Power": 0
+  },
+  {
+    "Id": 21047,
+    "_comment": "Glove (グローブ) - Group 210, Swing 47",
+    "Range": 2,
+    "Area": 103042,
+    "Param1": 9,
+    "Param2": 32,
+    "Power": 0
+  },
+  {
+    "Id": 21048,
+    "_comment": "Glove (グローブ) - Group 210, Swing 48",
+    "Range": 2,
+    "Area": 103042,
+    "Param1": 9,
+    "Param2": 32,
+    "Power": 0
+  },
+  {
+    "Id": 21049,
+    "_comment": "Glove (グローブ) - Group 210, Swing 49",
+    "Range": 2,
+    "Area": 103042,
+    "Param1": 9,
+    "Param2": 32,
+    "Power": 0
+  },
+  {
+    "Id": 21050,
+    "_comment": "Glove (グローブ) - Group 210, Swing 50",
+    "Range": 2,
+    "Area": 103042,
+    "Param1": 9,
+    "Param2": 32,
+    "Power": 0
+  },
+  {
+    "Id": 21051,
+    "_comment": "Glove (グローブ) - Group 210, Swing 51",
+    "Range": 0,
+    "Area": 101011,
+    "Param1": 1,
+    "Param2": 32,
+    "Power": 0
+  },
+  {
+    "Id": 21052,
+    "_comment": "Glove (グローブ) - Group 210, Swing 52",
+    "Range": 0,
+    "Area": 101011,
+    "Param1": 1,
+    "Param2": 32,
+    "Power": 0
+  },
+  {
+    "Id": 21053,
+    "_comment": "Glove (グローブ) - Group 210, Swing 53",
+    "Range": 0,
+    "Area": 101011,
+    "Param1": 1,
+    "Param2": 32,
+    "Power": 0
+  },
+  {
+    "Id": 21054,
+    "_comment": "Glove (グローブ) - Group 210, Swing 54",
+    "Range": 0,
+    "Area": 101011,
+    "Param1": 1,
+    "Param2": 32,
+    "Power": 0
+  },
+  {
+    "Id": 21055,
+    "_comment": "Glove (グローブ) - Group 210, Swing 55",
+    "Range": 0,
+    "Area": 101011,
+    "Param1": 1,
+    "Param2": 32,
+    "Power": 0
+  },
+  {
+    "Id": 21056,
+    "_comment": "Glove (グローブ) - Group 210, Swing 56",
+    "Range": 0,
+    "Area": 101011,
+    "Param1": 1,
+    "Param2": 32,
+    "Power": 0
+  },
+  {
+    "Id": 21057,
+    "_comment": "Glove (グローブ) - Group 210, Swing 57",
+    "Range": 0,
+    "Area": 101011,
+    "Param1": 1,
+    "Param2": 32,
+    "Power": 0
+  },
+  {
+    "Id": 21058,
+    "_comment": "Glove (グローブ) - Group 210, Swing 58",
+    "Range": 0,
+    "Area": 101011,
+    "Param1": 1,
+    "Param2": 32,
+    "Power": 0
+  },
+  {
+    "Id": 21059,
+    "_comment": "Glove (グローブ) - Group 210, Swing 59",
+    "Range": 0,
+    "Area": 101011,
+    "Param1": 1,
+    "Param2": 32,
+    "Power": 0
+  },
+  {
+    "Id": 21060,
+    "_comment": "Glove (グローブ) - Group 210, Swing 60",
+    "Range": 0,
+    "Area": 101011,
+    "Param1": 1,
+    "Param2": 32,
+    "Power": 0
+  },
+  {
+    "Id": 21091,
+    "_comment": "Glove (グローブ) - Group 210, Swing 91",
+    "Range": 0,
+    "Area": 101011,
+    "Param1": 0,
+    "Param2": 0,
+    "Power": 0
+  },
+  {
+    "Id": 21092,
+    "_comment": "Glove (グローブ) - Group 210, Swing 92",
+    "Range": 0,
+    "Area": 101011,
+    "Param1": 0,
+    "Param2": 0,
+    "Power": 0
+  },
+  {
+    "Id": 21093,
+    "_comment": "Glove (グローブ) - Group 210, Swing 93",
+    "Range": 0,
+    "Area": 101011,
+    "Param1": 0,
+    "Param2": 0,
+    "Power": 0
+  },
+  {
+    "Id": 21094,
+    "_comment": "Glove (グローブ) - Group 210, Swing 94",
+    "Range": 0,
+    "Area": 101011,
+    "Param1": 0,
+    "Param2": 0,
+    "Power": 0
+  },
+  {
+    "Id": 21095,
+    "_comment": "Glove (グローブ) - Group 210, Swing 95",
+    "Range": 0,
+    "Area": 101011,
+    "Param1": 0,
+    "Param2": 0,
+    "Power": 0
+  },
+  {
+    "Id": 21096,
+    "_comment": "Glove (グローブ) - Group 210, Swing 96",
+    "Range": 0,
+    "Area": 101011,
+    "Param1": 0,
+    "Param2": 0,
+    "Power": 0
+  },
+  {
+    "Id": 21097,
+    "_comment": "Glove (グローブ) - Group 210, Swing 97",
+    "Range": 0,
+    "Area": 101011,
+    "Param1": 0,
+    "Param2": 0,
+    "Power": 0
+  },
+  {
+    "Id": 21098,
+    "_comment": "Glove (グローブ) - Group 210, Swing 98",
+    "Range": 0,
+    "Area": 101011,
+    "Param1": 0,
+    "Param2": 0,
+    "Power": 0
+  },
+  {
+    "Id": 21099,
+    "_comment": "Glove (グローブ) - Group 210, Swing 99",
+    "Range": 0,
+    "Area": 101011,
+    "Param1": 0,
+    "Param2": 0,
+    "Power": 0
+  },
+  {
+    "Id": 21100,
+    "_comment": "Glove (グローブ) - Group 211, Swing 0",
+    "Range": 0,
+    "Area": 101011,
+    "Param1": 0,
+    "Param2": 0,
+    "Power": 0
+  },
+  {
+    "Id": 21101,
+    "_comment": "Glove (グローブ) - Group 211, Swing 1",
+    "Range": 0,
+    "Area": 101011,
+    "Param1": 0,
+    "Param2": 0,
+    "Power": 0
+  },
+  {
+    "Id": 21102,
+    "_comment": "Glove (グローブ) - Group 211, Swing 2",
+    "Range": 0,
+    "Area": 101011,
+    "Param1": 0,
+    "Param2": 0,
+    "Power": 0
+  },
+  {
+    "Id": 21103,
+    "_comment": "Glove (グローブ) - Group 211, Swing 3",
+    "Range": 0,
+    "Area": 101011,
+    "Param1": 0,
+    "Param2": 0,
+    "Power": 0
+  },
+  {
+    "Id": 21104,
+    "_comment": "Glove (グローブ) - Group 211, Swing 4",
+    "Range": 0,
+    "Area": 101011,
+    "Param1": 0,
+    "Param2": 0,
+    "Power": 0
+  },
+  {
+    "Id": 21105,
+    "_comment": "Glove (グローブ) - Group 211, Swing 5",
+    "Range": 0,
+    "Area": 101011,
+    "Param1": 0,
+    "Param2": 0,
+    "Power": 0
+  },
+  {
+    "Id": 21106,
+    "_comment": "Glove (グローブ) - Group 211, Swing 6",
+    "Range": 0,
+    "Area": 101011,
+    "Param1": 0,
+    "Param2": 0,
+    "Power": 0
+  },
+  {
+    "Id": 21107,
+    "_comment": "Glove (グローブ) - Group 211, Swing 7",
+    "Range": 0,
+    "Area": 101011,
+    "Param1": 0,
+    "Param2": 0,
+    "Power": 0
+  },
+  {
+    "Id": 21108,
+    "_comment": "Glove (グローブ) - Group 211, Swing 8",
+    "Range": 0,
+    "Area": 101011,
+    "Param1": 0,
+    "Param2": 0,
+    "Power": 0
+  },
+  {
+    "Id": 21109,
+    "_comment": "Glove (グローブ) - Group 211, Swing 9",
+    "Range": 0,
+    "Area": 101011,
+    "Param1": 0,
+    "Param2": 0,
+    "Power": 0
+  },
+  {
+    "Id": 21110,
+    "_comment": "Glove (グローブ) - Group 211, Swing 10",
+    "Range": 0,
+    "Area": 101011,
+    "Param1": 0,
+    "Param2": 0,
+    "Power": 0
+  },
+  {
+    "Id": 21111,
+    "_comment": "Glove (グローブ) - Group 211, Swing 11",
+    "Range": 0,
+    "Area": 101011,
+    "Param1": 0,
+    "Param2": 0,
+    "Power": 0
+  },
+  {
+    "Id": 21112,
+    "_comment": "Glove (グローブ) - Group 211, Swing 12",
+    "Range": 0,
+    "Area": 101011,
+    "Param1": 0,
+    "Param2": 0,
+    "Power": 0
+  },
+  {
+    "Id": 21113,
+    "_comment": "Glove (グローブ) - Group 211, Swing 13",
+    "Range": 0,
+    "Area": 101011,
+    "Param1": 0,
+    "Param2": 0,
+    "Power": 0
+  },
+  {
+    "Id": 21114,
+    "_comment": "Glove (グローブ) - Group 211, Swing 14",
+    "Range": 0,
+    "Area": 101011,
+    "Param1": 0,
+    "Param2": 0,
+    "Power": 0
+  },
+  {
+    "Id": 21115,
+    "_comment": "Glove (グローブ) - Group 211, Swing 15",
+    "Range": 0,
+    "Area": 101011,
+    "Param1": 0,
+    "Param2": 0,
+    "Power": 0
+  },
+  {
+    "Id": 21116,
+    "_comment": "Glove (グローブ) - Group 211, Swing 16",
+    "Range": 0,
+    "Area": 101011,
+    "Param1": 0,
+    "Param2": 0,
+    "Power": 0
+  },
+  {
+    "Id": 21117,
+    "_comment": "Glove (グローブ) - Group 211, Swing 17",
+    "Range": 0,
+    "Area": 101011,
+    "Param1": 0,
+    "Param2": 0,
+    "Power": 0
+  },
+  {
+    "Id": 21118,
+    "_comment": "Glove (グローブ) - Group 211, Swing 18",
+    "Range": 0,
+    "Area": 101011,
+    "Param1": 0,
+    "Param2": 0,
+    "Power": 0
+  },
+  {
+    "Id": 21119,
+    "_comment": "Glove (グローブ) - Group 211, Swing 19",
+    "Range": 0,
+    "Area": 101011,
+    "Param1": 0,
+    "Param2": 0,
+    "Power": 0
+  },
+  {
+    "Id": 21120,
+    "_comment": "Glove (グローブ) - Group 211, Swing 20",
+    "Range": 0,
+    "Area": 101011,
+    "Param1": 0,
+    "Param2": 0,
+    "Power": 0
+  },
+  {
+    "Id": 81001,
+    "_comment": "Type 8 - Group 810, Swing 1",
+    "Range": 3,
+    "Area": 115092,
+    "Param1": 22,
+    "Param2": 32,
+    "Power": 152
+  },
+  {
+    "Id": 81002,
+    "_comment": "Type 8 - Group 810, Swing 2",
+    "Range": 3,
+    "Area": 115092,
+    "Param1": 22,
+    "Param2": 32,
+    "Power": 152
+  },
+  {
+    "Id": 81003,
+    "_comment": "Type 8 - Group 810, Swing 3",
+    "Range": 3,
+    "Area": 115092,
+    "Param1": 22,
+    "Param2": 32,
+    "Power": 152
+  },
+  {
+    "Id": 81004,
+    "_comment": "Type 8 - Group 810, Swing 4",
+    "Range": 3,
+    "Area": 115092,
+    "Param1": 22,
+    "Param2": 32,
+    "Power": 152
+  },
+  {
+    "Id": 81005,
+    "_comment": "Type 8 - Group 810, Swing 5",
+    "Range": 3,
+    "Area": 115092,
+    "Param1": 22,
+    "Param2": 32,
+    "Power": 152
+  },
+  {
+    "Id": 81006,
+    "_comment": "Type 8 - Group 810, Swing 6",
+    "Range": 3,
+    "Area": 115092,
+    "Param1": 22,
+    "Param2": 32,
+    "Power": 152
+  },
+  {
+    "Id": 81007,
+    "_comment": "Type 8 - Group 810, Swing 7",
+    "Range": 3,
+    "Area": 115092,
+    "Param1": 22,
+    "Param2": 32,
+    "Power": 152
+  },
+  {
+    "Id": 81008,
+    "_comment": "Type 8 - Group 810, Swing 8",
+    "Range": 3,
+    "Area": 115092,
+    "Param1": 22,
+    "Param2": 32,
+    "Power": 152
+  },
+  {
+    "Id": 81009,
+    "_comment": "Type 8 - Group 810, Swing 9",
+    "Range": 3,
+    "Area": 115092,
+    "Param1": 22,
+    "Param2": 32,
+    "Power": 152
+  },
+  {
+    "Id": 81010,
+    "_comment": "Type 8 - Group 810, Swing 10",
+    "Range": 3,
+    "Area": 115092,
+    "Param1": 22,
+    "Param2": 32,
+    "Power": 152
+  },
+  {
+    "Id": 81011,
+    "_comment": "Type 8 - Group 810, Swing 11",
+    "Range": 3,
+    "Area": 115092,
+    "Param1": 22,
+    "Param2": 32,
+    "Power": 152
+  },
+  {
+    "Id": 81012,
+    "_comment": "Type 8 - Group 810, Swing 12",
+    "Range": 3,
+    "Area": 115092,
+    "Param1": 22,
+    "Param2": 32,
+    "Power": 152
+  },
+  {
+    "Id": 81013,
+    "_comment": "Type 8 - Group 810, Swing 13",
+    "Range": 3,
+    "Area": 115092,
+    "Param1": 22,
+    "Param2": 32,
+    "Power": 152
+  },
+  {
+    "Id": 81014,
+    "_comment": "Type 8 - Group 810, Swing 14",
+    "Range": 3,
+    "Area": 115092,
+    "Param1": 22,
+    "Param2": 32,
+    "Power": 152
+  },
+  {
+    "Id": 81015,
+    "_comment": "Type 8 - Group 810, Swing 15",
+    "Range": 3,
+    "Area": 115092,
+    "Param1": 22,
+    "Param2": 32,
+    "Power": 152
+  },
+  {
+    "Id": 81016,
+    "_comment": "Type 8 - Group 810, Swing 16",
+    "Range": 3,
+    "Area": 115092,
+    "Param1": 22,
+    "Param2": 32,
+    "Power": 152
+  },
+  {
+    "Id": 81017,
+    "_comment": "Type 8 - Group 810, Swing 17",
+    "Range": 3,
+    "Area": 115092,
+    "Param1": 22,
+    "Param2": 32,
+    "Power": 152
+  },
+  {
+    "Id": 81018,
+    "_comment": "Type 8 - Group 810, Swing 18",
+    "Range": 3,
+    "Area": 115092,
+    "Param1": 22,
+    "Param2": 32,
+    "Power": 152
+  },
+  {
+    "Id": 81019,
+    "_comment": "Type 8 - Group 810, Swing 19",
+    "Range": 3,
+    "Area": 115092,
+    "Param1": 22,
+    "Param2": 32,
+    "Power": 152
+  },
+  {
+    "Id": 81020,
+    "_comment": "Type 8 - Group 810, Swing 20",
+    "Range": 3,
+    "Area": 115092,
+    "Param1": 22,
+    "Param2": 32,
+    "Power": 152
+  },
+  {
+    "Id": 81021,
+    "_comment": "Type 8 - Group 810, Swing 21",
+    "Range": 3,
+    "Area": 115092,
+    "Param1": 9,
+    "Param2": 32,
+    "Power": 0
+  },
+  {
+    "Id": 81022,
+    "_comment": "Type 8 - Group 810, Swing 22",
+    "Range": 3,
+    "Area": 115092,
+    "Param1": 9,
+    "Param2": 32,
+    "Power": 0
+  },
+  {
+    "Id": 81023,
+    "_comment": "Type 8 - Group 810, Swing 23",
+    "Range": 3,
+    "Area": 115092,
+    "Param1": 9,
+    "Param2": 32,
+    "Power": 0
+  },
+  {
+    "Id": 81024,
+    "_comment": "Type 8 - Group 810, Swing 24",
+    "Range": 3,
+    "Area": 115092,
+    "Param1": 9,
+    "Param2": 32,
+    "Power": 0
+  },
+  {
+    "Id": 81025,
+    "_comment": "Type 8 - Group 810, Swing 25",
+    "Range": 3,
+    "Area": 115092,
+    "Param1": 9,
+    "Param2": 32,
+    "Power": 0
+  },
+  {
+    "Id": 81026,
+    "_comment": "Type 8 - Group 810, Swing 26",
+    "Range": 3,
+    "Area": 115092,
+    "Param1": 9,
+    "Param2": 32,
+    "Power": 0
+  },
+  {
+    "Id": 81027,
+    "_comment": "Type 8 - Group 810, Swing 27",
+    "Range": 3,
+    "Area": 115092,
+    "Param1": 9,
+    "Param2": 32,
+    "Power": 0
+  },
+  {
+    "Id": 81028,
+    "_comment": "Type 8 - Group 810, Swing 28",
+    "Range": 3,
+    "Area": 115092,
+    "Param1": 9,
+    "Param2": 32,
+    "Power": 0
+  },
+  {
+    "Id": 81029,
+    "_comment": "Type 8 - Group 810, Swing 29",
+    "Range": 3,
+    "Area": 115092,
+    "Param1": 9,
+    "Param2": 32,
+    "Power": 0
+  },
+  {
+    "Id": 81030,
+    "_comment": "Type 8 - Group 810, Swing 30",
+    "Range": 3,
+    "Area": 115092,
+    "Param1": 9,
+    "Param2": 32,
+    "Power": 0
+  },
+  {
+    "Id": 81031,
+    "_comment": "Type 8 - Group 810, Swing 31",
+    "Range": 3,
+    "Area": 115092,
+    "Param1": 9,
+    "Param2": 32,
+    "Power": 0
+  },
+  {
+    "Id": 81032,
+    "_comment": "Type 8 - Group 810, Swing 32",
+    "Range": 3,
+    "Area": 115092,
+    "Param1": 9,
+    "Param2": 32,
+    "Power": 0
+  },
+  {
+    "Id": 81033,
+    "_comment": "Type 8 - Group 810, Swing 33",
+    "Range": 3,
+    "Area": 115092,
+    "Param1": 9,
+    "Param2": 32,
+    "Power": 0
+  },
+  {
+    "Id": 81034,
+    "_comment": "Type 8 - Group 810, Swing 34",
+    "Range": 3,
+    "Area": 115092,
+    "Param1": 9,
+    "Param2": 32,
+    "Power": 0
+  },
+  {
+    "Id": 81035,
+    "_comment": "Type 8 - Group 810, Swing 35",
+    "Range": 3,
+    "Area": 115092,
+    "Param1": 9,
+    "Param2": 32,
+    "Power": 0
+  },
+  {
+    "Id": 81036,
+    "_comment": "Type 8 - Group 810, Swing 36",
+    "Range": 3,
+    "Area": 115092,
+    "Param1": 9,
+    "Param2": 32,
+    "Power": 0
+  },
+  {
+    "Id": 81037,
+    "_comment": "Type 8 - Group 810, Swing 37",
+    "Range": 3,
+    "Area": 115092,
+    "Param1": 9,
+    "Param2": 32,
+    "Power": 0
+  },
+  {
+    "Id": 81038,
+    "_comment": "Type 8 - Group 810, Swing 38",
+    "Range": 3,
+    "Area": 115092,
+    "Param1": 9,
+    "Param2": 32,
+    "Power": 0
+  },
+  {
+    "Id": 81039,
+    "_comment": "Type 8 - Group 810, Swing 39",
+    "Range": 3,
+    "Area": 115092,
+    "Param1": 9,
+    "Param2": 32,
+    "Power": 0
+  },
+  {
+    "Id": 81040,
+    "_comment": "Type 8 - Group 810, Swing 40",
+    "Range": 3,
+    "Area": 115092,
+    "Param1": 9,
+    "Param2": 32,
+    "Power": 0
+  },
+  {
+    "Id": 81041,
+    "_comment": "Type 8 - Group 810, Swing 41",
+    "Range": 3,
+    "Area": 115092,
+    "Param1": 9,
+    "Param2": 32,
+    "Power": 0
+  },
+  {
+    "Id": 81042,
+    "_comment": "Type 8 - Group 810, Swing 42",
+    "Range": 3,
+    "Area": 115092,
+    "Param1": 9,
+    "Param2": 32,
+    "Power": 0
+  },
+  {
+    "Id": 81043,
+    "_comment": "Type 8 - Group 810, Swing 43",
+    "Range": 3,
+    "Area": 115092,
+    "Param1": 9,
+    "Param2": 32,
+    "Power": 0
+  },
+  {
+    "Id": 81044,
+    "_comment": "Type 8 - Group 810, Swing 44",
+    "Range": 3,
+    "Area": 115092,
+    "Param1": 9,
+    "Param2": 32,
+    "Power": 0
+  },
+  {
+    "Id": 81045,
+    "_comment": "Type 8 - Group 810, Swing 45",
+    "Range": 3,
+    "Area": 115092,
+    "Param1": 9,
+    "Param2": 32,
+    "Power": 0
+  },
+  {
+    "Id": 81046,
+    "_comment": "Type 8 - Group 810, Swing 46",
+    "Range": 3,
+    "Area": 115092,
+    "Param1": 9,
+    "Param2": 32,
+    "Power": 0
+  },
+  {
+    "Id": 81047,
+    "_comment": "Type 8 - Group 810, Swing 47",
+    "Range": 3,
+    "Area": 115092,
+    "Param1": 9,
+    "Param2": 32,
+    "Power": 0
+  },
+  {
+    "Id": 81048,
+    "_comment": "Type 8 - Group 810, Swing 48",
+    "Range": 3,
+    "Area": 115092,
+    "Param1": 9,
+    "Param2": 32,
+    "Power": 0
+  },
+  {
+    "Id": 81049,
+    "_comment": "Type 8 - Group 810, Swing 49",
+    "Range": 3,
+    "Area": 115092,
+    "Param1": 9,
+    "Param2": 32,
+    "Power": 0
+  },
+  {
+    "Id": 81050,
+    "_comment": "Type 8 - Group 810, Swing 50",
+    "Range": 3,
+    "Area": 115092,
+    "Param1": 9,
+    "Param2": 32,
+    "Power": 0
+  },
+  {
+    "Id": 81121,
+    "_comment": "Type 8 - Group 811, Swing 21",
+    "Range": 0,
+    "Area": 101011,
+    "Param1": 0,
+    "Param2": 0,
+    "Power": 0
+  },
+  {
+    "Id": 81122,
+    "_comment": "Type 8 - Group 811, Swing 22",
+    "Range": 0,
+    "Area": 101011,
+    "Param1": 0,
+    "Param2": 0,
+    "Power": 0
+  },
+  {
+    "Id": 81123,
+    "_comment": "Type 8 - Group 811, Swing 23",
+    "Range": 0,
+    "Area": 101011,
+    "Param1": 0,
+    "Param2": 0,
+    "Power": 0
+  },
+  {
+    "Id": 81124,
+    "_comment": "Type 8 - Group 811, Swing 24",
+    "Range": 0,
+    "Area": 101011,
+    "Param1": 0,
+    "Param2": 0,
+    "Power": 0
+  },
+  {
+    "Id": 81125,
+    "_comment": "Type 8 - Group 811, Swing 25",
+    "Range": 0,
+    "Area": 101011,
+    "Param1": 0,
+    "Param2": 0,
+    "Power": 0
+  },
+  {
+    "Id": 81126,
+    "_comment": "Type 8 - Group 811, Swing 26",
+    "Range": 0,
+    "Area": 101011,
+    "Param1": 0,
+    "Param2": 0,
+    "Power": 0
+  },
+  {
+    "Id": 81127,
+    "_comment": "Type 8 - Group 811, Swing 27",
+    "Range": 0,
+    "Area": 101011,
+    "Param1": 0,
+    "Param2": 0,
+    "Power": 0
+  },
+  {
+    "Id": 81128,
+    "_comment": "Type 8 - Group 811, Swing 28",
+    "Range": 0,
+    "Area": 101011,
+    "Param1": 0,
+    "Param2": 0,
+    "Power": 0
+  },
+  {
+    "Id": 81129,
+    "_comment": "Type 8 - Group 811, Swing 29",
+    "Range": 0,
+    "Area": 101011,
+    "Param1": 0,
+    "Param2": 0,
+    "Power": 0
+  },
+  {
+    "Id": 81130,
+    "_comment": "Type 8 - Group 811, Swing 30",
+    "Range": 0,
+    "Area": 101011,
+    "Param1": 0,
+    "Param2": 0,
+    "Power": 0
+  },
+  {
+    "Id": 81131,
+    "_comment": "Type 8 - Group 811, Swing 31",
+    "Range": 0,
+    "Area": 101011,
+    "Param1": 0,
+    "Param2": 0,
+    "Power": 0
+  },
+  {
+    "Id": 81132,
+    "_comment": "Type 8 - Group 811, Swing 32",
+    "Range": 0,
+    "Area": 101011,
+    "Param1": 0,
+    "Param2": 0,
+    "Power": 0
+  },
+  {
+    "Id": 81133,
+    "_comment": "Type 8 - Group 811, Swing 33",
+    "Range": 0,
+    "Area": 101011,
+    "Param1": 0,
+    "Param2": 0,
+    "Power": 0
+  },
+  {
+    "Id": 81134,
+    "_comment": "Type 8 - Group 811, Swing 34",
+    "Range": 0,
+    "Area": 101011,
+    "Param1": 0,
+    "Param2": 0,
+    "Power": 0
+  },
+  {
+    "Id": 81135,
+    "_comment": "Type 8 - Group 811, Swing 35",
+    "Range": 0,
+    "Area": 101011,
+    "Param1": 0,
+    "Param2": 0,
+    "Power": 0
+  },
+  {
+    "Id": 81136,
+    "_comment": "Type 8 - Group 811, Swing 36",
+    "Range": 0,
+    "Area": 101011,
+    "Param1": 0,
+    "Param2": 0,
+    "Power": 0
+  },
+  {
+    "Id": 81137,
+    "_comment": "Type 8 - Group 811, Swing 37",
+    "Range": 0,
+    "Area": 101011,
+    "Param1": 0,
+    "Param2": 0,
+    "Power": 0
+  },
+  {
+    "Id": 81138,
+    "_comment": "Type 8 - Group 811, Swing 38",
+    "Range": 0,
+    "Area": 101011,
+    "Param1": 0,
+    "Param2": 0,
+    "Power": 0
+  },
+  {
+    "Id": 81139,
+    "_comment": "Type 8 - Group 811, Swing 39",
+    "Range": 0,
+    "Area": 101011,
+    "Param1": 0,
+    "Param2": 0,
+    "Power": 0
+  },
+  {
+    "Id": 81140,
+    "_comment": "Type 8 - Group 811, Swing 40",
+    "Range": 0,
+    "Area": 101011,
+    "Param1": 0,
+    "Param2": 0,
+    "Power": 0
+  },
+  {
+    "Id": 20001,
+    "_comment": "Glove (グローブ) - Group 200, Swing 1",
+    "Range": 1,
+    "Area": 115092,
+    "Param1": 22,
+    "Param2": 32,
+    "Power": 70
+  },
+  {
+    "Id": 20002,
+    "_comment": "Glove (グローブ) - Group 200, Swing 2",
+    "Range": 1,
+    "Area": 105062,
+    "Param1": 22,
+    "Param2": 32,
+    "Power": 80
+  },
+  {
+    "Id": 20003,
+    "_comment": "Glove (グローブ) - Group 200, Swing 3",
+    "Range": 1,
+    "Area": 101011,
+    "Param1": 22,
+    "Param2": 32,
+    "Power": 1
+  },
+  {
+    "Id": 20004,
+    "_comment": "Glove (グローブ) - Group 200, Swing 4",
+    "Range": 1,
+    "Area": 105062,
+    "Param1": 22,
+    "Param2": 32,
+    "Power": 80
+  },
+  {
+    "Id": 20005,
+    "_comment": "Glove (グローブ) - Group 200, Swing 5",
+    "Range": 1,
+    "Area": 101011,
+    "Param1": 22,
+    "Param2": 32,
+    "Power": 1
+  },
+  {
+    "Id": 20006,
+    "_comment": "Glove (グローブ) - Group 200, Swing 6",
+    "Range": 1,
+    "Area": 110062,
+    "Param1": 22,
+    "Param2": 32,
+    "Power": 80
+  },
+  {
+    "Id": 20007,
+    "_comment": "Glove (グローブ) - Group 200, Swing 7",
+    "Range": 1,
+    "Area": 101011,
+    "Param1": 22,
+    "Param2": 32,
+    "Power": 1
+  },
+  {
+    "Id": 20008,
+    "_comment": "Glove (グローブ) - Group 200, Swing 8",
+    "Range": 1,
+    "Area": 105062,
+    "Param1": 22,
+    "Param2": 32,
+    "Power": 80
+  },
+  {
+    "Id": 20009,
+    "_comment": "Glove (グローブ) - Group 200, Swing 9",
+    "Range": 1,
+    "Area": 101011,
+    "Param1": 22,
+    "Param2": 32,
+    "Power": 1
+  },
+  {
+    "Id": 20010,
+    "_comment": "Glove (グローブ) - Group 200, Swing 10",
+    "Range": 1,
+    "Area": 101011,
+    "Param1": 22,
+    "Param2": 32,
+    "Power": 1
+  },
+  {
+    "Id": 20011,
+    "_comment": "Glove (グローブ) - Group 200, Swing 11",
+    "Range": 1,
+    "Area": 101011,
+    "Param1": 22,
+    "Param2": 32,
+    "Power": 1
+  },
+  {
+    "Id": 20012,
+    "_comment": "Glove (グローブ) - Group 200, Swing 12",
+    "Range": 1,
+    "Area": 101011,
+    "Param1": 22,
+    "Param2": 32,
+    "Power": 1
+  },
+  {
+    "Id": 20013,
+    "_comment": "Glove (グローブ) - Group 200, Swing 13",
+    "Range": 1,
+    "Area": 101011,
+    "Param1": 22,
+    "Param2": 32,
+    "Power": 1
+  },
+  {
+    "Id": 20014,
+    "_comment": "Glove (グローブ) - Group 200, Swing 14",
+    "Range": 1,
+    "Area": 101011,
+    "Param1": 22,
+    "Param2": 32,
+    "Power": 1
+  },
+  {
+    "Id": 20015,
+    "_comment": "Glove (グローブ) - Group 200, Swing 15",
+    "Range": 1,
+    "Area": 108104,
+    "Param1": 22,
+    "Param2": 32,
+    "Power": 65
+  },
+  {
+    "Id": 20016,
+    "_comment": "Glove (グローブ) - Group 200, Swing 16",
+    "Range": 1,
+    "Area": 108104,
+    "Param1": 22,
+    "Param2": 32,
+    "Power": 65
+  },
+  {
+    "Id": 20017,
+    "_comment": "Glove (グローブ) - Group 200, Swing 17",
+    "Range": 1,
+    "Area": 101011,
+    "Param1": 22,
+    "Param2": 32,
+    "Power": 1
+  },
+  {
+    "Id": 20018,
+    "_comment": "Glove (グローブ) - Group 200, Swing 18",
+    "Range": 1,
+    "Area": 111082,
+    "Param1": 22,
+    "Param2": 32,
+    "Power": 70
+  },
+  {
+    "Id": 20019,
+    "_comment": "Glove (グローブ) - Group 200, Swing 19",
+    "Range": 1,
+    "Area": 101011,
+    "Param1": 22,
+    "Param2": 32,
+    "Power": 1
+  },
+  {
+    "Id": 20020,
+    "_comment": "Glove (グローブ) - Group 200, Swing 20",
+    "Range": 1,
+    "Area": 101011,
+    "Param1": 22,
+    "Param2": 32,
+    "Power": 1
+  },
+  {
+    "Id": 20021,
+    "_comment": "Glove (グローブ) - Group 200, Swing 21",
+    "Range": 1,
+    "Area": 105062,
+    "Param1": 22,
+    "Param2": 32,
+    "Power": 80
+  },
+  {
+    "Id": 20022,
+    "_comment": "Glove (グローブ) - Group 200, Swing 22",
+    "Range": 1,
+    "Area": 101011,
+    "Param1": 22,
+    "Param2": 32,
+    "Power": 1
+  },
+  {
+    "Id": 20023,
+    "_comment": "Glove (グローブ) - Group 200, Swing 23",
+    "Range": 1,
+    "Area": 106073,
+    "Param1": 22,
+    "Param2": 32,
+    "Power": 70
+  },
+  {
+    "Id": 20024,
+    "_comment": "Glove (グローブ) - Group 200, Swing 24",
+    "Range": 1,
+    "Area": 101011,
+    "Param1": 22,
+    "Param2": 32,
+    "Power": 1
+  },
+  {
+    "Id": 20025,
+    "_comment": "Glove (グローブ) - Group 200, Swing 25",
+    "Range": 1,
+    "Area": 101011,
+    "Param1": 22,
+    "Param2": 32,
+    "Power": 1
+  },
+  {
+    "Id": 20026,
+    "_comment": "Glove (グローブ) - Group 200, Swing 26",
+    "Range": 1,
+    "Area": 101011,
+    "Param1": 22,
+    "Param2": 32,
+    "Power": 1
+  },
+  {
+    "Id": 20027,
+    "_comment": "Glove (グローブ) - Group 200, Swing 27",
+    "Range": 1,
+    "Area": 101011,
+    "Param1": 22,
+    "Param2": 32,
+    "Power": 1
+  },
+  {
+    "Id": 20028,
+    "_comment": "Glove (グローブ) - Group 200, Swing 28",
+    "Range": 1,
+    "Area": 106073,
+    "Param1": 22,
+    "Param2": 32,
+    "Power": 70
+  },
+  {
+    "Id": 20029,
+    "_comment": "Glove (グローブ) - Group 200, Swing 29",
+    "Range": 1,
+    "Area": 107093,
+    "Param1": 22,
+    "Param2": 32,
+    "Power": 70
+  },
+  {
+    "Id": 20030,
+    "_comment": "Glove (グローブ) - Group 200, Swing 30",
+    "Range": 1,
+    "Area": 106073,
+    "Param1": 22,
+    "Param2": 32,
+    "Power": 70
+  },
+  {
+    "Id": 20031,
+    "_comment": "Glove (グローブ) - Group 200, Swing 31",
+    "Range": 1,
+    "Area": 101011,
+    "Param1": 22,
+    "Param2": 32,
+    "Power": 1
+  },
+  {
+    "Id": 20032,
+    "_comment": "Glove (グローブ) - Group 200, Swing 32",
+    "Range": 1,
+    "Area": 107093,
+    "Param1": 22,
+    "Param2": 32,
+    "Power": 70
+  },
+  {
+    "Id": 20033,
+    "_comment": "Glove (グローブ) - Group 200, Swing 33",
+    "Range": 1,
+    "Area": 107093,
+    "Param1": 22,
+    "Param2": 32,
+    "Power": 70
+  },
+  {
+    "Id": 20034,
+    "_comment": "Glove (グローブ) - Group 200, Swing 34",
+    "Range": 1,
+    "Area": 114124,
+    "Param1": 22,
+    "Param2": 32,
+    "Power": 65
+  },
+  {
+    "Id": 20035,
+    "_comment": "Glove (グローブ) - Group 200, Swing 35",
+    "Range": 1,
+    "Area": 116133,
+    "Param1": 22,
+    "Param2": 32,
+    "Power": 65
+  },
+  {
+    "Id": 20036,
+    "_comment": "Glove (グローブ) - Group 200, Swing 36",
+    "Range": 1,
+    "Area": 116133,
+    "Param1": 22,
+    "Param2": 32,
+    "Power": 65
+  },
+  {
+    "Id": 40001,
+    "_comment": "Spirit (魔導具) - Group 400, Swing 1",
+    "Range": 1,
+    "Area": 103042,
+    "Param1": 22,
+    "Param2": 32,
+    "Power": 80
+  },
+  {
+    "Id": 40002,
+    "_comment": "Spirit (魔導具) - Group 400, Swing 2",
+    "Range": 1,
+    "Area": 105062,
+    "Param1": 22,
+    "Param2": 32,
+    "Power": 80
+  },
+  {
+    "Id": 40003,
+    "_comment": "Spirit (魔導具) - Group 400, Swing 3",
+    "Range": 1,
+    "Area": 103042,
+    "Param1": 22,
+    "Param2": 32,
+    "Power": 80
+  },
+  {
+    "Id": 40004,
+    "_comment": "Spirit (魔導具) - Group 400, Swing 4",
+    "Range": 1,
+    "Area": 101011,
+    "Param1": 22,
+    "Param2": 32,
+    "Power": 1
+  },
+  {
+    "Id": 40005,
+    "_comment": "Spirit (魔導具) - Group 400, Swing 5",
+    "Range": 1,
+    "Area": 101011,
+    "Param1": 22,
+    "Param2": 32,
+    "Power": 1
+  },
+  {
+    "Id": 40006,
+    "_comment": "Spirit (魔導具) - Group 400, Swing 6",
+    "Range": 1,
+    "Area": 103042,
+    "Param1": 22,
+    "Param2": 32,
+    "Power": 80
+  },
+  {
+    "Id": 40007,
+    "_comment": "Spirit (魔導具) - Group 400, Swing 7",
+    "Range": 1,
+    "Area": 101011,
+    "Param1": 22,
+    "Param2": 32,
+    "Power": 1
+  },
+  {
+    "Id": 40008,
+    "_comment": "Spirit (魔導具) - Group 400, Swing 8",
+    "Range": 1,
+    "Area": 101011,
+    "Param1": 22,
+    "Param2": 32,
+    "Power": 1
+  },
+  {
+    "Id": 40009,
+    "_comment": "Spirit (魔導具) - Group 400, Swing 9",
+    "Range": 1,
+    "Area": 105062,
+    "Param1": 22,
+    "Param2": 32,
+    "Power": 80
+  },
+  {
+    "Id": 40010,
+    "_comment": "Spirit (魔導具) - Group 400, Swing 10",
+    "Range": 1,
+    "Area": 103042,
+    "Param1": 22,
+    "Param2": 32,
+    "Power": 80
+  },
+  {
+    "Id": 40011,
+    "_comment": "Spirit (魔導具) - Group 400, Swing 11",
+    "Range": 1,
+    "Area": 115092,
+    "Param1": 22,
+    "Param2": 32,
+    "Power": 70
+  },
+  {
+    "Id": 40012,
+    "_comment": "Spirit (魔導具) - Group 400, Swing 12",
+    "Range": 1,
+    "Area": 106073,
+    "Param1": 22,
+    "Param2": 32,
+    "Power": 70
+  },
+  {
+    "Id": 40013,
+    "_comment": "Spirit (魔導具) - Group 400, Swing 13",
+    "Range": 1,
+    "Area": 107093,
+    "Param1": 22,
+    "Param2": 32,
+    "Power": 70
+  },
+  {
+    "Id": 40014,
+    "_comment": "Spirit (魔導具) - Group 400, Swing 14",
+    "Range": 1,
+    "Area": 103042,
+    "Param1": 22,
+    "Param2": 32,
+    "Power": 80
+  },
+  {
+    "Id": 40015,
+    "_comment": "Spirit (魔導具) - Group 400, Swing 15",
+    "Range": 1,
+    "Area": 101011,
+    "Param1": 22,
+    "Param2": 32,
+    "Power": 1
+  },
+  {
+    "Id": 40016,
+    "_comment": "Spirit (魔導具) - Group 400, Swing 16",
+    "Range": 1,
+    "Area": 106073,
+    "Param1": 22,
+    "Param2": 32,
+    "Power": 70
+  },
+  {
+    "Id": 40017,
+    "_comment": "Spirit (魔導具) - Group 400, Swing 17",
+    "Range": 1,
+    "Area": 101011,
+    "Param1": 22,
+    "Param2": 32,
+    "Power": 1
+  },
+  {
+    "Id": 40018,
+    "_comment": "Spirit (魔導具) - Group 400, Swing 18",
+    "Range": 1,
+    "Area": 103042,
+    "Param1": 22,
+    "Param2": 32,
+    "Power": 80
+  },
+  {
+    "Id": 40019,
+    "_comment": "Spirit (魔導具) - Group 400, Swing 19",
+    "Range": 1,
+    "Area": 101011,
+    "Param1": 22,
+    "Param2": 32,
+    "Power": 1
+  },
+  {
+    "Id": 40020,
+    "_comment": "Spirit (魔導具) - Group 400, Swing 20",
+    "Range": 1,
+    "Area": 101011,
+    "Param1": 22,
+    "Param2": 32,
+    "Power": 1
+  },
+  {
+    "Id": 40021,
+    "_comment": "Spirit (魔導具) - Group 400, Swing 21",
+    "Range": 1,
+    "Area": 107093,
+    "Param1": 22,
+    "Param2": 32,
+    "Power": 70
+  },
+  {
+    "Id": 40022,
+    "_comment": "Spirit (魔導具) - Group 400, Swing 22",
+    "Range": 1,
+    "Area": 101011,
+    "Param1": 22,
+    "Param2": 32,
+    "Power": 1
+  },
+  {
+    "Id": 40023,
+    "_comment": "Spirit (魔導具) - Group 400, Swing 23",
+    "Range": 1,
+    "Area": 105062,
+    "Param1": 22,
+    "Param2": 32,
+    "Power": 80
+  },
+  {
+    "Id": 40024,
+    "_comment": "Spirit (魔導具) - Group 400, Swing 24",
+    "Range": 1,
+    "Area": 101011,
+    "Param1": 22,
+    "Param2": 32,
+    "Power": 1
+  },
+  {
+    "Id": 40025,
+    "_comment": "Spirit (魔導具) - Group 400, Swing 25",
+    "Range": 1,
+    "Area": 101011,
+    "Param1": 22,
+    "Param2": 32,
+    "Power": 1
+  },
+  {
+    "Id": 40026,
+    "_comment": "Spirit (魔導具) - Group 400, Swing 26",
+    "Range": 1,
+    "Area": 101011,
+    "Param1": 22,
+    "Param2": 32,
+    "Power": 1
+  },
+  {
+    "Id": 40027,
+    "_comment": "Spirit (魔導具) - Group 400, Swing 27",
+    "Range": 1,
+    "Area": 101011,
+    "Param1": 22,
+    "Param2": 32,
+    "Power": 1
+  },
+  {
+    "Id": 40028,
+    "_comment": "Spirit (魔導具) - Group 400, Swing 28",
+    "Range": 1,
+    "Area": 108104,
+    "Param1": 22,
+    "Param2": 32,
+    "Power": 65
+  },
+  {
+    "Id": 40029,
+    "_comment": "Spirit (魔導具) - Group 400, Swing 29",
+    "Range": 1,
+    "Area": 101011,
+    "Param1": 22,
+    "Param2": 32,
+    "Power": 1
+  },
+  {
+    "Id": 40030,
+    "_comment": "Spirit (魔導具) - Group 400, Swing 30",
+    "Range": 1,
+    "Area": 101011,
+    "Param1": 22,
+    "Param2": 32,
+    "Power": 1
+  },
+  {
+    "Id": 40031,
+    "_comment": "Spirit (魔導具) - Group 400, Swing 31",
+    "Range": 1,
+    "Area": 108104,
+    "Param1": 22,
+    "Param2": 32,
+    "Power": 65
+  },
+  {
+    "Id": 40032,
+    "_comment": "Spirit (魔導具) - Group 400, Swing 32",
+    "Range": 1,
+    "Area": 108104,
+    "Param1": 22,
+    "Param2": 32,
+    "Power": 65
+  },
+  {
+    "Id": 40033,
+    "_comment": "Spirit (魔導具) - Group 400, Swing 33",
+    "Range": 1,
+    "Area": 112093,
+    "Param1": 22,
+    "Param2": 32,
+    "Power": 70
+  },
+  {
+    "Id": 40034,
+    "_comment": "Spirit (魔導具) - Group 400, Swing 34",
+    "Range": 1,
+    "Area": 114124,
+    "Param1": 22,
+    "Param2": 32,
+    "Power": 65
+  },
+  {
+    "Id": 60001,
+    "_comment": "Type 6 - Group 600, Swing 1",
+    "Range": 3,
+    "Area": 116133,
+    "Param1": 22,
+    "Param2": 32,
+    "Power": 65
+  },
+  {
+    "Id": 60002,
+    "_comment": "Type 6 - Group 600, Swing 2",
+    "Range": 3,
+    "Area": 116133,
+    "Param1": 22,
+    "Param2": 32,
+    "Power": 65
+  },
+  {
+    "Id": 60003,
+    "_comment": "Type 6 - Group 600, Swing 3",
+    "Range": 3,
+    "Area": 116133,
+    "Param1": 22,
+    "Param2": 32,
+    "Power": 65
+  },
+  {
+    "Id": 60004,
+    "_comment": "Type 6 - Group 600, Swing 4",
+    "Range": 3,
+    "Area": 116133,
+    "Param1": 22,
+    "Param2": 32,
+    "Power": 65
+  },
+  {
+    "Id": 60005,
+    "_comment": "Type 6 - Group 600, Swing 5",
+    "Range": 3,
+    "Area": 116133,
+    "Param1": 22,
+    "Param2": 32,
+    "Power": 65
+  },
+  {
+    "Id": 60006,
+    "_comment": "Type 6 - Group 600, Swing 6",
+    "Range": 3,
+    "Area": 116133,
+    "Param1": 22,
+    "Param2": 32,
+    "Power": 65
+  },
+  {
+    "Id": 60007,
+    "_comment": "Type 6 - Group 600, Swing 7",
+    "Range": 3,
+    "Area": 116133,
+    "Param1": 22,
+    "Param2": 32,
+    "Power": 65
+  },
+  {
+    "Id": 60008,
+    "_comment": "Type 6 - Group 600, Swing 8",
+    "Range": 3,
+    "Area": 116133,
+    "Param1": 22,
+    "Param2": 32,
+    "Power": 65
+  },
+  {
+    "Id": 60009,
+    "_comment": "Type 6 - Group 600, Swing 9",
+    "Range": 3,
+    "Area": 116133,
+    "Param1": 22,
+    "Param2": 32,
+    "Power": 65
+  },
+  {
+    "Id": 60010,
+    "_comment": "Type 6 - Group 600, Swing 10",
+    "Range": 3,
+    "Area": 116133,
+    "Param1": 22,
+    "Param2": 32,
+    "Power": 65
+  },
+  {
+    "Id": 60011,
+    "_comment": "Type 6 - Group 600, Swing 11",
+    "Range": 3,
+    "Area": 116133,
+    "Param1": 22,
+    "Param2": 32,
+    "Power": 65
+  },
+  {
+    "Id": 60012,
+    "_comment": "Type 6 - Group 600, Swing 12",
+    "Range": 3,
+    "Area": 116133,
+    "Param1": 22,
+    "Param2": 32,
+    "Power": 65
+  },
+  {
+    "Id": 60013,
+    "_comment": "Type 6 - Group 600, Swing 13",
+    "Range": 3,
+    "Area": 116133,
+    "Param1": 22,
+    "Param2": 32,
+    "Power": 65
+  },
+  {
+    "Id": 60014,
+    "_comment": "Type 6 - Group 600, Swing 14",
+    "Range": 3,
+    "Area": 116133,
+    "Param1": 22,
+    "Param2": 32,
+    "Power": 65
+  },
+  {
+    "Id": 60015,
+    "_comment": "Type 6 - Group 600, Swing 15",
+    "Range": 3,
+    "Area": 116133,
+    "Param1": 22,
+    "Param2": 32,
+    "Power": 65
+  },
+  {
+    "Id": 60016,
+    "_comment": "Type 6 - Group 600, Swing 16",
+    "Range": 3,
+    "Area": 116133,
+    "Param1": 22,
+    "Param2": 32,
+    "Power": 65
+  },
+  {
+    "Id": 60017,
+    "_comment": "Type 6 - Group 600, Swing 17",
+    "Range": 3,
+    "Area": 116133,
+    "Param1": 22,
+    "Param2": 32,
+    "Power": 65
+  },
+  {
+    "Id": 60018,
+    "_comment": "Type 6 - Group 600, Swing 18",
+    "Range": 3,
+    "Area": 116133,
+    "Param1": 22,
+    "Param2": 32,
+    "Power": 65
+  },
+  {
+    "Id": 60019,
+    "_comment": "Type 6 - Group 600, Swing 19",
+    "Range": 3,
+    "Area": 116133,
+    "Param1": 22,
+    "Param2": 32,
+    "Power": 65
+  },
+  {
+    "Id": 60020,
+    "_comment": "Type 6 - Group 600, Swing 20",
+    "Range": 3,
+    "Area": 116133,
+    "Param1": 22,
+    "Param2": 32,
+    "Power": 65
+  },
+  {
+    "Id": 60021,
+    "_comment": "Type 6 - Group 600, Swing 21",
+    "Range": 3,
+    "Area": 116133,
+    "Param1": 22,
+    "Param2": 32,
+    "Power": 65
+  },
+  {
+    "Id": 60022,
+    "_comment": "Type 6 - Group 600, Swing 22",
+    "Range": 3,
+    "Area": 116133,
+    "Param1": 22,
+    "Param2": 32,
+    "Power": 65
+  },
+  {
+    "Id": 60023,
+    "_comment": "Type 6 - Group 600, Swing 23",
+    "Range": 3,
+    "Area": 116133,
+    "Param1": 22,
+    "Param2": 32,
+    "Power": 65
+  },
+  {
+    "Id": 60024,
+    "_comment": "Type 6 - Group 600, Swing 24",
+    "Range": 3,
+    "Area": 116133,
+    "Param1": 22,
+    "Param2": 32,
+    "Power": 65
+  },
+  {
+    "Id": 60025,
+    "_comment": "Type 6 - Group 600, Swing 25",
+    "Range": 3,
+    "Area": 116133,
+    "Param1": 22,
+    "Param2": 32,
+    "Power": 65
+  },
+  {
+    "Id": 60026,
+    "_comment": "Type 6 - Group 600, Swing 26",
+    "Range": 3,
+    "Area": 116133,
+    "Param1": 22,
+    "Param2": 32,
+    "Power": 65
+  },
+  {
+    "Id": 60027,
+    "_comment": "Type 6 - Group 600, Swing 27",
+    "Range": 3,
+    "Area": 115092,
+    "Param1": 22,
+    "Param2": 32,
+    "Power": 70
+  },
+  {
+    "Id": 60028,
+    "_comment": "Type 6 - Group 600, Swing 28",
+    "Range": 3,
+    "Area": 116133,
+    "Param1": 22,
+    "Param2": 32,
+    "Power": 65
+  },
+  {
+    "Id": 60029,
+    "_comment": "Type 6 - Group 600, Swing 29",
+    "Range": 3,
+    "Area": 116133,
+    "Param1": 22,
+    "Param2": 32,
+    "Power": 65
+  },
+  {
+    "Id": 60030,
+    "_comment": "Type 6 - Group 600, Swing 30",
+    "Range": 3,
+    "Area": 116133,
+    "Param1": 22,
+    "Param2": 32,
+    "Power": 65
+  },
+  {
+    "Id": 60031,
+    "_comment": "Type 6 - Group 600, Swing 31",
+    "Range": 3,
+    "Area": 116133,
+    "Param1": 22,
+    "Param2": 32,
+    "Power": 65
+  },
+  {
+    "Id": 60032,
+    "_comment": "Type 6 - Group 600, Swing 32",
+    "Range": 3,
+    "Area": 116133,
+    "Param1": 22,
+    "Param2": 32,
+    "Power": 65
+  },
+  {
+    "Id": 60033,
+    "_comment": "Type 6 - Group 600, Swing 33",
+    "Range": 3,
+    "Area": 115092,
+    "Param1": 22,
+    "Param2": 32,
+    "Power": 70
+  },
+  {
+    "Id": 60034,
+    "_comment": "Type 6 - Group 600, Swing 34",
+    "Range": 3,
+    "Area": 116133,
+    "Param1": 22,
+    "Param2": 32,
+    "Power": 65
+  },
+  {
+    "Id": 80001,
+    "_comment": "Type 8 - Group 800, Swing 1",
+    "Range": 3,
+    "Area": 115092,
+    "Param1": 22,
+    "Param2": 32,
+    "Power": 70
+  },
+  {
+    "Id": 80002,
+    "_comment": "Type 8 - Group 800, Swing 2",
+    "Range": 3,
+    "Area": 115092,
+    "Param1": 22,
+    "Param2": 32,
+    "Power": 70
+  },
+  {
+    "Id": 80003,
+    "_comment": "Type 8 - Group 800, Swing 3",
+    "Range": 3,
+    "Area": 115092,
+    "Param1": 22,
+    "Param2": 32,
+    "Power": 70
+  },
+  {
+    "Id": 80004,
+    "_comment": "Type 8 - Group 800, Swing 4",
+    "Range": 3,
+    "Area": 115092,
+    "Param1": 22,
+    "Param2": 32,
+    "Power": 70
+  },
+  {
+    "Id": 80005,
+    "_comment": "Type 8 - Group 800, Swing 5",
+    "Range": 3,
+    "Area": 101011,
+    "Param1": 22,
+    "Param2": 32,
+    "Power": 1
+  },
+  {
+    "Id": 80006,
+    "_comment": "Type 8 - Group 800, Swing 6",
+    "Range": 3,
+    "Area": 115092,
+    "Param1": 22,
+    "Param2": 32,
+    "Power": 70
+  },
+  {
+    "Id": 80007,
+    "_comment": "Type 8 - Group 800, Swing 7",
+    "Range": 3,
+    "Area": 115092,
+    "Param1": 22,
+    "Param2": 32,
+    "Power": 70
+  },
+  {
+    "Id": 80008,
+    "_comment": "Type 8 - Group 800, Swing 8",
+    "Range": 3,
+    "Area": 101011,
+    "Param1": 22,
+    "Param2": 32,
+    "Power": 1
+  },
+  {
+    "Id": 80009,
+    "_comment": "Type 8 - Group 800, Swing 9",
+    "Range": 3,
+    "Area": 115092,
+    "Param1": 22,
+    "Param2": 32,
+    "Power": 70
+  },
+  {
+    "Id": 80010,
+    "_comment": "Type 8 - Group 800, Swing 10",
+    "Range": 3,
+    "Area": 115092,
+    "Param1": 22,
+    "Param2": 32,
+    "Power": 70
+  },
+  {
+    "Id": 80011,
+    "_comment": "Type 8 - Group 800, Swing 11",
+    "Range": 3,
+    "Area": 115092,
+    "Param1": 22,
+    "Param2": 32,
+    "Power": 70
+  },
+  {
+    "Id": 80012,
+    "_comment": "Type 8 - Group 800, Swing 12",
+    "Range": 3,
+    "Area": 101011,
+    "Param1": 22,
+    "Param2": 32,
+    "Power": 1
+  },
+  {
+    "Id": 80013,
+    "_comment": "Type 8 - Group 800, Swing 13",
+    "Range": 3,
+    "Area": 115092,
+    "Param1": 22,
+    "Param2": 32,
+    "Power": 70
+  },
+  {
+    "Id": 80014,
+    "_comment": "Type 8 - Group 800, Swing 14",
+    "Range": 3,
+    "Area": 115092,
+    "Param1": 22,
+    "Param2": 32,
+    "Power": 70
+  },
+  {
+    "Id": 80015,
+    "_comment": "Type 8 - Group 800, Swing 15",
+    "Range": 3,
+    "Area": 115092,
+    "Param1": 22,
+    "Param2": 32,
+    "Power": 70
+  },
+  {
+    "Id": 80016,
+    "_comment": "Type 8 - Group 800, Swing 16",
+    "Range": 3,
+    "Area": 101011,
+    "Param1": 22,
+    "Param2": 32,
+    "Power": 1
+  },
+  {
+    "Id": 80017,
+    "_comment": "Type 8 - Group 800, Swing 17",
+    "Range": 3,
+    "Area": 115092,
+    "Param1": 22,
+    "Param2": 32,
+    "Power": 70
+  },
+  {
+    "Id": 80018,
+    "_comment": "Type 8 - Group 800, Swing 18",
+    "Range": 3,
+    "Area": 101011,
+    "Param1": 22,
+    "Param2": 32,
+    "Power": 1
+  },
+  {
+    "Id": 80019,
+    "_comment": "Type 8 - Group 800, Swing 19",
+    "Range": 3,
+    "Area": 115092,
+    "Param1": 22,
+    "Param2": 32,
+    "Power": 70
+  },
+  {
+    "Id": 80020,
+    "_comment": "Type 8 - Group 800, Swing 20",
+    "Range": 3,
+    "Area": 101011,
+    "Param1": 22,
+    "Param2": 32,
+    "Power": 1
+  },
+  {
+    "Id": 80021,
+    "_comment": "Type 8 - Group 800, Swing 21",
+    "Range": 3,
+    "Area": 101011,
+    "Param1": 22,
+    "Param2": 32,
+    "Power": 1
+  },
+  {
+    "Id": 80022,
+    "_comment": "Type 8 - Group 800, Swing 22",
+    "Range": 3,
+    "Area": 101011,
+    "Param1": 22,
+    "Param2": 32,
+    "Power": 1
+  },
+  {
+    "Id": 80023,
+    "_comment": "Type 8 - Group 800, Swing 23",
+    "Range": 3,
+    "Area": 101011,
+    "Param1": 22,
+    "Param2": 32,
+    "Power": 1
+  },
+  {
+    "Id": 80024,
+    "_comment": "Type 8 - Group 800, Swing 24",
+    "Range": 3,
+    "Area": 101011,
+    "Param1": 22,
+    "Param2": 32,
+    "Power": 1
+  },
+  {
+    "Id": 80025,
+    "_comment": "Type 8 - Group 800, Swing 25",
+    "Range": 3,
+    "Area": 115092,
+    "Param1": 22,
+    "Param2": 32,
+    "Power": 70
+  },
+  {
+    "Id": 80026,
+    "_comment": "Type 8 - Group 800, Swing 26",
+    "Range": 3,
+    "Area": 101011,
+    "Param1": 22,
+    "Param2": 32,
+    "Power": 1
+  },
+  {
+    "Id": 80027,
+    "_comment": "Type 8 - Group 800, Swing 27",
+    "Range": 3,
+    "Area": 115092,
+    "Param1": 22,
+    "Param2": 32,
+    "Power": 70
+  },
+  {
+    "Id": 80028,
+    "_comment": "Type 8 - Group 800, Swing 28",
+    "Range": 3,
+    "Area": 115092,
+    "Param1": 22,
+    "Param2": 32,
+    "Power": 70
+  },
+  {
+    "Id": 80029,
+    "_comment": "Type 8 - Group 800, Swing 29",
+    "Range": 3,
+    "Area": 115092,
+    "Param1": 22,
+    "Param2": 32,
+    "Power": 70
+  },
+  {
+    "Id": 80030,
+    "_comment": "Type 8 - Group 800, Swing 30",
+    "Range": 3,
+    "Area": 115092,
+    "Param1": 22,
+    "Param2": 32,
+    "Power": 70
+  },
+  {
+    "Id": 80031,
+    "_comment": "Type 8 - Group 800, Swing 31",
+    "Range": 3,
+    "Area": 115092,
+    "Param1": 22,
+    "Param2": 32,
+    "Power": 70
+  }
+]

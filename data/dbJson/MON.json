@@ -1,0 +1,2382 @@
+[
+  {
+    "Id": 1,
+    "_comment": "Hunt Monster [1] ソソ - Level 1 (Basis: 1, Grade: 1)",
+    "Level": 1,
+    "BasisMobId": 1,
+    "Name": "[1] ソソ",
+    "Param4": 0,
+    "Param5": -1,
+    "Grade": 1
+  },
+  {
+    "Id": 2,
+    "_comment": "Hunt Monster [2] ラッチュー - Level 2 (Basis: 7, Grade: 1)",
+    "Level": 2,
+    "BasisMobId": 7,
+    "Name": "[2] ラッチュー",
+    "Param4": 0,
+    "Param5": -1,
+    "Grade": 1
+  },
+  {
+    "Id": 3,
+    "_comment": "Hunt Monster [1] ラッチュー - Level 1 (Basis: 7, Grade: 1)",
+    "Level": 1,
+    "BasisMobId": 7,
+    "Name": "[1] ラッチュー",
+    "Param4": 0,
+    "Param5": -1,
+    "Grade": 1
+  },
+  {
+    "Id": 4,
+    "_comment": "Hunt Monster [3] マルシュ - Level 3 (Basis: 3, Grade: 1)",
+    "Level": 3,
+    "BasisMobId": 3,
+    "Name": "[3] マルシュ",
+    "Param4": 0,
+    "Param5": -1,
+    "Grade": 1
+  },
+  {
+    "Id": 5,
+    "_comment": "Hunt Monster [4] ブラービー - Level 4 (Basis: 25, Grade: 2)",
+    "Level": 4,
+    "BasisMobId": 25,
+    "Name": "[4] ブラービー",
+    "Param4": 0,
+    "Param5": -1,
+    "Grade": 2
+  },
+  {
+    "Id": 6,
+    "_comment": "Hunt Monster [5] マルシュ - Level 5 (Basis: 3, Grade: 2)",
+    "Level": 5,
+    "BasisMobId": 3,
+    "Name": "[5] マルシュ",
+    "Param4": 0,
+    "Param5": -1,
+    "Grade": 2
+  },
+  {
+    "Id": 7,
+    "_comment": "Hunt Monster [6] ブラービー - Level 6 (Basis: 25, Grade: 2)",
+    "Level": 6,
+    "BasisMobId": 25,
+    "Name": "[6] ブラービー",
+    "Param4": 0,
+    "Param5": -1,
+    "Grade": 2
+  },
+  {
+    "Id": 8,
+    "_comment": "Hunt Monster [7] テディ - Level 7 (Basis: 4, Grade: 3)",
+    "Level": 7,
+    "BasisMobId": 4,
+    "Name": "[7] テディ",
+    "Param4": 0,
+    "Param5": -1,
+    "Grade": 3
+  },
+  {
+    "Id": 9,
+    "_comment": "Hunt Monster [8] テディ - Level 8 (Basis: 4, Grade: 3)",
+    "Level": 8,
+    "BasisMobId": 4,
+    "Name": "[8] テディ",
+    "Param4": 0,
+    "Param5": -1,
+    "Grade": 3
+  },
+  {
+    "Id": 10,
+    "_comment": "Hunt Monster [9] グレゴリーII世 - Level 9 (Basis: 98, Grade: 4)",
+    "Level": 9,
+    "BasisMobId": 98,
+    "Name": "[9] グレゴリーII世",
+    "Param4": 0,
+    "Param5": -1,
+    "Grade": 4
+  },
+  {
+    "Id": 11,
+    "_comment": "Hunt Monster [10] ボボカン - Level 10 (Basis: 5, Grade: 4)",
+    "Level": 10,
+    "BasisMobId": 5,
+    "Name": "[10] ボボカン",
+    "Param4": 0,
+    "Param5": -1,
+    "Grade": 4
+  },
+  {
+    "Id": 12,
+    "_comment": "Hunt Monster [13] ボボカン - Level 13 (Basis: 5, Grade: 6)",
+    "Level": 13,
+    "BasisMobId": 5,
+    "Name": "[13] ボボカン",
+    "Param4": 0,
+    "Param5": -1,
+    "Grade": 6
+  },
+  {
+    "Id": 13,
+    "_comment": "Hunt Monster [12] グレゴリーII世 - Level 12 (Basis: 98, Grade: 5)",
+    "Level": 12,
+    "BasisMobId": 98,
+    "Name": "[12] グレゴリーII世",
+    "Param4": 0,
+    "Param5": -1,
+    "Grade": 5
+  },
+  {
+    "Id": 14,
+    "_comment": "Hunt Monster [11] ☆ソソ☆ - Level 11 (Basis: 63, Grade: 5)",
+    "Level": 11,
+    "BasisMobId": 63,
+    "Name": "[11] ☆ソソ☆",
+    "Param4": 0,
+    "Param5": -1,
+    "Grade": 5
+  },
+  {
+    "Id": 15,
+    "_comment": "Hunt Monster [14] ☆ソソ☆ - Level 14 (Basis: 63, Grade: 6)",
+    "Level": 14,
+    "BasisMobId": 63,
+    "Name": "[14] ☆ソソ☆",
+    "Param4": 0,
+    "Param5": -1,
+    "Grade": 6
+  },
+  {
+    "Id": 16,
+    "_comment": "Hunt Monster [15] ボンボ - Level 15 (Basis: 90, Grade: 7)",
+    "Level": 15,
+    "BasisMobId": 90,
+    "Name": "[15] ボンボ",
+    "Param4": 0,
+    "Param5": -1,
+    "Grade": 7
+  },
+  {
+    "Id": 17,
+    "_comment": "Hunt Monster [1] ロルレクス - Level 1 (Basis: 100, Grade: 1)",
+    "Level": 1,
+    "BasisMobId": 100,
+    "Name": "[1] ロルレクス",
+    "Param4": 0,
+    "Param5": -1,
+    "Grade": 1
+  },
+  {
+    "Id": 18,
+    "_comment": "Hunt Monster [16] ゲトー - Level 16 (Basis: 8, Grade: 8)",
+    "Level": 16,
+    "BasisMobId": 8,
+    "Name": "[16] ゲトー",
+    "Param4": 0,
+    "Param5": -1,
+    "Grade": 8
+  },
+  {
+    "Id": 19,
+    "_comment": "Hunt Monster [1] キングスパービー - Level 1 (Basis: 32, Grade: 1)",
+    "Level": 1,
+    "BasisMobId": 32,
+    "Name": "[1] キングスパービー",
+    "Param4": 0,
+    "Param5": -1,
+    "Grade": 1
+  },
+  {
+    "Id": 20,
+    "_comment": "Hunt Monster [17] 子ヤンヤン - Level 17 (Basis: 53, Grade: 8)",
+    "Level": 17,
+    "BasisMobId": 53,
+    "Name": "[17] 子ヤンヤン",
+    "Param4": 0,
+    "Param5": -1,
+    "Grade": 8
+  },
+  {
+    "Id": 21,
+    "_comment": "Hunt Monster [18] 子ヤンヤン - Level 18 (Basis: 53, Grade: 9)",
+    "Level": 18,
+    "BasisMobId": 53,
+    "Name": "[18] 子ヤンヤン",
+    "Param4": 0,
+    "Param5": -1,
+    "Grade": 9
+  },
+  {
+    "Id": 22,
+    "_comment": "Hunt Monster [19] ヤンヤン - Level 19 (Basis: 52, Grade: 10)",
+    "Level": 19,
+    "BasisMobId": 52,
+    "Name": "[19] ヤンヤン",
+    "Param4": 0,
+    "Param5": -1,
+    "Grade": 10
+  },
+  {
+    "Id": 23,
+    "_comment": "Hunt Monster [20] ヤンヤン - Level 20 (Basis: 52, Grade: 11)",
+    "Level": 20,
+    "BasisMobId": 52,
+    "Name": "[20] ヤンヤン",
+    "Param4": 0,
+    "Param5": -1,
+    "Grade": 11
+  },
+  {
+    "Id": 24,
+    "_comment": "Hunt Monster [1] スパービー - Level 1 (Basis: 31, Grade: 1)",
+    "Level": 1,
+    "BasisMobId": 31,
+    "Name": "[1] スパービー",
+    "Param4": 0,
+    "Param5": -1,
+    "Grade": 1
+  },
+  {
+    "Id": 25,
+    "_comment": "Hunt Monster [21] バラウス - Level 21 (Basis: 11, Grade: 11)",
+    "Level": 21,
+    "BasisMobId": 11,
+    "Name": "[21] バラウス",
+    "Param4": 0,
+    "Param5": -1,
+    "Grade": 11
+  },
+  {
+    "Id": 26,
+    "_comment": "Hunt Monster [22] バラウス - Level 22 (Basis: 11, Grade: 12)",
+    "Level": 22,
+    "BasisMobId": 11,
+    "Name": "[22] バラウス",
+    "Param4": 0,
+    "Param5": -1,
+    "Grade": 12
+  },
+  {
+    "Id": 27,
+    "_comment": "Hunt Monster [1] ゴウ - Level 1 (Basis: 38, Grade: 1)",
+    "Level": 1,
+    "BasisMobId": 38,
+    "Name": "[1] ゴウ",
+    "Param4": 0,
+    "Param5": -1,
+    "Grade": 1
+  },
+  {
+    "Id": 28,
+    "_comment": "Hunt Monster [23] ウッド - Level 23 (Basis: 10, Grade: 13)",
+    "Level": 23,
+    "BasisMobId": 10,
+    "Name": "[23] ウッド",
+    "Param4": 0,
+    "Param5": -1,
+    "Grade": 13
+  },
+  {
+    "Id": 29,
+    "_comment": "Hunt Monster [1] ウッド - Level 1 (Basis: 10, Grade: 1)",
+    "Level": 1,
+    "BasisMobId": 10,
+    "Name": "[1] ウッド",
+    "Param4": 0,
+    "Param5": -1,
+    "Grade": 1
+  },
+  {
+    "Id": 30,
+    "_comment": "Hunt Monster [24] ミュロビー - Level 24 (Basis: 29, Grade: 14)",
+    "Level": 24,
+    "BasisMobId": 29,
+    "Name": "[24] ミュロビー",
+    "Param4": 0,
+    "Param5": -1,
+    "Grade": 14
+  },
+  {
+    "Id": 31,
+    "_comment": "Hunt Monster [25] レディ - Level 25 (Basis: 36, Grade: 15)",
+    "Level": 25,
+    "BasisMobId": 36,
+    "Name": "[25] レディ",
+    "Param4": 0,
+    "Param5": -1,
+    "Grade": 15
+  },
+  {
+    "Id": 32,
+    "_comment": "Hunt Monster [1] レディ - Level 1 (Basis: 36, Grade: 1)",
+    "Level": 1,
+    "BasisMobId": 36,
+    "Name": "[1] レディ",
+    "Param4": 0,
+    "Param5": -1,
+    "Grade": 1
+  },
+  {
+    "Id": 33,
+    "_comment": "Hunt Monster [26] ハイバラウス - Level 26 (Basis: 12, Grade: 16)",
+    "Level": 26,
+    "BasisMobId": 12,
+    "Name": "[26] ハイバラウス",
+    "Param4": 0,
+    "Param5": -1,
+    "Grade": 16
+  },
+  {
+    "Id": 34,
+    "_comment": "Hunt Monster [27] ステディ - Level 27 (Basis: 37, Grade: 17)",
+    "Level": 27,
+    "BasisMobId": 37,
+    "Name": "[27] ステディ",
+    "Param4": 0,
+    "Param5": -1,
+    "Grade": 17
+  },
+  {
+    "Id": 35,
+    "_comment": "Hunt Monster [1] 怒ったミュロビー - Level 1 (Basis: 120, Grade: 1)",
+    "Level": 1,
+    "BasisMobId": 120,
+    "Name": "[1] 怒ったミュロビー",
+    "Param4": 0,
+    "Param5": -1,
+    "Grade": 1
+  },
+  {
+    "Id": 36,
+    "_comment": "Hunt Monster [1] ソソスケルトン - Level 1 (Basis: 55, Grade: 1)",
+    "Level": 1,
+    "BasisMobId": 55,
+    "Name": "[1] ソソスケルトン",
+    "Param4": 0,
+    "Param5": -1,
+    "Grade": 1
+  },
+  {
+    "Id": 37,
+    "_comment": "Hunt Monster [2] ハロウィーン - Level 2 (Basis: 56, Grade: 1)",
+    "Level": 2,
+    "BasisMobId": 56,
+    "Name": "[2] ハロウィーン",
+    "Param4": 0,
+    "Param5": -1,
+    "Grade": 1
+  },
+  {
+    "Id": 38,
+    "_comment": "Hunt Monster [7] フォクシー - Level 7 (Basis: 54, Grade: 3)",
+    "Level": 7,
+    "BasisMobId": 54,
+    "Name": "[7] フォクシー",
+    "Param4": 0,
+    "Param5": -1,
+    "Grade": 3
+  },
+  {
+    "Id": 39,
+    "_comment": "Hunt Monster [1] モネラ - Level 1 (Basis: 9, Grade: 1)",
+    "Level": 1,
+    "BasisMobId": 9,
+    "Name": "[1] モネラ",
+    "Param4": 0,
+    "Param5": -1,
+    "Grade": 1
+  },
+  {
+    "Id": 40,
+    "_comment": "Hunt Monster [1] モネラ - Level 1 (Basis: 9, Grade: 1)",
+    "Level": 1,
+    "BasisMobId": 9,
+    "Name": "[1] モネラ",
+    "Param4": 0,
+    "Param5": -1,
+    "Grade": 1
+  },
+  {
+    "Id": 41,
+    "_comment": "Hunt Monster [4] リーグ - Level 4 (Basis: 65, Grade: 2)",
+    "Level": 4,
+    "BasisMobId": 65,
+    "Name": "[4] リーグ",
+    "Param4": 0,
+    "Param5": -1,
+    "Grade": 2
+  },
+  {
+    "Id": 42,
+    "_comment": "Hunt Monster [5] ナイトウォーカー - Level 5 (Basis: 84, Grade: 2)",
+    "Level": 5,
+    "BasisMobId": 84,
+    "Name": "[5] ナイトウォーカー",
+    "Param4": 0,
+    "Param5": -1,
+    "Grade": 2
+  },
+  {
+    "Id": 43,
+    "_comment": "Hunt Monster [6] ビーオ - Level 6 (Basis: 66, Grade: 2)",
+    "Level": 6,
+    "BasisMobId": 66,
+    "Name": "[6] ビーオ",
+    "Param4": 0,
+    "Param5": -1,
+    "Grade": 2
+  },
+  {
+    "Id": 44,
+    "_comment": "Hunt Monster [1] ハッコウモリ - Level 1 (Basis: 46, Grade: 1)",
+    "Level": 1,
+    "BasisMobId": 46,
+    "Name": "[1] ハッコウモリ",
+    "Param4": 0,
+    "Param5": -1,
+    "Grade": 1
+  },
+  {
+    "Id": 45,
+    "_comment": "Hunt Monster [3] ゼロセブン - Level 3 (Basis: 57, Grade: 1)",
+    "Level": 3,
+    "BasisMobId": 57,
+    "Name": "[3] ゼロセブン",
+    "Param4": 0,
+    "Param5": -1,
+    "Grade": 1
+  },
+  {
+    "Id": 46,
+    "_comment": "Hunt Monster [1] ゼロセブン - Level 1 (Basis: 57, Grade: 1)",
+    "Level": 1,
+    "BasisMobId": 57,
+    "Name": "[1] ゼロセブン",
+    "Param4": 0,
+    "Param5": -1,
+    "Grade": 1
+  },
+  {
+    "Id": 47,
+    "_comment": "Hunt Monster [1] ソソマミー - Level 1 (Basis: 96, Grade: 1)",
+    "Level": 1,
+    "BasisMobId": 96,
+    "Name": "[1] ソソマミー",
+    "Param4": 0,
+    "Param5": -1,
+    "Grade": 1
+  },
+  {
+    "Id": 48,
+    "_comment": "Hunt Monster [8] レイス - Level 8 (Basis: 58, Grade: 3)",
+    "Level": 8,
+    "BasisMobId": 58,
+    "Name": "[8] レイス",
+    "Param4": 0,
+    "Param5": -1,
+    "Grade": 3
+  },
+  {
+    "Id": 49,
+    "_comment": "Hunt Monster [9] フライングドクロ - Level 9 (Basis: 67, Grade: 4)",
+    "Level": 9,
+    "BasisMobId": 67,
+    "Name": "[9] フライングドクロ",
+    "Param4": 0,
+    "Param5": -1,
+    "Grade": 4
+  },
+  {
+    "Id": 50,
+    "_comment": "Hunt Monster [10] カマイタチ - Level 10 (Basis: 86, Grade: 4)",
+    "Level": 10,
+    "BasisMobId": 86,
+    "Name": "[10] カマイタチ",
+    "Param4": 0,
+    "Param5": -1,
+    "Grade": 4
+  },
+  {
+    "Id": 51,
+    "_comment": "Hunt Monster [11] オルゴールソソ - Level 11 (Basis: 99, Grade: 5)",
+    "Level": 11,
+    "BasisMobId": 99,
+    "Name": "[11] オルゴールソソ",
+    "Param4": 0,
+    "Param5": -1,
+    "Grade": 5
+  },
+  {
+    "Id": 52,
+    "_comment": "Hunt Monster [1] コッコー - Level 1 (Basis: 126, Grade: 1)",
+    "Level": 1,
+    "BasisMobId": 126,
+    "Name": "[1] コッコー",
+    "Param4": 0,
+    "Param5": -1,
+    "Grade": 1
+  },
+  {
+    "Id": 53,
+    "_comment": "Hunt Monster [12] スパービー - Level 12 (Basis: 31, Grade: 5)",
+    "Level": 12,
+    "BasisMobId": 31,
+    "Name": "[12] スパービー",
+    "Param4": 0,
+    "Param5": -1,
+    "Grade": 5
+  },
+  {
+    "Id": 54,
+    "_comment": "Hunt Monster [13] スパービー - Level 13 (Basis: 31, Grade: 6)",
+    "Level": 13,
+    "BasisMobId": 31,
+    "Name": "[13] スパービー",
+    "Param4": 0,
+    "Param5": -1,
+    "Grade": 6
+  },
+  {
+    "Id": 55,
+    "_comment": "Hunt Monster [14] 黒後家蜘蛛 - Level 14 (Basis: 106, Grade: 6)",
+    "Level": 14,
+    "BasisMobId": 106,
+    "Name": "[14] 黒後家蜘蛛",
+    "Param4": 0,
+    "Param5": -1,
+    "Grade": 6
+  },
+  {
+    "Id": 56,
+    "_comment": "Hunt Monster [1] 黒後家蜘蛛 - Level 1 (Basis: 106, Grade: 1)",
+    "Level": 1,
+    "BasisMobId": 106,
+    "Name": "[1] 黒後家蜘蛛",
+    "Param4": 0,
+    "Param5": -1,
+    "Grade": 1
+  },
+  {
+    "Id": 57,
+    "_comment": "Hunt Monster [16] ニーナ - Level 16 (Basis: 73, Grade: 8)",
+    "Level": 16,
+    "BasisMobId": 73,
+    "Name": "[16] ニーナ",
+    "Param4": 0,
+    "Param5": -1,
+    "Grade": 8
+  },
+  {
+    "Id": 58,
+    "_comment": "Hunt Monster [17] ニーノ - Level 17 (Basis: 74, Grade: 8)",
+    "Level": 17,
+    "BasisMobId": 74,
+    "Name": "[17] ニーノ",
+    "Param4": 0,
+    "Param5": -1,
+    "Grade": 8
+  },
+  {
+    "Id": 59,
+    "_comment": "Hunt Monster [18] エミリー - Level 18 (Basis: 72, Grade: 9)",
+    "Level": 18,
+    "BasisMobId": 72,
+    "Name": "[18] エミリー",
+    "Param4": 0,
+    "Param5": -1,
+    "Grade": 9
+  },
+  {
+    "Id": 60,
+    "_comment": "Hunt Monster [15] ニーナ - Level 15 (Basis: 73, Grade: 7)",
+    "Level": 15,
+    "BasisMobId": 73,
+    "Name": "[15] ニーナ",
+    "Param4": 0,
+    "Param5": -1,
+    "Grade": 7
+  },
+  {
+    "Id": 61,
+    "_comment": "Hunt Monster [19] ニーノ - Level 19 (Basis: 74, Grade: 10)",
+    "Level": 19,
+    "BasisMobId": 74,
+    "Name": "[19] ニーノ",
+    "Param4": 0,
+    "Param5": -1,
+    "Grade": 10
+  },
+  {
+    "Id": 62,
+    "_comment": "Hunt Monster [20] エミリー - Level 20 (Basis: 72, Grade: 11)",
+    "Level": 20,
+    "BasisMobId": 72,
+    "Name": "[20] エミリー",
+    "Param4": 0,
+    "Param5": -1,
+    "Grade": 11
+  },
+  {
+    "Id": 63,
+    "_comment": "Hunt Monster [21] パペット - Level 21 (Basis: 75, Grade: 11)",
+    "Level": 21,
+    "BasisMobId": 75,
+    "Name": "[21] パペット",
+    "Param4": 0,
+    "Param5": -1,
+    "Grade": 11
+  },
+  {
+    "Id": 64,
+    "_comment": "Hunt Monster [22] パペット - Level 22 (Basis: 75, Grade: 12)",
+    "Level": 22,
+    "BasisMobId": 75,
+    "Name": "[22] パペット",
+    "Param4": 0,
+    "Param5": -1,
+    "Grade": 12
+  },
+  {
+    "Id": 65,
+    "_comment": "Hunt Monster [23] トホホ - Level 23 (Basis: 94, Grade: 13)",
+    "Level": 23,
+    "BasisMobId": 94,
+    "Name": "[23] トホホ",
+    "Param4": 0,
+    "Param5": -1,
+    "Grade": 13
+  },
+  {
+    "Id": 66,
+    "_comment": "Hunt Monster [24] 忍者 - Level 24 (Basis: 103, Grade: 14)",
+    "Level": 24,
+    "BasisMobId": 103,
+    "Name": "[24] 忍者",
+    "Param4": 0,
+    "Param5": -1,
+    "Grade": 14
+  },
+  {
+    "Id": 67,
+    "_comment": "Hunt Monster [25] 忍者 - Level 25 (Basis: 103, Grade: 15)",
+    "Level": 25,
+    "BasisMobId": 103,
+    "Name": "[25] 忍者",
+    "Param4": 0,
+    "Param5": -1,
+    "Grade": 15
+  },
+  {
+    "Id": 68,
+    "_comment": "Hunt Monster [26] ホギーパペット - Level 26 (Basis: 76, Grade: 16)",
+    "Level": 26,
+    "BasisMobId": 76,
+    "Name": "[26] ホギーパペット",
+    "Param4": 0,
+    "Param5": -1,
+    "Grade": 16
+  },
+  {
+    "Id": 69,
+    "_comment": "Hunt Monster [27] プリズナー - Level 27 (Basis: 91, Grade: 17)",
+    "Level": 27,
+    "BasisMobId": 91,
+    "Name": "[27] プリズナー",
+    "Param4": 0,
+    "Param5": -1,
+    "Grade": 17
+  },
+  {
+    "Id": 70,
+    "_comment": "Hunt Monster [1] ワイルドウッドヘリアン - Level 1 (Basis: 6, Grade: 1)",
+    "Level": 1,
+    "BasisMobId": 6,
+    "Name": "[1] ワイルドウッドヘリアン",
+    "Param4": 0,
+    "Param5": -1,
+    "Grade": 1
+  },
+  {
+    "Id": 71,
+    "_comment": "Hunt Monster [28] レッドソソ - Level 28 (Basis: 123, Grade: 18)",
+    "Level": 28,
+    "BasisMobId": 123,
+    "Name": "[28] レッドソソ",
+    "Param4": 0,
+    "Param5": -1,
+    "Grade": 18
+  },
+  {
+    "Id": 72,
+    "_comment": "Hunt Monster [29] ブルーソソ - Level 29 (Basis: 124, Grade: 19)",
+    "Level": 29,
+    "BasisMobId": 124,
+    "Name": "[29] ブルーソソ",
+    "Param4": 0,
+    "Param5": -1,
+    "Grade": 19
+  },
+  {
+    "Id": 73,
+    "_comment": "Hunt Monster [1] お掃除ハカセ - Level 1 (Basis: 113, Grade: 1)",
+    "Level": 1,
+    "BasisMobId": 113,
+    "Name": "[1] お掃除ハカセ",
+    "Param4": 0,
+    "Param5": -1,
+    "Grade": 1
+  },
+  {
+    "Id": 74,
+    "_comment": "Hunt Monster [1] コッコー - Level 1 (Basis: 126, Grade: 1)",
+    "Level": 1,
+    "BasisMobId": 126,
+    "Name": "[1] コッコー",
+    "Param4": 0,
+    "Param5": -1,
+    "Grade": 1
+  },
+  {
+    "Id": 75,
+    "_comment": "Hunt Monster [1] キャタツラー - Level 1 (Basis: 114, Grade: 1)",
+    "Level": 1,
+    "BasisMobId": 114,
+    "Name": "[1] キャタツラー",
+    "Param4": 0,
+    "Param5": -1,
+    "Grade": 1
+  },
+  {
+    "Id": 76,
+    "_comment": "Hunt Monster [1] ツクエミミック - Level 1 (Basis: 109, Grade: 1)",
+    "Level": 1,
+    "BasisMobId": 109,
+    "Name": "[1] ツクエミミック",
+    "Param4": 0,
+    "Param5": -1,
+    "Grade": 1
+  },
+  {
+    "Id": 77,
+    "_comment": "Hunt Monster [1] イスファイター - Level 1 (Basis: 110, Grade: 1)",
+    "Level": 1,
+    "BasisMobId": 110,
+    "Name": "[1] イスファイター",
+    "Param4": 0,
+    "Param5": -1,
+    "Grade": 1
+  },
+  {
+    "Id": 78,
+    "_comment": "Hunt Monster [1] ピギー - Level 1 (Basis: 93, Grade: 1)",
+    "Level": 1,
+    "BasisMobId": 93,
+    "Name": "[1] ピギー",
+    "Param4": 0,
+    "Param5": -1,
+    "Grade": 1
+  },
+  {
+    "Id": 79,
+    "_comment": "Hunt Monster [30] ゼリーデリー - Level 30 (Basis: 101, Grade: 20)",
+    "Level": 30,
+    "BasisMobId": 101,
+    "Name": "[30] ゼリーデリー",
+    "Param4": 0,
+    "Param5": -1,
+    "Grade": 20
+  },
+  {
+    "Id": 80,
+    "_comment": "Hunt Monster [1] ワイルドウッドヘリアン - Level 1 (Basis: 6, Grade: 1)",
+    "Level": 1,
+    "BasisMobId": 6,
+    "Name": "[1] ワイルドウッドヘリアン",
+    "Param4": 0,
+    "Param5": -1,
+    "Grade": 1
+  },
+  {
+    "Id": 81,
+    "_comment": "Hunt Monster [28] レッドソソ - Level 28 (Basis: 123, Grade: 18)",
+    "Level": 28,
+    "BasisMobId": 123,
+    "Name": "[28] レッドソソ",
+    "Param4": 0,
+    "Param5": -1,
+    "Grade": 18
+  },
+  {
+    "Id": 82,
+    "_comment": "Hunt Monster [29] ブルーソソ - Level 29 (Basis: 124, Grade: 19)",
+    "Level": 29,
+    "BasisMobId": 124,
+    "Name": "[29] ブルーソソ",
+    "Param4": 0,
+    "Param5": -1,
+    "Grade": 19
+  },
+  {
+    "Id": 83,
+    "_comment": "Hunt Monster [1] お掃除ハカセ - Level 1 (Basis: 113, Grade: 1)",
+    "Level": 1,
+    "BasisMobId": 113,
+    "Name": "[1] お掃除ハカセ",
+    "Param4": 0,
+    "Param5": -1,
+    "Grade": 1
+  },
+  {
+    "Id": 84,
+    "_comment": "Hunt Monster [76] コッコー - Level 76 (Basis: 126, Grade: 283)",
+    "Level": 76,
+    "BasisMobId": 126,
+    "Name": "[76] コッコー",
+    "Param4": 0,
+    "Param5": -1,
+    "Grade": 283
+  },
+  {
+    "Id": 85,
+    "_comment": "Hunt Monster [1] キャタツラー - Level 1 (Basis: 114, Grade: 1)",
+    "Level": 1,
+    "BasisMobId": 114,
+    "Name": "[1] キャタツラー",
+    "Param4": 0,
+    "Param5": -1,
+    "Grade": 1
+  },
+  {
+    "Id": 86,
+    "_comment": "Hunt Monster [1] ツクエミミック - Level 1 (Basis: 109, Grade: 1)",
+    "Level": 1,
+    "BasisMobId": 109,
+    "Name": "[1] ツクエミミック",
+    "Param4": 0,
+    "Param5": -1,
+    "Grade": 1
+  },
+  {
+    "Id": 87,
+    "_comment": "Hunt Monster [1] イスファイター - Level 1 (Basis: 110, Grade: 1)",
+    "Level": 1,
+    "BasisMobId": 110,
+    "Name": "[1] イスファイター",
+    "Param4": 0,
+    "Param5": -1,
+    "Grade": 1
+  },
+  {
+    "Id": 88,
+    "_comment": "Hunt Monster [1] ピギー - Level 1 (Basis: 93, Grade: 1)",
+    "Level": 1,
+    "BasisMobId": 93,
+    "Name": "[1] ピギー",
+    "Param4": 0,
+    "Param5": -1,
+    "Grade": 1
+  },
+  {
+    "Id": 89,
+    "_comment": "Hunt Monster [30] ゼリーデリー - Level 30 (Basis: 101, Grade: 20)",
+    "Level": 30,
+    "BasisMobId": 101,
+    "Name": "[30] ゼリーデリー",
+    "Param4": 0,
+    "Param5": -1,
+    "Grade": 20
+  },
+  {
+    "Id": 90,
+    "_comment": "Hunt Monster [1] ワイルドウッドヘリアン - Level 1 (Basis: 6, Grade: 1)",
+    "Level": 1,
+    "BasisMobId": 6,
+    "Name": "[1] ワイルドウッドヘリアン",
+    "Param4": 0,
+    "Param5": -1,
+    "Grade": 1
+  },
+  {
+    "Id": 91,
+    "_comment": "Hunt Monster [1] レッドソソ - Level 1 (Basis: 123, Grade: 1)",
+    "Level": 1,
+    "BasisMobId": 123,
+    "Name": "[1] レッドソソ",
+    "Param4": 0,
+    "Param5": -1,
+    "Grade": 1
+  },
+  {
+    "Id": 92,
+    "_comment": "Hunt Monster [1] ブルーソソ - Level 1 (Basis: 124, Grade: 1)",
+    "Level": 1,
+    "BasisMobId": 124,
+    "Name": "[1] ブルーソソ",
+    "Param4": 0,
+    "Param5": -1,
+    "Grade": 1
+  },
+  {
+    "Id": 93,
+    "_comment": "Hunt Monster [1] お掃除ハカセ - Level 1 (Basis: 113, Grade: 1)",
+    "Level": 1,
+    "BasisMobId": 113,
+    "Name": "[1] お掃除ハカセ",
+    "Param4": 0,
+    "Param5": -1,
+    "Grade": 1
+  },
+  {
+    "Id": 94,
+    "_comment": "Hunt Monster [80] コッコー - Level 80 (Basis: 126, Grade: 332)",
+    "Level": 80,
+    "BasisMobId": 126,
+    "Name": "[80] コッコー",
+    "Param4": 0,
+    "Param5": -1,
+    "Grade": 332
+  },
+  {
+    "Id": 95,
+    "_comment": "Hunt Monster [1] キャタツラー - Level 1 (Basis: 114, Grade: 1)",
+    "Level": 1,
+    "BasisMobId": 114,
+    "Name": "[1] キャタツラー",
+    "Param4": 0,
+    "Param5": -1,
+    "Grade": 1
+  },
+  {
+    "Id": 96,
+    "_comment": "Hunt Monster [1] ツクエミミック - Level 1 (Basis: 109, Grade: 1)",
+    "Level": 1,
+    "BasisMobId": 109,
+    "Name": "[1] ツクエミミック",
+    "Param4": 0,
+    "Param5": -1,
+    "Grade": 1
+  },
+  {
+    "Id": 97,
+    "_comment": "Hunt Monster [1] イスファイター - Level 1 (Basis: 110, Grade: 1)",
+    "Level": 1,
+    "BasisMobId": 110,
+    "Name": "[1] イスファイター",
+    "Param4": 0,
+    "Param5": -1,
+    "Grade": 1
+  },
+  {
+    "Id": 98,
+    "_comment": "Hunt Monster [1] ピギー - Level 1 (Basis: 93, Grade: 1)",
+    "Level": 1,
+    "BasisMobId": 93,
+    "Name": "[1] ピギー",
+    "Param4": 0,
+    "Param5": -1,
+    "Grade": 1
+  },
+  {
+    "Id": 99,
+    "_comment": "Hunt Monster [1] ゼリーデリー - Level 1 (Basis: 101, Grade: 1)",
+    "Level": 1,
+    "BasisMobId": 101,
+    "Name": "[1] ゼリーデリー",
+    "Param4": 0,
+    "Param5": -1,
+    "Grade": 1
+  },
+  {
+    "Id": 100,
+    "_comment": "Hunt Monster [1] ワイルドウッドヘリアン - Level 1 (Basis: 6, Grade: 1)",
+    "Level": 1,
+    "BasisMobId": 6,
+    "Name": "[1] ワイルドウッドヘリアン",
+    "Param4": 0,
+    "Param5": -1,
+    "Grade": 1
+  },
+  {
+    "Id": 101,
+    "_comment": "Hunt Monster [1] レッドソソ - Level 1 (Basis: 123, Grade: 1)",
+    "Level": 1,
+    "BasisMobId": 123,
+    "Name": "[1] レッドソソ",
+    "Param4": 0,
+    "Param5": -1,
+    "Grade": 1
+  },
+  {
+    "Id": 102,
+    "_comment": "Hunt Monster [1] ブルーソソ - Level 1 (Basis: 124, Grade: 1)",
+    "Level": 1,
+    "BasisMobId": 124,
+    "Name": "[1] ブルーソソ",
+    "Param4": 0,
+    "Param5": -1,
+    "Grade": 1
+  },
+  {
+    "Id": 103,
+    "_comment": "Hunt Monster [1] お掃除ハカセ - Level 1 (Basis: 113, Grade: 1)",
+    "Level": 1,
+    "BasisMobId": 113,
+    "Name": "[1] お掃除ハカセ",
+    "Param4": 0,
+    "Param5": -1,
+    "Grade": 1
+  },
+  {
+    "Id": 104,
+    "_comment": "Hunt Monster [1] シャドウビースト - Level 1 (Basis: 112, Grade: 1)",
+    "Level": 1,
+    "BasisMobId": 112,
+    "Name": "[1] シャドウビースト",
+    "Param4": 0,
+    "Param5": -1,
+    "Grade": 1
+  },
+  {
+    "Id": 105,
+    "_comment": "Hunt Monster [1] キャタツラー - Level 1 (Basis: 114, Grade: 1)",
+    "Level": 1,
+    "BasisMobId": 114,
+    "Name": "[1] キャタツラー",
+    "Param4": 0,
+    "Param5": -1,
+    "Grade": 1
+  },
+  {
+    "Id": 106,
+    "_comment": "Hunt Monster [1] ツクエミミック - Level 1 (Basis: 109, Grade: 1)",
+    "Level": 1,
+    "BasisMobId": 109,
+    "Name": "[1] ツクエミミック",
+    "Param4": 0,
+    "Param5": -1,
+    "Grade": 1
+  },
+  {
+    "Id": 107,
+    "_comment": "Hunt Monster [1] イスファイター - Level 1 (Basis: 110, Grade: 1)",
+    "Level": 1,
+    "BasisMobId": 110,
+    "Name": "[1] イスファイター",
+    "Param4": 0,
+    "Param5": -1,
+    "Grade": 1
+  },
+  {
+    "Id": 108,
+    "_comment": "Hunt Monster [1] ピギー - Level 1 (Basis: 93, Grade: 1)",
+    "Level": 1,
+    "BasisMobId": 93,
+    "Name": "[1] ピギー",
+    "Param4": 0,
+    "Param5": -1,
+    "Grade": 1
+  },
+  {
+    "Id": 109,
+    "_comment": "Hunt Monster [1] ゼリーデリー - Level 1 (Basis: 101, Grade: 1)",
+    "Level": 1,
+    "BasisMobId": 101,
+    "Name": "[1] ゼリーデリー",
+    "Param4": 0,
+    "Param5": -1,
+    "Grade": 1
+  },
+  {
+    "Id": 110,
+    "_comment": "Hunt Monster [31] リトルクロコ - Level 31 (Basis: 47, Grade: 22)",
+    "Level": 31,
+    "BasisMobId": 47,
+    "Name": "[31] リトルクロコ",
+    "Param4": 0,
+    "Param5": -1,
+    "Grade": 22
+  },
+  {
+    "Id": 111,
+    "_comment": "Hunt Monster [32] グロービー - Level 32 (Basis: 27, Grade: 24)",
+    "Level": 32,
+    "BasisMobId": 27,
+    "Name": "[32] グロービー",
+    "Param4": 0,
+    "Param5": -1,
+    "Grade": 24
+  },
+  {
+    "Id": 112,
+    "_comment": "Hunt Monster [33] リトルクロコ - Level 33 (Basis: 47, Grade: 26)",
+    "Level": 33,
+    "BasisMobId": 47,
+    "Name": "[33] リトルクロコ",
+    "Param4": 0,
+    "Param5": -1,
+    "Grade": 26
+  },
+  {
+    "Id": 113,
+    "_comment": "Hunt Monster [34] グロービー - Level 34 (Basis: 27, Grade: 29)",
+    "Level": 34,
+    "BasisMobId": 27,
+    "Name": "[34] グロービー",
+    "Param4": 0,
+    "Param5": -1,
+    "Grade": 29
+  },
+  {
+    "Id": 114,
+    "_comment": "Hunt Monster [35] クロコ - Level 35 (Basis: 33, Grade: 31)",
+    "Level": 35,
+    "BasisMobId": 33,
+    "Name": "[35] クロコ",
+    "Param4": 0,
+    "Param5": -1,
+    "Grade": 31
+  },
+  {
+    "Id": 115,
+    "_comment": "Hunt Monster [36] グロービー - Level 36 (Basis: 27, Grade: 34)",
+    "Level": 36,
+    "BasisMobId": 27,
+    "Name": "[36] グロービー",
+    "Param4": 0,
+    "Param5": -1,
+    "Grade": 34
+  },
+  {
+    "Id": 116,
+    "_comment": "Hunt Monster [37] クロコ - Level 37 (Basis: 33, Grade: 37)",
+    "Level": 37,
+    "BasisMobId": 33,
+    "Name": "[37] クロコ",
+    "Param4": 0,
+    "Param5": -1,
+    "Grade": 37
+  },
+  {
+    "Id": 117,
+    "_comment": "Hunt Monster [38] グロービー - Level 38 (Basis: 27, Grade: 39)",
+    "Level": 38,
+    "BasisMobId": 27,
+    "Name": "[38] グロービー",
+    "Param4": 0,
+    "Param5": -1,
+    "Grade": 39
+  },
+  {
+    "Id": 118,
+    "_comment": "Hunt Monster [39] クロコ - Level 39 (Basis: 33, Grade: 42)",
+    "Level": 39,
+    "BasisMobId": 33,
+    "Name": "[39] クロコ",
+    "Param4": 0,
+    "Param5": -1,
+    "Grade": 42
+  },
+  {
+    "Id": 119,
+    "_comment": "Hunt Monster [40] スパービー - Level 40 (Basis: 31, Grade: 45)",
+    "Level": 40,
+    "BasisMobId": 31,
+    "Name": "[40] スパービー",
+    "Param4": 0,
+    "Param5": -1,
+    "Grade": 45
+  },
+  {
+    "Id": 120,
+    "_comment": "Hunt Monster [41] クロコ - Level 41 (Basis: 33, Grade: 48)",
+    "Level": 41,
+    "BasisMobId": 33,
+    "Name": "[41] クロコ",
+    "Param4": 0,
+    "Param5": -1,
+    "Grade": 48
+  },
+  {
+    "Id": 121,
+    "_comment": "Hunt Monster [42] スパービー - Level 42 (Basis: 31, Grade: 51)",
+    "Level": 42,
+    "BasisMobId": 31,
+    "Name": "[42] スパービー",
+    "Param4": 0,
+    "Param5": -1,
+    "Grade": 51
+  },
+  {
+    "Id": 122,
+    "_comment": "Hunt Monster [43] クロコ - Level 43 (Basis: 33, Grade: 54)",
+    "Level": 43,
+    "BasisMobId": 33,
+    "Name": "[43] クロコ",
+    "Param4": 0,
+    "Param5": -1,
+    "Grade": 54
+  },
+  {
+    "Id": 123,
+    "_comment": "Hunt Monster [44] スパービー - Level 44 (Basis: 31, Grade: 58)",
+    "Level": 44,
+    "BasisMobId": 31,
+    "Name": "[44] スパービー",
+    "Param4": 0,
+    "Param5": -1,
+    "Grade": 58
+  },
+  {
+    "Id": 124,
+    "_comment": "Hunt Monster [45] ミュロビー - Level 45 (Basis: 29, Grade: 61)",
+    "Level": 45,
+    "BasisMobId": 29,
+    "Name": "[45] ミュロビー",
+    "Param4": 0,
+    "Param5": -1,
+    "Grade": 61
+  },
+  {
+    "Id": 125,
+    "_comment": "Hunt Monster [46] スパービー - Level 46 (Basis: 31, Grade: 64)",
+    "Level": 46,
+    "BasisMobId": 31,
+    "Name": "[46] スパービー",
+    "Param4": 0,
+    "Param5": -1,
+    "Grade": 64
+  },
+  {
+    "Id": 126,
+    "_comment": "Hunt Monster [47] ミュロビー - Level 47 (Basis: 29, Grade: 68)",
+    "Level": 47,
+    "BasisMobId": 29,
+    "Name": "[47] ミュロビー",
+    "Param4": 0,
+    "Param5": -1,
+    "Grade": 68
+  },
+  {
+    "Id": 127,
+    "_comment": "Hunt Monster [48] スパービー - Level 48 (Basis: 31, Grade: 72)",
+    "Level": 48,
+    "BasisMobId": 31,
+    "Name": "[48] スパービー",
+    "Param4": 0,
+    "Param5": -1,
+    "Grade": 72
+  },
+  {
+    "Id": 128,
+    "_comment": "Hunt Monster [50] ミュロビー - Level 50 (Basis: 29, Grade: 79)",
+    "Level": 50,
+    "BasisMobId": 29,
+    "Name": "[50] ミュロビー",
+    "Param4": 0,
+    "Param5": -1,
+    "Grade": 79
+  },
+  {
+    "Id": 129,
+    "_comment": "Hunt Monster [52] 怒ったミュロビー - Level 52 (Basis: 120, Grade: 87)",
+    "Level": 52,
+    "BasisMobId": 120,
+    "Name": "[52] 怒ったミュロビー",
+    "Param4": 0,
+    "Param5": -1,
+    "Grade": 87
+  },
+  {
+    "Id": 130,
+    "_comment": "Hunt Monster [54] ミュロビー - Level 54 (Basis: 29, Grade: 95)",
+    "Level": 54,
+    "BasisMobId": 29,
+    "Name": "[54] ミュロビー",
+    "Param4": 0,
+    "Param5": -1,
+    "Grade": 95
+  },
+  {
+    "Id": 131,
+    "_comment": "Hunt Monster [56] 怒ったミュロビー - Level 56 (Basis: 120, Grade: 104)",
+    "Level": 56,
+    "BasisMobId": 120,
+    "Name": "[56] 怒ったミュロビー",
+    "Param4": 0,
+    "Param5": -1,
+    "Grade": 104
+  },
+  {
+    "Id": 132,
+    "_comment": "Hunt Monster [58] ミュロビー - Level 58 (Basis: 29, Grade: 113)",
+    "Level": 58,
+    "BasisMobId": 29,
+    "Name": "[58] ミュロビー",
+    "Param4": 0,
+    "Param5": -1,
+    "Grade": 113
+  },
+  {
+    "Id": 133,
+    "_comment": "Hunt Monster [60] 怒ったミュロビー - Level 60 (Basis: 120, Grade: 122)",
+    "Level": 60,
+    "BasisMobId": 120,
+    "Name": "[60] 怒ったミュロビー",
+    "Param4": 0,
+    "Param5": -1,
+    "Grade": 122
+  },
+  {
+    "Id": 134,
+    "_comment": "Hunt Monster [62] 影入道 - Level 62 (Basis: 125, Grade: 139)",
+    "Level": 62,
+    "BasisMobId": 125,
+    "Name": "[62] 影入道",
+    "Param4": 0,
+    "Param5": -1,
+    "Grade": 139
+  },
+  {
+    "Id": 135,
+    "_comment": "Hunt Monster [64] 怒ったミュロビー - Level 64 (Basis: 120, Grade: 157)",
+    "Level": 64,
+    "BasisMobId": 120,
+    "Name": "[64] 怒ったミュロビー",
+    "Param4": 0,
+    "Param5": -1,
+    "Grade": 157
+  },
+  {
+    "Id": 136,
+    "_comment": "Hunt Monster [66] 影入道 - Level 66 (Basis: 125, Grade: 176)",
+    "Level": 66,
+    "BasisMobId": 125,
+    "Name": "[66] 影入道",
+    "Param4": 0,
+    "Param5": -1,
+    "Grade": 176
+  },
+  {
+    "Id": 137,
+    "_comment": "Hunt Monster [68] 怒ったミュロビー - Level 68 (Basis: 120, Grade: 196)",
+    "Level": 68,
+    "BasisMobId": 120,
+    "Name": "[68] 怒ったミュロビー",
+    "Param4": 0,
+    "Param5": -1,
+    "Grade": 196
+  },
+  {
+    "Id": 138,
+    "_comment": "Hunt Monster [70] 影入道 - Level 70 (Basis: 125, Grade: 217)",
+    "Level": 70,
+    "BasisMobId": 125,
+    "Name": "[70] 影入道",
+    "Param4": 0,
+    "Param5": -1,
+    "Grade": 217
+  },
+  {
+    "Id": 139,
+    "_comment": "Hunt Monster [72] シャドウビースト - Level 72 (Basis: 112, Grade: 238)",
+    "Level": 72,
+    "BasisMobId": 112,
+    "Name": "[72] シャドウビースト",
+    "Param4": 0,
+    "Param5": -1,
+    "Grade": 238
+  },
+  {
+    "Id": 140,
+    "_comment": "Hunt Monster [74] 影入道 - Level 74 (Basis: 125, Grade: 260)",
+    "Level": 74,
+    "BasisMobId": 125,
+    "Name": "[74] 影入道",
+    "Param4": 0,
+    "Param5": -1,
+    "Grade": 260
+  },
+  {
+    "Id": 141,
+    "_comment": "Hunt Monster [76] シャドウビースト - Level 76 (Basis: 112, Grade: 283)",
+    "Level": 76,
+    "BasisMobId": 112,
+    "Name": "[76] シャドウビースト",
+    "Param4": 0,
+    "Param5": -1,
+    "Grade": 283
+  },
+  {
+    "Id": 142,
+    "_comment": "Hunt Monster [78] 影入道 - Level 78 (Basis: 125, Grade: 307)",
+    "Level": 78,
+    "BasisMobId": 125,
+    "Name": "[78] 影入道",
+    "Param4": 0,
+    "Param5": -1,
+    "Grade": 307
+  },
+  {
+    "Id": 143,
+    "_comment": "Hunt Monster [80] シャドウビースト - Level 80 (Basis: 112, Grade: 332)",
+    "Level": 80,
+    "BasisMobId": 112,
+    "Name": "[80] シャドウビースト",
+    "Param4": 0,
+    "Param5": -1,
+    "Grade": 332
+  },
+  {
+    "Id": 144,
+    "_comment": "Hunt Monster [82] パトロボ - Level 82 (Basis: 95, Grade: 357)",
+    "Level": 82,
+    "BasisMobId": 95,
+    "Name": "[82] パトロボ",
+    "Param4": 0,
+    "Param5": -1,
+    "Grade": 357
+  },
+  {
+    "Id": 145,
+    "_comment": "Hunt Monster [84] シャドウビースト - Level 84 (Basis: 112, Grade: 384)",
+    "Level": 84,
+    "BasisMobId": 112,
+    "Name": "[84] シャドウビースト",
+    "Param4": 0,
+    "Param5": -1,
+    "Grade": 384
+  },
+  {
+    "Id": 146,
+    "_comment": "Hunt Monster [86] パトロボ - Level 86 (Basis: 95, Grade: 411)",
+    "Level": 86,
+    "BasisMobId": 95,
+    "Name": "[86] パトロボ",
+    "Param4": 0,
+    "Param5": -1,
+    "Grade": 411
+  },
+  {
+    "Id": 147,
+    "_comment": "Hunt Monster [88] パトロボ - Level 88 (Basis: 95, Grade: 439)",
+    "Level": 88,
+    "BasisMobId": 95,
+    "Name": "[88] パトロボ",
+    "Param4": 0,
+    "Param5": -1,
+    "Grade": 439
+  },
+  {
+    "Id": 148,
+    "_comment": "Hunt Monster [91] ボボカンデラックス - Level 91 (Basis: 136, Grade: 540)",
+    "Level": 91,
+    "BasisMobId": 136,
+    "Name": "[91] ボボカンデラックス",
+    "Param4": 0,
+    "Param5": -1,
+    "Grade": 540
+  },
+  {
+    "Id": 149,
+    "_comment": "Hunt Monster [94] ソソプラネット - Level 94 (Basis: 108, Grade: 562)",
+    "Level": 94,
+    "BasisMobId": 108,
+    "Name": "[94] ソソプラネット",
+    "Param4": 0,
+    "Param5": -1,
+    "Grade": 562
+  },
+  {
+    "Id": 150,
+    "_comment": "Hunt Monster [97] クィラ - Level 97 (Basis: 116, Grade: 637)",
+    "Level": 97,
+    "BasisMobId": 116,
+    "Name": "[97] クィラ",
+    "Param4": 0,
+    "Param5": -1,
+    "Grade": 637
+  },
+  {
+    "Id": 151,
+    "_comment": "Hunt Monster [100] 次元魚 - Level 100 (Basis: 111, Grade: 715)",
+    "Level": 100,
+    "BasisMobId": 111,
+    "Name": "[100] 次元魚",
+    "Param4": 0,
+    "Param5": -1,
+    "Grade": 715
+  },
+  {
+    "Id": 152,
+    "_comment": "Hunt Monster [109] お掃除ハカセ - Level 109 (Basis: 113, Grade: 970)",
+    "Level": 109,
+    "BasisMobId": 113,
+    "Name": "[109] お掃除ハカセ",
+    "Param4": 0,
+    "Param5": -1,
+    "Grade": 970
+  },
+  {
+    "Id": 164,
+    "_comment": "Hunt Monster [103] クィラ - Level 103 (Basis: 116, Grade: 797)",
+    "Level": 103,
+    "BasisMobId": 116,
+    "Name": "[103] クィラ",
+    "Param4": 0,
+    "Param5": -1,
+    "Grade": 797
+  },
+  {
+    "Id": 165,
+    "_comment": "Hunt Monster [106] 次元魚 - Level 106 (Basis: 111, Grade: 882)",
+    "Level": 106,
+    "BasisMobId": 111,
+    "Name": "[106] 次元魚",
+    "Param4": 0,
+    "Param5": -1,
+    "Grade": 882
+  },
+  {
+    "Id": 166,
+    "_comment": "Hunt Monster [112] 次元魚 - Level 112 (Basis: 111, Grade: 1062)",
+    "Level": 112,
+    "BasisMobId": 111,
+    "Name": "[112] 次元魚",
+    "Param4": 0,
+    "Param5": -1,
+    "Grade": 1062
+  },
+  {
+    "Id": 167,
+    "_comment": "Hunt Monster [115] お掃除ハカセ - Level 115 (Basis: 113, Grade: 1157)",
+    "Level": 115,
+    "BasisMobId": 113,
+    "Name": "[115] お掃除ハカセ",
+    "Param4": 0,
+    "Param5": -1,
+    "Grade": 1157
+  },
+  {
+    "Id": 168,
+    "_comment": "Hunt Monster [118] ツクエミミック - Level 118 (Basis: 109, Grade: 1256)",
+    "Level": 118,
+    "BasisMobId": 109,
+    "Name": "[118] ツクエミミック",
+    "Param4": 0,
+    "Param5": -1,
+    "Grade": 1256
+  },
+  {
+    "Id": 169,
+    "_comment": "Hunt Monster [121] お掃除ハカセ - Level 121 (Basis: 113, Grade: 1358)",
+    "Level": 121,
+    "BasisMobId": 113,
+    "Name": "[121] お掃除ハカセ",
+    "Param4": 0,
+    "Param5": -1,
+    "Grade": 1358
+  },
+  {
+    "Id": 170,
+    "_comment": "Hunt Monster [124] ツクエミミック - Level 124 (Basis: 109, Grade: 1463)",
+    "Level": 124,
+    "BasisMobId": 109,
+    "Name": "[124] ツクエミミック",
+    "Param4": 0,
+    "Param5": -1,
+    "Grade": 1463
+  },
+  {
+    "Id": 171,
+    "_comment": "Hunt Monster [127] イスファイター - Level 127 (Basis: 110, Grade: 1572)",
+    "Level": 127,
+    "BasisMobId": 110,
+    "Name": "[127] イスファイター",
+    "Param4": 0,
+    "Param5": -1,
+    "Grade": 1572
+  },
+  {
+    "Id": 172,
+    "_comment": "Hunt Monster [130] イスファイター - Level 130 (Basis: 110, Grade: 1684)",
+    "Level": 130,
+    "BasisMobId": 110,
+    "Name": "[130] イスファイター",
+    "Param4": 0,
+    "Param5": -1,
+    "Grade": 1684
+  },
+  {
+    "Id": 173,
+    "_comment": "Hunt Monster [133] キャタツラー - Level 133 (Basis: 114, Grade: 1841)",
+    "Level": 133,
+    "BasisMobId": 114,
+    "Name": "[133] キャタツラー",
+    "Param4": 0,
+    "Param5": -1,
+    "Grade": 1841
+  },
+  {
+    "Id": 174,
+    "_comment": "Hunt Monster [136] 4次元ウッドヘリアン - Level 136 (Basis: 117, Grade: 2004)",
+    "Level": 136,
+    "BasisMobId": 117,
+    "Name": "[136] 4次元ウッドヘリアン",
+    "Param4": 0,
+    "Param5": -1,
+    "Grade": 2004
+  },
+  {
+    "Id": 175,
+    "_comment": "Hunt Monster [139] ハッコウモリ - Level 139 (Basis: 46, Grade: 2172)",
+    "Level": 139,
+    "BasisMobId": 46,
+    "Name": "[139] ハッコウモリ",
+    "Param4": 0,
+    "Param5": -1,
+    "Grade": 2172
+  },
+  {
+    "Id": 176,
+    "_comment": "Hunt Monster [142] ソソマミー - Level 142 (Basis: 96, Grade: 2346)",
+    "Level": 142,
+    "BasisMobId": 96,
+    "Name": "[142] ソソマミー",
+    "Param4": 0,
+    "Param5": -1,
+    "Grade": 2346
+  },
+  {
+    "Id": 177,
+    "_comment": "Hunt Monster [146] フクのカメ - Level 146 (Basis: 82, Grade: 2585)",
+    "Level": 146,
+    "BasisMobId": 82,
+    "Name": "[146] フクのカメ",
+    "Param4": 0,
+    "Param5": -1,
+    "Grade": 2585
+  },
+  {
+    "Id": 178,
+    "_comment": "Hunt Monster [150] ソソマミー - Level 150 (Basis: 96, Grade: 2834)",
+    "Level": 150,
+    "BasisMobId": 96,
+    "Name": "[150] ソソマミー",
+    "Param4": 0,
+    "Param5": -1,
+    "Grade": 2834
+  },
+  {
+    "Id": 179,
+    "_comment": "Hunt Monster [158] レッドレフィック - Level 158 (Basis: 153, Grade: 3394)",
+    "Level": 158,
+    "BasisMobId": 153,
+    "Name": "[158] レッドレフィック",
+    "Param4": 0,
+    "Param5": -1,
+    "Grade": 3394
+  },
+  {
+    "Id": 180,
+    "_comment": "Hunt Monster [154] デンプ - Level 154 (Basis: 81, Grade: 3091)",
+    "Level": 154,
+    "BasisMobId": 81,
+    "Name": "[154] デンプ",
+    "Param4": 0,
+    "Param5": -1,
+    "Grade": 3091
+  },
+  {
+    "Id": 181,
+    "_comment": "Hunt Monster [170] レッドレフィック - Level 170 (Basis: 153, Grade: 4238)",
+    "Level": 170,
+    "BasisMobId": 153,
+    "Name": "[170] レッドレフィック",
+    "Param4": 0,
+    "Param5": -1,
+    "Grade": 4238
+  },
+  {
+    "Id": 182,
+    "_comment": "Hunt Monster [166] デンプ - Level 166 (Basis: 81, Grade: 3921)",
+    "Level": 166,
+    "BasisMobId": 81,
+    "Name": "[166] デンプ",
+    "Param4": 0,
+    "Param5": -1,
+    "Grade": 3921
+  },
+  {
+    "Id": 183,
+    "_comment": "Hunt Monster [162] ざるかぶり - Level 162 (Basis: 92, Grade: 3635)",
+    "Level": 162,
+    "BasisMobId": 92,
+    "Name": "[162] ざるかぶり",
+    "Param4": 0,
+    "Param5": -1,
+    "Grade": 3635
+  },
+  {
+    "Id": 184,
+    "_comment": "Hunt Monster [182] カタコンベガーディアン - Level 182 (Basis: 154, Grade: 5494)",
+    "Level": 182,
+    "BasisMobId": 154,
+    "Name": "[182] カタコンベガーディアン",
+    "Param4": 0,
+    "Param5": -1,
+    "Grade": 5494
+  },
+  {
+    "Id": 185,
+    "_comment": "Hunt Monster [174] ざるかぶり - Level 174 (Basis: 92, Grade: 4613)",
+    "Level": 174,
+    "BasisMobId": 92,
+    "Name": "[174] ざるかぶり",
+    "Param4": 0,
+    "Param5": -1,
+    "Grade": 4613
+  },
+  {
+    "Id": 186,
+    "_comment": "Hunt Monster [178] 下郎蛙 - Level 178 (Basis: 80, Grade: 5025)",
+    "Level": 178,
+    "BasisMobId": 80,
+    "Name": "[178] 下郎蛙",
+    "Param4": 0,
+    "Param5": -1,
+    "Grade": 5025
+  },
+  {
+    "Id": 187,
+    "_comment": "Hunt Monster [194] カタコンベガーディアン - Level 194 (Basis: 154, Grade: 7486)",
+    "Level": 194,
+    "BasisMobId": 154,
+    "Name": "[194] カタコンベガーディアン",
+    "Param4": 0,
+    "Param5": -1,
+    "Grade": 7486
+  },
+  {
+    "Id": 188,
+    "_comment": "Hunt Monster [186] 下郎蛙 - Level 186 (Basis: 80, Grade: 5888)",
+    "Level": 186,
+    "BasisMobId": 80,
+    "Name": "[186] 下郎蛙",
+    "Param4": 0,
+    "Param5": -1,
+    "Grade": 5888
+  },
+  {
+    "Id": 189,
+    "_comment": "Hunt Monster [190] 火之輪入道 - Level 190 (Basis: 105, Grade: 6340)",
+    "Level": 190,
+    "BasisMobId": 105,
+    "Name": "[190] 火之輪入道",
+    "Param4": 0,
+    "Param5": -1,
+    "Grade": 6340
+  },
+  {
+    "Id": 190,
+    "_comment": "Hunt Monster [1] トレジャーモンスター - Level 1 (Basis: 152, Grade: 1)",
+    "Level": 1,
+    "BasisMobId": 152,
+    "Name": "[1] トレジャーモンスター",
+    "Param4": 4,
+    "Param5": -1,
+    "Grade": 1
+  },
+  {
+    "Id": 191,
+    "_comment": "Hunt Monster [1] トレジャーモンスター - Level 1 (Basis: 152, Grade: 1)",
+    "Level": 1,
+    "BasisMobId": 152,
+    "Name": "[1] トレジャーモンスター",
+    "Param4": 4,
+    "Param5": -1,
+    "Grade": 1
+  },
+  {
+    "Id": 192,
+    "_comment": "Hunt Monster [1] トレジャーモンスター - Level 1 (Basis: 152, Grade: 1)",
+    "Level": 1,
+    "BasisMobId": 152,
+    "Name": "[1] トレジャーモンスター",
+    "Param4": 4,
+    "Param5": -1,
+    "Grade": 1
+  },
+  {
+    "Id": 193,
+    "_comment": "Hunt Monster [1] トレジャーモンスター - Level 1 (Basis: 152, Grade: 1)",
+    "Level": 1,
+    "BasisMobId": 152,
+    "Name": "[1] トレジャーモンスター",
+    "Param4": 4,
+    "Param5": -1,
+    "Grade": 1
+  },
+  {
+    "Id": 194,
+    "_comment": "Hunt Monster [1] トレジャーモンスター - Level 1 (Basis: 152, Grade: 1)",
+    "Level": 1,
+    "BasisMobId": 152,
+    "Name": "[1] トレジャーモンスター",
+    "Param4": 4,
+    "Param5": -1,
+    "Grade": 1
+  },
+  {
+    "Id": 195,
+    "_comment": "Hunt Monster [1] トレジャーモンスター - Level 1 (Basis: 152, Grade: 1)",
+    "Level": 1,
+    "BasisMobId": 152,
+    "Name": "[1] トレジャーモンスター",
+    "Param4": 4,
+    "Param5": -1,
+    "Grade": 1
+  },
+  {
+    "Id": 196,
+    "_comment": "Hunt Monster [1] トレジャーモンスター - Level 1 (Basis: 152, Grade: 1)",
+    "Level": 1,
+    "BasisMobId": 152,
+    "Name": "[1] トレジャーモンスター",
+    "Param4": 4,
+    "Param5": -1,
+    "Grade": 1
+  },
+  {
+    "Id": 197,
+    "_comment": "Hunt Monster [1] トレジャーモンスター - Level 1 (Basis: 152, Grade: 1)",
+    "Level": 1,
+    "BasisMobId": 152,
+    "Name": "[1] トレジャーモンスター",
+    "Param4": 4,
+    "Param5": -1,
+    "Grade": 1
+  },
+  {
+    "Id": 198,
+    "_comment": "Hunt Monster [1] トレジャーモンスター - Level 1 (Basis: 152, Grade: 1)",
+    "Level": 1,
+    "BasisMobId": 152,
+    "Name": "[1] トレジャーモンスター",
+    "Param4": 4,
+    "Param5": -1,
+    "Grade": 1
+  },
+  {
+    "Id": 199,
+    "_comment": "Hunt Monster [1] トレジャーモンスター - Level 1 (Basis: 152, Grade: 1)",
+    "Level": 1,
+    "BasisMobId": 152,
+    "Name": "[1] トレジャーモンスター",
+    "Param4": 4,
+    "Param5": -1,
+    "Grade": 1
+  },
+  {
+    "Id": 200,
+    "_comment": "Hunt Monster [1] トレジャーモンスター - Level 1 (Basis: 152, Grade: 1)",
+    "Level": 1,
+    "BasisMobId": 152,
+    "Name": "[1] トレジャーモンスター",
+    "Param4": 4,
+    "Param5": -1,
+    "Grade": 1
+  },
+  {
+    "Id": 201,
+    "_comment": "Hunt Monster [1] トレジャーモンスター - Level 1 (Basis: 152, Grade: 1)",
+    "Level": 1,
+    "BasisMobId": 152,
+    "Name": "[1] トレジャーモンスター",
+    "Param4": 4,
+    "Param5": -1,
+    "Grade": 1
+  },
+  {
+    "Id": 202,
+    "_comment": "Hunt Monster [1] トレジャーモンスター - Level 1 (Basis: 152, Grade: 1)",
+    "Level": 1,
+    "BasisMobId": 152,
+    "Name": "[1] トレジャーモンスター",
+    "Param4": 4,
+    "Param5": -1,
+    "Grade": 1
+  },
+  {
+    "Id": 203,
+    "_comment": "Hunt Monster [1] トレジャーモンスター - Level 1 (Basis: 152, Grade: 1)",
+    "Level": 1,
+    "BasisMobId": 152,
+    "Name": "[1] トレジャーモンスター",
+    "Param4": 4,
+    "Param5": -1,
+    "Grade": 1
+  },
+  {
+    "Id": 204,
+    "_comment": "Hunt Monster [1] トレジャーモンスター - Level 1 (Basis: 152, Grade: 1)",
+    "Level": 1,
+    "BasisMobId": 152,
+    "Name": "[1] トレジャーモンスター",
+    "Param4": 4,
+    "Param5": -1,
+    "Grade": 1
+  },
+  {
+    "Id": 205,
+    "_comment": "Hunt Monster [1] トレジャーモンスター - Level 1 (Basis: 152, Grade: 1)",
+    "Level": 1,
+    "BasisMobId": 152,
+    "Name": "[1] トレジャーモンスター",
+    "Param4": 4,
+    "Param5": -1,
+    "Grade": 1
+  },
+  {
+    "Id": 206,
+    "_comment": "Hunt Monster [1] トレジャーモンスター - Level 1 (Basis: 152, Grade: 1)",
+    "Level": 1,
+    "BasisMobId": 152,
+    "Name": "[1] トレジャーモンスター",
+    "Param4": 4,
+    "Param5": -1,
+    "Grade": 1
+  },
+  {
+    "Id": 207,
+    "_comment": "Hunt Monster [1] トレジャーモンスター - Level 1 (Basis: 152, Grade: 1)",
+    "Level": 1,
+    "BasisMobId": 152,
+    "Name": "[1] トレジャーモンスター",
+    "Param4": 4,
+    "Param5": -1,
+    "Grade": 1
+  },
+  {
+    "Id": 208,
+    "_comment": "Hunt Monster [1] トレジャーモンスター - Level 1 (Basis: 152, Grade: 1)",
+    "Level": 1,
+    "BasisMobId": 152,
+    "Name": "[1] トレジャーモンスター",
+    "Param4": 4,
+    "Param5": -1,
+    "Grade": 1
+  },
+  {
+    "Id": 209,
+    "_comment": "Hunt Monster [1] トレジャーモンスター - Level 1 (Basis: 152, Grade: 1)",
+    "Level": 1,
+    "BasisMobId": 152,
+    "Name": "[1] トレジャーモンスター",
+    "Param4": 4,
+    "Param5": -1,
+    "Grade": 1
+  },
+  {
+    "Id": 210,
+    "_comment": "Hunt Monster [1] トレジャーモンスター - Level 1 (Basis: 152, Grade: 1)",
+    "Level": 1,
+    "BasisMobId": 152,
+    "Name": "[1] トレジャーモンスター",
+    "Param4": 4,
+    "Param5": -1,
+    "Grade": 1
+  },
+  {
+    "Id": 211,
+    "_comment": "Hunt Monster [1] トレジャーモンスター - Level 1 (Basis: 152, Grade: 1)",
+    "Level": 1,
+    "BasisMobId": 152,
+    "Name": "[1] トレジャーモンスター",
+    "Param4": 4,
+    "Param5": -1,
+    "Grade": 1
+  },
+  {
+    "Id": 212,
+    "_comment": "Hunt Monster [1] トレジャーモンスター - Level 1 (Basis: 152, Grade: 1)",
+    "Level": 1,
+    "BasisMobId": 152,
+    "Name": "[1] トレジャーモンスター",
+    "Param4": 4,
+    "Param5": -1,
+    "Grade": 1
+  },
+  {
+    "Id": 213,
+    "_comment": "Hunt Monster [1] トレジャーモンスター - Level 1 (Basis: 152, Grade: 1)",
+    "Level": 1,
+    "BasisMobId": 152,
+    "Name": "[1] トレジャーモンスター",
+    "Param4": 4,
+    "Param5": -1,
+    "Grade": 1
+  },
+  {
+    "Id": 214,
+    "_comment": "Hunt Monster [1] トレジャーモンスター - Level 1 (Basis: 152, Grade: 1)",
+    "Level": 1,
+    "BasisMobId": 152,
+    "Name": "[1] トレジャーモンスター",
+    "Param4": 4,
+    "Param5": -1,
+    "Grade": 1
+  },
+  {
+    "Id": 215,
+    "_comment": "Hunt Monster [1] トレジャーモンスター - Level 1 (Basis: 152, Grade: 1)",
+    "Level": 1,
+    "BasisMobId": 152,
+    "Name": "[1] トレジャーモンスター",
+    "Param4": 4,
+    "Param5": -1,
+    "Grade": 1
+  },
+  {
+    "Id": 216,
+    "_comment": "Hunt Monster [1] トレジャーモンスター - Level 1 (Basis: 152, Grade: 1)",
+    "Level": 1,
+    "BasisMobId": 152,
+    "Name": "[1] トレジャーモンスター",
+    "Param4": 4,
+    "Param5": -1,
+    "Grade": 1
+  },
+  {
+    "Id": 217,
+    "_comment": "Hunt Monster [1] トレジャーモンスター - Level 1 (Basis: 152, Grade: 1)",
+    "Level": 1,
+    "BasisMobId": 152,
+    "Name": "[1] トレジャーモンスター",
+    "Param4": 4,
+    "Param5": -1,
+    "Grade": 1
+  },
+  {
+    "Id": 218,
+    "_comment": "Hunt Monster [1] トレジャーモンスター - Level 1 (Basis: 152, Grade: 1)",
+    "Level": 1,
+    "BasisMobId": 152,
+    "Name": "[1] トレジャーモンスター",
+    "Param4": 4,
+    "Param5": -1,
+    "Grade": 1
+  },
+  {
+    "Id": 219,
+    "_comment": "Hunt Monster [1] トレジャーモンスター - Level 1 (Basis: 152, Grade: 1)",
+    "Level": 1,
+    "BasisMobId": 152,
+    "Name": "[1] トレジャーモンスター",
+    "Param4": 4,
+    "Param5": -1,
+    "Grade": 1
+  },
+  {
+    "Id": 220,
+    "_comment": "Hunt Monster [1] トレジャーモンスター - Level 1 (Basis: 152, Grade: 1)",
+    "Level": 1,
+    "BasisMobId": 152,
+    "Name": "[1] トレジャーモンスター",
+    "Param4": 4,
+    "Param5": -1,
+    "Grade": 1
+  },
+  {
+    "Id": 221,
+    "_comment": "Hunt Monster [1] トレジャーモンスター - Level 1 (Basis: 152, Grade: 1)",
+    "Level": 1,
+    "BasisMobId": 152,
+    "Name": "[1] トレジャーモンスター",
+    "Param4": 4,
+    "Param5": -1,
+    "Grade": 1
+  },
+  {
+    "Id": 222,
+    "_comment": "Hunt Monster [1] トレジャーモンスター - Level 1 (Basis: 152, Grade: 1)",
+    "Level": 1,
+    "BasisMobId": 152,
+    "Name": "[1] トレジャーモンスター",
+    "Param4": 4,
+    "Param5": -1,
+    "Grade": 1
+  },
+  {
+    "Id": 223,
+    "_comment": "Hunt Monster [1] トレジャーモンスター - Level 1 (Basis: 152, Grade: 1)",
+    "Level": 1,
+    "BasisMobId": 152,
+    "Name": "[1] トレジャーモンスター",
+    "Param4": 4,
+    "Param5": -1,
+    "Grade": 1
+  },
+  {
+    "Id": 224,
+    "_comment": "Hunt Monster [1] トレジャーモンスター - Level 1 (Basis: 152, Grade: 1)",
+    "Level": 1,
+    "BasisMobId": 152,
+    "Name": "[1] トレジャーモンスター",
+    "Param4": 4,
+    "Param5": -1,
+    "Grade": 1
+  },
+  {
+    "Id": 225,
+    "_comment": "Hunt Monster [1] トレジャーモンスター - Level 1 (Basis: 152, Grade: 1)",
+    "Level": 1,
+    "BasisMobId": 152,
+    "Name": "[1] トレジャーモンスター",
+    "Param4": 4,
+    "Param5": -1,
+    "Grade": 1
+  },
+  {
+    "Id": 226,
+    "_comment": "Hunt Monster [1] トレジャーモンスター - Level 1 (Basis: 152, Grade: 1)",
+    "Level": 1,
+    "BasisMobId": 152,
+    "Name": "[1] トレジャーモンスター",
+    "Param4": 4,
+    "Param5": -1,
+    "Grade": 1
+  },
+  {
+    "Id": 227,
+    "_comment": "Hunt Monster [1] トレジャーモンスター - Level 1 (Basis: 152, Grade: 1)",
+    "Level": 1,
+    "BasisMobId": 152,
+    "Name": "[1] トレジャーモンスター",
+    "Param4": 4,
+    "Param5": -1,
+    "Grade": 1
+  },
+  {
+    "Id": 228,
+    "_comment": "Hunt Monster [1] トレジャーモンスター - Level 1 (Basis: 152, Grade: 1)",
+    "Level": 1,
+    "BasisMobId": 152,
+    "Name": "[1] トレジャーモンスター",
+    "Param4": 4,
+    "Param5": -1,
+    "Grade": 1
+  },
+  {
+    "Id": 229,
+    "_comment": "Hunt Monster [1] トレジャーモンスター - Level 1 (Basis: 152, Grade: 1)",
+    "Level": 1,
+    "BasisMobId": 152,
+    "Name": "[1] トレジャーモンスター",
+    "Param4": 4,
+    "Param5": -1,
+    "Grade": 1
+  },
+  {
+    "Id": 230,
+    "_comment": "Hunt Monster [1] トレジャーモンスター - Level 1 (Basis: 152, Grade: 1)",
+    "Level": 1,
+    "BasisMobId": 152,
+    "Name": "[1] トレジャーモンスター",
+    "Param4": 4,
+    "Param5": -1,
+    "Grade": 1
+  },
+  {
+    "Id": 231,
+    "_comment": "Hunt Monster [1] トレジャーモンスター - Level 1 (Basis: 152, Grade: 1)",
+    "Level": 1,
+    "BasisMobId": 152,
+    "Name": "[1] トレジャーモンスター",
+    "Param4": 4,
+    "Param5": -1,
+    "Grade": 1
+  },
+  {
+    "Id": 232,
+    "_comment": "Hunt Monster [1] トレジャーモンスター - Level 1 (Basis: 152, Grade: 1)",
+    "Level": 1,
+    "BasisMobId": 152,
+    "Name": "[1] トレジャーモンスター",
+    "Param4": 4,
+    "Param5": -1,
+    "Grade": 1
+  },
+  {
+    "Id": 233,
+    "_comment": "Hunt Monster [1] トレジャーモンスター - Level 1 (Basis: 152, Grade: 1)",
+    "Level": 1,
+    "BasisMobId": 152,
+    "Name": "[1] トレジャーモンスター",
+    "Param4": 4,
+    "Param5": -1,
+    "Grade": 1
+  },
+  {
+    "Id": 234,
+    "_comment": "Hunt Monster [1] トレジャーモンスター - Level 1 (Basis: 152, Grade: 1)",
+    "Level": 1,
+    "BasisMobId": 152,
+    "Name": "[1] トレジャーモンスター",
+    "Param4": 4,
+    "Param5": -1,
+    "Grade": 1
+  },
+  {
+    "Id": 235,
+    "_comment": "Hunt Monster [1] トレジャーモンスター - Level 1 (Basis: 152, Grade: 1)",
+    "Level": 1,
+    "BasisMobId": 152,
+    "Name": "[1] トレジャーモンスター",
+    "Param4": 4,
+    "Param5": -1,
+    "Grade": 1
+  },
+  {
+    "Id": 236,
+    "_comment": "Hunt Monster [1] トレジャーモンスター - Level 1 (Basis: 152, Grade: 1)",
+    "Level": 1,
+    "BasisMobId": 152,
+    "Name": "[1] トレジャーモンスター",
+    "Param4": 4,
+    "Param5": -1,
+    "Grade": 1
+  },
+  {
+    "Id": 237,
+    "_comment": "Hunt Monster [1] トレジャーモンスター - Level 1 (Basis: 152, Grade: 1)",
+    "Level": 1,
+    "BasisMobId": 152,
+    "Name": "[1] トレジャーモンスター",
+    "Param4": 4,
+    "Param5": -1,
+    "Grade": 1
+  },
+  {
+    "Id": 238,
+    "_comment": "Hunt Monster [1] トレジャーモンスター - Level 1 (Basis: 152, Grade: 1)",
+    "Level": 1,
+    "BasisMobId": 152,
+    "Name": "[1] トレジャーモンスター",
+    "Param4": 4,
+    "Param5": -1,
+    "Grade": 1
+  },
+  {
+    "Id": 239,
+    "_comment": "Hunt Monster [205] レクシー - Level 205 (Basis: 166, Grade: 8027)",
+    "Level": 205,
+    "BasisMobId": 166,
+    "Name": "[205] レクシー",
+    "Param4": 0,
+    "Param5": -1,
+    "Grade": 8027
+  },
+  {
+    "Id": 240,
+    "_comment": "Hunt Monster [208] レクシー - Level 208 (Basis: 166, Grade: 8347)",
+    "Level": 208,
+    "BasisMobId": 166,
+    "Name": "[208] レクシー",
+    "Param4": 0,
+    "Param5": -1,
+    "Grade": 8347
+  },
+  {
+    "Id": 241,
+    "_comment": "Hunt Monster [195] ざるかぶり - Level 195 (Basis: 92, Grade: 6984)",
+    "Level": 195,
+    "BasisMobId": 92,
+    "Name": "[195] ざるかぶり",
+    "Param4": 0,
+    "Param5": -1,
+    "Grade": 6984
+  },
+  {
+    "Id": 242,
+    "_comment": "Hunt Monster [197] トホホ - Level 197 (Basis: 94, Grade: 7191)",
+    "Level": 197,
+    "BasisMobId": 94,
+    "Name": "[197] トホホ",
+    "Param4": 0,
+    "Param5": -1,
+    "Grade": 7191
+  },
+  {
+    "Id": 243,
+    "_comment": "Hunt Monster [199] 下郎蛙 - Level 199 (Basis: 80, Grade: 7397)",
+    "Level": 199,
+    "BasisMobId": 80,
+    "Name": "[199] 下郎蛙",
+    "Param4": 0,
+    "Param5": -1,
+    "Grade": 7397
+  },
+  {
+    "Id": 244,
+    "_comment": "Hunt Monster [201] デンプ - Level 201 (Basis: 81, Grade: 7605)",
+    "Level": 201,
+    "BasisMobId": 81,
+    "Name": "[201] デンプ",
+    "Param4": 0,
+    "Param5": -1,
+    "Grade": 7605
+  },
+  {
+    "Id": 245,
+    "_comment": "Hunt Monster [203] 怒ったミュロビー - Level 203 (Basis: 120, Grade: 7815)",
+    "Level": 203,
+    "BasisMobId": 120,
+    "Name": "[203] 怒ったミュロビー",
+    "Param4": 0,
+    "Param5": -1,
+    "Grade": 7815
+  },
+  {
+    "Id": 246,
+    "_comment": "Hunt Monster [206] カマイタチ - Level 206 (Basis: 86, Grade: 8133)",
+    "Level": 206,
+    "BasisMobId": 86,
+    "Name": "[206] カマイタチ",
+    "Param4": 0,
+    "Param5": -1,
+    "Grade": 8133
+  },
+  {
+    "Id": 247,
+    "_comment": "Hunt Monster [1] トレジャーモンスター - Level 1 (Basis: 152, Grade: 1)",
+    "Level": 1,
+    "BasisMobId": 152,
+    "Name": "[1] トレジャーモンスター",
+    "Param4": 4,
+    "Param5": -1,
+    "Grade": 1
+  },
+  {
+    "Id": 248,
+    "_comment": "Hunt Monster [1] トレジャーモンスター - Level 1 (Basis: 152, Grade: 1)",
+    "Level": 1,
+    "BasisMobId": 152,
+    "Name": "[1] トレジャーモンスター",
+    "Param4": 4,
+    "Param5": -1,
+    "Grade": 1
+  },
+  {
+    "Id": 249,
+    "_comment": "Hunt Monster [1] トレジャーモンスター - Level 1 (Basis: 152, Grade: 1)",
+    "Level": 1,
+    "BasisMobId": 152,
+    "Name": "[1] トレジャーモンスター",
+    "Param4": 4,
+    "Param5": -1,
+    "Grade": 1
+  }
+]

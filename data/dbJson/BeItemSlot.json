@@ -1,0 +1,1332 @@
+[
+  {
+    "Id": 10001,
+    "_comment": "Combo Slot Pattern 10001 (1 Slots)",
+    "AttackSlots": [
+      1,
+      0,
+      0,
+      0,
+      0
+    ],
+    "SkillSlots": [
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "TotalSlots": 1
+  },
+  {
+    "Id": 10002,
+    "_comment": "Combo Slot Pattern 10002 (2 Slots)",
+    "AttackSlots": [
+      1,
+      2,
+      0,
+      0,
+      0
+    ],
+    "SkillSlots": [
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "TotalSlots": 2
+  },
+  {
+    "Id": 10003,
+    "_comment": "Combo Slot Pattern 10003 (3 Slots)",
+    "AttackSlots": [
+      1,
+      2,
+      3,
+      0,
+      0
+    ],
+    "SkillSlots": [
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "TotalSlots": 3
+  },
+  {
+    "Id": 10004,
+    "_comment": "Combo Slot Pattern 10004 (4 Slots)",
+    "AttackSlots": [
+      1,
+      2,
+      3,
+      4,
+      0
+    ],
+    "SkillSlots": [
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "TotalSlots": 4
+  },
+  {
+    "Id": 10005,
+    "_comment": "Combo Slot Pattern 10005 (5 Slots)",
+    "AttackSlots": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "SkillSlots": [
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "TotalSlots": 5
+  },
+  {
+    "Id": 11001,
+    "_comment": "Combo Slot Pattern 11001 (1 Slots)",
+    "AttackSlots": [
+      1,
+      0,
+      0,
+      0,
+      0
+    ],
+    "SkillSlots": [
+      1,
+      0,
+      0,
+      0,
+      0
+    ],
+    "TotalSlots": 1
+  },
+  {
+    "Id": 11002,
+    "_comment": "Combo Slot Pattern 11002 (2 Slots)",
+    "AttackSlots": [
+      1,
+      2,
+      0,
+      0,
+      0
+    ],
+    "SkillSlots": [
+      1,
+      1,
+      0,
+      0,
+      0
+    ],
+    "TotalSlots": 2
+  },
+  {
+    "Id": 11003,
+    "_comment": "Combo Slot Pattern 11003 (3 Slots)",
+    "AttackSlots": [
+      1,
+      2,
+      3,
+      0,
+      0
+    ],
+    "SkillSlots": [
+      1,
+      1,
+      1,
+      0,
+      0
+    ],
+    "TotalSlots": 3
+  },
+  {
+    "Id": 11004,
+    "_comment": "Combo Slot Pattern 11004 (4 Slots)",
+    "AttackSlots": [
+      1,
+      2,
+      3,
+      4,
+      0
+    ],
+    "SkillSlots": [
+      1,
+      1,
+      1,
+      1,
+      0
+    ],
+    "TotalSlots": 4
+  },
+  {
+    "Id": 11005,
+    "_comment": "Combo Slot Pattern 11005 (5 Slots)",
+    "AttackSlots": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "SkillSlots": [
+      1,
+      1,
+      1,
+      1,
+      1
+    ],
+    "TotalSlots": 5
+  },
+  {
+    "Id": 20001,
+    "_comment": "Combo Slot Pattern 20001 (1 Slots)",
+    "AttackSlots": [
+      1,
+      0,
+      0,
+      0,
+      0
+    ],
+    "SkillSlots": [
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "TotalSlots": 1
+  },
+  {
+    "Id": 20002,
+    "_comment": "Combo Slot Pattern 20002 (2 Slots)",
+    "AttackSlots": [
+      1,
+      2,
+      0,
+      0,
+      0
+    ],
+    "SkillSlots": [
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "TotalSlots": 2
+  },
+  {
+    "Id": 20003,
+    "_comment": "Combo Slot Pattern 20003 (3 Slots)",
+    "AttackSlots": [
+      1,
+      2,
+      3,
+      0,
+      0
+    ],
+    "SkillSlots": [
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "TotalSlots": 3
+  },
+  {
+    "Id": 20004,
+    "_comment": "Combo Slot Pattern 20004 (4 Slots)",
+    "AttackSlots": [
+      1,
+      2,
+      3,
+      4,
+      0
+    ],
+    "SkillSlots": [
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "TotalSlots": 4
+  },
+  {
+    "Id": 20005,
+    "_comment": "Combo Slot Pattern 20005 (5 Slots)",
+    "AttackSlots": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "SkillSlots": [
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "TotalSlots": 5
+  },
+  {
+    "Id": 21001,
+    "_comment": "Combo Slot Pattern 21001 (1 Slots)",
+    "AttackSlots": [
+      1,
+      0,
+      0,
+      0,
+      0
+    ],
+    "SkillSlots": [
+      1,
+      1,
+      1,
+      1,
+      1
+    ],
+    "TotalSlots": 1
+  },
+  {
+    "Id": 21002,
+    "_comment": "Combo Slot Pattern 21002 (2 Slots)",
+    "AttackSlots": [
+      1,
+      2,
+      0,
+      0,
+      0
+    ],
+    "SkillSlots": [
+      1,
+      1,
+      1,
+      1,
+      1
+    ],
+    "TotalSlots": 2
+  },
+  {
+    "Id": 21003,
+    "_comment": "Combo Slot Pattern 21003 (3 Slots)",
+    "AttackSlots": [
+      1,
+      2,
+      3,
+      0,
+      0
+    ],
+    "SkillSlots": [
+      1,
+      1,
+      1,
+      1,
+      1
+    ],
+    "TotalSlots": 3
+  },
+  {
+    "Id": 21004,
+    "_comment": "Combo Slot Pattern 21004 (4 Slots)",
+    "AttackSlots": [
+      1,
+      2,
+      3,
+      4,
+      0
+    ],
+    "SkillSlots": [
+      1,
+      1,
+      1,
+      1,
+      1
+    ],
+    "TotalSlots": 4
+  },
+  {
+    "Id": 21005,
+    "_comment": "Combo Slot Pattern 21005 (5 Slots)",
+    "AttackSlots": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "SkillSlots": [
+      1,
+      1,
+      1,
+      1,
+      1
+    ],
+    "TotalSlots": 5
+  },
+  {
+    "Id": 30001,
+    "_comment": "Combo Slot Pattern 30001 (1 Slots)",
+    "AttackSlots": [
+      1,
+      0,
+      0,
+      0,
+      0
+    ],
+    "SkillSlots": [
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "TotalSlots": 1
+  },
+  {
+    "Id": 30002,
+    "_comment": "Combo Slot Pattern 30002 (2 Slots)",
+    "AttackSlots": [
+      1,
+      2,
+      0,
+      0,
+      0
+    ],
+    "SkillSlots": [
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "TotalSlots": 2
+  },
+  {
+    "Id": 30003,
+    "_comment": "Combo Slot Pattern 30003 (3 Slots)",
+    "AttackSlots": [
+      1,
+      2,
+      3,
+      0,
+      0
+    ],
+    "SkillSlots": [
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "TotalSlots": 3
+  },
+  {
+    "Id": 30004,
+    "_comment": "Combo Slot Pattern 30004 (4 Slots)",
+    "AttackSlots": [
+      1,
+      2,
+      3,
+      4,
+      0
+    ],
+    "SkillSlots": [
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "TotalSlots": 4
+  },
+  {
+    "Id": 30005,
+    "_comment": "Combo Slot Pattern 30005 (5 Slots)",
+    "AttackSlots": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "SkillSlots": [
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "TotalSlots": 5
+  },
+  {
+    "Id": 31001,
+    "_comment": "Combo Slot Pattern 31001 (1 Slots)",
+    "AttackSlots": [
+      1,
+      0,
+      0,
+      0,
+      0
+    ],
+    "SkillSlots": [
+      1,
+      1,
+      1,
+      1,
+      1
+    ],
+    "TotalSlots": 1
+  },
+  {
+    "Id": 31002,
+    "_comment": "Combo Slot Pattern 31002 (2 Slots)",
+    "AttackSlots": [
+      1,
+      2,
+      0,
+      0,
+      0
+    ],
+    "SkillSlots": [
+      1,
+      1,
+      1,
+      1,
+      1
+    ],
+    "TotalSlots": 2
+  },
+  {
+    "Id": 31003,
+    "_comment": "Combo Slot Pattern 31003 (3 Slots)",
+    "AttackSlots": [
+      1,
+      2,
+      3,
+      0,
+      0
+    ],
+    "SkillSlots": [
+      1,
+      1,
+      1,
+      1,
+      1
+    ],
+    "TotalSlots": 3
+  },
+  {
+    "Id": 31004,
+    "_comment": "Combo Slot Pattern 31004 (4 Slots)",
+    "AttackSlots": [
+      1,
+      2,
+      3,
+      4,
+      0
+    ],
+    "SkillSlots": [
+      1,
+      1,
+      1,
+      1,
+      1
+    ],
+    "TotalSlots": 4
+  },
+  {
+    "Id": 31005,
+    "_comment": "Combo Slot Pattern 31005 (5 Slots)",
+    "AttackSlots": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "SkillSlots": [
+      1,
+      1,
+      1,
+      1,
+      1
+    ],
+    "TotalSlots": 5
+  },
+  {
+    "Id": 40001,
+    "_comment": "Combo Slot Pattern 40001 (1 Slots)",
+    "AttackSlots": [
+      1,
+      0,
+      0,
+      0,
+      0
+    ],
+    "SkillSlots": [
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "TotalSlots": 1
+  },
+  {
+    "Id": 40002,
+    "_comment": "Combo Slot Pattern 40002 (2 Slots)",
+    "AttackSlots": [
+      1,
+      2,
+      0,
+      0,
+      0
+    ],
+    "SkillSlots": [
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "TotalSlots": 2
+  },
+  {
+    "Id": 40003,
+    "_comment": "Combo Slot Pattern 40003 (3 Slots)",
+    "AttackSlots": [
+      1,
+      2,
+      3,
+      0,
+      0
+    ],
+    "SkillSlots": [
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "TotalSlots": 3
+  },
+  {
+    "Id": 40004,
+    "_comment": "Combo Slot Pattern 40004 (4 Slots)",
+    "AttackSlots": [
+      1,
+      2,
+      3,
+      4,
+      0
+    ],
+    "SkillSlots": [
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "TotalSlots": 4
+  },
+  {
+    "Id": 40005,
+    "_comment": "Combo Slot Pattern 40005 (5 Slots)",
+    "AttackSlots": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "SkillSlots": [
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "TotalSlots": 5
+  },
+  {
+    "Id": 41001,
+    "_comment": "Combo Slot Pattern 41001 (1 Slots)",
+    "AttackSlots": [
+      1,
+      0,
+      0,
+      0,
+      0
+    ],
+    "SkillSlots": [
+      1,
+      1,
+      1,
+      1,
+      1
+    ],
+    "TotalSlots": 1
+  },
+  {
+    "Id": 41002,
+    "_comment": "Combo Slot Pattern 41002 (2 Slots)",
+    "AttackSlots": [
+      1,
+      2,
+      0,
+      0,
+      0
+    ],
+    "SkillSlots": [
+      1,
+      1,
+      1,
+      1,
+      1
+    ],
+    "TotalSlots": 2
+  },
+  {
+    "Id": 41003,
+    "_comment": "Combo Slot Pattern 41003 (3 Slots)",
+    "AttackSlots": [
+      1,
+      2,
+      3,
+      0,
+      0
+    ],
+    "SkillSlots": [
+      1,
+      1,
+      1,
+      1,
+      1
+    ],
+    "TotalSlots": 3
+  },
+  {
+    "Id": 41004,
+    "_comment": "Combo Slot Pattern 41004 (4 Slots)",
+    "AttackSlots": [
+      1,
+      2,
+      3,
+      4,
+      0
+    ],
+    "SkillSlots": [
+      1,
+      1,
+      1,
+      1,
+      1
+    ],
+    "TotalSlots": 4
+  },
+  {
+    "Id": 41005,
+    "_comment": "Combo Slot Pattern 41005 (5 Slots)",
+    "AttackSlots": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "SkillSlots": [
+      1,
+      1,
+      1,
+      1,
+      1
+    ],
+    "TotalSlots": 5
+  },
+  {
+    "Id": 50001,
+    "_comment": "Combo Slot Pattern 50001 (1 Slots)",
+    "AttackSlots": [
+      1,
+      0,
+      0,
+      0,
+      0
+    ],
+    "SkillSlots": [
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "TotalSlots": 1
+  },
+  {
+    "Id": 50002,
+    "_comment": "Combo Slot Pattern 50002 (2 Slots)",
+    "AttackSlots": [
+      1,
+      2,
+      0,
+      0,
+      0
+    ],
+    "SkillSlots": [
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "TotalSlots": 2
+  },
+  {
+    "Id": 50003,
+    "_comment": "Combo Slot Pattern 50003 (3 Slots)",
+    "AttackSlots": [
+      1,
+      2,
+      3,
+      0,
+      0
+    ],
+    "SkillSlots": [
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "TotalSlots": 3
+  },
+  {
+    "Id": 50004,
+    "_comment": "Combo Slot Pattern 50004 (4 Slots)",
+    "AttackSlots": [
+      1,
+      2,
+      3,
+      4,
+      0
+    ],
+    "SkillSlots": [
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "TotalSlots": 4
+  },
+  {
+    "Id": 50005,
+    "_comment": "Combo Slot Pattern 50005 (5 Slots)",
+    "AttackSlots": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "SkillSlots": [
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "TotalSlots": 5
+  },
+  {
+    "Id": 51001,
+    "_comment": "Combo Slot Pattern 51001 (1 Slots)",
+    "AttackSlots": [
+      1,
+      0,
+      0,
+      0,
+      0
+    ],
+    "SkillSlots": [
+      1,
+      1,
+      1,
+      1,
+      1
+    ],
+    "TotalSlots": 1
+  },
+  {
+    "Id": 51002,
+    "_comment": "Combo Slot Pattern 51002 (2 Slots)",
+    "AttackSlots": [
+      1,
+      2,
+      0,
+      0,
+      0
+    ],
+    "SkillSlots": [
+      1,
+      1,
+      1,
+      1,
+      1
+    ],
+    "TotalSlots": 2
+  },
+  {
+    "Id": 51003,
+    "_comment": "Combo Slot Pattern 51003 (3 Slots)",
+    "AttackSlots": [
+      1,
+      2,
+      3,
+      0,
+      0
+    ],
+    "SkillSlots": [
+      1,
+      1,
+      1,
+      1,
+      1
+    ],
+    "TotalSlots": 3
+  },
+  {
+    "Id": 51004,
+    "_comment": "Combo Slot Pattern 51004 (4 Slots)",
+    "AttackSlots": [
+      1,
+      2,
+      3,
+      4,
+      0
+    ],
+    "SkillSlots": [
+      1,
+      1,
+      1,
+      1,
+      1
+    ],
+    "TotalSlots": 4
+  },
+  {
+    "Id": 51005,
+    "_comment": "Combo Slot Pattern 51005 (5 Slots)",
+    "AttackSlots": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "SkillSlots": [
+      1,
+      1,
+      1,
+      1,
+      1
+    ],
+    "TotalSlots": 5
+  },
+  {
+    "Id": 100000,
+    "_comment": "Weapon 1-Star Slot Template (1 Slots)",
+    "AttackSlots": [
+      1,
+      0,
+      0,
+      0,
+      0
+    ],
+    "SkillSlots": [
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "TotalSlots": 1
+  },
+  {
+    "Id": 200000,
+    "_comment": "Weapon 2-Star Slot Template (2 Slots)",
+    "AttackSlots": [
+      1,
+      2,
+      0,
+      0,
+      0
+    ],
+    "SkillSlots": [
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "TotalSlots": 2
+  },
+  {
+    "Id": 300000,
+    "_comment": "Weapon 3-Star Slot Template (3 Slots)",
+    "AttackSlots": [
+      1,
+      2,
+      3,
+      0,
+      0
+    ],
+    "SkillSlots": [
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "TotalSlots": 3
+  },
+  {
+    "Id": 400000,
+    "_comment": "Weapon 4-Star Slot Template (4 Slots)",
+    "AttackSlots": [
+      1,
+      2,
+      3,
+      4,
+      0
+    ],
+    "SkillSlots": [
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "TotalSlots": 4
+  },
+  {
+    "Id": 500000,
+    "_comment": "Weapon 5-Star Slot Template (5 Slots)",
+    "AttackSlots": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "SkillSlots": [
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "TotalSlots": 5
+  },
+  {
+    "Id": 110000,
+    "_comment": "Weapon 1-Star Slot Template (1 Slots)",
+    "AttackSlots": [
+      1,
+      0,
+      0,
+      0,
+      0
+    ],
+    "SkillSlots": [
+      1,
+      0,
+      0,
+      0,
+      0
+    ],
+    "TotalSlots": 1
+  },
+  {
+    "Id": 211000,
+    "_comment": "Weapon 2-Star Slot Template (2 Slots)",
+    "AttackSlots": [
+      1,
+      2,
+      0,
+      0,
+      0
+    ],
+    "SkillSlots": [
+      1,
+      1,
+      0,
+      0,
+      0
+    ],
+    "TotalSlots": 2
+  },
+  {
+    "Id": 311100,
+    "_comment": "Weapon 3-Star Slot Template (3 Slots)",
+    "AttackSlots": [
+      1,
+      2,
+      3,
+      0,
+      0
+    ],
+    "SkillSlots": [
+      1,
+      1,
+      1,
+      0,
+      0
+    ],
+    "TotalSlots": 3
+  },
+  {
+    "Id": 411110,
+    "_comment": "Weapon 4-Star Slot Template (4 Slots)",
+    "AttackSlots": [
+      1,
+      2,
+      3,
+      4,
+      0
+    ],
+    "SkillSlots": [
+      1,
+      1,
+      1,
+      1,
+      0
+    ],
+    "TotalSlots": 4
+  },
+  {
+    "Id": 511111,
+    "_comment": "Weapon 5-Star Slot Template (5 Slots)",
+    "AttackSlots": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "SkillSlots": [
+      1,
+      1,
+      1,
+      1,
+      1
+    ],
+    "TotalSlots": 5
+  },
+  {
+    "Id": 120000,
+    "_comment": "Weapon 1-Star Slot Template (1 Slots)",
+    "AttackSlots": [
+      1,
+      0,
+      0,
+      0,
+      0
+    ],
+    "SkillSlots": [
+      2,
+      0,
+      0,
+      0,
+      0
+    ],
+    "TotalSlots": 1
+  },
+  {
+    "Id": 222000,
+    "_comment": "Weapon 2-Star Slot Template (2 Slots)",
+    "AttackSlots": [
+      1,
+      2,
+      0,
+      0,
+      0
+    ],
+    "SkillSlots": [
+      2,
+      2,
+      0,
+      0,
+      0
+    ],
+    "TotalSlots": 2
+  },
+  {
+    "Id": 322200,
+    "_comment": "Weapon 3-Star Slot Template (3 Slots)",
+    "AttackSlots": [
+      1,
+      2,
+      3,
+      0,
+      0
+    ],
+    "SkillSlots": [
+      2,
+      2,
+      2,
+      0,
+      0
+    ],
+    "TotalSlots": 3
+  },
+  {
+    "Id": 422220,
+    "_comment": "Weapon 4-Star Slot Template (4 Slots)",
+    "AttackSlots": [
+      1,
+      2,
+      3,
+      4,
+      0
+    ],
+    "SkillSlots": [
+      2,
+      2,
+      2,
+      2,
+      0
+    ],
+    "TotalSlots": 4
+  },
+  {
+    "Id": 522222,
+    "_comment": "Weapon 5-Star Slot Template (5 Slots)",
+    "AttackSlots": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "SkillSlots": [
+      2,
+      2,
+      2,
+      2,
+      2
+    ],
+    "TotalSlots": 5
+  },
+  {
+    "Id": 130000,
+    "_comment": "Weapon 1-Star Slot Template (1 Slots)",
+    "AttackSlots": [
+      1,
+      0,
+      0,
+      0,
+      0
+    ],
+    "SkillSlots": [
+      3,
+      0,
+      0,
+      0,
+      0
+    ],
+    "TotalSlots": 1
+  },
+  {
+    "Id": 233000,
+    "_comment": "Weapon 2-Star Slot Template (2 Slots)",
+    "AttackSlots": [
+      1,
+      2,
+      0,
+      0,
+      0
+    ],
+    "SkillSlots": [
+      3,
+      3,
+      0,
+      0,
+      0
+    ],
+    "TotalSlots": 2
+  },
+  {
+    "Id": 333300,
+    "_comment": "Weapon 3-Star Slot Template (3 Slots)",
+    "AttackSlots": [
+      1,
+      2,
+      3,
+      0,
+      0
+    ],
+    "SkillSlots": [
+      3,
+      3,
+      3,
+      0,
+      0
+    ],
+    "TotalSlots": 3
+  },
+  {
+    "Id": 433330,
+    "_comment": "Weapon 4-Star Slot Template (4 Slots)",
+    "AttackSlots": [
+      1,
+      2,
+      3,
+      4,
+      0
+    ],
+    "SkillSlots": [
+      3,
+      3,
+      3,
+      3,
+      0
+    ],
+    "TotalSlots": 4
+  },
+  {
+    "Id": 533333,
+    "_comment": "Weapon 5-Star Slot Template (5 Slots)",
+    "AttackSlots": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "SkillSlots": [
+      3,
+      3,
+      3,
+      3,
+      3
+    ],
+    "TotalSlots": 5
+  }
+]

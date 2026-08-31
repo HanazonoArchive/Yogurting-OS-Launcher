@@ -1,0 +1,1002 @@
+[
+  {
+    "DexLevel": 1,
+    "_comment": "Weapon Proficiency Level 1 - Requires 20 Weapon EXP",
+    "RequiredExp": 20
+  },
+  {
+    "DexLevel": 2,
+    "_comment": "Weapon Proficiency Level 2 - Requires 30 Weapon EXP",
+    "RequiredExp": 30
+  },
+  {
+    "DexLevel": 3,
+    "_comment": "Weapon Proficiency Level 3 - Requires 30 Weapon EXP",
+    "RequiredExp": 30
+  },
+  {
+    "DexLevel": 4,
+    "_comment": "Weapon Proficiency Level 4 - Requires 50 Weapon EXP",
+    "RequiredExp": 50
+  },
+  {
+    "DexLevel": 5,
+    "_comment": "Weapon Proficiency Level 5 - Requires 70 Weapon EXP",
+    "RequiredExp": 70
+  },
+  {
+    "DexLevel": 6,
+    "_comment": "Weapon Proficiency Level 6 - Requires 80 Weapon EXP",
+    "RequiredExp": 80
+  },
+  {
+    "DexLevel": 7,
+    "_comment": "Weapon Proficiency Level 7 - Requires 100 Weapon EXP",
+    "RequiredExp": 100
+  },
+  {
+    "DexLevel": 8,
+    "_comment": "Weapon Proficiency Level 8 - Requires 120 Weapon EXP",
+    "RequiredExp": 120
+  },
+  {
+    "DexLevel": 9,
+    "_comment": "Weapon Proficiency Level 9 - Requires 150 Weapon EXP",
+    "RequiredExp": 150
+  },
+  {
+    "DexLevel": 10,
+    "_comment": "Weapon Proficiency Level 10 - Requires 180 Weapon EXP",
+    "RequiredExp": 180
+  },
+  {
+    "DexLevel": 11,
+    "_comment": "Weapon Proficiency Level 11 - Requires 210 Weapon EXP",
+    "RequiredExp": 210
+  },
+  {
+    "DexLevel": 12,
+    "_comment": "Weapon Proficiency Level 12 - Requires 240 Weapon EXP",
+    "RequiredExp": 240
+  },
+  {
+    "DexLevel": 13,
+    "_comment": "Weapon Proficiency Level 13 - Requires 290 Weapon EXP",
+    "RequiredExp": 290
+  },
+  {
+    "DexLevel": 14,
+    "_comment": "Weapon Proficiency Level 14 - Requires 340 Weapon EXP",
+    "RequiredExp": 340
+  },
+  {
+    "DexLevel": 15,
+    "_comment": "Weapon Proficiency Level 15 - Requires 380 Weapon EXP",
+    "RequiredExp": 380
+  },
+  {
+    "DexLevel": 16,
+    "_comment": "Weapon Proficiency Level 16 - Requires 430 Weapon EXP",
+    "RequiredExp": 430
+  },
+  {
+    "DexLevel": 17,
+    "_comment": "Weapon Proficiency Level 17 - Requires 490 Weapon EXP",
+    "RequiredExp": 490
+  },
+  {
+    "DexLevel": 18,
+    "_comment": "Weapon Proficiency Level 18 - Requires 540 Weapon EXP",
+    "RequiredExp": 540
+  },
+  {
+    "DexLevel": 19,
+    "_comment": "Weapon Proficiency Level 19 - Requires 620 Weapon EXP",
+    "RequiredExp": 620
+  },
+  {
+    "DexLevel": 20,
+    "_comment": "Weapon Proficiency Level 20 - Requires 690 Weapon EXP",
+    "RequiredExp": 690
+  },
+  {
+    "DexLevel": 21,
+    "_comment": "Weapon Proficiency Level 21 - Requires 760 Weapon EXP",
+    "RequiredExp": 760
+  },
+  {
+    "DexLevel": 22,
+    "_comment": "Weapon Proficiency Level 22 - Requires 850 Weapon EXP",
+    "RequiredExp": 850
+  },
+  {
+    "DexLevel": 23,
+    "_comment": "Weapon Proficiency Level 23 - Requires 940 Weapon EXP",
+    "RequiredExp": 940
+  },
+  {
+    "DexLevel": 24,
+    "_comment": "Weapon Proficiency Level 24 - Requires 1030 Weapon EXP",
+    "RequiredExp": 1030
+  },
+  {
+    "DexLevel": 25,
+    "_comment": "Weapon Proficiency Level 25 - Requires 1130 Weapon EXP",
+    "RequiredExp": 1130
+  },
+  {
+    "DexLevel": 26,
+    "_comment": "Weapon Proficiency Level 26 - Requires 1240 Weapon EXP",
+    "RequiredExp": 1240
+  },
+  {
+    "DexLevel": 27,
+    "_comment": "Weapon Proficiency Level 27 - Requires 1350 Weapon EXP",
+    "RequiredExp": 1350
+  },
+  {
+    "DexLevel": 28,
+    "_comment": "Weapon Proficiency Level 28 - Requires 1470 Weapon EXP",
+    "RequiredExp": 1470
+  },
+  {
+    "DexLevel": 29,
+    "_comment": "Weapon Proficiency Level 29 - Requires 1600 Weapon EXP",
+    "RequiredExp": 1600
+  },
+  {
+    "DexLevel": 30,
+    "_comment": "Weapon Proficiency Level 30 - Requires 1740 Weapon EXP",
+    "RequiredExp": 1740
+  },
+  {
+    "DexLevel": 31,
+    "_comment": "Weapon Proficiency Level 31 - Requires 2080 Weapon EXP",
+    "RequiredExp": 2080
+  },
+  {
+    "DexLevel": 32,
+    "_comment": "Weapon Proficiency Level 32 - Requires 2450 Weapon EXP",
+    "RequiredExp": 2450
+  },
+  {
+    "DexLevel": 33,
+    "_comment": "Weapon Proficiency Level 33 - Requires 2860 Weapon EXP",
+    "RequiredExp": 2860
+  },
+  {
+    "DexLevel": 34,
+    "_comment": "Weapon Proficiency Level 34 - Requires 3310 Weapon EXP",
+    "RequiredExp": 3310
+  },
+  {
+    "DexLevel": 35,
+    "_comment": "Weapon Proficiency Level 35 - Requires 3815 Weapon EXP",
+    "RequiredExp": 3815
+  },
+  {
+    "DexLevel": 36,
+    "_comment": "Weapon Proficiency Level 36 - Requires 4356 Weapon EXP",
+    "RequiredExp": 4356
+  },
+  {
+    "DexLevel": 37,
+    "_comment": "Weapon Proficiency Level 37 - Requires 4944 Weapon EXP",
+    "RequiredExp": 4944
+  },
+  {
+    "DexLevel": 38,
+    "_comment": "Weapon Proficiency Level 38 - Requires 5580 Weapon EXP",
+    "RequiredExp": 5580
+  },
+  {
+    "DexLevel": 39,
+    "_comment": "Weapon Proficiency Level 39 - Requires 6266 Weapon EXP",
+    "RequiredExp": 6266
+  },
+  {
+    "DexLevel": 40,
+    "_comment": "Weapon Proficiency Level 40 - Requires 7003 Weapon EXP",
+    "RequiredExp": 7003
+  },
+  {
+    "DexLevel": 41,
+    "_comment": "Weapon Proficiency Level 41 - Requires 7794 Weapon EXP",
+    "RequiredExp": 7794
+  },
+  {
+    "DexLevel": 42,
+    "_comment": "Weapon Proficiency Level 42 - Requires 8640 Weapon EXP",
+    "RequiredExp": 8640
+  },
+  {
+    "DexLevel": 43,
+    "_comment": "Weapon Proficiency Level 43 - Requires 9540 Weapon EXP",
+    "RequiredExp": 9540
+  },
+  {
+    "DexLevel": 44,
+    "_comment": "Weapon Proficiency Level 44 - Requires 10530 Weapon EXP",
+    "RequiredExp": 10530
+  },
+  {
+    "DexLevel": 45,
+    "_comment": "Weapon Proficiency Level 45 - Requires 11530 Weapon EXP",
+    "RequiredExp": 11530
+  },
+  {
+    "DexLevel": 46,
+    "_comment": "Weapon Proficiency Level 46 - Requires 12600 Weapon EXP",
+    "RequiredExp": 12600
+  },
+  {
+    "DexLevel": 47,
+    "_comment": "Weapon Proficiency Level 47 - Requires 13760 Weapon EXP",
+    "RequiredExp": 13760
+  },
+  {
+    "DexLevel": 48,
+    "_comment": "Weapon Proficiency Level 48 - Requires 14960 Weapon EXP",
+    "RequiredExp": 14960
+  },
+  {
+    "DexLevel": 49,
+    "_comment": "Weapon Proficiency Level 49 - Requires 16260 Weapon EXP",
+    "RequiredExp": 16260
+  },
+  {
+    "DexLevel": 50,
+    "_comment": "Weapon Proficiency Level 50 - Requires 17610 Weapon EXP",
+    "RequiredExp": 17610
+  },
+  {
+    "DexLevel": 51,
+    "_comment": "Weapon Proficiency Level 51 - Requires 19040 Weapon EXP",
+    "RequiredExp": 19040
+  },
+  {
+    "DexLevel": 52,
+    "_comment": "Weapon Proficiency Level 52 - Requires 20530 Weapon EXP",
+    "RequiredExp": 20530
+  },
+  {
+    "DexLevel": 53,
+    "_comment": "Weapon Proficiency Level 53 - Requires 22100 Weapon EXP",
+    "RequiredExp": 22100
+  },
+  {
+    "DexLevel": 54,
+    "_comment": "Weapon Proficiency Level 54 - Requires 23750 Weapon EXP",
+    "RequiredExp": 23750
+  },
+  {
+    "DexLevel": 55,
+    "_comment": "Weapon Proficiency Level 55 - Requires 25470 Weapon EXP",
+    "RequiredExp": 25470
+  },
+  {
+    "DexLevel": 56,
+    "_comment": "Weapon Proficiency Level 56 - Requires 27280 Weapon EXP",
+    "RequiredExp": 27280
+  },
+  {
+    "DexLevel": 57,
+    "_comment": "Weapon Proficiency Level 57 - Requires 29170 Weapon EXP",
+    "RequiredExp": 29170
+  },
+  {
+    "DexLevel": 58,
+    "_comment": "Weapon Proficiency Level 58 - Requires 31140 Weapon EXP",
+    "RequiredExp": 31140
+  },
+  {
+    "DexLevel": 59,
+    "_comment": "Weapon Proficiency Level 59 - Requires 33200 Weapon EXP",
+    "RequiredExp": 33200
+  },
+  {
+    "DexLevel": 60,
+    "_comment": "Weapon Proficiency Level 60 - Requires 35360 Weapon EXP",
+    "RequiredExp": 35360
+  },
+  {
+    "DexLevel": 61,
+    "_comment": "Weapon Proficiency Level 61 - Requires 39890 Weapon EXP",
+    "RequiredExp": 39890
+  },
+  {
+    "DexLevel": 62,
+    "_comment": "Weapon Proficiency Level 62 - Requires 44765 Weapon EXP",
+    "RequiredExp": 44765
+  },
+  {
+    "DexLevel": 63,
+    "_comment": "Weapon Proficiency Level 63 - Requires 49988 Weapon EXP",
+    "RequiredExp": 49988
+  },
+  {
+    "DexLevel": 64,
+    "_comment": "Weapon Proficiency Level 64 - Requires 55566 Weapon EXP",
+    "RequiredExp": 55566
+  },
+  {
+    "DexLevel": 65,
+    "_comment": "Weapon Proficiency Level 65 - Requires 61500 Weapon EXP",
+    "RequiredExp": 61500
+  },
+  {
+    "DexLevel": 66,
+    "_comment": "Weapon Proficiency Level 66 - Requires 67830 Weapon EXP",
+    "RequiredExp": 67830
+  },
+  {
+    "DexLevel": 67,
+    "_comment": "Weapon Proficiency Level 67 - Requires 74530 Weapon EXP",
+    "RequiredExp": 74530
+  },
+  {
+    "DexLevel": 68,
+    "_comment": "Weapon Proficiency Level 68 - Requires 81620 Weapon EXP",
+    "RequiredExp": 81620
+  },
+  {
+    "DexLevel": 69,
+    "_comment": "Weapon Proficiency Level 69 - Requires 89116 Weapon EXP",
+    "RequiredExp": 89116
+  },
+  {
+    "DexLevel": 70,
+    "_comment": "Weapon Proficiency Level 70 - Requires 97025 Weapon EXP",
+    "RequiredExp": 97025
+  },
+  {
+    "DexLevel": 71,
+    "_comment": "Weapon Proficiency Level 71 - Requires 105356 Weapon EXP",
+    "RequiredExp": 105356
+  },
+  {
+    "DexLevel": 72,
+    "_comment": "Weapon Proficiency Level 72 - Requires 114119 Weapon EXP",
+    "RequiredExp": 114119
+  },
+  {
+    "DexLevel": 73,
+    "_comment": "Weapon Proficiency Level 73 - Requires 123324 Weapon EXP",
+    "RequiredExp": 123324
+  },
+  {
+    "DexLevel": 74,
+    "_comment": "Weapon Proficiency Level 74 - Requires 132979 Weapon EXP",
+    "RequiredExp": 132979
+  },
+  {
+    "DexLevel": 75,
+    "_comment": "Weapon Proficiency Level 75 - Requires 143110 Weapon EXP",
+    "RequiredExp": 143110
+  },
+  {
+    "DexLevel": 76,
+    "_comment": "Weapon Proficiency Level 76 - Requires 153681 Weapon EXP",
+    "RequiredExp": 153681
+  },
+  {
+    "DexLevel": 77,
+    "_comment": "Weapon Proficiency Level 77 - Requires 164760 Weapon EXP",
+    "RequiredExp": 164760
+  },
+  {
+    "DexLevel": 78,
+    "_comment": "Weapon Proficiency Level 78 - Requires 176330 Weapon EXP",
+    "RequiredExp": 176330
+  },
+  {
+    "DexLevel": 79,
+    "_comment": "Weapon Proficiency Level 79 - Requires 188370 Weapon EXP",
+    "RequiredExp": 188370
+  },
+  {
+    "DexLevel": 80,
+    "_comment": "Weapon Proficiency Level 80 - Requires 200918 Weapon EXP",
+    "RequiredExp": 200918
+  },
+  {
+    "DexLevel": 81,
+    "_comment": "Weapon Proficiency Level 81 - Requires 214020 Weapon EXP",
+    "RequiredExp": 214020
+  },
+  {
+    "DexLevel": 82,
+    "_comment": "Weapon Proficiency Level 82 - Requires 227607 Weapon EXP",
+    "RequiredExp": 227607
+  },
+  {
+    "DexLevel": 83,
+    "_comment": "Weapon Proficiency Level 83 - Requires 241752 Weapon EXP",
+    "RequiredExp": 241752
+  },
+  {
+    "DexLevel": 84,
+    "_comment": "Weapon Proficiency Level 84 - Requires 256444 Weapon EXP",
+    "RequiredExp": 256444
+  },
+  {
+    "DexLevel": 85,
+    "_comment": "Weapon Proficiency Level 85 - Requires 271693 Weapon EXP",
+    "RequiredExp": 271693
+  },
+  {
+    "DexLevel": 86,
+    "_comment": "Weapon Proficiency Level 86 - Requires 287508 Weapon EXP",
+    "RequiredExp": 287508
+  },
+  {
+    "DexLevel": 87,
+    "_comment": "Weapon Proficiency Level 87 - Requires 303898 Weapon EXP",
+    "RequiredExp": 303898
+  },
+  {
+    "DexLevel": 88,
+    "_comment": "Weapon Proficiency Level 88 - Requires 320874 Weapon EXP",
+    "RequiredExp": 320874
+  },
+  {
+    "DexLevel": 89,
+    "_comment": "Weapon Proficiency Level 89 - Requires 338444 Weapon EXP",
+    "RequiredExp": 338444
+  },
+  {
+    "DexLevel": 90,
+    "_comment": "Weapon Proficiency Level 90 - Requires 356680 Weapon EXP",
+    "RequiredExp": 356680
+  },
+  {
+    "DexLevel": 91,
+    "_comment": "Weapon Proficiency Level 91 - Requires 388600 Weapon EXP",
+    "RequiredExp": 388600
+  },
+  {
+    "DexLevel": 92,
+    "_comment": "Weapon Proficiency Level 92 - Requires 420592 Weapon EXP",
+    "RequiredExp": 420592
+  },
+  {
+    "DexLevel": 93,
+    "_comment": "Weapon Proficiency Level 93 - Requires 454638 Weapon EXP",
+    "RequiredExp": 454638
+  },
+  {
+    "DexLevel": 94,
+    "_comment": "Weapon Proficiency Level 94 - Requires 490738 Weapon EXP",
+    "RequiredExp": 490738
+  },
+  {
+    "DexLevel": 95,
+    "_comment": "Weapon Proficiency Level 95 - Requires 528892 Weapon EXP",
+    "RequiredExp": 528892
+  },
+  {
+    "DexLevel": 96,
+    "_comment": "Weapon Proficiency Level 96 - Requires 569100 Weapon EXP",
+    "RequiredExp": 569100
+  },
+  {
+    "DexLevel": 97,
+    "_comment": "Weapon Proficiency Level 97 - Requires 611362 Weapon EXP",
+    "RequiredExp": 611362
+  },
+  {
+    "DexLevel": 98,
+    "_comment": "Weapon Proficiency Level 98 - Requires 655678 Weapon EXP",
+    "RequiredExp": 655678
+  },
+  {
+    "DexLevel": 99,
+    "_comment": "Weapon Proficiency Level 99 - Requires 702048 Weapon EXP",
+    "RequiredExp": 702048
+  },
+  {
+    "DexLevel": 100,
+    "_comment": "Weapon Proficiency Level 100 - Requires 750472 Weapon EXP",
+    "RequiredExp": 750472
+  },
+  {
+    "DexLevel": 101,
+    "_comment": "Weapon Proficiency Level 101 - Requires 800950 Weapon EXP",
+    "RequiredExp": 800950
+  },
+  {
+    "DexLevel": 102,
+    "_comment": "Weapon Proficiency Level 102 - Requires 853482 Weapon EXP",
+    "RequiredExp": 853482
+  },
+  {
+    "DexLevel": 103,
+    "_comment": "Weapon Proficiency Level 103 - Requires 908068 Weapon EXP",
+    "RequiredExp": 908068
+  },
+  {
+    "DexLevel": 104,
+    "_comment": "Weapon Proficiency Level 104 - Requires 964708 Weapon EXP",
+    "RequiredExp": 964708
+  },
+  {
+    "DexLevel": 105,
+    "_comment": "Weapon Proficiency Level 105 - Requires 1023402 Weapon EXP",
+    "RequiredExp": 1023402
+  },
+  {
+    "DexLevel": 106,
+    "_comment": "Weapon Proficiency Level 106 - Requires 1084150 Weapon EXP",
+    "RequiredExp": 1084150
+  },
+  {
+    "DexLevel": 107,
+    "_comment": "Weapon Proficiency Level 107 - Requires 1146952 Weapon EXP",
+    "RequiredExp": 1146952
+  },
+  {
+    "DexLevel": 108,
+    "_comment": "Weapon Proficiency Level 108 - Requires 1212090 Weapon EXP",
+    "RequiredExp": 1212090
+  },
+  {
+    "DexLevel": 109,
+    "_comment": "Weapon Proficiency Level 109 - Requires 1278718 Weapon EXP",
+    "RequiredExp": 1278718
+  },
+  {
+    "DexLevel": 110,
+    "_comment": "Weapon Proficiency Level 110 - Requires 1348030 Weapon EXP",
+    "RequiredExp": 1348030
+  },
+  {
+    "DexLevel": 111,
+    "_comment": "Weapon Proficiency Level 111 - Requires 1418700 Weapon EXP",
+    "RequiredExp": 1418700
+  },
+  {
+    "DexLevel": 112,
+    "_comment": "Weapon Proficiency Level 112 - Requires 1491772 Weapon EXP",
+    "RequiredExp": 1491772
+  },
+  {
+    "DexLevel": 113,
+    "_comment": "Weapon Proficiency Level 113 - Requires 1566898 Weapon EXP",
+    "RequiredExp": 1566898
+  },
+  {
+    "DexLevel": 114,
+    "_comment": "Weapon Proficiency Level 114 - Requires 1644078 Weapon EXP",
+    "RequiredExp": 1644078
+  },
+  {
+    "DexLevel": 115,
+    "_comment": "Weapon Proficiency Level 115 - Requires 1723312 Weapon EXP",
+    "RequiredExp": 1723312
+  },
+  {
+    "DexLevel": 116,
+    "_comment": "Weapon Proficiency Level 116 - Requires 1804600 Weapon EXP",
+    "RequiredExp": 1804600
+  },
+  {
+    "DexLevel": 117,
+    "_comment": "Weapon Proficiency Level 117 - Requires 1887942 Weapon EXP",
+    "RequiredExp": 1887942
+  },
+  {
+    "DexLevel": 118,
+    "_comment": "Weapon Proficiency Level 118 - Requires 1973338 Weapon EXP",
+    "RequiredExp": 1973338
+  },
+  {
+    "DexLevel": 119,
+    "_comment": "Weapon Proficiency Level 119 - Requires 2060788 Weapon EXP",
+    "RequiredExp": 2060788
+  },
+  {
+    "DexLevel": 120,
+    "_comment": "Weapon Proficiency Level 120 - Requires 2150292 Weapon EXP",
+    "RequiredExp": 2150292
+  },
+  {
+    "DexLevel": 121,
+    "_comment": "Weapon Proficiency Level 121 - Requires 2458450 Weapon EXP",
+    "RequiredExp": 2458450
+  },
+  {
+    "DexLevel": 122,
+    "_comment": "Weapon Proficiency Level 122 - Requires 2493518 Weapon EXP",
+    "RequiredExp": 2493518
+  },
+  {
+    "DexLevel": 123,
+    "_comment": "Weapon Proficiency Level 123 - Requires 2544640 Weapon EXP",
+    "RequiredExp": 2544640
+  },
+  {
+    "DexLevel": 124,
+    "_comment": "Weapon Proficiency Level 124 - Requires 2611254 Weapon EXP",
+    "RequiredExp": 2611254
+  },
+  {
+    "DexLevel": 125,
+    "_comment": "Weapon Proficiency Level 125 - Requires 2692798 Weapon EXP",
+    "RequiredExp": 2692798
+  },
+  {
+    "DexLevel": 126,
+    "_comment": "Weapon Proficiency Level 126 - Requires 2787190 Weapon EXP",
+    "RequiredExp": 2787190
+  },
+  {
+    "DexLevel": 127,
+    "_comment": "Weapon Proficiency Level 127 - Requires 2899690 Weapon EXP",
+    "RequiredExp": 2899690
+  },
+  {
+    "DexLevel": 128,
+    "_comment": "Weapon Proficiency Level 128 - Requires 3021377 Weapon EXP",
+    "RequiredExp": 3021377
+  },
+  {
+    "DexLevel": 129,
+    "_comment": "Weapon Proficiency Level 129 - Requires 3157010 Weapon EXP",
+    "RequiredExp": 3157010
+  },
+  {
+    "DexLevel": 130,
+    "_comment": "Weapon Proficiency Level 130 - Requires 3304760 Weapon EXP",
+    "RequiredExp": 3304760
+  },
+  {
+    "DexLevel": 131,
+    "_comment": "Weapon Proficiency Level 131 - Requires 3464063 Weapon EXP",
+    "RequiredExp": 3464063
+  },
+  {
+    "DexLevel": 132,
+    "_comment": "Weapon Proficiency Level 132 - Requires 3634356 Weapon EXP",
+    "RequiredExp": 3634356
+  },
+  {
+    "DexLevel": 133,
+    "_comment": "Weapon Proficiency Level 133 - Requires 3815077 Weapon EXP",
+    "RequiredExp": 3815077
+  },
+  {
+    "DexLevel": 134,
+    "_comment": "Weapon Proficiency Level 134 - Requires 4004010 Weapon EXP",
+    "RequiredExp": 4004010
+  },
+  {
+    "DexLevel": 135,
+    "_comment": "Weapon Proficiency Level 135 - Requires 4205553 Weapon EXP",
+    "RequiredExp": 4205553
+  },
+  {
+    "DexLevel": 136,
+    "_comment": "Weapon Proficiency Level 136 - Requires 4415030 Weapon EXP",
+    "RequiredExp": 4415030
+  },
+  {
+    "DexLevel": 137,
+    "_comment": "Weapon Proficiency Level 137 - Requires 4630987 Weapon EXP",
+    "RequiredExp": 4630987
+  },
+  {
+    "DexLevel": 138,
+    "_comment": "Weapon Proficiency Level 138 - Requires 4855407 Weapon EXP",
+    "RequiredExp": 4855407
+  },
+  {
+    "DexLevel": 139,
+    "_comment": "Weapon Proficiency Level 139 - Requires 5086879 Weapon EXP",
+    "RequiredExp": 5086879
+  },
+  {
+    "DexLevel": 140,
+    "_comment": "Weapon Proficiency Level 140 - Requires 5324840 Weapon EXP",
+    "RequiredExp": 5324840
+  },
+  {
+    "DexLevel": 141,
+    "_comment": "Weapon Proficiency Level 141 - Requires 5568727 Weapon EXP",
+    "RequiredExp": 5568727
+  },
+  {
+    "DexLevel": 142,
+    "_comment": "Weapon Proficiency Level 142 - Requires 5817979 Weapon EXP",
+    "RequiredExp": 5817979
+  },
+  {
+    "DexLevel": 143,
+    "_comment": "Weapon Proficiency Level 143 - Requires 6072031 Weapon EXP",
+    "RequiredExp": 6072031
+  },
+  {
+    "DexLevel": 144,
+    "_comment": "Weapon Proficiency Level 144 - Requires 6330321 Weapon EXP",
+    "RequiredExp": 6330321
+  },
+  {
+    "DexLevel": 145,
+    "_comment": "Weapon Proficiency Level 145 - Requires 6592288 Weapon EXP",
+    "RequiredExp": 6592288
+  },
+  {
+    "DexLevel": 146,
+    "_comment": "Weapon Proficiency Level 146 - Requires 6857300 Weapon EXP",
+    "RequiredExp": 6857300
+  },
+  {
+    "DexLevel": 147,
+    "_comment": "Weapon Proficiency Level 147 - Requires 7124996 Weapon EXP",
+    "RequiredExp": 7124996
+  },
+  {
+    "DexLevel": 148,
+    "_comment": "Weapon Proficiency Level 148 - Requires 7394613 Weapon EXP",
+    "RequiredExp": 7394613
+  },
+  {
+    "DexLevel": 149,
+    "_comment": "Weapon Proficiency Level 149 - Requires 7665656 Weapon EXP",
+    "RequiredExp": 7665656
+  },
+  {
+    "DexLevel": 150,
+    "_comment": "Weapon Proficiency Level 150 - Requires 7937560 Weapon EXP",
+    "RequiredExp": 7937560
+  },
+  {
+    "DexLevel": 151,
+    "_comment": "Weapon Proficiency Level 151 - Requires 8337100 Weapon EXP",
+    "RequiredExp": 8337100
+  },
+  {
+    "DexLevel": 152,
+    "_comment": "Weapon Proficiency Level 152 - Requires 8562637 Weapon EXP",
+    "RequiredExp": 8562637
+  },
+  {
+    "DexLevel": 153,
+    "_comment": "Weapon Proficiency Level 153 - Requires 8853508 Weapon EXP",
+    "RequiredExp": 8853508
+  },
+  {
+    "DexLevel": 154,
+    "_comment": "Weapon Proficiency Level 154 - Requires 9189389 Weapon EXP",
+    "RequiredExp": 9189389
+  },
+  {
+    "DexLevel": 155,
+    "_comment": "Weapon Proficiency Level 155 - Requires 9555033 Weapon EXP",
+    "RequiredExp": 9555033
+  },
+  {
+    "DexLevel": 156,
+    "_comment": "Weapon Proficiency Level 156 - Requires 9938455 Weapon EXP",
+    "RequiredExp": 9938455
+  },
+  {
+    "DexLevel": 157,
+    "_comment": "Weapon Proficiency Level 157 - Requires 10330658 Weapon EXP",
+    "RequiredExp": 10330658
+  },
+  {
+    "DexLevel": 158,
+    "_comment": "Weapon Proficiency Level 158 - Requires 10722640 Weapon EXP",
+    "RequiredExp": 10722640
+  },
+  {
+    "DexLevel": 159,
+    "_comment": "Weapon Proficiency Level 159 - Requires 11118633 Weapon EXP",
+    "RequiredExp": 11118633
+  },
+  {
+    "DexLevel": 160,
+    "_comment": "Weapon Proficiency Level 160 - Requires 11508787 Weapon EXP",
+    "RequiredExp": 11508787
+  },
+  {
+    "DexLevel": 161,
+    "_comment": "Weapon Proficiency Level 161 - Requires 11895920 Weapon EXP",
+    "RequiredExp": 11895920
+  },
+  {
+    "DexLevel": 162,
+    "_comment": "Weapon Proficiency Level 162 - Requires 12281721 Weapon EXP",
+    "RequiredExp": 12281721
+  },
+  {
+    "DexLevel": 163,
+    "_comment": "Weapon Proficiency Level 163 - Requires 12664090 Weapon EXP",
+    "RequiredExp": 12664090
+  },
+  {
+    "DexLevel": 164,
+    "_comment": "Weapon Proficiency Level 164 - Requires 13062248 Weapon EXP",
+    "RequiredExp": 13062248
+  },
+  {
+    "DexLevel": 165,
+    "_comment": "Weapon Proficiency Level 165 - Requires 13465679 Weapon EXP",
+    "RequiredExp": 13465679
+  },
+  {
+    "DexLevel": 166,
+    "_comment": "Weapon Proficiency Level 166 - Requires 13884618 Weapon EXP",
+    "RequiredExp": 13884618
+  },
+  {
+    "DexLevel": 167,
+    "_comment": "Weapon Proficiency Level 167 - Requires 14324389 Weapon EXP",
+    "RequiredExp": 14324389
+  },
+  {
+    "DexLevel": 168,
+    "_comment": "Weapon Proficiency Level 168 - Requires 14790194 Weapon EXP",
+    "RequiredExp": 14790194
+  },
+  {
+    "DexLevel": 169,
+    "_comment": "Weapon Proficiency Level 169 - Requires 15286834 Weapon EXP",
+    "RequiredExp": 15286834
+  },
+  {
+    "DexLevel": 170,
+    "_comment": "Weapon Proficiency Level 170 - Requires 15818427 Weapon EXP",
+    "RequiredExp": 15818427
+  },
+  {
+    "DexLevel": 171,
+    "_comment": "Weapon Proficiency Level 171 - Requires 16383500 Weapon EXP",
+    "RequiredExp": 16383500
+  },
+  {
+    "DexLevel": 172,
+    "_comment": "Weapon Proficiency Level 172 - Requires 16997828 Weapon EXP",
+    "RequiredExp": 16997828
+  },
+  {
+    "DexLevel": 173,
+    "_comment": "Weapon Proficiency Level 173 - Requires 17647913 Weapon EXP",
+    "RequiredExp": 17647913
+  },
+  {
+    "DexLevel": 174,
+    "_comment": "Weapon Proficiency Level 174 - Requires 18336940 Weapon EXP",
+    "RequiredExp": 18336940
+  },
+  {
+    "DexLevel": 175,
+    "_comment": "Weapon Proficiency Level 175 - Requires 19061375 Weapon EXP",
+    "RequiredExp": 19061375
+  },
+  {
+    "DexLevel": 176,
+    "_comment": "Weapon Proficiency Level 176 - Requires 19815310 Weapon EXP",
+    "RequiredExp": 19815310
+  },
+  {
+    "DexLevel": 177,
+    "_comment": "Weapon Proficiency Level 177 - Requires 20590175 Weapon EXP",
+    "RequiredExp": 20590175
+  },
+  {
+    "DexLevel": 178,
+    "_comment": "Weapon Proficiency Level 178 - Requires 21378800 Weapon EXP",
+    "RequiredExp": 21378800
+  },
+  {
+    "DexLevel": 179,
+    "_comment": "Weapon Proficiency Level 179 - Requires 22159980 Weapon EXP",
+    "RequiredExp": 22159980
+  },
+  {
+    "DexLevel": 180,
+    "_comment": "Weapon Proficiency Level 180 - Requires 22908867 Weapon EXP",
+    "RequiredExp": 22908867
+  },
+  {
+    "DexLevel": 181,
+    "_comment": "Weapon Proficiency Level 181 - Requires 23846210 Weapon EXP",
+    "RequiredExp": 23846210
+  },
+  {
+    "DexLevel": 182,
+    "_comment": "Weapon Proficiency Level 182 - Requires 24665430 Weapon EXP",
+    "RequiredExp": 24665430
+  },
+  {
+    "DexLevel": 183,
+    "_comment": "Weapon Proficiency Level 183 - Requires 25504650 Weapon EXP",
+    "RequiredExp": 25504650
+  },
+  {
+    "DexLevel": 184,
+    "_comment": "Weapon Proficiency Level 184 - Requires 26363870 Weapon EXP",
+    "RequiredExp": 26363870
+  },
+  {
+    "DexLevel": 185,
+    "_comment": "Weapon Proficiency Level 185 - Requires 27243090 Weapon EXP",
+    "RequiredExp": 27243090
+  },
+  {
+    "DexLevel": 186,
+    "_comment": "Weapon Proficiency Level 186 - Requires 28142310 Weapon EXP",
+    "RequiredExp": 28142310
+  },
+  {
+    "DexLevel": 187,
+    "_comment": "Weapon Proficiency Level 187 - Requires 29061530 Weapon EXP",
+    "RequiredExp": 29061530
+  },
+  {
+    "DexLevel": 188,
+    "_comment": "Weapon Proficiency Level 188 - Requires 30000750 Weapon EXP",
+    "RequiredExp": 30000750
+  },
+  {
+    "DexLevel": 189,
+    "_comment": "Weapon Proficiency Level 189 - Requires 30959970 Weapon EXP",
+    "RequiredExp": 30959970
+  },
+  {
+    "DexLevel": 190,
+    "_comment": "Weapon Proficiency Level 190 - Requires 31939190 Weapon EXP",
+    "RequiredExp": 31939190
+  },
+  {
+    "DexLevel": 191,
+    "_comment": "Weapon Proficiency Level 191 - Requires 32938410 Weapon EXP",
+    "RequiredExp": 32938410
+  },
+  {
+    "DexLevel": 192,
+    "_comment": "Weapon Proficiency Level 192 - Requires 33957630 Weapon EXP",
+    "RequiredExp": 33957630
+  },
+  {
+    "DexLevel": 193,
+    "_comment": "Weapon Proficiency Level 193 - Requires 34997230 Weapon EXP",
+    "RequiredExp": 34997230
+  },
+  {
+    "DexLevel": 194,
+    "_comment": "Weapon Proficiency Level 194 - Requires 36056450 Weapon EXP",
+    "RequiredExp": 36056450
+  },
+  {
+    "DexLevel": 195,
+    "_comment": "Weapon Proficiency Level 195 - Requires 37135670 Weapon EXP",
+    "RequiredExp": 37135670
+  },
+  {
+    "DexLevel": 196,
+    "_comment": "Weapon Proficiency Level 196 - Requires 38234890 Weapon EXP",
+    "RequiredExp": 38234890
+  },
+  {
+    "DexLevel": 197,
+    "_comment": "Weapon Proficiency Level 197 - Requires 39354110 Weapon EXP",
+    "RequiredExp": 39354110
+  },
+  {
+    "DexLevel": 198,
+    "_comment": "Weapon Proficiency Level 198 - Requires 40493330 Weapon EXP",
+    "RequiredExp": 40493330
+  },
+  {
+    "DexLevel": 199,
+    "_comment": "Weapon Proficiency Level 199 - Requires 41652550 Weapon EXP",
+    "RequiredExp": 41652550
+  },
+  {
+    "DexLevel": 200,
+    "_comment": "Weapon Proficiency Level 200 - Requires 2147483640 Weapon EXP",
+    "RequiredExp": 2147483640
+  }
+]

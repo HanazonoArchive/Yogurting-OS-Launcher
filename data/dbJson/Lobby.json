@@ -1,0 +1,464 @@
+[
+  {
+    "SubId": 10001,
+    "_comment": "Episode Gate 10001 - ベン先生のそば (ベン先生のそば (校舎 入口 西))",
+    "Name": "ベン先生のそば",
+    "Description": "ベン先生のそば<br>(校舎 入口 西)"
+  },
+  {
+    "SubId": 10002,
+    "_comment": "Episode Gate 10002 - リエズ先生のそば (リエズ先生のそば (校舎 1階　職員室))",
+    "Name": "リエズ先生のそば",
+    "Description": "リエズ先生のそば<br>(校舎 1階　職員室)"
+  },
+  {
+    "SubId": 10003,
+    "_comment": "Episode Gate 10003 - グレイのそば (グレイのそば (校舎 3階 東))",
+    "Name": "グレイのそば",
+    "Description": "グレイのそば<br>(校舎 3階 東)"
+  },
+  {
+    "SubId": 10004,
+    "_comment": "Episode Gate 10004 - ソムンヤン先生のそば (ソムンヤン先生のそば (校舎 2階 中央))",
+    "Name": "ソムンヤン先生のそば",
+    "Description": "ソムンヤン先生のそば<br>(校舎 2階 中央)"
+  },
+  {
+    "SubId": 10101,
+    "_comment": "Episode Gate 10101 - バスケットコート前 (バスケットコート前 （グラウンド西）)",
+    "Name": "バスケットコート前",
+    "Description": "バスケットコート前<br>（グラウンド西）"
+  },
+  {
+    "SubId": 10102,
+    "_comment": "Episode Gate 10102 - 講堂裏 (講堂裏 （グラウンド東）)",
+    "Name": "講堂裏",
+    "Description": "講堂裏<br>（グラウンド東）"
+  },
+  {
+    "SubId": 10201,
+    "_comment": "Episode Gate 10201 - 切符売り場 (校門前 切符売り場 （校門前北西）)",
+    "Name": "切符売り場",
+    "Description": "校門前 切符売り場<br>（校門前北西）"
+  },
+  {
+    "SubId": 10202,
+    "_comment": "Episode Gate 10202 - 正門前バス停 (校門前 バス停留場 （校門前南東）)",
+    "Name": "正門前バス停",
+    "Description": "校門前 バス停留場<br>（校門前南東）"
+  },
+  {
+    "SubId": 10203,
+    "_comment": "Episode Gate 10203 - 正門前献血車 (校門前 献血車 （校門前南西）)",
+    "Name": "正門前献血車",
+    "Description": "校門前 献血車<br>（校門前南西）"
+  },
+  {
+    "SubId": 10301,
+    "_comment": "Episode Gate 10301 - 校舎地下 修行部屋 (校舎地下 修行部屋前 （校舎から地下に移動）)",
+    "Name": "校舎地下 修行部屋",
+    "Description": "校舎地下 修行部屋前<br>（校舎から地下に移動）"
+  },
+  {
+    "SubId": 10401,
+    "_comment": "Episode Gate 10401 - 校舎 1階 図書館 (校舎 1階 図書館 （校舎 1階西）)",
+    "Name": "校舎 1階 図書館",
+    "Description": "校舎 1階 図書館<br>（校舎 1階西）"
+  },
+  {
+    "SubId": 10402,
+    "_comment": "Episode Gate 10402 - 校舎 1階 職員室 (校舎 1階 職員室 （校舎 1階西）)",
+    "Name": "校舎 1階 職員室",
+    "Description": "校舎 1階 職員室<br>（校舎 1階西）"
+  },
+  {
+    "SubId": 10403,
+    "_comment": "Episode Gate 10403 - 校舎 1階 音楽室 (校舎 1階 音楽室 （校舎 1階東）)",
+    "Name": "校舎 1階 音楽室",
+    "Description": "校舎 1階 音楽室<br>（校舎 1階東）"
+  },
+  {
+    "SubId": 10501,
+    "_comment": "Episode Gate 10501 - 校舎 2階 (校舎 2階 廊下 （校舎 2階東）)",
+    "Name": "校舎 2階",
+    "Description": "校舎 2階 廊下<br>（校舎 2階東）"
+  },
+  {
+    "SubId": 10601,
+    "_comment": "Episode Gate 10601 - 校舎 3階 美術室 (校舎 3階 美術室前 （校舎 3階西）)",
+    "Name": "校舎 3階 美術室",
+    "Description": "校舎 3階 美術室前<br>（校舎 3階西）"
+  },
+  {
+    "SubId": 10701,
+    "_comment": "Episode Gate 10701 - 温室前 (裏庭 温室前 （裏庭階段の上）)",
+    "Name": "温室前",
+    "Description": "裏庭 温室前<br>（裏庭階段の上）"
+  },
+  {
+    "SubId": 10702,
+    "_comment": "Episode Gate 10702 - 温室前 (裏庭 温室前 （裏庭階段の上）)",
+    "Name": "温室前",
+    "Description": "裏庭 温室前<br>（裏庭階段の上）"
+  },
+  {
+    "SubId": 10703,
+    "_comment": "Episode Gate 10703 - 裏庭 憩いの広場 (裏庭 憩いの広場 （裏庭ベンチ前）)",
+    "Name": "裏庭 憩いの広場",
+    "Description": "裏庭 憩いの広場<br>（裏庭ベンチ前）"
+  },
+  {
+    "SubId": 10704,
+    "_comment": "Episode Gate 10704 - 裏庭 飼育場 (裏庭 飼育場 （裏庭東）)",
+    "Name": "裏庭 飼育場",
+    "Description": "裏庭 飼育場<br>（裏庭東）"
+  },
+  {
+    "SubId": 10801,
+    "_comment": "Episode Gate 10801 - 世界樹 (世界樹)",
+    "Name": "世界樹",
+    "Description": "世界樹"
+  },
+  {
+    "SubId": 10802,
+    "_comment": "Episode Gate 10802 - 世界樹 (世界樹)",
+    "Name": "世界樹",
+    "Description": "世界樹"
+  },
+  {
+    "SubId": 10803,
+    "_comment": "Episode Gate 10803 - 世界樹 (世界樹)",
+    "Name": "世界樹",
+    "Description": "世界樹"
+  },
+  {
+    "SubId": 10804,
+    "_comment": "Episode Gate 10804 - 世界樹 (世界樹)",
+    "Name": "世界樹",
+    "Description": "世界樹"
+  },
+  {
+    "SubId": 10805,
+    "_comment": "Episode Gate 10805 - 世界樹 (世界樹)",
+    "Name": "世界樹",
+    "Description": "世界樹"
+  },
+  {
+    "SubId": 10806,
+    "_comment": "Episode Gate 10806 - 世界樹 (世界樹)",
+    "Name": "世界樹",
+    "Description": "世界樹"
+  },
+  {
+    "SubId": 10807,
+    "_comment": "Episode Gate 10807 - 世界樹 (世界樹)",
+    "Name": "世界樹",
+    "Description": "世界樹"
+  },
+  {
+    "SubId": 10808,
+    "_comment": "Episode Gate 10808 - 世界樹 (世界樹)",
+    "Name": "世界樹",
+    "Description": "世界樹"
+  },
+  {
+    "SubId": 20001,
+    "_comment": "Episode Gate 20001 - サム先生のそば (サム先生のそば (校舎 入口 西))",
+    "Name": "サム先生のそば",
+    "Description": "サム先生のそば<br>(校舎 入口 西)"
+  },
+  {
+    "SubId": 20002,
+    "_comment": "Episode Gate 20002 - シンソヒョンのそば (シンソヒョンのそば (校舎 1階 職員室))",
+    "Name": "シンソヒョンのそば",
+    "Description": "シンソヒョンのそば<br>(校舎 1階 職員室)"
+  },
+  {
+    "SubId": 20003,
+    "_comment": "Episode Gate 20003 - バーモント神父様のそば (バーモント神父様のそば (グラウンド西の階段から移動))",
+    "Name": "バーモント神父様のそば",
+    "Description": "バーモント神父様のそば<br>(グラウンド西の階段から移動)"
+  },
+  {
+    "SubId": 20004,
+    "_comment": "Episode Gate 20004 - 水蓮のそば (水蓮のそば (グラウンド西の階段から移動))",
+    "Name": "水蓮のそば",
+    "Description": "水蓮のそば<br>(グラウンド西の階段から移動)"
+  },
+  {
+    "SubId": 20101,
+    "_comment": "Episode Gate 20101 - 講堂前 (講堂前 （グラウンド西）)",
+    "Name": "講堂前",
+    "Description": "講堂前<br>（グラウンド西）"
+  },
+  {
+    "SubId": 20102,
+    "_comment": "Episode Gate 20102 - 桜並木 (桜並木 （グラウンド東）)",
+    "Name": "桜並木",
+    "Description": "桜並木<br>（グラウンド東）"
+  },
+  {
+    "SubId": 20201,
+    "_comment": "Episode Gate 20201 - 校門前 地下鉄駅 (校門前 地下鉄駅 （校門前北西）)",
+    "Name": "校門前 地下鉄駅",
+    "Description": "校門前 地下鉄駅<br>（校門前北西）"
+  },
+  {
+    "SubId": 20202,
+    "_comment": "Episode Gate 20202 - 校門前 バス停 (校門前 バス停留所 （校門前東南）)",
+    "Name": "校門前 バス停",
+    "Description": "校門前 バス停留所<br>（校門前東南）"
+  },
+  {
+    "SubId": 20401,
+    "_comment": "Episode Gate 20401 - 校舎 1階 西 (校舎 1階 男子トイレ前 （校舎 1階西端）)",
+    "Name": "校舎 1階 西",
+    "Description": "校舎 1階 男子トイレ前<br>（校舎 1階西端）"
+  },
+  {
+    "SubId": 20402,
+    "_comment": "Episode Gate 20402 - 校舎 1階 職員室 (校舎 1階 職員室 （校舎 1階西）)",
+    "Name": "校舎 1階 職員室",
+    "Description": "校舎 1階 職員室<br>（校舎 1階西）"
+  },
+  {
+    "SubId": 20403,
+    "_comment": "Episode Gate 20403 - 校舎 1階 中央 (校舎 1階 相談室前（校舎一階中央）)",
+    "Name": "校舎 1階 中央",
+    "Description": "校舎 1階 相談室前（校舎一階中央）"
+  },
+  {
+    "SubId": 20501,
+    "_comment": "Episode Gate 20501 - 校舎 2階 (校舎 2階 女子トイレ前 （校舎 2階西）)",
+    "Name": "校舎 2階",
+    "Description": "校舎 2階 女子トイレ前<br>（校舎 2階西）"
+  },
+  {
+    "SubId": 20601,
+    "_comment": "Episode Gate 20601 - 校舎 3階 (校舎 3階 水道の隣 （校舎 3階東）)",
+    "Name": "校舎 3階",
+    "Description": "校舎 3階 水道の隣<br>（校舎 3階東）"
+  },
+  {
+    "SubId": 20701,
+    "_comment": "Episode Gate 20701 - 旧校舎前庭 (旧校舎前 （グラウンド東ワープポイントから移動）)",
+    "Name": "旧校舎前庭",
+    "Description": "旧校舎前<br>（グラウンド東ワープポイントから移動）"
+  },
+  {
+    "SubId": 20702,
+    "_comment": "Episode Gate 20702 - 校舎 2階 (校舎 2階 男子トイレ前 （校舎 2階東）)",
+    "Name": "校舎 2階",
+    "Description": "校舎 2階 男子トイレ前<br>（校舎 2階東）"
+  },
+  {
+    "SubId": 20703,
+    "_comment": "Episode Gate 20703 - 旧校舎 1階 西の教室 (旧校舎 1階 ホヤンのそば （グラウンド東ワープポイントから移動）)",
+    "Name": "旧校舎 1階 西の教室",
+    "Description": "旧校舎 1階 ホヤンのそば<br>（グラウンド東ワープポイントから移動）"
+  },
+  {
+    "SubId": 20704,
+    "_comment": "Episode Gate 20704 - 旧校舎 2階 (旧校舎 2階 メイイェンのそば)",
+    "Name": "旧校舎 2階",
+    "Description": "旧校舎 2階 メイイェンのそば"
+  },
+  {
+    "SubId": 20901,
+    "_comment": "Episode Gate 20901 - 聖堂前庭 (裏庭 聖堂前 （グラウンド西の階段から移動）)",
+    "Name": "聖堂前庭",
+    "Description": "裏庭 聖堂前<br>（グラウンド西の階段から移動）"
+  },
+  {
+    "SubId": 20902,
+    "_comment": "Episode Gate 20902 - 墓地倉庫 (裏庭 墓地倉庫 （グラウンド西の階段から移動）)",
+    "Name": "墓地倉庫",
+    "Description": "裏庭 墓地倉庫<br>（グラウンド西の階段から移動）"
+  },
+  {
+    "SubId": 20903,
+    "_comment": "Episode Gate 20903 - 墓地裏門 (裏庭 墓地裏門 （グラウンド西の階段から移動）)",
+    "Name": "墓地裏門",
+    "Description": "裏庭 墓地裏門<br>（グラウンド西の階段から移動）"
+  },
+  {
+    "SubId": 21001,
+    "_comment": "Episode Gate 21001 - オカルト研究部部室 (オカルト研究部部室 （？？？？？）)",
+    "Name": "オカルト研究部部室",
+    "Description": "オカルト研究部部室<br>（？？？？？）"
+  },
+  {
+    "SubId": 21101,
+    "_comment": "Episode Gate 21101 - 世界樹 (世界樹)",
+    "Name": "世界樹",
+    "Description": "世界樹"
+  },
+  {
+    "SubId": 21102,
+    "_comment": "Episode Gate 21102 - 世界樹 (世界樹)",
+    "Name": "世界樹",
+    "Description": "世界樹"
+  },
+  {
+    "SubId": 21103,
+    "_comment": "Episode Gate 21103 - 世界樹 (世界樹)",
+    "Name": "世界樹",
+    "Description": "世界樹"
+  },
+  {
+    "SubId": 21104,
+    "_comment": "Episode Gate 21104 - 世界樹 (世界樹)",
+    "Name": "世界樹",
+    "Description": "世界樹"
+  },
+  {
+    "SubId": 21105,
+    "_comment": "Episode Gate 21105 - 世界樹 (世界樹)",
+    "Name": "世界樹",
+    "Description": "世界樹"
+  },
+  {
+    "SubId": 21106,
+    "_comment": "Episode Gate 21106 - 世界樹 (世界樹)",
+    "Name": "世界樹",
+    "Description": "世界樹"
+  },
+  {
+    "SubId": 21107,
+    "_comment": "Episode Gate 21107 - 世界樹 (世界樹)",
+    "Name": "世界樹",
+    "Description": "世界樹"
+  },
+  {
+    "SubId": 21108,
+    "_comment": "Episode Gate 21108 - 世界樹 (世界樹)",
+    "Name": "世界樹",
+    "Description": "世界樹"
+  },
+  {
+    "SubId": 9000,
+    "_comment": "Episode Gate 9000 - テスト EP000# (テスト EP000#)",
+    "Name": "テスト EP000#",
+    "Description": "テスト EP000#"
+  },
+  {
+    "SubId": 9001,
+    "_comment": "Episode Gate 9001 - テスト EP001# (テスト EP001#)",
+    "Name": "テスト EP001#",
+    "Description": "テスト EP001#"
+  },
+  {
+    "SubId": 9002,
+    "_comment": "Episode Gate 9002 - テスト EP002# (テスト EP002#)",
+    "Name": "テスト EP002#",
+    "Description": "テスト EP002#"
+  },
+  {
+    "SubId": 9003,
+    "_comment": "Episode Gate 9003 - テスト EP003# (テスト EP003#)",
+    "Name": "テスト EP003#",
+    "Description": "テスト EP003#"
+  },
+  {
+    "SubId": 9004,
+    "_comment": "Episode Gate 9004 - テスト EP004# (テスト EP004#)",
+    "Name": "テスト EP004#",
+    "Description": "テスト EP004#"
+  },
+  {
+    "SubId": 9005,
+    "_comment": "Episode Gate 9005 - テスト EP005# (テスト EP005#)",
+    "Name": "テスト EP005#",
+    "Description": "テスト EP005#"
+  },
+  {
+    "SubId": 9006,
+    "_comment": "Episode Gate 9006 - テスト EP006# (テスト EP006#)",
+    "Name": "テスト EP006#",
+    "Description": "テスト EP006#"
+  },
+  {
+    "SubId": 9007,
+    "_comment": "Episode Gate 9007 - テスト EP007# (テスト EP007#)",
+    "Name": "テスト EP007#",
+    "Description": "テスト EP007#"
+  },
+  {
+    "SubId": 9008,
+    "_comment": "Episode Gate 9008 - テスト EP008# (テスト EP008#)",
+    "Name": "テスト EP008#",
+    "Description": "テスト EP008#"
+  },
+  {
+    "SubId": 9009,
+    "_comment": "Episode Gate 9009 - テスト EP009# (テスト EP009#)",
+    "Name": "テスト EP009#",
+    "Description": "テスト EP009#"
+  },
+  {
+    "SubId": 9010,
+    "_comment": "Episode Gate 9010 - テスト EP010# (テスト EP010#)",
+    "Name": "テスト EP010#",
+    "Description": "テスト EP010#"
+  },
+  {
+    "SubId": 9011,
+    "_comment": "Episode Gate 9011 - テスト EP011# (テスト EP011#)",
+    "Name": "テスト EP011#",
+    "Description": "テスト EP011#"
+  },
+  {
+    "SubId": 9012,
+    "_comment": "Episode Gate 9012 - テスト EP012# (テスト EP012#)",
+    "Name": "テスト EP012#",
+    "Description": "テスト EP012#"
+  },
+  {
+    "SubId": 9013,
+    "_comment": "Episode Gate 9013 - テスト EP013# (テスト EP013#)",
+    "Name": "テスト EP013#",
+    "Description": "テスト EP013#"
+  },
+  {
+    "SubId": 9014,
+    "_comment": "Episode Gate 9014 - テスト EP014# (テスト EP014#)",
+    "Name": "テスト EP014#",
+    "Description": "テスト EP014#"
+  },
+  {
+    "SubId": 9015,
+    "_comment": "Episode Gate 9015 - テスト EP015# (テスト EP015#)",
+    "Name": "テスト EP015#",
+    "Description": "テスト EP015#"
+  },
+  {
+    "SubId": 9016,
+    "_comment": "Episode Gate 9016 - テスト EP016# (テスト EP016#)",
+    "Name": "テスト EP016#",
+    "Description": "テスト EP016#"
+  },
+  {
+    "SubId": 165,
+    "_comment": "Episode Gate 165 - レベルチームテスト (GK) (レベルチームテスト (GK))",
+    "Name": "レベルチームテスト (GK)",
+    "Description": "レベルチームテスト (GK)"
+  },
+  {
+    "SubId": 9100,
+    "_comment": "Episode Gate 9100 - 149~152 内部テスト用 (149~152 内部テスト用)",
+    "Name": "149~152 内部テスト用",
+    "Description": "149~152 内部テスト用"
+  },
+  {
+    "SubId": 9110,
+    "_comment": "Episode Gate 9110 - 153~158 内部テスト用 (153~158 内部テスト用)",
+    "Name": "153~158 内部テスト用",
+    "Description": "153~158 内部テスト用"
+  },
+  {
+    "SubId": 9111,
+    "_comment": "Episode Gate 9111 - 155,156,159~164 内部テスト用 (155,156,159~164 内部テスト用)",
+    "Name": "155,156,159~164 内部テスト用",
+    "Description": "155,156,159~164 内部テスト用"
+  }
+]

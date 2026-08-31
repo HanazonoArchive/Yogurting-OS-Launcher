@@ -41,6 +41,8 @@ namespace Yogurting.Server
     public class PathInfo
     {
         public string DbDirectory { get; set; } = "data/db";
+        public string DbJsonDirectory { get; set; } = "data/dbJson";
+        public string DatabaseFormat { get; set; } = "Json";
         public string ScoreDirectory { get; set; } = "data/score";
         public string SaveDirectory { get; set; } = "data/save";
     }
@@ -127,19 +129,11 @@ namespace Yogurting.Server
                 }
             }
 
-            string dbDir = Path.Combine(projectRoot, config.Paths.DbDirectory);
+            string rootDataDir = Path.Combine(projectRoot, "data");
             string saveDir = Path.Combine(projectRoot, config.Paths.SaveDirectory);
 
-            // 1. Initialize Database Engine (UYgDB 1-to-1)
-            var gameDb = new GameDatabase();
-            if (Directory.Exists(dbDir))
-            {
-                gameDb.LoadAll(dbDir);
-            }
-            else
-            {
-                Logger.Warn($"[Data] Warning: DB Directory not found at '{dbDir}'");
-            }
+            // 1. Initialize Database Engine (Dual Engine: JSON Primary with TXT Fallback)
+            var gameDb = GameDatabase.Create(rootDataDir, config.Paths.DatabaseFormat);
 
             // 2. Initialize Starter Items & Character Configuration
             string starterConfigPath = Path.Combine(projectRoot, "config", "starter_items.json");
@@ -257,7 +251,10 @@ namespace Yogurting.Server
 
                     case "reload":
                         Logger.Info("[System] Reloading database tables...");
-                        if (Directory.Exists(dbDir)) gameDb.LoadAll(dbDir);
+                        string activeDbDir = config.Paths.DatabaseFormat.Equals("Json", StringComparison.OrdinalIgnoreCase)
+                            ? Path.Combine(projectRoot, config.Paths.DbJsonDirectory)
+                            : Path.Combine(projectRoot, config.Paths.DbDirectory);
+                        if (Directory.Exists(activeDbDir)) gameDb.LoadAll(activeDbDir);
                         Logger.Info("[System] Database reloaded successfully!");
                         break;
 

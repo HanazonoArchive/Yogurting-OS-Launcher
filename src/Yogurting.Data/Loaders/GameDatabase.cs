@@ -7,10 +7,11 @@ using Yogurting.Core.Models;
 namespace Yogurting.Data.Loaders
 {
     /// <summary>
+    /// <summary>
     /// Exact 1-to-1 C# port of Quartet's UYgDB.pas.
     /// Loads all 30 game database parameter tables into fast memory indices.
     /// </summary>
-    public sealed class GameDatabase
+    public class GameDatabase
     {
         public ConcurrentDictionary<int, GameItemDef> Items { get; } = new();
         public ConcurrentDictionary<int, GameEpisodeDef> Episodes { get; } = new();
@@ -47,13 +48,40 @@ namespace Yogurting.Data.Loaders
             return 6;
         }
 
-        private static Encoding GetTableEncoding()
+        public static Encoding GetTableEncoding()
         {
             try { Encoding.RegisterProvider(CodePagesEncodingProvider.Instance); } catch { }
             return Encoding.GetEncoding("Shift_JIS");
         }
 
-        public void LoadAll(string dbDir)
+        public static GameDatabase Create(string rootDataDir, string preferredFormat = "Json")
+        {
+            string jsonDir = Path.Combine(rootDataDir, "dbJson");
+            string txtDir = Path.Combine(rootDataDir, "db");
+
+            if (preferredFormat.Equals("Json", StringComparison.OrdinalIgnoreCase) && Directory.Exists(jsonDir))
+            {
+                try
+                {
+                    Console.WriteLine("[GameDatabase] Initializing JSON Database Engine (Primary)...");
+                    var jsonDb = new GameDatabaseJson();
+                    jsonDb.LoadAll(jsonDir);
+                    return jsonDb;
+                }
+                catch (Exception ex)
+                {
+                    Console.WriteLine($"[GameDatabase] WARNING: Failed to initialize GameDatabaseJson: {ex.Message}");
+                    Console.WriteLine("[GameDatabase] Falling back to Legacy TXT Database Engine...");
+                }
+            }
+
+            Console.WriteLine("[GameDatabase] Initializing TXT Database Engine (Fallback/Configured)...");
+            var txtDb = new GameDatabase();
+            txtDb.LoadAll(txtDir);
+            return txtDb;
+        }
+
+        public virtual void LoadAll(string dbDir)
         {
             try { Encoding.RegisterProvider(CodePagesEncodingProvider.Instance); } catch { }
             Console.WriteLine("[GameDatabase] Loading parameter tables (UYgDB.pas 1-to-1 match)...");
@@ -278,6 +306,7 @@ namespace Yogurting.Data.Loaders
                     item.Attack = parts.Count > 4 && int.TryParse(parts[4], out int atk) ? atk : item.Attack;
                     item.WeaponType = parts.Count > 5 && int.TryParse(parts[5], out int wtype) ? wtype : item.WeaponType;
                     item.SkillId = parts.Count > 6 && int.TryParse(parts[6], out int skill) ? skill : item.SkillId;
+                    item.GradeReq = parts.Count > 7 && int.TryParse(parts[7], out int grade) ? grade : item.GradeReq;
                 }
             }
         }
@@ -461,7 +490,7 @@ namespace Yogurting.Data.Loaders
             }
         }
 
-        private void LoadProductListXml(string filePath)
+        protected void LoadProductListXml(string filePath)
         {
             if (!File.Exists(filePath)) return;
             try
@@ -755,7 +784,7 @@ namespace Yogurting.Data.Loaders
             }
         }
 
-        private void LoadFieldScoreData(string scoreDir)
+        protected void LoadFieldScoreData(string scoreDir)
         {
             if (!Directory.Exists(scoreDir)) return;
 
@@ -996,7 +1025,7 @@ namespace Yogurting.Data.Loaders
             Console.WriteLine($"[GameDatabase] Loaded {totalNpcs} Field NPCs, {NpcScripts.Count} NPC Dialog Trees, {totalGates} WarpGates, {totalTerminals} Terminal Objects, {totalMonsters} Field Monsters across {Fields.Count} maps.");
         }
 
-        private void ParseNpcDialogsFromXml(string xmlContent, GameFieldDef? field = null)
+        protected void ParseNpcDialogsFromXml(string xmlContent, GameFieldDef? field = null)
         {
             try
             {

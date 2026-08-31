@@ -1,0 +1,4132 @@
+[
+  {
+    "Id": 1,
+    "_comment": "NPC 1 - ページ (Cut-in: 1)",
+    "Name": "ページ",
+    "PortraitCutinId": 1,
+    "CamElevation": 0.0
+  },
+  {
+    "Id": 2,
+    "_comment": "NPC 2 - ドロシー (Cut-in: 2)",
+    "Name": "ドロシー",
+    "PortraitCutinId": 2,
+    "CamElevation": 0.0
+  },
+  {
+    "Id": 3,
+    "_comment": "NPC 3 - ボボカン (Cut-in: 29)",
+    "Name": "ボボカン",
+    "PortraitCutinId": 29,
+    "CamElevation": 0.71
+  },
+  {
+    "Id": 4,
+    "_comment": "NPC 4 - 購買おばちゃん (Cut-in: 3)",
+    "Name": "購買おばちゃん",
+    "PortraitCutinId": 3,
+    "CamElevation": 0.0
+  },
+  {
+    "Id": 5,
+    "_comment": "NPC 5 - ベン (Cut-in: 4)",
+    "Name": "ベン",
+    "PortraitCutinId": 4,
+    "CamElevation": 0.34
+  },
+  {
+    "Id": 6,
+    "_comment": "NPC 6 - ジョニー (Cut-in: 5)",
+    "Name": "ジョニー",
+    "PortraitCutinId": 5,
+    "CamElevation": 1.64
+  },
+  {
+    "Id": 7,
+    "_comment": "NPC 7 - メイ (Cut-in: 6)",
+    "Name": "メイ",
+    "PortraitCutinId": 6,
+    "CamElevation": 0.83
+  },
+  {
+    "Id": 8,
+    "_comment": "NPC 8 - ビアンカ (Cut-in: 7)",
+    "Name": "ビアンカ",
+    "PortraitCutinId": 7,
+    "CamElevation": 1.44
+  },
+  {
+    "Id": 10,
+    "_comment": "NPC 10 - 四刀丸 (Cut-in: 9)",
+    "Name": "四刀丸",
+    "PortraitCutinId": 9,
+    "CamElevation": 0.73
+  },
+  {
+    "Id": 11,
+    "_comment": "NPC 11 - リエズ (Cut-in: 10)",
+    "Name": "リエズ",
+    "PortraitCutinId": 10,
+    "CamElevation": 1.5
+  },
+  {
+    "Id": 12,
+    "_comment": "NPC 12 - ソムンヤン (Cut-in: 11)",
+    "Name": "ソムンヤン",
+    "PortraitCutinId": 11,
+    "CamElevation": 0.7
+  },
+  {
+    "Id": 13,
+    "_comment": "NPC 13 - マオ＝シャオピン (Cut-in: 12)",
+    "Name": "マオ＝シャオピン",
+    "PortraitCutinId": 12,
+    "CamElevation": 1.24
+  },
+  {
+    "Id": 14,
+    "_comment": "NPC 14 - ジョニー (Cut-in: 5)",
+    "Name": "ジョニー",
+    "PortraitCutinId": 5,
+    "CamElevation": 1.64
+  },
+  {
+    "Id": 15,
+    "_comment": "NPC 15 - 変熊 (Cut-in: 8)",
+    "Name": "変熊",
+    "PortraitCutinId": 8,
+    "CamElevation": 0.53
+  },
+  {
+    "Id": 16,
+    "_comment": "NPC 16 - 変熊 (Cut-in: 8)",
+    "Name": "変熊",
+    "PortraitCutinId": 8,
+    "CamElevation": 0.53
+  },
+  {
+    "Id": 17,
+    "_comment": "NPC 17 - ビアンカ (Cut-in: 7)",
+    "Name": "ビアンカ",
+    "PortraitCutinId": 7,
+    "CamElevation": 1.44
+  },
+  {
+    "Id": 18,
+    "_comment": "NPC 18 - 変熊 (Cut-in: 8)",
+    "Name": "変熊",
+    "PortraitCutinId": 8,
+    "CamElevation": 0.53
+  },
+  {
+    "Id": 19,
+    "_comment": "NPC 19 - ソムンヤン (Cut-in: 11)",
+    "Name": "ソムンヤン",
+    "PortraitCutinId": 11,
+    "CamElevation": 0.7
+  },
+  {
+    "Id": 20,
+    "_comment": "NPC 20 - マオ＝シャオピン (Cut-in: 12)",
+    "Name": "マオ＝シャオピン",
+    "PortraitCutinId": 12,
+    "CamElevation": 1.24
+  },
+  {
+    "Id": 21,
+    "_comment": "NPC 21 - ドロシー (Cut-in: 2)",
+    "Name": "ドロシー",
+    "PortraitCutinId": 2,
+    "CamElevation": 0.0
+  },
+  {
+    "Id": 22,
+    "_comment": "NPC 22 - 温室のゲート (Cut-in: 30)",
+    "Name": "温室のゲート",
+    "PortraitCutinId": 30,
+    "CamElevation": 0.0
+  },
+  {
+    "Id": 23,
+    "_comment": "NPC 23 - ベン (Cut-in: 4)",
+    "Name": "ベン",
+    "PortraitCutinId": 4,
+    "CamElevation": 0.34
+  },
+  {
+    "Id": 24,
+    "_comment": "NPC 24 - ページ (Cut-in: 1)",
+    "Name": "ページ",
+    "PortraitCutinId": 1,
+    "CamElevation": 0.0
+  },
+  {
+    "Id": 25,
+    "_comment": "NPC 25 - ステファノ (Cut-in: 31)",
+    "Name": "ステファノ",
+    "PortraitCutinId": 31,
+    "CamElevation": 0.67
+  },
+  {
+    "Id": 26,
+    "_comment": "NPC 26 - ステファノ (Cut-in: 31)",
+    "Name": "ステファノ",
+    "PortraitCutinId": 31,
+    "CamElevation": 0.67
+  },
+  {
+    "Id": 27,
+    "_comment": "NPC 27 - 購買おばちゃん (Cut-in: 3)",
+    "Name": "購買おばちゃん",
+    "PortraitCutinId": 3,
+    "CamElevation": 0.0
+  },
+  {
+    "Id": 28,
+    "_comment": "NPC 28 - マオ＝シャオピン (Cut-in: 12)",
+    "Name": "マオ＝シャオピン",
+    "PortraitCutinId": 12,
+    "CamElevation": 1.24
+  },
+  {
+    "Id": 29,
+    "_comment": "NPC 29 - スーチョン (Cut-in: 21)",
+    "Name": "スーチョン",
+    "PortraitCutinId": 21,
+    "CamElevation": 1.0
+  },
+  {
+    "Id": 30,
+    "_comment": "NPC 30 - ソムンヤン (Cut-in: 11)",
+    "Name": "ソムンヤン",
+    "PortraitCutinId": 11,
+    "CamElevation": 0.7
+  },
+  {
+    "Id": 31,
+    "_comment": "NPC 31 - ベン (Cut-in: 4)",
+    "Name": "ベン",
+    "PortraitCutinId": 4,
+    "CamElevation": 0.34
+  },
+  {
+    "Id": 32,
+    "_comment": "NPC 32 - 変熊 (Cut-in: 8)",
+    "Name": "変熊",
+    "PortraitCutinId": 8,
+    "CamElevation": 0.53
+  },
+  {
+    "Id": 33,
+    "_comment": "NPC 33 - ヒョンラン (Cut-in: 14)",
+    "Name": "ヒョンラン",
+    "PortraitCutinId": 14,
+    "CamElevation": 1.04
+  },
+  {
+    "Id": 34,
+    "_comment": "NPC 34 - ペコー (Cut-in: 19)",
+    "Name": "ペコー",
+    "PortraitCutinId": 19,
+    "CamElevation": 1.87
+  },
+  {
+    "Id": 35,
+    "_comment": "NPC 35 - ラミン (Cut-in: 20)",
+    "Name": "ラミン",
+    "PortraitCutinId": 20,
+    "CamElevation": 1.87
+  },
+  {
+    "Id": 36,
+    "_comment": "NPC 36 - スーチョン (Cut-in: 21)",
+    "Name": "スーチョン",
+    "PortraitCutinId": 21,
+    "CamElevation": 1.0
+  },
+  {
+    "Id": 37,
+    "_comment": "NPC 37 - グレイ (Cut-in: 22)",
+    "Name": "グレイ",
+    "PortraitCutinId": 22,
+    "CamElevation": 0.84
+  },
+  {
+    "Id": 38,
+    "_comment": "NPC 38 - モカ (Cut-in: 24)",
+    "Name": "モカ",
+    "PortraitCutinId": 24,
+    "CamElevation": 1.25
+  },
+  {
+    "Id": 39,
+    "_comment": "NPC 39 - チャイナ (Cut-in: 32)",
+    "Name": "チャイナ",
+    "PortraitCutinId": 32,
+    "CamElevation": 1.23
+  },
+  {
+    "Id": 40,
+    "_comment": "NPC 40 - アリーナ (Cut-in: 33)",
+    "Name": "アリーナ",
+    "PortraitCutinId": 33,
+    "CamElevation": 0.95
+  },
+  {
+    "Id": 41,
+    "_comment": "NPC 41 - ワルグマー (Cut-in: 36)",
+    "Name": "ワルグマー",
+    "PortraitCutinId": 36,
+    "CamElevation": 0.53
+  },
+  {
+    "Id": 42,
+    "_comment": "NPC 42 - ドワルグマー (Cut-in: 37)",
+    "Name": "ドワルグマー",
+    "PortraitCutinId": 37,
+    "CamElevation": 0.53
+  },
+  {
+    "Id": 43,
+    "_comment": "NPC 43 - スーチョン (Cut-in: 21)",
+    "Name": "スーチョン",
+    "PortraitCutinId": 21,
+    "CamElevation": 1.0
+  },
+  {
+    "Id": 44,
+    "_comment": "NPC 44 - ワルグマー (Cut-in: 36)",
+    "Name": "ワルグマー",
+    "PortraitCutinId": 36,
+    "CamElevation": 0.53
+  },
+  {
+    "Id": 45,
+    "_comment": "NPC 45 - ドワルグマー (Cut-in: 37)",
+    "Name": "ドワルグマー",
+    "PortraitCutinId": 37,
+    "CamElevation": 0.53
+  },
+  {
+    "Id": 46,
+    "_comment": "NPC 46 - リエズ (Cut-in: 10)",
+    "Name": "リエズ",
+    "PortraitCutinId": 10,
+    "CamElevation": 1.5
+  },
+  {
+    "Id": 47,
+    "_comment": "NPC 47 - 子羊 (Cut-in: 16)",
+    "Name": "子羊",
+    "PortraitCutinId": 16,
+    "CamElevation": 0.58
+  },
+  {
+    "Id": 48,
+    "_comment": "NPC 48 - ヒョンラン (Cut-in: 14)",
+    "Name": "ヒョンラン",
+    "PortraitCutinId": 14,
+    "CamElevation": 1.04
+  },
+  {
+    "Id": 49,
+    "_comment": "NPC 49 - 四刀丸 (Cut-in: 9)",
+    "Name": "四刀丸",
+    "PortraitCutinId": 9,
+    "CamElevation": 0.73
+  },
+  {
+    "Id": 50,
+    "_comment": "NPC 50 - ボボカン (Cut-in: 29)",
+    "Name": "ボボカン",
+    "PortraitCutinId": 29,
+    "CamElevation": 0.71
+  },
+  {
+    "Id": 51,
+    "_comment": "NPC 51 - ドロシー (Cut-in: 2)",
+    "Name": "ドロシー",
+    "PortraitCutinId": 2,
+    "CamElevation": 0.0
+  },
+  {
+    "Id": 52,
+    "_comment": "NPC 52 - カルテ (Cut-in: 34)",
+    "Name": "カルテ",
+    "PortraitCutinId": 34,
+    "CamElevation": 1.02
+  },
+  {
+    "Id": 53,
+    "_comment": "NPC 53 - スーチョン (Cut-in: 21)",
+    "Name": "スーチョン",
+    "PortraitCutinId": 21,
+    "CamElevation": 1.0
+  },
+  {
+    "Id": 54,
+    "_comment": "NPC 54 - リエズ (Cut-in: 10)",
+    "Name": "リエズ",
+    "PortraitCutinId": 10,
+    "CamElevation": 1.5
+  },
+  {
+    "Id": 55,
+    "_comment": "NPC 55 - ヒョンラン (Cut-in: 14)",
+    "Name": "ヒョンラン",
+    "PortraitCutinId": 14,
+    "CamElevation": 1.04
+  },
+  {
+    "Id": 56,
+    "_comment": "NPC 56 - モカ (Cut-in: 24)",
+    "Name": "モカ",
+    "PortraitCutinId": 24,
+    "CamElevation": 1.25
+  },
+  {
+    "Id": 57,
+    "_comment": "NPC 57 - ページ (Cut-in: 1)",
+    "Name": "ページ",
+    "PortraitCutinId": 1,
+    "CamElevation": 0.0
+  },
+  {
+    "Id": 58,
+    "_comment": "NPC 58 - スーチョン (Cut-in: 21)",
+    "Name": "スーチョン",
+    "PortraitCutinId": 21,
+    "CamElevation": 1.0
+  },
+  {
+    "Id": 59,
+    "_comment": "NPC 59 - 変熊 (Cut-in: 8)",
+    "Name": "変熊",
+    "PortraitCutinId": 8,
+    "CamElevation": 0.53
+  },
+  {
+    "Id": 60,
+    "_comment": "NPC 60 - ジョニー (Cut-in: 5)",
+    "Name": "ジョニー",
+    "PortraitCutinId": 5,
+    "CamElevation": 1.64
+  },
+  {
+    "Id": 61,
+    "_comment": "NPC 61 - ジョニー (Cut-in: 5)",
+    "Name": "ジョニー",
+    "PortraitCutinId": 5,
+    "CamElevation": 1.64
+  },
+  {
+    "Id": 62,
+    "_comment": "NPC 62 - ジョニー (Cut-in: 5)",
+    "Name": "ジョニー",
+    "PortraitCutinId": 5,
+    "CamElevation": 1.64
+  },
+  {
+    "Id": 63,
+    "_comment": "NPC 63 - 購買おばちゃん (Cut-in: 3)",
+    "Name": "購買おばちゃん",
+    "PortraitCutinId": 3,
+    "CamElevation": 0.0
+  },
+  {
+    "Id": 64,
+    "_comment": "NPC 64 - ソムンヤン (Cut-in: 11)",
+    "Name": "ソムンヤン",
+    "PortraitCutinId": 11,
+    "CamElevation": 0.7
+  },
+  {
+    "Id": 65,
+    "_comment": "NPC 65 - ページ (Cut-in: 1)",
+    "Name": "ページ",
+    "PortraitCutinId": 1,
+    "CamElevation": 0.0
+  },
+  {
+    "Id": 66,
+    "_comment": "NPC 66 - マオ＝シャオピン (Cut-in: 12)",
+    "Name": "マオ＝シャオピン",
+    "PortraitCutinId": 12,
+    "CamElevation": 1.24
+  },
+  {
+    "Id": 67,
+    "_comment": "NPC 67 - レバー (Cut-in: 35)",
+    "Name": "レバー",
+    "PortraitCutinId": 35,
+    "CamElevation": 0.0
+  },
+  {
+    "Id": 68,
+    "_comment": "NPC 68 - 四刀丸 (Cut-in: 9)",
+    "Name": "四刀丸",
+    "PortraitCutinId": 9,
+    "CamElevation": 0.73
+  },
+  {
+    "Id": 69,
+    "_comment": "NPC 69 - 四刀丸 (Cut-in: 9)",
+    "Name": "四刀丸",
+    "PortraitCutinId": 9,
+    "CamElevation": 0.73
+  },
+  {
+    "Id": 70,
+    "_comment": "NPC 70 - 温室のゲート (Cut-in: 30)",
+    "Name": "温室のゲート",
+    "PortraitCutinId": 30,
+    "CamElevation": 0.0
+  },
+  {
+    "Id": 71,
+    "_comment": "NPC 71 - メイ (Cut-in: 6)",
+    "Name": "メイ",
+    "PortraitCutinId": 6,
+    "CamElevation": 0.83
+  },
+  {
+    "Id": 72,
+    "_comment": "NPC 72 - メイ (Cut-in: 6)",
+    "Name": "メイ",
+    "PortraitCutinId": 6,
+    "CamElevation": 0.83
+  },
+  {
+    "Id": 73,
+    "_comment": "NPC 73 - メイ (Cut-in: 6)",
+    "Name": "メイ",
+    "PortraitCutinId": 6,
+    "CamElevation": 0.83
+  },
+  {
+    "Id": 74,
+    "_comment": "NPC 74 - メイ (Cut-in: 6)",
+    "Name": "メイ",
+    "PortraitCutinId": 6,
+    "CamElevation": 0.83
+  },
+  {
+    "Id": 75,
+    "_comment": "NPC 75 - メイ (Cut-in: 6)",
+    "Name": "メイ",
+    "PortraitCutinId": 6,
+    "CamElevation": 0.83
+  },
+  {
+    "Id": 76,
+    "_comment": "NPC 76 - スーチョン (Cut-in: 21)",
+    "Name": "スーチョン",
+    "PortraitCutinId": 21,
+    "CamElevation": 1.0
+  },
+  {
+    "Id": 77,
+    "_comment": "NPC 77 - ジョニー (Cut-in: 5)",
+    "Name": "ジョニー",
+    "PortraitCutinId": 5,
+    "CamElevation": 1.64
+  },
+  {
+    "Id": 78,
+    "_comment": "NPC 78 - 子羊 (Cut-in: 16)",
+    "Name": "子羊",
+    "PortraitCutinId": 16,
+    "CamElevation": 0.58
+  },
+  {
+    "Id": 79,
+    "_comment": "NPC 79 - 子羊 (Cut-in: 16)",
+    "Name": "子羊",
+    "PortraitCutinId": 16,
+    "CamElevation": 0.58
+  },
+  {
+    "Id": 80,
+    "_comment": "NPC 80 - スーチョン (Cut-in: 21)",
+    "Name": "スーチョン",
+    "PortraitCutinId": 21,
+    "CamElevation": 1.0
+  },
+  {
+    "Id": 81,
+    "_comment": "NPC 81 - スーチョン (Cut-in: 21)",
+    "Name": "スーチョン",
+    "PortraitCutinId": 21,
+    "CamElevation": 1.0
+  },
+  {
+    "Id": 82,
+    "_comment": "NPC 82 - 子羊 (Cut-in: 16)",
+    "Name": "子羊",
+    "PortraitCutinId": 16,
+    "CamElevation": 0.58
+  },
+  {
+    "Id": 83,
+    "_comment": "NPC 83 - 羊 (Cut-in: 15)",
+    "Name": "羊",
+    "PortraitCutinId": 15,
+    "CamElevation": 0.93
+  },
+  {
+    "Id": 84,
+    "_comment": "NPC 84 - バーモント神父 (Cut-in: 38)",
+    "Name": "バーモント神父",
+    "PortraitCutinId": 38,
+    "CamElevation": 0.85
+  },
+  {
+    "Id": 85,
+    "_comment": "NPC 85 - 火蓮 (Cut-in: 40)",
+    "Name": "火蓮",
+    "PortraitCutinId": 40,
+    "CamElevation": 0.57
+  },
+  {
+    "Id": 86,
+    "_comment": "NPC 86 - 火蓮 (Cut-in: 40)",
+    "Name": "火蓮",
+    "PortraitCutinId": 40,
+    "CamElevation": 0.57
+  },
+  {
+    "Id": 87,
+    "_comment": "NPC 87 - 火蓮 (Cut-in: 40)",
+    "Name": "火蓮",
+    "PortraitCutinId": 40,
+    "CamElevation": 0.57
+  },
+  {
+    "Id": 88,
+    "_comment": "NPC 88 - 水蓮 (Cut-in: 39)",
+    "Name": "水蓮",
+    "PortraitCutinId": 39,
+    "CamElevation": 0.3
+  },
+  {
+    "Id": 89,
+    "_comment": "NPC 89 - 動物慰霊碑 (Cut-in: 54)",
+    "Name": "動物慰霊碑",
+    "PortraitCutinId": 54,
+    "CamElevation": 0.0
+  },
+  {
+    "Id": 90,
+    "_comment": "NPC 90 - 火蓮 (Cut-in: 40)",
+    "Name": "火蓮",
+    "PortraitCutinId": 40,
+    "CamElevation": 0.57
+  },
+  {
+    "Id": 91,
+    "_comment": "NPC 91 - サム (Cut-in: 51)",
+    "Name": "サム",
+    "PortraitCutinId": 51,
+    "CamElevation": 0.34
+  },
+  {
+    "Id": 92,
+    "_comment": "NPC 92 - 妖艶 (Cut-in: 46)",
+    "Name": "妖艶",
+    "PortraitCutinId": 46,
+    "CamElevation": 0.89
+  },
+  {
+    "Id": 93,
+    "_comment": "NPC 93 - 暗田 (Cut-in: 48)",
+    "Name": "暗田",
+    "PortraitCutinId": 48,
+    "CamElevation": 0.79
+  },
+  {
+    "Id": 94,
+    "_comment": "NPC 94 - 火蓮 (Cut-in: 40)",
+    "Name": "火蓮",
+    "PortraitCutinId": 40,
+    "CamElevation": 0.57
+  },
+  {
+    "Id": 95,
+    "_comment": "NPC 95 - 火蓮 (Cut-in: 40)",
+    "Name": "火蓮",
+    "PortraitCutinId": 40,
+    "CamElevation": 0.57
+  },
+  {
+    "Id": 96,
+    "_comment": "NPC 96 - 火蓮 (Cut-in: 40)",
+    "Name": "火蓮",
+    "PortraitCutinId": 40,
+    "CamElevation": 0.57
+  },
+  {
+    "Id": 97,
+    "_comment": "NPC 97 - 火蓮 (Cut-in: 40)",
+    "Name": "火蓮",
+    "PortraitCutinId": 40,
+    "CamElevation": 0.57
+  },
+  {
+    "Id": 98,
+    "_comment": "NPC 98 - 火蓮 (Cut-in: 40)",
+    "Name": "火蓮",
+    "PortraitCutinId": 40,
+    "CamElevation": 0.57
+  },
+  {
+    "Id": 99,
+    "_comment": "NPC 99 - 火蓮 (Cut-in: 40)",
+    "Name": "火蓮",
+    "PortraitCutinId": 40,
+    "CamElevation": 0.57
+  },
+  {
+    "Id": 100,
+    "_comment": "NPC 100 - シンソヒョン (Cut-in: 43)",
+    "Name": "シンソヒョン",
+    "PortraitCutinId": 43,
+    "CamElevation": 0.99
+  },
+  {
+    "Id": 101,
+    "_comment": "NPC 101 - ルーベン (Cut-in: 45)",
+    "Name": "ルーベン",
+    "PortraitCutinId": 45,
+    "CamElevation": 0.75
+  },
+  {
+    "Id": 102,
+    "_comment": "NPC 102 - サム (Cut-in: 51)",
+    "Name": "サム",
+    "PortraitCutinId": 51,
+    "CamElevation": 0.34
+  },
+  {
+    "Id": 103,
+    "_comment": "NPC 103 - 水蓮 (Cut-in: 39)",
+    "Name": "水蓮",
+    "PortraitCutinId": 39,
+    "CamElevation": 0.3
+  },
+  {
+    "Id": 104,
+    "_comment": "NPC 104 - 暗田 (Cut-in: 48)",
+    "Name": "暗田",
+    "PortraitCutinId": 48,
+    "CamElevation": 0.79
+  },
+  {
+    "Id": 105,
+    "_comment": "NPC 105 - 暗田 (Cut-in: 48)",
+    "Name": "暗田",
+    "PortraitCutinId": 48,
+    "CamElevation": 0.79
+  },
+  {
+    "Id": 106,
+    "_comment": "NPC 106 - 暗田 (Cut-in: 48)",
+    "Name": "暗田",
+    "PortraitCutinId": 48,
+    "CamElevation": 0.79
+  },
+  {
+    "Id": 107,
+    "_comment": "NPC 107 - 暗田 (Cut-in: 48)",
+    "Name": "暗田",
+    "PortraitCutinId": 48,
+    "CamElevation": 0.79
+  },
+  {
+    "Id": 108,
+    "_comment": "NPC 108 - 火蓮 (Cut-in: 40)",
+    "Name": "火蓮",
+    "PortraitCutinId": 40,
+    "CamElevation": 0.57
+  },
+  {
+    "Id": 109,
+    "_comment": "NPC 109 - 暗田 (Cut-in: 48)",
+    "Name": "暗田",
+    "PortraitCutinId": 48,
+    "CamElevation": 0.79
+  },
+  {
+    "Id": 110,
+    "_comment": "NPC 110 - 妖艶 (Cut-in: 46)",
+    "Name": "妖艶",
+    "PortraitCutinId": 46,
+    "CamElevation": 0.89
+  },
+  {
+    "Id": 111,
+    "_comment": "NPC 111 - シャオリーン (Cut-in: 47)",
+    "Name": "シャオリーン",
+    "PortraitCutinId": 47,
+    "CamElevation": 0.0
+  },
+  {
+    "Id": 112,
+    "_comment": "NPC 112 - 生徒 A (Cut-in: 49)",
+    "Name": "生徒 A",
+    "PortraitCutinId": 49,
+    "CamElevation": 0.84
+  },
+  {
+    "Id": 113,
+    "_comment": "NPC 113 - 火蓮 (Cut-in: 40)",
+    "Name": "火蓮",
+    "PortraitCutinId": 40,
+    "CamElevation": 0.57
+  },
+  {
+    "Id": 114,
+    "_comment": "NPC 114 - 火蓮 (Cut-in: 40)",
+    "Name": "火蓮",
+    "PortraitCutinId": 40,
+    "CamElevation": 0.57
+  },
+  {
+    "Id": 115,
+    "_comment": "NPC 115 - 火蓮 (Cut-in: 40)",
+    "Name": "火蓮",
+    "PortraitCutinId": 40,
+    "CamElevation": 0.57
+  },
+  {
+    "Id": 116,
+    "_comment": "NPC 116 - 火蓮 (Cut-in: 40)",
+    "Name": "火蓮",
+    "PortraitCutinId": 40,
+    "CamElevation": 0.57
+  },
+  {
+    "Id": 117,
+    "_comment": "NPC 117 - バーモント神父 (Cut-in: 38)",
+    "Name": "バーモント神父",
+    "PortraitCutinId": 38,
+    "CamElevation": 0.85
+  },
+  {
+    "Id": 118,
+    "_comment": "NPC 118 - メガデス (Cut-in: 56)",
+    "Name": "メガデス",
+    "PortraitCutinId": 56,
+    "CamElevation": 0.0
+  },
+  {
+    "Id": 119,
+    "_comment": "NPC 119 - マオ＝シャオピン (Cut-in: 12)",
+    "Name": "マオ＝シャオピン",
+    "PortraitCutinId": 12,
+    "CamElevation": 1.24
+  },
+  {
+    "Id": 120,
+    "_comment": "NPC 120 - ドロシー (Cut-in: 2)",
+    "Name": "ドロシー",
+    "PortraitCutinId": 2,
+    "CamElevation": 0.0
+  },
+  {
+    "Id": 121,
+    "_comment": "NPC 121 - ボボカン (Cut-in: 29)",
+    "Name": "ボボカン",
+    "PortraitCutinId": 29,
+    "CamElevation": 0.71
+  },
+  {
+    "Id": 122,
+    "_comment": "NPC 122 - 変熊 (Cut-in: 8)",
+    "Name": "変熊",
+    "PortraitCutinId": 8,
+    "CamElevation": 0.53
+  },
+  {
+    "Id": 123,
+    "_comment": "NPC 123 - シンソヒョン (Cut-in: 43)",
+    "Name": "シンソヒョン",
+    "PortraitCutinId": 43,
+    "CamElevation": 0.99
+  },
+  {
+    "Id": 124,
+    "_comment": "NPC 124 - グレイ (Cut-in: 22)",
+    "Name": "グレイ",
+    "PortraitCutinId": 22,
+    "CamElevation": 0.84
+  },
+  {
+    "Id": 125,
+    "_comment": "NPC 125 - バーモント神父 (Cut-in: 38)",
+    "Name": "バーモント神父",
+    "PortraitCutinId": 38,
+    "CamElevation": 0.85
+  },
+  {
+    "Id": 126,
+    "_comment": "NPC 126 - 水蓮 (Cut-in: 39)",
+    "Name": "水蓮",
+    "PortraitCutinId": 39,
+    "CamElevation": 0.3
+  },
+  {
+    "Id": 127,
+    "_comment": "NPC 127 - 水蓮 (Cut-in: 39)",
+    "Name": "水蓮",
+    "PortraitCutinId": 39,
+    "CamElevation": 0.3
+  },
+  {
+    "Id": 128,
+    "_comment": "NPC 128 - 火蓮 (Cut-in: 40)",
+    "Name": "火蓮",
+    "PortraitCutinId": 40,
+    "CamElevation": 0.57
+  },
+  {
+    "Id": 129,
+    "_comment": "NPC 129 - シャオリーン (Cut-in: 47)",
+    "Name": "シャオリーン",
+    "PortraitCutinId": 47,
+    "CamElevation": 0.0
+  },
+  {
+    "Id": 130,
+    "_comment": "NPC 130 - 生徒 A (Cut-in: 49)",
+    "Name": "生徒 A",
+    "PortraitCutinId": 49,
+    "CamElevation": 0.84
+  },
+  {
+    "Id": 131,
+    "_comment": "NPC 131 - シンソヒョン (Cut-in: 43)",
+    "Name": "シンソヒョン",
+    "PortraitCutinId": 43,
+    "CamElevation": 0.99
+  },
+  {
+    "Id": 132,
+    "_comment": "NPC 132 - シンソヒョン (Cut-in: 43)",
+    "Name": "シンソヒョン",
+    "PortraitCutinId": 43,
+    "CamElevation": 0.99
+  },
+  {
+    "Id": 133,
+    "_comment": "NPC 133 - 水蓮 (Cut-in: 39)",
+    "Name": "水蓮",
+    "PortraitCutinId": 39,
+    "CamElevation": 0.3
+  },
+  {
+    "Id": 134,
+    "_comment": "NPC 134 - バーモント神父 (Cut-in: 38)",
+    "Name": "バーモント神父",
+    "PortraitCutinId": 38,
+    "CamElevation": 0.85
+  },
+  {
+    "Id": 135,
+    "_comment": "NPC 135 - バーモント神父 (Cut-in: 38)",
+    "Name": "バーモント神父",
+    "PortraitCutinId": 38,
+    "CamElevation": 0.85
+  },
+  {
+    "Id": 136,
+    "_comment": "NPC 136 - 水蓮 (Cut-in: 39)",
+    "Name": "水蓮",
+    "PortraitCutinId": 39,
+    "CamElevation": 0.3
+  },
+  {
+    "Id": 137,
+    "_comment": "NPC 137 - 水蓮 (Cut-in: 39)",
+    "Name": "水蓮",
+    "PortraitCutinId": 39,
+    "CamElevation": 0.3
+  },
+  {
+    "Id": 138,
+    "_comment": "NPC 138 - 水蓮 (Cut-in: 39)",
+    "Name": "水蓮",
+    "PortraitCutinId": 39,
+    "CamElevation": 0.3
+  },
+  {
+    "Id": 139,
+    "_comment": "NPC 139 - 火蓮 (Cut-in: 40)",
+    "Name": "火蓮",
+    "PortraitCutinId": 40,
+    "CamElevation": 0.57
+  },
+  {
+    "Id": 140,
+    "_comment": "NPC 140 - 火蓮 (Cut-in: 40)",
+    "Name": "火蓮",
+    "PortraitCutinId": 40,
+    "CamElevation": 0.57
+  },
+  {
+    "Id": 141,
+    "_comment": "NPC 141 - 生徒 A (Cut-in: 49)",
+    "Name": "生徒 A",
+    "PortraitCutinId": 49,
+    "CamElevation": 0.84
+  },
+  {
+    "Id": 142,
+    "_comment": "NPC 142 - 暗田 (Cut-in: 48)",
+    "Name": "暗田",
+    "PortraitCutinId": 48,
+    "CamElevation": 0.79
+  },
+  {
+    "Id": 143,
+    "_comment": "NPC 143 - シンソヒョン (Cut-in: 43)",
+    "Name": "シンソヒョン",
+    "PortraitCutinId": 43,
+    "CamElevation": 0.99
+  },
+  {
+    "Id": 144,
+    "_comment": "NPC 144 - 下郎蛙 (Cut-in: 52)",
+    "Name": "下郎蛙",
+    "PortraitCutinId": 52,
+    "CamElevation": 0.0
+  },
+  {
+    "Id": 145,
+    "_comment": "NPC 145 - 狐子 (Cut-in: 53)",
+    "Name": "狐子",
+    "PortraitCutinId": 53,
+    "CamElevation": 0.0
+  },
+  {
+    "Id": 146,
+    "_comment": "NPC 146 - シャオリーン (Cut-in: 47)",
+    "Name": "シャオリーン",
+    "PortraitCutinId": 47,
+    "CamElevation": 0.0
+  },
+  {
+    "Id": 147,
+    "_comment": "NPC 147 - 霊廟の女人 (Cut-in: 50)",
+    "Name": "霊廟の女人",
+    "PortraitCutinId": 50,
+    "CamElevation": 0.0
+  },
+  {
+    "Id": 148,
+    "_comment": "NPC 148 - ルーベン (Cut-in: 45)",
+    "Name": "ルーベン",
+    "PortraitCutinId": 45,
+    "CamElevation": 0.75
+  },
+  {
+    "Id": 149,
+    "_comment": "NPC 149 - 超音波発生器 (Cut-in: 58)",
+    "Name": "超音波発生器",
+    "PortraitCutinId": 58,
+    "CamElevation": 0.0
+  },
+  {
+    "Id": 150,
+    "_comment": "NPC 150 - シャオリーン (Cut-in: 47)",
+    "Name": "シャオリーン",
+    "PortraitCutinId": 47,
+    "CamElevation": 0.0
+  },
+  {
+    "Id": 151,
+    "_comment": "NPC 151 - シンソヒョン (Cut-in: 43)",
+    "Name": "シンソヒョン",
+    "PortraitCutinId": 43,
+    "CamElevation": 0.99
+  },
+  {
+    "Id": 152,
+    "_comment": "NPC 152 - 下郎蛙 (Cut-in: 52)",
+    "Name": "下郎蛙",
+    "PortraitCutinId": 52,
+    "CamElevation": 0.0
+  },
+  {
+    "Id": 153,
+    "_comment": "NPC 153 - シンソヒョン (Cut-in: 43)",
+    "Name": "シンソヒョン",
+    "PortraitCutinId": 43,
+    "CamElevation": 0.99
+  },
+  {
+    "Id": 154,
+    "_comment": "NPC 154 - バーモント神父 (Cut-in: 38)",
+    "Name": "バーモント神父",
+    "PortraitCutinId": 38,
+    "CamElevation": 0.85
+  },
+  {
+    "Id": 155,
+    "_comment": "NPC 155 - 暗田 (Cut-in: 48)",
+    "Name": "暗田",
+    "PortraitCutinId": 48,
+    "CamElevation": 0.79
+  },
+  {
+    "Id": 156,
+    "_comment": "NPC 156 - 火蓮 (Cut-in: 40)",
+    "Name": "火蓮",
+    "PortraitCutinId": 40,
+    "CamElevation": 0.57
+  },
+  {
+    "Id": 157,
+    "_comment": "NPC 157 - 子羊 (Cut-in: 16)",
+    "Name": "子羊",
+    "PortraitCutinId": 16,
+    "CamElevation": 0.58
+  },
+  {
+    "Id": 158,
+    "_comment": "NPC 158 - ヒョンラン (Cut-in: 14)",
+    "Name": "ヒョンラン",
+    "PortraitCutinId": 14,
+    "CamElevation": 1.04
+  },
+  {
+    "Id": 159,
+    "_comment": "NPC 159 - ウェアウルフ (Cut-in: 55)",
+    "Name": "ウェアウルフ",
+    "PortraitCutinId": 55,
+    "CamElevation": 0.0
+  },
+  {
+    "Id": 160,
+    "_comment": "NPC 160 - スーチョン (Cut-in: 21)",
+    "Name": "スーチョン",
+    "PortraitCutinId": 21,
+    "CamElevation": 1.0
+  },
+  {
+    "Id": 161,
+    "_comment": "NPC 161 - メイ (Cut-in: 6)",
+    "Name": "メイ",
+    "PortraitCutinId": 6,
+    "CamElevation": 0.83
+  },
+  {
+    "Id": 162,
+    "_comment": "NPC 162 - メイ (Cut-in: 6)",
+    "Name": "メイ",
+    "PortraitCutinId": 6,
+    "CamElevation": 0.83
+  },
+  {
+    "Id": 163,
+    "_comment": "NPC 163 - 火蓮 (Cut-in: 40)",
+    "Name": "火蓮",
+    "PortraitCutinId": 40,
+    "CamElevation": 0.57
+  },
+  {
+    "Id": 164,
+    "_comment": "NPC 164 - ヒョンラン (Cut-in: 14)",
+    "Name": "ヒョンラン",
+    "PortraitCutinId": 14,
+    "CamElevation": 1.04
+  },
+  {
+    "Id": 165,
+    "_comment": "NPC 165 - ステファノ (Cut-in: 31)",
+    "Name": "ステファノ",
+    "PortraitCutinId": 31,
+    "CamElevation": 0.67
+  },
+  {
+    "Id": 166,
+    "_comment": "NPC 166 - 購買おばちゃん (Cut-in: 3)",
+    "Name": "購買おばちゃん",
+    "PortraitCutinId": 3,
+    "CamElevation": 0.0
+  },
+  {
+    "Id": 167,
+    "_comment": "NPC 167 - 購買おばちゃん (Cut-in: 3)",
+    "Name": "購買おばちゃん",
+    "PortraitCutinId": 3,
+    "CamElevation": 0.0
+  },
+  {
+    "Id": 168,
+    "_comment": "NPC 168 - シンソヒョン (Cut-in: 43)",
+    "Name": "シンソヒョン",
+    "PortraitCutinId": 43,
+    "CamElevation": 0.99
+  },
+  {
+    "Id": 169,
+    "_comment": "NPC 169 - 暗田 (Cut-in: 48)",
+    "Name": "暗田",
+    "PortraitCutinId": 48,
+    "CamElevation": 0.79
+  },
+  {
+    "Id": 170,
+    "_comment": "NPC 170 - ルーベン (Cut-in: 45)",
+    "Name": "ルーベン",
+    "PortraitCutinId": 45,
+    "CamElevation": 0.75
+  },
+  {
+    "Id": 171,
+    "_comment": "NPC 171 - サム (Cut-in: 51)",
+    "Name": "サム",
+    "PortraitCutinId": 51,
+    "CamElevation": 0.34
+  },
+  {
+    "Id": 172,
+    "_comment": "NPC 172 - シンソヒョン (Cut-in: 43)",
+    "Name": "シンソヒョン",
+    "PortraitCutinId": 43,
+    "CamElevation": 0.99
+  },
+  {
+    "Id": 173,
+    "_comment": "NPC 173 - 妖艶 (Cut-in: 46)",
+    "Name": "妖艶",
+    "PortraitCutinId": 46,
+    "CamElevation": 0.89
+  },
+  {
+    "Id": 174,
+    "_comment": "NPC 174 - バーモント神父 (Cut-in: 38)",
+    "Name": "バーモント神父",
+    "PortraitCutinId": 38,
+    "CamElevation": 0.85
+  },
+  {
+    "Id": 175,
+    "_comment": "NPC 175 - 火蓮 (Cut-in: 40)",
+    "Name": "火蓮",
+    "PortraitCutinId": 40,
+    "CamElevation": 0.57
+  },
+  {
+    "Id": 176,
+    "_comment": "NPC 176 - 水蓮 (Cut-in: 39)",
+    "Name": "水蓮",
+    "PortraitCutinId": 39,
+    "CamElevation": 0.3
+  },
+  {
+    "Id": 177,
+    "_comment": "NPC 177 - 購買おばちゃん (Cut-in: 3)",
+    "Name": "購買おばちゃん",
+    "PortraitCutinId": 3,
+    "CamElevation": 0.0
+  },
+  {
+    "Id": 178,
+    "_comment": "NPC 178 - 購買おばちゃん (Cut-in: 3)",
+    "Name": "購買おばちゃん",
+    "PortraitCutinId": 3,
+    "CamElevation": 0.0
+  },
+  {
+    "Id": 179,
+    "_comment": "NPC 179 - シャオリーン (Cut-in: 47)",
+    "Name": "シャオリーン",
+    "PortraitCutinId": 47,
+    "CamElevation": 0.0
+  },
+  {
+    "Id": 180,
+    "_comment": "NPC 180 - 生徒 A (Cut-in: 49)",
+    "Name": "生徒 A",
+    "PortraitCutinId": 49,
+    "CamElevation": 0.84
+  },
+  {
+    "Id": 181,
+    "_comment": "NPC 181 - サム (Cut-in: 51)",
+    "Name": "サム",
+    "PortraitCutinId": 51,
+    "CamElevation": 0.34
+  },
+  {
+    "Id": 182,
+    "_comment": "NPC 182 - 暗田 (Cut-in: 48)",
+    "Name": "暗田",
+    "PortraitCutinId": 48,
+    "CamElevation": 0.79
+  },
+  {
+    "Id": 183,
+    "_comment": "NPC 183 - 火蓮 (Cut-in: 40)",
+    "Name": "火蓮",
+    "PortraitCutinId": 40,
+    "CamElevation": 0.57
+  },
+  {
+    "Id": 184,
+    "_comment": "NPC 184 - 火蓮 (Cut-in: 40)",
+    "Name": "火蓮",
+    "PortraitCutinId": 40,
+    "CamElevation": 0.57
+  },
+  {
+    "Id": 185,
+    "_comment": "NPC 185 - バーモント神父 (Cut-in: 38)",
+    "Name": "バーモント神父",
+    "PortraitCutinId": 38,
+    "CamElevation": 0.85
+  },
+  {
+    "Id": 186,
+    "_comment": "NPC 186 - 暗田 (Cut-in: 48)",
+    "Name": "暗田",
+    "PortraitCutinId": 48,
+    "CamElevation": 0.79
+  },
+  {
+    "Id": 187,
+    "_comment": "NPC 187 - ジョニー (Cut-in: 5)",
+    "Name": "ジョニー",
+    "PortraitCutinId": 5,
+    "CamElevation": 1.64
+  },
+  {
+    "Id": 188,
+    "_comment": "NPC 188 - ジョニー (Cut-in: 5)",
+    "Name": "ジョニー",
+    "PortraitCutinId": 5,
+    "CamElevation": 1.64
+  },
+  {
+    "Id": 189,
+    "_comment": "NPC 189 - ジョニー (Cut-in: 5)",
+    "Name": "ジョニー",
+    "PortraitCutinId": 5,
+    "CamElevation": 1.64
+  },
+  {
+    "Id": 190,
+    "_comment": "NPC 190 - メイ (Cut-in: 6)",
+    "Name": "メイ",
+    "PortraitCutinId": 6,
+    "CamElevation": 0.83
+  },
+  {
+    "Id": 191,
+    "_comment": "NPC 191 - メイ (Cut-in: 6)",
+    "Name": "メイ",
+    "PortraitCutinId": 6,
+    "CamElevation": 0.83
+  },
+  {
+    "Id": 192,
+    "_comment": "NPC 192 - メイ (Cut-in: 6)",
+    "Name": "メイ",
+    "PortraitCutinId": 6,
+    "CamElevation": 0.83
+  },
+  {
+    "Id": 193,
+    "_comment": "NPC 193 - メイ (Cut-in: 6)",
+    "Name": "メイ",
+    "PortraitCutinId": 6,
+    "CamElevation": 0.83
+  },
+  {
+    "Id": 194,
+    "_comment": "NPC 194 - メイ (Cut-in: 6)",
+    "Name": "メイ",
+    "PortraitCutinId": 6,
+    "CamElevation": 0.83
+  },
+  {
+    "Id": 195,
+    "_comment": "NPC 195 - メイ (Cut-in: 6)",
+    "Name": "メイ",
+    "PortraitCutinId": 6,
+    "CamElevation": 0.83
+  },
+  {
+    "Id": 196,
+    "_comment": "NPC 196 - サム (Cut-in: 51)",
+    "Name": "サム",
+    "PortraitCutinId": 51,
+    "CamElevation": 0.34
+  },
+  {
+    "Id": 197,
+    "_comment": "NPC 197 - 四刀丸 (Cut-in: 9)",
+    "Name": "四刀丸",
+    "PortraitCutinId": 9,
+    "CamElevation": 0.73
+  },
+  {
+    "Id": 198,
+    "_comment": "NPC 198 - ヒョンラン (Cut-in: 14)",
+    "Name": "ヒョンラン",
+    "PortraitCutinId": 14,
+    "CamElevation": 1.04
+  },
+  {
+    "Id": 199,
+    "_comment": "NPC 199 - ホヤン (Cut-in: 42)",
+    "Name": "ホヤン",
+    "PortraitCutinId": 42,
+    "CamElevation": 0.98
+  },
+  {
+    "Id": 200,
+    "_comment": "NPC 200 - メイイェン (Cut-in: 41)",
+    "Name": "メイイェン",
+    "PortraitCutinId": 41,
+    "CamElevation": 0.52
+  },
+  {
+    "Id": 201,
+    "_comment": "NPC 201 - ワルグマー (Cut-in: 36)",
+    "Name": "ワルグマー",
+    "PortraitCutinId": 36,
+    "CamElevation": 0.53
+  },
+  {
+    "Id": 202,
+    "_comment": "NPC 202 - ドワルグマー (Cut-in: 37)",
+    "Name": "ドワルグマー",
+    "PortraitCutinId": 37,
+    "CamElevation": 0.53
+  },
+  {
+    "Id": 203,
+    "_comment": "NPC 203 - モカ (Cut-in: 89)",
+    "Name": "モカ",
+    "PortraitCutinId": 89,
+    "CamElevation": 1.25
+  },
+  {
+    "Id": 204,
+    "_comment": "NPC 204 - モカ (Cut-in: 89)",
+    "Name": "モカ",
+    "PortraitCutinId": 89,
+    "CamElevation": 1.25
+  },
+  {
+    "Id": 205,
+    "_comment": "NPC 205 - モカ (Cut-in: 89)",
+    "Name": "モカ",
+    "PortraitCutinId": 89,
+    "CamElevation": 1.25
+  },
+  {
+    "Id": 206,
+    "_comment": "NPC 206 - モカ (Cut-in: 89)",
+    "Name": "モカ",
+    "PortraitCutinId": 89,
+    "CamElevation": 1.25
+  },
+  {
+    "Id": 207,
+    "_comment": "NPC 207 - モカ (Cut-in: 89)",
+    "Name": "モカ",
+    "PortraitCutinId": 89,
+    "CamElevation": 1.25
+  },
+  {
+    "Id": 208,
+    "_comment": "NPC 208 - モカ (Cut-in: 89)",
+    "Name": "モカ",
+    "PortraitCutinId": 89,
+    "CamElevation": 1.25
+  },
+  {
+    "Id": 209,
+    "_comment": "NPC 209 - ページ (Cut-in: 1)",
+    "Name": "ページ",
+    "PortraitCutinId": 1,
+    "CamElevation": 0.0
+  },
+  {
+    "Id": 210,
+    "_comment": "NPC 210 - ドロシー (Cut-in: 2)",
+    "Name": "ドロシー",
+    "PortraitCutinId": 2,
+    "CamElevation": 0.0
+  },
+  {
+    "Id": 211,
+    "_comment": "NPC 211 - ボボカン (Cut-in: 29)",
+    "Name": "ボボカン",
+    "PortraitCutinId": 29,
+    "CamElevation": 0.71
+  },
+  {
+    "Id": 212,
+    "_comment": "NPC 212 - サム (Cut-in: 51)",
+    "Name": "サム",
+    "PortraitCutinId": 51,
+    "CamElevation": 0.34
+  },
+  {
+    "Id": 213,
+    "_comment": "NPC 213 - 暗田 (Cut-in: 48)",
+    "Name": "暗田",
+    "PortraitCutinId": 48,
+    "CamElevation": 0.79
+  },
+  {
+    "Id": 214,
+    "_comment": "NPC 214 - サム (Cut-in: 51)",
+    "Name": "サム",
+    "PortraitCutinId": 51,
+    "CamElevation": 0.34
+  },
+  {
+    "Id": 215,
+    "_comment": "NPC 215 - ルーベン (Cut-in: 45)",
+    "Name": "ルーベン",
+    "PortraitCutinId": 45,
+    "CamElevation": 0.75
+  },
+  {
+    "Id": 216,
+    "_comment": "NPC 216 - シンソヒョン (Cut-in: 43)",
+    "Name": "シンソヒョン",
+    "PortraitCutinId": 43,
+    "CamElevation": 0.99
+  },
+  {
+    "Id": 217,
+    "_comment": "NPC 217 - 購買おばちゃん (Cut-in: 3)",
+    "Name": "購買おばちゃん",
+    "PortraitCutinId": 3,
+    "CamElevation": 0.0
+  },
+  {
+    "Id": 218,
+    "_comment": "NPC 218 - 水蓮 (Cut-in: 39)",
+    "Name": "水蓮",
+    "PortraitCutinId": 39,
+    "CamElevation": 0.3
+  },
+  {
+    "Id": 219,
+    "_comment": "NPC 219 - ビアンカ (Cut-in: 7)",
+    "Name": "ビアンカ",
+    "PortraitCutinId": 7,
+    "CamElevation": 1.44
+  },
+  {
+    "Id": 220,
+    "_comment": "NPC 220 - 暗田 (Cut-in: 48)",
+    "Name": "暗田",
+    "PortraitCutinId": 48,
+    "CamElevation": 0.79
+  },
+  {
+    "Id": 221,
+    "_comment": "NPC 221 - バーモント神父 (Cut-in: 38)",
+    "Name": "バーモント神父",
+    "PortraitCutinId": 38,
+    "CamElevation": 0.85
+  },
+  {
+    "Id": 222,
+    "_comment": "NPC 222 - 動物慰霊碑 (Cut-in: 54)",
+    "Name": "動物慰霊碑",
+    "PortraitCutinId": 54,
+    "CamElevation": 0.0
+  },
+  {
+    "Id": 223,
+    "_comment": "NPC 223 - 暗田 (Cut-in: 48)",
+    "Name": "暗田",
+    "PortraitCutinId": 48,
+    "CamElevation": 0.79
+  },
+  {
+    "Id": 224,
+    "_comment": "NPC 224 - 火蓮 (Cut-in: 40)",
+    "Name": "火蓮",
+    "PortraitCutinId": 40,
+    "CamElevation": 0.57
+  },
+  {
+    "Id": 225,
+    "_comment": "NPC 225 - 暗田 (Cut-in: 48)",
+    "Name": "暗田",
+    "PortraitCutinId": 48,
+    "CamElevation": 0.79
+  },
+  {
+    "Id": 226,
+    "_comment": "NPC 226 - スーチョン (Cut-in: 21)",
+    "Name": "スーチョン",
+    "PortraitCutinId": 21,
+    "CamElevation": 1.0
+  },
+  {
+    "Id": 227,
+    "_comment": "NPC 227 - モカ (Cut-in: 24)",
+    "Name": "モカ",
+    "PortraitCutinId": 24,
+    "CamElevation": 1.25
+  },
+  {
+    "Id": 228,
+    "_comment": "NPC 228 - グレイ (Cut-in: 22)",
+    "Name": "グレイ",
+    "PortraitCutinId": 22,
+    "CamElevation": 0.84
+  },
+  {
+    "Id": 229,
+    "_comment": "NPC 229 - グレイ (Cut-in: 22)",
+    "Name": "グレイ",
+    "PortraitCutinId": 22,
+    "CamElevation": 0.84
+  },
+  {
+    "Id": 230,
+    "_comment": "NPC 230 - チャイナ (Cut-in: 32)",
+    "Name": "チャイナ",
+    "PortraitCutinId": 32,
+    "CamElevation": 1.23
+  },
+  {
+    "Id": 231,
+    "_comment": "NPC 231 - 購買おばちゃん (Cut-in: 3)",
+    "Name": "購買おばちゃん",
+    "PortraitCutinId": 3,
+    "CamElevation": 0.0
+  },
+  {
+    "Id": 232,
+    "_comment": "NPC 232 - ビアンカ (Cut-in: 7)",
+    "Name": "ビアンカ",
+    "PortraitCutinId": 7,
+    "CamElevation": 1.44
+  },
+  {
+    "Id": 233,
+    "_comment": "NPC 233 - アリーナ (Cut-in: 33)",
+    "Name": "アリーナ",
+    "PortraitCutinId": 33,
+    "CamElevation": 0.95
+  },
+  {
+    "Id": 234,
+    "_comment": "NPC 234 - リエズ (Cut-in: 10)",
+    "Name": "リエズ",
+    "PortraitCutinId": 10,
+    "CamElevation": 1.5
+  },
+  {
+    "Id": 235,
+    "_comment": "NPC 235 - マオ＝シャオピン (Cut-in: 12)",
+    "Name": "マオ＝シャオピン",
+    "PortraitCutinId": 12,
+    "CamElevation": 1.24
+  },
+  {
+    "Id": 236,
+    "_comment": "NPC 236 - ベン (Cut-in: 4)",
+    "Name": "ベン",
+    "PortraitCutinId": 4,
+    "CamElevation": 0.34
+  },
+  {
+    "Id": 237,
+    "_comment": "NPC 237 - 暗田 (Cut-in: 48)",
+    "Name": "暗田",
+    "PortraitCutinId": 48,
+    "CamElevation": 0.79
+  },
+  {
+    "Id": 238,
+    "_comment": "NPC 238 - バーモント神父 (Cut-in: 38)",
+    "Name": "バーモント神父",
+    "PortraitCutinId": 38,
+    "CamElevation": 0.85
+  },
+  {
+    "Id": 239,
+    "_comment": "NPC 239 - リーグ (Cut-in: 63)",
+    "Name": "リーグ",
+    "PortraitCutinId": 63,
+    "CamElevation": 0.0
+  },
+  {
+    "Id": 240,
+    "_comment": "NPC 240 - リーグ (Cut-in: 63)",
+    "Name": "リーグ",
+    "PortraitCutinId": 63,
+    "CamElevation": 0.0
+  },
+  {
+    "Id": 241,
+    "_comment": "NPC 241 - 暗田 (Cut-in: 48)",
+    "Name": "暗田",
+    "PortraitCutinId": 48,
+    "CamElevation": 0.79
+  },
+  {
+    "Id": 242,
+    "_comment": "NPC 242 - 火蓮 (Cut-in: 40)",
+    "Name": "火蓮",
+    "PortraitCutinId": 40,
+    "CamElevation": 0.57
+  },
+  {
+    "Id": 243,
+    "_comment": "NPC 243 - サム (Cut-in: 51)",
+    "Name": "サム",
+    "PortraitCutinId": 51,
+    "CamElevation": 0.34
+  },
+  {
+    "Id": 244,
+    "_comment": "NPC 244 - サム (Cut-in: 51)",
+    "Name": "サム",
+    "PortraitCutinId": 51,
+    "CamElevation": 0.34
+  },
+  {
+    "Id": 245,
+    "_comment": "NPC 245 - メイ (Cut-in: 6)",
+    "Name": "メイ",
+    "PortraitCutinId": 6,
+    "CamElevation": 0.83
+  },
+  {
+    "Id": 246,
+    "_comment": "NPC 246 - ジョニー (Cut-in: 5)",
+    "Name": "ジョニー",
+    "PortraitCutinId": 5,
+    "CamElevation": 1.64
+  },
+  {
+    "Id": 247,
+    "_comment": "NPC 247 - ジョニー (Cut-in: 5)",
+    "Name": "ジョニー",
+    "PortraitCutinId": 5,
+    "CamElevation": 1.64
+  },
+  {
+    "Id": 248,
+    "_comment": "NPC 248 - リンティ (Cut-in: 64)",
+    "Name": "リンティ",
+    "PortraitCutinId": 64,
+    "CamElevation": 0.0
+  },
+  {
+    "Id": 249,
+    "_comment": "NPC 249 - 休暇ヘリアン (Cut-in: 60)",
+    "Name": "休暇ヘリアン",
+    "PortraitCutinId": 60,
+    "CamElevation": 0.13
+  },
+  {
+    "Id": 250,
+    "_comment": "NPC 250 - 休暇ヘリアン (Cut-in: 60)",
+    "Name": "休暇ヘリアン",
+    "PortraitCutinId": 60,
+    "CamElevation": 0.13
+  },
+  {
+    "Id": 251,
+    "_comment": "NPC 251 - 木レバー (Cut-in: 65)",
+    "Name": "木レバー",
+    "PortraitCutinId": 65,
+    "CamElevation": 0.0
+  },
+  {
+    "Id": 252,
+    "_comment": "NPC 252 - リエズ (Cut-in: 10)",
+    "Name": "リエズ",
+    "PortraitCutinId": 10,
+    "CamElevation": 1.5
+  },
+  {
+    "Id": 253,
+    "_comment": "NPC 253 - アリーナ (Cut-in: 33)",
+    "Name": "アリーナ",
+    "PortraitCutinId": 33,
+    "CamElevation": 0.95
+  },
+  {
+    "Id": 254,
+    "_comment": "NPC 254 - ドロシー (Cut-in: 2)",
+    "Name": "ドロシー",
+    "PortraitCutinId": 2,
+    "CamElevation": 0.0
+  },
+  {
+    "Id": 255,
+    "_comment": "NPC 255 - ページ (Cut-in: 1)",
+    "Name": "ページ",
+    "PortraitCutinId": 1,
+    "CamElevation": 0.0
+  },
+  {
+    "Id": 7001,
+    "_comment": "NPC 7001 - 購買おばちゃん (Cut-in: 3)",
+    "Name": "購買おばちゃん",
+    "PortraitCutinId": 3,
+    "CamElevation": 0.0
+  },
+  {
+    "Id": 7002,
+    "_comment": "NPC 7002 - 購買おばちゃん (Cut-in: 3)",
+    "Name": "購買おばちゃん",
+    "PortraitCutinId": 3,
+    "CamElevation": 0.0
+  },
+  {
+    "Id": 9000,
+    "_comment": "NPC 9000 - 購買おばちゃん (Cut-in: 3)",
+    "Name": "購買おばちゃん",
+    "PortraitCutinId": 3,
+    "CamElevation": 0.0
+  },
+  {
+    "Id": 9001,
+    "_comment": "NPC 9001 - 購買おばちゃん (Cut-in: 3)",
+    "Name": "購買おばちゃん",
+    "PortraitCutinId": 3,
+    "CamElevation": 0.0
+  },
+  {
+    "Id": 9002,
+    "_comment": "NPC 9002 - 購買おばちゃん (Cut-in: 3)",
+    "Name": "購買おばちゃん",
+    "PortraitCutinId": 3,
+    "CamElevation": 0.0
+  },
+  {
+    "Id": 9003,
+    "_comment": "NPC 9003 - 購買おばちゃん (Cut-in: 3)",
+    "Name": "購買おばちゃん",
+    "PortraitCutinId": 3,
+    "CamElevation": 0.0
+  },
+  {
+    "Id": 9004,
+    "_comment": "NPC 9004 - 購買おばちゃん (Cut-in: 3)",
+    "Name": "購買おばちゃん",
+    "PortraitCutinId": 3,
+    "CamElevation": 0.0
+  },
+  {
+    "Id": 9005,
+    "_comment": "NPC 9005 - 購買おばちゃん (Cut-in: 3)",
+    "Name": "購買おばちゃん",
+    "PortraitCutinId": 3,
+    "CamElevation": 0.0
+  },
+  {
+    "Id": 9006,
+    "_comment": "NPC 9006 - 購買おばちゃん (Cut-in: 3)",
+    "Name": "購買おばちゃん",
+    "PortraitCutinId": 3,
+    "CamElevation": 0.0
+  },
+  {
+    "Id": 9007,
+    "_comment": "NPC 9007 - 購買おばちゃん (Cut-in: 3)",
+    "Name": "購買おばちゃん",
+    "PortraitCutinId": 3,
+    "CamElevation": 0.0
+  },
+  {
+    "Id": 9008,
+    "_comment": "NPC 9008 - 購買おばちゃん (Cut-in: 3)",
+    "Name": "購買おばちゃん",
+    "PortraitCutinId": 3,
+    "CamElevation": 0.0
+  },
+  {
+    "Id": 9009,
+    "_comment": "NPC 9009 - 購買おばちゃん (Cut-in: 3)",
+    "Name": "購買おばちゃん",
+    "PortraitCutinId": 3,
+    "CamElevation": 0.0
+  },
+  {
+    "Id": 9011,
+    "_comment": "NPC 9011 - 購買おばちゃん (Cut-in: 3)",
+    "Name": "購買おばちゃん",
+    "PortraitCutinId": 3,
+    "CamElevation": 0.0
+  },
+  {
+    "Id": 9012,
+    "_comment": "NPC 9012 - 購買おばちゃん (Cut-in: 3)",
+    "Name": "購買おばちゃん",
+    "PortraitCutinId": 3,
+    "CamElevation": 0.0
+  },
+  {
+    "Id": 8001,
+    "_comment": "NPC 8001 - ページ (Cut-in: 1)",
+    "Name": "ページ",
+    "PortraitCutinId": 1,
+    "CamElevation": 0.0
+  },
+  {
+    "Id": 8002,
+    "_comment": "NPC 8002 - ドロシー (Cut-in: 2)",
+    "Name": "ドロシー",
+    "PortraitCutinId": 2,
+    "CamElevation": 0.0
+  },
+  {
+    "Id": 8003,
+    "_comment": "NPC 8003 - 購買おばちゃん (Cut-in: 3)",
+    "Name": "購買おばちゃん",
+    "PortraitCutinId": 3,
+    "CamElevation": 0.0
+  },
+  {
+    "Id": 8004,
+    "_comment": "NPC 8004 - ベン (Cut-in: 4)",
+    "Name": "ベン",
+    "PortraitCutinId": 4,
+    "CamElevation": 0.34
+  },
+  {
+    "Id": 8005,
+    "_comment": "NPC 8005 - ジョニー (Cut-in: 5)",
+    "Name": "ジョニー",
+    "PortraitCutinId": 5,
+    "CamElevation": 1.64
+  },
+  {
+    "Id": 8006,
+    "_comment": "NPC 8006 - ページ (Cut-in: 1)",
+    "Name": "ページ",
+    "PortraitCutinId": 1,
+    "CamElevation": 0.0
+  },
+  {
+    "Id": 8007,
+    "_comment": "NPC 8007 - ドロシー (Cut-in: 2)",
+    "Name": "ドロシー",
+    "PortraitCutinId": 2,
+    "CamElevation": 0.0
+  },
+  {
+    "Id": 8008,
+    "_comment": "NPC 8008 - 購買おばちゃん (Cut-in: 3)",
+    "Name": "購買おばちゃん",
+    "PortraitCutinId": 3,
+    "CamElevation": 0.0
+  },
+  {
+    "Id": 8009,
+    "_comment": "NPC 8009 - ベン (Cut-in: 4)",
+    "Name": "ベン",
+    "PortraitCutinId": 4,
+    "CamElevation": 0.34
+  },
+  {
+    "Id": 8010,
+    "_comment": "NPC 8010 - ジョニー (Cut-in: 5)",
+    "Name": "ジョニー",
+    "PortraitCutinId": 5,
+    "CamElevation": 1.64
+  },
+  {
+    "Id": 8011,
+    "_comment": "NPC 8011 - ページ (Cut-in: 1)",
+    "Name": "ページ",
+    "PortraitCutinId": 1,
+    "CamElevation": 0.0
+  },
+  {
+    "Id": 8012,
+    "_comment": "NPC 8012 - ドロシー (Cut-in: 2)",
+    "Name": "ドロシー",
+    "PortraitCutinId": 2,
+    "CamElevation": 0.0
+  },
+  {
+    "Id": 8013,
+    "_comment": "NPC 8013 - 購買おばちゃん (Cut-in: 3)",
+    "Name": "購買おばちゃん",
+    "PortraitCutinId": 3,
+    "CamElevation": 0.0
+  },
+  {
+    "Id": 8014,
+    "_comment": "NPC 8014 - ベン (Cut-in: 4)",
+    "Name": "ベン",
+    "PortraitCutinId": 4,
+    "CamElevation": 0.34
+  },
+  {
+    "Id": 8015,
+    "_comment": "NPC 8015 - ジョニー (Cut-in: 5)",
+    "Name": "ジョニー",
+    "PortraitCutinId": 5,
+    "CamElevation": 1.64
+  },
+  {
+    "Id": 8016,
+    "_comment": "NPC 8016 - ページ (Cut-in: 1)",
+    "Name": "ページ",
+    "PortraitCutinId": 1,
+    "CamElevation": 0.0
+  },
+  {
+    "Id": 8017,
+    "_comment": "NPC 8017 - ドロシー (Cut-in: 2)",
+    "Name": "ドロシー",
+    "PortraitCutinId": 2,
+    "CamElevation": 0.0
+  },
+  {
+    "Id": 8018,
+    "_comment": "NPC 8018 - 購買おばちゃん (Cut-in: 3)",
+    "Name": "購買おばちゃん",
+    "PortraitCutinId": 3,
+    "CamElevation": 0.0
+  },
+  {
+    "Id": 8019,
+    "_comment": "NPC 8019 - ベン (Cut-in: 4)",
+    "Name": "ベン",
+    "PortraitCutinId": 4,
+    "CamElevation": 0.34
+  },
+  {
+    "Id": 8020,
+    "_comment": "NPC 8020 - ジョニー (Cut-in: 5)",
+    "Name": "ジョニー",
+    "PortraitCutinId": 5,
+    "CamElevation": 1.64
+  },
+  {
+    "Id": 256,
+    "_comment": "NPC 256 - シンソヒョン (Cut-in: 43)",
+    "Name": "シンソヒョン",
+    "PortraitCutinId": 43,
+    "CamElevation": 0.99
+  },
+  {
+    "Id": 257,
+    "_comment": "NPC 257 - ルーベン (Cut-in: 45)",
+    "Name": "ルーベン",
+    "PortraitCutinId": 45,
+    "CamElevation": 0.75
+  },
+  {
+    "Id": 258,
+    "_comment": "NPC 258 - ペコー (Cut-in: 19)",
+    "Name": "ペコー",
+    "PortraitCutinId": 19,
+    "CamElevation": 1.87
+  },
+  {
+    "Id": 259,
+    "_comment": "NPC 259 - モカ (Cut-in: 24)",
+    "Name": "モカ",
+    "PortraitCutinId": 24,
+    "CamElevation": 1.25
+  },
+  {
+    "Id": 260,
+    "_comment": "NPC 260 - チャイナ (Cut-in: 32)",
+    "Name": "チャイナ",
+    "PortraitCutinId": 32,
+    "CamElevation": 1.23
+  },
+  {
+    "Id": 261,
+    "_comment": "NPC 261 - ヒョンラン (Cut-in: 14)",
+    "Name": "ヒョンラン",
+    "PortraitCutinId": 14,
+    "CamElevation": 1.04
+  },
+  {
+    "Id": 262,
+    "_comment": "NPC 262 - グレイ (Cut-in: 22)",
+    "Name": "グレイ",
+    "PortraitCutinId": 22,
+    "CamElevation": 0.84
+  },
+  {
+    "Id": 263,
+    "_comment": "NPC 263 - ジョニー (Cut-in: 5)",
+    "Name": "ジョニー",
+    "PortraitCutinId": 5,
+    "CamElevation": 1.64
+  },
+  {
+    "Id": 264,
+    "_comment": "NPC 264 - 購買おばちゃん (Cut-in: 3)",
+    "Name": "購買おばちゃん",
+    "PortraitCutinId": 3,
+    "CamElevation": 0.0
+  },
+  {
+    "Id": 265,
+    "_comment": "NPC 265 - -2146826246 (Cut-in: 0)",
+    "Name": "-2146826246",
+    "PortraitCutinId": 0,
+    "CamElevation": 0.0
+  },
+  {
+    "Id": 266,
+    "_comment": "NPC 266 - -2146826246 (Cut-in: 0)",
+    "Name": "-2146826246",
+    "PortraitCutinId": 0,
+    "CamElevation": 0.0
+  },
+  {
+    "Id": 267,
+    "_comment": "NPC 267 - -2146826246 (Cut-in: 0)",
+    "Name": "-2146826246",
+    "PortraitCutinId": 0,
+    "CamElevation": 0.0
+  },
+  {
+    "Id": 268,
+    "_comment": "NPC 268 - -2146826246 (Cut-in: 0)",
+    "Name": "-2146826246",
+    "PortraitCutinId": 0,
+    "CamElevation": 0.0
+  },
+  {
+    "Id": 269,
+    "_comment": "NPC 269 - -2146826246 (Cut-in: 0)",
+    "Name": "-2146826246",
+    "PortraitCutinId": 0,
+    "CamElevation": 0.0
+  },
+  {
+    "Id": 270,
+    "_comment": "NPC 270 - -2146826246 (Cut-in: 0)",
+    "Name": "-2146826246",
+    "PortraitCutinId": 0,
+    "CamElevation": 0.0
+  },
+  {
+    "Id": 271,
+    "_comment": "NPC 271 - -2146826246 (Cut-in: 0)",
+    "Name": "-2146826246",
+    "PortraitCutinId": 0,
+    "CamElevation": 0.0
+  },
+  {
+    "Id": 272,
+    "_comment": "NPC 272 - -2146826246 (Cut-in: 0)",
+    "Name": "-2146826246",
+    "PortraitCutinId": 0,
+    "CamElevation": 0.0
+  },
+  {
+    "Id": 273,
+    "_comment": "NPC 273 - -2146826246 (Cut-in: 0)",
+    "Name": "-2146826246",
+    "PortraitCutinId": 0,
+    "CamElevation": 0.0
+  },
+  {
+    "Id": 274,
+    "_comment": "NPC 274 - -2146826246 (Cut-in: 0)",
+    "Name": "-2146826246",
+    "PortraitCutinId": 0,
+    "CamElevation": 0.0
+  },
+  {
+    "Id": 275,
+    "_comment": "NPC 275 - -2146826246 (Cut-in: 0)",
+    "Name": "-2146826246",
+    "PortraitCutinId": 0,
+    "CamElevation": 0.0
+  },
+  {
+    "Id": 276,
+    "_comment": "NPC 276 - -2146826246 (Cut-in: 0)",
+    "Name": "-2146826246",
+    "PortraitCutinId": 0,
+    "CamElevation": 0.0
+  },
+  {
+    "Id": 277,
+    "_comment": "NPC 277 - -2146826246 (Cut-in: 0)",
+    "Name": "-2146826246",
+    "PortraitCutinId": 0,
+    "CamElevation": 0.0
+  },
+  {
+    "Id": 278,
+    "_comment": "NPC 278 - -2146826246 (Cut-in: 0)",
+    "Name": "-2146826246",
+    "PortraitCutinId": 0,
+    "CamElevation": 0.0
+  },
+  {
+    "Id": 279,
+    "_comment": "NPC 279 - -2146826246 (Cut-in: 0)",
+    "Name": "-2146826246",
+    "PortraitCutinId": 0,
+    "CamElevation": 0.0
+  },
+  {
+    "Id": 280,
+    "_comment": "NPC 280 - -2146826246 (Cut-in: 0)",
+    "Name": "-2146826246",
+    "PortraitCutinId": 0,
+    "CamElevation": 0.0
+  },
+  {
+    "Id": 281,
+    "_comment": "NPC 281 - -2146826246 (Cut-in: 0)",
+    "Name": "-2146826246",
+    "PortraitCutinId": 0,
+    "CamElevation": 0.0
+  },
+  {
+    "Id": 282,
+    "_comment": "NPC 282 - -2146826246 (Cut-in: 0)",
+    "Name": "-2146826246",
+    "PortraitCutinId": 0,
+    "CamElevation": 0.0
+  },
+  {
+    "Id": 283,
+    "_comment": "NPC 283 - 暗田 (Cut-in: 48)",
+    "Name": "暗田",
+    "PortraitCutinId": 48,
+    "CamElevation": 0.79
+  },
+  {
+    "Id": 284,
+    "_comment": "NPC 284 - シンソヒョン (Cut-in: 43)",
+    "Name": "シンソヒョン",
+    "PortraitCutinId": 43,
+    "CamElevation": 0.99
+  },
+  {
+    "Id": 285,
+    "_comment": "NPC 285 - 水蓮 (Cut-in: 39)",
+    "Name": "水蓮",
+    "PortraitCutinId": 39,
+    "CamElevation": 0.3
+  },
+  {
+    "Id": 286,
+    "_comment": "NPC 286 - 妖艶 (Cut-in: 46)",
+    "Name": "妖艶",
+    "PortraitCutinId": 46,
+    "CamElevation": 0.89
+  },
+  {
+    "Id": 287,
+    "_comment": "NPC 287 - バーモント神父 (Cut-in: 38)",
+    "Name": "バーモント神父",
+    "PortraitCutinId": 38,
+    "CamElevation": 0.85
+  },
+  {
+    "Id": 288,
+    "_comment": "NPC 288 - 購買おばちゃん (Cut-in: 3)",
+    "Name": "購買おばちゃん",
+    "PortraitCutinId": 3,
+    "CamElevation": 0.0
+  },
+  {
+    "Id": 289,
+    "_comment": "NPC 289 - -2146826246 (Cut-in: 0)",
+    "Name": "-2146826246",
+    "PortraitCutinId": 0,
+    "CamElevation": 0.0
+  },
+  {
+    "Id": 290,
+    "_comment": "NPC 290 - -2146826246 (Cut-in: 0)",
+    "Name": "-2146826246",
+    "PortraitCutinId": 0,
+    "CamElevation": 0.0
+  },
+  {
+    "Id": 291,
+    "_comment": "NPC 291 - -2146826246 (Cut-in: 0)",
+    "Name": "-2146826246",
+    "PortraitCutinId": 0,
+    "CamElevation": 0.0
+  },
+  {
+    "Id": 292,
+    "_comment": "NPC 292 - -2146826246 (Cut-in: 0)",
+    "Name": "-2146826246",
+    "PortraitCutinId": 0,
+    "CamElevation": 0.0
+  },
+  {
+    "Id": 293,
+    "_comment": "NPC 293 - -2146826246 (Cut-in: 0)",
+    "Name": "-2146826246",
+    "PortraitCutinId": 0,
+    "CamElevation": 0.0
+  },
+  {
+    "Id": 294,
+    "_comment": "NPC 294 - -2146826246 (Cut-in: 0)",
+    "Name": "-2146826246",
+    "PortraitCutinId": 0,
+    "CamElevation": 0.0
+  },
+  {
+    "Id": 295,
+    "_comment": "NPC 295 - -2146826246 (Cut-in: 0)",
+    "Name": "-2146826246",
+    "PortraitCutinId": 0,
+    "CamElevation": 0.0
+  },
+  {
+    "Id": 296,
+    "_comment": "NPC 296 - -2146826246 (Cut-in: 0)",
+    "Name": "-2146826246",
+    "PortraitCutinId": 0,
+    "CamElevation": 0.0
+  },
+  {
+    "Id": 297,
+    "_comment": "NPC 297 - -2146826246 (Cut-in: 0)",
+    "Name": "-2146826246",
+    "PortraitCutinId": 0,
+    "CamElevation": 0.0
+  },
+  {
+    "Id": 298,
+    "_comment": "NPC 298 - -2146826246 (Cut-in: 0)",
+    "Name": "-2146826246",
+    "PortraitCutinId": 0,
+    "CamElevation": 0.0
+  },
+  {
+    "Id": 299,
+    "_comment": "NPC 299 - -2146826246 (Cut-in: 0)",
+    "Name": "-2146826246",
+    "PortraitCutinId": 0,
+    "CamElevation": 0.0
+  },
+  {
+    "Id": 300,
+    "_comment": "NPC 300 - -2146826246 (Cut-in: 0)",
+    "Name": "-2146826246",
+    "PortraitCutinId": 0,
+    "CamElevation": 0.0
+  },
+  {
+    "Id": 301,
+    "_comment": "NPC 301 - -2146826246 (Cut-in: 0)",
+    "Name": "-2146826246",
+    "PortraitCutinId": 0,
+    "CamElevation": 0.0
+  },
+  {
+    "Id": 302,
+    "_comment": "NPC 302 - -2146826246 (Cut-in: 0)",
+    "Name": "-2146826246",
+    "PortraitCutinId": 0,
+    "CamElevation": 0.0
+  },
+  {
+    "Id": 303,
+    "_comment": "NPC 303 - -2146826246 (Cut-in: 0)",
+    "Name": "-2146826246",
+    "PortraitCutinId": 0,
+    "CamElevation": 0.0
+  },
+  {
+    "Id": 304,
+    "_comment": "NPC 304 - -2146826246 (Cut-in: 0)",
+    "Name": "-2146826246",
+    "PortraitCutinId": 0,
+    "CamElevation": 0.0
+  },
+  {
+    "Id": 305,
+    "_comment": "NPC 305 - -2146826246 (Cut-in: 0)",
+    "Name": "-2146826246",
+    "PortraitCutinId": 0,
+    "CamElevation": 0.0
+  },
+  {
+    "Id": 306,
+    "_comment": "NPC 306 - -2146826246 (Cut-in: 0)",
+    "Name": "-2146826246",
+    "PortraitCutinId": 0,
+    "CamElevation": 0.0
+  },
+  {
+    "Id": 307,
+    "_comment": "NPC 307 - チャイナ (Cut-in: 32)",
+    "Name": "チャイナ",
+    "PortraitCutinId": 32,
+    "CamElevation": 1.23
+  },
+  {
+    "Id": 308,
+    "_comment": "NPC 308 - シンソヒョン (Cut-in: 43)",
+    "Name": "シンソヒョン",
+    "PortraitCutinId": 43,
+    "CamElevation": 0.99
+  },
+  {
+    "Id": 309,
+    "_comment": "NPC 309 - 妖艶 (Cut-in: 46)",
+    "Name": "妖艶",
+    "PortraitCutinId": 46,
+    "CamElevation": 0.89
+  },
+  {
+    "Id": 310,
+    "_comment": "NPC 310 - シンソヒョン (Cut-in: 43)",
+    "Name": "シンソヒョン",
+    "PortraitCutinId": 43,
+    "CamElevation": 0.99
+  },
+  {
+    "Id": 311,
+    "_comment": "NPC 311 - -2146826246 (Cut-in: 0)",
+    "Name": "-2146826246",
+    "PortraitCutinId": 0,
+    "CamElevation": 0.0
+  },
+  {
+    "Id": 312,
+    "_comment": "NPC 312 - 休暇ヘリアン (Cut-in: 60)",
+    "Name": "休暇ヘリアン",
+    "PortraitCutinId": 60,
+    "CamElevation": 0.13
+  },
+  {
+    "Id": 313,
+    "_comment": "NPC 313 - -2146826246 (Cut-in: 0)",
+    "Name": "-2146826246",
+    "PortraitCutinId": 0,
+    "CamElevation": 0.0
+  },
+  {
+    "Id": 314,
+    "_comment": "NPC 314 - -2146826246 (Cut-in: 0)",
+    "Name": "-2146826246",
+    "PortraitCutinId": 0,
+    "CamElevation": 0.0
+  },
+  {
+    "Id": 315,
+    "_comment": "NPC 315 - -2146826246 (Cut-in: 0)",
+    "Name": "-2146826246",
+    "PortraitCutinId": 0,
+    "CamElevation": 0.0
+  },
+  {
+    "Id": 316,
+    "_comment": "NPC 316 - 木レバー (Cut-in: 65)",
+    "Name": "木レバー",
+    "PortraitCutinId": 65,
+    "CamElevation": 0.0
+  },
+  {
+    "Id": 317,
+    "_comment": "NPC 317 - ヘリアンベビー (Cut-in: 68)",
+    "Name": "ヘリアンベビー",
+    "PortraitCutinId": 68,
+    "CamElevation": 0.0
+  },
+  {
+    "Id": 318,
+    "_comment": "NPC 318 - -2146826246 (Cut-in: 0)",
+    "Name": "-2146826246",
+    "PortraitCutinId": 0,
+    "CamElevation": 0.0
+  },
+  {
+    "Id": 319,
+    "_comment": "NPC 319 - -2146826246 (Cut-in: 0)",
+    "Name": "-2146826246",
+    "PortraitCutinId": 0,
+    "CamElevation": 0.0
+  },
+  {
+    "Id": 320,
+    "_comment": "NPC 320 - -2146826246 (Cut-in: 0)",
+    "Name": "-2146826246",
+    "PortraitCutinId": 0,
+    "CamElevation": 0.0
+  },
+  {
+    "Id": 321,
+    "_comment": "NPC 321 - ホヤン (Cut-in: 42)",
+    "Name": "ホヤン",
+    "PortraitCutinId": 42,
+    "CamElevation": 0.98
+  },
+  {
+    "Id": 322,
+    "_comment": "NPC 322 - シンソヒョン (Cut-in: 43)",
+    "Name": "シンソヒョン",
+    "PortraitCutinId": 43,
+    "CamElevation": 0.99
+  },
+  {
+    "Id": 323,
+    "_comment": "NPC 323 - スーチョン (Cut-in: 21)",
+    "Name": "スーチョン",
+    "PortraitCutinId": 21,
+    "CamElevation": 1.0
+  },
+  {
+    "Id": 324,
+    "_comment": "NPC 324 - カルテ (Cut-in: 34)",
+    "Name": "カルテ",
+    "PortraitCutinId": 34,
+    "CamElevation": 1.02
+  },
+  {
+    "Id": 325,
+    "_comment": "NPC 325 - インジェクト (Cut-in: 73)",
+    "Name": "インジェクト",
+    "PortraitCutinId": 73,
+    "CamElevation": 0.0
+  },
+  {
+    "Id": 326,
+    "_comment": "NPC 326 - ジョニー (Cut-in: 5)",
+    "Name": "ジョニー",
+    "PortraitCutinId": 5,
+    "CamElevation": 1.64
+  },
+  {
+    "Id": 327,
+    "_comment": "NPC 327 - マオ＝シャオピン (Cut-in: 12)",
+    "Name": "マオ＝シャオピン",
+    "PortraitCutinId": 12,
+    "CamElevation": 1.24
+  },
+  {
+    "Id": 328,
+    "_comment": "NPC 328 - メイイェン (Cut-in: 41)",
+    "Name": "メイイェン",
+    "PortraitCutinId": 41,
+    "CamElevation": 0.52
+  },
+  {
+    "Id": 329,
+    "_comment": "NPC 329 - ムジナ守衛 (Cut-in: 44)",
+    "Name": "ムジナ守衛",
+    "PortraitCutinId": 44,
+    "CamElevation": 4.28
+  },
+  {
+    "Id": 330,
+    "_comment": "NPC 330 - 妖艶 (Cut-in: 46)",
+    "Name": "妖艶",
+    "PortraitCutinId": 46,
+    "CamElevation": 0.89
+  },
+  {
+    "Id": 331,
+    "_comment": "NPC 331 - ビアンカ (Cut-in: 7)",
+    "Name": "ビアンカ",
+    "PortraitCutinId": 7,
+    "CamElevation": 1.44
+  },
+  {
+    "Id": 332,
+    "_comment": "NPC 332 - ステファノ (Cut-in: 31)",
+    "Name": "ステファノ",
+    "PortraitCutinId": 31,
+    "CamElevation": 0.67
+  },
+  {
+    "Id": 333,
+    "_comment": "NPC 333 - エミリーちゃん (Cut-in: 74)",
+    "Name": "エミリーちゃん",
+    "PortraitCutinId": 74,
+    "CamElevation": 0.0
+  },
+  {
+    "Id": 334,
+    "_comment": "NPC 334 - ホヤン (Cut-in: 42)",
+    "Name": "ホヤン",
+    "PortraitCutinId": 42,
+    "CamElevation": 0.98
+  },
+  {
+    "Id": 335,
+    "_comment": "NPC 335 - メイイェン (Cut-in: 41)",
+    "Name": "メイイェン",
+    "PortraitCutinId": 41,
+    "CamElevation": 0.52
+  },
+  {
+    "Id": 336,
+    "_comment": "NPC 336 - ビアンカ (Cut-in: 7)",
+    "Name": "ビアンカ",
+    "PortraitCutinId": 7,
+    "CamElevation": 1.44
+  },
+  {
+    "Id": 337,
+    "_comment": "NPC 337 - チャート (Cut-in: 79)",
+    "Name": "チャート",
+    "PortraitCutinId": 79,
+    "CamElevation": 1.1
+  },
+  {
+    "Id": 338,
+    "_comment": "NPC 338 - カルテ (Cut-in: 34)",
+    "Name": "カルテ",
+    "PortraitCutinId": 34,
+    "CamElevation": 1.02
+  },
+  {
+    "Id": 339,
+    "_comment": "NPC 339 - ワルグマー (Cut-in: 36)",
+    "Name": "ワルグマー",
+    "PortraitCutinId": 36,
+    "CamElevation": 0.53
+  },
+  {
+    "Id": 340,
+    "_comment": "NPC 340 - ホヤン (Cut-in: 42)",
+    "Name": "ホヤン",
+    "PortraitCutinId": 42,
+    "CamElevation": 0.98
+  },
+  {
+    "Id": 341,
+    "_comment": "NPC 341 - ホヤン (Cut-in: 42)",
+    "Name": "ホヤン",
+    "PortraitCutinId": 42,
+    "CamElevation": 0.98
+  },
+  {
+    "Id": 342,
+    "_comment": "NPC 342 - メイイェン (Cut-in: 41)",
+    "Name": "メイイェン",
+    "PortraitCutinId": 41,
+    "CamElevation": 0.52
+  },
+  {
+    "Id": 343,
+    "_comment": "NPC 343 - メイイェン (Cut-in: 41)",
+    "Name": "メイイェン",
+    "PortraitCutinId": 41,
+    "CamElevation": 0.52
+  },
+  {
+    "Id": 344,
+    "_comment": "NPC 344 - メイイェン (Cut-in: 41)",
+    "Name": "メイイェン",
+    "PortraitCutinId": 41,
+    "CamElevation": 0.52
+  },
+  {
+    "Id": 345,
+    "_comment": "NPC 345 - メイイェン (Cut-in: 41)",
+    "Name": "メイイェン",
+    "PortraitCutinId": 41,
+    "CamElevation": 0.52
+  },
+  {
+    "Id": 346,
+    "_comment": "NPC 346 - 火蓮 (Cut-in: 40)",
+    "Name": "火蓮",
+    "PortraitCutinId": 40,
+    "CamElevation": 0.57
+  },
+  {
+    "Id": 347,
+    "_comment": "NPC 347 - バーモント神父 (Cut-in: 38)",
+    "Name": "バーモント神父",
+    "PortraitCutinId": 38,
+    "CamElevation": 0.85
+  },
+  {
+    "Id": 348,
+    "_comment": "NPC 348 - 火蓮 (Cut-in: 40)",
+    "Name": "火蓮",
+    "PortraitCutinId": 40,
+    "CamElevation": 0.57
+  },
+  {
+    "Id": 349,
+    "_comment": "NPC 349 - ハチ (Cut-in: 76)",
+    "Name": "ハチ",
+    "PortraitCutinId": 76,
+    "CamElevation": 0.66
+  },
+  {
+    "Id": 350,
+    "_comment": "NPC 350 - 妖艶 (Cut-in: 46)",
+    "Name": "妖艶",
+    "PortraitCutinId": 46,
+    "CamElevation": 0.89
+  },
+  {
+    "Id": 351,
+    "_comment": "NPC 351 - 暗田 (Cut-in: 48)",
+    "Name": "暗田",
+    "PortraitCutinId": 48,
+    "CamElevation": 0.79
+  },
+  {
+    "Id": 352,
+    "_comment": "NPC 352 - シンソヒョン (Cut-in: 43)",
+    "Name": "シンソヒョン",
+    "PortraitCutinId": 43,
+    "CamElevation": 0.99
+  },
+  {
+    "Id": 353,
+    "_comment": "NPC 353 - ルーベン (Cut-in: 45)",
+    "Name": "ルーベン",
+    "PortraitCutinId": 45,
+    "CamElevation": 0.75
+  },
+  {
+    "Id": 354,
+    "_comment": "NPC 354 - 火蓮 (Cut-in: 40)",
+    "Name": "火蓮",
+    "PortraitCutinId": 40,
+    "CamElevation": 0.57
+  },
+  {
+    "Id": 355,
+    "_comment": "NPC 355 - ホヤン (Cut-in: 42)",
+    "Name": "ホヤン",
+    "PortraitCutinId": 42,
+    "CamElevation": 0.98
+  },
+  {
+    "Id": 356,
+    "_comment": "NPC 356 - シンソヒョン (Cut-in: 43)",
+    "Name": "シンソヒョン",
+    "PortraitCutinId": 43,
+    "CamElevation": 0.99
+  },
+  {
+    "Id": 357,
+    "_comment": "NPC 357 - ルーベン (Cut-in: 45)",
+    "Name": "ルーベン",
+    "PortraitCutinId": 45,
+    "CamElevation": 0.75
+  },
+  {
+    "Id": 358,
+    "_comment": "NPC 358 - ルーベン (Cut-in: 45)",
+    "Name": "ルーベン",
+    "PortraitCutinId": 45,
+    "CamElevation": 0.75
+  },
+  {
+    "Id": 359,
+    "_comment": "NPC 359 - ホヤン (Cut-in: 42)",
+    "Name": "ホヤン",
+    "PortraitCutinId": 42,
+    "CamElevation": 0.98
+  },
+  {
+    "Id": 360,
+    "_comment": "NPC 360 - ホヤン (Cut-in: 42)",
+    "Name": "ホヤン",
+    "PortraitCutinId": 42,
+    "CamElevation": 0.98
+  },
+  {
+    "Id": 361,
+    "_comment": "NPC 361 - ホヤン (Cut-in: 42)",
+    "Name": "ホヤン",
+    "PortraitCutinId": 42,
+    "CamElevation": 0.98
+  },
+  {
+    "Id": 362,
+    "_comment": "NPC 362 - メイイェン (Cut-in: 41)",
+    "Name": "メイイェン",
+    "PortraitCutinId": 41,
+    "CamElevation": 0.52
+  },
+  {
+    "Id": 363,
+    "_comment": "NPC 363 - 暗田 (Cut-in: 48)",
+    "Name": "暗田",
+    "PortraitCutinId": 48,
+    "CamElevation": 0.79
+  },
+  {
+    "Id": 364,
+    "_comment": "NPC 364 - バーモント神父 (Cut-in: 38)",
+    "Name": "バーモント神父",
+    "PortraitCutinId": 38,
+    "CamElevation": 0.85
+  },
+  {
+    "Id": 365,
+    "_comment": "NPC 365 - アンナ (Cut-in: 78)",
+    "Name": "アンナ",
+    "PortraitCutinId": 78,
+    "CamElevation": 0.97
+  },
+  {
+    "Id": 366,
+    "_comment": "NPC 366 - ナナ (Cut-in: 111)",
+    "Name": "ナナ",
+    "PortraitCutinId": 111,
+    "CamElevation": 0.97
+  },
+  {
+    "Id": 367,
+    "_comment": "NPC 367 - スターリン (Cut-in: 13)",
+    "Name": "スターリン",
+    "PortraitCutinId": 13,
+    "CamElevation": 0.75
+  },
+  {
+    "Id": 368,
+    "_comment": "NPC 368 - メイイェン (Cut-in: 41)",
+    "Name": "メイイェン",
+    "PortraitCutinId": 41,
+    "CamElevation": 0.52
+  },
+  {
+    "Id": 369,
+    "_comment": "NPC 369 - メイイェン (Cut-in: 41)",
+    "Name": "メイイェン",
+    "PortraitCutinId": 41,
+    "CamElevation": 0.52
+  },
+  {
+    "Id": 370,
+    "_comment": "NPC 370 - ホヤン (Cut-in: 42)",
+    "Name": "ホヤン",
+    "PortraitCutinId": 42,
+    "CamElevation": 0.98
+  },
+  {
+    "Id": 371,
+    "_comment": "NPC 371 - ホヤン (Cut-in: 42)",
+    "Name": "ホヤン",
+    "PortraitCutinId": 42,
+    "CamElevation": 0.98
+  },
+  {
+    "Id": 372,
+    "_comment": "NPC 372 - ホヤン (Cut-in: 42)",
+    "Name": "ホヤン",
+    "PortraitCutinId": 42,
+    "CamElevation": 0.98
+  },
+  {
+    "Id": 373,
+    "_comment": "NPC 373 - ホヤン (Cut-in: 42)",
+    "Name": "ホヤン",
+    "PortraitCutinId": 42,
+    "CamElevation": 0.98
+  },
+  {
+    "Id": 374,
+    "_comment": "NPC 374 - パペットマスター (Cut-in: 81)",
+    "Name": "パペットマスター",
+    "PortraitCutinId": 81,
+    "CamElevation": 1.97
+  },
+  {
+    "Id": 375,
+    "_comment": "NPC 375 - シンソヒョン (Cut-in: 43)",
+    "Name": "シンソヒョン",
+    "PortraitCutinId": 43,
+    "CamElevation": 0.99
+  },
+  {
+    "Id": 376,
+    "_comment": "NPC 376 - ページ (Cut-in: 1)",
+    "Name": "ページ",
+    "PortraitCutinId": 1,
+    "CamElevation": 0.0
+  },
+  {
+    "Id": 377,
+    "_comment": "NPC 377 - ステファノ (Cut-in: 31)",
+    "Name": "ステファノ",
+    "PortraitCutinId": 31,
+    "CamElevation": 0.67
+  },
+  {
+    "Id": 378,
+    "_comment": "NPC 378 - ワルグマー (Cut-in: 36)",
+    "Name": "ワルグマー",
+    "PortraitCutinId": 36,
+    "CamElevation": 0.53
+  },
+  {
+    "Id": 379,
+    "_comment": "NPC 379 - リエズ (Cut-in: 10)",
+    "Name": "リエズ",
+    "PortraitCutinId": 10,
+    "CamElevation": 1.5
+  },
+  {
+    "Id": 380,
+    "_comment": "NPC 380 - 暗田 (Cut-in: 80)",
+    "Name": "暗田",
+    "PortraitCutinId": 80,
+    "CamElevation": 0.79
+  },
+  {
+    "Id": 381,
+    "_comment": "NPC 381 - ワルグマー (Cut-in: 36)",
+    "Name": "ワルグマー",
+    "PortraitCutinId": 36,
+    "CamElevation": 0.53
+  },
+  {
+    "Id": 382,
+    "_comment": "NPC 382 - ワルグマー (Cut-in: 36)",
+    "Name": "ワルグマー",
+    "PortraitCutinId": 36,
+    "CamElevation": 0.53
+  },
+  {
+    "Id": 383,
+    "_comment": "NPC 383 - ワルグマー (Cut-in: 36)",
+    "Name": "ワルグマー",
+    "PortraitCutinId": 36,
+    "CamElevation": 0.53
+  },
+  {
+    "Id": 384,
+    "_comment": "NPC 384 - ワルグマー (Cut-in: 36)",
+    "Name": "ワルグマー",
+    "PortraitCutinId": 36,
+    "CamElevation": 0.53
+  },
+  {
+    "Id": 385,
+    "_comment": "NPC 385 - ワルグマー (Cut-in: 36)",
+    "Name": "ワルグマー",
+    "PortraitCutinId": 36,
+    "CamElevation": 0.53
+  },
+  {
+    "Id": 386,
+    "_comment": "NPC 386 - ワルグマー (Cut-in: 36)",
+    "Name": "ワルグマー",
+    "PortraitCutinId": 36,
+    "CamElevation": 0.53
+  },
+  {
+    "Id": 387,
+    "_comment": "NPC 387 - アンナ (Cut-in: 78)",
+    "Name": "アンナ",
+    "PortraitCutinId": 78,
+    "CamElevation": 0.97
+  },
+  {
+    "Id": 388,
+    "_comment": "NPC 388 - ルーベン (Cut-in: 45)",
+    "Name": "ルーベン",
+    "PortraitCutinId": 45,
+    "CamElevation": 0.75
+  },
+  {
+    "Id": 389,
+    "_comment": "NPC 389 - ムジナ守衛 (Cut-in: 44)",
+    "Name": "ムジナ守衛",
+    "PortraitCutinId": 44,
+    "CamElevation": 4.28
+  },
+  {
+    "Id": 390,
+    "_comment": "NPC 390 - アンナ (Cut-in: 78)",
+    "Name": "アンナ",
+    "PortraitCutinId": 78,
+    "CamElevation": 0.97
+  },
+  {
+    "Id": 391,
+    "_comment": "NPC 391 - ナナ (Cut-in: 111)",
+    "Name": "ナナ",
+    "PortraitCutinId": 111,
+    "CamElevation": 0.97
+  },
+  {
+    "Id": 392,
+    "_comment": "NPC 392 - メイ (Cut-in: 6)",
+    "Name": "メイ",
+    "PortraitCutinId": 6,
+    "CamElevation": 0.83
+  },
+  {
+    "Id": 393,
+    "_comment": "NPC 393 - クリスティーン (Cut-in: 61)",
+    "Name": "クリスティーン",
+    "PortraitCutinId": 61,
+    "CamElevation": 0.4
+  },
+  {
+    "Id": 394,
+    "_comment": "NPC 394 - ジョニー (Cut-in: 5)",
+    "Name": "ジョニー",
+    "PortraitCutinId": 5,
+    "CamElevation": 1.64
+  },
+  {
+    "Id": 395,
+    "_comment": "NPC 395 - スターリン (Cut-in: 13)",
+    "Name": "スターリン",
+    "PortraitCutinId": 13,
+    "CamElevation": 0.75
+  },
+  {
+    "Id": 396,
+    "_comment": "NPC 396 - シンソヒョン (Cut-in: 43)",
+    "Name": "シンソヒョン",
+    "PortraitCutinId": 43,
+    "CamElevation": 0.99
+  },
+  {
+    "Id": 397,
+    "_comment": "NPC 397 - パペットマスター (Cut-in: 81)",
+    "Name": "パペットマスター",
+    "PortraitCutinId": 81,
+    "CamElevation": 1.97
+  },
+  {
+    "Id": 398,
+    "_comment": "NPC 398 - パペットマスター (Cut-in: 81)",
+    "Name": "パペットマスター",
+    "PortraitCutinId": 81,
+    "CamElevation": 1.97
+  },
+  {
+    "Id": 399,
+    "_comment": "NPC 399 - 水蓮 (Cut-in: 39)",
+    "Name": "水蓮",
+    "PortraitCutinId": 39,
+    "CamElevation": 0.3
+  },
+  {
+    "Id": 400,
+    "_comment": "NPC 400 - ホヤン (Cut-in: 42)",
+    "Name": "ホヤン",
+    "PortraitCutinId": 42,
+    "CamElevation": 0.98
+  },
+  {
+    "Id": 401,
+    "_comment": "NPC 401 - スーチョン (Cut-in: 21)",
+    "Name": "スーチョン",
+    "PortraitCutinId": 21,
+    "CamElevation": 1.0
+  },
+  {
+    "Id": 402,
+    "_comment": "NPC 402 - ホヤン (Cut-in: 42)",
+    "Name": "ホヤン",
+    "PortraitCutinId": 42,
+    "CamElevation": 0.98
+  },
+  {
+    "Id": 403,
+    "_comment": "NPC 403 - 百科事典 (Cut-in: 92)",
+    "Name": "百科事典",
+    "PortraitCutinId": 92,
+    "CamElevation": 0.0
+  },
+  {
+    "Id": 404,
+    "_comment": "NPC 404 - 水蓮 (Cut-in: 39)",
+    "Name": "水蓮",
+    "PortraitCutinId": 39,
+    "CamElevation": 0.3
+  },
+  {
+    "Id": 405,
+    "_comment": "NPC 405 - 汚い火蓮 (Cut-in: 40)",
+    "Name": "汚い火蓮",
+    "PortraitCutinId": 40,
+    "CamElevation": 0.57
+  },
+  {
+    "Id": 406,
+    "_comment": "NPC 406 - ナインフォックス (Cut-in: 57)",
+    "Name": "ナインフォックス",
+    "PortraitCutinId": 57,
+    "CamElevation": 0.0
+  },
+  {
+    "Id": 407,
+    "_comment": "NPC 407 - シンソヒョン (Cut-in: 43)",
+    "Name": "シンソヒョン",
+    "PortraitCutinId": 43,
+    "CamElevation": 0.99
+  },
+  {
+    "Id": 408,
+    "_comment": "NPC 408 - ホギーパペット (Cut-in: 88)",
+    "Name": "ホギーパペット",
+    "PortraitCutinId": 88,
+    "CamElevation": 0.0
+  },
+  {
+    "Id": 409,
+    "_comment": "NPC 409 - メイイェン (Cut-in: 41)",
+    "Name": "メイイェン",
+    "PortraitCutinId": 41,
+    "CamElevation": 0.52
+  },
+  {
+    "Id": 410,
+    "_comment": "NPC 410 - ホヤン (Cut-in: 85)",
+    "Name": "ホヤン",
+    "PortraitCutinId": 85,
+    "CamElevation": 0.98
+  },
+  {
+    "Id": 411,
+    "_comment": "NPC 411 - パペットマスター (Cut-in: 81)",
+    "Name": "パペットマスター",
+    "PortraitCutinId": 81,
+    "CamElevation": 1.97
+  },
+  {
+    "Id": 412,
+    "_comment": "NPC 412 - ホヤン (Cut-in: 87)",
+    "Name": "ホヤン",
+    "PortraitCutinId": 87,
+    "CamElevation": 0.0
+  },
+  {
+    "Id": 413,
+    "_comment": "NPC 413 - メイイェン (Cut-in: 86)",
+    "Name": "メイイェン",
+    "PortraitCutinId": 86,
+    "CamElevation": 0.0
+  },
+  {
+    "Id": 414,
+    "_comment": "NPC 414 - ホヤン (Cut-in: 42)",
+    "Name": "ホヤン",
+    "PortraitCutinId": 42,
+    "CamElevation": 0.98
+  },
+  {
+    "Id": 415,
+    "_comment": "NPC 415 - モカ (Cut-in: 24)",
+    "Name": "モカ",
+    "PortraitCutinId": 24,
+    "CamElevation": 1.25
+  },
+  {
+    "Id": 416,
+    "_comment": "NPC 416 - ブラッディ・ダッキー (Cut-in: 69)",
+    "Name": "ブラッディ・ダッキー",
+    "PortraitCutinId": 69,
+    "CamElevation": 1.19
+  },
+  {
+    "Id": 417,
+    "_comment": "NPC 417 - モカ (Cut-in: 24)",
+    "Name": "モカ",
+    "PortraitCutinId": 24,
+    "CamElevation": 1.25
+  },
+  {
+    "Id": 418,
+    "_comment": "NPC 418 - サム (Cut-in: 51)",
+    "Name": "サム",
+    "PortraitCutinId": 51,
+    "CamElevation": 0.34
+  },
+  {
+    "Id": 419,
+    "_comment": "NPC 419 - スーチョン (Cut-in: 21)",
+    "Name": "スーチョン",
+    "PortraitCutinId": 21,
+    "CamElevation": 1.0
+  },
+  {
+    "Id": 420,
+    "_comment": "NPC 420 - 教官ステファノ (Cut-in: 84)",
+    "Name": "教官ステファノ",
+    "PortraitCutinId": 84,
+    "CamElevation": 0.0
+  },
+  {
+    "Id": 421,
+    "_comment": "NPC 421 - メカドロシー 4号 (Cut-in: 90)",
+    "Name": "メカドロシー 4号",
+    "PortraitCutinId": 90,
+    "CamElevation": 1.0
+  },
+  {
+    "Id": 422,
+    "_comment": "NPC 422 - モカ (Cut-in: 24)",
+    "Name": "モカ",
+    "PortraitCutinId": 24,
+    "CamElevation": 1.25
+  },
+  {
+    "Id": 423,
+    "_comment": "NPC 423 - スーチョン (Cut-in: 21)",
+    "Name": "スーチョン",
+    "PortraitCutinId": 21,
+    "CamElevation": 1.0
+  },
+  {
+    "Id": 424,
+    "_comment": "NPC 424 - リエズ (Cut-in: 10)",
+    "Name": "リエズ",
+    "PortraitCutinId": 10,
+    "CamElevation": 1.5
+  },
+  {
+    "Id": 425,
+    "_comment": "NPC 425 - 妖艶 (Cut-in: 46)",
+    "Name": "妖艶",
+    "PortraitCutinId": 46,
+    "CamElevation": 0.89
+  },
+  {
+    "Id": 426,
+    "_comment": "NPC 426 - ベン (Cut-in: 4)",
+    "Name": "ベン",
+    "PortraitCutinId": 4,
+    "CamElevation": 0.34
+  },
+  {
+    "Id": 427,
+    "_comment": "NPC 427 - サム (Cut-in: 51)",
+    "Name": "サム",
+    "PortraitCutinId": 51,
+    "CamElevation": 0.34
+  },
+  {
+    "Id": 428,
+    "_comment": "NPC 428 - 宵月男子生徒 (Cut-in: 93)",
+    "Name": "宵月男子生徒",
+    "PortraitCutinId": 93,
+    "CamElevation": 0.0
+  },
+  {
+    "Id": 429,
+    "_comment": "NPC 429 - 宵月女生徒 (Cut-in: 94)",
+    "Name": "宵月女生徒",
+    "PortraitCutinId": 94,
+    "CamElevation": 0.0
+  },
+  {
+    "Id": 430,
+    "_comment": "NPC 430 - ビアンカ (Cut-in: 7)",
+    "Name": "ビアンカ",
+    "PortraitCutinId": 7,
+    "CamElevation": 1.44
+  },
+  {
+    "Id": 431,
+    "_comment": "NPC 431 - リンティ (Cut-in: 64)",
+    "Name": "リンティ",
+    "PortraitCutinId": 64,
+    "CamElevation": 0.0
+  },
+  {
+    "Id": 432,
+    "_comment": "NPC 432 - レバー (Cut-in: 35)",
+    "Name": "レバー",
+    "PortraitCutinId": 35,
+    "CamElevation": 0.0
+  },
+  {
+    "Id": 433,
+    "_comment": "NPC 433 - 購買おばちゃん (Cut-in: 3)",
+    "Name": "購買おばちゃん",
+    "PortraitCutinId": 3,
+    "CamElevation": 0.0
+  },
+  {
+    "Id": 434,
+    "_comment": "NPC 434 - 購買おばちゃん (Cut-in: 3)",
+    "Name": "購買おばちゃん",
+    "PortraitCutinId": 3,
+    "CamElevation": 0.0
+  },
+  {
+    "Id": 435,
+    "_comment": "NPC 435 - ブラッディ・ダッキー (Cut-in: 69)",
+    "Name": "ブラッディ・ダッキー",
+    "PortraitCutinId": 69,
+    "CamElevation": 1.19
+  },
+  {
+    "Id": 436,
+    "_comment": "NPC 436 - ハチ (Cut-in: 76)",
+    "Name": "ハチ",
+    "PortraitCutinId": 76,
+    "CamElevation": 0.66
+  },
+  {
+    "Id": 437,
+    "_comment": "NPC 437 - シンソヒョン (Cut-in: 43)",
+    "Name": "シンソヒョン",
+    "PortraitCutinId": 43,
+    "CamElevation": 0.99
+  },
+  {
+    "Id": 438,
+    "_comment": "NPC 438 - 宵月女生徒 (Cut-in: 93)",
+    "Name": "宵月女生徒",
+    "PortraitCutinId": 93,
+    "CamElevation": 0.0
+  },
+  {
+    "Id": 439,
+    "_comment": "NPC 439 - 宵月男子生徒 (Cut-in: 94)",
+    "Name": "宵月男子生徒",
+    "PortraitCutinId": 94,
+    "CamElevation": 0.0
+  },
+  {
+    "Id": 440,
+    "_comment": "NPC 440 - 生徒 A (Cut-in: 49)",
+    "Name": "生徒 A",
+    "PortraitCutinId": 49,
+    "CamElevation": 0.84
+  },
+  {
+    "Id": 441,
+    "_comment": "NPC 441 - ブラッディ・ダッキー (Cut-in: 69)",
+    "Name": "ブラッディ・ダッキー",
+    "PortraitCutinId": 69,
+    "CamElevation": 1.19
+  },
+  {
+    "Id": 442,
+    "_comment": "NPC 442 - グレイ (Cut-in: 22)",
+    "Name": "グレイ",
+    "PortraitCutinId": 22,
+    "CamElevation": 0.84
+  },
+  {
+    "Id": 443,
+    "_comment": "NPC 443 - マオ＝シャオピン (Cut-in: 12)",
+    "Name": "マオ＝シャオピン",
+    "PortraitCutinId": 12,
+    "CamElevation": 1.24
+  },
+  {
+    "Id": 444,
+    "_comment": "NPC 444 - 謎の少女 (Cut-in: 97)",
+    "Name": "謎の少女",
+    "PortraitCutinId": 97,
+    "CamElevation": 0.0
+  },
+  {
+    "Id": 445,
+    "_comment": "NPC 445 - グレイ (Cut-in: 22)",
+    "Name": "グレイ",
+    "PortraitCutinId": 22,
+    "CamElevation": 0.84
+  },
+  {
+    "Id": 446,
+    "_comment": "NPC 446 - マオ＝シャオピン (Cut-in: 12)",
+    "Name": "マオ＝シャオピン",
+    "PortraitCutinId": 12,
+    "CamElevation": 1.24
+  },
+  {
+    "Id": 447,
+    "_comment": "NPC 447 - ハチ (Cut-in: 76)",
+    "Name": "ハチ",
+    "PortraitCutinId": 76,
+    "CamElevation": 0.66
+  },
+  {
+    "Id": 448,
+    "_comment": "NPC 448 - 四刀丸 (Cut-in: 9)",
+    "Name": "四刀丸",
+    "PortraitCutinId": 9,
+    "CamElevation": 0.73
+  },
+  {
+    "Id": 449,
+    "_comment": "NPC 449 - ルーベン (Cut-in: 45)",
+    "Name": "ルーベン",
+    "PortraitCutinId": 45,
+    "CamElevation": 0.75
+  },
+  {
+    "Id": 450,
+    "_comment": "NPC 450 - ドワルグマー (Cut-in: 37)",
+    "Name": "ドワルグマー",
+    "PortraitCutinId": 37,
+    "CamElevation": 0.53
+  },
+  {
+    "Id": 451,
+    "_comment": "NPC 451 - ワルグマー (Cut-in: 36)",
+    "Name": "ワルグマー",
+    "PortraitCutinId": 36,
+    "CamElevation": 0.53
+  },
+  {
+    "Id": 452,
+    "_comment": "NPC 452 - L.トーヴァルズ (Cut-in: 102)",
+    "Name": "L.トーヴァルズ",
+    "PortraitCutinId": 102,
+    "CamElevation": 0.0
+  },
+  {
+    "Id": 453,
+    "_comment": "NPC 453 - ソムンヤン (Cut-in: 11)",
+    "Name": "ソムンヤン",
+    "PortraitCutinId": 11,
+    "CamElevation": 0.7
+  },
+  {
+    "Id": 454,
+    "_comment": "NPC 454 - スーチョン (Cut-in: 21)",
+    "Name": "スーチョン",
+    "PortraitCutinId": 21,
+    "CamElevation": 1.0
+  },
+  {
+    "Id": 455,
+    "_comment": "NPC 455 - モカ (Cut-in: 24)",
+    "Name": "モカ",
+    "PortraitCutinId": 24,
+    "CamElevation": 1.25
+  },
+  {
+    "Id": 456,
+    "_comment": "NPC 456 - 生徒 A (Cut-in: 49)",
+    "Name": "生徒 A",
+    "PortraitCutinId": 49,
+    "CamElevation": 0.84
+  },
+  {
+    "Id": 457,
+    "_comment": "NPC 457 - ルーベン (Cut-in: 45)",
+    "Name": "ルーベン",
+    "PortraitCutinId": 45,
+    "CamElevation": 0.75
+  },
+  {
+    "Id": 458,
+    "_comment": "NPC 458 - シンソヒョン (Cut-in: 43)",
+    "Name": "シンソヒョン",
+    "PortraitCutinId": 43,
+    "CamElevation": 0.99
+  },
+  {
+    "Id": 459,
+    "_comment": "NPC 459 - エスティバー生徒 (Cut-in: 99)",
+    "Name": "エスティバー生徒",
+    "PortraitCutinId": 99,
+    "CamElevation": 0.0
+  },
+  {
+    "Id": 460,
+    "_comment": "NPC 460 - 水蓮 (Cut-in: 39)",
+    "Name": "水蓮",
+    "PortraitCutinId": 39,
+    "CamElevation": 0.3
+  },
+  {
+    "Id": 461,
+    "_comment": "NPC 461 - 火蓮 (Cut-in: 40)",
+    "Name": "火蓮",
+    "PortraitCutinId": 40,
+    "CamElevation": 0.57
+  },
+  {
+    "Id": 462,
+    "_comment": "NPC 462 - 守護仙女 (Cut-in: 98)",
+    "Name": "守護仙女",
+    "PortraitCutinId": 98,
+    "CamElevation": 0.0
+  },
+  {
+    "Id": 463,
+    "_comment": "NPC 463 - バーモント神父 (Cut-in: 38)",
+    "Name": "バーモント神父",
+    "PortraitCutinId": 38,
+    "CamElevation": 0.85
+  },
+  {
+    "Id": 464,
+    "_comment": "NPC 464 - 暗田 (Cut-in: 48)",
+    "Name": "暗田",
+    "PortraitCutinId": 48,
+    "CamElevation": 0.79
+  },
+  {
+    "Id": 465,
+    "_comment": "NPC 465 - 生徒 A (Cut-in: 49)",
+    "Name": "生徒 A",
+    "PortraitCutinId": 49,
+    "CamElevation": 0.84
+  },
+  {
+    "Id": 466,
+    "_comment": "NPC 466 - シャオリーン (Cut-in: 47)",
+    "Name": "シャオリーン",
+    "PortraitCutinId": 47,
+    "CamElevation": 0.0
+  },
+  {
+    "Id": 467,
+    "_comment": "NPC 467 - 霊廟の女人 (Cut-in: 50)",
+    "Name": "霊廟の女人",
+    "PortraitCutinId": 50,
+    "CamElevation": 0.0
+  },
+  {
+    "Id": 468,
+    "_comment": "NPC 468 - シンソヒョン (Cut-in: 43)",
+    "Name": "シンソヒョン",
+    "PortraitCutinId": 43,
+    "CamElevation": 0.99
+  },
+  {
+    "Id": 469,
+    "_comment": "NPC 469 - ルーベン (Cut-in: 45)",
+    "Name": "ルーベン",
+    "PortraitCutinId": 45,
+    "CamElevation": 0.75
+  },
+  {
+    "Id": 470,
+    "_comment": "NPC 470 - レバー (Cut-in: 35)",
+    "Name": "レバー",
+    "PortraitCutinId": 35,
+    "CamElevation": 0.0
+  },
+  {
+    "Id": 471,
+    "_comment": "NPC 471 - ベン (Cut-in: 4)",
+    "Name": "ベン",
+    "PortraitCutinId": 4,
+    "CamElevation": 0.34
+  },
+  {
+    "Id": 472,
+    "_comment": "NPC 472 - サム (Cut-in: 51)",
+    "Name": "サム",
+    "PortraitCutinId": 51,
+    "CamElevation": 0.34
+  },
+  {
+    "Id": 473,
+    "_comment": "NPC 473 - グレイ (Cut-in: 22)",
+    "Name": "グレイ",
+    "PortraitCutinId": 22,
+    "CamElevation": 0.84
+  },
+  {
+    "Id": 474,
+    "_comment": "NPC 474 - シンソヒョン (Cut-in: 43)",
+    "Name": "シンソヒョン",
+    "PortraitCutinId": 43,
+    "CamElevation": 0.99
+  },
+  {
+    "Id": 475,
+    "_comment": "NPC 475 - ルーベン (Cut-in: 45)",
+    "Name": "ルーベン",
+    "PortraitCutinId": 45,
+    "CamElevation": 0.75
+  },
+  {
+    "Id": 476,
+    "_comment": "NPC 476 - パペットマスター (Cut-in: 81)",
+    "Name": "パペットマスター",
+    "PortraitCutinId": 81,
+    "CamElevation": 1.97
+  },
+  {
+    "Id": 477,
+    "_comment": "NPC 477 - 購買おばちゃん (Cut-in: 3)",
+    "Name": "購買おばちゃん",
+    "PortraitCutinId": 3,
+    "CamElevation": 0.0
+  },
+  {
+    "Id": 478,
+    "_comment": "NPC 478 - 購買おばちゃん (Cut-in: 3)",
+    "Name": "購買おばちゃん",
+    "PortraitCutinId": 3,
+    "CamElevation": 0.0
+  },
+  {
+    "Id": 479,
+    "_comment": "NPC 479 - 購買おばちゃん (Cut-in: 3)",
+    "Name": "購買おばちゃん",
+    "PortraitCutinId": 3,
+    "CamElevation": 0.0
+  },
+  {
+    "Id": 480,
+    "_comment": "NPC 480 - 購買おばちゃん (Cut-in: 3)",
+    "Name": "購買おばちゃん",
+    "PortraitCutinId": 3,
+    "CamElevation": 0.0
+  },
+  {
+    "Id": 481,
+    "_comment": "NPC 481 - 購買おばちゃん (Cut-in: 3)",
+    "Name": "購買おばちゃん",
+    "PortraitCutinId": 3,
+    "CamElevation": 0.0
+  },
+  {
+    "Id": 482,
+    "_comment": "NPC 482 - 購買おばちゃん (Cut-in: 3)",
+    "Name": "購買おばちゃん",
+    "PortraitCutinId": 3,
+    "CamElevation": 0.0
+  },
+  {
+    "Id": 483,
+    "_comment": "NPC 483 - シンソヒョン (Cut-in: 43)",
+    "Name": "シンソヒョン",
+    "PortraitCutinId": 43,
+    "CamElevation": 0.99
+  },
+  {
+    "Id": 484,
+    "_comment": "NPC 484 - 生徒 A (Cut-in: 49)",
+    "Name": "生徒 A",
+    "PortraitCutinId": 49,
+    "CamElevation": 0.84
+  },
+  {
+    "Id": 485,
+    "_comment": "NPC 485 - グレイ (Cut-in: 22)",
+    "Name": "グレイ",
+    "PortraitCutinId": 22,
+    "CamElevation": 0.84
+  },
+  {
+    "Id": 486,
+    "_comment": "NPC 486 - 絶対知識の書 (Cut-in: 96)",
+    "Name": "絶対知識の書",
+    "PortraitCutinId": 96,
+    "CamElevation": 0.0
+  },
+  {
+    "Id": 487,
+    "_comment": "NPC 487 - 絶対知識の書 (Cut-in: 96)",
+    "Name": "絶対知識の書",
+    "PortraitCutinId": 96,
+    "CamElevation": 0.0
+  },
+  {
+    "Id": 488,
+    "_comment": "NPC 488 - ロージー (Cut-in: 77)",
+    "Name": "ロージー",
+    "PortraitCutinId": 77,
+    "CamElevation": 0.0
+  },
+  {
+    "Id": 489,
+    "_comment": "NPC 489 - 生徒 A (Cut-in: 49)",
+    "Name": "生徒 A",
+    "PortraitCutinId": 49,
+    "CamElevation": 0.84
+  },
+  {
+    "Id": 490,
+    "_comment": "NPC 490 - 生徒 A (Cut-in: 49)",
+    "Name": "生徒 A",
+    "PortraitCutinId": 49,
+    "CamElevation": 0.84
+  },
+  {
+    "Id": 491,
+    "_comment": "NPC 491 - 生徒 A (Cut-in: 49)",
+    "Name": "生徒 A",
+    "PortraitCutinId": 49,
+    "CamElevation": 0.84
+  },
+  {
+    "Id": 492,
+    "_comment": "NPC 492 - 生徒 A (Cut-in: 49)",
+    "Name": "生徒 A",
+    "PortraitCutinId": 49,
+    "CamElevation": 0.84
+  },
+  {
+    "Id": 493,
+    "_comment": "NPC 493 - 生徒 A (Cut-in: 49)",
+    "Name": "生徒 A",
+    "PortraitCutinId": 49,
+    "CamElevation": 0.84
+  },
+  {
+    "Id": 494,
+    "_comment": "NPC 494 - 生徒 A (Cut-in: 49)",
+    "Name": "生徒 A",
+    "PortraitCutinId": 49,
+    "CamElevation": 0.84
+  },
+  {
+    "Id": 495,
+    "_comment": "NPC 495 - 生徒 A (Cut-in: 49)",
+    "Name": "生徒 A",
+    "PortraitCutinId": 49,
+    "CamElevation": 0.84
+  },
+  {
+    "Id": 496,
+    "_comment": "NPC 496 - 生徒 A (Cut-in: 49)",
+    "Name": "生徒 A",
+    "PortraitCutinId": 49,
+    "CamElevation": 0.84
+  },
+  {
+    "Id": 497,
+    "_comment": "NPC 497 - 生徒 A (Cut-in: 49)",
+    "Name": "生徒 A",
+    "PortraitCutinId": 49,
+    "CamElevation": 0.84
+  },
+  {
+    "Id": 498,
+    "_comment": "NPC 498 - 生徒 A (Cut-in: 49)",
+    "Name": "生徒 A",
+    "PortraitCutinId": 49,
+    "CamElevation": 0.84
+  },
+  {
+    "Id": 499,
+    "_comment": "NPC 499 - 四刀丸 (Cut-in: 9)",
+    "Name": "四刀丸",
+    "PortraitCutinId": 9,
+    "CamElevation": 0.73
+  },
+  {
+    "Id": 500,
+    "_comment": "NPC 500 - スーチョン (Cut-in: 21)",
+    "Name": "スーチョン",
+    "PortraitCutinId": 21,
+    "CamElevation": 1.0
+  },
+  {
+    "Id": 501,
+    "_comment": "NPC 501 - L.トーヴァルズ (Cut-in: 102)",
+    "Name": "L.トーヴァルズ",
+    "PortraitCutinId": 102,
+    "CamElevation": 0.0
+  },
+  {
+    "Id": 502,
+    "_comment": "NPC 502 - L.トーヴァルズ (Cut-in: 103)",
+    "Name": "L.トーヴァルズ",
+    "PortraitCutinId": 103,
+    "CamElevation": 0.0
+  },
+  {
+    "Id": 503,
+    "_comment": "NPC 503 - マオ＝シャオピン (Cut-in: 12)",
+    "Name": "マオ＝シャオピン",
+    "PortraitCutinId": 12,
+    "CamElevation": 1.24
+  },
+  {
+    "Id": 504,
+    "_comment": "NPC 504 - 謎の少女 (Cut-in: 97)",
+    "Name": "謎の少女",
+    "PortraitCutinId": 97,
+    "CamElevation": 0.0
+  },
+  {
+    "Id": 505,
+    "_comment": "NPC 505 - グレイ (Cut-in: 22)",
+    "Name": "グレイ",
+    "PortraitCutinId": 22,
+    "CamElevation": 0.84
+  },
+  {
+    "Id": 506,
+    "_comment": "NPC 506 - カピット (Cut-in: 104)",
+    "Name": "カピット",
+    "PortraitCutinId": 104,
+    "CamElevation": 0.0
+  },
+  {
+    "Id": 507,
+    "_comment": "NPC 507 - カピット (Cut-in: 104)",
+    "Name": "カピット",
+    "PortraitCutinId": 104,
+    "CamElevation": 0.0
+  },
+  {
+    "Id": 508,
+    "_comment": "NPC 508 - ブラッディ・ダッキー (Cut-in: 69)",
+    "Name": "ブラッディ・ダッキー",
+    "PortraitCutinId": 69,
+    "CamElevation": 0.0
+  },
+  {
+    "Id": 509,
+    "_comment": "NPC 509 - 黒衣の男 (Cut-in: 70)",
+    "Name": "黒衣の男",
+    "PortraitCutinId": 70,
+    "CamElevation": 0.0
+  },
+  {
+    "Id": 510,
+    "_comment": "NPC 510 - 生徒 A (Cut-in: 49)",
+    "Name": "生徒 A",
+    "PortraitCutinId": 49,
+    "CamElevation": 0.84
+  },
+  {
+    "Id": 511,
+    "_comment": "NPC 511 - シンソヒョン (Cut-in: 43)",
+    "Name": "シンソヒョン",
+    "PortraitCutinId": 43,
+    "CamElevation": 0.0
+  },
+  {
+    "Id": 512,
+    "_comment": "NPC 512 - シャオリーン (Cut-in: 47)",
+    "Name": "シャオリーン",
+    "PortraitCutinId": 47,
+    "CamElevation": 0.0
+  },
+  {
+    "Id": 513,
+    "_comment": "NPC 513 - 暗田 (Cut-in: 48)",
+    "Name": "暗田",
+    "PortraitCutinId": 48,
+    "CamElevation": 0.0
+  },
+  {
+    "Id": 514,
+    "_comment": "NPC 514 - ルーベン (Cut-in: 45)",
+    "Name": "ルーベン",
+    "PortraitCutinId": 45,
+    "CamElevation": 0.0
+  },
+  {
+    "Id": 515,
+    "_comment": "NPC 515 - 守護仙女 (Cut-in: 98)",
+    "Name": "守護仙女",
+    "PortraitCutinId": 98,
+    "CamElevation": 0.0
+  },
+  {
+    "Id": 516,
+    "_comment": "NPC 516 - 霊廟の女人 (Cut-in: 50)",
+    "Name": "霊廟の女人",
+    "PortraitCutinId": 50,
+    "CamElevation": 0.0
+  },
+  {
+    "Id": 517,
+    "_comment": "NPC 517 - 霊廟の女人 (Cut-in: 106)",
+    "Name": "霊廟の女人",
+    "PortraitCutinId": 106,
+    "CamElevation": 0.0
+  },
+  {
+    "Id": 518,
+    "_comment": "NPC 518 - メガデス (Cut-in: 56)",
+    "Name": "メガデス",
+    "PortraitCutinId": 56,
+    "CamElevation": 0.0
+  },
+  {
+    "Id": 519,
+    "_comment": "NPC 519 - メガデス (Cut-in: 105)",
+    "Name": "メガデス",
+    "PortraitCutinId": 105,
+    "CamElevation": 0.0
+  },
+  {
+    "Id": 520,
+    "_comment": "NPC 520 - バーモント神父 (Cut-in: 38)",
+    "Name": "バーモント神父",
+    "PortraitCutinId": 38,
+    "CamElevation": 0.0
+  },
+  {
+    "Id": 521,
+    "_comment": "NPC 521 - リンティ (Cut-in: 64)",
+    "Name": "リンティ",
+    "PortraitCutinId": 64,
+    "CamElevation": 0.0
+  },
+  {
+    "Id": 522,
+    "_comment": "NPC 522 - シンソヒョン (Cut-in: 43)",
+    "Name": "シンソヒョン",
+    "PortraitCutinId": 43,
+    "CamElevation": 0.99
+  },
+  {
+    "Id": 523,
+    "_comment": "NPC 523 - クリスティーン (Cut-in: 61)",
+    "Name": "クリスティーン",
+    "PortraitCutinId": 61,
+    "CamElevation": 0.0
+  },
+  {
+    "Id": 524,
+    "_comment": "NPC 524 - グレイ (Cut-in: 22)",
+    "Name": "グレイ",
+    "PortraitCutinId": 22,
+    "CamElevation": 0.0
+  },
+  {
+    "Id": 525,
+    "_comment": "NPC 525 - フレデリック (Cut-in: 62)",
+    "Name": "フレデリック",
+    "PortraitCutinId": 62,
+    "CamElevation": 0.0
+  },
+  {
+    "Id": 526,
+    "_comment": "NPC 526 - 水蓮と火蓮 (Cut-in: 107)",
+    "Name": "水蓮と火蓮",
+    "PortraitCutinId": 107,
+    "CamElevation": 0.0
+  },
+  {
+    "Id": 527,
+    "_comment": "NPC 527 - 水蓮 (Cut-in: 39)",
+    "Name": "水蓮",
+    "PortraitCutinId": 39,
+    "CamElevation": 0.0
+  },
+  {
+    "Id": 528,
+    "_comment": "NPC 528 - 火蓮 (Cut-in: 40)",
+    "Name": "火蓮",
+    "PortraitCutinId": 40,
+    "CamElevation": 0.0
+  },
+  {
+    "Id": 529,
+    "_comment": "NPC 529 - 古代文明の少女 (Cut-in: 108)",
+    "Name": "古代文明の少女",
+    "PortraitCutinId": 108,
+    "CamElevation": 0.0
+  },
+  {
+    "Id": 530,
+    "_comment": "NPC 530 - 黒衣の男 (Cut-in: 70)",
+    "Name": "黒衣の男",
+    "PortraitCutinId": 70,
+    "CamElevation": 0.0
+  },
+  {
+    "Id": 531,
+    "_comment": "NPC 531 - グレイ (Cut-in: 22)",
+    "Name": "グレイ",
+    "PortraitCutinId": 22,
+    "CamElevation": 0.0
+  },
+  {
+    "Id": 532,
+    "_comment": "NPC 532 - ウッドヘリアン (Cut-in: 60)",
+    "Name": "ウッドヘリアン",
+    "PortraitCutinId": 60,
+    "CamElevation": 0.0
+  },
+  {
+    "Id": 533,
+    "_comment": "NPC 533 - ウッドヘリアン (Cut-in: 68)",
+    "Name": "ウッドヘリアン",
+    "PortraitCutinId": 68,
+    "CamElevation": 0.0
+  },
+  {
+    "Id": 534,
+    "_comment": "NPC 534 - クリスティーン (Cut-in: 61)",
+    "Name": "クリスティーン",
+    "PortraitCutinId": 61,
+    "CamElevation": 0.0
+  },
+  {
+    "Id": 535,
+    "_comment": "NPC 535 - ページ (Cut-in: 1)",
+    "Name": "ページ",
+    "PortraitCutinId": 1,
+    "CamElevation": 0.0
+  },
+  {
+    "Id": 536,
+    "_comment": "NPC 536 - ビアンカ (Cut-in: 7)",
+    "Name": "ビアンカ",
+    "PortraitCutinId": 7,
+    "CamElevation": 0.0
+  },
+  {
+    "Id": 537,
+    "_comment": "NPC 537 - ステファノ (Cut-in: 31)",
+    "Name": "ステファノ",
+    "PortraitCutinId": 31,
+    "CamElevation": 0.0
+  },
+  {
+    "Id": 538,
+    "_comment": "NPC 538 - リエズ (Cut-in: 10)",
+    "Name": "リエズ",
+    "PortraitCutinId": 10,
+    "CamElevation": 0.0
+  },
+  {
+    "Id": 539,
+    "_comment": "NPC 539 - ソムンヤン (Cut-in: 11)",
+    "Name": "ソムンヤン",
+    "PortraitCutinId": 11,
+    "CamElevation": 0.0
+  },
+  {
+    "Id": 540,
+    "_comment": "NPC 540 - スーチョン (Cut-in: 21)",
+    "Name": "スーチョン",
+    "PortraitCutinId": 21,
+    "CamElevation": 0.0
+  },
+  {
+    "Id": 541,
+    "_comment": "NPC 541 - L.トーヴァルズ (Cut-in: 102)",
+    "Name": "L.トーヴァルズ",
+    "PortraitCutinId": 102,
+    "CamElevation": 0.0
+  },
+  {
+    "Id": 542,
+    "_comment": "NPC 542 - チャイナ (Cut-in: 32)",
+    "Name": "チャイナ",
+    "PortraitCutinId": 32,
+    "CamElevation": 0.0
+  },
+  {
+    "Id": 543,
+    "_comment": "NPC 543 - カピット (Cut-in: 104)",
+    "Name": "カピット",
+    "PortraitCutinId": 104,
+    "CamElevation": 0.0
+  },
+  {
+    "Id": 544,
+    "_comment": "NPC 544 - ルーベン (Cut-in: 45)",
+    "Name": "ルーベン",
+    "PortraitCutinId": 45,
+    "CamElevation": 0.0
+  },
+  {
+    "Id": 545,
+    "_comment": "NPC 545 - シンソヒョン (Cut-in: 43)",
+    "Name": "シンソヒョン",
+    "PortraitCutinId": 43,
+    "CamElevation": 0.0
+  },
+  {
+    "Id": 546,
+    "_comment": "NPC 546 - 妖艶 (Cut-in: 46)",
+    "Name": "妖艶",
+    "PortraitCutinId": 46,
+    "CamElevation": 0.0
+  },
+  {
+    "Id": 547,
+    "_comment": "NPC 547 - 暗田 (Cut-in: 48)",
+    "Name": "暗田",
+    "PortraitCutinId": 48,
+    "CamElevation": 0.0
+  },
+  {
+    "Id": 548,
+    "_comment": "NPC 548 - グレイ (Cut-in: 22)",
+    "Name": "グレイ",
+    "PortraitCutinId": 22,
+    "CamElevation": 0.0
+  },
+  {
+    "Id": 549,
+    "_comment": "NPC 549 - シンソヒョン (Cut-in: 43)",
+    "Name": "シンソヒョン",
+    "PortraitCutinId": 43,
+    "CamElevation": 0.0
+  },
+  {
+    "Id": 550,
+    "_comment": "NPC 550 - チャイナ (Cut-in: 32)",
+    "Name": "チャイナ",
+    "PortraitCutinId": 32,
+    "CamElevation": 0.0
+  },
+  {
+    "Id": 551,
+    "_comment": "NPC 551 - ルーベン (Cut-in: 45)",
+    "Name": "ルーベン",
+    "PortraitCutinId": 45,
+    "CamElevation": 0.0
+  },
+  {
+    "Id": 552,
+    "_comment": "NPC 552 - カピット (Cut-in: 104)",
+    "Name": "カピット",
+    "PortraitCutinId": 104,
+    "CamElevation": 0.0
+  },
+  {
+    "Id": 553,
+    "_comment": "NPC 553 - スーチョン (Cut-in: 21)",
+    "Name": "スーチョン",
+    "PortraitCutinId": 21,
+    "CamElevation": 0.0
+  },
+  {
+    "Id": 554,
+    "_comment": "NPC 554 - モカ (Cut-in: 24)",
+    "Name": "モカ",
+    "PortraitCutinId": 24,
+    "CamElevation": 0.0
+  },
+  {
+    "Id": 555,
+    "_comment": "NPC 555 - 古代文明の少女 (Cut-in: 108)",
+    "Name": "古代文明の少女",
+    "PortraitCutinId": 108,
+    "CamElevation": 0.0
+  },
+  {
+    "Id": 556,
+    "_comment": "NPC 556 - ペコー (Cut-in: 19)",
+    "Name": "ペコー",
+    "PortraitCutinId": 19,
+    "CamElevation": 0.0
+  },
+  {
+    "Id": 557,
+    "_comment": "NPC 557 - ハチ (Cut-in: 76)",
+    "Name": "ハチ",
+    "PortraitCutinId": 76,
+    "CamElevation": 0.0
+  }
+]

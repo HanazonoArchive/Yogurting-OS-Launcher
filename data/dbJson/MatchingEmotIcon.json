@@ -1,0 +1,218 @@
+[
+  {
+    "Id": 10,
+    "_comment": "Emoticon 10 - （？） (Triggers: (?), ??)",
+    "Keyword": "（？）",
+    "Triggers": [
+      "(?)",
+      "??"
+    ]
+  },
+  {
+    "Id": 20,
+    "_comment": "Emoticon 20 - （のー） (Triggers: /@0@\\, (No), (NO), (nO), (no))",
+    "Keyword": "（のー）",
+    "Triggers": [
+      "/@0@\\",
+      "(No)",
+      "(NO)",
+      "(nO)",
+      "(no)"
+    ]
+  },
+  {
+    "Id": 30,
+    "_comment": "Emoticon 30 - （へえ） (Triggers: Keyword only)",
+    "Keyword": "（へえ）",
+    "Triggers": []
+  },
+  {
+    "Id": 40,
+    "_comment": "Emoticon 40 - （なく） (Triggers: T_T, ?.?, ?_?)",
+    "Keyword": "（なく）",
+    "Triggers": [
+      "T_T",
+      "?.?",
+      "?_?"
+    ]
+  },
+  {
+    "Id": 50,
+    "_comment": "Emoticon 50 - （ごごご） (Triggers: --+, -_-+)",
+    "Keyword": "（ごごご）",
+    "Triggers": [
+      "--+",
+      "-_-+"
+    ]
+  },
+  {
+    "Id": 60,
+    "_comment": "Emoticon 60 - （ぐす） (Triggers: :'(, ?.-, -.?)",
+    "Keyword": "（ぐす）",
+    "Triggers": [
+      ":'(",
+      "?.-",
+      "-.?"
+    ]
+  },
+  {
+    "Id": 70,
+    "_comment": "Emoticon 70 - （ぼー） (Triggers: -o-, ?o?, -0-, ?0?)",
+    "Keyword": "（ぼー）",
+    "Triggers": [
+      "-o-",
+      "?o?",
+      "-0-",
+      "?0?"
+    ]
+  },
+  {
+    "Id": 80,
+    "_comment": "Emoticon 80 - （ぐるぐる） (Triggers: @.@, @_@, :S, :s)",
+    "Keyword": "（ぐるぐる）",
+    "Triggers": [
+      "@.@",
+      "@_@",
+      ":S",
+      ":s"
+    ]
+  },
+  {
+    "Id": 90,
+    "_comment": "Emoticon 90 - （にゃあ） (Triggers: -ω-)",
+    "Keyword": "（にゃあ）",
+    "Triggers": [
+      "-ω-"
+    ]
+  },
+  {
+    "Id": 100,
+    "_comment": "Emoticon 100 - （うっとり） (Triggers: *^^*, *-_-*, :$)",
+    "Keyword": "（うっとり）",
+    "Triggers": [
+      "*^^*",
+      "*-_-*",
+      ":$"
+    ]
+  },
+  {
+    "Id": 110,
+    "_comment": "Emoticon 110 - （ＫＩＮ） (Triggers: (KIN), ?~)",
+    "Keyword": "（ＫＩＮ）",
+    "Triggers": [
+      "(KIN)",
+      "?~"
+    ]
+  },
+  {
+    "Id": 120,
+    "_comment": "Emoticon 120 - （うるうる） (Triggers: Keyword only)",
+    "Keyword": "（うるうる）",
+    "Triggers": []
+  },
+  {
+    "Id": 130,
+    "_comment": "Emoticon 130 - （ふーん） (Triggers: =_=, =?=)",
+    "Keyword": "（ふーん）",
+    "Triggers": [
+      "=_=",
+      "=?="
+    ]
+  },
+  {
+    "Id": 150,
+    "_comment": "Emoticon 150 - （ぐったり） (Triggers: ?)",
+    "Keyword": "（ぐったり）",
+    "Triggers": [
+      "?"
+    ]
+  },
+  {
+    "Id": 160,
+    "_comment": "Emoticon 160 - （にひひ） (Triggers: Keyword only)",
+    "Keyword": "（にひひ）",
+    "Triggers": []
+  },
+  {
+    "Id": 170,
+    "_comment": "Emoticon 170 - （ろぼ） (Triggers: Keyword only)",
+    "Keyword": "（ろぼ）",
+    "Triggers": []
+  },
+  {
+    "Id": 180,
+    "_comment": "Emoticon 180 - （＄） (Triggers: $0$, $$, ($))",
+    "Keyword": "（＄）",
+    "Triggers": [
+      "$0$",
+      "$$",
+      "($)"
+    ]
+  },
+  {
+    "Id": 190,
+    "_comment": "Emoticon 190 - （じとー） (Triggers: ( -_-), (-_- ))",
+    "Keyword": "（じとー）",
+    "Triggers": [
+      "( -_-)",
+      "(-_- )"
+    ]
+  },
+  {
+    "Id": 200,
+    "_comment": "Emoticon 200 - （X） (Triggers: (X), (><))",
+    "Keyword": "（X）",
+    "Triggers": [
+      "(X)",
+      "(><)"
+    ]
+  },
+  {
+    "Id": 210,
+    "_comment": "Emoticon 210 - （あはは） (Triggers: ^.^, ^_^, :), :-), ^^)",
+    "Keyword": "（あはは）",
+    "Triggers": [
+      "^.^",
+      "^_^",
+      ":)",
+      ":-)",
+      "^^"
+    ]
+  },
+  {
+    "Id": 220,
+    "_comment": "Emoticon 220 - （あせ） (Triggers: -_-;, --;, ;;)",
+    "Keyword": "（あせ）",
+    "Triggers": [
+      "-_-;",
+      "--;",
+      ";;"
+    ]
+  },
+  {
+    "Id": 230,
+    "_comment": "Emoticon 230 - （むか） (Triggers: :@, !!!)",
+    "Keyword": "（むか）",
+    "Triggers": [
+      ":@",
+      "!!!"
+    ]
+  },
+  {
+    "Id": 240,
+    "_comment": "Emoticon 240 - （はーと） (Triggers: (L))",
+    "Keyword": "（はーと）",
+    "Triggers": [
+      "(L)"
+    ]
+  },
+  {
+    "Id": 250,
+    "_comment": "Emoticon 250 - （ぽっ） (Triggers: ///, -///-)",
+    "Keyword": "（ぽっ）",
+    "Triggers": [
+      "///",
+      "-///-"
+    ]
+  }
+]

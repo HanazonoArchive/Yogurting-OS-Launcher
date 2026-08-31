@@ -1,0 +1,1547 @@
+[
+  {
+    "Id": 1,
+    "_comment": "SFX 1 - walk_normal (Movement / Footstep)",
+    "SoundName": "walk_normal"
+  },
+  {
+    "Id": 2,
+    "_comment": "SFX 2 - walk_indoor (Movement / Footstep)",
+    "SoundName": "walk_indoor"
+  },
+  {
+    "Id": 11,
+    "_comment": "SFX 11 - run_normal (Movement / Footstep)",
+    "SoundName": "run_normal"
+  },
+  {
+    "Id": 12,
+    "_comment": "SFX 12 - run_indoor (Movement / Footstep)",
+    "SoundName": "run_indoor"
+  },
+  {
+    "Id": 21,
+    "_comment": "SFX 21 - run_water_above (Movement / Footstep)",
+    "SoundName": "run_water_above"
+  },
+  {
+    "Id": 22,
+    "_comment": "SFX 22 - run_water_inner (Movement / Footstep)",
+    "SoundName": "run_water_inner"
+  },
+  {
+    "Id": 31,
+    "_comment": "SFX 31 - run_grass_jungle (Movement / Footstep)",
+    "SoundName": "run_grass_jungle"
+  },
+  {
+    "Id": 32,
+    "_comment": "SFX 32 - run_grass_forest (Movement / Footstep)",
+    "SoundName": "run_grass_forest"
+  },
+  {
+    "Id": 33,
+    "_comment": "SFX 33 - run_grass_lawn (Movement / Footstep)",
+    "SoundName": "run_grass_lawn"
+  },
+  {
+    "Id": 41,
+    "_comment": "SFX 41 - run_sand (Movement / Footstep)",
+    "SoundName": "run_sand"
+  },
+  {
+    "Id": 51,
+    "_comment": "SFX 51 - run_swamp_head (Movement / Footstep)",
+    "SoundName": "run_swamp_head"
+  },
+  {
+    "Id": 52,
+    "_comment": "SFX 52 - run_swamp_waist (Movement / Footstep)",
+    "SoundName": "run_swamp_waist"
+  },
+  {
+    "Id": 53,
+    "_comment": "SFX 53 - run_swamp_ankle (Movement / Footstep)",
+    "SoundName": "run_swamp_ankle"
+  },
+  {
+    "Id": 61,
+    "_comment": "SFX 61 - run_snow_head (Movement / Footstep)",
+    "SoundName": "run_snow_head"
+  },
+  {
+    "Id": 62,
+    "_comment": "SFX 62 - run_snow_waist (Movement / Footstep)",
+    "SoundName": "run_snow_waist"
+  },
+  {
+    "Id": 63,
+    "_comment": "SFX 63 - run_snow_ankle (Movement / Footstep)",
+    "SoundName": "run_snow_ankle"
+  },
+  {
+    "Id": 71,
+    "_comment": "SFX 71 - run_wood_empty (Movement / Footstep)",
+    "SoundName": "run_wood_empty"
+  },
+  {
+    "Id": 72,
+    "_comment": "SFX 72 - run_wood_fill (Movement / Footstep)",
+    "SoundName": "run_wood_fill"
+  },
+  {
+    "Id": 81,
+    "_comment": "SFX 81 - run_glass (Movement / Footstep)",
+    "SoundName": "run_glass"
+  },
+  {
+    "Id": 1001,
+    "_comment": "SFX 1001 - att_prepare_physical (Attack / Weapon Combat)",
+    "SoundName": "att_prepare_physical"
+  },
+  {
+    "Id": 1002,
+    "_comment": "SFX 1002 - att_prepare_magic (Attack / Weapon Combat)",
+    "SoundName": "att_prepare_magic"
+  },
+  {
+    "Id": 1003,
+    "_comment": "SFX 1003 - att_addon_charge01a (Attack / Weapon Combat)",
+    "SoundName": "att_addon_charge01a"
+  },
+  {
+    "Id": 1004,
+    "_comment": "SFX 1004 - att_addon_charge01b (Attack / Weapon Combat)",
+    "SoundName": "att_addon_charge01b"
+  },
+  {
+    "Id": 1005,
+    "_comment": "SFX 1005 - att_addon_charge01c (Attack / Weapon Combat)",
+    "SoundName": "att_addon_charge01c"
+  },
+  {
+    "Id": 1006,
+    "_comment": "SFX 1006 - att_addon_charge02 (Attack / Weapon Combat)",
+    "SoundName": "att_addon_charge02"
+  },
+  {
+    "Id": 1007,
+    "_comment": "SFX 1007 - att_addon_charge03 (Attack / Weapon Combat)",
+    "SoundName": "att_addon_charge03"
+  },
+  {
+    "Id": 1008,
+    "_comment": "SFX 1008 - att_addon_charge03b (Attack / Weapon Combat)",
+    "SoundName": "att_addon_charge03b"
+  },
+  {
+    "Id": 1009,
+    "_comment": "SFX 1009 - att_addon_charge04 (Attack / Weapon Combat)",
+    "SoundName": "att_addon_charge04"
+  },
+  {
+    "Id": 1101,
+    "_comment": "SFX 1101 - att_hit_blade_heav_h (Attack / Weapon Combat)",
+    "SoundName": "att_hit_blade_heav_h"
+  },
+  {
+    "Id": 1102,
+    "_comment": "SFX 1102 - att_hit_blade_heav_l (Attack / Weapon Combat)",
+    "SoundName": "att_hit_blade_heav_l"
+  },
+  {
+    "Id": 1103,
+    "_comment": "SFX 1103 - att_hit_blade_heav_sw (Attack / Weapon Combat)",
+    "SoundName": "att_hit_blade_heav_sw"
+  },
+  {
+    "Id": 1111,
+    "_comment": "SFX 1111 - att_hit_blade_long_h (Attack / Weapon Combat)",
+    "SoundName": "att_hit_blade_long_h"
+  },
+  {
+    "Id": 1112,
+    "_comment": "SFX 1112 - att_hit_blade_long_l (Attack / Weapon Combat)",
+    "SoundName": "att_hit_blade_long_l"
+  },
+  {
+    "Id": 1113,
+    "_comment": "SFX 1113 - att_hit_blade_long_sw (Attack / Weapon Combat)",
+    "SoundName": "att_hit_blade_long_sw"
+  },
+  {
+    "Id": 1121,
+    "_comment": "SFX 1121 - att_hit_blade_shor_h (Attack / Weapon Combat)",
+    "SoundName": "att_hit_blade_shor_h"
+  },
+  {
+    "Id": 1122,
+    "_comment": "SFX 1122 - att_hit_blade_shor_l (Attack / Weapon Combat)",
+    "SoundName": "att_hit_blade_shor_l"
+  },
+  {
+    "Id": 1123,
+    "_comment": "SFX 1123 - att_hit_blade_shor_sw (Attack / Weapon Combat)",
+    "SoundName": "att_hit_blade_shor_sw"
+  },
+  {
+    "Id": 1131,
+    "_comment": "SFX 1131 - att_hit_blade_mace_h (Attack / Weapon Combat)",
+    "SoundName": "att_hit_blade_mace_h"
+  },
+  {
+    "Id": 1132,
+    "_comment": "SFX 1132 - att_hit_blade_mace_l (Attack / Weapon Combat)",
+    "SoundName": "att_hit_blade_mace_l"
+  },
+  {
+    "Id": 1133,
+    "_comment": "SFX 1133 - att_hit_blade_mace_sw (Attack / Weapon Combat)",
+    "SoundName": "att_hit_blade_mace_sw"
+  },
+  {
+    "Id": 1201,
+    "_comment": "SFX 1201 - att_hit_glove_box_ha (Attack / Weapon Combat)",
+    "SoundName": "att_hit_glove_box_ha"
+  },
+  {
+    "Id": 1203,
+    "_comment": "SFX 1203 - att_hit_glove_box_h (Attack / Weapon Combat)",
+    "SoundName": "att_hit_glove_box_h"
+  },
+  {
+    "Id": 1204,
+    "_comment": "SFX 1204 - att_hit_glove_box_hh (Attack / Weapon Combat)",
+    "SoundName": "att_hit_glove_box_hh"
+  },
+  {
+    "Id": 1202,
+    "_comment": "SFX 1202 - att_hit_glove_box_la (Attack / Weapon Combat)",
+    "SoundName": "att_hit_glove_box_la"
+  },
+  {
+    "Id": 1205,
+    "_comment": "SFX 1205 - att_hit_glove_box_l (Attack / Weapon Combat)",
+    "SoundName": "att_hit_glove_box_l"
+  },
+  {
+    "Id": 1211,
+    "_comment": "SFX 1211 - att_hit_glove_kung_h (Attack / Weapon Combat)",
+    "SoundName": "att_hit_glove_kung_h"
+  },
+  {
+    "Id": 1213,
+    "_comment": "SFX 1213 - att_hit_glove_kung_hh (Attack / Weapon Combat)",
+    "SoundName": "att_hit_glove_kung_hh"
+  },
+  {
+    "Id": 1212,
+    "_comment": "SFX 1212 - att_hit_glove_kung_l (Attack / Weapon Combat)",
+    "SoundName": "att_hit_glove_kung_l"
+  },
+  {
+    "Id": 1221,
+    "_comment": "SFX 1221 - att_hit_glove_claw_ha (Attack / Weapon Combat)",
+    "SoundName": "att_hit_glove_claw_ha"
+  },
+  {
+    "Id": 1223,
+    "_comment": "SFX 1223 - att_hit_glove_claw_h (Attack / Weapon Combat)",
+    "SoundName": "att_hit_glove_claw_h"
+  },
+  {
+    "Id": 1222,
+    "_comment": "SFX 1222 - att_hit_glove_claw_la (Attack / Weapon Combat)",
+    "SoundName": "att_hit_glove_claw_la"
+  },
+  {
+    "Id": 1224,
+    "_comment": "SFX 1224 - att_hit_glove_claw_l (Attack / Weapon Combat)",
+    "SoundName": "att_hit_glove_claw_l"
+  },
+  {
+    "Id": 1231,
+    "_comment": "SFX 1231 - att_hit_glove_heavy_h (Attack / Weapon Combat)",
+    "SoundName": "att_hit_glove_heavy_h"
+  },
+  {
+    "Id": 1232,
+    "_comment": "SFX 1232 - att_hit_glove_heavy_l (Attack / Weapon Combat)",
+    "SoundName": "att_hit_glove_heavy_l"
+  },
+  {
+    "Id": 1301,
+    "_comment": "SFX 1301 - att_hit_mura_clas_act (Attack / Weapon Combat)",
+    "SoundName": "att_hit_mura_clas_act"
+  },
+  {
+    "Id": 1302,
+    "_comment": "SFX 1302 - att_hit_mura_clas_shoot1 (Attack / Weapon Combat)",
+    "SoundName": "att_hit_mura_clas_shoot1"
+  },
+  {
+    "Id": 1303,
+    "_comment": "SFX 1303 - att_hit_mura_clas_shoot2 (Attack / Weapon Combat)",
+    "SoundName": "att_hit_mura_clas_shoot2"
+  },
+  {
+    "Id": 1304,
+    "_comment": "SFX 1304 - att_hit_mura_clas_hit (Attack / Weapon Combat)",
+    "SoundName": "att_hit_mura_clas_hit"
+  },
+  {
+    "Id": 1311,
+    "_comment": "SFX 1311 - att_hit_mura_cute_act (Attack / Weapon Combat)",
+    "SoundName": "att_hit_mura_cute_act"
+  },
+  {
+    "Id": 1312,
+    "_comment": "SFX 1312 - att_hit_mura_cute_shoot (Attack / Weapon Combat)",
+    "SoundName": "att_hit_mura_cute_shoot"
+  },
+  {
+    "Id": 1313,
+    "_comment": "SFX 1313 - att_hit_mura_cute_hit1 (Attack / Weapon Combat)",
+    "SoundName": "att_hit_mura_cute_hit1"
+  },
+  {
+    "Id": 1314,
+    "_comment": "SFX 1314 - att_hit_mura_cute_hit2 (Attack / Weapon Combat)",
+    "SoundName": "att_hit_mura_cute_hit2"
+  },
+  {
+    "Id": 1321,
+    "_comment": "SFX 1321 - att_hit_mura_sexy_act (Attack / Weapon Combat)",
+    "SoundName": "att_hit_mura_sexy_act"
+  },
+  {
+    "Id": 1322,
+    "_comment": "SFX 1322 - att_hit_mura_sexy_shoot1 (Attack / Weapon Combat)",
+    "SoundName": "att_hit_mura_sexy_shoot1"
+  },
+  {
+    "Id": 1323,
+    "_comment": "SFX 1323 - att_hit_mura_sexy_shoot2 (Attack / Weapon Combat)",
+    "SoundName": "att_hit_mura_sexy_shoot2"
+  },
+  {
+    "Id": 1324,
+    "_comment": "SFX 1324 - att_hit_mura_sexy_hit (Attack / Weapon Combat)",
+    "SoundName": "att_hit_mura_sexy_hit"
+  },
+  {
+    "Id": 1331,
+    "_comment": "SFX 1331 - att_hit_mura_funny_act (Attack / Weapon Combat)",
+    "SoundName": "att_hit_mura_funny_act"
+  },
+  {
+    "Id": 1332,
+    "_comment": "SFX 1332 - att_hit_mura_funny_shoot (Attack / Weapon Combat)",
+    "SoundName": "att_hit_mura_funny_shoot"
+  },
+  {
+    "Id": 1333,
+    "_comment": "SFX 1333 - att_hit_mura_funny_hit (Attack / Weapon Combat)",
+    "SoundName": "att_hit_mura_funny_hit"
+  },
+  {
+    "Id": 1341,
+    "_comment": "SFX 1341 - att_hit_mura_funky_act (Attack / Weapon Combat)",
+    "SoundName": "att_hit_mura_funky_act"
+  },
+  {
+    "Id": 1342,
+    "_comment": "SFX 1342 - att_hit_mura_funky_shoot (Attack / Weapon Combat)",
+    "SoundName": "att_hit_mura_funky_shoot"
+  },
+  {
+    "Id": 1343,
+    "_comment": "SFX 1343 - att_hit_mura_funky_hit (Attack / Weapon Combat)",
+    "SoundName": "att_hit_mura_funky_hit"
+  },
+  {
+    "Id": 1351,
+    "_comment": "SFX 1351 - att_hit_mura_power_act (Attack / Weapon Combat)",
+    "SoundName": "att_hit_mura_power_act"
+  },
+  {
+    "Id": 1352,
+    "_comment": "SFX 1352 - att_hit_mura_power_shoot (Attack / Weapon Combat)",
+    "SoundName": "att_hit_mura_power_shoot"
+  },
+  {
+    "Id": 1353,
+    "_comment": "SFX 1353 - att_hit_mura_power_hit (Attack / Weapon Combat)",
+    "SoundName": "att_hit_mura_power_hit"
+  },
+  {
+    "Id": 1401,
+    "_comment": "SFX 1401 - att_hit_spirit_order_act (Attack / Weapon Combat)",
+    "SoundName": "att_hit_spirit_order_act"
+  },
+  {
+    "Id": 1402,
+    "_comment": "SFX 1402 - att_hit_spirit_order_shoot (Attack / Weapon Combat)",
+    "SoundName": "att_hit_spirit_order_shoot"
+  },
+  {
+    "Id": 1403,
+    "_comment": "SFX 1403 - att_hit_spirit_order_hit (Attack / Weapon Combat)",
+    "SoundName": "att_hit_spirit_order_hit"
+  },
+  {
+    "Id": 1411,
+    "_comment": "SFX 1411 - att_hit_spirit_lower_act (Attack / Weapon Combat)",
+    "SoundName": "att_hit_spirit_lower_act"
+  },
+  {
+    "Id": 1412,
+    "_comment": "SFX 1412 - att_hit_spirit_lower_shoot (Attack / Weapon Combat)",
+    "SoundName": "att_hit_spirit_lower_shoot"
+  },
+  {
+    "Id": 1413,
+    "_comment": "SFX 1413 - att_hit_spirit_lower_hit (Attack / Weapon Combat)",
+    "SoundName": "att_hit_spirit_lower_hit"
+  },
+  {
+    "Id": 1501,
+    "_comment": "SFX 1501 - att_hit_skill_prepare (Attack / Weapon Combat)",
+    "SoundName": "att_hit_skill_prepare"
+  },
+  {
+    "Id": 1502,
+    "_comment": "SFX 1502 - att_hit_skill_explo (Attack / Weapon Combat)",
+    "SoundName": "att_hit_skill_explo"
+  },
+  {
+    "Id": 1503,
+    "_comment": "SFX 1503 - att_addon_explo1 (Attack / Weapon Combat)",
+    "SoundName": "att_addon_explo1"
+  },
+  {
+    "Id": 1504,
+    "_comment": "SFX 1504 - att_addon_explo2 (Attack / Weapon Combat)",
+    "SoundName": "att_addon_explo2"
+  },
+  {
+    "Id": 1505,
+    "_comment": "SFX 1505 - att_addon_explo3 (Attack / Weapon Combat)",
+    "SoundName": "att_addon_explo3"
+  },
+  {
+    "Id": 1506,
+    "_comment": "SFX 1506 - att_addon_explo4 (Attack / Weapon Combat)",
+    "SoundName": "att_addon_explo4"
+  },
+  {
+    "Id": 1507,
+    "_comment": "SFX 1507 - att_addon_explo5 (Attack / Weapon Combat)",
+    "SoundName": "att_addon_explo5"
+  },
+  {
+    "Id": 1508,
+    "_comment": "SFX 1508 - att_hit_skill_shadow (Attack / Weapon Combat)",
+    "SoundName": "att_hit_skill_shadow"
+  },
+  {
+    "Id": 1509,
+    "_comment": "SFX 1509 - att_hit_skill_spin (Attack / Weapon Combat)",
+    "SoundName": "att_hit_skill_spin"
+  },
+  {
+    "Id": 1510,
+    "_comment": "SFX 1510 - att_hit_skill_multiple (Attack / Weapon Combat)",
+    "SoundName": "att_hit_skill_multiple"
+  },
+  {
+    "Id": 1511,
+    "_comment": "SFX 1511 - att_hit_skill_electric (Attack / Weapon Combat)",
+    "SoundName": "att_hit_skill_electric"
+  },
+  {
+    "Id": 1512,
+    "_comment": "SFX 1512 - att_hit_skill_fire (Attack / Weapon Combat)",
+    "SoundName": "att_hit_skill_fire"
+  },
+  {
+    "Id": 1513,
+    "_comment": "SFX 1513 - att_addon_fire1 (Attack / Weapon Combat)",
+    "SoundName": "att_addon_fire1"
+  },
+  {
+    "Id": 1514,
+    "_comment": "SFX 1514 - att_addon_fire2 (Attack / Weapon Combat)",
+    "SoundName": "att_addon_fire2"
+  },
+  {
+    "Id": 1515,
+    "_comment": "SFX 1515 - att_addon_fire3 (Attack / Weapon Combat)",
+    "SoundName": "att_addon_fire3"
+  },
+  {
+    "Id": 1516,
+    "_comment": "SFX 1516 - att_addon_fire4 (Attack / Weapon Combat)",
+    "SoundName": "att_addon_fire4"
+  },
+  {
+    "Id": 1517,
+    "_comment": "SFX 1517 - att_hit_skill_ice (Attack / Weapon Combat)",
+    "SoundName": "att_hit_skill_ice"
+  },
+  {
+    "Id": 1518,
+    "_comment": "SFX 1518 - att_hit_skill_water (Attack / Weapon Combat)",
+    "SoundName": "att_hit_skill_water"
+  },
+  {
+    "Id": 1519,
+    "_comment": "SFX 1519 - att_hit_skill_earth (Attack / Weapon Combat)",
+    "SoundName": "att_hit_skill_earth"
+  },
+  {
+    "Id": 1520,
+    "_comment": "SFX 1520 - att_mura_skill_DevineVoice (Attack / Weapon Combat)",
+    "SoundName": "att_mura_skill_DevineVoice"
+  },
+  {
+    "Id": 1521,
+    "_comment": "SFX 1521 - att_mura_skill_MagneticWave (Attack / Weapon Combat)",
+    "SoundName": "att_mura_skill_MagneticWave"
+  },
+  {
+    "Id": 1522,
+    "_comment": "SFX 1522 - att_mura_skill_HeavenBreathe (Attack / Weapon Combat)",
+    "SoundName": "att_mura_skill_HeavenBreathe"
+  },
+  {
+    "Id": 1523,
+    "_comment": "SFX 1523 - att_mura_skill_RecoringWave (Attack / Weapon Combat)",
+    "SoundName": "att_mura_skill_RecoringWave"
+  },
+  {
+    "Id": 1524,
+    "_comment": "SFX 1524 - att_mura_skill_BosanoChachacha (Attack / Weapon Combat)",
+    "SoundName": "att_mura_skill_BosanoChachacha"
+  },
+  {
+    "Id": 1525,
+    "_comment": "SFX 1525 - att_mura_skill_Clarinelo (Attack / Weapon Combat)",
+    "SoundName": "att_mura_skill_Clarinelo"
+  },
+  {
+    "Id": 1526,
+    "_comment": "SFX 1526 - att_mura_skill_Pantasia (Attack / Weapon Combat)",
+    "SoundName": "att_mura_skill_Pantasia"
+  },
+  {
+    "Id": 1527,
+    "_comment": "SFX 1527 - att_mura_skill_FreezingMotion (Attack / Weapon Combat)",
+    "SoundName": "att_mura_skill_FreezingMotion"
+  },
+  {
+    "Id": 1528,
+    "_comment": "SFX 1528 - att_mura_skill_Flover (Attack / Weapon Combat)",
+    "SoundName": "att_mura_skill_Flover"
+  },
+  {
+    "Id": 1529,
+    "_comment": "SFX 1529 - att_mura_skill_FluffyMotion (Attack / Weapon Combat)",
+    "SoundName": "att_mura_skill_FluffyMotion"
+  },
+  {
+    "Id": 1530,
+    "_comment": "SFX 1530 - att_mura_skill_SilentViolino (Attack / Weapon Combat)",
+    "SoundName": "att_mura_skill_SilentViolino"
+  },
+  {
+    "Id": 1531,
+    "_comment": "SFX 1531 - att_mura_skill_MorningSong (Attack / Weapon Combat)",
+    "SoundName": "att_mura_skill_MorningSong"
+  },
+  {
+    "Id": 1532,
+    "_comment": "SFX 1532 - att_mura_skill_OrchestraBlow (Attack / Weapon Combat)",
+    "SoundName": "att_mura_skill_OrchestraBlow"
+  },
+  {
+    "Id": 1533,
+    "_comment": "SFX 1533 - att_mura_skill_Czerny100 (Attack / Weapon Combat)",
+    "SoundName": "att_mura_skill_Czerny100"
+  },
+  {
+    "Id": 1534,
+    "_comment": "SFX 1534 - att_mura_skill_MacstarRapping (Attack / Weapon Combat)",
+    "SoundName": "att_mura_skill_MacstarRapping"
+  },
+  {
+    "Id": 1535,
+    "_comment": "SFX 1535 - att_mura_skill_SpinScratch (Attack / Weapon Combat)",
+    "SoundName": "att_mura_skill_SpinScratch"
+  },
+  {
+    "Id": 1536,
+    "_comment": "SFX 1536 - att_mura_skill_NoisySerenade (Attack / Weapon Combat)",
+    "SoundName": "att_mura_skill_NoisySerenade"
+  },
+  {
+    "Id": 1537,
+    "_comment": "SFX 1537 - att_mura_skill_WoogiBoogiBoom (Attack / Weapon Combat)",
+    "SoundName": "att_mura_skill_WoogiBoogiBoom"
+  },
+  {
+    "Id": 1538,
+    "_comment": "SFX 1538 - att_mura_skill_WoogiShot (Attack / Weapon Combat)",
+    "SoundName": "att_mura_skill_WoogiShot"
+  },
+  {
+    "Id": 1539,
+    "_comment": "SFX 1539 - att_mura_skill_BumpRhapsody (Attack / Weapon Combat)",
+    "SoundName": "att_mura_skill_BumpRhapsody"
+  },
+  {
+    "Id": 1540,
+    "_comment": "SFX 1540 - att_mura_skill_Inferno (Attack / Weapon Combat)",
+    "SoundName": "att_mura_skill_Inferno"
+  },
+  {
+    "Id": 1541,
+    "_comment": "SFX 1541 - att_mura_skill_PassionateEtude (Attack / Weapon Combat)",
+    "SoundName": "att_mura_skill_PassionateEtude"
+  },
+  {
+    "Id": 1542,
+    "_comment": "SFX 1542 - att_mura_skill_JigidigiCheck (Attack / Weapon Combat)",
+    "SoundName": "att_mura_skill_JigidigiCheck"
+  },
+  {
+    "Id": 1543,
+    "_comment": "SFX 1543 - att_mura_skill_CarnivalFever (Attack / Weapon Combat)",
+    "SoundName": "att_mura_skill_CarnivalFever"
+  },
+  {
+    "Id": 1544,
+    "_comment": "SFX 1544 - att_mura_skill_FlameLord (Attack / Weapon Combat)",
+    "SoundName": "att_mura_skill_FlameLord"
+  },
+  {
+    "Id": 1545,
+    "_comment": "SFX 1545 - att_mura_skill_RappingBlow (Attack / Weapon Combat)",
+    "SoundName": "att_mura_skill_RappingBlow"
+  },
+  {
+    "Id": 1546,
+    "_comment": "SFX 1546 - att_mura_skill_WeakBeatBox (Attack / Weapon Combat)",
+    "SoundName": "att_mura_skill_WeakBeatBox"
+  },
+  {
+    "Id": 1547,
+    "_comment": "SFX 1547 - att_mura_skill_WootangkaDance (Attack / Weapon Combat)",
+    "SoundName": "att_mura_skill_WootangkaDance"
+  },
+  {
+    "Id": 1548,
+    "_comment": "SFX 1548 - att_mura_skill_ShamanBell (Attack / Weapon Combat)",
+    "SoundName": "att_mura_skill_ShamanBell"
+  },
+  {
+    "Id": 1549,
+    "_comment": "SFX 1549 - att_mura_skill_EcstasyFeeling (Attack / Weapon Combat)",
+    "SoundName": "att_mura_skill_EcstasyFeeling"
+  },
+  {
+    "Id": 1550,
+    "_comment": "SFX 1550 - att_mura_skill_JigjagRag (Attack / Weapon Combat)",
+    "SoundName": "att_mura_skill_JigjagRag"
+  },
+  {
+    "Id": 1551,
+    "_comment": "SFX 1551 - att_mura_skill_RecoveringRhythm (Attack / Weapon Combat)",
+    "SoundName": "att_mura_skill_RecoveringRhythm"
+  },
+  {
+    "Id": 1552,
+    "_comment": "SFX 1552 - att_hit_skill_crystal1 (Attack / Weapon Combat)",
+    "SoundName": "att_hit_skill_crystal1"
+  },
+  {
+    "Id": 1553,
+    "_comment": "SFX 1553 - att_hit_skill_crystal2 (Attack / Weapon Combat)",
+    "SoundName": "att_hit_skill_crystal2"
+  },
+  {
+    "Id": 1554,
+    "_comment": "SFX 1554 - att_hit_skill_ice_summon (Attack / Weapon Combat)",
+    "SoundName": "att_hit_skill_ice_summon"
+  },
+  {
+    "Id": 1555,
+    "_comment": "SFX 1555 - att_hit_skill_ice_shoot (Attack / Weapon Combat)",
+    "SoundName": "att_hit_skill_ice_shoot"
+  },
+  {
+    "Id": 1556,
+    "_comment": "SFX 1556 - att_hit_skill_ice_hit (Attack / Weapon Combat)",
+    "SoundName": "att_hit_skill_ice_hit"
+  },
+  {
+    "Id": 1557,
+    "_comment": "SFX 1557 - att_hit_skill_fire_summon (Attack / Weapon Combat)",
+    "SoundName": "att_hit_skill_fire_summon"
+  },
+  {
+    "Id": 1558,
+    "_comment": "SFX 1558 - att_hit_skill_fire_shoot (Attack / Weapon Combat)",
+    "SoundName": "att_hit_skill_fire_shoot"
+  },
+  {
+    "Id": 1559,
+    "_comment": "SFX 1559 - att_hit_skill_fire_hit (Attack / Weapon Combat)",
+    "SoundName": "att_hit_skill_fire_hit"
+  },
+  {
+    "Id": 1560,
+    "_comment": "SFX 1560 - att_hit_skill_water_summon (Attack / Weapon Combat)",
+    "SoundName": "att_hit_skill_water_summon"
+  },
+  {
+    "Id": 1561,
+    "_comment": "SFX 1561 - att_hit_skill_water_shoot (Attack / Weapon Combat)",
+    "SoundName": "att_hit_skill_water_shoot"
+  },
+  {
+    "Id": 1562,
+    "_comment": "SFX 1562 - att_hit_skill_water_hit (Attack / Weapon Combat)",
+    "SoundName": "att_hit_skill_water_hit"
+  },
+  {
+    "Id": 1563,
+    "_comment": "SFX 1563 - att_hit_skill_earth_summon (Attack / Weapon Combat)",
+    "SoundName": "att_hit_skill_earth_summon"
+  },
+  {
+    "Id": 1564,
+    "_comment": "SFX 1564 - att_hit_skill_earth_shoot (Attack / Weapon Combat)",
+    "SoundName": "att_hit_skill_earth_shoot"
+  },
+  {
+    "Id": 1565,
+    "_comment": "SFX 1565 - att_hit_skill_earth_hit (Attack / Weapon Combat)",
+    "SoundName": "att_hit_skill_earth_hit"
+  },
+  {
+    "Id": 1566,
+    "_comment": "SFX 1566 - att_hit_skill_object_summon (Attack / Weapon Combat)",
+    "SoundName": "att_hit_skill_object_summon"
+  },
+  {
+    "Id": 1567,
+    "_comment": "SFX 1567 - att_hit_skill_object_shoot (Attack / Weapon Combat)",
+    "SoundName": "att_hit_skill_object_shoot"
+  },
+  {
+    "Id": 1568,
+    "_comment": "SFX 1568 - att_hit_skill_object_hit (Attack / Weapon Combat)",
+    "SoundName": "att_hit_skill_object_hit"
+  },
+  {
+    "Id": 1601,
+    "_comment": "SFX 1601 - att_finish_landing_h (Attack / Weapon Combat)",
+    "SoundName": "att_finish_landing_h"
+  },
+  {
+    "Id": 1602,
+    "_comment": "SFX 1602 - att_finish_landing_l (Attack / Weapon Combat)",
+    "SoundName": "att_finish_landing_l"
+  },
+  {
+    "Id": 1611,
+    "_comment": "SFX 1611 - att_finish_blade (Attack / Weapon Combat)",
+    "SoundName": "att_finish_blade"
+  },
+  {
+    "Id": 1621,
+    "_comment": "SFX 1621 - att_finish_glorb (Attack / Weapon Combat)",
+    "SoundName": "att_finish_glorb"
+  },
+  {
+    "Id": 1631,
+    "_comment": "SFX 1631 - att_finish_mura (Attack / Weapon Combat)",
+    "SoundName": "att_finish_mura"
+  },
+  {
+    "Id": 1641,
+    "_comment": "SFX 1641 - att_finish_spirit (Attack / Weapon Combat)",
+    "SoundName": "att_finish_spirit"
+  },
+  {
+    "Id": 2001,
+    "_comment": "SFX 2001 - mon_bump_h1 (Sound FX)",
+    "SoundName": "mon_bump_h1"
+  },
+  {
+    "Id": 2002,
+    "_comment": "SFX 2002 - mon_bump_h2 (Sound FX)",
+    "SoundName": "mon_bump_h2"
+  },
+  {
+    "Id": 2003,
+    "_comment": "SFX 2003 - mon_bump_l (Sound FX)",
+    "SoundName": "mon_bump_l"
+  },
+  {
+    "Id": 2004,
+    "_comment": "SFX 2004 - mon_bump_move (Sound FX)",
+    "SoundName": "mon_bump_move"
+  },
+  {
+    "Id": 2011,
+    "_comment": "SFX 2011 - mon_claw_h (Sound FX)",
+    "SoundName": "mon_claw_h"
+  },
+  {
+    "Id": 2012,
+    "_comment": "SFX 2012 - mon_claw_l (Sound FX)",
+    "SoundName": "mon_claw_l"
+  },
+  {
+    "Id": 2021,
+    "_comment": "SFX 2021 - mon_bite_h (Sound FX)",
+    "SoundName": "mon_bite_h"
+  },
+  {
+    "Id": 2022,
+    "_comment": "SFX 2022 - mon_bite_l (Sound FX)",
+    "SoundName": "mon_bite_l"
+  },
+  {
+    "Id": 2023,
+    "_comment": "SFX 2023 - mon_bite_hold (Sound FX)",
+    "SoundName": "mon_bite_hold"
+  },
+  {
+    "Id": 2031,
+    "_comment": "SFX 2031 - mon_punch_h (Sound FX)",
+    "SoundName": "mon_punch_h"
+  },
+  {
+    "Id": 2032,
+    "_comment": "SFX 2032 - mon_punch_l (Sound FX)",
+    "SoundName": "mon_punch_l"
+  },
+  {
+    "Id": 2041,
+    "_comment": "SFX 2041 - mon_slap_h (Sound FX)",
+    "SoundName": "mon_slap_h"
+  },
+  {
+    "Id": 2042,
+    "_comment": "SFX 2042 - mon_slap_l (Sound FX)",
+    "SoundName": "mon_slap_l"
+  },
+  {
+    "Id": 2051,
+    "_comment": "SFX 2051 - mon_whip_h (Sound FX)",
+    "SoundName": "mon_whip_h"
+  },
+  {
+    "Id": 2052,
+    "_comment": "SFX 2052 - mon_whip_l (Sound FX)",
+    "SoundName": "mon_whip_l"
+  },
+  {
+    "Id": 2053,
+    "_comment": "SFX 2053 - mon_whip_swing (Sound FX)",
+    "SoundName": "mon_whip_swing"
+  },
+  {
+    "Id": 2061,
+    "_comment": "SFX 2061 - mon_club_h (Sound FX)",
+    "SoundName": "mon_club_h"
+  },
+  {
+    "Id": 2062,
+    "_comment": "SFX 2062 - mon_club_l (Sound FX)",
+    "SoundName": "mon_club_l"
+  },
+  {
+    "Id": 2063,
+    "_comment": "SFX 2063 - mon_club_swing (Sound FX)",
+    "SoundName": "mon_club_swing"
+  },
+  {
+    "Id": 2071,
+    "_comment": "SFX 2071 - mon_gun_h1 (Sound FX)",
+    "SoundName": "mon_gun_h1"
+  },
+  {
+    "Id": 2073,
+    "_comment": "SFX 2073 - mon_gun_h2 (Sound FX)",
+    "SoundName": "mon_gun_h2"
+  },
+  {
+    "Id": 2072,
+    "_comment": "SFX 2072 - mon_gun_l1 (Sound FX)",
+    "SoundName": "mon_gun_l1"
+  },
+  {
+    "Id": 2074,
+    "_comment": "SFX 2074 - mon_gun_l2 (Sound FX)",
+    "SoundName": "mon_gun_l2"
+  },
+  {
+    "Id": 2081,
+    "_comment": "SFX 2081 - mon_missile_h (Sound FX)",
+    "SoundName": "mon_missile_h"
+  },
+  {
+    "Id": 2082,
+    "_comment": "SFX 2082 - mon_missile_l (Sound FX)",
+    "SoundName": "mon_missile_l"
+  },
+  {
+    "Id": 2083,
+    "_comment": "SFX 2083 - mon_missile_shoot (Sound FX)",
+    "SoundName": "mon_missile_shoot"
+  },
+  {
+    "Id": 2091,
+    "_comment": "SFX 2091 - mon_magic_h (Sound FX)",
+    "SoundName": "mon_magic_h"
+  },
+  {
+    "Id": 2092,
+    "_comment": "SFX 2092 - mon_magic_l (Sound FX)",
+    "SoundName": "mon_magic_l"
+  },
+  {
+    "Id": 2093,
+    "_comment": "SFX 2093 - mon_magic_casting (Sound FX)",
+    "SoundName": "mon_magic_casting"
+  },
+  {
+    "Id": 2101,
+    "_comment": "SFX 2101 - mon_laser_shoot1 (Sound FX)",
+    "SoundName": "mon_laser_shoot1"
+  },
+  {
+    "Id": 2102,
+    "_comment": "SFX 2102 - mon_laser_shoot2 (Sound FX)",
+    "SoundName": "mon_laser_shoot2"
+  },
+  {
+    "Id": 2501,
+    "_comment": "SFX 2501 - mon_mecha_engine1 (Sound FX)",
+    "SoundName": "mon_mecha_engine1"
+  },
+  {
+    "Id": 2502,
+    "_comment": "SFX 2502 - mon_mecha_engine2 (Sound FX)",
+    "SoundName": "mon_mecha_engine2"
+  },
+  {
+    "Id": 2503,
+    "_comment": "SFX 2503 - mon_mecha_steam (Sound FX)",
+    "SoundName": "mon_mecha_steam"
+  },
+  {
+    "Id": 2504,
+    "_comment": "SFX 2504 - mon_mecha_act1 (Sound FX)",
+    "SoundName": "mon_mecha_act1"
+  },
+  {
+    "Id": 2505,
+    "_comment": "SFX 2505 - mon_mecha_act2 (Sound FX)",
+    "SoundName": "mon_mecha_act2"
+  },
+  {
+    "Id": 2506,
+    "_comment": "SFX 2506 - mon_mecha_act3 (Sound FX)",
+    "SoundName": "mon_mecha_act3"
+  },
+  {
+    "Id": 2507,
+    "_comment": "SFX 2507 - mon_mecha_act4 (Sound FX)",
+    "SoundName": "mon_mecha_act4"
+  },
+  {
+    "Id": 2508,
+    "_comment": "SFX 2508 - mon_mecha_act5 (Sound FX)",
+    "SoundName": "mon_mecha_act5"
+  },
+  {
+    "Id": 2509,
+    "_comment": "SFX 2509 - mon_beast_roar (Sound FX)",
+    "SoundName": "mon_beast_roar"
+  },
+  {
+    "Id": 2510,
+    "_comment": "SFX 2510 - mon_beast_howl (Sound FX)",
+    "SoundName": "mon_beast_howl"
+  },
+  {
+    "Id": 2511,
+    "_comment": "SFX 2511 - mon_beast_growl1 (Sound FX)",
+    "SoundName": "mon_beast_growl1"
+  },
+  {
+    "Id": 2512,
+    "_comment": "SFX 2512 - mon_beast_growl2 (Sound FX)",
+    "SoundName": "mon_beast_growl2"
+  },
+  {
+    "Id": 2513,
+    "_comment": "SFX 2513 - mon_plant_thicket1 (Sound FX)",
+    "SoundName": "mon_plant_thicket1"
+  },
+  {
+    "Id": 2514,
+    "_comment": "SFX 2514 - mon_plant_thicket2 (Sound FX)",
+    "SoundName": "mon_plant_thicket2"
+  },
+  {
+    "Id": 2515,
+    "_comment": "SFX 2515 - mon_plant_thicket3 (Sound FX)",
+    "SoundName": "mon_plant_thicket3"
+  },
+  {
+    "Id": 2516,
+    "_comment": "SFX 2516 - mon_plant_fell (Sound FX)",
+    "SoundName": "mon_plant_fell"
+  },
+  {
+    "Id": 2517,
+    "_comment": "SFX 2517 - mon_plant_fastgrow (Sound FX)",
+    "SoundName": "mon_plant_fastgrow"
+  },
+  {
+    "Id": 3001,
+    "_comment": "SFX 3001 - npc_reaction (Sound FX)",
+    "SoundName": "npc_reaction"
+  },
+  {
+    "Id": 4001,
+    "_comment": "SFX 4001 - etc_gradeup (Sound FX)",
+    "SoundName": "etc_gradeup"
+  },
+  {
+    "Id": 4002,
+    "_comment": "SFX 4002 - etc_levelup (Sound FX)",
+    "SoundName": "etc_levelup"
+  },
+  {
+    "Id": 4011,
+    "_comment": "SFX 4011 - etc_interface_open (Sound FX)",
+    "SoundName": "etc_interface_open"
+  },
+  {
+    "Id": 4012,
+    "_comment": "SFX 4012 - etc_interface_close (Sound FX)",
+    "SoundName": "etc_interface_close"
+  },
+  {
+    "Id": 4013,
+    "_comment": "SFX 4013 - etc_interface_ok (Sound FX)",
+    "SoundName": "etc_interface_ok"
+  },
+  {
+    "Id": 4014,
+    "_comment": "SFX 4014 - etc_interface_cancel (Sound FX)",
+    "SoundName": "etc_interface_cancel"
+  },
+  {
+    "Id": 4015,
+    "_comment": "SFX 4015 - etc_interface_minimize (Sound FX)",
+    "SoundName": "etc_interface_minimize"
+  },
+  {
+    "Id": 4016,
+    "_comment": "SFX 4016 - etc_interface_equip (Sound FX)",
+    "SoundName": "etc_interface_equip"
+  },
+  {
+    "Id": 4017,
+    "_comment": "SFX 4017 - etc_interface_sell (Sound FX)",
+    "SoundName": "etc_interface_sell"
+  },
+  {
+    "Id": 4018,
+    "_comment": "SFX 4018 - etc_interface_itembox (Sound FX)",
+    "SoundName": "etc_interface_itembox"
+  },
+  {
+    "Id": 4019,
+    "_comment": "SFX 4019 - etc_interface_itemmove (Sound FX)",
+    "SoundName": "etc_interface_itemmove"
+  },
+  {
+    "Id": 4021,
+    "_comment": "SFX 4021 - etc_revive (Sound FX)",
+    "SoundName": "etc_revive"
+  },
+  {
+    "Id": 4031,
+    "_comment": "SFX 4031 - etc_item_eat (Sound FX)",
+    "SoundName": "etc_item_eat"
+  },
+  {
+    "Id": 4032,
+    "_comment": "SFX 4032 - etc_item_drop (Sound FX)",
+    "SoundName": "etc_item_drop"
+  },
+  {
+    "Id": 4033,
+    "_comment": "SFX 4033 - etc_item_pickup (Sound FX)",
+    "SoundName": "etc_item_pickup"
+  },
+  {
+    "Id": 4034,
+    "_comment": "SFX 4034 - etc_command_cheer (Sound FX)",
+    "SoundName": "etc_command_cheer"
+  },
+  {
+    "Id": 4041,
+    "_comment": "SFX 4041 - etc_warp_indoor (Sound FX)",
+    "SoundName": "etc_warp_indoor"
+  },
+  {
+    "Id": 4042,
+    "_comment": "SFX 4042 - etc_warp_outdoor (Sound FX)",
+    "SoundName": "etc_warp_outdoor"
+  },
+  {
+    "Id": 4051,
+    "_comment": "SFX 4051 - etc_event_trigger (Sound FX)",
+    "SoundName": "etc_event_trigger"
+  },
+  {
+    "Id": 4065,
+    "_comment": "SFX 4065 - etc_event_trigger1 (Sound FX)",
+    "SoundName": "etc_event_trigger1"
+  },
+  {
+    "Id": 4052,
+    "_comment": "SFX 4052 - etc_event_lever1 (Sound FX)",
+    "SoundName": "etc_event_lever1"
+  },
+  {
+    "Id": 4066,
+    "_comment": "SFX 4066 - etc_event_lever2 (Sound FX)",
+    "SoundName": "etc_event_lever2"
+  },
+  {
+    "Id": 4053,
+    "_comment": "SFX 4053 - etc_event_pushdoor_op (Sound FX)",
+    "SoundName": "etc_event_pushdoor_op"
+  },
+  {
+    "Id": 4054,
+    "_comment": "SFX 4054 - etc_event_pushdoor_cl (Sound FX)",
+    "SoundName": "etc_event_pushdoor_cl"
+  },
+  {
+    "Id": 4055,
+    "_comment": "SFX 4055 - etc_event_slidingdoor_op (Sound FX)",
+    "SoundName": "etc_event_slidingdoor_op"
+  },
+  {
+    "Id": 4056,
+    "_comment": "SFX 4056 - etc_event_slidingdoor_cl (Sound FX)",
+    "SoundName": "etc_event_slidingdoor_cl"
+  },
+  {
+    "Id": 4057,
+    "_comment": "SFX 4057 - etc_event_gatedoor_op (Sound FX)",
+    "SoundName": "etc_event_gatedoor_op"
+  },
+  {
+    "Id": 4058,
+    "_comment": "SFX 4058 - etc_event_gatedoor_cl (Sound FX)",
+    "SoundName": "etc_event_gatedoor_cl"
+  },
+  {
+    "Id": 4059,
+    "_comment": "SFX 4059 - etc_event_box_holdup (Sound FX)",
+    "SoundName": "etc_event_box_holdup"
+  },
+  {
+    "Id": 4060,
+    "_comment": "SFX 4060 - etc_event_box_holdmove (Sound FX)",
+    "SoundName": "etc_event_box_holdmove"
+  },
+  {
+    "Id": 4061,
+    "_comment": "SFX 4061 - etc_event_box_holddown (Sound FX)",
+    "SoundName": "etc_event_box_holddown"
+  },
+  {
+    "Id": 4062,
+    "_comment": "SFX 4062 - etc_event_box_throw (Sound FX)",
+    "SoundName": "etc_event_box_throw"
+  },
+  {
+    "Id": 4063,
+    "_comment": "SFX 4063 - etc_event_notify_silen1 (Sound FX)",
+    "SoundName": "etc_event_notify_silen1"
+  },
+  {
+    "Id": 4067,
+    "_comment": "SFX 4067 - etc_event_notify_silen2 (Sound FX)",
+    "SoundName": "etc_event_notify_silen2"
+  },
+  {
+    "Id": 4064,
+    "_comment": "SFX 4064 - mon_boss_greatborous1 (Sound FX)",
+    "SoundName": "mon_boss_greatborous1"
+  },
+  {
+    "Id": 4071,
+    "_comment": "SFX 4071 - etc_webboard_pageup (Sound FX)",
+    "SoundName": "etc_webboard_pageup"
+  },
+  {
+    "Id": 4072,
+    "_comment": "SFX 4072 - etc_webboard_pagedown (Sound FX)",
+    "SoundName": "etc_webboard_pagedown"
+  },
+  {
+    "Id": 4081,
+    "_comment": "SFX 4081 - etc_phone1_dialing_0 (Sound FX)",
+    "SoundName": "etc_phone1_dialing_0"
+  },
+  {
+    "Id": 4082,
+    "_comment": "SFX 4082 - etc_phone1_dialing_1 (Sound FX)",
+    "SoundName": "etc_phone1_dialing_1"
+  },
+  {
+    "Id": 4083,
+    "_comment": "SFX 4083 - etc_phone1_dialing_2 (Sound FX)",
+    "SoundName": "etc_phone1_dialing_2"
+  },
+  {
+    "Id": 4084,
+    "_comment": "SFX 4084 - etc_phone1_dialing_3 (Sound FX)",
+    "SoundName": "etc_phone1_dialing_3"
+  },
+  {
+    "Id": 4085,
+    "_comment": "SFX 4085 - etc_phone1_dialing_4 (Sound FX)",
+    "SoundName": "etc_phone1_dialing_4"
+  },
+  {
+    "Id": 4086,
+    "_comment": "SFX 4086 - etc_phone1_dialing_5 (Sound FX)",
+    "SoundName": "etc_phone1_dialing_5"
+  },
+  {
+    "Id": 4087,
+    "_comment": "SFX 4087 - etc_phone1_dialing_6 (Sound FX)",
+    "SoundName": "etc_phone1_dialing_6"
+  },
+  {
+    "Id": 4088,
+    "_comment": "SFX 4088 - etc_phone1_dialing_7 (Sound FX)",
+    "SoundName": "etc_phone1_dialing_7"
+  },
+  {
+    "Id": 4089,
+    "_comment": "SFX 4089 - etc_phone1_dialing_8 (Sound FX)",
+    "SoundName": "etc_phone1_dialing_8"
+  },
+  {
+    "Id": 4090,
+    "_comment": "SFX 4090 - etc_phone1_dialing_9 (Sound FX)",
+    "SoundName": "etc_phone1_dialing_9"
+  },
+  {
+    "Id": 4091,
+    "_comment": "SFX 4091 - etc_phone1_bell (Sound FX)",
+    "SoundName": "etc_phone1_bell"
+  },
+  {
+    "Id": 4092,
+    "_comment": "SFX 4092 - etc_phone1_geta (Sound FX)",
+    "SoundName": "etc_phone1_geta"
+  },
+  {
+    "Id": 4093,
+    "_comment": "SFX 4093 - etc_phone1_getb (Sound FX)",
+    "SoundName": "etc_phone1_getb"
+  },
+  {
+    "Id": 4101,
+    "_comment": "SFX 4101 -  (Sound FX)",
+    "SoundName": ""
+  },
+  {
+    "Id": 4102,
+    "_comment": "SFX 4102 -  (Sound FX)",
+    "SoundName": ""
+  },
+  {
+    "Id": 4103,
+    "_comment": "SFX 4103 - etc_pet_mutate (Sound FX)",
+    "SoundName": "etc_pet_mutate"
+  },
+  {
+    "Id": 4111,
+    "_comment": "SFX 4111 - etc_weaponup_glastone (Sound FX)",
+    "SoundName": "etc_weaponup_glastone"
+  },
+  {
+    "Id": 4112,
+    "_comment": "SFX 4112 - etc_weaponup_success (Sound FX)",
+    "SoundName": "etc_weaponup_success"
+  },
+  {
+    "Id": 4113,
+    "_comment": "SFX 4113 - etc_weaponup_fail (Sound FX)",
+    "SoundName": "etc_weaponup_fail"
+  },
+  {
+    "Id": 4114,
+    "_comment": "SFX 4114 - etc_weaponup_fail2 (Sound FX)",
+    "SoundName": "etc_weaponup_fail2"
+  },
+  {
+    "Id": 4121,
+    "_comment": "SFX 4121 - etc_event_notify_gotoschool (Sound FX)",
+    "SoundName": "etc_event_notify_gotoschool"
+  },
+  {
+    "Id": 4122,
+    "_comment": "SFX 4122 - etc_event_notify_leaveschool (Sound FX)",
+    "SoundName": "etc_event_notify_leaveschool"
+  },
+  {
+    "Id": 4123,
+    "_comment": "SFX 4123 - etc_event_notify_night (Sound FX)",
+    "SoundName": "etc_event_notify_night"
+  },
+  {
+    "Id": 5011,
+    "_comment": "SFX 5011 - episode_notify_silen1 (Sound FX)",
+    "SoundName": "episode_notify_silen1"
+  },
+  {
+    "Id": 5013,
+    "_comment": "SFX 5013 - episode_notify_silen2 (Sound FX)",
+    "SoundName": "episode_notify_silen2"
+  },
+  {
+    "Id": 5012,
+    "_comment": "SFX 5012 - episode_trigger (Sound FX)",
+    "SoundName": "episode_trigger"
+  },
+  {
+    "Id": 5014,
+    "_comment": "SFX 5014 - episode_trigger1 (Sound FX)",
+    "SoundName": "episode_trigger1"
+  },
+  {
+    "Id": 5015,
+    "_comment": "SFX 5015 - episode_emily1 (Sound FX)",
+    "SoundName": "episode_emily1"
+  },
+  {
+    "Id": 5026,
+    "_comment": "SFX 5026 - episode_emily2 (Sound FX)",
+    "SoundName": "episode_emily2"
+  },
+  {
+    "Id": 5016,
+    "_comment": "SFX 5016 - episode_push (Sound FX)",
+    "SoundName": "episode_push"
+  },
+  {
+    "Id": 5017,
+    "_comment": "SFX 5017 - episode_vanishing (Sound FX)",
+    "SoundName": "episode_vanishing"
+  },
+  {
+    "Id": 5018,
+    "_comment": "SFX 5018 - episode_funny (Sound FX)",
+    "SoundName": "episode_funny"
+  },
+  {
+    "Id": 5019,
+    "_comment": "SFX 5019 - episode_countdown (Sound FX)",
+    "SoundName": "episode_countdown"
+  },
+  {
+    "Id": 5027,
+    "_comment": "SFX 5027 - episode_fox_roar1 (Sound FX)",
+    "SoundName": "episode_fox_roar1"
+  },
+  {
+    "Id": 5020,
+    "_comment": "SFX 5020 - episode_fox_roar2 (Sound FX)",
+    "SoundName": "episode_fox_roar2"
+  },
+  {
+    "Id": 5021,
+    "_comment": "SFX 5021 - episode_normal_roar (Sound FX)",
+    "SoundName": "episode_normal_roar"
+  },
+  {
+    "Id": 5022,
+    "_comment": "SFX 5022 - episode_wolf_roar (Sound FX)",
+    "SoundName": "episode_wolf_roar"
+  },
+  {
+    "Id": 5023,
+    "_comment": "SFX 5023 - episode_drop (Sound FX)",
+    "SoundName": "episode_drop"
+  },
+  {
+    "Id": 5024,
+    "_comment": "SFX 5024 - episode_win (Sound FX)",
+    "SoundName": "episode_win"
+  },
+  {
+    "Id": 5025,
+    "_comment": "SFX 5025 - episode_buzzer (Sound FX)",
+    "SoundName": "episode_buzzer"
+  },
+  {
+    "Id": 5028,
+    "_comment": "SFX 5028 - episode_cheer (Sound FX)",
+    "SoundName": "episode_cheer"
+  },
+  {
+    "Id": 5029,
+    "_comment": "SFX 5029 - episode_boo (Sound FX)",
+    "SoundName": "episode_boo"
+  },
+  {
+    "Id": 5030,
+    "_comment": "SFX 5030 - episode_whistle (Sound FX)",
+    "SoundName": "episode_whistle"
+  },
+  {
+    "Id": 5031,
+    "_comment": "SFX 5031 - episode_police_siren1 (Sound FX)",
+    "SoundName": "episode_police_siren1"
+  },
+  {
+    "Id": 5032,
+    "_comment": "SFX 5032 - episode_police_siren2 (Sound FX)",
+    "SoundName": "episode_police_siren2"
+  },
+  {
+    "Id": 5033,
+    "_comment": "SFX 5033 - episode_count (Sound FX)",
+    "SoundName": "episode_count"
+  },
+  {
+    "Id": 5034,
+    "_comment": "SFX 5034 - episode_countstart (Sound FX)",
+    "SoundName": "episode_countstart"
+  },
+  {
+    "Id": 5035,
+    "_comment": "SFX 5035 - episode_smallexplosion (Sound FX)",
+    "SoundName": "episode_smallexplosion"
+  },
+  {
+    "Id": 5036,
+    "_comment": "SFX 5036 - episode_electricshock (Sound FX)",
+    "SoundName": "episode_electricshock"
+  },
+  {
+    "Id": 5037,
+    "_comment": "SFX 5037 - episode_bigexplosion (Sound FX)",
+    "SoundName": "episode_bigexplosion"
+  },
+  {
+    "Id": 5038,
+    "_comment": "SFX 5038 - episode_ghostlaugh (Sound FX)",
+    "SoundName": "episode_ghostlaugh"
+  },
+  {
+    "Id": 5039,
+    "_comment": "SFX 5039 - episode_shield_on (Sound FX)",
+    "SoundName": "episode_shield_on"
+  },
+  {
+    "Id": 5040,
+    "_comment": "SFX 5040 - episode_shield_running (Sound FX)",
+    "SoundName": "episode_shield_running"
+  },
+  {
+    "Id": 5041,
+    "_comment": "SFX 5041 - episode_shield_off (Sound FX)",
+    "SoundName": "episode_shield_off"
+  },
+  {
+    "Id": 5042,
+    "_comment": "SFX 5042 - episode_wire_entanglement (Sound FX)",
+    "SoundName": "episode_wire_entanglement"
+  },
+  {
+    "Id": 5043,
+    "_comment": "SFX 5043 - episode_BloodyDurky (Sound FX)",
+    "SoundName": "episode_BloodyDurky"
+  },
+  {
+    "Id": 5044,
+    "_comment": "SFX 5044 - episode_congress (Sound FX)",
+    "SoundName": "episode_congress"
+  },
+  {
+    "Id": 5045,
+    "_comment": "SFX 5045 - episode_studentshouting (Sound FX)",
+    "SoundName": "episode_studentshouting"
+  },
+  {
+    "Id": 5046,
+    "_comment": "SFX 5046 - episode_guardianangel_laugh (Sound FX)",
+    "SoundName": "episode_guardianangel_laugh"
+  },
+  {
+    "Id": 5047,
+    "_comment": "SFX 5047 - episode_guardianangel_appear (Sound FX)",
+    "SoundName": "episode_guardianangel_appear"
+  },
+  {
+    "Id": 5048,
+    "_comment": "SFX 5048 - episode_guardianangel_dead (Sound FX)",
+    "SoundName": "episode_guardianangel_dead"
+  },
+  {
+    "Id": 5049,
+    "_comment": "SFX 5049 - episode_shock (Sound FX)",
+    "SoundName": "episode_shock"
+  },
+  {
+    "Id": 5050,
+    "_comment": "SFX 5050 - episode_greatfox_roar (Sound FX)",
+    "SoundName": "episode_greatfox_roar"
+  },
+  {
+    "Id": 5051,
+    "_comment": "SFX 5051 - episode_studentA_transformation (Sound FX)",
+    "SoundName": "episode_studentA_transformation"
+  },
+  {
+    "Id": 5052,
+    "_comment": "SFX 5052 - episode_AntiqueQueen_appear (Sound FX)",
+    "SoundName": "episode_AntiqueQueen_appear"
+  },
+  {
+    "Id": 5053,
+    "_comment": "SFX 5053 - episode_AntiqueQueen_transform (Sound FX)",
+    "SoundName": "episode_AntiqueQueen_transform"
+  },
+  {
+    "Id": 5054,
+    "_comment": "SFX 5054 - episode_AntiqueQueen_last (Sound FX)",
+    "SoundName": "episode_AntiqueQueen_last"
+  },
+  {
+    "Id": 5055,
+    "_comment": "SFX 5055 - episode_AntiqueQueen_dead (Sound FX)",
+    "SoundName": "episode_AntiqueQueen_dead"
+  }
+]

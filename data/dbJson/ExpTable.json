@@ -1,0 +1,1502 @@
+[
+  {
+    "Level": 1,
+    "_comment": "Character Level 1 - Requires 8 EXP for next level",
+    "RequiredExp": 8
+  },
+  {
+    "Level": 2,
+    "_comment": "Character Level 2 - Requires 12 EXP for next level",
+    "RequiredExp": 12
+  },
+  {
+    "Level": 3,
+    "_comment": "Character Level 3 - Requires 16 EXP for next level",
+    "RequiredExp": 16
+  },
+  {
+    "Level": 4,
+    "_comment": "Character Level 4 - Requires 22 EXP for next level",
+    "RequiredExp": 22
+  },
+  {
+    "Level": 5,
+    "_comment": "Character Level 5 - Requires 28 EXP for next level",
+    "RequiredExp": 28
+  },
+  {
+    "Level": 6,
+    "_comment": "Character Level 6 - Requires 35 EXP for next level",
+    "RequiredExp": 35
+  },
+  {
+    "Level": 7,
+    "_comment": "Character Level 7 - Requires 44 EXP for next level",
+    "RequiredExp": 44
+  },
+  {
+    "Level": 8,
+    "_comment": "Character Level 8 - Requires 54 EXP for next level",
+    "RequiredExp": 54
+  },
+  {
+    "Level": 9,
+    "_comment": "Character Level 9 - Requires 65 EXP for next level",
+    "RequiredExp": 65
+  },
+  {
+    "Level": 10,
+    "_comment": "Character Level 10 - Requires 78 EXP for next level",
+    "RequiredExp": 78
+  },
+  {
+    "Level": 11,
+    "_comment": "Character Level 11 - Requires 92 EXP for next level",
+    "RequiredExp": 92
+  },
+  {
+    "Level": 12,
+    "_comment": "Character Level 12 - Requires 108 EXP for next level",
+    "RequiredExp": 108
+  },
+  {
+    "Level": 13,
+    "_comment": "Character Level 13 - Requires 126 EXP for next level",
+    "RequiredExp": 126
+  },
+  {
+    "Level": 14,
+    "_comment": "Character Level 14 - Requires 145 EXP for next level",
+    "RequiredExp": 145
+  },
+  {
+    "Level": 15,
+    "_comment": "Character Level 15 - Requires 167 EXP for next level",
+    "RequiredExp": 167
+  },
+  {
+    "Level": 16,
+    "_comment": "Character Level 16 - Requires 190 EXP for next level",
+    "RequiredExp": 190
+  },
+  {
+    "Level": 17,
+    "_comment": "Character Level 17 - Requires 215 EXP for next level",
+    "RequiredExp": 215
+  },
+  {
+    "Level": 18,
+    "_comment": "Character Level 18 - Requires 243 EXP for next level",
+    "RequiredExp": 243
+  },
+  {
+    "Level": 19,
+    "_comment": "Character Level 19 - Requires 273 EXP for next level",
+    "RequiredExp": 273
+  },
+  {
+    "Level": 20,
+    "_comment": "Character Level 20 - Requires 305 EXP for next level",
+    "RequiredExp": 305
+  },
+  {
+    "Level": 21,
+    "_comment": "Character Level 21 - Requires 339 EXP for next level",
+    "RequiredExp": 339
+  },
+  {
+    "Level": 22,
+    "_comment": "Character Level 22 - Requires 376 EXP for next level",
+    "RequiredExp": 376
+  },
+  {
+    "Level": 23,
+    "_comment": "Character Level 23 - Requires 416 EXP for next level",
+    "RequiredExp": 416
+  },
+  {
+    "Level": 24,
+    "_comment": "Character Level 24 - Requires 458 EXP for next level",
+    "RequiredExp": 458
+  },
+  {
+    "Level": 25,
+    "_comment": "Character Level 25 - Requires 503 EXP for next level",
+    "RequiredExp": 503
+  },
+  {
+    "Level": 26,
+    "_comment": "Character Level 26 - Requires 551 EXP for next level",
+    "RequiredExp": 551
+  },
+  {
+    "Level": 27,
+    "_comment": "Character Level 27 - Requires 602 EXP for next level",
+    "RequiredExp": 602
+  },
+  {
+    "Level": 28,
+    "_comment": "Character Level 28 - Requires 655 EXP for next level",
+    "RequiredExp": 655
+  },
+  {
+    "Level": 29,
+    "_comment": "Character Level 29 - Requires 712 EXP for next level",
+    "RequiredExp": 712
+  },
+  {
+    "Level": 30,
+    "_comment": "Character Level 30 - Requires 772 EXP for next level",
+    "RequiredExp": 772
+  },
+  {
+    "Level": 31,
+    "_comment": "Character Level 31 - Requires 922 EXP for next level",
+    "RequiredExp": 922
+  },
+  {
+    "Level": 32,
+    "_comment": "Character Level 32 - Requires 1087 EXP for next level",
+    "RequiredExp": 1087
+  },
+  {
+    "Level": 33,
+    "_comment": "Character Level 33 - Requires 1271 EXP for next level",
+    "RequiredExp": 1271
+  },
+  {
+    "Level": 34,
+    "_comment": "Character Level 34 - Requires 1472 EXP for next level",
+    "RequiredExp": 1472
+  },
+  {
+    "Level": 35,
+    "_comment": "Character Level 35 - Requires 1693 EXP for next level",
+    "RequiredExp": 1693
+  },
+  {
+    "Level": 36,
+    "_comment": "Character Level 36 - Requires 1934 EXP for next level",
+    "RequiredExp": 1934
+  },
+  {
+    "Level": 37,
+    "_comment": "Character Level 37 - Requires 2195 EXP for next level",
+    "RequiredExp": 2195
+  },
+  {
+    "Level": 38,
+    "_comment": "Character Level 38 - Requires 2478 EXP for next level",
+    "RequiredExp": 2478
+  },
+  {
+    "Level": 39,
+    "_comment": "Character Level 39 - Requires 2782 EXP for next level",
+    "RequiredExp": 2782
+  },
+  {
+    "Level": 40,
+    "_comment": "Character Level 40 - Requires 3110 EXP for next level",
+    "RequiredExp": 3110
+  },
+  {
+    "Level": 41,
+    "_comment": "Character Level 41 - Requires 3462 EXP for next level",
+    "RequiredExp": 3462
+  },
+  {
+    "Level": 42,
+    "_comment": "Character Level 42 - Requires 3838 EXP for next level",
+    "RequiredExp": 3838
+  },
+  {
+    "Level": 43,
+    "_comment": "Character Level 43 - Requires 4240 EXP for next level",
+    "RequiredExp": 4240
+  },
+  {
+    "Level": 44,
+    "_comment": "Character Level 44 - Requires 4668 EXP for next level",
+    "RequiredExp": 4668
+  },
+  {
+    "Level": 45,
+    "_comment": "Character Level 45 - Requires 5122 EXP for next level",
+    "RequiredExp": 5122
+  },
+  {
+    "Level": 46,
+    "_comment": "Character Level 46 - Requires 5604 EXP for next level",
+    "RequiredExp": 5604
+  },
+  {
+    "Level": 47,
+    "_comment": "Character Level 47 - Requires 6115 EXP for next level",
+    "RequiredExp": 6115
+  },
+  {
+    "Level": 48,
+    "_comment": "Character Level 48 - Requires 6656 EXP for next level",
+    "RequiredExp": 6656
+  },
+  {
+    "Level": 49,
+    "_comment": "Character Level 49 - Requires 7226 EXP for next level",
+    "RequiredExp": 7226
+  },
+  {
+    "Level": 50,
+    "_comment": "Character Level 50 - Requires 7827 EXP for next level",
+    "RequiredExp": 7827
+  },
+  {
+    "Level": 51,
+    "_comment": "Character Level 51 - Requires 8460 EXP for next level",
+    "RequiredExp": 8460
+  },
+  {
+    "Level": 52,
+    "_comment": "Character Level 52 - Requires 9125 EXP for next level",
+    "RequiredExp": 9125
+  },
+  {
+    "Level": 53,
+    "_comment": "Character Level 53 - Requires 9823 EXP for next level",
+    "RequiredExp": 9823
+  },
+  {
+    "Level": 54,
+    "_comment": "Character Level 54 - Requires 10555 EXP for next level",
+    "RequiredExp": 10555
+  },
+  {
+    "Level": 55,
+    "_comment": "Character Level 55 - Requires 11323 EXP for next level",
+    "RequiredExp": 11323
+  },
+  {
+    "Level": 56,
+    "_comment": "Character Level 56 - Requires 12125 EXP for next level",
+    "RequiredExp": 12125
+  },
+  {
+    "Level": 57,
+    "_comment": "Character Level 57 - Requires 12964 EXP for next level",
+    "RequiredExp": 12964
+  },
+  {
+    "Level": 58,
+    "_comment": "Character Level 58 - Requires 13840 EXP for next level",
+    "RequiredExp": 13840
+  },
+  {
+    "Level": 59,
+    "_comment": "Character Level 59 - Requires 14753 EXP for next level",
+    "RequiredExp": 14753
+  },
+  {
+    "Level": 60,
+    "_comment": "Character Level 60 - Requires 15705 EXP for next level",
+    "RequiredExp": 15705
+  },
+  {
+    "Level": 61,
+    "_comment": "Character Level 61 - Requires 17725 EXP for next level",
+    "RequiredExp": 17725
+  },
+  {
+    "Level": 62,
+    "_comment": "Character Level 62 - Requires 19893 EXP for next level",
+    "RequiredExp": 19893
+  },
+  {
+    "Level": 63,
+    "_comment": "Character Level 63 - Requires 22215 EXP for next level",
+    "RequiredExp": 22215
+  },
+  {
+    "Level": 64,
+    "_comment": "Character Level 64 - Requires 24695 EXP for next level",
+    "RequiredExp": 24695
+  },
+  {
+    "Level": 65,
+    "_comment": "Character Level 65 - Requires 27337 EXP for next level",
+    "RequiredExp": 27337
+  },
+  {
+    "Level": 66,
+    "_comment": "Character Level 66 - Requires 30145 EXP for next level",
+    "RequiredExp": 30145
+  },
+  {
+    "Level": 67,
+    "_comment": "Character Level 67 - Requires 33123 EXP for next level",
+    "RequiredExp": 33123
+  },
+  {
+    "Level": 68,
+    "_comment": "Character Level 68 - Requires 36276 EXP for next level",
+    "RequiredExp": 36276
+  },
+  {
+    "Level": 69,
+    "_comment": "Character Level 69 - Requires 39609 EXP for next level",
+    "RequiredExp": 39609
+  },
+  {
+    "Level": 70,
+    "_comment": "Character Level 70 - Requires 43125 EXP for next level",
+    "RequiredExp": 43125
+  },
+  {
+    "Level": 71,
+    "_comment": "Character Level 71 - Requires 46828 EXP for next level",
+    "RequiredExp": 46828
+  },
+  {
+    "Level": 72,
+    "_comment": "Character Level 72 - Requires 50724 EXP for next level",
+    "RequiredExp": 50724
+  },
+  {
+    "Level": 73,
+    "_comment": "Character Level 73 - Requires 54815 EXP for next level",
+    "RequiredExp": 54815
+  },
+  {
+    "Level": 74,
+    "_comment": "Character Level 74 - Requires 59107 EXP for next level",
+    "RequiredExp": 59107
+  },
+  {
+    "Level": 75,
+    "_comment": "Character Level 75 - Requires 63603 EXP for next level",
+    "RequiredExp": 63603
+  },
+  {
+    "Level": 76,
+    "_comment": "Character Level 76 - Requires 68308 EXP for next level",
+    "RequiredExp": 68308
+  },
+  {
+    "Level": 77,
+    "_comment": "Character Level 77 - Requires 73226 EXP for next level",
+    "RequiredExp": 73226
+  },
+  {
+    "Level": 78,
+    "_comment": "Character Level 78 - Requires 78362 EXP for next level",
+    "RequiredExp": 78362
+  },
+  {
+    "Level": 79,
+    "_comment": "Character Level 79 - Requires 83720 EXP for next level",
+    "RequiredExp": 83720
+  },
+  {
+    "Level": 80,
+    "_comment": "Character Level 80 - Requires 89305 EXP for next level",
+    "RequiredExp": 89305
+  },
+  {
+    "Level": 81,
+    "_comment": "Character Level 81 - Requires 95120 EXP for next level",
+    "RequiredExp": 95120
+  },
+  {
+    "Level": 82,
+    "_comment": "Character Level 82 - Requires 101169 EXP for next level",
+    "RequiredExp": 101169
+  },
+  {
+    "Level": 83,
+    "_comment": "Character Level 83 - Requires 107457 EXP for next level",
+    "RequiredExp": 107457
+  },
+  {
+    "Level": 84,
+    "_comment": "Character Level 84 - Requires 113989 EXP for next level",
+    "RequiredExp": 113989
+  },
+  {
+    "Level": 85,
+    "_comment": "Character Level 85 - Requires 120767 EXP for next level",
+    "RequiredExp": 120767
+  },
+  {
+    "Level": 86,
+    "_comment": "Character Level 86 - Requires 127798 EXP for next level",
+    "RequiredExp": 127798
+  },
+  {
+    "Level": 87,
+    "_comment": "Character Level 87 - Requires 135084 EXP for next level",
+    "RequiredExp": 135084
+  },
+  {
+    "Level": 88,
+    "_comment": "Character Level 88 - Requires 142631 EXP for next level",
+    "RequiredExp": 142631
+  },
+  {
+    "Level": 89,
+    "_comment": "Character Level 89 - Requires 150442 EXP for next level",
+    "RequiredExp": 150442
+  },
+  {
+    "Level": 90,
+    "_comment": "Character Level 90 - Requires 158522 EXP for next level",
+    "RequiredExp": 158522
+  },
+  {
+    "Level": 91,
+    "_comment": "Character Level 91 - Requires 172533 EXP for next level",
+    "RequiredExp": 172533
+  },
+  {
+    "Level": 92,
+    "_comment": "Character Level 92 - Requires 187491 EXP for next level",
+    "RequiredExp": 187491
+  },
+  {
+    "Level": 93,
+    "_comment": "Character Level 93 - Requires 203197 EXP for next level",
+    "RequiredExp": 203197
+  },
+  {
+    "Level": 94,
+    "_comment": "Character Level 94 - Requires 219666 EXP for next level",
+    "RequiredExp": 219666
+  },
+  {
+    "Level": 95,
+    "_comment": "Character Level 95 - Requires 236913 EXP for next level",
+    "RequiredExp": 236913
+  },
+  {
+    "Level": 96,
+    "_comment": "Character Level 96 - Requires 254953 EXP for next level",
+    "RequiredExp": 254953
+  },
+  {
+    "Level": 97,
+    "_comment": "Character Level 97 - Requires 273800 EXP for next level",
+    "RequiredExp": 273800
+  },
+  {
+    "Level": 98,
+    "_comment": "Character Level 98 - Requires 293470 EXP for next level",
+    "RequiredExp": 293470
+  },
+  {
+    "Level": 99,
+    "_comment": "Character Level 99 - Requires 313978 EXP for next level",
+    "RequiredExp": 313978
+  },
+  {
+    "Level": 100,
+    "_comment": "Character Level 100 - Requires 335338 EXP for next level",
+    "RequiredExp": 335338
+  },
+  {
+    "Level": 101,
+    "_comment": "Character Level 101 - Requires 357566 EXP for next level",
+    "RequiredExp": 357566
+  },
+  {
+    "Level": 102,
+    "_comment": "Character Level 102 - Requires 380676 EXP for next level",
+    "RequiredExp": 380676
+  },
+  {
+    "Level": 103,
+    "_comment": "Character Level 103 - Requires 404684 EXP for next level",
+    "RequiredExp": 404684
+  },
+  {
+    "Level": 104,
+    "_comment": "Character Level 104 - Requires 429604 EXP for next level",
+    "RequiredExp": 429604
+  },
+  {
+    "Level": 105,
+    "_comment": "Character Level 105 - Requires 455451 EXP for next level",
+    "RequiredExp": 455451
+  },
+  {
+    "Level": 106,
+    "_comment": "Character Level 106 - Requires 482240 EXP for next level",
+    "RequiredExp": 482240
+  },
+  {
+    "Level": 107,
+    "_comment": "Character Level 107 - Requires 509987 EXP for next level",
+    "RequiredExp": 509987
+  },
+  {
+    "Level": 108,
+    "_comment": "Character Level 108 - Requires 538709 EXP for next level",
+    "RequiredExp": 538709
+  },
+  {
+    "Level": 109,
+    "_comment": "Character Level 109 - Requires 568412 EXP for next level",
+    "RequiredExp": 568412
+  },
+  {
+    "Level": 110,
+    "_comment": "Character Level 110 - Requires 599125 EXP for next level",
+    "RequiredExp": 599125
+  },
+  {
+    "Level": 111,
+    "_comment": "Character Level 111 - Requires 630851 EXP for next level",
+    "RequiredExp": 630851
+  },
+  {
+    "Level": 112,
+    "_comment": "Character Level 112 - Requires 663609 EXP for next level",
+    "RequiredExp": 663609
+  },
+  {
+    "Level": 113,
+    "_comment": "Character Level 113 - Requires 697406 EXP for next level",
+    "RequiredExp": 697406
+  },
+  {
+    "Level": 114,
+    "_comment": "Character Level 114 - Requires 732272 EXP for next level",
+    "RequiredExp": 732272
+  },
+  {
+    "Level": 115,
+    "_comment": "Character Level 115 - Requires 768214 EXP for next level",
+    "RequiredExp": 768214
+  },
+  {
+    "Level": 116,
+    "_comment": "Character Level 116 - Requires 805249 EXP for next level",
+    "RequiredExp": 805249
+  },
+  {
+    "Level": 117,
+    "_comment": "Character Level 117 - Requires 843389 EXP for next level",
+    "RequiredExp": 843389
+  },
+  {
+    "Level": 118,
+    "_comment": "Character Level 118 - Requires 882652 EXP for next level",
+    "RequiredExp": 882652
+  },
+  {
+    "Level": 119,
+    "_comment": "Character Level 119 - Requires 923051 EXP for next level",
+    "RequiredExp": 923051
+  },
+  {
+    "Level": 120,
+    "_comment": "Character Level 120 - Requires 964602 EXP for next level",
+    "RequiredExp": 964602
+  },
+  {
+    "Level": 121,
+    "_comment": "Character Level 121 - Requires 1007267 EXP for next level",
+    "RequiredExp": 1007267
+  },
+  {
+    "Level": 122,
+    "_comment": "Character Level 122 - Requires 1028971 EXP for next level",
+    "RequiredExp": 1028971
+  },
+  {
+    "Level": 123,
+    "_comment": "Character Level 123 - Requires 1063395 EXP for next level",
+    "RequiredExp": 1063395
+  },
+  {
+    "Level": 124,
+    "_comment": "Character Level 124 - Requires 1103463 EXP for next level",
+    "RequiredExp": 1103463
+  },
+  {
+    "Level": 125,
+    "_comment": "Character Level 125 - Requires 1142505 EXP for next level",
+    "RequiredExp": 1142505
+  },
+  {
+    "Level": 126,
+    "_comment": "Character Level 126 - Requires 1190010 EXP for next level",
+    "RequiredExp": 1190010
+  },
+  {
+    "Level": 127,
+    "_comment": "Character Level 127 - Requires 1288748 EXP for next level",
+    "RequiredExp": 1288748
+  },
+  {
+    "Level": 128,
+    "_comment": "Character Level 128 - Requires 1316552 EXP for next level",
+    "RequiredExp": 1316552
+  },
+  {
+    "Level": 129,
+    "_comment": "Character Level 129 - Requires 1382121 EXP for next level",
+    "RequiredExp": 1382121
+  },
+  {
+    "Level": 130,
+    "_comment": "Character Level 130 - Requires 1452246 EXP for next level",
+    "RequiredExp": 1452246
+  },
+  {
+    "Level": 131,
+    "_comment": "Character Level 131 - Requires 1525749 EXP for next level",
+    "RequiredExp": 1525749
+  },
+  {
+    "Level": 132,
+    "_comment": "Character Level 132 - Requires 1607705 EXP for next level",
+    "RequiredExp": 1607705
+  },
+  {
+    "Level": 133,
+    "_comment": "Character Level 133 - Requires 1692297 EXP for next level",
+    "RequiredExp": 1692297
+  },
+  {
+    "Level": 134,
+    "_comment": "Character Level 134 - Requires 1779559 EXP for next level",
+    "RequiredExp": 1779559
+  },
+  {
+    "Level": 135,
+    "_comment": "Character Level 135 - Requires 1869527 EXP for next level",
+    "RequiredExp": 1869527
+  },
+  {
+    "Level": 136,
+    "_comment": "Character Level 136 - Requires 1962235 EXP for next level",
+    "RequiredExp": 1962235
+  },
+  {
+    "Level": 137,
+    "_comment": "Character Level 137 - Requires 2057718 EXP for next level",
+    "RequiredExp": 2057718
+  },
+  {
+    "Level": 138,
+    "_comment": "Character Level 138 - Requires 2156011 EXP for next level",
+    "RequiredExp": 2156011
+  },
+  {
+    "Level": 139,
+    "_comment": "Character Level 139 - Requires 2257148 EXP for next level",
+    "RequiredExp": 2257148
+  },
+  {
+    "Level": 140,
+    "_comment": "Character Level 140 - Requires 2364133 EXP for next level",
+    "RequiredExp": 2364133
+  },
+  {
+    "Level": 141,
+    "_comment": "Character Level 141 - Requires 2468097 EXP for next level",
+    "RequiredExp": 2468097
+  },
+  {
+    "Level": 142,
+    "_comment": "Character Level 142 - Requires 2577978 EXP for next level",
+    "RequiredExp": 2577978
+  },
+  {
+    "Level": 143,
+    "_comment": "Character Level 143 - Requires 2690843 EXP for next level",
+    "RequiredExp": 2690843
+  },
+  {
+    "Level": 144,
+    "_comment": "Character Level 144 - Requires 2806728 EXP for next level",
+    "RequiredExp": 2806728
+  },
+  {
+    "Level": 145,
+    "_comment": "Character Level 145 - Requires 2925666 EXP for next level",
+    "RequiredExp": 2925666
+  },
+  {
+    "Level": 146,
+    "_comment": "Character Level 146 - Requires 3047692 EXP for next level",
+    "RequiredExp": 3047692
+  },
+  {
+    "Level": 147,
+    "_comment": "Character Level 147 - Requires 3172842 EXP for next level",
+    "RequiredExp": 3172842
+  },
+  {
+    "Level": 148,
+    "_comment": "Character Level 148 - Requires 3286625 EXP for next level",
+    "RequiredExp": 3286625
+  },
+  {
+    "Level": 149,
+    "_comment": "Character Level 149 - Requires 3432653 EXP for next level",
+    "RequiredExp": 3432653
+  },
+  {
+    "Level": 150,
+    "_comment": "Character Level 150 - Requires 3531952 EXP for next level",
+    "RequiredExp": 3531952
+  },
+  {
+    "Level": 151,
+    "_comment": "Character Level 151 - Requires 4705440 EXP for next level",
+    "RequiredExp": 4705440
+  },
+  {
+    "Level": 152,
+    "_comment": "Character Level 152 - Requires 4687471 EXP for next level",
+    "RequiredExp": 4687471
+  },
+  {
+    "Level": 153,
+    "_comment": "Character Level 153 - Requires 4684952 EXP for next level",
+    "RequiredExp": 4684952
+  },
+  {
+    "Level": 154,
+    "_comment": "Character Level 154 - Requires 4697883 EXP for next level",
+    "RequiredExp": 4697883
+  },
+  {
+    "Level": 155,
+    "_comment": "Character Level 155 - Requires 4726264 EXP for next level",
+    "RequiredExp": 4726264
+  },
+  {
+    "Level": 156,
+    "_comment": "Character Level 156 - Requires 4770095 EXP for next level",
+    "RequiredExp": 4770095
+  },
+  {
+    "Level": 157,
+    "_comment": "Character Level 157 - Requires 4829376 EXP for next level",
+    "RequiredExp": 4829376
+  },
+  {
+    "Level": 158,
+    "_comment": "Character Level 158 - Requires 4904107 EXP for next level",
+    "RequiredExp": 4904107
+  },
+  {
+    "Level": 159,
+    "_comment": "Character Level 159 - Requires 4994288 EXP for next level",
+    "RequiredExp": 4994288
+  },
+  {
+    "Level": 160,
+    "_comment": "Character Level 160 - Requires 5099893 EXP for next level",
+    "RequiredExp": 5099893
+  },
+  {
+    "Level": 161,
+    "_comment": "Character Level 161 - Requires 5221000 EXP for next level",
+    "RequiredExp": 5221000
+  },
+  {
+    "Level": 162,
+    "_comment": "Character Level 162 - Requires 5357531 EXP for next level",
+    "RequiredExp": 5357531
+  },
+  {
+    "Level": 163,
+    "_comment": "Character Level 163 - Requires 5509512 EXP for next level",
+    "RequiredExp": 5509512
+  },
+  {
+    "Level": 164,
+    "_comment": "Character Level 164 - Requires 5676943 EXP for next level",
+    "RequiredExp": 5676943
+  },
+  {
+    "Level": 165,
+    "_comment": "Character Level 165 - Requires 5859824 EXP for next level",
+    "RequiredExp": 5859824
+  },
+  {
+    "Level": 166,
+    "_comment": "Character Level 166 - Requires 6058155 EXP for next level",
+    "RequiredExp": 6058155
+  },
+  {
+    "Level": 167,
+    "_comment": "Character Level 167 - Requires 6271936 EXP for next level",
+    "RequiredExp": 6271936
+  },
+  {
+    "Level": 168,
+    "_comment": "Character Level 168 - Requires 6501167 EXP for next level",
+    "RequiredExp": 6501167
+  },
+  {
+    "Level": 169,
+    "_comment": "Character Level 169 - Requires 6745848 EXP for next level",
+    "RequiredExp": 6745848
+  },
+  {
+    "Level": 170,
+    "_comment": "Character Level 170 - Requires 7005979 EXP for next level",
+    "RequiredExp": 7005979
+  },
+  {
+    "Level": 171,
+    "_comment": "Character Level 171 - Requires 7281555 EXP for next level",
+    "RequiredExp": 7281555
+  },
+  {
+    "Level": 172,
+    "_comment": "Character Level 172 - Requires 7572591 EXP for next level",
+    "RequiredExp": 7572591
+  },
+  {
+    "Level": 173,
+    "_comment": "Character Level 173 - Requires 7879072 EXP for next level",
+    "RequiredExp": 7879072
+  },
+  {
+    "Level": 174,
+    "_comment": "Character Level 174 - Requires 8201003 EXP for next level",
+    "RequiredExp": 8201003
+  },
+  {
+    "Level": 175,
+    "_comment": "Character Level 175 - Requires 8538384 EXP for next level",
+    "RequiredExp": 8538384
+  },
+  {
+    "Level": 176,
+    "_comment": "Character Level 176 - Requires 8891215 EXP for next level",
+    "RequiredExp": 8891215
+  },
+  {
+    "Level": 177,
+    "_comment": "Character Level 177 - Requires 9259496 EXP for next level",
+    "RequiredExp": 9259496
+  },
+  {
+    "Level": 178,
+    "_comment": "Character Level 178 - Requires 9643227 EXP for next level",
+    "RequiredExp": 9643227
+  },
+  {
+    "Level": 179,
+    "_comment": "Character Level 179 - Requires 10042408 EXP for next level",
+    "RequiredExp": 10042408
+  },
+  {
+    "Level": 180,
+    "_comment": "Character Level 180 - Requires 10457039 EXP for next level",
+    "RequiredExp": 10457039
+  },
+  {
+    "Level": 181,
+    "_comment": "Character Level 181 - Requires 10549983 EXP for next level",
+    "RequiredExp": 10549983
+  },
+  {
+    "Level": 182,
+    "_comment": "Character Level 182 - Requires 10926919 EXP for next level",
+    "RequiredExp": 10926919
+  },
+  {
+    "Level": 183,
+    "_comment": "Character Level 183 - Requires 11310932 EXP for next level",
+    "RequiredExp": 11310932
+  },
+  {
+    "Level": 184,
+    "_comment": "Character Level 184 - Requires 11702146 EXP for next level",
+    "RequiredExp": 11702146
+  },
+  {
+    "Level": 185,
+    "_comment": "Character Level 185 - Requires 12096885 EXP for next level",
+    "RequiredExp": 12096885
+  },
+  {
+    "Level": 186,
+    "_comment": "Character Level 186 - Requires 12506672 EXP for next level",
+    "RequiredExp": 12506672
+  },
+  {
+    "Level": 187,
+    "_comment": "Character Level 187 - Requires 12920230 EXP for next level",
+    "RequiredExp": 12920230
+  },
+  {
+    "Level": 188,
+    "_comment": "Character Level 188 - Requires 13341483 EXP for next level",
+    "RequiredExp": 13341483
+  },
+  {
+    "Level": 189,
+    "_comment": "Character Level 189 - Requires 13770555 EXP for next level",
+    "RequiredExp": 13770555
+  },
+  {
+    "Level": 190,
+    "_comment": "Character Level 190 - Requires 14207570 EXP for next level",
+    "RequiredExp": 14207570
+  },
+  {
+    "Level": 191,
+    "_comment": "Character Level 191 - Requires 14652651 EXP for next level",
+    "RequiredExp": 14652651
+  },
+  {
+    "Level": 192,
+    "_comment": "Character Level 192 - Requires 15105921 EXP for next level",
+    "RequiredExp": 15105921
+  },
+  {
+    "Level": 193,
+    "_comment": "Character Level 193 - Requires 15567504 EXP for next level",
+    "RequiredExp": 15567504
+  },
+  {
+    "Level": 194,
+    "_comment": "Character Level 194 - Requires 16037524 EXP for next level",
+    "RequiredExp": 16037524
+  },
+  {
+    "Level": 195,
+    "_comment": "Character Level 195 - Requires 16504756 EXP for next level",
+    "RequiredExp": 16504756
+  },
+  {
+    "Level": 196,
+    "_comment": "Character Level 196 - Requires 17003370 EXP for next level",
+    "RequiredExp": 17003370
+  },
+  {
+    "Level": 197,
+    "_comment": "Character Level 197 - Requires 17499442 EXP for next level",
+    "RequiredExp": 17499442
+  },
+  {
+    "Level": 198,
+    "_comment": "Character Level 198 - Requires 18004445 EXP for next level",
+    "RequiredExp": 18004445
+  },
+  {
+    "Level": 199,
+    "_comment": "Character Level 199 - Requires 18518503 EXP for next level",
+    "RequiredExp": 18518503
+  },
+  {
+    "Level": 200,
+    "_comment": "Character Level 200 - Requires 19037860 EXP for next level",
+    "RequiredExp": 19037860
+  },
+  {
+    "Level": 201,
+    "_comment": "Character Level 201 - Requires 19571986 EXP for next level",
+    "RequiredExp": 19571986
+  },
+  {
+    "Level": 202,
+    "_comment": "Character Level 202 - Requires 20115453 EXP for next level",
+    "RequiredExp": 20115453
+  },
+  {
+    "Level": 203,
+    "_comment": "Character Level 203 - Requires 20668332 EXP for next level",
+    "RequiredExp": 20668332
+  },
+  {
+    "Level": 204,
+    "_comment": "Character Level 204 - Requires 21230697 EXP for next level",
+    "RequiredExp": 21230697
+  },
+  {
+    "Level": 205,
+    "_comment": "Character Level 205 - Requires 21802621 EXP for next level",
+    "RequiredExp": 21802621
+  },
+  {
+    "Level": 206,
+    "_comment": "Character Level 206 - Requires 22384178 EXP for next level",
+    "RequiredExp": 22384178
+  },
+  {
+    "Level": 207,
+    "_comment": "Character Level 207 - Requires 22915441 EXP for next level",
+    "RequiredExp": 22915441
+  },
+  {
+    "Level": 208,
+    "_comment": "Character Level 208 - Requires 23576483 EXP for next level",
+    "RequiredExp": 23576483
+  },
+  {
+    "Level": 209,
+    "_comment": "Character Level 209 - Requires 24187378 EXP for next level",
+    "RequiredExp": 24187378
+  },
+  {
+    "Level": 210,
+    "_comment": "Character Level 210 - Requires 24808198 EXP for next level",
+    "RequiredExp": 24808198
+  },
+  {
+    "Level": 211,
+    "_comment": "Character Level 211 - Requires 25439017 EXP for next level",
+    "RequiredExp": 25439017
+  },
+  {
+    "Level": 212,
+    "_comment": "Character Level 212 - Requires 26079909 EXP for next level",
+    "RequiredExp": 26079909
+  },
+  {
+    "Level": 213,
+    "_comment": "Character Level 213 - Requires 26730969 EXP for next level",
+    "RequiredExp": 26730969
+  },
+  {
+    "Level": 214,
+    "_comment": "Character Level 214 - Requires 27392201 EXP for next level",
+    "RequiredExp": 27392201
+  },
+  {
+    "Level": 215,
+    "_comment": "Character Level 215 - Requires 28013749 EXP for next level",
+    "RequiredExp": 28013749
+  },
+  {
+    "Level": 216,
+    "_comment": "Character Level 216 - Requires 28745662 EXP for next level",
+    "RequiredExp": 28745662
+  },
+  {
+    "Level": 217,
+    "_comment": "Character Level 217 - Requires 29438014 EXP for next level",
+    "RequiredExp": 29438014
+  },
+  {
+    "Level": 218,
+    "_comment": "Character Level 218 - Requires 30140877 EXP for next level",
+    "RequiredExp": 30140877
+  },
+  {
+    "Level": 219,
+    "_comment": "Character Level 219 - Requires 30854326 EXP for next level",
+    "RequiredExp": 30854326
+  },
+  {
+    "Level": 220,
+    "_comment": "Character Level 220 - Requires 31590261 EXP for next level",
+    "RequiredExp": 31590261
+  },
+  {
+    "Level": 221,
+    "_comment": "Character Level 221 - Requires 32337022 EXP for next level",
+    "RequiredExp": 32337022
+  },
+  {
+    "Level": 222,
+    "_comment": "Character Level 222 - Requires 33096760 EXP for next level",
+    "RequiredExp": 33096760
+  },
+  {
+    "Level": 223,
+    "_comment": "Character Level 223 - Requires 33869552 EXP for next level",
+    "RequiredExp": 33869552
+  },
+  {
+    "Level": 224,
+    "_comment": "Character Level 224 - Requires 34655472 EXP for next level",
+    "RequiredExp": 34655472
+  },
+  {
+    "Level": 225,
+    "_comment": "Character Level 225 - Requires 35454595 EXP for next level",
+    "RequiredExp": 35454595
+  },
+  {
+    "Level": 226,
+    "_comment": "Character Level 226 - Requires 36266995 EXP for next level",
+    "RequiredExp": 36266995
+  },
+  {
+    "Level": 227,
+    "_comment": "Character Level 227 - Requires 37092747 EXP for next level",
+    "RequiredExp": 37092747
+  },
+  {
+    "Level": 228,
+    "_comment": "Character Level 228 - Requires 37931927 EXP for next level",
+    "RequiredExp": 37931927
+  },
+  {
+    "Level": 229,
+    "_comment": "Character Level 229 - Requires 38784609 EXP for next level",
+    "RequiredExp": 38784609
+  },
+  {
+    "Level": 230,
+    "_comment": "Character Level 230 - Requires 39650868 EXP for next level",
+    "RequiredExp": 39650868
+  },
+  {
+    "Level": 231,
+    "_comment": "Character Level 231 - Requires 40530779 EXP for next level",
+    "RequiredExp": 40530779
+  },
+  {
+    "Level": 232,
+    "_comment": "Character Level 232 - Requires 41424416 EXP for next level",
+    "RequiredExp": 41424416
+  },
+  {
+    "Level": 233,
+    "_comment": "Character Level 233 - Requires 42331854 EXP for next level",
+    "RequiredExp": 42331854
+  },
+  {
+    "Level": 234,
+    "_comment": "Character Level 234 - Requires 43253169 EXP for next level",
+    "RequiredExp": 43253169
+  },
+  {
+    "Level": 235,
+    "_comment": "Character Level 235 - Requires 44188434 EXP for next level",
+    "RequiredExp": 44188434
+  },
+  {
+    "Level": 236,
+    "_comment": "Character Level 236 - Requires 45137726 EXP for next level",
+    "RequiredExp": 45137726
+  },
+  {
+    "Level": 237,
+    "_comment": "Character Level 237 - Requires 46101118 EXP for next level",
+    "RequiredExp": 46101118
+  },
+  {
+    "Level": 238,
+    "_comment": "Character Level 238 - Requires 47078686 EXP for next level",
+    "RequiredExp": 47078686
+  },
+  {
+    "Level": 239,
+    "_comment": "Character Level 239 - Requires 48070504 EXP for next level",
+    "RequiredExp": 48070504
+  },
+  {
+    "Level": 240,
+    "_comment": "Character Level 240 - Requires 49076647 EXP for next level",
+    "RequiredExp": 49076647
+  },
+  {
+    "Level": 241,
+    "_comment": "Character Level 241 - Requires 50097190 EXP for next level",
+    "RequiredExp": 50097190
+  },
+  {
+    "Level": 242,
+    "_comment": "Character Level 242 - Requires 51132208 EXP for next level",
+    "RequiredExp": 51132208
+  },
+  {
+    "Level": 243,
+    "_comment": "Character Level 243 - Requires 52181776 EXP for next level",
+    "RequiredExp": 52181776
+  },
+  {
+    "Level": 244,
+    "_comment": "Character Level 244 - Requires 53245968 EXP for next level",
+    "RequiredExp": 53245968
+  },
+  {
+    "Level": 245,
+    "_comment": "Character Level 245 - Requires 54324859 EXP for next level",
+    "RequiredExp": 54324859
+  },
+  {
+    "Level": 246,
+    "_comment": "Character Level 246 - Requires 55418525 EXP for next level",
+    "RequiredExp": 55418525
+  },
+  {
+    "Level": 247,
+    "_comment": "Character Level 247 - Requires 56527039 EXP for next level",
+    "RequiredExp": 56527039
+  },
+  {
+    "Level": 248,
+    "_comment": "Character Level 248 - Requires 57650477 EXP for next level",
+    "RequiredExp": 57650477
+  },
+  {
+    "Level": 249,
+    "_comment": "Character Level 249 - Requires 58788914 EXP for next level",
+    "RequiredExp": 58788914
+  },
+  {
+    "Level": 250,
+    "_comment": "Character Level 250 - Requires 59942424 EXP for next level",
+    "RequiredExp": 59942424
+  },
+  {
+    "Level": 251,
+    "_comment": "Character Level 251 - Requires 61111082 EXP for next level",
+    "RequiredExp": 61111082
+  },
+  {
+    "Level": 252,
+    "_comment": "Character Level 252 - Requires 62294964 EXP for next level",
+    "RequiredExp": 62294964
+  },
+  {
+    "Level": 253,
+    "_comment": "Character Level 253 - Requires 63494143 EXP for next level",
+    "RequiredExp": 63494143
+  },
+  {
+    "Level": 254,
+    "_comment": "Character Level 254 - Requires 64708695 EXP for next level",
+    "RequiredExp": 64708695
+  },
+  {
+    "Level": 255,
+    "_comment": "Character Level 255 - Requires 65938695 EXP for next level",
+    "RequiredExp": 65938695
+  },
+  {
+    "Level": 256,
+    "_comment": "Character Level 256 - Requires 67184217 EXP for next level",
+    "RequiredExp": 67184217
+  },
+  {
+    "Level": 257,
+    "_comment": "Character Level 257 - Requires 68445336 EXP for next level",
+    "RequiredExp": 68445336
+  },
+  {
+    "Level": 258,
+    "_comment": "Character Level 258 - Requires 69722127 EXP for next level",
+    "RequiredExp": 69722127
+  },
+  {
+    "Level": 259,
+    "_comment": "Character Level 259 - Requires 71014665 EXP for next level",
+    "RequiredExp": 71014665
+  },
+  {
+    "Level": 260,
+    "_comment": "Character Level 260 - Requires 72323025 EXP for next level",
+    "RequiredExp": 72323025
+  },
+  {
+    "Level": 261,
+    "_comment": "Character Level 261 - Requires 73647281 EXP for next level",
+    "RequiredExp": 73647281
+  },
+  {
+    "Level": 262,
+    "_comment": "Character Level 262 - Requires 74987509 EXP for next level",
+    "RequiredExp": 74987509
+  },
+  {
+    "Level": 263,
+    "_comment": "Character Level 263 - Requires 76343782 EXP for next level",
+    "RequiredExp": 76343782
+  },
+  {
+    "Level": 264,
+    "_comment": "Character Level 264 - Requires 77716177 EXP for next level",
+    "RequiredExp": 77716177
+  },
+  {
+    "Level": 265,
+    "_comment": "Character Level 265 - Requires 79104768 EXP for next level",
+    "RequiredExp": 79104768
+  },
+  {
+    "Level": 266,
+    "_comment": "Character Level 266 - Requires 80509629 EXP for next level",
+    "RequiredExp": 80509629
+  },
+  {
+    "Level": 267,
+    "_comment": "Character Level 267 - Requires 81930835 EXP for next level",
+    "RequiredExp": 81930835
+  },
+  {
+    "Level": 268,
+    "_comment": "Character Level 268 - Requires 83368462 EXP for next level",
+    "RequiredExp": 83368462
+  },
+  {
+    "Level": 269,
+    "_comment": "Character Level 269 - Requires 84822584 EXP for next level",
+    "RequiredExp": 84822584
+  },
+  {
+    "Level": 270,
+    "_comment": "Character Level 270 - Requires 86293276 EXP for next level",
+    "RequiredExp": 86293276
+  },
+  {
+    "Level": 271,
+    "_comment": "Character Level 271 - Requires 87780613 EXP for next level",
+    "RequiredExp": 87780613
+  },
+  {
+    "Level": 272,
+    "_comment": "Character Level 272 - Requires 89284669 EXP for next level",
+    "RequiredExp": 89284669
+  },
+  {
+    "Level": 273,
+    "_comment": "Character Level 273 - Requires 90805520 EXP for next level",
+    "RequiredExp": 90805520
+  },
+  {
+    "Level": 274,
+    "_comment": "Character Level 274 - Requires 92343239 EXP for next level",
+    "RequiredExp": 92343239
+  },
+  {
+    "Level": 275,
+    "_comment": "Character Level 275 - Requires 93897903 EXP for next level",
+    "RequiredExp": 93897903
+  },
+  {
+    "Level": 276,
+    "_comment": "Character Level 276 - Requires 95469586 EXP for next level",
+    "RequiredExp": 95469586
+  },
+  {
+    "Level": 277,
+    "_comment": "Character Level 277 - Requires 97058363 EXP for next level",
+    "RequiredExp": 97058363
+  },
+  {
+    "Level": 278,
+    "_comment": "Character Level 278 - Requires 98664308 EXP for next level",
+    "RequiredExp": 98664308
+  },
+  {
+    "Level": 279,
+    "_comment": "Character Level 279 - Requires 100287496 EXP for next level",
+    "RequiredExp": 100287496
+  },
+  {
+    "Level": 280,
+    "_comment": "Character Level 280 - Requires 101928003 EXP for next level",
+    "RequiredExp": 101928003
+  },
+  {
+    "Level": 281,
+    "_comment": "Character Level 281 - Requires 103585903 EXP for next level",
+    "RequiredExp": 103585903
+  },
+  {
+    "Level": 282,
+    "_comment": "Character Level 282 - Requires 105261270 EXP for next level",
+    "RequiredExp": 105261270
+  },
+  {
+    "Level": 283,
+    "_comment": "Character Level 283 - Requires 106954180 EXP for next level",
+    "RequiredExp": 106954180
+  },
+  {
+    "Level": 284,
+    "_comment": "Character Level 284 - Requires 108664708 EXP for next level",
+    "RequiredExp": 108664708
+  },
+  {
+    "Level": 285,
+    "_comment": "Character Level 285 - Requires 110392928 EXP for next level",
+    "RequiredExp": 110392928
+  },
+  {
+    "Level": 286,
+    "_comment": "Character Level 286 - Requires 112138915 EXP for next level",
+    "RequiredExp": 112138915
+  },
+  {
+    "Level": 287,
+    "_comment": "Character Level 287 - Requires 113902744 EXP for next level",
+    "RequiredExp": 113902744
+  },
+  {
+    "Level": 288,
+    "_comment": "Character Level 288 - Requires 115684490 EXP for next level",
+    "RequiredExp": 115684490
+  },
+  {
+    "Level": 289,
+    "_comment": "Character Level 289 - Requires 117484228 EXP for next level",
+    "RequiredExp": 117484228
+  },
+  {
+    "Level": 290,
+    "_comment": "Character Level 290 - Requires 119302032 EXP for next level",
+    "RequiredExp": 119302032
+  },
+  {
+    "Level": 291,
+    "_comment": "Character Level 291 - Requires 121137977 EXP for next level",
+    "RequiredExp": 121137977
+  },
+  {
+    "Level": 292,
+    "_comment": "Character Level 292 - Requires 122992139 EXP for next level",
+    "RequiredExp": 122992139
+  },
+  {
+    "Level": 293,
+    "_comment": "Character Level 293 - Requires 124864591 EXP for next level",
+    "RequiredExp": 124864591
+  },
+  {
+    "Level": 294,
+    "_comment": "Character Level 294 - Requires 126755409 EXP for next level",
+    "RequiredExp": 126755409
+  },
+  {
+    "Level": 295,
+    "_comment": "Character Level 295 - Requires 128664668 EXP for next level",
+    "RequiredExp": 128664668
+  },
+  {
+    "Level": 296,
+    "_comment": "Character Level 296 - Requires 130592442 EXP for next level",
+    "RequiredExp": 130592442
+  },
+  {
+    "Level": 297,
+    "_comment": "Character Level 297 - Requires 132538806 EXP for next level",
+    "RequiredExp": 132538806
+  },
+  {
+    "Level": 298,
+    "_comment": "Character Level 298 - Requires 134503836 EXP for next level",
+    "RequiredExp": 134503836
+  },
+  {
+    "Level": 299,
+    "_comment": "Character Level 299 - Requires 136487605 EXP for next level",
+    "RequiredExp": 136487605
+  },
+  {
+    "Level": 300,
+    "_comment": "Character Level 300 - Requires 138490189 EXP for next level",
+    "RequiredExp": 138490189
+  }
+]
