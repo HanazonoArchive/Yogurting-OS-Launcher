@@ -7,7 +7,7 @@
   "HasCharacter": true,
   "CharaId": 256,
   "CharacterId": 256,
-  "SessionKey": 666669,
+  "SessionKey": 669698,
   "School": 1,
   "Gender": 2,
   "FaceId": 11,
@@ -65,8 +65,8 @@
   "TargetMonsterId": 0,
   "FieldId": 1,
   "Position": {
-    "X": 78,
-    "Y": 104,
+    "X": 63,
+    "Y": 105,
     "Z": 0,
     "Heading": 0
   },
@@ -616,81 +616,86 @@
   },
   "LearnedSkills": [],
   "CompletedEpisodes": [],
-  "EpisodeYoi": 0,
+  "EpisodeYoi": -1,
   "EpisodeEs": 0,
+  "ScriptVariables": {
+    "peke.epi.yoi": -1,
+    "peke.epi.es": 0,
+    "peke.ben.f001": 1
+  },
   "UnlockedTitles": [],
   "ActiveBuffs": [
     {
       "EffectType": 7300,
       "DurationSeconds": 2592000,
       "ActivatedAt": "2026-08-30T05:31:41.2797429Z",
-      "RemainingSeconds": 2514127
+      "RemainingSeconds": 2513591
     },
     {
       "EffectType": 7400,
       "DurationSeconds": 2592000,
       "ActivatedAt": "2026-08-30T05:31:42.3678492Z",
-      "RemainingSeconds": 2514128
+      "RemainingSeconds": 2513592
     },
     {
       "EffectType": 7000,
       "DurationSeconds": 5184000,
       "ActivatedAt": "2026-08-30T05:31:42.7958016Z",
-      "RemainingSeconds": 5106128
+      "RemainingSeconds": 5105593
     },
     {
       "EffectType": 7100,
       "DurationSeconds": 2592000,
       "ActivatedAt": "2026-08-30T05:31:43.1761469Z",
-      "RemainingSeconds": 2514129
+      "RemainingSeconds": 2513593
     },
     {
       "EffectType": 7200,
       "DurationSeconds": 2592000,
       "ActivatedAt": "2026-08-30T05:31:43.5516324Z",
-      "RemainingSeconds": 2514129
+      "RemainingSeconds": 2513593
     },
     {
       "EffectType": 7500,
       "DurationSeconds": 2592000,
       "ActivatedAt": "2026-08-30T05:31:43.9440198Z",
-      "RemainingSeconds": 2514129
+      "RemainingSeconds": 2513594
     },
     {
       "EffectType": 4100,
       "DurationSeconds": 2592000,
       "ActivatedAt": "2026-08-30T05:36:12.8163106Z",
-      "RemainingSeconds": 2514398
+      "RemainingSeconds": 2513863
     },
     {
       "EffectType": 4110,
       "DurationSeconds": 18144000,
       "ActivatedAt": "2026-08-30T05:36:14.9412779Z",
-      "RemainingSeconds": 18066400
+      "RemainingSeconds": 18065865
     },
     {
       "EffectType": 4200,
       "DurationSeconds": 2592000,
       "ActivatedAt": "2026-08-30T05:36:19.7023848Z",
-      "RemainingSeconds": 2514405
+      "RemainingSeconds": 2513869
     },
     {
       "EffectType": 6100,
       "DurationSeconds": 2592000,
       "ActivatedAt": "2026-08-30T05:36:20.6716723Z",
-      "RemainingSeconds": 2514406
+      "RemainingSeconds": 2513870
     },
     {
       "EffectType": 4300,
       "DurationSeconds": 2592000,
       "ActivatedAt": "2026-08-30T05:36:21.4892307Z",
-      "RemainingSeconds": 2514407
+      "RemainingSeconds": 2513871
     },
     {
       "EffectType": 2100,
       "DurationSeconds": 2592000,
       "ActivatedAt": "2026-08-30T05:36:22.2623351Z",
-      "RemainingSeconds": 2514408
+      "RemainingSeconds": 2513872
     }
   ]
 }
