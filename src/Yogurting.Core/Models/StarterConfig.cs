@@ -120,16 +120,19 @@ namespace Yogurting.Core.Models
             {
                 Equipped = new List<StarterItemEntry>
                 {
-                    new() { SlotIndex = 4, ItemId = 120001, Name = "Starter Estiva Red Glove", Quantity = 1 },
-                    new() { SlotIndex = 7, ItemId = 150001, Name = "Estiva Winter Top (M)", Quantity = 1 },
-                    new() { SlotIndex = 8, ItemId = 150002, Name = "Estiva Winter Bottom (M)", Quantity = 1 },
-                    new() { SlotIndex = 9, ItemId = 150003, Name = "Estiva Winter Shoes (M)", Quantity = 1 }
+                    new() { SlotIndex = 4, ItemId = 110001, Name = "スティンガー (Starter Blade)", Quantity = 1 },
+                    new() { SlotIndex = 7, ItemId = 150001, Name = "冬服上着 (Estiva Winter Top M)", Quantity = 1 },
+                    new() { SlotIndex = 8, ItemId = 150002, Name = "冬服ズボン (Estiva Winter Pants M)", Quantity = 1 },
+                    new() { SlotIndex = 9, ItemId = 150003, Name = "冬用学生靴 (Estiva Winter Shoes M)", Quantity = 1 }
                 },
                 Inventory = new List<StarterItemEntry>
                 {
-                    new() { SlotIndex = 4, ItemId = 150007, Name = "Estiva Summer Top (M)", Quantity = 1 },
-                    new() { SlotIndex = 5, ItemId = 150008, Name = "Estiva Summer Bottom (M)", Quantity = 1 },
-                    new() { SlotIndex = 6, ItemId = 150009, Name = "Estiva Summer Shoes (M)", Quantity = 1 },
+                    new() { SlotIndex = 1, ItemId = 150007, Name = "夏服上着 (Estiva Summer Top M)", Quantity = 1 },
+                    new() { SlotIndex = 2, ItemId = 150008, Name = "夏服ズボン (Estiva Summer Pants M)", Quantity = 1 },
+                    new() { SlotIndex = 3, ItemId = 150009, Name = "夏用学生靴 (Estiva Summer Shoes M)", Quantity = 1 },
+                    new() { SlotIndex = 4, ItemId = 120001, Name = "有備無患 (Starter Glove)", Quantity = 1 },
+                    new() { SlotIndex = 5, ItemId = 130001, Name = "ドローン (Starter Myura/Blunt)", Quantity = 1 },
+                    new() { SlotIndex = 6, ItemId = 140001, Name = "アクアマリン (Starter Spirit)", Quantity = 1 },
                     new() { SlotIndex = 7, ItemId = 200001, Name = "Beginner Bread", Quantity = 20 }
                 }
             };
@@ -139,16 +142,19 @@ namespace Yogurting.Core.Models
             {
                 Equipped = new List<StarterItemEntry>
                 {
-                    new() { SlotIndex = 4, ItemId = 140001, Name = "Starter Estiva Blue Glove", Quantity = 1 },
-                    new() { SlotIndex = 7, ItemId = 150004, Name = "Estiva Winter Top (F)", Quantity = 1 },
-                    new() { SlotIndex = 8, ItemId = 150005, Name = "Estiva Winter Bottom (F)", Quantity = 1 },
-                    new() { SlotIndex = 9, ItemId = 150006, Name = "Estiva Winter Shoes (F)", Quantity = 1 }
+                    new() { SlotIndex = 4, ItemId = 110001, Name = "スティンガー (Starter Blade)", Quantity = 1 },
+                    new() { SlotIndex = 7, ItemId = 150004, Name = "冬服上着 (Estiva Winter Top F)", Quantity = 1 },
+                    new() { SlotIndex = 8, ItemId = 150005, Name = "冬服スカート (Estiva Winter Skirt F)", Quantity = 1 },
+                    new() { SlotIndex = 9, ItemId = 150006, Name = "冬用ブーツ (Estiva Winter Boots F)", Quantity = 1 }
                 },
                 Inventory = new List<StarterItemEntry>
                 {
-                    new() { SlotIndex = 4, ItemId = 150010, Name = "Estiva Summer Top (F)", Quantity = 1 },
-                    new() { SlotIndex = 5, ItemId = 150011, Name = "Estiva Summer Bottom (F)", Quantity = 1 },
-                    new() { SlotIndex = 6, ItemId = 150012, Name = "Estiva Summer Shoes (F)", Quantity = 1 },
+                    new() { SlotIndex = 1, ItemId = 150010, Name = "夏服上着 (Estiva Summer Top F)", Quantity = 1 },
+                    new() { SlotIndex = 2, ItemId = 150011, Name = "夏服スカート (Estiva Summer Skirt F)", Quantity = 1 },
+                    new() { SlotIndex = 3, ItemId = 150012, Name = "夏用学生靴 (Estiva Summer Shoes F)", Quantity = 1 },
+                    new() { SlotIndex = 4, ItemId = 120001, Name = "有備無患 (Starter Glove)", Quantity = 1 },
+                    new() { SlotIndex = 5, ItemId = 130001, Name = "ドローン (Starter Myura/Blunt)", Quantity = 1 },
+                    new() { SlotIndex = 6, ItemId = 140001, Name = "アクアマリン (Starter Spirit)", Quantity = 1 },
                     new() { SlotIndex = 7, ItemId = 200001, Name = "Beginner Bread", Quantity = 20 }
                 }
             };
@@ -158,16 +164,19 @@ namespace Yogurting.Core.Models
             {
                 Equipped = new List<StarterItemEntry>
                 {
-                    new() { SlotIndex = 4, ItemId = 110001, Name = "Starter Blade", Quantity = 1 },
-                    new() { SlotIndex = 7, ItemId = 150060, Name = "So-il Winter Top (M)", Quantity = 1 },
-                    new() { SlotIndex = 8, ItemId = 150061, Name = "So-il Winter Bottom (M)", Quantity = 1 },
-                    new() { SlotIndex = 9, ItemId = 150062, Name = "So-il Winter Shoes (M)", Quantity = 1 }
+                    new() { SlotIndex = 4, ItemId = 110001, Name = "スティンガー (Starter Blade)", Quantity = 1 },
+                    new() { SlotIndex = 7, ItemId = 150060, Name = "冬服上着 (So-il Winter Top M)", Quantity = 1 },
+                    new() { SlotIndex = 8, ItemId = 150061, Name = "冬服ズボン (So-il Winter Pants M)", Quantity = 1 },
+                    new() { SlotIndex = 9, ItemId = 150062, Name = "冬用学生靴 (So-il Winter Shoes M)", Quantity = 1 }
                 },
                 Inventory = new List<StarterItemEntry>
                 {
-                    new() { SlotIndex = 4, ItemId = 150066, Name = "So-il Summer Top (M)", Quantity = 1 },
-                    new() { SlotIndex = 5, ItemId = 150067, Name = "So-il Summer Bottom (M)", Quantity = 1 },
-                    new() { SlotIndex = 6, ItemId = 150068, Name = "So-il Summer Shoes (M)", Quantity = 1 },
+                    new() { SlotIndex = 1, ItemId = 150066, Name = "夏服上着 (So-il Summer Top M)", Quantity = 1 },
+                    new() { SlotIndex = 2, ItemId = 150067, Name = "夏服ズボン (So-il Summer Pants M)", Quantity = 1 },
+                    new() { SlotIndex = 3, ItemId = 150068, Name = "夏用学生靴 (So-il Summer Shoes M)", Quantity = 1 },
+                    new() { SlotIndex = 4, ItemId = 120001, Name = "有備無患 (Starter Glove)", Quantity = 1 },
+                    new() { SlotIndex = 5, ItemId = 130001, Name = "ドローン (Starter Myura/Blunt)", Quantity = 1 },
+                    new() { SlotIndex = 6, ItemId = 140001, Name = "アクアマリン (Starter Spirit)", Quantity = 1 },
                     new() { SlotIndex = 7, ItemId = 200001, Name = "Beginner Bread", Quantity = 20 }
                 }
             };
@@ -177,15 +186,18 @@ namespace Yogurting.Core.Models
             {
                 Equipped = new List<StarterItemEntry>
                 {
-                    new() { SlotIndex = 4, ItemId = 110001, Name = "Starter Blade", Quantity = 1 },
-                    new() { SlotIndex = 7, ItemId = 150063, Name = "So-il Winter Top (F)", Quantity = 1 },
-                    new() { SlotIndex = 8, ItemId = 150064, Name = "So-il Winter Bottom (F)", Quantity = 1 },
-                    new() { SlotIndex = 9, ItemId = 150065, Name = "So-il Winter Shoes (F)", Quantity = 1 }
+                    new() { SlotIndex = 4, ItemId = 110001, Name = "スティンガー (Starter Blade)", Quantity = 1 },
+                    new() { SlotIndex = 7, ItemId = 150063, Name = "冬服上着 (So-il Winter Top F)", Quantity = 1 },
+                    new() { SlotIndex = 8, ItemId = 150064, Name = "冬服スカート (So-il Winter Skirt F)", Quantity = 1 },
+                    new() { SlotIndex = 9, ItemId = 150065, Name = "冬用学生靴 (So-il Winter Shoes F)", Quantity = 1 }
                 },
                 Inventory = new List<StarterItemEntry>
                 {
-                    new() { SlotIndex = 4, ItemId = 150069, Name = "So-il Summer Dress (F)", Quantity = 1 },
-                    new() { SlotIndex = 5, ItemId = 150070, Name = "So-il Summer Shoes (F)", Quantity = 1 },
+                    new() { SlotIndex = 1, ItemId = 150069, Name = "夏服 (So-il Summer Dress F)", Quantity = 1 },
+                    new() { SlotIndex = 2, ItemId = 150070, Name = "夏用学生靴 (So-il Summer Shoes F)", Quantity = 1 },
+                    new() { SlotIndex = 3, ItemId = 120001, Name = "有備無患 (Starter Glove)", Quantity = 1 },
+                    new() { SlotIndex = 4, ItemId = 130001, Name = "ドローン (Starter Myura/Blunt)", Quantity = 1 },
+                    new() { SlotIndex = 5, ItemId = 140001, Name = "アクアマリン (Starter Spirit)", Quantity = 1 },
                     new() { SlotIndex = 6, ItemId = 200001, Name = "Beginner Bread", Quantity = 20 }
                 }
             };

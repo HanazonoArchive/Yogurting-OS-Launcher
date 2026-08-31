@@ -275,7 +275,6 @@ namespace Yogurting.Data.Loaders
 
                     item.Code = parts.Count > 1 ? parts[1].Trim().Trim('"') : item.Code;
                     item.EquipPos = parts.Count > 2 && int.TryParse(parts[2], out int pos) ? pos : item.EquipPos;
-                    item.Sex = parts.Count > 3 && int.TryParse(parts[3], out int sex) ? sex : item.Sex;
                     item.Attack = parts.Count > 4 && int.TryParse(parts[4], out int atk) ? atk : item.Attack;
                     item.WeaponType = parts.Count > 5 && int.TryParse(parts[5], out int wtype) ? wtype : item.WeaponType;
                     item.SkillId = parts.Count > 6 && int.TryParse(parts[6], out int skill) ? skill : item.SkillId;

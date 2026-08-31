@@ -1,14 +1,14 @@
 {
   "AccountId": "test",
-  "CharacterName": "Hanazono",
+  "CharacterName": "Sahur",
   "PasswordHash": "098f6bcd4621d373cade4e832627b4f6",
   "TelNumber": "2345",
   "AuthType": "normal",
   "HasCharacter": true,
   "CharaId": 256,
   "CharacterId": 256,
-  "SessionKey": 132104,
-  "School": 2,
+  "SessionKey": 332615,
+  "School": 1,
   "Gender": 2,
   "FaceId": 11,
   "HairId": 903,
@@ -17,12 +17,12 @@
   "BirthDay": 29,
   "BloodType": 1,
   "NametagColor": 0,
-  "Level": 4,
+  "Level": 2,
   "Grade": 1,
-  "Pow": 17,
-  "Speed": 13,
-  "Skill": 13,
-  "Luck": 8,
+  "Pow": 8,
+  "Speed": 6,
+  "Skill": 6,
+  "Luck": 4,
   "DexLevel": 1,
   "DexExp": 0,
   "DexLevels": [
@@ -39,41 +39,41 @@
     0,
     0
   ],
-  "ComboCount": 2,
-  "LastAttackTime": 324700046,
+  "ComboCount": 24,
+  "LastAttackTime": 325608937,
   "ChargePoint": 0,
   "GaugeMax": 70000,
-  "GaugeCurrent": 14445,
-  "SkillPoint": 3,
+  "GaugeCurrent": 39420,
+  "SkillPoint": 4,
   "Defense": 2,
-  "CurrentExp": 2,
-  "Exp": 2,
-  "MaxExp": 22,
-  "CurrentHp": 141,
-  "Hp": 141,
-  "MaxHp": 351,
-  "CurrentMp": 100,
-  "Sp": 100,
-  "MaxMp": 100,
-  "MaxSp": 100,
+  "CurrentExp": 6,
+  "Exp": 6,
+  "MaxExp": 12,
+  "CurrentHp": 260,
+  "Hp": 260,
+  "MaxHp": 260,
+  "CurrentMp": 195,
+  "Sp": 195,
+  "MaxMp": 195,
+  "MaxSp": 195,
   "TaffPoints": 1000,
   "StarPoints": 0,
   "HpRegainAccumulator": 0,
-  "LastCombatTime": "2026-08-31T02:33:14.7459681Z",
-  "AtkSpeedF": 1.002535,
-  "MoveSpeedF": 1.002535,
-  "TargetMonsterId": 65,
-  "FieldId": 91,
+  "LastCombatTime": "2026-08-31T02:48:18.1544337Z",
+  "AtkSpeedF": 1.00117,
+  "MoveSpeedF": 1.00117,
+  "TargetMonsterId": 0,
+  "FieldId": 1,
   "Position": {
-    "X": 220,
-    "Y": 99,
+    "X": 75,
+    "Y": 105,
     "Z": 0,
     "Heading": 0
   },
-  "SaveFieldId": 91,
+  "SaveFieldId": 1,
   "SavePosition": {
-    "X": 220,
-    "Y": 99,
+    "X": 75,
+    "Y": 105,
     "Z": 0,
     "Heading": 0
   },
@@ -82,8 +82,8 @@
     0,
     0,
     0,
-    122,
-    1,
+    0,
+    8,
     0,
     0,
     2,
@@ -94,7 +94,7 @@
     false,
     false,
     false,
-    true,
+    false,
     false,
     false,
     false,
@@ -108,13 +108,13 @@
       "Id": 1,
       "ItemId": 110001,
       "TypeId": 110001,
-      "Name": "Starter Blade",
+      "Name": "\u30B9\u30C6\u30A3\u30F3\u30AC\u30FC (Starter Blade)",
       "SlotIndex": 4,
-      "SlotType": 1,
+      "SlotType": 0,
       "SerialId": 0,
       "Quantity": 1,
       "EnchantLevel": 0,
-      "IsEquipped": true,
+      "IsEquipped": false,
       "SocketSlots": [
         0,
         0,
@@ -125,9 +125,9 @@
     },
     {
       "Id": 2,
-      "ItemId": 150063,
-      "TypeId": 150063,
-      "Name": "So-il Winter Top (F)",
+      "ItemId": 150004,
+      "TypeId": 150004,
+      "Name": "\u51AC\u670D\u4E0A\u7740 (Estiva Winter Top F)",
       "SlotIndex": 7,
       "SlotType": 1,
       "SerialId": 0,
@@ -144,9 +144,9 @@
     },
     {
       "Id": 3,
-      "ItemId": 150064,
-      "TypeId": 150064,
-      "Name": "So-il Winter Bottom (F)",
+      "ItemId": 150005,
+      "TypeId": 150005,
+      "Name": "\u51AC\u670D\u30B9\u30AB\u30FC\u30C8 (Estiva Winter Skirt F)",
       "SlotIndex": 8,
       "SlotType": 1,
       "SerialId": 0,
@@ -163,9 +163,9 @@
     },
     {
       "Id": 4,
-      "ItemId": 150065,
-      "TypeId": 150065,
-      "Name": "So-il Winter Shoes (F)",
+      "ItemId": 150006,
+      "TypeId": 150006,
+      "Name": "\u51AC\u7528\u30D6\u30FC\u30C4 (Estiva Winter Boots F)",
       "SlotIndex": 9,
       "SlotType": 1,
       "SerialId": 0,
@@ -182,9 +182,9 @@
     },
     {
       "Id": 5,
-      "ItemId": 150069,
-      "TypeId": 150069,
-      "Name": "So-il Summer Dress (F)",
+      "ItemId": 150010,
+      "TypeId": 150010,
+      "Name": "\u590F\u670D\u4E0A\u7740 (Estiva Summer Top F)",
       "SlotIndex": 7,
       "SlotType": 0,
       "SerialId": 0,
@@ -201,66 +201,9 @@
     },
     {
       "Id": 6,
-      "ItemId": 150070,
-      "TypeId": 150070,
-      "Name": "So-il Summer Shoes (F)",
-      "SlotIndex": 5,
-      "SlotType": 0,
-      "SerialId": 0,
-      "Quantity": 1,
-      "EnchantLevel": 0,
-      "IsEquipped": false,
-      "SocketSlots": [
-        0,
-        0,
-        0,
-        0,
-        0
-      ]
-    },
-    {
-      "Id": 7,
-      "ItemId": 200001,
-      "TypeId": 200001,
-      "Name": "Beginner Bread",
-      "SlotIndex": 6,
-      "SlotType": 3,
-      "SerialId": 0,
-      "Quantity": 20,
-      "EnchantLevel": 0,
-      "IsEquipped": false,
-      "SocketSlots": [
-        0,
-        0,
-        0,
-        0,
-        0
-      ]
-    },
-    {
-      "Id": 8,
-      "ItemId": 30069,
-      "TypeId": 30069,
-      "Name": "\u30AB\u30DC\u30C1\u30E3\u982D",
-      "SlotIndex": 7,
-      "SlotType": 0,
-      "SerialId": 0,
-      "Quantity": 8,
-      "EnchantLevel": 0,
-      "IsEquipped": false,
-      "SocketSlots": [
-        0,
-        0,
-        0,
-        0,
-        0
-      ]
-    },
-    {
-      "Id": 9,
-      "ItemId": 30002,
-      "TypeId": 30002,
-      "Name": "\u6298\u308A\u7D19",
+      "ItemId": 150011,
+      "TypeId": 150011,
+      "Name": "\u590F\u670D\u30B9\u30AB\u30FC\u30C8 (Estiva Summer Skirt F)",
       "SlotIndex": 8,
       "SlotType": 0,
       "SerialId": 0,
@@ -276,10 +219,10 @@
       ]
     },
     {
-      "Id": 10,
-      "ItemId": 30002,
-      "TypeId": 30002,
-      "Name": "\u6298\u308A\u7D19",
+      "Id": 7,
+      "ItemId": 150012,
+      "TypeId": 150012,
+      "Name": "\u590F\u7528\u5B66\u751F\u9774 (Estiva Summer Shoes F)",
       "SlotIndex": 9,
       "SlotType": 0,
       "SerialId": 0,
@@ -295,14 +238,71 @@
       ]
     },
     {
-      "Id": 11,
-      "ItemId": 30056,
-      "TypeId": 30056,
-      "Name": "\u9AA8",
-      "SlotIndex": 10,
+      "Id": 8,
+      "ItemId": 120001,
+      "TypeId": 120001,
+      "Name": "\u6709\u5099\u7121\u60A3 (Starter Glove)",
+      "SlotIndex": 4,
+      "SlotType": 1,
+      "SerialId": 0,
+      "Quantity": 1,
+      "EnchantLevel": 0,
+      "IsEquipped": true,
+      "SocketSlots": [
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "Id": 9,
+      "ItemId": 130001,
+      "TypeId": 130001,
+      "Name": "\u30C9\u30ED\u30FC\u30F3 (Starter Myura/Blunt)",
+      "SlotIndex": 4,
       "SlotType": 0,
       "SerialId": 0,
-      "Quantity": 8,
+      "Quantity": 1,
+      "EnchantLevel": 0,
+      "IsEquipped": false,
+      "SocketSlots": [
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "Id": 10,
+      "ItemId": 140001,
+      "TypeId": 140001,
+      "Name": "\u30A2\u30AF\u30A2\u30DE\u30EA\u30F3 (Starter Spirit)",
+      "SlotIndex": 6,
+      "SlotType": 0,
+      "SerialId": 0,
+      "Quantity": 1,
+      "EnchantLevel": 0,
+      "IsEquipped": false,
+      "SocketSlots": [
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "Id": 11,
+      "ItemId": 200001,
+      "TypeId": 200001,
+      "Name": "Beginner Bread",
+      "SlotIndex": 7,
+      "SlotType": 3,
+      "SerialId": 0,
+      "Quantity": 20,
       "EnchantLevel": 0,
       "IsEquipped": false,
       "SocketSlots": [
@@ -319,82 +319,6 @@
       "TypeId": 30002,
       "Name": "\u6298\u308A\u7D19",
       "SlotIndex": 11,
-      "SlotType": 0,
-      "SerialId": 0,
-      "Quantity": 1,
-      "EnchantLevel": 0,
-      "IsEquipped": false,
-      "SocketSlots": [
-        0,
-        0,
-        0,
-        0,
-        0
-      ]
-    },
-    {
-      "Id": 13,
-      "ItemId": 30002,
-      "TypeId": 30002,
-      "Name": "\u6298\u308A\u7D19",
-      "SlotIndex": 12,
-      "SlotType": 0,
-      "SerialId": 0,
-      "Quantity": 1,
-      "EnchantLevel": 0,
-      "IsEquipped": false,
-      "SocketSlots": [
-        0,
-        0,
-        0,
-        0,
-        0
-      ]
-    },
-    {
-      "Id": 14,
-      "ItemId": 30002,
-      "TypeId": 30002,
-      "Name": "\u6298\u308A\u7D19",
-      "SlotIndex": 13,
-      "SlotType": 0,
-      "SerialId": 0,
-      "Quantity": 1,
-      "EnchantLevel": 0,
-      "IsEquipped": false,
-      "SocketSlots": [
-        0,
-        0,
-        0,
-        0,
-        0
-      ]
-    },
-    {
-      "Id": 15,
-      "ItemId": 30002,
-      "TypeId": 30002,
-      "Name": "\u6298\u308A\u7D19",
-      "SlotIndex": 14,
-      "SlotType": 0,
-      "SerialId": 0,
-      "Quantity": 1,
-      "EnchantLevel": 0,
-      "IsEquipped": false,
-      "SocketSlots": [
-        0,
-        0,
-        0,
-        0,
-        0
-      ]
-    },
-    {
-      "Id": 16,
-      "ItemId": 30002,
-      "TypeId": 30002,
-      "Name": "\u6298\u308A\u7D19",
-      "SlotIndex": 15,
       "SlotType": 0,
       "SerialId": 0,
       "Quantity": 1,
@@ -700,73 +624,73 @@
       "EffectType": 7300,
       "DurationSeconds": 2592000,
       "ActivatedAt": "2026-08-30T05:31:41.2797429Z",
-      "RemainingSeconds": 2516296
+      "RemainingSeconds": 2515345
     },
     {
       "EffectType": 7400,
       "DurationSeconds": 2592000,
       "ActivatedAt": "2026-08-30T05:31:42.3678492Z",
-      "RemainingSeconds": 2516297
+      "RemainingSeconds": 2515346
     },
     {
       "EffectType": 7000,
       "DurationSeconds": 5184000,
       "ActivatedAt": "2026-08-30T05:31:42.7958016Z",
-      "RemainingSeconds": 5108297
+      "RemainingSeconds": 5107347
     },
     {
       "EffectType": 7100,
       "DurationSeconds": 2592000,
       "ActivatedAt": "2026-08-30T05:31:43.1761469Z",
-      "RemainingSeconds": 2516298
+      "RemainingSeconds": 2515347
     },
     {
       "EffectType": 7200,
       "DurationSeconds": 2592000,
       "ActivatedAt": "2026-08-30T05:31:43.5516324Z",
-      "RemainingSeconds": 2516298
+      "RemainingSeconds": 2515347
     },
     {
       "EffectType": 7500,
       "DurationSeconds": 2592000,
       "ActivatedAt": "2026-08-30T05:31:43.9440198Z",
-      "RemainingSeconds": 2516298
+      "RemainingSeconds": 2515348
     },
     {
       "EffectType": 4100,
       "DurationSeconds": 2592000,
       "ActivatedAt": "2026-08-30T05:36:12.8163106Z",
-      "RemainingSeconds": 2516567
+      "RemainingSeconds": 2515617
     },
     {
       "EffectType": 4110,
       "DurationSeconds": 18144000,
       "ActivatedAt": "2026-08-30T05:36:14.9412779Z",
-      "RemainingSeconds": 18068569
+      "RemainingSeconds": 18067619
     },
     {
       "EffectType": 4200,
       "DurationSeconds": 2592000,
       "ActivatedAt": "2026-08-30T05:36:19.7023848Z",
-      "RemainingSeconds": 2516574
+      "RemainingSeconds": 2515624
     },
     {
       "EffectType": 6100,
       "DurationSeconds": 2592000,
       "ActivatedAt": "2026-08-30T05:36:20.6716723Z",
-      "RemainingSeconds": 2516575
+      "RemainingSeconds": 2515625
     },
     {
       "EffectType": 4300,
       "DurationSeconds": 2592000,
       "ActivatedAt": "2026-08-30T05:36:21.4892307Z",
-      "RemainingSeconds": 2516576
+      "RemainingSeconds": 2515625
     },
     {
       "EffectType": 2100,
       "DurationSeconds": 2592000,
       "ActivatedAt": "2026-08-30T05:36:22.2623351Z",
-      "RemainingSeconds": 2516577
+      "RemainingSeconds": 2515626
     }
   ]
 }
