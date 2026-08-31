@@ -95,6 +95,36 @@ namespace Yogurting.Server.World
             }
         }
 
+        /// <summary>
+        /// Validates that every point along the straight line from (fromX, fromY) to (toX, toY) is walkable,
+        /// not just the destination tile. Prevents monsters from wandering/warping straight through thin walls
+        /// or obstacles that sit between their current position and a randomly chosen destination.
+        /// </summary>
+        private bool IsPathWalkable(float fromX, float fromY, float toX, float toY)
+        {
+            float dx = toX - fromX;
+            float dy = toY - fromY;
+            float dist = MathF.Sqrt(dx * dx + dy * dy);
+            if (dist <= 0.01f)
+            {
+                return MapGridManager.IsWalkable(FieldId, toX, toY);
+            }
+
+            // Sample roughly every half-tile along the path so no obstacle can be skipped between samples.
+            int steps = Math.Max(1, (int)MathF.Ceiling(dist / 0.5f));
+            for (int i = 1; i <= steps; i++)
+            {
+                float t = (float)i / steps;
+                float x = fromX + dx * t;
+                float y = fromY + dy * t;
+                if (!MapGridManager.IsWalkable(FieldId, x, y))
+                {
+                    return false;
+                }
+            }
+            return true;
+        }
+
         public Task BroadcastToAreaAsync(byte[] packet, float x, float y, float radius = 30f)
         {
             float r2 = radius * radius;
@@ -198,12 +228,37 @@ namespace Yogurting.Server.World
                         {
                             mon.Respawn();
                             mon.Frame = 0;
-                            mon.NextWanderInterval = Random.Shared.Next(15, 35);
+                            mon.NextWanderInterval = Random.Shared.Next(4, 10); // Active pacing (1.0 - 2.5s)
+
+                            // Immediately pick a walk destination on respawn so monster moves right away
+                            float initDestX = mon.SpawnX;
+                            float initDestY = mon.SpawnY;
+                            for (int attempt = 0; attempt < 6; attempt++)
+                            {
+                                float offX = Random.Shared.Next(-4, 5);
+                                float offY = Random.Shared.Next(-4, 5);
+                                float tryX = mon.SpawnX + offX;
+                                float tryY = mon.SpawnY + offY;
+                                if (IsPathWalkable(mon.X, mon.Y, tryX, tryY) && ((int)tryX != (int)mon.X || (int)tryY != (int)mon.Y))
+                                {
+                                    initDestX = tryX;
+                                    initDestY = tryY;
+                                    break;
+                                }
+                            }
+
+                            mon.StartX = mon.X;
+                            mon.StartY = mon.Y;
+                            mon.DestX = initDestX;
+                            mon.DestY = initDestY;
+                            mon.MoveMotion = 1;
+                            mon.MoveSpeedRate = 80;
+
                             byte[] respawnNtf = YogurtingPackets.MakeGameMonInfoNtf(mon);
                             _ = BroadcastToAreaAsync(respawnNtf, mon.X, mon.Y, 35f);
                             byte[] moveNtf = YogurtingPackets.MakeGameMonMoveNtf(mon.EntityId, (int)mon.X, (int)mon.Y, (int)mon.DestX, (int)mon.DestY, mon.MoveMotion, mon.MoveSpeedRate);
                             _ = BroadcastToAreaAsync(moveNtf, mon.X, mon.Y, 35f);
-                            Logger.Debug($"[FieldServer] '{mon.Name}' (ID {mon.EntityId}) respawned at ({mon.X}, {mon.Y}) in Field {FieldId}.");
+                            Logger.Debug($"[FieldServer] '{mon.Name}' (ID {mon.EntityId}) respawned and started moving towards ({mon.DestX}, {mon.DestY}) in Field {FieldId}.");
                         }
                         continue;
                     }
@@ -236,7 +291,7 @@ namespace Yogurting.Server.World
                             if (mon.Frame >= mon.NextWanderInterval)
                             {
                                 mon.Frame = 0;
-                                mon.NextWanderInterval = Random.Shared.Next(15, 35);
+                                mon.NextWanderInterval = Random.Shared.Next(4, 10); // Active pacing (1.0 - 2.5s)
 
                                 float destX = mon.SpawnX;
                                 float destY = mon.SpawnY;
@@ -249,7 +304,11 @@ namespace Yogurting.Server.World
                                     float tryX = mon.SpawnX + offX;
                                     float tryY = mon.SpawnY + offY;
 
-                                    if (MapGridManager.IsWalkable(FieldId, tryX, tryY))
+                                    // Validate the ENTIRE path from the monster's current position to the candidate
+                                    // tile, not just the destination tile itself - otherwise a thin wall or obstacle
+                                    // sitting between the two points gets silently skipped and the monster clips
+                                    // straight through it when the client animates the walk.
+                                    if (IsPathWalkable(mon.X, mon.Y, tryX, tryY))
                                     {
                                         destX = tryX;
                                         destY = tryY;
@@ -297,6 +356,12 @@ namespace Yogurting.Server.World
                                 mon.TargetPlayerId = 0;
                                 mon.State = MonsterState.Wait;
                                 mon.Frame = 0;
+                                if (mon.CurrentHp < mon.MaxHp)
+                                {
+                                    mon.CurrentHp = mon.MaxHp;
+                                    byte[] hpNtf = YogurtingPackets.MakeGameMonHpInfoNtf(mon.EntityId, (ushort)mon.CurrentHp, (ushort)mon.MaxHp);
+                                    _ = BroadcastToAreaAsync(hpNtf, mon.X, mon.Y, 35f);
+                                }
                                 break;
                             }
 
@@ -313,10 +378,18 @@ namespace Yogurting.Server.World
                                 mon.State = MonsterState.Wait;
                                 mon.Frame = 0;
 
-                                byte[] resetMoveNtf = YogurtingPackets.MakeGameMonMoveNtf(mon.EntityId, (int)mon.X, (int)mon.Y, (int)mon.SpawnX, (int)mon.SpawnY, 1, 80);
+                                // Only animate a walk back to spawn if that straight-line path is actually clear;
+                                // otherwise a wall between the leash-break point and spawn would get clipped through.
+                                // When blocked, send an instant "already there" sync (motion 0) instead of a walk.
+                                bool canWalkToSpawn = IsPathWalkable(mon.X, mon.Y, mon.SpawnX, mon.SpawnY);
+                                byte[] resetMoveNtf = canWalkToSpawn
+                                    ? YogurtingPackets.MakeGameMonMoveNtf(mon.EntityId, (int)mon.X, (int)mon.Y, (int)mon.SpawnX, (int)mon.SpawnY, 1, 80)
+                                    : YogurtingPackets.MakeGameMonMoveNtf(mon.EntityId, (int)mon.SpawnX, (int)mon.SpawnY, (int)mon.SpawnX, (int)mon.SpawnY, 0, 80);
+                                byte[] hpNtf = YogurtingPackets.MakeGameMonHpInfoNtf(mon.EntityId, (ushort)mon.CurrentHp, (ushort)mon.MaxHp);
                                 mon.X = mon.SpawnX;
                                 mon.Y = mon.SpawnY;
-                                _ = BroadcastAsync(resetMoveNtf);
+                                _ = BroadcastToAreaAsync(resetMoveNtf, mon.SpawnX, mon.SpawnY, 35f);
+                                _ = BroadcastToAreaAsync(hpNtf, mon.SpawnX, mon.SpawnY, 35f);
                                 break;
                             }
 
@@ -336,16 +409,16 @@ namespace Yogurting.Server.World
                             float nextX = mon.X + dirX * step;
                             float nextY = mon.Y + dirY * step;
 
-                            if (MapGridManager.IsWalkable(FieldId, nextX, nextY))
+                            if (IsPathWalkable(mon.X, mon.Y, nextX, nextY))
                             {
                                 mon.X = nextX;
                                 mon.Y = nextY;
                             }
-                            else if (MapGridManager.IsWalkable(FieldId, nextX, mon.Y))
+                            else if (IsPathWalkable(mon.X, mon.Y, nextX, mon.Y))
                             {
                                 mon.X = nextX; // Slide along X axis
                             }
-                            else if (MapGridManager.IsWalkable(FieldId, mon.X, nextY))
+                            else if (IsPathWalkable(mon.X, mon.Y, mon.X, nextY))
                             {
                                 mon.Y = nextY; // Slide along Y axis
                             }
@@ -354,8 +427,8 @@ namespace Yogurting.Server.World
                                 // Slide around diagonal obstacles
                                 float altX = mon.X + MathF.Sign(dirX) * 0.5f;
                                 float altY = mon.Y + MathF.Sign(dirY) * 0.5f;
-                                if (MapGridManager.IsWalkable(FieldId, altX, mon.Y)) mon.X = altX;
-                                else if (MapGridManager.IsWalkable(FieldId, mon.X, altY)) mon.Y = altY;
+                                if (IsPathWalkable(mon.X, mon.Y, altX, mon.Y)) mon.X = altX;
+                                else if (IsPathWalkable(mon.X, mon.Y, mon.X, altY)) mon.Y = altY;
                             }
 
                             mon.DirX = (int)(dirX * 100);
