@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="Shift_JIS"?>
-<!-- MapID:386-HF100201 ƒhƒƒV[‚Ì•”‰® -->
+<!-- MapID:386-HF100201 ï¿½hï¿½ï¿½ï¿½Vï¿½[ï¿½Ì•ï¿½ï¿½ï¿½ -->
 <field>
-	<!-- ƒhƒƒV[‚Ì•”‰®¨1F -->
-	<warpgate id="2" x="3950" y="1149" shell="11" idCli="276" dir="0" idDestField="2" xDest="27" yDest="101"/>
-	<!-- ƒhƒƒV[‚Ì•”‰®¨}‘ŠÙ ”é–§’Ê˜H -->
-	<warpgate id="3" x="3950" y="6849" shell="11" idCli="277" dir="0" idDestField="387" xDest="22" yDest="23"/>
+	<!-- ï¿½hï¿½ï¿½ï¿½Vï¿½[ï¿½Ì•ï¿½ï¿½ï¿½ï¿½ï¿½1F -->
+	<warpgate id="2" x="3900" y="1149" shell="11" idCli="276" dir="0" idDestField="2" xDest="27" yDest="101"/>
+	<!-- ï¿½hï¿½ï¿½ï¿½Vï¿½[ï¿½Ì•ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½}ï¿½ï¿½ï¿½ï¿½ ï¿½é–§ï¿½Ê˜H -->
+	<warpgate id="3" x="3900" y="6849" shell="11" idCli="277" dir="0" idDestField="387" xDest="22" yDest="23"/>
 
 	<generator>
-		<!--	x, y: ƒWƒFƒlƒŒ[ƒ^‚ÌˆÊ’u	-->
+		<!--	x, y: ï¿½Wï¿½Fï¿½lï¿½ï¿½ï¿½[ï¿½^ï¿½ÌˆÊ’u	-->
 		<point x="34" y="36"/>
 		<point x="43" y="36"/>
 		<point x="38" y="50"/>
@@ -26,9 +26,9 @@
 		<point x="57" y="49"/>
 		<point x="56" y="36"/>
 
-		<monster type="1" count="68">			<!-- ƒ\ƒ\7 -->
+		<monster type="1" count="68">			<!-- ï¿½\ï¿½\7 -->
 		</monster>
-		<monster type="2" count="68">			<!-- ƒ‰ƒbƒ`ƒ…[7 -->
+		<monster type="2" count="68">			<!-- ï¿½ï¿½ï¿½bï¿½`ï¿½ï¿½ï¿½[7 -->
 		</monster>
 	</generator>
 </field>
