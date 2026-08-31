@@ -119,15 +119,26 @@ namespace Yogurting.Server.Handlers.Field
                 player.LastAttackTime = now;
                 player.LastCombatTime = DateTime.UtcNow;
 
-                // Calculate authentic weapon combo attack skill ID (SkillWeapon.txt / AtkWeapon.txt: 10101..10104 for Blade, 70101..70104 for Spirit)
-                int attackSkillId = weaponCat switch
+                // Calculate authentic weapon combo attack skill ID from AtkWeapon group (BeItemType.txt column 12 / SkillWeapon.txt)
+                int atkGroup = 0;
+                if (_gameDb != null && _gameDb.Items.TryGetValue(weaponTypeId, out var eqDef) && eqDef.Attack > 0)
                 {
-                    1 => 10101 + (int)animId, // Blade
-                    2 => 30101 + (int)animId, // Glove
-                    3 => 50101 + (int)animId, // Blunt
-                    4 => 70101 + (int)animId, // Spirit
-                    _ => 10101 + (int)animId
-                };
+                    atkGroup = eqDef.Attack;
+                }
+                else
+                {
+                    atkGroup = weaponCat switch
+                    {
+                        1 => 101, // Blade
+                        2 => 301, // Glove
+                        3 => 501, // Blunt
+                        4 => 701, // Spirit
+                        _ => 101
+                    };
+                }
+
+                // Combo attack IDs are 1-indexed (e.g. 10201 for animId 0, 10202 for animId 1, 10203 for animId 2)
+                int attackSkillId = (atkGroup * 100) + (int)(animId % 4) + 1;
 
                 // Check field monsters (Only hit explicit targets requested by client in MsgGameAttackReq)
                 var hitMonsters = new List<FieldMonster>();
@@ -232,28 +243,28 @@ namespace Yogurting.Server.Handlers.Field
                         }
                     }
 
-                    // 1. Dispatch Monster Target Lock / Ownership (0x7A00) for each surviving hit monster
-                    foreach (var targetMonster in hitMonsters)
+                    // Dynamic Weapon Animation Impact Timing from SkillWeapon.txt (Delphi _Unit49.pas:21913-21930)
+                    int animDelayMs = 100;
+                    if (_gameDb != null && _gameDb.SkillWeapons.TryGetValue(attackSkillId, out var swDef) && swDef.Delay > 0)
                     {
-                        if (!targetMonster.IsDead)
-                        {
-                            byte[] lockPkt = YogurtingPackets.MakeGameMonsterOwnershipAcquiredNtf(targetMonster.EntityId);
-                            await state.Session.SendAsync(lockPkt);
-                            await _broadcastDelegate(state, lockPkt);
-                        }
+                        animDelayMs = swDef.Delay;
+                    }
+                    if (animDelayMs > 0)
+                    {
+                        await Task.Delay(animDelayMs);
                     }
 
-                    // 2. Broadcast attack answer & floating damage numbers across all hit enemies (0x791A)
-                    byte[] atkAns = YogurtingPackets.MakeGameAttackAns(
-                        player.CharacterId,
-                        targetEntries,
-                        player.ComboCount,
-                        weaponCategory: weaponCat,
-                        skillId: attackSkillId,
-                        addDexExp: 1);
-
-                    await state.Session.SendAsync(atkAns);
-                    await _broadcastDelegate(state, atkAns);
+                    // 1. Dispatch Target Ownership Lock (0x7A00) upon initial acquisition of target
+                    if (hitMonsters.Count > 0)
+                    {
+                        var primaryTarget = hitMonsters[0];
+                        if (player.TargetMonsterId != primaryTarget.EntityId)
+                        {
+                            player.TargetMonsterId = primaryTarget.EntityId;
+                            byte[] lockPkt = YogurtingPackets.MakeGameMonsterOwnershipAcquiredNtf(primaryTarget.EntityId);
+                            await state.Session.SendAsync(lockPkt);
+                        }
+                    }
 
                     // 2. Charge Point & Skill Gauge Update on Hit (_Unit49.pas:22236-22258)
                     player.GaugeCurrent += 600 + (player.ComboCount * 15);
@@ -269,11 +280,35 @@ namespace Yogurting.Server.Handlers.Field
                     byte[] chargePkt = YogurtingPackets.MakeGameChargePointUpdateNtf(player.ChargePoint, player.GaugeMax, player.GaugeCurrent);
                     await state.Session.SendAsync(chargePkt);
 
-                    // Synchronously process monster kills immediately following 0x791A (matching Delphi Quartet pipeline)
+                    // 3. Broadcast attack answer & floating damage numbers across all hit enemies (0x791A)
+                    byte[] atkAns = YogurtingPackets.MakeGameAttackAns(
+                        player.CharacterId,
+                        targetEntries,
+                        player.ComboCount,
+                        weaponCategory: weaponCat,
+                        skillId: attackSkillId,
+                        addDexExp: 1);
+
+                    await state.Session.SendAsync(atkAns);
+                    await _broadcastDelegate(state, atkAns);
+
+                    // 4. Dispatch Monster Real-Time Health Update (0x79E8 - Delphi _Unit49.pas:19502 / _Unit47.pas:57301)
+                    foreach (var targetMonster in hitMonsters)
+                    {
+                        byte[] hpInfoPkt = YogurtingPackets.MakeGameMonHpInfoNtf(targetMonster.EntityId, targetMonster.CurrentHp, targetMonster.MaxHp);
+                        await state.Session.SendAsync(hpInfoPkt);
+                        await _broadcastDelegate(state, hpInfoPkt);
+                    }
+
+                    // 5. Synchronously process monster kills immediately following 0x791A (matching Delphi Quartet pipeline)
                     if (killedMonsters.Count > 0)
                     {
                         foreach (var kMon in killedMonsters)
                         {
+                            if (player.TargetMonsterId == kMon.EntityId)
+                            {
+                                player.TargetMonsterId = 0;
+                            }
                             await ProcessMonsterDefeatAsync(state, player, kMon);
                         }
                     }
@@ -343,12 +378,7 @@ namespace Yogurting.Server.Handlers.Field
             player.CurrentExp += expEarned;
             Logger.Info($"[Combat] '{monster.Name}' defeated by '{player.CharacterName}'! Gained {expEarned} EXP. Total EXP: {player.CurrentExp}/{player.MaxExp}");
 
-            // 1. Release client monster ownership / target lock (0x7A01 - Delphi TMsgGameMonsterOwnershipLostNtf)
-            byte[] unlockPkt = YogurtingPackets.MakeGameMonsterOwnershipLostNtf(monster.EntityId);
-            await state.Session.SendAsync(unlockPkt);
-            await _broadcastDelegate(state, unlockPkt);
-
-            // 2. Broadcast Monster Dead & Loot Delivery to Top-Right Cardboard Booty Box (0x5276)
+            // Broadcast Monster Dead & Loot Delivery to Top-Right Cardboard Booty Box (0x5276)
             byte[] deadNtf = YogurtingPackets.MakeGameHuntMonDeadNtf(
                 monster.EntityId,
                 (ushort)monster.X,
@@ -361,17 +391,7 @@ namespace Yogurting.Server.Handlers.Field
             await state.Session.SendAsync(deadNtf);
             await _broadcastDelegate(state, deadNtf);
 
-            // 3. Broadcast Monster Dead Status (0x796C - Delphi TMsgGameMonDeadNtf)
-            byte[] monDeadPkt = YogurtingPackets.MakeGameMonDeadNtf(
-                monster.EntityId,
-                (ushort)monster.X,
-                (ushort)monster.Y,
-                (ushort)(lootList.Count > 0 ? lootList[0].count : 0),
-                lootList.Count > 0 ? lootList[0].itemId : 0);
-            await state.Session.SendAsync(monDeadPkt);
-            await _broadcastDelegate(state, monDeadPkt);
-
-            // 4. Send EXP Gain notice (0x5277) to update client EXP bar (_Unit47.pas:49068)
+            // Send EXP Gain notice (0x5277) to update client EXP bar (_Unit47.pas:49068)
             byte[] expNtf = YogurtingPackets.MakeGameHuntCharExpUpNtf((int)player.CurrentExp);
             await state.Session.SendAsync(expNtf);
 

@@ -204,8 +204,10 @@ namespace Yogurting.Server.World
                             mon.Respawn();
                             mon.Frame = 0;
                             mon.NextWanderInterval = Random.Shared.Next(15, 35);
-                            byte[] respawnNtf = YogurtingPackets.MakeGameMonStatusNtf(mon.EntityId, mon.MonsterType, mon.CurrentHp, mon.MaxHp, (ushort)mon.X, (ushort)mon.Y);
+                            byte[] respawnNtf = YogurtingPackets.MakeGameMonInfoNtf(mon);
                             _ = BroadcastToAreaAsync(respawnNtf, mon.X, mon.Y, 35f);
+                            byte[] moveNtf = YogurtingPackets.MakeGameMonMoveNtf(mon.EntityId, (int)mon.X, (int)mon.Y, (int)mon.DestX, (int)mon.DestY, mon.MoveMotion, mon.MoveSpeedRate);
+                            _ = BroadcastToAreaAsync(moveNtf, mon.X, mon.Y, 35f);
                             Logger.Debug($"[FieldServer] '{mon.Name}' (ID {mon.EntityId}) respawned at ({mon.X}, {mon.Y}) in Field {FieldId}.");
                         }
                         continue;
@@ -409,7 +411,7 @@ namespace Yogurting.Server.World
                                 break;
                             }
 
-                            if ((DateTime.UtcNow - mon.LastAttackTime).TotalSeconds >= 1.8)
+                            if ((DateTime.UtcNow - mon.LastAttackTime).TotalSeconds >= 2.0)
                             {
                                 mon.LastAttackTime = DateTime.UtcNow;
                                 target.Player.LastCombatTime = DateTime.UtcNow;
