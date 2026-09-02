@@ -218,11 +218,58 @@ namespace Yogurting.Server.Handlers.Field
                 var zoneTitles = !string.IsNullOrEmpty(fieldName) ? new List<string> { fieldName } : null;
                 await session.SendAsync(YogurtingPackets.MakeGameCharaNameInfoNtf(-1, (int)player.School, 0, string.Empty, 4001, zoneTitles, string.Empty));
 
+                // 8. TMsgGameSetStateNtf (0x520F) - Phase 4: Synchronize player HP/MP/Stats on campus entry
+                await session.SendAsync(YogurtingPackets.MakeGameSetStateNtf(player));
+
+                // 9. TMsgGameWarpResultNtf (0x7968) - Phase 4: Unclamp camera and fade in character model at spawn position
+                await session.SendAsync(YogurtingPackets.MakeGameWarpResultNtf(player.FieldId, player.Position.X, player.Position.Y));
+
                 Logger.Info($"[FieldServer] '{player.CharacterName}' completed 3D field loading for Field {player.FieldId}! BGM #{bgmNo} triggered.");
             }
             catch (Exception ex)
             {
                 Logger.Error($"[FieldServer] Emote/FieldLoading error: {ex.Message}");
+            }
+        }
+
+        /// <summary>
+        /// 0x7963 (31075): MsgGameChatReq / MsgGameChatNtf - Campus and Zone Chat
+        /// </summary>
+        [PacketHandler(PacketOpcode.MsgGameChatReq)]
+        [PacketHandler(PacketOpcode.MsgGameChatNtf)]
+        public async Task HandleChatAsync(PlayerSessionState state, byte[] packetData)
+        {
+            try
+            {
+                string message = string.Empty;
+                if (packetData.Length >= 46)
+                {
+                    int len = BitConverter.ToUInt16(packetData, 42);
+                    if (len > 0 && packetData.Length >= 44 + (len * 2))
+                    {
+                        message = System.Text.Encoding.Unicode.GetString(packetData, 44, len * 2);
+                        int nullIdx = message.IndexOf('\0');
+                        if (nullIdx >= 0) message = message.Substring(0, nullIdx);
+                    }
+                }
+
+                if (string.IsNullOrWhiteSpace(message)) return;
+
+                Logger.Info($"[Chat] [{state.Player.CharacterName}]: {message}");
+
+                byte[] broadcastPacket = YogurtingPackets.MakeGameChatNtf(
+                    state.Player.CharaId,
+                    state.Player.CharacterName,
+                    message,
+                    0
+                );
+
+                await state.Session.SendAsync(broadcastPacket);
+                await _broadcastDelegate(state, broadcastPacket);
+            }
+            catch (Exception ex)
+            {
+                Logger.Error($"[Chat] Error: {ex.Message}");
             }
         }
 

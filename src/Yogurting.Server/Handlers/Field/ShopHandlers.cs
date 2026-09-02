@@ -128,52 +128,56 @@ namespace Yogurting.Server.Handlers.Field
                 int price = product?.Price ?? 0;
                 int period = product?.Period ?? 0;
 
-                // 2. Validate Player Star Points
-                if (player.StarPoints < price)
-                {
-                    Logger.Warn($"[FieldServer] Star purchase rejected: '{player.CharacterName}' has {player.StarPoints} Star Points, but Product #{productId} costs {price}!");
-                    byte[] failAns = YogurtingPackets.MakeByulProductBuyAns(10003, productId, 0L, player.StarPoints, period, price);
-                    await state.Session.SendAsync(failAns);
-                    return;
-                }
-
-                // 3. Deduct Currency (StarPoints)
-                player.StarPoints -= price;
-
-                // 4. Create and Deliver Purchased Items (Supports both single items and bundle packages from ProductList.xml)
                 var deliveredItems = new List<Item>();
-                var itemTypeIds = (product?.ItemIds != null && product.ItemIds.Count > 0)
-                    ? product.ItemIds
-                    : (product != null ? new List<int> { product.ProductId } : new List<int> { productId });
 
-                int maxInv = (player.Inventory != null && player.Inventory.Count > 0) ? player.Inventory.Max(i => i.Id) : 0;
-                int maxStar = (player.StarBeItems != null && player.StarBeItems.Count > 0) ? player.StarBeItems.Max(i => i.Id) : 0;
-                int runningUid = Math.Max(Math.Max(maxInv, maxStar), 100);
-
-                foreach (int itemTypeId in itemTypeIds)
+                // 2. Validate Player Star Points & Deliver Items under lock
+                lock (player)
                 {
-                    runningUid += 2;
-                    int nextUid = runningUid;
-                    long itemSerialId = nextUid;
-                    string itemName = _gameDb?.Items.TryGetValue(itemTypeId, out var def) == true ? def.Name : $"Product {itemTypeId}";
-
-                    var newItem = new Item
+                    if (player.StarPoints < price)
                     {
-                        Id = nextUid,
-                        ItemId = itemTypeId,
-                        TypeId = itemTypeId,
-                        Name = itemName,
-                        Quantity = quantity,
-                        SerialId = itemSerialId,
-                        SlotIndex = (ushort)((player.StarBeItems?.Count ?? 0) + 1),
-                        SlotType = ItemSlotType.Inventory,
-                        IsEquipped = false,
-                        SocketSlots = new int[5]
-                    };
+                        Logger.Warn($"[FieldServer] Star purchase rejected: '{player.CharacterName}' has {player.StarPoints} Star Points, but Product #{productId} costs {price}!");
+                        byte[] failAns = YogurtingPackets.MakeByulProductBuyAns(10003, productId, 0L, player.StarPoints, period, price);
+                        _ = state.Session.SendAsync(failAns);
+                        return;
+                    }
 
-                    (player.StarBeItems ??= new List<Item>()).Add(newItem);
-                    deliveredItems.Add(newItem);
-                    Logger.Info($"[FieldServer] Star purchase granted item: '{player.CharacterName}' received '{itemName}' ({itemTypeId}) [FID: {itemSerialId}]");
+                    // 3. Deduct Currency (StarPoints)
+                    player.StarPoints -= price;
+
+                    // 4. Create and Deliver Purchased Items
+                    var itemTypeIds = (product?.ItemIds != null && product.ItemIds.Count > 0)
+                        ? product.ItemIds
+                        : (product != null ? new List<int> { product.ProductId } : new List<int> { productId });
+
+                    int maxInv = (player.Inventory != null && player.Inventory.Count > 0) ? player.Inventory.Max(i => i.Id) : 0;
+                    int maxStar = (player.StarBeItems != null && player.StarBeItems.Count > 0) ? player.StarBeItems.Max(i => i.Id) : 0;
+                    int runningUid = Math.Max(Math.Max(maxInv, maxStar), 100);
+
+                    foreach (int itemTypeId in itemTypeIds)
+                    {
+                        runningUid += 2;
+                        int nextUid = runningUid;
+                        long itemSerialId = nextUid;
+                        string itemName = _gameDb?.Items.TryGetValue(itemTypeId, out var def) == true ? def.Name : $"Product {itemTypeId}";
+
+                        var newItem = new Item
+                        {
+                            Id = nextUid,
+                            ItemId = itemTypeId,
+                            TypeId = itemTypeId,
+                            Name = itemName,
+                            Quantity = quantity,
+                            SerialId = itemSerialId,
+                            SlotIndex = (ushort)((player.StarBeItems?.Count ?? 0) + 1),
+                            SlotType = ItemSlotType.Inventory,
+                            IsEquipped = false,
+                            SocketSlots = new int[5]
+                        };
+
+                        (player.StarBeItems ??= new List<Item>()).Add(newItem);
+                        deliveredItems.Add(newItem);
+                        Logger.Info($"[FieldServer] Star purchase granted item: '{player.CharacterName}' received '{itemName}' ({itemTypeId}) [FID: {itemSerialId}]");
+                    }
                 }
 
                 Logger.Info($"[FieldServer] Star purchase SUCCESS: '{player.CharacterName}' bought Product #{productId} ({deliveredItems.Count} items) for {price} Stars (Remaining: {player.StarPoints} Stars)!");
@@ -255,28 +259,35 @@ namespace Yogurting.Server.Handlers.Field
                     rolledItem = keyList[Random.Shared.Next(keyList.Count)];
                 }
 
-                if (player.TaffPoints >= price)
+                lock (player)
                 {
-                    player.TaffPoints -= price;
-                }
-
-                // Add rolled prize to inventory
-                var existing = player.Inventory?.Find(i => i.TypeId == rolledItem);
-                if (existing != null)
-                {
-                    existing.Quantity++;
-                }
-                else
-                {
-                    player.Inventory?.Add(new Item
+                    if (player.TaffPoints < price)
                     {
-                        Id = ((player.Inventory?.Count > 0) ? player.Inventory.Max(i => i.Id) : 0) + 1,
-                        TypeId = rolledItem,
-                        SlotIndex = player.Inventory?.Count ?? 0,
-                        SlotType = ItemSlotType.Inventory,
-                        Quantity = 1,
-                        Name = _gameDb?.Items.TryGetValue(rolledItem, out var def) == true ? def.Name : "Capsule Prize"
-                    });
+                        Logger.Warn($"[Shop] Capsule buy rejected: '{player.CharacterName}' has {player.TaffPoints} Taff, but machine requires {price}!");
+                        _ = state.Session.SendAsync(YogurtingPackets.MakeGameCapsuleBuyAns(2, 0, 0, price, player.TaffPoints));
+                        return;
+                    }
+
+                    player.TaffPoints -= price;
+
+                    // Add rolled prize to inventory
+                    var existing = player.Inventory?.Find(i => i.TypeId == rolledItem);
+                    if (existing != null)
+                    {
+                        existing.Quantity++;
+                    }
+                    else
+                    {
+                        player.Inventory?.Add(new Item
+                        {
+                            Id = ((player.Inventory?.Count > 0) ? player.Inventory.Max(i => i.Id) : 0) + 1,
+                            TypeId = rolledItem,
+                            SlotIndex = player.Inventory?.Count ?? 0,
+                            SlotType = ItemSlotType.Inventory,
+                            Quantity = 1,
+                            Name = _gameDb?.Items.TryGetValue(rolledItem, out var def) == true ? def.Name : "Capsule Prize"
+                        });
+                    }
                 }
 
                 Logger.Info($"[Shop] '{player.CharacterName}' bought capsule from Machine {machineSn}, received Item #{rolledItem}!");

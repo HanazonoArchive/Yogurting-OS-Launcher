@@ -547,7 +547,7 @@ namespace Yogurting.Core.Network
             writer.WriteInt32(player.GaugeMax);             // GaugeMax
             writer.WriteInt32(player.GaugeCurrent);         // GaugeCurrent
             writer.WriteByte(player.ChargePoint);           // ChargePoint
-            writer.WriteInt32((player.Pow + 15) * 64);      // Atk
+            writer.WriteInt32(player.Pow * 65);             // Atk: TChara.FAtk (Delphi _Unit47.pas:46038)
             writer.WriteInt32(player.Defense * 64);         // Def
             writer.WriteInt32(100 * 64);                    // Hit
             writer.WriteInt32(player.Speed * 65);           // Evasion
@@ -2132,7 +2132,8 @@ namespace Yogurting.Core.Network
 
             // Trailing fields (_Unit47.pas:49028-49033)
             writer.WriteInt32(0); // ReturnCode: 0
-            writer.WriteInt32(monsterType); // Monster Type from HuntMon.txt
+            // SRC: server_legacy/DELPHI PROJECT/_Unit47.pas:005AA793 (always 0, NOT monsterType)
+            writer.WriteInt32(0); // Type: 0
 
             return writer.Build();
         }

@@ -49,18 +49,8 @@ namespace Yogurting.Server.Handlers.Auth
             try
             {
                 // Format: [Header 6B] [Username Unicode 50B] [Password MD5 Hash ASCII 32B]
-                string username = string.Empty;
-                string passwordHash = string.Empty;
-
-                if (packetData.Length >= 56)
-                {
-                    username = Encoding.Unicode.GetString(packetData, 6, 50).TrimEnd('\0');
-                }
-
-                if (packetData.Length >= 88)
-                {
-                    passwordHash = Encoding.ASCII.GetString(packetData, 56, 32).TrimEnd('\0');
-                }
+                string username = PacketReader.ReadFixedWString(packetData, 6, 50);
+                string passwordHash = PacketReader.ReadFixedAnsiString(packetData, 56, 32);
 
                 if (string.IsNullOrWhiteSpace(username))
                 {
@@ -182,11 +172,9 @@ namespace Yogurting.Server.Handlers.Auth
         {
             try
             {
-                string charName = string.Empty;
-                if (packetData.Length >= 32)
-                {
-                    charName = Encoding.Unicode.GetString(packetData, 6, 26).TrimEnd('\0');
-                }
+                string charName = packetData.Length >= 32
+                    ? PacketReader.ReadFixedWString(packetData, 6, 26)
+                    : string.Empty;
 
                 bool isTaken = await _accountRepository.GetByCharacterNameAsync(charName) != null;
                 Logger.Info($"[LoginServer] Check Character Name: '{charName}' -> {(isTaken ? "TAKEN" : "AVAILABLE")}");
@@ -232,8 +220,14 @@ namespace Yogurting.Server.Handlers.Auth
             try
             {
                 // [Header 6B] [WorldID 4B] [Name 28B] [Tel 4B] [Gender 4B] [School 4B] [Face 4B] [Hair 4B] [Skin 4B] [Month 1B] [Day 1B] [Blood 1B]
+                if (packetData.Length < 62)
+                {
+                    Logger.Warn($"[LoginServer] MakeChar rejected: Payload too small ({packetData.Length} bytes)");
+                    return;
+                }
+
                 int worldId = BitConverter.ToInt32(packetData, 6);
-                string charName = Encoding.Unicode.GetString(packetData, 10, 28).TrimEnd('\0');
+                string charName = PacketReader.ReadFixedWString(packetData, 10, 28);
                 int telNumber = BitConverter.ToInt32(packetData, 38);
                 int gender = BitConverter.ToInt32(packetData, 42);
                 int school = BitConverter.ToInt32(packetData, 46);

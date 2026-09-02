@@ -55,30 +55,42 @@ namespace Yogurting.Core.Models
         public int MoveMotion { get; set; } = 1;     // 1 = Walk, 2 = Run
         public int NextWanderInterval { get; set; } = 5;
 
-        public void TakeDamage(int damage)
+        private readonly object _syncLock = new();
+
+        public bool TakeDamage(int damage)
         {
-            CurrentHp = Math.Max(0, CurrentHp - damage);
-            if (CurrentHp <= 0)
+            lock (_syncLock)
             {
-                IsDead = true;
-                State = MonsterState.Dead;
-                DeathTime = DateTime.UtcNow;
+                if (IsDead) return false;
+
+                CurrentHp = Math.Max(0, CurrentHp - damage);
+                if (CurrentHp <= 0)
+                {
+                    IsDead = true;
+                    State = MonsterState.Dead;
+                    DeathTime = DateTime.UtcNow;
+                    return true;
+                }
+                return false;
             }
         }
 
         public void Respawn()
         {
-            IsDead = false;
-            CurrentHp = MaxHp;
-            X = SpawnX;
-            Y = SpawnY;
-            DestX = SpawnX;
-            DestY = SpawnY;
-            StartX = SpawnX;
-            StartY = SpawnY;
-            TargetPlayerId = 0;
-            State = MonsterState.Wait;
-            Frame = 0;
+            lock (_syncLock)
+            {
+                IsDead = false;
+                CurrentHp = MaxHp;
+                X = SpawnX;
+                Y = SpawnY;
+                DestX = SpawnX;
+                DestY = SpawnY;
+                StartX = SpawnX;
+                StartY = SpawnY;
+                TargetPlayerId = 0;
+                State = MonsterState.Wait;
+                Frame = 0;
+            }
         }
     }
 }

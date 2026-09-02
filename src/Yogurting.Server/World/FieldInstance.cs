@@ -228,48 +228,23 @@ namespace Yogurting.Server.World
                         {
                             mon.Respawn();
                             mon.Frame = 0;
-                            mon.NextWanderInterval = Random.Shared.Next(4, 10); // Active pacing (1.0 - 2.5s)
-
-                            // Immediately pick a walk destination on respawn so monster moves right away
-                            float initDestX = mon.SpawnX;
-                            float initDestY = mon.SpawnY;
-                            for (int attempt = 0; attempt < 6; attempt++)
-                            {
-                                float offX = Random.Shared.Next(-4, 5);
-                                float offY = Random.Shared.Next(-4, 5);
-                                float tryX = mon.SpawnX + offX;
-                                float tryY = mon.SpawnY + offY;
-                                if (IsPathWalkable(mon.X, mon.Y, tryX, tryY) && ((int)tryX != (int)mon.X || (int)tryY != (int)mon.Y))
-                                {
-                                    initDestX = tryX;
-                                    initDestY = tryY;
-                                    break;
-                                }
-                            }
-
-                            mon.StartX = mon.X;
-                            mon.StartY = mon.Y;
-                            mon.DestX = initDestX;
-                            mon.DestY = initDestY;
-                            mon.MoveMotion = 1;
-                            mon.MoveSpeedRate = 80;
+                            mon.NextWanderInterval = Random.Shared.Next(16, 25); // 4.0 - 6.0s pacing (Delphi 150 frames)
 
                             byte[] respawnNtf = YogurtingPackets.MakeGameMonInfoNtf(mon);
                             _ = BroadcastToAreaAsync(respawnNtf, mon.X, mon.Y, 35f);
-                            byte[] moveNtf = YogurtingPackets.MakeGameMonMoveNtf(mon.EntityId, (int)mon.X, (int)mon.Y, (int)mon.DestX, (int)mon.DestY, mon.MoveMotion, mon.MoveSpeedRate);
-                            _ = BroadcastToAreaAsync(moveNtf, mon.X, mon.Y, 35f);
-                            Logger.Debug($"[FieldServer] '{mon.Name}' (ID {mon.EntityId}) respawned and started moving towards ({mon.DestX}, {mon.DestY}) in Field {FieldId}.");
+                            Logger.Debug($"[FieldServer] '{mon.Name}' (ID {mon.EntityId}) respawned at ({mon.SpawnX}, {mon.SpawnY}) in Field {FieldId}.");
                         }
                         continue;
                     }
 
-                    mon.Frame++;
-
                     switch (mon.State)
                     {
+                        // =========================================================================
+                        // State 0: stWait (Idle / Anchor Wait) - Delphi _Unit49.pas:18360-18420
+                        // =========================================================================
                         case MonsterState.Wait:
                         {
-                            // 1. Only pursue if monster was explicitly targeted/attacked by a player (retaliatory aggro)
+                            // 1. Pursue if monster was targeted/attacked by a player (retaliatory aggro)
                             PlayerSessionState? target = null;
                             if (mon.TargetPlayerId > 0)
                             {
@@ -279,7 +254,7 @@ namespace Yogurting.Server.World
                             if (target != null)
                             {
                                 mon.State = MonsterState.Chase;
-                                mon.Frame = 6;
+                                mon.Frame = 0;
                                 break;
                             }
                             else
@@ -287,31 +262,30 @@ namespace Yogurting.Server.World
                                 mon.TargetPlayerId = 0;
                             }
 
-                            // 2. Peaceful Idle Wandering with map.db wall collision (_Unit49.pas:14081-14093)
-                            if (mon.Frame >= mon.NextWanderInterval)
+                            mon.Frame++;
+
+                            // 2. Peaceful Idle Wandering with 8-tile radius around spawn anchor (_Unit49.pas:0060C61A)
+                            if (mon.Frame >= (uint)mon.NextWanderInterval)
                             {
                                 mon.Frame = 0;
-                                mon.NextWanderInterval = Random.Shared.Next(4, 10); // Active pacing (1.0 - 2.5s)
+                                mon.NextWanderInterval = Random.Shared.Next(16, 25); // 4.0 - 6.25s (150 frames in Delphi)
 
-                                float destX = mon.SpawnX;
-                                float destY = mon.SpawnY;
+                                float chosenDestX = mon.SpawnX;
+                                float chosenDestY = mon.SpawnY;
                                 bool foundWalkable = false;
 
-                                for (int attempt = 0; attempt < 6; attempt++)
+                                for (int attempt = 0; attempt < 8; attempt++)
                                 {
-                                    float offX = Random.Shared.Next(-4, 5); // 4-tile territory tether around spawn anchor
-                                    float offY = Random.Shared.Next(-4, 5);
+                                    // Delphi _Unit49.pas:0060C61A RandomRange(-8, 8) around FBasePoint
+                                    float offX = Random.Shared.Next(-8, 9);
+                                    float offY = Random.Shared.Next(-8, 9);
                                     float tryX = mon.SpawnX + offX;
                                     float tryY = mon.SpawnY + offY;
 
-                                    // Validate the ENTIRE path from the monster's current position to the candidate
-                                    // tile, not just the destination tile itself - otherwise a thin wall or obstacle
-                                    // sitting between the two points gets silently skipped and the monster clips
-                                    // straight through it when the client animates the walk.
-                                    if (IsPathWalkable(mon.X, mon.Y, tryX, tryY))
+                                    if (((int)tryX != (int)mon.X || (int)tryY != (int)mon.Y) && IsPathWalkable(mon.X, mon.Y, tryX, tryY))
                                     {
-                                        destX = tryX;
-                                        destY = tryY;
+                                        chosenDestX = tryX;
+                                        chosenDestY = tryY;
                                         foundWalkable = true;
                                         break;
                                     }
@@ -321,19 +295,26 @@ namespace Yogurting.Server.World
                                 {
                                     int curX = (int)mon.X;
                                     int curY = (int)mon.Y;
-                                    int tX = (int)destX;
-                                    int tY = (int)destY;
+                                    int tX = (int)chosenDestX;
+                                    int tY = (int)chosenDestY;
 
                                     if (curX != tX || curY != tY)
                                     {
+                                        float dx = chosenDestX - mon.X;
+                                        float dy = chosenDestY - mon.Y;
+                                        float walkLen = MathF.Sqrt(dx * dx + dy * dy);
+
                                         mon.StartX = mon.X;
                                         mon.StartY = mon.Y;
-                                        mon.DestX = destX;
-                                        mon.DestY = destY;
-                                        mon.X = destX;
-                                        mon.Y = destY;
-                                        mon.MoveMotion = 1;
-                                        mon.MoveSpeedRate = 80;
+                                        mon.DestX = chosenDestX;
+                                        mon.DestY = chosenDestY;
+                                        mon.WalkLength = walkLen;
+                                        mon.MoveMotion = 1;      // Motion 1: Walk
+                                        mon.MoveSpeedRate = 80;  // 80%: 0.6 tiles/s -> 0.15 tiles per 250ms tick
+                                        mon.DeltaX = (dx / Math.Max(0.01f, walkLen)) * 0.15f;
+                                        mon.DeltaY = (dy / Math.Max(0.01f, walkLen)) * 0.15f;
+                                        mon.State = MonsterState.Walk;
+                                        mon.Frame = 0;
 
                                         byte[] moveNtf = YogurtingPackets.MakeGameMonMoveNtf(mon.EntityId, curX, curY, tX, tY, mon.MoveMotion, mon.MoveSpeedRate);
                                         _ = BroadcastToAreaAsync(moveNtf, mon.X, mon.Y, 30f);
@@ -343,6 +324,56 @@ namespace Yogurting.Server.World
                             break;
                         }
 
+                        // =========================================================================
+                        // State 1: stWalk (Gradual Vector Stepping) - Delphi _Unit49.pas:18420-18520
+                        // =========================================================================
+                        case MonsterState.Walk:
+                        {
+                            // 1. Immediately interrupt walk into Chase if attacked
+                            PlayerSessionState? target = null;
+                            if (mon.TargetPlayerId > 0)
+                            {
+                                target = playersList.Find(p => (p.Player.CharacterId == mon.TargetPlayerId || p.Player.CharaId == mon.TargetPlayerId) && p.Player.CurrentHp > 0 && p.PendingWarpFieldId == 0);
+                            }
+
+                            if (target != null)
+                            {
+                                mon.State = MonsterState.Chase;
+                                mon.Frame = 0;
+                                break;
+                            }
+                            else
+                            {
+                                mon.TargetPlayerId = 0;
+                            }
+
+                            // 2. Advance coordinates incrementally along Delta vector (_Unit49.pas:0060C6BC)
+                            mon.Frame++;
+                            float nextX = mon.StartX + mon.DeltaX * mon.Frame;
+                            float nextY = mon.StartY + mon.DeltaY * mon.Frame;
+
+                            if (IsPathWalkable(mon.X, mon.Y, nextX, nextY))
+                            {
+                                mon.X = nextX;
+                                mon.Y = nextY;
+                            }
+
+                            float remainingDist = MathF.Sqrt(MathF.Pow(mon.DestX - mon.X, 2) + MathF.Pow(mon.DestY - mon.Y, 2));
+                            if (remainingDist <= 0.25f || (mon.Frame * 0.15f) >= mon.WalkLength)
+                            {
+                                // Destination reached, settle into Wait
+                                mon.X = mon.DestX;
+                                mon.Y = mon.DestY;
+                                mon.State = MonsterState.Wait;
+                                mon.Frame = 0;
+                                mon.NextWanderInterval = Random.Shared.Next(16, 25);
+                            }
+                            break;
+                        }
+
+                        // =========================================================================
+                        // State 2: stChase (Target Pursuit & Leash) - Delphi _Unit49.pas:18550-18650
+                        // =========================================================================
                         case MonsterState.Chase:
                         {
                             PlayerSessionState? target = null;
@@ -353,13 +384,20 @@ namespace Yogurting.Server.World
 
                             if (target == null)
                             {
+                                // Target disconnected, dead, or left field: release ownership ring (0x7A01)
+                                if (mon.TargetPlayerId > 0)
+                                {
+                                    byte[] lostNtf = YogurtingPackets.MakeGameMonsterOwnershipLostNtf(mon.EntityId);
+                                    _ = BroadcastToAreaAsync(lostNtf, mon.X, mon.Y, 35f);
+                                }
+
                                 mon.TargetPlayerId = 0;
                                 mon.State = MonsterState.Wait;
                                 mon.Frame = 0;
                                 if (mon.CurrentHp < mon.MaxHp)
                                 {
                                     mon.CurrentHp = mon.MaxHp;
-                                    byte[] hpNtf = YogurtingPackets.MakeGameMonHpInfoNtf(mon.EntityId, (ushort)mon.CurrentHp, (ushort)mon.MaxHp);
+                                    byte[] hpNtf = YogurtingPackets.MakeGameMonHpInfoNtf(mon.EntityId, mon.CurrentHp, mon.MaxHp);
                                     _ = BroadcastToAreaAsync(hpNtf, mon.X, mon.Y, 35f);
                                 }
                                 break;
@@ -367,25 +405,28 @@ namespace Yogurting.Server.World
 
                             float pX = (float)target.Player.Position.X;
                             float pY = (float)target.Player.Position.Y;
-                            float dx = pX - mon.X;
-                            float dy = pY - mon.Y;
-                            float dist = MathF.Sqrt(dx * dx + dy * dy);
+                            float spawnDx = MathF.Abs(pX - mon.SpawnX);
+                            float spawnDy = MathF.Abs(pY - mon.SpawnY);
 
-                            if (dist > 30.0f)
+                            // Authentic Delphi Leash: 16 tiles from Spawn Anchor FBasePoint (_Unit49.pas:0060C394 / 0060C3CC)
+                            if (spawnDx >= 16.0f || spawnDy >= 16.0f)
                             {
+                                // 1. Broadcast Ownership Lost (0x7A01) to remove client green lock ring (_Unit49.pas:0060C875)
+                                byte[] lostNtf = YogurtingPackets.MakeGameMonsterOwnershipLostNtf(mon.EntityId);
+                                _ = BroadcastToAreaAsync(lostNtf, mon.X, mon.Y, 35f);
+
+                                // 2. Restore HP to full and broadcast 0x79E8 (_Unit49.pas:0060C895)
                                 mon.TargetPlayerId = 0;
                                 mon.CurrentHp = mon.MaxHp;
                                 mon.State = MonsterState.Wait;
                                 mon.Frame = 0;
+                                mon.NextWanderInterval = 20;
 
-                                // Only animate a walk back to spawn if that straight-line path is actually clear;
-                                // otherwise a wall between the leash-break point and spawn would get clipped through.
-                                // When blocked, send an instant "already there" sync (motion 0) instead of a walk.
                                 bool canWalkToSpawn = IsPathWalkable(mon.X, mon.Y, mon.SpawnX, mon.SpawnY);
                                 byte[] resetMoveNtf = canWalkToSpawn
                                     ? YogurtingPackets.MakeGameMonMoveNtf(mon.EntityId, (int)mon.X, (int)mon.Y, (int)mon.SpawnX, (int)mon.SpawnY, 1, 80)
                                     : YogurtingPackets.MakeGameMonMoveNtf(mon.EntityId, (int)mon.SpawnX, (int)mon.SpawnY, (int)mon.SpawnX, (int)mon.SpawnY, 0, 80);
-                                byte[] hpNtf = YogurtingPackets.MakeGameMonHpInfoNtf(mon.EntityId, (ushort)mon.CurrentHp, (ushort)mon.MaxHp);
+                                byte[] hpNtf = YogurtingPackets.MakeGameMonHpInfoNtf(mon.EntityId, mon.CurrentHp, mon.MaxHp);
                                 mon.X = mon.SpawnX;
                                 mon.Y = mon.SpawnY;
                                 _ = BroadcastToAreaAsync(resetMoveNtf, mon.SpawnX, mon.SpawnY, 35f);
@@ -393,53 +434,50 @@ namespace Yogurting.Server.World
                                 break;
                             }
 
-                            // Strict Melee Distance (Delphi _Unit49.pas:0060CACB / 0060CAE9 abs(dx) < 2 && abs(dy) < 2)
-                            if (dist <= 1.4f)
+                            float dx = pX - mon.X;
+                            float dy = pY - mon.Y;
+
+                            // Chebyshev Melee Combat Distance: adjacent 8 tiles (_Unit49.pas:0060CACB / 0060CAE9 abs(dx) < 2 && abs(dy) < 2)
+                            if (MathF.Abs(dx) < 1.9f && MathF.Abs(dy) < 1.9f)
                             {
                                 mon.State = MonsterState.Attack;
                                 mon.Frame = 0;
                                 break;
                             }
 
-                            float moveSpeed = 0.9f;
+                            // Run Speed (Delphi 2.0 tiles/s -> 0.5f tiles per 250ms tick at Motion 2: _Unit49.pas:0060C15B)
+                            float dist = MathF.Sqrt(dx * dx + dy * dy);
                             float dirX = dx / Math.Max(0.01f, dist);
                             float dirY = dy / Math.Max(0.01f, dist);
-                            float step = MathF.Min(MathF.Max(0.1f, dist - 1.0f), moveSpeed);
+                            float step = MathF.Min(MathF.Max(0.1f, dist - 1.0f), 0.5f);
 
-                            float nextX = mon.X + dirX * step;
-                            float nextY = mon.Y + dirY * step;
+                            float nextChaseX = mon.X + dirX * step;
+                            float nextChaseY = mon.Y + dirY * step;
 
-                            if (IsPathWalkable(mon.X, mon.Y, nextX, nextY))
+                            if (IsPathWalkable(mon.X, mon.Y, nextChaseX, nextChaseY))
                             {
-                                mon.X = nextX;
-                                mon.Y = nextY;
+                                mon.X = nextChaseX;
+                                mon.Y = nextChaseY;
                             }
-                            else if (IsPathWalkable(mon.X, mon.Y, nextX, mon.Y))
+                            else if (IsPathWalkable(mon.X, mon.Y, nextChaseX, mon.Y))
                             {
-                                mon.X = nextX; // Slide along X axis
+                                mon.X = nextChaseX;
                             }
-                            else if (IsPathWalkable(mon.X, mon.Y, mon.X, nextY))
+                            else if (IsPathWalkable(mon.X, mon.Y, mon.X, nextChaseY))
                             {
-                                mon.Y = nextY; // Slide along Y axis
-                            }
-                            else
-                            {
-                                // Slide around diagonal obstacles
-                                float altX = mon.X + MathF.Sign(dirX) * 0.5f;
-                                float altY = mon.Y + MathF.Sign(dirY) * 0.5f;
-                                if (IsPathWalkable(mon.X, mon.Y, altX, mon.Y)) mon.X = altX;
-                                else if (IsPathWalkable(mon.X, mon.Y, mon.X, altY)) mon.Y = altY;
+                                mon.Y = nextChaseY;
                             }
 
                             mon.DirX = (int)(dirX * 100);
                             mon.DirY = (int)(dirY * 100);
 
-                            if (mon.Frame >= 2 || MathF.Abs(mon.DestX - pX) > 1.2f || MathF.Abs(mon.DestY - pY) > 1.2f)
+                            // Send Chase Movement packet with Motion 2 (Run animation per Delphi 0060C15B)
+                            if (mon.Frame >= 8 || MathF.Abs(mon.DestX - pX) > 1.2f || MathF.Abs(mon.DestY - pY) > 1.2f)
                             {
                                 mon.Frame = 0;
                                 mon.DestX = pX;
                                 mon.DestY = pY;
-                                byte[] moveNtf = YogurtingPackets.MakeGameMonMoveNtf(mon.EntityId, (int)mon.X, (int)mon.Y, (int)pX, (int)pY, 1, 100);
+                                byte[] moveNtf = YogurtingPackets.MakeGameMonMoveNtf(mon.EntityId, (int)mon.X, (int)mon.Y, (int)pX, (int)pY, 2, 100);
                                 _ = BroadcastToAreaAsync(moveNtf, mon.X, mon.Y, 35f);
                             }
                             else
@@ -449,6 +487,9 @@ namespace Yogurting.Server.World
                             break;
                         }
 
+                        // =========================================================================
+                        // State 3: stAttack (Melee Engagement) - Delphi _Unit49.pas:18780-18900
+                        // =========================================================================
                         case MonsterState.Attack:
                         {
                             PlayerSessionState? target = null;
@@ -459,6 +500,12 @@ namespace Yogurting.Server.World
 
                             if (target == null)
                             {
+                                if (mon.TargetPlayerId > 0)
+                                {
+                                    byte[] lostNtf = YogurtingPackets.MakeGameMonsterOwnershipLostNtf(mon.EntityId);
+                                    _ = BroadcastToAreaAsync(lostNtf, mon.X, mon.Y, 35f);
+                                }
+
                                 mon.TargetPlayerId = 0;
                                 mon.State = MonsterState.Wait;
                                 mon.Frame = 0;
@@ -467,15 +514,30 @@ namespace Yogurting.Server.World
 
                             float pX = (float)target.Player.Position.X;
                             float pY = (float)target.Player.Position.Y;
+                            float spawnDx = MathF.Abs(pX - mon.SpawnX);
+                            float spawnDy = MathF.Abs(pY - mon.SpawnY);
+
+                            // Leash check while in attack stance
+                            if (spawnDx >= 16.0f || spawnDy >= 16.0f)
+                            {
+                                byte[] lostNtf = YogurtingPackets.MakeGameMonsterOwnershipLostNtf(mon.EntityId);
+                                _ = BroadcastToAreaAsync(lostNtf, mon.X, mon.Y, 35f);
+
+                                mon.TargetPlayerId = 0;
+                                mon.CurrentHp = mon.MaxHp;
+                                mon.State = MonsterState.Wait;
+                                mon.Frame = 0;
+                                break;
+                            }
+
                             float dx = pX - mon.X;
                             float dy = pY - mon.Y;
-                            float dist = MathF.Sqrt(dx * dx + dy * dy);
 
-                            // If player moves out of adjacent melee range, immediately chase to close the distance
-                            if (dist > 1.6f)
+                            // If player moves out of adjacent melee range, immediately chase to close distance
+                            if (MathF.Abs(dx) >= 1.9f || MathF.Abs(dy) >= 1.9f)
                             {
                                 mon.State = MonsterState.Chase;
-                                mon.Frame = 6;
+                                mon.Frame = 8;
                                 break;
                             }
 
@@ -488,7 +550,8 @@ namespace Yogurting.Server.World
                                 int typeHit = 0;
                                 int finalDmg = 0;
 
-                                if (Random.Shared.Next(0, 100) < 10)
+                                // Delphi _Unit49.pas:0060CBC3 Random(100) < 20 (20% miss chance)
+                                if (Random.Shared.Next(0, 100) < 20)
                                 {
                                     typeHit = 2; // Miss!
                                     finalDmg = 0;
@@ -508,7 +571,8 @@ namespace Yogurting.Server.World
                                     }
 
                                     int defMitigation = target.Player.Defense / 200;
-                                    finalDmg = Math.Max(2, rawDmg - defMitigation);
+                                    // Delphi _Unit49.pas:0060CC52 Minimum 1 damage
+                                    finalDmg = Math.Max(1, rawDmg - defMitigation);
                                     target.Player.CurrentHp = Math.Max(0, target.Player.CurrentHp - finalDmg);
                                 }
 
@@ -533,6 +597,10 @@ namespace Yogurting.Server.World
                                         (int)target.Player.Position.Y);
                                     _ = target.Session.SendAsync(dieNtf);
                                     _ = BroadcastAsync(dieNtf);
+
+                                    // Broadcast 0x7A01 Ownership Lost on player defeat (_Unit49.pas:0060CA1C)
+                                    byte[] lostNtf = YogurtingPackets.MakeGameMonsterOwnershipLostNtf(mon.EntityId);
+                                    _ = BroadcastToAreaAsync(lostNtf, mon.X, mon.Y, 35f);
 
                                     foreach (var m in fieldDef.Monsters)
                                     {

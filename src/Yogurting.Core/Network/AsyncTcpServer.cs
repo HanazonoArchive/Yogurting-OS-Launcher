@@ -180,6 +180,7 @@ namespace Yogurting.Core.Network
     /// </summary>
     public sealed class ClientSession : IDisposable
     {
+        private readonly SemaphoreSlim _sendLock = new(1, 1);
         public Guid Id { get; } = Guid.NewGuid();
         public TcpClient Client { get; }
         public AsyncTcpServer Server { get; }
@@ -199,8 +200,12 @@ namespace Yogurting.Core.Network
         public async Task SendAsync(byte[] data)
         {
             if (!Client.Connected) return;
+
+            await _sendLock.WaitAsync().ConfigureAwait(false);
             try
             {
+                if (!Client.Connected) return;
+
                 if (data.Length >= 6)
                 {
                     ushort opcode = BitConverter.ToUInt16(data, 4);
@@ -212,6 +217,10 @@ namespace Yogurting.Core.Network
             catch
             {
                 Disconnect();
+            }
+            finally
+            {
+                _sendLock.Release();
             }
         }
 
@@ -227,6 +236,7 @@ namespace Yogurting.Core.Network
         public void Dispose()
         {
             Client.Dispose();
+            _sendLock.Dispose();
         }
     }
 }

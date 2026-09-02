@@ -7,7 +7,7 @@
   "HasCharacter": true,
   "CharaId": 256,
   "CharacterId": 256,
-  "SessionKey": 586985,
+  "SessionKey": 224683,
   "School": 2,
   "Gender": 2,
   "FaceId": 11,
@@ -17,12 +17,12 @@
   "BirthDay": 29,
   "BloodType": 1,
   "NametagColor": 0,
-  "Level": 1,
+  "Level": 4,
   "Grade": 1,
-  "Pow": 33,
-  "Speed": 25,
-  "Skill": 25,
-  "Luck": 17,
+  "Pow": 17,
+  "Speed": 13,
+  "Skill": 13,
+  "Luck": 8,
   "DexLevel": 1,
   "DexExp": 0,
   "DexLevels": [
@@ -39,68 +39,68 @@
     0,
     0
   ],
-  "ComboCount": 3,
-  "LastAttackTime": 55043906,
+  "ComboCount": 34,
+  "LastAttackTime": 142113031,
   "ChargePoint": 0,
   "GaugeMax": 70000,
-  "GaugeCurrent": 0,
-  "SkillPoint": 0,
+  "GaugeCurrent": 23055,
+  "SkillPoint": 3,
   "Defense": 2,
-  "CurrentExp": 0,
-  "Exp": 0,
-  "MaxExp": 54,
-  "CurrentHp": 260,
-  "Hp": 260,
-  "MaxHp": 260,
+  "CurrentExp": 3,
+  "Exp": 3,
+  "MaxExp": 22,
+  "CurrentHp": 119,
+  "Hp": 119,
+  "MaxHp": 323,
   "CurrentMp": 195,
   "Sp": 195,
   "MaxMp": 195,
   "MaxSp": 195,
   "TaffPoints": 1000,
   "StarPoints": 0,
-  "HpRegainAccumulator": 0.25,
-  "LastCombatTime": "2026-09-01T13:33:35.251112Z",
-  "AtkSpeedF": 1.004875,
-  "MoveSpeedF": 1.004875,
+  "HpRegainAccumulator": 0,
+  "LastCombatTime": "2026-09-02T13:44:46.3643741Z",
+  "AtkSpeedF": 1.002535,
+  "MoveSpeedF": 1.002535,
   "TargetMonsterId": 0,
-  "FieldId": 90,
+  "FieldId": 91,
   "Position": {
-    "X": 117,
-    "Y": 167,
+    "X": 220,
+    "Y": 99,
     "Z": 0,
     "Heading": 0
   },
-  "SaveFieldId": 90,
+  "SaveFieldId": 91,
   "SavePosition": {
-    "X": 124,
-    "Y": 165,
+    "X": 220,
+    "Y": 99,
     "Z": 0,
     "Heading": 0
   },
   "BankMoney": 0,
   "EquippedSlotUids": [
     0,
+    120,
     0,
+    122,
+    110,
+    118,
     0,
-    0,
-    8,
-    0,
-    0,
-    5,
-    0,
-    6
+    112,
+    114,
+    116
   ],
   "EquippedSlotIsStar": [
     false,
+    true,
     false,
+    true,
+    true,
+    true,
     false,
-    false,
-    false,
-    false,
-    false,
-    false,
-    false,
-    false
+    true,
+    true,
+    true
   ],
   "Equips": [
     {
@@ -263,11 +263,11 @@
       "TypeId": 150069,
       "Name": "\u590F\u670D (So-il Summer Dress F)",
       "SlotIndex": 7,
-      "SlotType": 1,
+      "SlotType": 0,
       "SerialId": 0,
       "Quantity": 1,
       "EnchantLevel": 0,
-      "IsEquipped": true,
+      "IsEquipped": false,
       "SocketSlots": [
         0,
         0,
@@ -282,11 +282,11 @@
       "TypeId": 150070,
       "Name": "\u590F\u7528\u5B66\u751F\u9774 (So-il Summer Shoes F)",
       "SlotIndex": 9,
-      "SlotType": 1,
+      "SlotType": 0,
       "SerialId": 0,
       "Quantity": 1,
       "EnchantLevel": 0,
-      "IsEquipped": true,
+      "IsEquipped": false,
       "SocketSlots": [
         0,
         0,
@@ -320,11 +320,11 @@
       "TypeId": 130001,
       "Name": "\u30C9\u30ED\u30FC\u30F3 (Starter Myura/Blunt)",
       "SlotIndex": 4,
-      "SlotType": 1,
+      "SlotType": 0,
       "SerialId": 0,
       "Quantity": 1,
       "EnchantLevel": 0,
-      "IsEquipped": true,
+      "IsEquipped": false,
       "SocketSlots": [
         0,
         0,
@@ -361,6 +361,101 @@
       "SlotType": 3,
       "SerialId": 0,
       "Quantity": 20,
+      "EnchantLevel": 0,
+      "IsEquipped": false,
+      "SocketSlots": [
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "Id": 11,
+      "ItemId": 30069,
+      "TypeId": 30069,
+      "Name": "\u30AB\u30DC\u30C1\u30E3\u982D",
+      "SlotIndex": 10,
+      "SlotType": 0,
+      "SerialId": 0,
+      "Quantity": 4,
+      "EnchantLevel": 0,
+      "IsEquipped": false,
+      "SocketSlots": [
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "Id": 12,
+      "ItemId": 30056,
+      "TypeId": 30056,
+      "Name": "\u9AA8",
+      "SlotIndex": 11,
+      "SlotType": 0,
+      "SerialId": 0,
+      "Quantity": 2,
+      "EnchantLevel": 0,
+      "IsEquipped": false,
+      "SocketSlots": [
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "Id": 13,
+      "ItemId": 30002,
+      "TypeId": 30002,
+      "Name": "\u6298\u308A\u7D19",
+      "SlotIndex": 12,
+      "SlotType": 0,
+      "SerialId": 0,
+      "Quantity": 1,
+      "EnchantLevel": 0,
+      "IsEquipped": false,
+      "SocketSlots": [
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "Id": 14,
+      "ItemId": 30002,
+      "TypeId": 30002,
+      "Name": "\u6298\u308A\u7D19",
+      "SlotIndex": 13,
+      "SlotType": 0,
+      "SerialId": 0,
+      "Quantity": 1,
+      "EnchantLevel": 0,
+      "IsEquipped": false,
+      "SocketSlots": [
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "Id": 15,
+      "ItemId": 30002,
+      "TypeId": 30002,
+      "Name": "\u6298\u308A\u7D19",
+      "SlotIndex": 14,
+      "SlotType": 0,
+      "SerialId": 0,
+      "Quantity": 1,
       "EnchantLevel": 0,
       "IsEquipped": false,
       "SocketSlots": [
@@ -455,11 +550,11 @@
       "TypeId": 1400214,
       "Name": "\u30B8\u30A7\u30CE\u30B5\u30A4\u30C9",
       "SlotIndex": 4,
-      "SlotType": 0,
+      "SlotType": 1,
       "SerialId": 110,
       "Quantity": 1,
       "EnchantLevel": 0,
-      "IsEquipped": false,
+      "IsEquipped": true,
       "SocketSlots": [
         0,
         0,
@@ -474,11 +569,11 @@
       "TypeId": 2202911,
       "Name": "\u8003\u53E4\u5B66\u7814\u7A76\u90E8\u4E0A\u7740",
       "SlotIndex": 7,
-      "SlotType": 0,
+      "SlotType": 1,
       "SerialId": 112,
       "Quantity": 1,
       "EnchantLevel": 0,
-      "IsEquipped": false,
+      "IsEquipped": true,
       "SocketSlots": [
         0,
         0,
@@ -493,11 +588,11 @@
       "TypeId": 2202921,
       "Name": "\u8003\u53E4\u5B66\u7814\u7A76\u90E8\u30B9\u30AB\u30FC\u30C8",
       "SlotIndex": 8,
-      "SlotType": 0,
+      "SlotType": 1,
       "SerialId": 114,
       "Quantity": 1,
       "EnchantLevel": 0,
-      "IsEquipped": false,
+      "IsEquipped": true,
       "SocketSlots": [
         0,
         0,
@@ -512,11 +607,11 @@
       "TypeId": 2202931,
       "Name": "\u8003\u53E4\u5B66\u7814\u7A76\u90E8\u9774",
       "SlotIndex": 9,
-      "SlotType": 0,
+      "SlotType": 1,
       "SerialId": 116,
       "Quantity": 1,
       "EnchantLevel": 0,
-      "IsEquipped": false,
+      "IsEquipped": true,
       "SocketSlots": [
         0,
         0,
@@ -531,11 +626,11 @@
       "TypeId": 2202941,
       "Name": "\u8003\u53E4\u5B66\u7814\u7A76\u90E8\u624B\u888B",
       "SlotIndex": 5,
-      "SlotType": 0,
+      "SlotType": 1,
       "SerialId": 118,
       "Quantity": 1,
       "EnchantLevel": 0,
-      "IsEquipped": false,
+      "IsEquipped": true,
       "SocketSlots": [
         0,
         0,
@@ -550,11 +645,11 @@
       "TypeId": 2202951,
       "Name": "\u8003\u53E4\u5B66\u7814\u7A76\u90E8\u5E3D\u5B50",
       "SlotIndex": 1,
-      "SlotType": 0,
+      "SlotType": 1,
       "SerialId": 120,
       "Quantity": 1,
       "EnchantLevel": 0,
-      "IsEquipped": false,
+      "IsEquipped": true,
       "SocketSlots": [
         0,
         0,
@@ -671,73 +766,73 @@
       "EffectType": 7300,
       "DurationSeconds": 2592000,
       "ActivatedAt": "2026-08-30T05:31:41.2797429Z",
-      "RemainingSeconds": 2390027
+      "RemainingSeconds": 2303197
     },
     {
       "EffectType": 7400,
       "DurationSeconds": 2592000,
       "ActivatedAt": "2026-08-30T05:31:42.3678492Z",
-      "RemainingSeconds": 2390028
+      "RemainingSeconds": 2303198
     },
     {
       "EffectType": 7000,
       "DurationSeconds": 5184000,
       "ActivatedAt": "2026-08-30T05:31:42.7958016Z",
-      "RemainingSeconds": 4982028
+      "RemainingSeconds": 4895198
     },
     {
       "EffectType": 7100,
       "DurationSeconds": 2592000,
       "ActivatedAt": "2026-08-30T05:31:43.1761469Z",
-      "RemainingSeconds": 2390029
+      "RemainingSeconds": 2303198
     },
     {
       "EffectType": 7200,
       "DurationSeconds": 2592000,
       "ActivatedAt": "2026-08-30T05:31:43.5516324Z",
-      "RemainingSeconds": 2390029
+      "RemainingSeconds": 2303199
     },
     {
       "EffectType": 7500,
       "DurationSeconds": 2592000,
       "ActivatedAt": "2026-08-30T05:31:43.9440198Z",
-      "RemainingSeconds": 2390029
+      "RemainingSeconds": 2303199
     },
     {
       "EffectType": 4100,
       "DurationSeconds": 2592000,
       "ActivatedAt": "2026-08-30T05:36:12.8163106Z",
-      "RemainingSeconds": 2390298
+      "RemainingSeconds": 2303468
     },
     {
       "EffectType": 4110,
       "DurationSeconds": 18144000,
       "ActivatedAt": "2026-08-30T05:36:14.9412779Z",
-      "RemainingSeconds": 17942300
+      "RemainingSeconds": 17855470
     },
     {
       "EffectType": 4200,
       "DurationSeconds": 2592000,
       "ActivatedAt": "2026-08-30T05:36:19.7023848Z",
-      "RemainingSeconds": 2390305
+      "RemainingSeconds": 2303475
     },
     {
       "EffectType": 6100,
       "DurationSeconds": 2592000,
       "ActivatedAt": "2026-08-30T05:36:20.6716723Z",
-      "RemainingSeconds": 2390306
+      "RemainingSeconds": 2303476
     },
     {
       "EffectType": 4300,
       "DurationSeconds": 2592000,
       "ActivatedAt": "2026-08-30T05:36:21.4892307Z",
-      "RemainingSeconds": 2390307
+      "RemainingSeconds": 2303477
     },
     {
       "EffectType": 2100,
       "DurationSeconds": 2592000,
       "ActivatedAt": "2026-08-30T05:36:22.2623351Z",
-      "RemainingSeconds": 2390308
+      "RemainingSeconds": 2303478
     }
   ]
 }

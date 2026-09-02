@@ -121,9 +121,9 @@ namespace Yogurting.Server.Handlers.Field
 
                 // Calculate authentic weapon combo attack skill ID from AtkWeapon group (BeItemType.txt column 12 / SkillWeapon.txt)
                 int atkGroup = 0;
-                if (_gameDb != null && _gameDb.Items.TryGetValue(weaponTypeId, out var eqDef) && eqDef.Attack > 0)
+                if (_gameDb != null && _gameDb.Items.TryGetValue(weaponTypeId, out var eqDef) && (eqDef.AttackGroup > 0 || eqDef.Attack > 0))
                 {
-                    atkGroup = eqDef.Attack;
+                    atkGroup = eqDef.AttackGroup > 0 ? eqDef.AttackGroup : eqDef.Attack;
                 }
                 else
                 {
@@ -183,75 +183,71 @@ namespace Yogurting.Server.Handlers.Field
 
                 if (hitMonsters.Count > 0)
                 {
-                    // 1. Dynamic Attack Calculation: Base Level + Equipped Weapon Attack from Database
-                    int equipAtk = 0;
+                    // 1. Authentic TChara.FAtk Calculation (Delphi _Unit49.pas:20268-20280)
+                    // Base POW is from StatusTable for player level; bonus attack is from reinforce stones and passive skills
+                    int bonusAtk = 0;
                     if (_gameDb != null && player.Equips != null)
                     {
                         foreach (var eq in player.Equips)
                         {
                             if (_gameDb.Items.TryGetValue(eq.TypeId, out var itemDef) && itemDef.Attack > 0)
                             {
-                                equipAtk += itemDef.Attack;
+                                bonusAtk += itemDef.Attack;
                             }
                         }
                     }
 
-                    // 1. Dynamic Attack Calculation: Base POW from StatusTable.txt + Equipped Weapon Attack from Database
                     var status = _gameDb != null ? _gameDb.GetStatusForLevel(player.Level) : new StatusDef { Pow = player.Level * 4, Luck = player.Level * 2 };
-                    int baseAtk = Math.Max(5, status.Pow + equipAtk);
+                    int fAtk = (status.Pow * 65) + (bonusAtk * 100);
                     float dmgMultiplier = player.GetDamageMultiplier(); // e.g. 1.2x if Attack Buff active
 
-                    // Authentic AtkRatio from AtkWeapon.txt (Delphi _Unit49.pas:21990-21996)
-                    int atkRatio = 10000;
-                    if (_gameDb != null && weaponTypeId > 0 && _gameDb.AtkWeapons.TryGetValue(weaponTypeId, out var atkDef))
+                    // 2. Authentic AtkRatio from AtkWeapon.txt (Delphi _Unit49.pas:21915-21935)
+                    // Keyed by combo action skill ID (e.g. 10201), fallback is 1
+                    int atkRatio = 1;
+                    if (_gameDb != null && _gameDb.AtkWeapons.TryGetValue(attackSkillId, out var atkDef) && atkDef.AtkRatio > 0)
                     {
                         atkRatio = atkDef.AtkRatio;
                     }
 
-                    // Authentic LUCK scaling from StatusTable.txt + Critical Buff Multiplier (2.0x in Delphi _Unit49.pas:22007)
-                    float critChance = Math.Min(60f, (status.Luck * 1.5f + 5f) * player.GetCritMultiplier());
+                    // 3. Authentic Level Variance (Delphi _Unit49.pas:21936-21949: variance = Random(Max(5, Level / 2)))
+                    int varianceMax = Math.Max(5, player.Level / 2);
+
+                    // 4. Authentic Critical Threshold Check (Delphi _Unit49.pas:22000-22007: FCritical = status.Luck * 65 vs Random(113750))
+                    int fCritical = (int)(status.Luck * 65 * player.GetCritMultiplier());
 
                     var targetEntries = new List<(int entityId, int x, int y, int damage, bool isCrit)>();
                     var killedMonsters = new List<FieldMonster>();
 
                     foreach (var targetMonster in hitMonsters)
                     {
-                        int scaledAtk = (int)((baseAtk * (long)atkRatio) / 10000);
-                        int levelVariance = _random.Next(0, Math.Max(5, player.Level / 2));
-                        int damage = Math.Max(3, (int)((scaledAtk + levelVariance) * dmgMultiplier));
-                        bool isCrit = _random.Next(0, 100) < critChance;
+                        int scaledAtk = (int)((fAtk * (long)atkRatio) / 10000);
+                        int levelVariance = _random.Next(0, varianceMax);
+                        int damage = Math.Max(1, (int)((scaledAtk + levelVariance) * dmgMultiplier));
+                        bool isCrit = _random.Next(0, 113750) < fCritical;
                         if (isCrit) damage = (int)(damage * 2.0);
 
                         // Apply damage to monster
-                        targetMonster.TakeDamage(damage);
+                        bool wasKilled = targetMonster.TakeDamage(damage);
 
-                        // Wake up monster into Chase state immediately
+                        // Wake up monster into Chase state immediately (First-attacker locks target: _Unit49.pas:0060F167)
                         if (!targetMonster.IsDead)
                         {
-                            targetMonster.TargetPlayerId = player.CharacterId;
-                            targetMonster.State = MonsterState.Chase;
-                            targetMonster.Frame = 6; // Force immediate path broadcast on next AI tick
+                            if (targetMonster.TargetPlayerId == 0)
+                            {
+                                targetMonster.TargetPlayerId = player.CharacterId;
+                                targetMonster.State = MonsterState.Chase;
+                                targetMonster.Frame = 8; // Force immediate path broadcast on next AI tick
+                            }
                         }
 
                         targetEntries.Add((targetMonster.EntityId, (int)targetMonster.X, (int)targetMonster.Y, damage, isCrit));
                         Logger.Info($"[Combat] '{player.CharacterName}' attacked '{targetMonster.Name}' (ID: {targetMonster.EntityId}) for {damage} dmg (Crit: {isCrit})! Remaining HP: {targetMonster.CurrentHp}/{targetMonster.MaxHp}");
 
-                        if (targetMonster.IsDead)
+                        if (wasKilled)
                         {
                             targetMonster.TargetPlayerId = 0;
                             killedMonsters.Add(targetMonster);
                         }
-                    }
-
-                    // Dynamic Weapon Animation Impact Timing from SkillWeapon.txt (Delphi _Unit49.pas:21913-21930)
-                    int animDelayMs = 100;
-                    if (_gameDb != null && _gameDb.SkillWeapons.TryGetValue(attackSkillId, out var swDef) && swDef.Delay > 0)
-                    {
-                        animDelayMs = swDef.Delay;
-                    }
-                    if (animDelayMs > 0)
-                    {
-                        await Task.Delay(animDelayMs);
                     }
 
                     // 1. Dispatch Target Ownership Lock (0x7A00) upon initial acquisition of target
@@ -292,13 +288,8 @@ namespace Yogurting.Server.Handlers.Field
                     await state.Session.SendAsync(atkAns);
                     await _broadcastDelegate(state, atkAns);
 
-                    // 4. Dispatch Monster Real-Time Health Update (0x79E8 - Delphi _Unit49.pas:19502 / _Unit47.pas:57301)
-                    foreach (var targetMonster in hitMonsters)
-                    {
-                        byte[] hpInfoPkt = YogurtingPackets.MakeGameMonHpInfoNtf(targetMonster.EntityId, targetMonster.CurrentHp, targetMonster.MaxHp);
-                        await state.Session.SendAsync(hpInfoPkt);
-                        await _broadcastDelegate(state, hpInfoPkt);
-                    }
+                    // 4. Synchronously process monster kills immediately following 0x791A (matching Delphi Quartet pipeline: _Unit49.pas:0060F494)
+                    // SRC: server_legacy/DELPHI PROJECT/_Unit49.pas:0060F48B-0060F494 (Delphi does NOT send 0x79E8 on attack damage; client subtracts damage locally from 0x791A)
 
                     // 5. Synchronously process monster kills immediately following 0x791A (matching Delphi Quartet pipeline)
                     if (killedMonsters.Count > 0)
@@ -340,8 +331,24 @@ namespace Yogurting.Server.Handlers.Field
 
         private async Task ProcessMonsterDefeatAsync(PlayerSessionState state, Player player, FieldMonster monster)
         {
-            // Award EXP using ExpMultiplier (Delphi _Unit49.pas:19020)
-            int expEarned = monster.ExpReward > 0 ? monster.ExpReward : (monster.Level * 3 + 2);
+            // Authentic Delphi Parabolic Level Penalty (_Unit49.pas:0060CD9F-0060CDE3)
+            int baseExp = monster.ExpReward > 0 ? monster.ExpReward : (monster.Level * 3 + 2);
+            int levelDiff = Math.Abs(player.Level - monster.Level);
+            int expEarned;
+            if (levelDiff > 15)
+            {
+                expEarned = 1;
+            }
+            else if (levelDiff == 0)
+            {
+                expEarned = Math.Max(1, baseExp);
+            }
+            else
+            {
+                double scale = 1.0 - (levelDiff * levelDiff * 0.003907);
+                expEarned = Math.Max(1, (int)Math.Round(baseExp * scale));
+            }
+
             float expMultiplier = player.GetExpMultiplier();
             expEarned = Math.Max(1, (int)(expEarned * expMultiplier));
 
@@ -352,7 +359,7 @@ namespace Yogurting.Server.Handlers.Field
             if (monster.DropItemType > 0 && _random.Next(0, 1000) < monster.DropRate)
             {
                 int dropCount = Math.Max(1, monster.DropCount);
-                bool isEquip = _gameDb != null && _gameDb.Items.TryGetValue(monster.DropItemType, out var idf) && idf.Attack > 0;
+                bool isEquip = _gameDb != null && _gameDb.Items.TryGetValue(monster.DropItemType, out var idf) && idf.IsEquipment;
                 lootList.Add((monster.DropItemType, dropCount, isEquip));
 
                 var existing = player.Inventory?.Find(i => i.TypeId == monster.DropItemType);
@@ -377,6 +384,13 @@ namespace Yogurting.Server.Handlers.Field
 
             player.CurrentExp += expEarned;
             Logger.Info($"[Combat] '{monster.Name}' defeated by '{player.CharacterName}'! Gained {expEarned} EXP. Total EXP: {player.CurrentExp}/{player.MaxExp}");
+
+            // Reset player target tracking internally
+            // SRC: server_legacy/DELPHI PROJECT/_Unit49.pas:0060CCFC (TMonster.Dead does NOT send 0x7A01 on death; death is signaled exclusively via 0x5276 / 0x5277)
+            if (player.TargetMonsterId == monster.EntityId)
+            {
+                player.TargetMonsterId = 0;
+            }
 
             // Broadcast Monster Dead & Loot Delivery to Top-Right Cardboard Booty Box (0x5276)
             byte[] deadNtf = YogurtingPackets.MakeGameHuntMonDeadNtf(
@@ -404,9 +418,10 @@ namespace Yogurting.Server.Handlers.Field
                 player.MaxExp = _gameDb != null ? _gameDb.GetMaxExpForLevel(player.Level) : (int)(player.MaxExp * 1.30);
                 
                 var statusLv = _gameDb != null ? _gameDb.GetStatusForLevel(player.Level) : new StatusDef { Pow = player.Level * 4, Speed = player.Level * 3, Skill = player.Level * 3, Luck = player.Level * 2 };
-                player.RecalculateStats(statusLv.Pow, statusLv.Speed, statusLv.Skill, statusLv.Luck);
+                // SRC: server_legacy/DELPHI PROJECT/_Unit49.pas:0060DD6A (TChara.CalcStatus(True) restores HP to full on level up)
+                player.RecalculateStats(statusLv.Pow, statusLv.Speed, statusLv.Skill, statusLv.Luck, isLevelUp: true);
 
-                Logger.Info($"[Combat] *** LEVEL UP! *** '{player.CharacterName}' reached Level {player.Level}! MaxHP is now {player.MaxHp}.");
+                Logger.Info($"[Combat] *** LEVEL UP! *** '{player.CharacterName}' reached Level {player.Level}! HP restored to full ({player.CurrentHp}/{player.MaxHp}).");
 
                 player.SkillPoint++;
                 // 1. Broadcast Field/Hunt Level-Up Fanfare & Visual FX (0x5275 - Delphi TMsgGameHuntCharLvUpNtf)
@@ -502,12 +517,22 @@ namespace Yogurting.Server.Handlers.Field
                 player.GaugeCurrent = 0;
                 await state.Session.SendAsync(YogurtingPackets.MakeGameChargePointUpdateNtf(player.ChargePoint, player.GaugeMax, player.GaugeCurrent));
 
-                // Retrieve dynamic skill power multiplier from SkillDesc2.txt
-                int skillPower = 100;
-                if (_gameDb != null && _gameDb.SkillDesc2s.TryGetValue(skillId, out var sDesc2) && sDesc2.Power > 0)
+                // Retrieve dynamic skill power multiplier from SkillDesc2.txt (Delphi _Unit49.pas:22478)
+                int skillPower = 0;
+                if (_gameDb != null && _gameDb.SkillDesc2s.TryGetValue(skillId, out var sDesc2))
                 {
                     skillPower = sDesc2.Power;
                 }
+
+                int skillAtkRatio = 1;
+                if (_gameDb != null && _gameDb.AtkWeapons.TryGetValue(skillId, out var atkDef) && atkDef.AtkRatio > 0)
+                {
+                    skillAtkRatio = atkDef.AtkRatio;
+                }
+
+                var status = _gameDb != null ? _gameDb.GetStatusForLevel(player.Level) : new StatusDef { Pow = player.Level * 4, Luck = player.Level * 2 };
+                int fAtk = status.Pow * 65;
+                int varianceMax = Math.Max(5, player.Level / 2);
 
                 // Resolve splash damage for all hit targets
                 var targetResults = new List<(int targetType, int targetId, int targetX, int targetY, int damage, byte hitType)>();
@@ -522,13 +547,13 @@ namespace Yogurting.Server.Handlers.Field
                     int tY = BitConverter.ToInt32(packetData, targetOffset + 12);
                     targetOffset += 16;
 
-                    // Dynamic Skill damage calculation (based on SkillDesc2.Power & player POW)
-                    int baseAtk = player.Pow + (player.Level * 2);
-                    int dmg = Math.Max(10, (int)((baseAtk * (skillPower / 100.0f)) + _random.Next(-3, 8)));
-                    bool isCrit = _random.Next(0, 100) < 30;
-                    if (isCrit) dmg = (int)(dmg * 1.5f);
+                    // Dynamic Skill damage calculation (Delphi _Unit49.pas:22478: ((FAtk + SkillPower * 100) * AtkRatio) / 10000 + variance)
+                    int scaledDmg = (int)(((fAtk + (skillPower * 100)) * (long)skillAtkRatio) / 10000);
+                    int levelVariance = _random.Next(0, varianceMax);
+                    int dmg = Math.Max(1, (int)((scaledDmg + levelVariance) * player.GetDamageMultiplier()));
 
-                    targetResults.Add((tType, tId, tX, tY, dmg, isCrit ? (byte)1 : (byte)0));
+                    // Active combat skills in Quartet do not crit (hitType = 0 per Delphi 0060F6A6)
+                    targetResults.Add((tType, tId, tX, tY, dmg, (byte)0));
 
                     // Apply to monster if present
                     if (_gameDb != null && _gameDb.Fields.TryGetValue(player.FieldId, out var fDef))
@@ -538,16 +563,19 @@ namespace Yogurting.Server.Handlers.Field
                             var mon = fDef.Monsters.Find(m => m.EntityId == tId && !m.IsDead);
                             if (mon != null)
                             {
-                                mon.TakeDamage(dmg);
-                                mon.TargetPlayerId = player.CharacterId;
-                                if (mon.IsDead)
+                                bool wasKilled = mon.TakeDamage(dmg);
+                                if (wasKilled)
                                 {
                                     killedMonsters.Add(mon);
                                 }
-                                else
+                                else if (!mon.IsDead)
                                 {
-                                    mon.State = MonsterState.Chase;
-                                    mon.Frame = 6;
+                                    if (mon.TargetPlayerId == 0)
+                                    {
+                                        mon.TargetPlayerId = player.CharacterId;
+                                        mon.State = MonsterState.Chase;
+                                        mon.Frame = 8;
+                                    }
                                 }
                             }
                         }
@@ -571,13 +599,13 @@ namespace Yogurting.Server.Handlers.Field
                             var mon = fDef.Monsters.Find(m => m.EntityId == targetMainId && !m.IsDead);
                             if (mon != null)
                             {
-                                mon.TakeDamage(dmg);
+                                bool wasKilled = mon.TakeDamage(dmg);
                                 mon.TargetPlayerId = player.CharacterId;
-                                if (mon.IsDead)
+                                if (wasKilled)
                                 {
                                     killedMonsters.Add(mon);
                                 }
-                                else
+                                else if (!mon.IsDead)
                                 {
                                     mon.State = MonsterState.Chase;
                                     mon.Frame = 6;

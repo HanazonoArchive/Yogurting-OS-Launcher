@@ -171,6 +171,7 @@ namespace Yogurting.Data.Loaders
                 {
                     if (item.EquipPos == 0) item.EquipPos = baseItem.EquipPos;
                     if (item.WeaponType == 0) item.WeaponType = baseItem.WeaponType;
+                    if (item.AttackGroup == 0) item.AttackGroup = baseItem.AttackGroup;
                     if (item.Attack == 0) item.Attack = baseItem.Attack;
                     if (item.SkillId == 0) item.SkillId = baseItem.SkillId;
                 }
@@ -284,7 +285,8 @@ namespace Yogurting.Data.Loaders
                             WeaponType = row.WeaponType,
                             Sex = row.Sex,
                             School = row.School,
-                            Attack = row.AttackGroup,
+                            AttackGroup = row.AttackGroup,
+                            Attack = 0,
                             SkillId = row.SkillId,
                             GradeReq = row.LevelReq,
                             Price = row.BeItemSlot
@@ -368,7 +370,7 @@ namespace Yogurting.Data.Loaders
                         item.WeaponType = row.WeaponType;
                         item.Sex = row.Sex;
                         item.School = row.School;
-                        item.Attack = row.AttackGroup > 0 ? row.AttackGroup : item.Attack;
+                        item.AttackGroup = row.AttackGroup > 0 ? row.AttackGroup : item.AttackGroup;
                         item.SkillId = row.SkillId;
                         item.GradeReq = row.LevelReq > 0 ? row.LevelReq : (row.GradeReq > 0 ? row.GradeReq : item.GradeReq);
                     }
@@ -679,10 +681,10 @@ namespace Yogurting.Data.Loaders
                         {
                             ItemType = row.Id,
                             Category = row.Range,
-                            AtkRatio = row.Area,
+                            AtkRatio = row.Power, // Power from AtkWeapon.json (Column 5) - Delphi TAtkWeaponData.AtkRatio
                             HitMotion = row.Param1,
                             Range = row.Param2,
-                            Angle = row.Power
+                            Angle = row.Area
                         };
                     }
                 }
@@ -773,7 +775,7 @@ namespace Yogurting.Data.Loaders
                             NextId = row.NextSkillId,
                             RequiredDex = row.ReqDex,
                             SkillType = row.SkillType,
-                            Power = row.Power,
+                            Power = row.Power > 0 ? row.Power : row.EnhancedHit,
                             Time = row.Duration,
                             Atk = row.EnhancedAtk,
                             Def = row.EnhancedDef,
@@ -1731,6 +1733,7 @@ namespace Yogurting.Data.Loaders
         public int Sex { get; set; }
         public int School { get; set; }
         public int GradeReq { get; set; }
+        public int AttackGroup { get; set; }
         public int Attack { get; set; }
         public int Defense { get; set; }
         public int SkillId { get; set; }

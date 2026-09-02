@@ -50,7 +50,7 @@ namespace Yogurting.Server.Handlers.Field
                 {
                     invItem = player.StarBeItems?.Find(i => i.Id == uniqueId || i.SerialId == rawUid)
                            ?? player.Inventory?.Find(i => i.Id == uniqueId || i.SerialId == rawUid);
-                    if (invItem == null && player.StarBeItems != null && uniqueId >= 0x100 && (uniqueId - 0x101) < player.StarBeItems.Count)
+                    if (invItem == null && player.StarBeItems != null && uniqueId >= 0x101 && (uniqueId - 0x101) < player.StarBeItems.Count)
                     {
                         invItem = player.StarBeItems[uniqueId - 0x101];
                     }
@@ -60,7 +60,7 @@ namespace Yogurting.Server.Handlers.Field
                 {
                     invItem = player.Inventory?.Find(i => i.Id == uniqueId || i.SerialId == rawUid)
                            ?? player.StarBeItems?.Find(i => i.Id == uniqueId || i.SerialId == rawUid);
-                    if (invItem == null && player.Inventory != null && uniqueId >= 0x100 && (uniqueId - 0x101) < player.Inventory.Count)
+                    if (invItem == null && player.Inventory != null && uniqueId >= 0x101 && (uniqueId - 0x101) < player.Inventory.Count)
                     {
                         invItem = player.Inventory[uniqueId - 0x101];
                     }

@@ -31,6 +31,7 @@ namespace Yogurting.Data.Repositories
     {
         private readonly string _storageDir;
         private readonly ConcurrentDictionary<string, Player> _cache = new(StringComparer.OrdinalIgnoreCase);
+        private readonly ConcurrentDictionary<string, object> _fileLocks = new(StringComparer.OrdinalIgnoreCase);
 
         public JsonAccountRepository(string storageDir)
         {
@@ -181,20 +182,30 @@ namespace Yogurting.Data.Repositories
 
         private void SaveAccountDirect(Player player)
         {
-            try
-            {
-                string jsonPath = Path.Combine(_storageDir, $"{player.AccountId}.json");
-                string json = JsonSerializer.Serialize(player, new JsonSerializerOptions { WriteIndented = true });
-                File.WriteAllText(jsonPath, json);
+            if (player == null || string.IsNullOrWhiteSpace(player.AccountId)) return;
 
-                // Also save XML representation for native compatibility
-                string xmlPath = Path.Combine(_storageDir, $"{player.AccountId}.xml");
-                string xml = GenerateXml(player);
-                File.WriteAllText(xmlPath, xml, Encoding.Unicode);
-            }
-            catch (Exception ex)
+            var fileLock = _fileLocks.GetOrAdd(player.AccountId, _ => new object());
+            lock (fileLock)
             {
-                Console.WriteLine($"[AccountRepository] Save error for '{player.AccountId}': {ex.Message}");
+                try
+                {
+                    string jsonPath = Path.Combine(_storageDir, $"{player.AccountId}.json");
+                    string tmpJsonPath = $"{jsonPath}.tmp";
+                    string json = JsonSerializer.Serialize(player, new JsonSerializerOptions { WriteIndented = true });
+                    File.WriteAllText(tmpJsonPath, json);
+                    File.Move(tmpJsonPath, jsonPath, overwrite: true);
+
+                    // Also save XML representation for native compatibility
+                    string xmlPath = Path.Combine(_storageDir, $"{player.AccountId}.xml");
+                    string tmpXmlPath = $"{xmlPath}.tmp";
+                    string xml = GenerateXml(player);
+                    File.WriteAllText(tmpXmlPath, xml, Encoding.Unicode);
+                    File.Move(tmpXmlPath, xmlPath, overwrite: true);
+                }
+                catch (Exception ex)
+                {
+                    Console.WriteLine($"[AccountRepository] Save error for '{player.AccountId}': {ex.Message}");
+                }
             }
         }
 

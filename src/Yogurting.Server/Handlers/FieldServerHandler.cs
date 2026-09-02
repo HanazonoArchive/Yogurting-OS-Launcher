@@ -7,7 +7,6 @@ using Yogurting.Core.Network;
 using Yogurting.Data.Loaders;
 using Yogurting.Data.Repositories;
 using Yogurting.Server.Handlers.Field;
-using Yogurting.Server.Handlers.Npc;
 using Yogurting.Server.World;
 
 namespace Yogurting.Server.Handlers

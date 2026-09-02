@@ -150,6 +150,40 @@ namespace Yogurting.Core.Network
             return result;
         }
 
+        public static string ReadFixedWString(byte[] data, int offset, int byteCount)
+        {
+            if (data == null || offset < 0 || offset >= data.Length || byteCount <= 0)
+                return string.Empty;
+
+            int available = Math.Min(byteCount, data.Length - offset);
+            int nullIdx = 0;
+            for (int i = 0; i < available - 1; i += 2)
+            {
+                if (data[offset + i] == 0 && data[offset + i + 1] == 0)
+                    break;
+                nullIdx = i + 2;
+            }
+
+            return Encoding.Unicode.GetString(data, offset, nullIdx);
+        }
+
+        public static string ReadFixedAnsiString(byte[] data, int offset, int byteCount, Encoding? encoding = null)
+        {
+            if (data == null || offset < 0 || offset >= data.Length || byteCount <= 0)
+                return string.Empty;
+
+            encoding ??= Encoding.ASCII;
+            int available = Math.Min(byteCount, data.Length - offset);
+            int actualLength = 0;
+            for (int i = 0; i < available; i++)
+            {
+                if (data[offset + i] == 0) break;
+                actualLength++;
+            }
+
+            return encoding.GetString(data, offset, actualLength);
+        }
+
         public void Skip(int count)
         {
             EnsureBytes(count);

@@ -1,0 +1,16 @@
+C:\Users\Hanazono Archive\Desktop\Yogurting Game\server_modern\src\Yogurting.Data\bin\Release\net8.0\Yogurting.Data.deps.json
+C:\Users\Hanazono Archive\Desktop\Yogurting Game\server_modern\src\Yogurting.Data\bin\Release\net8.0\Yogurting.Data.dll
+C:\Users\Hanazono Archive\Desktop\Yogurting Game\server_modern\src\Yogurting.Data\bin\Release\net8.0\Yogurting.Data.pdb
+C:\Users\Hanazono Archive\Desktop\Yogurting Game\server_modern\src\Yogurting.Data\bin\Release\net8.0\Yogurting.Core.dll
+C:\Users\Hanazono Archive\Desktop\Yogurting Game\server_modern\src\Yogurting.Data\bin\Release\net8.0\Yogurting.Core.pdb
+C:\Users\Hanazono Archive\Desktop\Yogurting Game\server_modern\src\Yogurting.Data\obj\Release\net8.0\Yogurting.Data.csproj.AssemblyReference.cache
+C:\Users\Hanazono Archive\Desktop\Yogurting Game\server_modern\src\Yogurting.Data\obj\Release\net8.0\Yogurting.Data.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Hanazono Archive\Desktop\Yogurting Game\server_modern\src\Yogurting.Data\obj\Release\net8.0\Yogurting.Data.AssemblyInfoInputs.cache
+C:\Users\Hanazono Archive\Desktop\Yogurting Game\server_modern\src\Yogurting.Data\obj\Release\net8.0\Yogurting.Data.AssemblyInfo.cs
+C:\Users\Hanazono Archive\Desktop\Yogurting Game\server_modern\src\Yogurting.Data\obj\Release\net8.0\Yogurting.Data.csproj.CoreCompileInputs.cache
+C:\Users\Hanazono Archive\Desktop\Yogurting Game\server_modern\src\Yogurting.Data\obj\Release\net8.0\Yogurting.Data.sourcelink.json
+C:\Users\Hanazono Archive\Desktop\Yogurting Game\server_modern\src\Yogurting.Data\obj\Release\net8.0\Yogurtin.90463BF4.Up2Date
+C:\Users\Hanazono Archive\Desktop\Yogurting Game\server_modern\src\Yogurting.Data\obj\Release\net8.0\Yogurting.Data.dll
+C:\Users\Hanazono Archive\Desktop\Yogurting Game\server_modern\src\Yogurting.Data\obj\Release\net8.0\refint\Yogurting.Data.dll
+C:\Users\Hanazono Archive\Desktop\Yogurting Game\server_modern\src\Yogurting.Data\obj\Release\net8.0\Yogurting.Data.pdb
+C:\Users\Hanazono Archive\Desktop\Yogurting Game\server_modern\src\Yogurting.Data\obj\Release\net8.0\ref\Yogurting.Data.dll

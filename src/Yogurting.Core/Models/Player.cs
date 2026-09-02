@@ -134,7 +134,7 @@ namespace Yogurting.Core.Models
         public float AtkSpeedF => 1.0f + (Speed * 0.65f * 0.0003f);
         public float MoveSpeedF => 1.0f + (Speed * 0.65f * 0.0003f);
 
-        public void RecalculateStats(int pow, int speed, int skill, int luck, int itemBonusHp = -1)
+        public void RecalculateStats(int pow, int speed, int skill, int luck, int itemBonusHp = -1, bool isLevelUp = false)
         {
             int oldBaseHp = Math.Max(28, Pow * 7);
             int equipHpBonus = itemBonusHp >= 0 ? itemBonusHp : Math.Max(0, MaxHp - oldBaseHp);
@@ -146,7 +146,8 @@ namespace Yogurting.Core.Models
 
             int newBaseHp = Math.Max(28, Pow * 7);
             MaxHp = Math.Max(260, newBaseHp + equipHpBonus);
-            CurrentHp = Math.Clamp(CurrentHp > 0 ? CurrentHp : MaxHp, 1, MaxHp);
+            // SRC: server_legacy/DELPHI PROJECT/_Unit49.pas:0060DD6A (FInnerCurrentHP = FMaxHP on level up)
+            CurrentHp = isLevelUp ? MaxHp : Math.Clamp(CurrentHp > 0 ? CurrentHp : MaxHp, 1, MaxHp);
         }
 
         // Target lock tracking
