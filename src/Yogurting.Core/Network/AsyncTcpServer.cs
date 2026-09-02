@@ -99,46 +99,49 @@ namespace Yogurting.Core.Network
             }
 
             var stream = session.Client.GetStream();
-            using var memoryBuffer = new MemoryStream();
-            byte[] readBuffer = new byte[4096];
+            byte[] buffer = new byte[65536];
+            int bufferCount = 0;
 
             try
             {
                 while (!token.IsCancellationRequested && session.Client.Connected)
                 {
-                    int bytesRead = await stream.ReadAsync(readBuffer.AsMemory(0, readBuffer.Length), token).ConfigureAwait(false);
+                    // Ensure space in buffer
+                    if (bufferCount >= buffer.Length)
+                    {
+                        Array.Resize(ref buffer, buffer.Length * 2);
+                    }
+
+                    int bytesRead = await stream.ReadAsync(buffer.AsMemory(bufferCount, buffer.Length - bufferCount), token).ConfigureAwait(false);
                     if (bytesRead <= 0) break; // Disconnected
 
-                    memoryBuffer.Write(readBuffer, 0, bytesRead);
-
-                    // Process complete packets from accumulated memory buffer
-                    byte[] accumulated = memoryBuffer.ToArray();
+                    bufferCount += bytesRead;
                     int processedOffset = 0;
 
-                    while (accumulated.Length - processedOffset >= 6)
+                    while (bufferCount - processedOffset >= 6)
                     {
-                        int payloadLen = BitConverter.ToInt32(accumulated, processedOffset);
+                        int payloadLen = System.Buffers.Binary.BinaryPrimitives.ReadInt32LittleEndian(buffer.AsSpan(processedOffset, 4));
                         if (payloadLen < 0 || payloadLen > 65535)
                         {
                             // Drain invalid data
-                            processedOffset = accumulated.Length;
+                            processedOffset = bufferCount;
                             break;
                         }
 
                         int totalPacketLen = 6 + payloadLen;
-                        if (accumulated.Length - processedOffset < totalPacketLen)
+                        if (bufferCount - processedOffset < totalPacketLen)
                         {
-                            // Need more bytes to complete packet
+                            // Incomplete packet; wait for next TCP read
                             break;
                         }
 
                         byte[] packetData = new byte[totalPacketLen];
-                        Buffer.BlockCopy(accumulated, processedOffset, packetData, 0, totalPacketLen);
+                        Buffer.BlockCopy(buffer, processedOffset, packetData, 0, totalPacketLen);
                         processedOffset += totalPacketLen;
 
                         if (PacketReceived != null)
                         {
-                            ushort opcode = BitConverter.ToUInt16(packetData, 4);
+                            ushort opcode = System.Buffers.Binary.BinaryPrimitives.ReadUInt16LittleEndian(packetData.AsSpan(4, 2));
                             string opName = Enum.IsDefined(typeof(PacketOpcode), (PacketOpcode)opcode) ? ((PacketOpcode)opcode).ToString() : $"0x{opcode:X4}";
                             Yogurting.Core.Logging.Logger.Packet(ServerName, $"<- RECV [{session.RemoteEndPoint}]", opcode, opName, packetData.Length, packetData);
                             
@@ -146,15 +149,15 @@ namespace Yogurting.Core.Network
                         }
                     }
 
-                    // Keep unparsed trailing bytes in stream
+                    // Shift unparsed trailing bytes to beginning of buffer
                     if (processedOffset > 0)
                     {
-                        int remaining = accumulated.Length - processedOffset;
-                        memoryBuffer.SetLength(0);
+                        int remaining = bufferCount - processedOffset;
                         if (remaining > 0)
                         {
-                            memoryBuffer.Write(accumulated, processedOffset, remaining);
+                            Buffer.BlockCopy(buffer, processedOffset, buffer, 0, remaining);
                         }
+                        bufferCount = remaining;
                     }
                 }
             }
@@ -184,7 +187,20 @@ namespace Yogurting.Core.Network
         public Guid Id { get; } = Guid.NewGuid();
         public TcpClient Client { get; }
         public AsyncTcpServer Server { get; }
-        public IPEndPoint RemoteEndPoint => (IPEndPoint)Client.Client.RemoteEndPoint!;
+        public IPEndPoint RemoteEndPoint
+        {
+            get
+            {
+                try
+                {
+                    return (IPEndPoint)(Client?.Client?.RemoteEndPoint ?? new IPEndPoint(IPAddress.Loopback, 0));
+                }
+                catch
+                {
+                    return new IPEndPoint(IPAddress.Loopback, 0);
+                }
+            }
+        }
         public string? AccountId { get; set; }
         public string? CharacterName { get; set; }
         public int CharaId { get; set; } = 1;
@@ -199,7 +215,7 @@ namespace Yogurting.Core.Network
 
         public async Task SendAsync(byte[] data)
         {
-            if (!Client.Connected) return;
+            if (Client == null || !Client.Connected) return;
 
             await _sendLock.WaitAsync().ConfigureAwait(false);
             try

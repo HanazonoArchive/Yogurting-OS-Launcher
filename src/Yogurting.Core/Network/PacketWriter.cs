@@ -38,6 +38,7 @@ namespace Yogurting.Core.Network
         public void WriteBytes(byte[] value) => _writer.Write(value);
         public void WriteInt16(short value) => _writer.Write(value);
         public void WriteUInt16(ushort value) => _writer.Write(value);
+        public void WriteWord(ushort value) => _writer.Write(value);
         public void WriteInt32(int value) => _writer.Write(value);
         public void WriteUInt32(uint value) => _writer.Write(value);
         public void WriteInt64(long value) => _writer.Write(value);
@@ -46,6 +47,7 @@ namespace Yogurting.Core.Network
         public void WriteFloat(float value) => _writer.Write(value);
         public void WriteDouble(double value) => _writer.Write(value);
         public void WriteBoolean(bool value) => _writer.Write(value);
+        public void WriteWStr(string value, int fixedChars) => WriteUnicodeString(value, fixedChars);
 
         public void WriteUnicodeString(string value, int fixedChars = 0)
         {

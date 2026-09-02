@@ -49,6 +49,7 @@ namespace Yogurting.Core.Models
     {
         private static StarterConfig _instance = new();
         private static bool _isLoaded;
+        private static readonly object _lock = new();
 
         public static StarterConfig Instance
         {
@@ -56,7 +57,13 @@ namespace Yogurting.Core.Models
             {
                 if (!_isLoaded)
                 {
-                    TryLoadDefault();
+                    lock (_lock)
+                    {
+                        if (!_isLoaded)
+                        {
+                            TryLoadDefault();
+                        }
+                    }
                 }
                 return _instance;
             }

@@ -40,12 +40,27 @@ namespace Yogurting.Server.Handlers
             var npcHandlers = new NpcAndDialogueHandlers(_gameDb, _repository, BroadcastToFieldAsync);
             var shopHandlers = new ShopHandlers(BroadcastToFieldAsync, _repository, _gameDb);
             var combatHandlers = new CombatHandlers(BroadcastToFieldAsync, _repository, _gameDb);
+            var tradeHandlers = new TradeHandlers(
+                id => _activeSessions.Values.FirstOrDefault(s => s.Player.CharacterId == id || s.Player.CharaId == id),
+                fieldId => _activeSessions.Values.Where(s => s.Player.FieldId == fieldId).ToList(),
+                _repository);
+            var storageHandlers = new StorageAndRefinementHandlers(BroadcastToFieldAsync, _repository, _gameDb);
+            var lobbyHandlers = new LobbyAndEpisodeRoomHandlers(
+                id => _activeSessions.Values.FirstOrDefault(s => s.Player.CharacterId == id || s.Player.CharaId == id),
+                BroadcastToFieldAsync,
+                _repository,
+                _gameDb);
+            var capsuleHandlers = new CapsuleAndInteractionHandlers(BroadcastToFieldAsync, _repository, _gameDb);
 
             _dispatcher.RegisterHandlers(equipHandlers);
             _dispatcher.RegisterHandlers(movementHandlers);
             _dispatcher.RegisterHandlers(npcHandlers);
             _dispatcher.RegisterHandlers(shopHandlers);
             _dispatcher.RegisterHandlers(combatHandlers);
+            _dispatcher.RegisterHandlers(tradeHandlers);
+            _dispatcher.RegisterHandlers(storageHandlers);
+            _dispatcher.RegisterHandlers(lobbyHandlers);
+            _dispatcher.RegisterHandlers(capsuleHandlers);
 
             // Active Monster AI & Movement loop (ticks every 250ms for smooth 4Hz AI responsiveness)
             _monsterAiTimer = new System.Threading.Timer(OnMonsterAiTick, null, 1000, 250);
@@ -91,10 +106,8 @@ namespace Yogurting.Server.Handlers
 
             if (!_activeSessions.TryGetValue(session.Id, out var state))
             {
-                var player = await _repository.GetByUsernameAsync(session.AccountId ?? "test") ?? new Player("test", "Hanazono");
-                state = new PlayerSessionState(session, player, System.Threading.Interlocked.Increment(ref _nextEntityId));
-                _activeSessions[session.Id] = state;
-                _worldManager.GetOrCreateField(player.FieldId).AddPlayer(state);
+                Logger.Warn($"[FieldServer] Rejected unauthorized Opcode 0x{opcode:X4} ({opcode}) from unauthenticated session {session.RemoteEndPoint}");
+                return;
             }
 
             state.LastPacketAt = DateTime.UtcNow;

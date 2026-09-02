@@ -16,7 +16,6 @@ namespace Yogurting.Server.Handlers.Auth
     public sealed class AuthHandlers
     {
         private readonly IAccountRepository _accountRepository;
-        private readonly Random _random = new();
         private readonly string _serverBindIp;
         private readonly int _fieldPort;
         private readonly int _commPort;
@@ -116,7 +115,7 @@ namespace Yogurting.Server.Handlers.Auth
                 }
 
                 // 5. Authentication Succeeded
-                player.SessionKey = _random.Next(100000, 999999);
+                player.SessionKey = Random.Shared.Next(100000, 999999);
                 session.AccountId = username;
                 session.SessionKey = player.SessionKey;
                 session.CharaId = player.CharaId;
@@ -220,9 +219,9 @@ namespace Yogurting.Server.Handlers.Auth
             try
             {
                 // [Header 6B] [WorldID 4B] [Name 28B] [Tel 4B] [Gender 4B] [School 4B] [Face 4B] [Hair 4B] [Skin 4B] [Month 1B] [Day 1B] [Blood 1B]
-                if (packetData.Length < 62)
+                if (packetData.Length < 65)
                 {
-                    Logger.Warn($"[LoginServer] MakeChar rejected: Payload too small ({packetData.Length} bytes)");
+                    Logger.Warn($"[LoginServer] MakeChar rejected: Payload too small ({packetData.Length} bytes, expected >= 65 bytes)");
                     return;
                 }
 
@@ -304,6 +303,40 @@ namespace Yogurting.Server.Handlers.Auth
             {
                 Logger.Error($"[LoginServer] Delete Character Error: {ex.Message}");
             }
+        }
+
+        /// <summary>
+        /// 0x759F (30111): MsgLoginWorldListReq - World / Server List Request
+        /// </summary>
+        [PacketHandler(PacketOpcode.MsgLoginWorldListReq)]
+        public async Task HandleWorldListReqAsync(ClientSession session, PacketReader reader)
+        {
+            await session.SendAsync(YogurtingPackets.MakeWorldListAns(1));
+            // HARDCODED: Single world cluster ID (91 = Estiva) per Delphi quartet.exe bytecode 0x005AAA37
+            await session.SendAsync(YogurtingPackets.MakeWorldListNtf("Estiva", 91));
+        }
+
+        /// <summary>
+        /// 0x75A2 (30114): MsgLoginSelectWorldReq - World Selection Request
+        /// </summary>
+        [PacketHandler(PacketOpcode.MsgLoginSelectWorldReq)]
+        public async Task HandleSelectWorldReqAsync(ClientSession session, PacketReader reader)
+        {
+            // HARDCODED: Single world cluster ID (91 = Estiva) default fallback
+            int worldId = reader.Remaining >= 4 ? reader.ReadInt32() : 91;
+            await session.SendAsync(YogurtingPackets.MakeLoginResumeNtf(1000));
+            await session.SendAsync(YogurtingPackets.MakeSchoolListNtf(worldId));
+        }
+
+        /// <summary>
+        /// 0x759C (30108): MsgLoginKickOutReq - Terminate Duplicate/Active Session
+        /// Delphi 0x006BEDF4
+        /// </summary>
+        [PacketHandler(PacketOpcode.MsgLoginKickOutReq)]
+        public async Task HandleKickOutReqAsync(ClientSession session, PacketReader reader)
+        {
+            Logger.Info($"[LoginServer] KickOut requested from {session.RemoteEndPoint}.");
+            await session.SendAsync(YogurtingPackets.MakeLoginKickOutNtf(1));
         }
     }
 }

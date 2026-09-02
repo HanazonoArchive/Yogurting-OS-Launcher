@@ -2962,5 +2962,1175 @@ namespace Yogurting.Core.Network
             using var writer = PacketWriter.Create(PacketOpcode.MsgGameNpcDialogEndNtf);
             return writer.Build();
         }
+
+        // =========================================================================
+        // TRADE PACKETS (0x792B - 0x7935) - Delphi _Unit47.pas:51950-52140
+        // =========================================================================
+
+        /// <summary>
+        /// 0x792C (31020): MsgGameTradeResponseReq - Trade Proposal sent to target player
+        /// Exact Delphi layout (TMsgGameTradeResponseReq.Create, _Unit47.pas:51993):
+        ///   WriteID(0x792C)
+        ///   WriteWStr(0x1A, ProposerName) (52 bytes)
+        /// </summary>
+        public static byte[] MakeGameTradeResponseReq(string proposerName)
+        {
+            using var writer = PacketWriter.Create(PacketOpcode.MsgGameTradeResponseReq);
+            writer.WriteWStr(proposerName, 0x1A);
+            return writer.Build();
+        }
+
+        /// <summary>
+        /// 0x792E (31022): MsgGameTradeOtherSideAttendNtf - Opens trade UI on both clients
+        /// Exact Delphi layout (TMsgGameTradeOtherSideAttendNtf.Create, _Unit47.pas:52028):
+        ///   WriteID(0x792E)
+        ///   WriteInt32(OtherCharaId)
+        /// </summary>
+        public static byte[] MakeGameTradeOtherSideAttendNtf(int otherCharaId)
+        {
+            using var writer = PacketWriter.Create(PacketOpcode.MsgGameTradeOtherSideAttendNtf);
+            writer.WriteInt32(otherCharaId);
+            return writer.Build();
+        }
+
+        /// <summary>
+        /// 0x792F (31023): MsgGameTradeOtherSideBasketInfoNtf - Synchronizes partner's trade slots & money
+        /// Exact Delphi layout (TMsgGameTradeOtherSideBasketInfoNtf.Create, _Unit47.pas:52062):
+        ///   WriteID(0x792F)
+        ///   Loop 5 slots (each 32 bytes):
+        ///     WriteInt32(ItemType)
+        ///     WriteWord(Count)
+        ///     WriteWord(Dim2Index)
+        ///     WriteInt32(ItemId)
+        ///     Loop 5: WriteInt32(ReinforceSlot)
+        ///   WriteInt64(Money)
+        /// </summary>
+        public static byte[] MakeGameTradeOtherSideBasketInfoNtf(TradeSlot[] slots, long money)
+        {
+            using var writer = PacketWriter.Create(PacketOpcode.MsgGameTradeOtherSideBasketInfoNtf);
+            for (int i = 0; i < 5; i++)
+            {
+                var slot = (slots != null && i < slots.Length && slots[i] != null) ? slots[i] : new TradeSlot();
+                writer.WriteInt32(slot.ItemType);
+                writer.WriteWord(slot.Count);
+                writer.WriteWord(slot.Dim2Index);
+                writer.WriteInt32(slot.ItemId);
+                for (int j = 0; j < 5; j++)
+                {
+                    writer.WriteInt32(slot.ReinforceSlots != null && j < slot.ReinforceSlots.Length ? slot.ReinforceSlots[j] : 0);
+                }
+            }
+            writer.WriteInt64(money);
+            return writer.Build();
+        }
+
+        /// <summary>
+        /// 0x7932 (31026): MsgGameTradeOkNtf - Partner locked their trade basket
+        /// Exact Delphi layout (TMsgGameTradeOkNtf.Create, _Unit47.pas:52101): WriteID(0x7932)
+        /// </summary>
+        public static byte[] MakeGameTradeOkNtf()
+        {
+            using var writer = PacketWriter.Create(PacketOpcode.MsgGameTradeOkNtf);
+            return writer.Build();
+        }
+
+        /// <summary>
+        /// 0x7934 (31028): MsgGameTradeCompleteNtf - Trade successfully executed
+        /// Exact Delphi layout (TMsgGameTradeCompleteNtf.Create, _Unit47.pas:52129):
+        ///   WriteID(0x7934)
+        ///   5 Outgoing Slots (160B) + Int64 OutMoney (8B)
+        ///   5 Incoming Slots (160B) + Int64 InMoney (8B)
+        /// </summary>
+        public static byte[] MakeGameTradeCompleteNtf(TradeSlot[] outSlots, long outMoney, TradeSlot[] inSlots, long inMoney)
+        {
+            using var writer = PacketWriter.Create(PacketOpcode.MsgGameTradeCompleteNtf);
+            for (int i = 0; i < 5; i++)
+            {
+                var slot = (outSlots != null && i < outSlots.Length && outSlots[i] != null) ? outSlots[i] : new TradeSlot();
+                writer.WriteInt32(slot.ItemType);
+                writer.WriteWord(slot.Count);
+                writer.WriteWord(slot.Dim2Index);
+                writer.WriteInt32(slot.ItemId);
+                for (int j = 0; j < 5; j++)
+                {
+                    writer.WriteInt32(slot.ReinforceSlots != null && j < slot.ReinforceSlots.Length ? slot.ReinforceSlots[j] : 0);
+                }
+            }
+            writer.WriteInt64(outMoney);
+
+            for (int i = 0; i < 5; i++)
+            {
+                var slot = (inSlots != null && i < inSlots.Length && inSlots[i] != null) ? inSlots[i] : new TradeSlot();
+                writer.WriteInt32(slot.ItemType);
+                writer.WriteWord(slot.Count);
+                writer.WriteWord(slot.Dim2Index);
+                writer.WriteInt32(slot.ItemId);
+                for (int j = 0; j < 5; j++)
+                {
+                    writer.WriteInt32(slot.ReinforceSlots != null && j < slot.ReinforceSlots.Length ? slot.ReinforceSlots[j] : 0);
+                }
+            }
+            writer.WriteInt64(inMoney);
+            return writer.Build();
+        }
+
+        /// <summary>
+        /// 0x792A (31018): MsgGameTradeFailedNtf - Trade aborted / failed
+        /// Exact Delphi layout (TMsgGameTradeFailedNtf.Create, _Unit47.pas:51959):
+        ///   WriteID(0x792A)
+        ///   WriteInt32(Reason) (e.g. 6 = Cancelled)
+        /// </summary>
+        public static byte[] MakeGameTradeFailedNtf(int reasonCode = 6)
+        {
+            using var writer = PacketWriter.Create(PacketOpcode.MsgGameTradeFailedNtf);
+            writer.WriteInt32(reasonCode);
+            return writer.Build();
+        }
+
+        // =========================================================================
+        // TITLE & GRADE PACKETS (0x79A3, 0x79A5, 0x797C) - Delphi _Unit47.pas
+        // =========================================================================
+
+        /// <summary>
+        /// 0x79A3 (31139): MsgGameEquipTitleAns - Equip Title Response
+        /// Exact Delphi layout (TMsgGameEquipTitleAns.Create, _Unit47.pas:005AED10):
+        ///   WriteID(0x79A3)
+        ///   WriteInt32(ReturnCode = 1)
+        ///   WriteInt32(CharaId)
+        ///   WriteInt32(TitleId)
+        ///   WriteInt32(bForce = 0)
+        /// </summary>
+        public static byte[] MakeGameEquipTitleAns(int charaId, int titleId, int returnCode = 1, int bForce = 0)
+        {
+            using var writer = PacketWriter.Create(PacketOpcode.MsgGameEquipTitleAns);
+            writer.WriteInt32(returnCode);
+            writer.WriteInt32(charaId);
+            writer.WriteInt32(titleId);
+            writer.WriteInt32(bForce);
+            return writer.Build();
+        }
+
+        /// <summary>
+        /// 0x79A5 (31141): MsgGameStripTitleAns - Unequip Title Response
+        /// Exact Delphi layout (TMsgGameStripTitleAns.Create, _Unit47.pas:005AED84):
+        ///   WriteID(0x79A5)
+        ///   WriteInt32(ReturnCode = 1)
+        ///   WriteInt32(CharaId)
+        ///   WriteInt32(TitleId)
+        /// </summary>
+        public static byte[] MakeGameStripTitleAns(int charaId, int titleId = 0, int returnCode = 1)
+        {
+            using var writer = PacketWriter.Create(PacketOpcode.MsgGameStripTitleAns);
+            writer.WriteInt32(returnCode);
+            writer.WriteInt32(charaId);
+            writer.WriteInt32(titleId);
+            return writer.Build();
+        }
+
+        /// <summary>
+        /// 0x797C (31100): MsgGameGradeUpNtf - Grade / School Year Promotion
+        /// Exact Delphi layout (_Unit47.pas:005A3034):
+        ///   WriteID(0x797C)
+        ///   WriteInt32(CharaId)
+        ///   WriteInt32(Grade)
+        /// </summary>
+        public static byte[] MakeGameGradeUpNtf(int charaId, int grade)
+        {
+            using var writer = PacketWriter.Create(PacketOpcode.MsgGameGradeUpNtf);
+            writer.WriteInt32(charaId);
+            writer.WriteInt32(grade);
+            return writer.Build();
+        }
+
+        // =========================================================================
+        // COMM SERVER PACKETS (0x7604, 0x7729, 0x772F) - Delphi _Unit47.pas
+        // =========================================================================
+
+        /// <summary>
+        /// 0x7604 (30212): MsgTransJoinCmsAns - CommServer handshake & Friend roster
+        /// Exact Delphi layout (_Unit47.pas:005A91E0 / 30212.dms):
+        ///   WriteID(0x7604)
+        ///   WriteInt32(isReg = 1)
+        ///   WriteWord(FriendCount)
+        ///   For each friend:
+        ///     WriteInt32(CharacterId)
+        ///     WriteInt32(PhoneNumber)
+        ///     WriteWStr(0x44, CharacterName) (136 bytes)
+        ///     WriteInt32(Status: 1=Online, 0=Offline)
+        ///   WriteWord(MemoCount = 0)
+        ///   WriteWord(CallLogCount = 0)
+        ///   WriteWord(BlockListCount = 0)
+        /// </summary>
+        public static byte[] MakeTransJoinCmsAns(Player player, List<FriendEntry>? friends = null)
+        {
+            using var writer = PacketWriter.Create(PacketOpcode.MsgTransJoinCmsAns);
+            writer.WriteInt32(1); // isReg = 1
+
+            var friendList = friends ?? new List<FriendEntry>();
+            writer.WriteWord((ushort)friendList.Count);
+            foreach (var f in friendList)
+            {
+                writer.WriteInt32(f.CharacterId);
+                writer.WriteInt32(f.PhoneNumber);
+                writer.WriteWStr(f.CharacterName, 0x44);
+                writer.WriteInt32(f.IsOnline ? 1 : 0);
+            }
+
+            writer.WriteWord(0); // Memo count
+            writer.WriteWord(0); // Call log count
+            writer.WriteWord(0); // Block list count
+            return writer.Build();
+        }
+
+        /// <summary>
+        /// 0x5209 (21001): MsgGameUpdateItemNtf - Synchronizes full inventory list to client
+        /// Exact Delphi layout (_Unit47.pas:005A91E9):
+        ///   WriteID(0x5209)
+        ///   WriteWord(Count)
+        ///   For each item (12 bytes):
+        ///     WriteInt32(TypeId)
+        ///     WriteWord(Quantity)
+        ///     WriteWord(SlotIndex)
+        ///     WriteInt32((int)SerialId)
+        /// </summary>
+        /// <summary>
+        /// 0x5209 (21001): MsgGameUpdateItemNtf - Synchronizes full inventory list to client
+        /// Exact Delphi layout (_Unit47.pas:005A91E9):
+        ///   WriteID(0x5209)
+        ///   WriteWord(Count)
+        ///   For each item (12 bytes):
+        ///     WriteInt32(TypeId)
+        ///     WriteWord(Quantity)
+        ///     WriteWord(SlotIndex)
+        ///     WriteInt32((int)SerialId)
+        /// </summary>
+        public static byte[] MakeGameUpdateItemNtf(Player player)
+        {
+            using var writer = PacketWriter.Create(PacketOpcode.MsgGameUpdateItemNtf);
+            var items = player.Inventory ?? new List<Item>();
+            writer.WriteWord((ushort)items.Count);
+            foreach (var item in items)
+            {
+                writer.WriteInt32(item.TypeId);
+                writer.WriteWord((ushort)item.Quantity);
+                writer.WriteWord((ushort)item.SlotIndex);
+                writer.WriteInt32((int)item.SerialId);
+            }
+            return writer.Build();
+        }
+
+        // =========================================================================
+        // RESPAWN / REVIVAL PACKETS (0x794E, 0x7950) - Delphi _Unit47.pas:005ACCF0
+        // =========================================================================
+
+        /// <summary>
+        /// 0x794E (31054): MsgGameRevival119Ans - 119 Emergency Respawn Answer
+        /// Exact Delphi layout (TMsgGameRevivalChar119Ans.Create, _Unit47.pas:005ACCF0):
+        ///   WriteID(0x794E)
+        ///   WriteRC(1)
+        ///   WriteInt32(CharaId)
+        ///   WriteInt32(HpRecover)
+        ///   WriteInt64(Money)
+        /// </summary>
+        public static byte[] MakeGameRevival119Ans(int charaId, int hpRecover, long money)
+        {
+            using var writer = PacketWriter.Create(PacketOpcode.MsgGameRevival119Ans);
+            writer.WriteInt32(1); // ReturnCode = 1
+            writer.WriteInt32(charaId);
+            writer.WriteInt32(hpRecover);
+            writer.WriteInt64(money);
+            return writer.Build();
+        }
+
+        // =========================================================================
+        // STORAGE LOCKER PACKETS (0xA02C, 0xA02D, 0xA030) - Delphi _Unit47.pas
+        // =========================================================================
+
+        /// <summary>
+        /// 0xA02C (41004): MsgGameLockerOpenAns - Storage Locker Open Response
+        /// Exact Delphi layout (41004.dms):
+        ///   WriteID(0xA02C)
+        ///   WriteInt32(Open: 1)
+        ///   WriteInt32(LockerID)
+        /// </summary>
+        public static byte[] MakeGameLockerOpenAns(int lockerId, int open = 1)
+        {
+            using var writer = PacketWriter.Create(PacketOpcode.MsgGameLockerCloseReq); // 0xA02C
+            writer.WriteInt32(open);
+            writer.WriteInt32(lockerId);
+            return writer.Build();
+        }
+
+        /// <summary>
+        /// 0xA02D (41005): MsgGameLockerItemInfoNtf - Locker Contents Synchronization
+        /// Exact Delphi layout (41005.dms):
+        ///   WriteID(0xA02D)
+        ///   WriteInt32(LockerID)
+        ///   WriteWord(BeItemCount) -> for each: dim1 (Word), dim2 (Word), idItem (Int32), typeBeItem (Int32), reinforceslots[5] (20B)
+        ///   WriteWord(CoItemCount) -> for each: typeCoItem (Int32), count (Int32)
+        ///   WriteWord(EnItemCount) -> for each: typeEnItem (Int32), count (Int32)
+        /// </summary>
+        public static byte[] MakeGameLockerItemInfoNtf(int lockerId, List<Item>? items = null)
+        {
+            using var writer = PacketWriter.Create(PacketOpcode.MsgGameLockerItemInfoNtf);
+            writer.WriteInt32(lockerId);
+
+            var list = items ?? new List<Item>();
+            var beItems = list.Where(i => i.TypeId >= 100000 && i.TypeId < 200000).ToList();
+            var coItems = list.Where(i => i.TypeId >= 200000 && i.TypeId < 300000).ToList();
+            var enItems = list.Where(i => i.TypeId >= 300000).ToList();
+
+            // 1. Equippable BeItems (32 bytes per entry)
+            writer.WriteWord((ushort)beItems.Count);
+            for (int i = 0; i < beItems.Count; i++)
+            {
+                var item = beItems[i];
+                writer.WriteWord((ushort)item.SlotIndex);
+                writer.WriteWord((ushort)i);
+                writer.WriteInt32((int)item.SerialId);
+                writer.WriteInt32(item.TypeId);
+                for (int j = 0; j < 5; j++)
+                {
+                    writer.WriteInt32(item.SocketSlots != null && j < item.SocketSlots.Length ? item.SocketSlots[j] : 0);
+                }
+            }
+
+            // 2. Consumable CoItems (8 bytes per entry)
+            writer.WriteWord((ushort)coItems.Count);
+            foreach (var item in coItems)
+            {
+                writer.WriteInt32(item.TypeId);
+                writer.WriteInt32(item.Quantity);
+            }
+
+            // 3. Enhancement EnItems (8 bytes per entry)
+            writer.WriteWord((ushort)enItems.Count);
+            foreach (var item in enItems)
+            {
+                writer.WriteInt32(item.TypeId);
+                writer.WriteInt32(item.Quantity);
+            }
+
+            return writer.Build();
+        }
+
+        /// <summary>
+        /// 0xA030 (41008): MsgLockerMoveItemCompleteNtf - Storage item transfer notification
+        /// Exact Delphi layout (TMsgLockerMoveItemCompleteNtf.Create, _Unit47.pas:005B02B8):
+        ///   WriteID(0xA030)
+        ///   WriteRC(1)
+        ///   WriteInt32(LockerID)
+        ///   WriteByte(Direct) (0=Deposit, 1=Withdraw)
+        ///   FillBuffer(3) (3 bytes padding)
+        ///   Item payload (12 bytes: TypeId, Quantity, SlotIndex, SerialId)
+        /// </summary>
+        public static byte[] MakeGameLockerMoveItemCompleteNtf(int lockerId, int count, Item item, byte direct)
+        {
+            using var writer = PacketWriter.Create(PacketOpcode.MsgGameLockerMoveItemCompleteNtf);
+            writer.WriteInt32(1); // ReturnCode = 1
+            writer.WriteInt32(lockerId);
+            writer.WriteByte(direct);
+            writer.WriteBytes(new byte[3]); // 3 bytes alignment padding
+
+            writer.WriteInt32(item.TypeId);
+            writer.WriteWord((ushort)count);
+            writer.WriteWord((ushort)item.SlotIndex);
+            writer.WriteInt32((int)item.SerialId);
+            return writer.Build();
+        }
+
+        // =========================================================================
+        // CRYSTAL ENCHANT & REINFORCE PACKETS (0x79A9, 0x79AB, 0x79F0) - Delphi
+        // =========================================================================
+
+        /// <summary>
+        /// 0x79A9 (31145): MsgGameEnchantCrystalAns - Crystal Level Response
+        /// Exact Delphi layout (31145.dms):
+        ///   WriteID(0x79A9)
+        ///   WriteRC(1)
+        ///   WriteInt32(Type)
+        ///   WriteInt32(Level)
+        /// </summary>
+        public static byte[] MakeGameEnchantCrystalAns(int type, int level, int returnCode = 1)
+        {
+            using var writer = PacketWriter.Create(PacketOpcode.MsgGameEnchantCrystalAns);
+            writer.WriteInt32(returnCode);
+            writer.WriteInt32(type);
+            writer.WriteInt32(level);
+            return writer.Build();
+        }
+
+        /// <summary>
+        /// 0x79AB (31147): MsgGameCrystallizeAns - Crystallization result response
+        /// Exact Delphi layout (31147.dms):
+        ///   WriteID(0x79AB)
+        ///   WriteRC(1)
+        ///   WriteWord(VecGoneItemsCount)
+        ///   For each consumed item (12B): TypeItem, Count, Invalid
+        ///   Crystal reward (12B): CrystalTypeItem, Count, Invalid
+        /// </summary>
+        public static byte[] MakeGameCrystallizeAns(int crystalTypeId, int crystalCount, List<Item>? consumedItems = null, int returnCode = 1)
+        {
+            using var writer = PacketWriter.Create(PacketOpcode.MsgGameCrystallizeAns);
+            writer.WriteInt32(returnCode);
+
+            var list = consumedItems ?? new List<Item>();
+            writer.WriteWord((ushort)list.Count);
+            foreach (var item in list)
+            {
+                writer.WriteInt32(item.TypeId);
+                writer.WriteInt32(item.Quantity);
+                writer.WriteInt32(0);
+            }
+
+            writer.WriteInt32(crystalTypeId);
+            writer.WriteInt32(crystalCount);
+            writer.WriteInt32(0);
+            return writer.Build();
+        }
+
+        /// <summary>
+        /// 0x79F0 (31216): MsgGameReinforceBeItemAttachStoneAns - Attach Reinforce Stone to Socket
+        /// Exact Delphi layout (TMsgGameReinforceBeItemAttachStoneAns.Create, _Unit47.pas:005AFBF0):
+        ///   WriteID(0x79F0)
+        ///   WriteRC(1)
+        ///   WriteInt32(CharaId)
+        ///   WriteWord(2)
+        ///   Target Item Rec (12B) + Consumed Stone Rec (12B)
+        ///   ReinforceSlot (20B: 5x Int32 socket contents)
+        /// </summary>
+        public static byte[] MakeGameReinforceBeItemAttachStoneAns(int charaId, Item targetItem, int stoneTypeId, int socketIdx)
+        {
+            using var writer = PacketWriter.Create(PacketOpcode.MsgGameReinforceBeItemAttachStoneAns);
+            writer.WriteInt32(1); // ReturnCode = 1
+            writer.WriteInt32(charaId);
+            writer.WriteWord(2);
+
+            // Target Item record (12B)
+            writer.WriteInt32(targetItem.TypeId);
+            writer.WriteWord((ushort)targetItem.Quantity);
+            writer.WriteWord((ushort)targetItem.SlotIndex);
+            writer.WriteInt32((int)targetItem.SerialId);
+
+            // Consumed Stone record (12B)
+            writer.WriteInt32(stoneTypeId);
+            writer.WriteWord(1);
+            writer.WriteWord(0);
+            writer.WriteInt32(0);
+
+            // Updated 5-slot socket buffer (20B)
+            for (int i = 0; i < 5; i++)
+            {
+                writer.WriteInt32(targetItem.SocketSlots != null && i < targetItem.SocketSlots.Length ? targetItem.SocketSlots[i] : 0);
+            }
+
+            return writer.Build();
+        }
+
+        // =========================================================================
+        // LOBBY & WAITING ROOM PACKETS (0x765D, 0x765F, 0x7661, 0x7666, 0x7669, 0x766B, 0x7670, 0x7679, 0x768D, 0x768E)
+        // =========================================================================
+
+        /// <summary>
+        /// 0x765D (30301): MsgLobbyEnterNtf - Lobby Join Notification & Modal Trigger
+        /// Exact Delphi layout: TMsgLobbyEnterNtf.Create (_Unit47.pas:50002-50070 / 30301.dms):
+        ///   WriteID(0x765D)
+        ///   WriteWord(vecAvailEpisodeTypeCount)
+        ///   for each episode:
+        ///     WriteInt32(idEpisodeType)
+        ///     WriteSingle(0.0f)
+        ///     WriteSingle(1.0f)
+        ///     WriteSingle(1.0f)
+        ///   WriteWord(cntMaxRoom) = 100
+        ///   WriteInt32(epSN) = defaultEpisodeId or 0
+        /// </summary>
+        public static byte[] MakeLobbyEnterNtf(IEnumerable<int>? episodeIds = null, int defaultEpisodeId = 0)
+        {
+            using var writer = PacketWriter.Create(PacketOpcode.MsgLobbyEnterNtf);
+            var list = episodeIds != null ? episodeIds.ToList() : new List<int>();
+            if (list.Count == 0)
+            {
+                // Default canonical episodes (Estiva / So-il introductory missions)
+                list.AddRange(new[] { 101, 102, 103, 104, 105 });
+            }
+
+            writer.WriteWord((ushort)list.Count);
+            foreach (int epId in list)
+            {
+                writer.WriteInt32(epId);
+                writer.WriteFloat(0.0f);
+                writer.WriteFloat(1.0f);
+                writer.WriteFloat(1.0f);
+            }
+
+            writer.WriteWord(100); // cntMaxRoom: 100
+            writer.WriteInt32(defaultEpisodeId > 0 ? defaultEpisodeId : list[0]); // epSN
+            return writer.Build();
+        }
+
+        /// <summary>
+        /// 0x7666 (30310): MsgLobbyEnterPcNtf - Broadcasts a PC entering the episode lobby
+        /// Exact Delphi layout: TMsgLobbyEnterPcNtf.Create (_Unit47.pas:50322 & TYgPacket.WritePCInfo at 45865 & struct.dms:308):
+        ///   WriteID(0x7666)
+        ///   WriteInt32(idChar)
+        ///   WriteWStr(26, name)
+        ///   WriteByte(gender)
+        ///   WriteByte(grade)
+        ///   WriteWord(weaponTypeId)
+        ///   WriteWord(idTeam)
+        ///   WriteInt32(phone)
+        ///   WriteInt32(idPromotion)
+        /// </summary>
+        public static byte[] MakeLobbyEnterPcNtf(Player player)
+        {
+            using var writer = PacketWriter.Create(PacketOpcode.MsgLobbyEnterPcNtf);
+            writer.WriteInt32(player.CharacterId);
+            writer.WriteWStr(player.CharacterName, 26);
+            writer.WriteByte((byte)player.Gender);
+            writer.WriteByte((byte)player.Grade);
+            writer.WriteWord(1); // weapon type category (Word)
+            writer.WriteWord(0); // team (Word)
+            writer.WriteInt32(int.TryParse(player.TelNumber, out var tel) ? tel : 3456);
+            writer.WriteInt32(0); // idPromotion
+            return writer.Build();
+        }
+
+        /// <summary>
+        /// 0x7661 (30305): MsgLobbyPageSelectAns - Response to selecting room page
+        /// Exact Delphi layout: TMsgLobbySelectPageAns.Create (_Unit47.pas / 30305.dms):
+        ///   WriteID(0x7661)
+        ///   WriteInt32(pageNum)
+        /// </summary>
+        public static byte[] MakeLobbyPageSelectAns(int pageNum = 1)
+        {
+            using var writer = PacketWriter.Create(PacketOpcode.MsgLobbyPageSelectAns);
+            writer.WriteInt32(pageNum);
+            return writer.Build();
+        }
+
+        /// <summary>
+        /// 0x765F (30303): MsgLobbyEnterAns - Episode Lobby Entrance Acknowledgment
+        /// Exact Delphi layout (30303.dms): WriteID(0x765F), WriteRC(1)
+        /// </summary>
+        public static byte[] MakeLobbyEnterAns(int returnCode = 1)
+        {
+            using var writer = PacketWriter.Create(PacketOpcode.MsgLobbyEnterAns);
+            writer.WriteInt32(returnCode);
+            return writer.Build();
+        }
+
+        /// <summary>
+        /// 0x765E (30302): MsgLobbyLeaveNtf - Episode Lobby Exit Acknowledgment
+        /// SRC: Delphi _Unit47.pas:50106 (TMsgLobbyLeaveNtf.Create) & _Unit49.pas:21851 (TChara.ReturnToField)
+        /// Exact Delphi layout: WriteID(0x765E) with 0-byte payload (6 bytes total wire length)
+        /// </summary>
+        public static byte[] MakeLobbyLeaveNtf()
+        {
+            using var writer = PacketWriter.Create(PacketOpcode.MsgLobbyLeaveNtf);
+            return writer.Build();
+        }
+
+        /// <summary>
+        /// 0x7665 (30309): MsgLobbySelectEpisodeAns - Response to selecting an episode or tab in the lobby
+        /// SRC: 30309.dms & Delphi Quartet
+        /// Exact layout: WriteID(0x7665), WriteInt32(retCode), WriteInt32(episodeId)
+        /// </summary>
+        public static byte[] MakeLobbySelectEpisodeAns(int retCode, int episodeId)
+        {
+            using var writer = PacketWriter.Create(PacketOpcode.MsgLobbySelectEpisodeAns);
+            writer.WriteInt32(retCode);
+            writer.WriteInt32(episodeId);
+            return writer.Build();
+        }
+
+        /// <summary>
+        /// 0x7676 (30326): MsgLobbyAvailableEpisodeInfoNtf - Available episodes and unlock flags
+        /// SRC: Delphi _Unit47.pas:50687 (TMsgLobbyAvailableEpisodeInfoNtf.Create) & _Unit49.pas:21590
+        /// Exact Delphi layout: WriteID(0x7676), WriteWord(count), for each: WriteInt32(epId), WriteFloat(0.0f), WriteFloat(1.0f), WriteFloat(1.0f)
+        /// </summary>
+        public static byte[] MakeLobbyAvailableEpisodeInfoNtf(IEnumerable<int>? episodeIds = null)
+        {
+            using var writer = PacketWriter.Create(PacketOpcode.MsgLobbyAvailableEpisodeInfoNtf);
+            var list = episodeIds != null ? episodeIds.ToList() : new List<int>();
+            writer.WriteWord((ushort)list.Count);
+            foreach (int epId in list)
+            {
+                writer.WriteInt32(epId);
+                writer.WriteFloat(0.0f);
+                writer.WriteFloat(1.0f);
+                writer.WriteFloat(1.0f);
+            }
+            return writer.Build();
+        }
+
+        /// <summary>
+        /// 0x7663 (30307): MsgLobbyEpisodePageStatusNtf - Broadcasts whether rooms exist for this episode
+        /// SRC: Delphi _Unit47.pas:50283 (TMsgLobbyEpisodePageStatusNtf.Create) & _Unit49.pas:21627
+        /// Exact Delphi layout: WriteID(0x7663), WriteInt32(episodeId), WriteInt32(roomExists ? 1 : 0)
+        /// </summary>
+        public static byte[] MakeLobbyEpisodePageStatusNtf(int episodeId, bool roomExists)
+        {
+            using var writer = PacketWriter.Create(PacketOpcode.MsgLobbyEpisodePageStatusNtf);
+            writer.WriteInt32(episodeId);
+            writer.WriteInt32(roomExists ? 1 : 0);
+            return writer.Build();
+        }
+
+        /// <summary>
+        /// 0x7669 (30313): MsgLobbyRoomListAns - Room List in current Episode Lobby
+        /// Exact Delphi layout (room_info in struct.dms / 30313.dms):
+        ///   WriteID(0x7669)
+        ///   WriteRC(1)
+        ///   WriteWord(RoomCount)
+        ///   For each room:
+        ///     WriteWord(snRoom), WriteWord(idLobby), WriteByte(status), WriteByte(0), WriteWStr(42, title),
+        ///     WriteUInt32(idEpisodeType), WriteByte(cntMaxUser), WriteByte(cntCurrentUser), WriteByte(cntTeam),
+        ///     WriteByte(bPassWord), WriteByte(bPK), WriteByte(bLimitMilk), WriteByte(bWaiting), WriteByte(clearRate),
+        ///     WriteFloat(scheduleCalorieEnter), WriteFloat(scheduleCalorieConsume)
+        /// </summary>
+        public static byte[] MakeLobbyRoomListAns(List<EpisodeRoom>? rooms = null)
+        {
+            using var writer = PacketWriter.Create(PacketOpcode.MsgLobbyRoomListAns);
+            writer.WriteInt32(1); // ReturnCode = 1
+
+            var list = rooms ?? new List<EpisodeRoom>();
+            writer.WriteWord((ushort)list.Count);
+            foreach (var r in list)
+            {
+                writer.WriteWord(r.RoomId);
+                writer.WriteWord(r.LobbyId);
+                writer.WriteByte(r.Status);
+                writer.WriteByte(0); // padding
+                writer.WriteWStr(r.Title, 42);
+                writer.WriteUInt32(r.EpisodeTypeId);
+                writer.WriteByte(r.MaxUsers);
+                writer.WriteByte(r.CurrentUsers);
+                writer.WriteByte(r.TeamCount);
+                writer.WriteByte(r.HasPassword);
+                writer.WriteByte(r.PkMode);
+                writer.WriteByte(r.LimitMilk);
+                writer.WriteByte(r.IsWaiting);
+                writer.WriteByte(r.ClearRate);
+                writer.WriteFloat(r.CalorieEnter);
+                writer.WriteFloat(r.CalorieConsume);
+            }
+
+            return writer.Build();
+        }
+
+        /// <summary>
+        /// 0x766B (30315): MsgLobbyCreateRoomAns - Room Creation Response
+        /// Exact Delphi layout (30315.dms):
+        ///   WriteID(0x766B)
+        ///   WriteRC(1)
+        ///   WriteWord(snRoom)
+        ///   WriteWord(idLobby)
+        ///   WriteByte(bAuthSecret)
+        /// </summary>
+        public static byte[] MakeLobbyCreateRoomAns(ushort roomId, ushort lobbyId = 1, byte bAuthSecret = 0, int returnCode = 1)
+        {
+            using var writer = PacketWriter.Create(PacketOpcode.MsgLobbyCreateRoomAns);
+            writer.WriteInt32(returnCode);
+            writer.WriteWord(roomId);
+            writer.WriteWord(lobbyId);
+            writer.WriteByte(bAuthSecret);
+            return writer.Build();
+        }
+
+        /// <summary>
+        /// 0x7670 (30320): MsgLobbyJoinRoomAns - Room Join Response
+        /// Exact Delphi layout (30320.dms): WriteID(0x7670), WriteRC(1)
+        /// </summary>
+        public static byte[] MakeLobbyJoinRoomAns(int returnCode = 1)
+        {
+            using var writer = PacketWriter.Create(PacketOpcode.MsgLobbyJoinRoomAns);
+            writer.WriteInt32(returnCode);
+            return writer.Build();
+        }
+
+        /// <summary>
+        /// 0x7679 (30329): MsgWaitRoomInfoAns - Waiting Room Status & Participant List
+        /// Exact Delphi layout (30329.dms + pc_info in struct.dms):
+        ///   WriteID(0x7679)
+        ///   WriteWord(RoomID), WriteWord(LobbyID), WriteWStr(0x2A, Title), WriteWord(0 pad)
+        ///   WriteInt32(idEpisodeType), WriteByte(bPKMode), WriteByte(bLimitMilk), WriteByte(cntMinChar),
+        ///   WriteByte(cntMaxChar), WriteByte(cntTeam), WriteByte(clearRate), WriteWStr(0x12, password)
+        ///   WriteWord(MemberCount)
+        ///   For each member (pc_info):
+        ///     WriteInt32(idChar), WriteWStr(26, name), WriteByte(gender), WriteByte(grade),
+        ///     WriteWord(weapon), WriteWord(idTeam), WriteInt32(phone), WriteInt32(idPromotion), WriteInt32(bReady)
+        /// </summary>
+        public static byte[] MakeWaitRoomInfoAns(EpisodeRoom room)
+        {
+            using var writer = PacketWriter.Create(PacketOpcode.MsgWaitRoomInfoAns);
+            writer.WriteWord(room.RoomId);
+            writer.WriteWord(room.LobbyId);
+            writer.WriteWStr(room.Title, 0x2A);
+            writer.WriteWord(0); // 2 bytes padding
+            writer.WriteInt32((int)room.EpisodeTypeId);
+            writer.WriteByte(room.PkMode);
+            writer.WriteByte(room.LimitMilk);
+            writer.WriteByte(1); // min players
+            writer.WriteByte(room.MaxUsers);
+            writer.WriteByte(room.TeamCount);
+            writer.WriteByte(room.ClearRate);
+            writer.WriteWStr(room.Password, 0x12);
+
+            writer.WriteWord((ushort)room.Members.Count);
+            foreach (var m in room.Members)
+            {
+                writer.WriteInt32(m.CharacterId);
+                writer.WriteWStr(m.CharacterName, 26);
+                writer.WriteByte(m.Gender);
+                writer.WriteByte(m.Grade);
+                writer.WriteWord(m.Weapon);
+                writer.WriteWord(m.TeamId);
+                writer.WriteInt32(m.PhoneNumber);
+                writer.WriteInt32(m.PromotionId);
+                writer.WriteInt32(m.IsReady || m.IsHost ? 1 : 0);
+            }
+
+            return writer.Build();
+        }
+
+        /// <summary>
+        /// 0x768D (30348): MsgWaitRoomReadyNtf - Member Ready Status Sync
+        /// Exact Delphi layout (30348.dms): WriteID(0x768D), WriteInt32(idChar), WriteInt32(bReady)
+        /// </summary>
+        public static byte[] MakeWaitRoomReadyNtf(int charaId, int bReady)
+        {
+            using var writer = PacketWriter.Create(PacketOpcode.MsgWaitRoomReadyNtf);
+            writer.WriteInt32(charaId);
+            writer.WriteInt32(bReady);
+            return writer.Build();
+        }
+
+        /// <summary>
+        /// 0x768E (30349): MsgWaitRoomStartNtf - Host started episode countdown
+        /// Exact Delphi layout (30349.dms): WriteID(0x768E)
+        /// </summary>
+        public static byte[] MakeWaitRoomStartNtf()
+        {
+            using var writer = PacketWriter.Create(PacketOpcode.MsgWaitRoomStartNtf);
+            return writer.Build();
+        }
+
+        // =========================================================================
+        // CAPSULE GACHA & INTERACTIVE OBJECTS (0xA411, 0xA412, 0xA414, 0x7985, 0x7987, 0x7997, 0x79C3)
+        // =========================================================================
+
+        /// <summary>
+        /// 0xA411 (42001): MsgGameCapsuleEnterNtf - Player enters capsule vending machine
+        /// SRC: server_legacy/DELPHI PROJECT/_Unit47.pas:005B03F8 & 42001.dms
+        /// </summary>
+        public static byte[] MakeGameCapsuleEnterNtf(ushort machineId)
+        {
+            using var writer = PacketWriter.Create(PacketOpcode.MsgGameCapsuleEnterNtf);
+            writer.WriteWord(machineId);
+            return writer.Build();
+        }
+
+        /// <summary>
+        /// 0xA412 (42002): MsgGameCapsuleProductInfoNtf - Capsule vending machine inventory & odds
+        /// SRC: server_legacy/DELPHI PROJECT/_Unit47.pas:005B0440 & 42002.dms
+        /// </summary>
+        public static byte[] MakeGameCapsuleProductInfoNtf(int machineId, long price, List<(int bSecret, int typeItem, long amount)> products, int totalAmount)
+        {
+            using var writer = PacketWriter.Create(PacketOpcode.MsgGameCapsuleProductInfoNtf);
+            writer.WriteInt32(machineId);
+            writer.WriteInt64(price);
+            writer.WriteWord((ushort)products.Count);
+            foreach (var p in products)
+            {
+                writer.WriteInt32(p.bSecret);
+                writer.WriteInt32(p.typeItem);
+                writer.WriteInt64(p.amount);
+            }
+            writer.WriteInt32(totalAmount);
+            return writer.Build();
+        }
+
+        /// <summary>
+        /// 0x7985 (31109): MsgGameTakeUpObjectAns - Lift interactive obstacle/box
+        /// SRC: server_legacy/DELPHI PROJECT/_Unit47.pas:005AE6CC & 31109
+        /// </summary>
+        public static byte[] MakeGameTakeUpObjectAns(int charaId, int objectId, int result = 1)
+        {
+            using var writer = PacketWriter.Create(PacketOpcode.MsgGameTakeUpObjectAns);
+            writer.WriteInt32(charaId);
+            writer.WriteInt32(objectId);
+            writer.WriteInt32(result);
+            return writer.Build();
+        }
+
+        /// <summary>
+        /// 0x7987 (31111): MsgGameTakeDownObjectAns - Put down interactive obstacle/box
+        /// SRC: server_legacy/DELPHI PROJECT/_Unit47.pas:005AE718 & 31111
+        /// </summary>
+        public static byte[] MakeGameTakeDownObjectAns(int charaId, int objectId, int result = 1)
+        {
+            using var writer = PacketWriter.Create(PacketOpcode.MsgGameTakeDownObjectAns);
+            writer.WriteInt32(charaId);
+            writer.WriteInt32(objectId);
+            writer.WriteInt32(result);
+            return writer.Build();
+        }
+
+        /// <summary>
+        /// 0x7997 (31127): MsgGamePushObjectAns - Push interactive obstacle/box
+        /// SRC: server_legacy/DELPHI PROJECT/_Unit47.pas:005AEB70 & 31127.dms
+        /// </summary>
+        public static byte[] MakeGamePushObjectAns(int charaId, int objectId, int result = 1, ushort posX = 0, ushort posY = 0)
+        {
+            using var writer = PacketWriter.Create(PacketOpcode.MsgGamePushObjectAns);
+            writer.WriteInt32(charaId);
+            writer.WriteInt32(objectId);
+            writer.WriteInt32(result);
+            writer.WriteWord(posX);
+            writer.WriteWord(posY);
+            return writer.Build();
+        }
+
+        /// <summary>
+        /// 0x79C3 (31171): MsgGameSpecialPhoneCallAns - Special Phone Call Response
+        /// SRC: server_legacy/DELPHI PROJECT/_Unit67.pas:006C4550 & 31171.dms
+        /// </summary>
+        public static byte[] MakeGameSpecialPhoneCallAns(int returnCode = 1)
+        {
+            using var writer = PacketWriter.Create(PacketOpcode.MsgGameSpecialPhoneCallAns);
+            writer.WriteInt32(returnCode);
+            return writer.Build();
+        }
+
+        /// <summary>
+        /// 0x793A (31034): MsgGameSellToNpcAns - NPC Shop Item Sell Response
+        /// Exact Delphi layout (_Unit67.pas:20788 & 31034.dms):
+        ///   WriteID(0x793A)
+        ///   WriteInt64(totalTaff)
+        ///   WriteWord(soldCount)
+        ///   WriteBytes(itemEntries)
+        ///   WriteInt32(returnCode)
+        /// </summary>
+        public static byte[] MakeGameSellToNpcAns(long totalTaff, ushort soldCount, byte[]? itemEntries = null, int returnCode = 1)
+        {
+            using var writer = PacketWriter.Create(PacketOpcode.MsgGameSellToNpcAns);
+            writer.WriteInt64(totalTaff);
+            writer.WriteWord(soldCount);
+            if (itemEntries != null && itemEntries.Length > 0)
+            {
+                writer.WriteBytes(itemEntries);
+            }
+            writer.WriteInt32(returnCode);
+            return writer.Build();
+        }
+
+        /// <summary>
+        /// 0x7936 (31030): MsgGameBuyFromNpcAns - Batch NPC Shop Buy Response
+        /// Exact Delphi layout (_Unit67.pas:20305 & 31030.dms):
+        ///   WriteID(0x7936)
+        ///   WriteInt32(returnCode)
+        /// </summary>
+        public static byte[] MakeGameBuyFromNpcAns(int returnCode = 1)
+        {
+            using var writer = PacketWriter.Create(PacketOpcode.MsgGameBuyFromNpcAns);
+            writer.WriteInt32(returnCode);
+            return writer.Build();
+        }
+
+        /// <summary>
+        /// 0x7972 (31090): MsgGameEpisodeResultNtf - Episode Mission Result & Rank Screen
+        /// Exact Delphi layout (_Unit47.pas:54955-55060):
+        /// </summary>
+        public static byte[] MakeGameEpisodeResultNtf(int charaId, string charaName, ushort rank = 1, int score = 10000, int bonusExp = 500)
+        {
+            using var writer = PacketWriter.Create(PacketOpcode.MsgGameEpisodeResultNtf);
+            writer.WriteByte(1); // count byte
+            writer.WriteWord(1); // count word
+            
+            // Player stats
+            writer.WriteInt32(charaId);
+            writer.WriteWStr(charaName, 26);
+            writer.WriteWord(rank); // 1 = S Rank
+            writer.WriteInt32(score);
+            writer.WriteInt32(bonusExp);
+
+            // Detailed completion status
+            writer.WriteWord(1);
+            writer.WriteInt32(charaId);
+            writer.WriteWord(0);
+            writer.WriteByte(0);
+            writer.WriteByte(0);
+            return writer.Build();
+        }
+
+        /// <summary>
+        /// 0x79D8 (31192): MsgGameGuildChangeNameNtf - Broadcasts character overhead guild name/tag
+        /// Exact Delphi layout (_Unit47.pas:57088):
+        ///   WriteID(0x79D8)
+        ///   WriteInt32(charaId)
+        ///   WriteInt64(guildId)
+        ///   WriteWStr(guildName, 26)
+        ///   FillBuffer(0xCC, 2)
+        /// </summary>
+        public static byte[] MakeGameGuildChangeNameNtf(int charaId, long guildId, string guildName)
+        {
+            using var writer = PacketWriter.Create(PacketOpcode.MsgGameGuildChangeNameNtf);
+            writer.WriteInt32(charaId);
+            writer.WriteInt64(guildId);
+            writer.WriteWStr(guildName ?? string.Empty, 26);
+            writer.WriteByte(0xCC);
+            writer.WriteByte(0xCC);
+            return writer.Build();
+        }
+
+        /// <summary>
+        /// 0x7680 (30336): MsgWaitRoomSelectTeamNtf - Wait room team slot change broadcast
+        /// Exact Delphi layout (_Unit47.pas:51072):
+        ///   WriteID(0x7680)
+        ///   WriteInt32(charaId)
+        ///   WriteByte(teamId)
+        ///   FillBuffer(0xCC, 3)
+        /// </summary>
+        public static byte[] MakeWaitRoomSelectTeamNtf(int charaId, byte teamId)
+        {
+            using var writer = PacketWriter.Create(PacketOpcode.MsgWaitRoomSelectTeamReq);
+            writer.WriteInt32(charaId);
+            writer.WriteByte(teamId);
+            writer.WriteByte(0xCC);
+            writer.WriteByte(0xCC);
+            writer.WriteByte(0xCC);
+            return writer.Build();
+        }
+
+        /// <summary>
+        /// 0x767B (30331): MsgWaitRoomEditAns - Wait room settings change answer
+        /// Exact Delphi layout (_Unit47.pas:50882):
+        ///   WriteID(0x767B)
+        ///   WriteInt32(returnCode)
+        /// </summary>
+        public static byte[] MakeWaitRoomEditAns(int returnCode = 1)
+        {
+            using var writer = PacketWriter.Create(PacketOpcode.MsgWaitRoomEditAns);
+            writer.WriteInt32(returnCode);
+            return writer.Build();
+        }
+
+        /// <summary>
+        /// 0x5222 (21026): MsgGameShopLeaveReq / MsgGuideBoardLeaveNtf - Close Shop/Bulletin Window
+        /// Exact Delphi layout (_Unit47.pas:47387): Zero-payload packet
+        /// </summary>
+        public static byte[] MakeGameShopLeaveNtf()
+        {
+            using var writer = PacketWriter.Create(PacketOpcode.MsgGuideBoardLeaveNtf);
+            return writer.Build();
+        }
+
+        /// <summary>
+        /// 0x5272 (21106): MsgGameLeaveHairShopNtf - Close Hair Salon Menu
+        /// Exact Delphi layout (_Unit47.pas:48725): Zero-payload packet
+        /// </summary>
+        public static byte[] MakeGameLeaveHairShopNtf()
+        {
+            using var writer = PacketWriter.Create(PacketOpcode.MsgGameLeaveHairShopNtf);
+            return writer.Build();
+        }
+
+        /// <summary>
+        /// 0x7662 (30306): MsgLobbyPageInfoNtf - Lobby Page Status
+        /// Exact Delphi layout (_Unit47.pas:50205):
+        ///   WriteID(0x7662)
+        ///   WriteInt32(page)
+        ///   WriteWord(roomCount)
+        /// </summary>
+        public static byte[] MakeLobbyPageInfoNtf(int page = 1, ushort roomCount = 0)
+        {
+            using var writer = PacketWriter.Create((PacketOpcode)0x7662);
+            writer.WriteInt32(page);
+            writer.WriteWord(roomCount);
+            return writer.Build();
+        }
+
+        /// <summary>
+        /// 0x759E (30110): MsgLoginKickOutNtf - Disconnect / Kick Notice
+        /// Exact Delphi layout (_Unit47.pas:49380):
+        ///   WriteID(0x759E)
+        ///   WriteInt32(reason)
+        /// </summary>
+        public static byte[] MakeLoginKickOutNtf(int reason = 1)
+        {
+            using var writer = PacketWriter.Create(PacketOpcode.MsgLoginKickOutNtf);
+            writer.WriteInt32(reason);
+            return writer.Build();
+        }
+
+        /// <summary>
+        /// 0x5271 (21105): MsgGameChangeHairAns - Hair Salon Style Update Broadcast
+        /// Exact Delphi layout (_Unit47.pas:48677):
+        ///   WriteID(0x5271)
+        ///   WriteEC(rc)
+        ///   WriteInt32(charaId)
+        ///   WriteInt32(hairId)
+        ///   WriteInt32(hairColor)
+        ///   WriteInt64(taff)
+        /// </summary>
+        public static byte[] MakeGameChangeHairAns(int rc, int charaId, int hairId, int hairColor, long taff)
+        {
+            using var writer = PacketWriter.Create((PacketOpcode)0x5271);
+            writer.WriteInt32(rc);
+            writer.WriteInt32(charaId);
+            writer.WriteInt32(hairId);
+            writer.WriteInt32(hairColor);
+            writer.WriteInt64(taff);
+            return writer.Build();
+        }
+
+        /// <summary>
+        /// 0x525F (21087): MsgGamePicketStatusChangeAns - Placard Open/Close Broadcast
+        /// Exact Delphi layout (_Unit47.pas:48321):
+        ///   WriteID(0x525F)
+        ///   WriteEC(rc)
+        ///   WriteInt32(charaId)
+        ///   WriteLongBool(isOpen)
+        /// </summary>
+        public static byte[] MakeGamePicketStatusChangeAns(int rc, int charaId, bool isOpen)
+        {
+            using var writer = PacketWriter.Create(PacketOpcode.MsgGamePicketStatusChangeAns);
+            writer.WriteInt32(rc);
+            writer.WriteInt32(charaId);
+            writer.WriteInt32(isOpen ? 1 : 0);
+            return writer.Build();
+        }
+
+        /// <summary>
+        /// 0x5261 (21089): MsgGamePicketContentsChangeAns - Placard Message Broadcast
+        /// Exact Delphi layout (_Unit47.pas:48362):
+        ///   WriteID(0x5261)
+        ///   WriteEC(rc)
+        ///   WriteInt32(charaId)
+        ///   WriteWStr(37 chars = 74 bytes, text)
+        ///   WriteByte(0xCC) * 2
+        /// </summary>
+        public static byte[] MakeGamePicketContentsChangeAns(int rc, int charaId, string picketText)
+        {
+            using var writer = PacketWriter.Create(PacketOpcode.MsgGamePicketContentsChangeAns);
+            writer.WriteInt32(rc);
+            writer.WriteInt32(charaId);
+            writer.WriteWStr(picketText ?? string.Empty, 37);
+            writer.WriteByte(0xCC);
+            writer.WriteByte(0xCC);
+            return writer.Build();
+        }
+
+        /// <summary>
+        /// 0x5250 (21072): MsgGameByulReceivedProductPresentNewAns - New Gift Present List
+        /// Exact Delphi layout (_Unit47.pas:48182):
+        ///   WriteID(0x5250)
+        ///   WriteEC(0)
+        ///   WriteWord(0)
+        /// </summary>
+        public static byte[] MakeGameByulReceivedProductPresentNewAns()
+        {
+            using var writer = PacketWriter.Create(PacketOpcode.MsgGameByulReceivedProductPresentNewAns);
+            writer.WriteInt32(0);
+            writer.WriteUInt16(0);
+            return writer.Build();
+        }
+
+        /// <summary>
+        /// 0x5252 (21074): MsgGameByulReceivedProductPresentHistoryAns - Gift History List
+        /// Exact Delphi layout (_Unit47.pas:48216):
+        ///   WriteID(0x5252)
+        ///   WriteEC(0)
+        ///   WriteWord(0)
+        /// </summary>
+        public static byte[] MakeGameByulReceivedProductPresentHistoryAns()
+        {
+            using var writer = PacketWriter.Create(PacketOpcode.MsgGameByulReceivedProductPresentHistoryAns);
+            writer.WriteInt32(0);
+            writer.WriteUInt16(0);
+            return writer.Build();
+        }
+
+        /// <summary>
+        /// 0x5258 (21080): MsgGameByulHistoryAns - Star Coin Balance / History
+        /// Exact Delphi layout (_Unit47.pas:48250):
+        ///   WriteID(0x5258)
+        ///   WriteEC(0)
+        ///   WriteInt32(0)
+        /// </summary>
+        public static byte[] MakeGameByulHistoryAns()
+        {
+            using var writer = PacketWriter.Create(PacketOpcode.MsgGameByulHistoryAns);
+            writer.WriteInt32(0);
+            writer.WriteInt32(0);
+            return writer.Build();
+        }
+
+        /// <summary>
+        /// 0x5279 (21113): MsgGameRenewByulBeItemAns - Star Item Renewal Answer
+        /// Exact Delphi layout (_Unit47.pas:49086):
+        ///   WriteID(0x5279)
+        ///   WriteEC(rc)
+        /// </summary>
+        public static byte[] MakeGameRenewByulBeItemAns(int rc = 0)
+        {
+            using var writer = PacketWriter.Create(PacketOpcode.MsgGameRenewByulBeItemAns);
+            writer.WriteInt32(rc);
+            return writer.Build();
+        }
+
+        /// <summary>
+        /// 0x766E (30318): MsgLobbyReserveJoinRoomAns - Reserve Join Room Response
+        /// Exact Delphi layout (_Unit47.pas:50498):
+        ///   WriteID(0x766E)
+        ///   WriteRC(rc)
+        /// </summary>
+        public static byte[] MakeLobbyReserveJoinRoomAns(int rc)
+        {
+            using var writer = PacketWriter.Create(PacketOpcode.MsgLobbyReserveJoinRoomAns);
+            writer.WriteInt32(rc);
+            return writer.Build();
+        }
+
+        /// <summary>
+        /// 0x7673 (30323): MsgLobbyQuickJoinRoomAns - Quick Join Response
+        /// Exact Delphi layout (_Unit47.pas:50653):
+        ///   WriteID(0x7673)
+        ///   WriteRC(rc)
+        /// </summary>
+        public static byte[] MakeLobbyQuickJoinRoomAns(int rc)
+        {
+            using var writer = PacketWriter.Create(PacketOpcode.MsgLobbyQuickJoinRoomAns);
+            writer.WriteInt32(rc);
+            return writer.Build();
+        }
+
+        /// <summary>
+        /// 0x7683 (30339): MsgWaitRoomTestInviteAns - Direct Room Invitation Answer
+        /// Exact Delphi layout (_Unit47.pas:51169):
+        ///   WriteID(0x7683)
+        ///   WriteInt32(targetCharaId)
+        ///   WriteRC(rc)
+        /// </summary>
+        public static byte[] MakeWaitRoomTestInviteAns(int targetCharaId, int rc)
+        {
+            using var writer = PacketWriter.Create(PacketOpcode.MsgWaitRoomTestInviteAns);
+            writer.WriteInt32(targetCharaId);
+            writer.WriteInt32(rc);
+            return writer.Build();
+        }
+
+        /// <summary>
+        /// 0x79F6 (31222): MsgGameExtractByulBeItemAns - Extract Star Reinforce Item Answer
+        /// Exact Delphi layout (_Unit47.pas:57628):
+        ///   WriteID(0x79F6)
+        ///   WriteEC(rc)
+        /// </summary>
+        public static byte[] MakeGameExtractByulBeItemAns(int rc = 0)
+        {
+            using var writer = PacketWriter.Create(PacketOpcode.MsgGameExtractByulBeItemAns);
+            writer.WriteInt32(rc);
+            return writer.Build();
+        }
     }
 }

@@ -5,33 +5,50 @@ using System.Text;
 namespace Yogurting.Core.Network
 {
     /// <summary>
-    /// Binary packet reader with bounds checking and multi-encoding string support.
+    /// High-performance, zero-allocation binary packet reader with bounds checking and multi-encoding string support.
+    /// Operates over <see cref="ReadOnlyMemory{Byte}"/> slices directly from network buffers.
     /// </summary>
     public sealed class PacketReader
     {
-        private readonly byte[] _data;
+        private readonly ReadOnlyMemory<byte> _memory;
         private int _position;
 
         public PacketReader(byte[] data)
         {
-            _data = data ?? throw new ArgumentNullException(nameof(data));
+            if (data == null) throw new ArgumentNullException(nameof(data));
+            _memory = data;
+            _position = 0;
+        }
+
+        public PacketReader(byte[] data, int offset, int count)
+        {
+            if (data == null) throw new ArgumentNullException(nameof(data));
+            _memory = new ReadOnlyMemory<byte>(data, offset, count);
+            _position = 0;
+        }
+
+        public PacketReader(ReadOnlyMemory<byte> memory)
+        {
+            _memory = memory;
             _position = 0;
         }
 
         public int Position => _position;
-        public int Length => _data.Length;
-        public int Remaining => _data.Length - _position;
+        public int Length => _memory.Length;
+        public int Remaining => _memory.Length - _position;
+        public ReadOnlyMemory<byte> Memory => _memory;
+        public ReadOnlySpan<byte> Span => _memory.Span;
 
         public byte ReadByte()
         {
             EnsureBytes(1);
-            return _data[_position++];
+            return _memory.Span[_position++];
         }
 
         public ReadOnlySpan<byte> ReadBytes(int count)
         {
             EnsureBytes(count);
-            var span = _data.AsSpan(_position, count);
+            var span = _memory.Span.Slice(_position, count);
             _position += count;
             return span;
         }
@@ -39,7 +56,7 @@ namespace Yogurting.Core.Network
         public short ReadInt16()
         {
             EnsureBytes(2);
-            short value = BitConverter.ToInt16(_data, _position);
+            short value = System.Buffers.Binary.BinaryPrimitives.ReadInt16LittleEndian(_memory.Span.Slice(_position, 2));
             _position += 2;
             return value;
         }
@@ -47,7 +64,7 @@ namespace Yogurting.Core.Network
         public ushort ReadUInt16()
         {
             EnsureBytes(2);
-            ushort value = BitConverter.ToUInt16(_data, _position);
+            ushort value = System.Buffers.Binary.BinaryPrimitives.ReadUInt16LittleEndian(_memory.Span.Slice(_position, 2));
             _position += 2;
             return value;
         }
@@ -55,7 +72,7 @@ namespace Yogurting.Core.Network
         public int ReadInt32()
         {
             EnsureBytes(4);
-            int value = BitConverter.ToInt32(_data, _position);
+            int value = System.Buffers.Binary.BinaryPrimitives.ReadInt32LittleEndian(_memory.Span.Slice(_position, 4));
             _position += 4;
             return value;
         }
@@ -63,7 +80,7 @@ namespace Yogurting.Core.Network
         public uint ReadUInt32()
         {
             EnsureBytes(4);
-            uint value = BitConverter.ToUInt32(_data, _position);
+            uint value = System.Buffers.Binary.BinaryPrimitives.ReadUInt32LittleEndian(_memory.Span.Slice(_position, 4));
             _position += 4;
             return value;
         }
@@ -71,7 +88,7 @@ namespace Yogurting.Core.Network
         public long ReadInt64()
         {
             EnsureBytes(8);
-            long value = BitConverter.ToInt64(_data, _position);
+            long value = System.Buffers.Binary.BinaryPrimitives.ReadInt64LittleEndian(_memory.Span.Slice(_position, 8));
             _position += 8;
             return value;
         }
@@ -79,7 +96,7 @@ namespace Yogurting.Core.Network
         public ulong ReadUInt64()
         {
             EnsureBytes(8);
-            ulong value = BitConverter.ToUInt64(_data, _position);
+            ulong value = System.Buffers.Binary.BinaryPrimitives.ReadUInt64LittleEndian(_memory.Span.Slice(_position, 8));
             _position += 8;
             return value;
         }
@@ -87,7 +104,7 @@ namespace Yogurting.Core.Network
         public float ReadSingle()
         {
             EnsureBytes(4);
-            float value = BitConverter.ToSingle(_data, _position);
+            float value = System.Buffers.Binary.BinaryPrimitives.ReadSingleLittleEndian(_memory.Span.Slice(_position, 4));
             _position += 4;
             return value;
         }
@@ -100,15 +117,16 @@ namespace Yogurting.Core.Network
             int available = Math.Min(Remaining, maxByteCount);
             if (available < 2) return string.Empty;
 
+            ReadOnlySpan<byte> span = _memory.Span.Slice(_position, available);
             int nullIdx = 0;
             for (int i = 0; i < available - 1; i += 2)
             {
-                if (_data[_position + i] == 0 && _data[_position + i + 1] == 0)
+                if (span[i] == 0 && span[i + 1] == 0)
                     break;
                 nullIdx = i + 2;
             }
 
-            string result = Encoding.Unicode.GetString(_data, _position, nullIdx);
+            string result = Encoding.Unicode.GetString(span.Slice(0, nullIdx));
             _position += available;
             return result;
         }
@@ -117,15 +135,16 @@ namespace Yogurting.Core.Network
         {
             EnsureBytes(length);
             encoding ??= Encoding.UTF8;
-            
+
+            ReadOnlySpan<byte> span = _memory.Span.Slice(_position, length);
             int actualLength = 0;
             for (int i = 0; i < length; i++)
             {
-                if (_data[_position + i] == 0) break;
+                if (span[i] == 0) break;
                 actualLength++;
             }
-            
-            string result = encoding.GetString(_data, _position, actualLength);
+
+            string result = encoding.GetString(span.Slice(0, actualLength));
             _position += length;
             return result;
         }
@@ -134,19 +153,20 @@ namespace Yogurting.Core.Network
         {
             encoding ??= Encoding.UTF8;
             int start = _position;
-            while (_position < _data.Length && _data[_position] != 0)
+            ReadOnlySpan<byte> span = _memory.Span;
+            while (_position < span.Length && span[_position] != 0)
             {
                 _position++;
             }
 
             int length = _position - start;
-            string result = encoding.GetString(_data, start, length);
-            
-            if (_position < _data.Length)
+            string result = encoding.GetString(span.Slice(start, length));
+
+            if (_position < span.Length)
             {
                 _position++; // Skip null terminator
             }
-            
+
             return result;
         }
 
@@ -192,16 +212,16 @@ namespace Yogurting.Core.Network
 
         public void Seek(int position)
         {
-            if (position < 0 || position > _data.Length)
+            if (position < 0 || position > _memory.Length)
                 throw new ArgumentOutOfRangeException(nameof(position));
             _position = position;
         }
 
         private void EnsureBytes(int count)
         {
-            if (_position + count > _data.Length)
+            if (_position + count > _memory.Length)
             {
-                throw new EndOfStreamException($"Attempted to read {count} bytes past buffer length {_data.Length} at position {_position}.");
+                throw new EndOfStreamException($"Attempted to read {count} bytes past buffer length {_memory.Length} at position {_position}.");
             }
         }
     }

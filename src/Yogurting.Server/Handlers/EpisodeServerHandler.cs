@@ -20,6 +20,7 @@ namespace Yogurting.Server.Handlers
         private readonly string _host;
         private readonly int _fieldPort;
         private readonly ConcurrentDictionary<Guid, ClientSession> _activeSessions = new();
+        private readonly PacketDispatcher<ClientSession> _dispatcher = new();
 
         public EpisodeServerHandler(IAccountRepository repository, GameDatabase gameDatabase, string host = "127.0.0.1", int fieldPort = 10002)
         {
@@ -27,6 +28,9 @@ namespace Yogurting.Server.Handlers
             _gameDatabase = gameDatabase;
             _host = host;
             _fieldPort = fieldPort;
+
+            var missionHandlers = new Episode.EpisodeMissionHandlers(repository, gameDatabase, host, fieldPort);
+            _dispatcher.RegisterHandlers(missionHandlers);
         }
 
         public Task HandleClientConnectedAsync(ClientSession session)
@@ -38,59 +42,14 @@ namespace Yogurting.Server.Handlers
 
         public async Task HandlePacketAsync(ClientSession session, byte[] packetData)
         {
-            if (packetData == null || packetData.Length < 4) return;
+            if (packetData == null || packetData.Length < 6) return;
 
-            ushort opcode = packetData.Length >= 6 ? BitConverter.ToUInt16(packetData, 4) : (ushort)0;
+            ushort opcode = System.Buffers.Binary.BinaryPrimitives.ReadUInt16LittleEndian(packetData.AsSpan(4, 2));
 
-            switch ((PacketOpcode)opcode)
+            bool handled = await _dispatcher.DispatchAsync(session, opcode, packetData);
+            if (!handled)
             {
-                // 1. Attraction Handshake (Opcode 21009 / 0x5211) -> TAttractionSession.sub_006C4F88
-                case PacketOpcode.MsgPingTimeReq:
-                    Console.WriteLine($"[EpisodeServer] Attraction Handshake received from {session.RemoteEndPoint}. Dispatching Episode Start info...");
-                    await session.SendAsync(YogurtingPackets.MakeTimeNtf());
-                    await session.SendAsync(YogurtingPackets.MakeWorldTimeNtf(0, 0));
-                    await session.SendAsync(YogurtingPackets.MakeGameAtkMovChangeNtf(1, 1.0f, 1.0f));
-                    await session.SendAsync(YogurtingPackets.MakeGameFieldInfoDoneNtf());
-                    break;
-
-                // 2. Leave Attraction (Opcode 21013 / 0x5215) -> TAttractionSession.sub_006C52D8
-                case PacketOpcode.MsgLeaveAtsNtf:
-                    Console.WriteLine($"[EpisodeServer] Client {session.RemoteEndPoint} requested return to School Campus.");
-                    // Redirect back to Field Server
-                    await session.SendAsync(YogurtingPackets.MakeGotoSvrNtf(_host, _fieldPort));
-                    break;
-
-                // 3. Booty Box Opened (Opcode 31092 / 0x7974) -> TAttractionSession.sub_006C5DCC
-                case PacketOpcode.MsgGameBootyBoxDoneReq:
-                    int selectedBoxIndex = packetData.Length >= 10 ? BitConverter.ToInt32(packetData, 6) : 0;
-                    Console.WriteLine($"[EpisodeServer] Booty Box #{selectedBoxIndex} Opened! Unboxing reward...");
-
-                    // 1. Confirm Booty Box Unbox with particle effect trigger (0x7975)
-                    await session.SendAsync(YogurtingPackets.MakeGameBootyBoxDoneAns(1));
-
-                    // 2. Return to School Campus
-                    await session.SendAsync(YogurtingPackets.MakeGotoSvrNtf(_host, _fieldPort));
-                    break;
-
-                // 4. Episode Result Done (Opcode 31166 / 0x79BE) -> TAttractionSession.sub_006C5FE0
-                case PacketOpcode.MsgGameRaceEpisodeResultReq:
-                    Console.WriteLine($"[EpisodeServer] Episode Completed! Returning to School...");
-                    await session.SendAsync(YogurtingPackets.MakeGotoSvrNtf(_host, _fieldPort));
-                    break;
-
-                // 5. Emergency 119 Respawn (Opcode 31053 / 0x794D) -> TAttractionSession.sub_006C59A8
-                case PacketOpcode.MsgGameRevival119Req:
-                    Console.WriteLine($"[EpisodeServer] 119 Emergency Respawn requested.");
-                    break;
-
-                // 6. School Respawn (Opcode 31055 / 0x794F) -> TAttractionSession.sub_006C5AAC
-                case PacketOpcode.MsgGameRevivalSchoolReq:
-                    Console.WriteLine($"[EpisodeServer] Revival at School requested. Redirecting to Campus...");
-                    await session.SendAsync(YogurtingPackets.MakeGotoSvrNtf(_host, _fieldPort));
-                    break;
-
-                default:
-                    break;
+                Console.WriteLine($"[EpisodeServer] Unhandled Opcode 0x{opcode:X4} ({opcode}) from {session.RemoteEndPoint}");
             }
         }
 

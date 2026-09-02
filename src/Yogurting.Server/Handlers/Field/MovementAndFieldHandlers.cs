@@ -1,4 +1,5 @@
 using System;
+using System.Linq;
 using System.Threading.Tasks;
 using Yogurting.Core.Logging;
 using Yogurting.Core.Models;
@@ -126,6 +127,31 @@ namespace Yogurting.Server.Handlers.Field
         }
 
         /// <summary>
+        /// 0x798F (31119): MsgGameCharDirectNtf - Character Facing Direction Broadcast
+        /// SRC: server_legacy/DELPHI PROJECT/_Unit67.pas:006C5F30 (TAttractionSession.sub_006C5F30)
+        /// Payload: ReadInt32(charaId), ReadPoint(dirX, dirY)
+        /// </summary>
+        [PacketHandler(PacketOpcode.MsgGameCharDirectNtf)]
+        public async Task HandleCharDirectAsync(PlayerSessionState state, byte[] packetData)
+        {
+            try
+            {
+                if (packetData.Length >= 14)
+                {
+                    int charaId = BitConverter.ToInt32(packetData, 6);
+                    int dirX = BitConverter.ToInt32(packetData, 10);
+                    float heading = MathF.Atan2(dirX, 100f) * (180f / MathF.PI);
+                    state.Player.Position = new Position(state.Player.Position.X, state.Player.Position.Y, state.Player.Position.Z, heading);
+                    await _broadcastDelegate(state, packetData);
+                }
+            }
+            catch (Exception ex)
+            {
+                Logger.Error($"[FieldServer] CharDirect error: {ex.Message}");
+            }
+        }
+
+        /// <summary>
         /// 0x7922 (31010): MsgGameJumpReq / AOI Block
         /// </summary>
         [PacketHandler(PacketOpcode.MsgGameJumpReq)]
@@ -174,6 +200,7 @@ namespace Yogurting.Server.Handlers.Field
         /// <summary>
         /// 0x795B (31067): MsgGameFieldLoadingDoneReq / MsgGameEmoteReq - Field loading complete acknowledgement
         /// Phase 2 of Field Entry: Reveals 3D Campus, activates live inventory listener, and sets view distance.
+        /// SRC: server_legacy/DELPHI PROJECT/_Unit67.pas:006C29E4 (TSchoolSession.sub_006C29E4)
         /// </summary>
         [PacketHandler(PacketOpcode.MsgGameEmoteReq)]
         public async Task HandleEmoteAsync(PlayerSessionState state, byte[] packetData)
@@ -292,7 +319,12 @@ namespace Yogurting.Server.Handlers.Field
         }
 
         /// <summary>
-        /// 0x521F (21023): MsgObjectClickReq - Field Object / Warp Gate Click Request
+        /// 0x521F (21023): MsgObjectClickReq - Field Object / Terminal / Warp Gate Click Request
+        /// Dispatches interaction based on ObjectType per Delphi Quartet TSchoolSession.sub_006BF7B0 (_Unit67.pas:16630-16750):
+        /// - ObjectType == 2: Episode Gate / Yogurting Logo -> TChara.MoveToLobby (0x765D + 0x7666 + 0x5220 rc=0)
+        /// - ObjectType == 4: Storage Locker -> 0xA02B / 0xA02C + 0x5220 rc=0
+        /// - ObjectType == 6: Hairdresser Salon -> 0x526D + 0x5220 rc=0
+        /// - Default: 0x5220 rc=0
         /// </summary>
         [PacketHandler(PacketOpcode.MsgObjectClickReq)]
         public async Task HandleObjectUseAsync(PlayerSessionState state, byte[] packetData)
@@ -300,7 +332,83 @@ namespace Yogurting.Server.Handlers.Field
             try
             {
                 int objectId = packetData.Length >= 10 ? BitConverter.ToInt32(packetData, 6) : 1;
-                await state.Session.SendAsync(YogurtingPackets.MakeGameObjectUseAns(1, objectId));
+                Logger.Info($"[FieldServer] '{state.Player.CharacterName}' clicked Field Object #{objectId} in Field {state.Player.FieldId}.");
+
+                FieldTerminalObject? terminalObj = null;
+                if (_gameDb != null && _gameDb.Fields.TryGetValue(state.Player.FieldId, out var fieldDef))
+                {
+                    terminalObj = fieldDef.TerminalObjects.FirstOrDefault(o => o.ObjectId == objectId);
+                }
+
+                if (terminalObj != null)
+                {
+                    switch (terminalObj.ObjectType)
+                    {
+                        case 2: // Episode Gate / Yogurting Logo (Lobby Terminal)
+                        {
+                            Logger.Info($"[FieldServer] Object #{objectId} (SubId: {terminalObj.SubId}) is Episode Gate (ObjectType 2). Triggering Episode Lobby modal for '{state.Player.CharacterName}'!");
+                            
+                            // Filter episodes specific to this Yogurting Logo / Terminal Kiosk SubId
+                            var matchingEpisodes = _gameDb != null && _gameDb.Episodes.Count > 0
+                                ? _gameDb.Episodes.Values
+                                    .Where(ep => ep.GateSubId == terminalObj.SubId && ep.Id > 0)
+                                    .Select(ep => ep.Id)
+                                    .ToList()
+                                : new List<int>();
+
+                            // Fallback if kiosk has no specific mapping or is generic
+                            if (matchingEpisodes.Count == 0)
+                            {
+                                matchingEpisodes = _gameDb != null && _gameDb.Episodes.Count > 0
+                                    ? _gameDb.Episodes.Keys.Where(k => k > 0).Take(12).ToList()
+                                    : new List<int> { 101, 102, 103, 104, 105 };
+                            }
+
+                            int defaultEpId = matchingEpisodes.FirstOrDefault();
+
+                            // Delphi TChara.MoveToLobby complete 5-packet handshake (_Unit49.pas:21514-21650):
+                            // 1. 0x765D: MsgLobbyEnterNtf (specific episodes for this kiosk)
+                            await state.Session.SendAsync(YogurtingPackets.MakeLobbyEnterNtf(matchingEpisodes, defaultEpId));
+
+                            // 2. 0x7666: MsgLobbyEnterPcNtf (broadcast avatar into lobby)
+                            await state.Session.SendAsync(YogurtingPackets.MakeLobbyEnterPcNtf(state.Player));
+
+                            // 3. 0x7676: MsgLobbyAvailableEpisodeInfoNtf (episode unlock flags to draw UI list)
+                            await state.Session.SendAsync(YogurtingPackets.MakeLobbyAvailableEpisodeInfoNtf(matchingEpisodes));
+
+                            // 4. 0x7662: MsgLobbyPageInfoNtf (current page 1 and open room count)
+                            await state.Session.SendAsync(YogurtingPackets.MakeLobbyPageInfoNtf(1, 0));
+
+                            // 5. 0x7663: MsgLobbyEpisodePageStatusNtf (broadcast room existence per episode)
+                            foreach (int epId in matchingEpisodes)
+                            {
+                                await state.Session.SendAsync(YogurtingPackets.MakeLobbyEpisodePageStatusNtf(epId, false));
+                            }
+
+                            // 6. 0x5220: MsgObjectUseAns (confirm object click)
+                            await state.Session.SendAsync(YogurtingPackets.MakeGameObjectUseAns(0, objectId));
+                            return;
+                        }
+                        case 4: // Storage Locker
+                        {
+                            Logger.Info($"[FieldServer] Object #{objectId} is Storage Locker (ObjectType 4). Opening storage for '{state.Player.CharacterName}'!");
+                            await state.Session.SendAsync(YogurtingPackets.MakeGameLockerOpenAns(objectId, 1));
+                            await state.Session.SendAsync(YogurtingPackets.MakeGameLockerItemInfoNtf(objectId, state.Player.Inventory));
+                            await state.Session.SendAsync(YogurtingPackets.MakeGameObjectUseAns(0, objectId));
+                            return;
+                        }
+                        case 6: // Hairdresser
+                        {
+                            Logger.Info($"[FieldServer] Object #{objectId} is Hairdresser (ObjectType 6). Opening hair salon for '{state.Player.CharacterName}'!");
+                            await state.Session.SendAsync(YogurtingPackets.MakeGameHairShopEnterNtf());
+                            await state.Session.SendAsync(YogurtingPackets.MakeGameObjectUseAns(0, objectId));
+                            return;
+                        }
+                    }
+                }
+
+                // Default / Generic object click confirmation (0 = success)
+                await state.Session.SendAsync(YogurtingPackets.MakeGameObjectUseAns(0, objectId));
             }
             catch (Exception ex)
             {
@@ -355,9 +463,8 @@ namespace Yogurting.Server.Handlers.Field
         }
 
         /// <summary>
-        /// 0x794D (31053): MsgGameRevival119Req - Player requested 119 Emergency In-Place Revival
+        /// 0x794D (31053): MsgGameRevival119Req - Legacy revival fallback (managed by StorageAndRefinementHandlers)
         /// </summary>
-        [PacketHandler(PacketOpcode.MsgGameRevival119Req)]
         public async Task HandleRevival119Async(PlayerSessionState state, byte[] packetData)
         {
             try
@@ -390,6 +497,12 @@ namespace Yogurting.Server.Handlers.Field
         {
             try
             {
+                // Debounce / state machine gate: Prevent rapid spam or duplicate warp triggers while transition is in-flight
+                if ((DateTime.UtcNow - state.LastWarpAt).TotalSeconds < 1.0 || state.PendingWarpFieldId > 0)
+                {
+                    return;
+                }
+
                 int gateId = packetData.Length >= 11 ? packetData[10] : 1;
                 int currentFieldId = state.Player.FieldId;
                 Logger.Info($"[FieldServer] '{state.Player.CharacterName}' stepped onto Warp Gate {gateId} in Field {currentFieldId} at position ({state.Player.Position.X:F1}, {state.Player.Position.Y:F1})");
@@ -448,9 +561,8 @@ namespace Yogurting.Server.Handlers.Field
         }
 
         /// <summary>
-        /// 0x794F (31055): MsgGameRevivalSchoolReq - School Respawn / Revival Request
+        /// 0x794F (31055): MsgGameRevivalSchoolReq - Legacy school respawn fallback (managed by StorageAndRefinementHandlers)
         /// </summary>
-        [PacketHandler(PacketOpcode.MsgGameRevivalSchoolReq)]
         public async Task HandleRevivalSchoolAsync(PlayerSessionState state, byte[] packetData)
         {
             try
@@ -520,6 +632,7 @@ namespace Yogurting.Server.Handlers.Field
                     }
                     if (targetField == 0)
                     {
+                        // HARDCODED: Ultimate fallback default school field IDs (Soil=90, Estiva=1) when player has no saved location
                         targetField = state.Player.SaveFieldId > 0
                             ? state.Player.SaveFieldId
                             : (state.Player.School == SchoolType.SoilAcademy ? 90 : 1);
@@ -628,6 +741,33 @@ namespace Yogurting.Server.Handlers.Field
             {
                 Logger.Error($"[FieldServer] Warp error: {ex.Message}");
             }
+        }
+
+        /// <summary>
+        /// 0x79D3 (31187): MsgGameBroadcastAOINtf - Relay Area-of-Interest payload
+        /// SRC: server_legacy/DELPHI PROJECT/_Unit67.pas:006C3348 (TSchoolSession.sub_006C3348)
+        /// </summary>
+        [PacketHandler(PacketOpcode.MsgGameBroadcastAOINtf)]
+        public async Task HandleBroadcastAOIAsync(PlayerSessionState state, byte[] packetData)
+        {
+            try
+            {
+                await _broadcastDelegate(state, packetData);
+            }
+            catch (Exception ex)
+            {
+                Logger.Error($"[FieldServer] BroadcastAOI error: {ex.Message}");
+            }
+        }
+
+        /// <summary>
+        /// 0xA02A (41002): MsgGameSecurityPingReq - Heartbeat / Security Ping
+        /// SRC: server_legacy/DELPHI PROJECT/_Unit67.pas:006C4324 (TSchoolSession.sub_006C4324)
+        /// </summary>
+        [PacketHandler(PacketOpcode.MsgGameSecurityPingReq)]
+        public Task HandleSecurityPingAsync(PlayerSessionState state, byte[] packetData)
+        {
+            return Task.CompletedTask;
         }
     }
 }

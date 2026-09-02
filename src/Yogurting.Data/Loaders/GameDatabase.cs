@@ -503,7 +503,11 @@ namespace Yogurting.Data.Loaders
                         Episodes[row.Id] = new GameEpisodeDef
                         {
                             Id = row.Id,
-                            Title = row.Title ?? string.Empty
+                            Title = row.Title ?? string.Empty,
+                            CleanTitle = row.CleanTitle ?? string.Empty,
+                            School = row.School,
+                            GradeReq = row.GradeReq,
+                            GateSubId = row.GateSubId
                         };
                     }
                 }
@@ -1353,6 +1357,10 @@ namespace Yogurting.Data.Loaders
         {
             public int Id { get; set; }
             public string? Title { get; set; }
+            public string? CleanTitle { get; set; }
+            public int School { get; set; }
+            public int GradeReq { get; set; }
+            public int GateSubId { get; set; }
         }
 
         private sealed class JsonTitleEntry
@@ -1779,6 +1787,10 @@ namespace Yogurting.Data.Loaders
     {
         public int Id { get; set; }
         public string Title { get; set; } = string.Empty;
+        public string CleanTitle { get; set; } = string.Empty;
+        public int School { get; set; }
+        public int GradeReq { get; set; }
+        public int GateSubId { get; set; }
     }
 
     public class GameSkillDef

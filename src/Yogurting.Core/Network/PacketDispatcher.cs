@@ -29,6 +29,7 @@ namespace Yogurting.Core.Network
 
         /// <summary>
         /// Automatically registers all methods decorated with <see cref="PacketHandlerAttribute"/> on a target instance.
+        /// Supports (TContext, byte[]), (TContext, PacketReader), and parameterless (TContext) signatures.
         /// </summary>
         public void RegisterHandlers(object handlerInstance)
         {
@@ -42,10 +43,83 @@ namespace Yogurting.Core.Network
                 {
                     try
                     {
-                        var handlerDelegate = (PacketHandlerDelegate<TContext>)Delegate.CreateDelegate(
-                            typeof(PacketHandlerDelegate<TContext>), handlerInstance, method);
-                        
-                        _handlers[(ushort)attr.Opcode] = handlerDelegate;
+                        var parameters = method.GetParameters();
+
+                        if (parameters.Length == 2 && parameters[0].ParameterType == typeof(TContext))
+                        {
+                            if (parameters[1].ParameterType == typeof(byte[]))
+                            {
+                                if (method.ReturnType == typeof(Task))
+                                {
+                                    var handlerDelegate = (PacketHandlerDelegate<TContext>)Delegate.CreateDelegate(
+                                        typeof(PacketHandlerDelegate<TContext>), handlerInstance, method);
+                                    _handlers[(ushort)attr.Opcode] = handlerDelegate;
+                                }
+                                else if (method.ReturnType == typeof(void))
+                                {
+                                    var action = (Action<TContext, byte[]>)Delegate.CreateDelegate(
+                                        typeof(Action<TContext, byte[]>), handlerInstance, method);
+                                    _handlers[(ushort)attr.Opcode] = (context, data) =>
+                                    {
+                                        action(context, data);
+                                        return Task.CompletedTask;
+                                    };
+                                }
+                            }
+                            else if (parameters[1].ParameterType == typeof(PacketReader))
+                            {
+                                if (method.ReturnType == typeof(Task))
+                                {
+                                    var readerMethod = (Func<TContext, PacketReader, Task>)Delegate.CreateDelegate(
+                                        typeof(Func<TContext, PacketReader, Task>), handlerInstance, method);
+
+                                    _handlers[(ushort)attr.Opcode] = (context, packetData) =>
+                                    {
+                                        var reader = (packetData != null && packetData.Length > 6)
+                                            ? new PacketReader(packetData, 6, packetData.Length - 6)
+                                            : new PacketReader(Array.Empty<byte>());
+                                        return readerMethod(context, reader);
+                                    };
+                                }
+                                else if (method.ReturnType == typeof(void))
+                                {
+                                    var action = (Action<TContext, PacketReader>)Delegate.CreateDelegate(
+                                        typeof(Action<TContext, PacketReader>), handlerInstance, method);
+
+                                    _handlers[(ushort)attr.Opcode] = (context, packetData) =>
+                                    {
+                                        var reader = (packetData != null && packetData.Length > 6)
+                                            ? new PacketReader(packetData, 6, packetData.Length - 6)
+                                            : new PacketReader(Array.Empty<byte>());
+                                        action(context, reader);
+                                        return Task.CompletedTask;
+                                    };
+                                }
+                            }
+                        }
+                        else if (parameters.Length == 1 && parameters[0].ParameterType == typeof(TContext))
+                        {
+                            if (method.ReturnType == typeof(Task))
+                            {
+                                var singleParamMethod = (Func<TContext, Task>)Delegate.CreateDelegate(
+                                    typeof(Func<TContext, Task>), handlerInstance, method);
+                                _handlers[(ushort)attr.Opcode] = (context, _) => singleParamMethod(context);
+                            }
+                            else if (method.ReturnType == typeof(void))
+                            {
+                                var action = (Action<TContext>)Delegate.CreateDelegate(
+                                    typeof(Action<TContext>), handlerInstance, method);
+                                _handlers[(ushort)attr.Opcode] = (context, _) =>
+                                {
+                                    action(context);
+                                    return Task.CompletedTask;
+                                };
+                            }
+                        }
+                        else
+                        {
+                            Logger.Error($"[PacketDispatcher] Incompatible handler signature on {type.Name}.{method.Name}");
+                        }
                     }
                     catch (Exception ex)
                     {

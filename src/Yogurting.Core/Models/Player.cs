@@ -93,6 +93,8 @@ namespace Yogurting.Core.Models
         public int BirthDay { get; set; } = 29;
         public int BloodType { get; set; } = 1;
         public int NametagColor { get; set; } = 0;
+        public string GuildName { get; set; } = string.Empty;
+        public long GuildId { get; set; } = 0;
 
         // Progression & Stats
         public int Level { get; set; } = 1;
@@ -123,6 +125,7 @@ namespace Yogurting.Core.Models
         public int MaxMp { get; set; } = 195;
         public int MaxSp { get => MaxMp; set => MaxMp = value; }
         public long TaffPoints { get; set; } = 100000;
+        public long Taff { get => TaffPoints; set => TaffPoints = value; }
         public int StarPoints { get; set; } = 100000;
         public float HpRegainAccumulator { get; set; } = 0f;
         public DateTime LastCombatTime { get; set; } = DateTime.MinValue;
@@ -179,8 +182,27 @@ namespace Yogurting.Core.Models
         public int EpisodeYoi { get; set; } = 0;
         public int EpisodeEs { get; set; } = 0;
         public Dictionary<string, int> ScriptVariables { get; set; } = new(StringComparer.OrdinalIgnoreCase);
+        public int TitleId { get; set; } = 0;
         public List<int> UnlockedTitles { get; set; } = new();
+        public List<int> FriendIds { get; set; } = new();
         public List<ActiveBuff> ActiveBuffs { get; set; } = new();
+
+        // Active Trade State tracking (Delphi TChara.TradeState, TradeTarget, TradeBasket)
+        public int TradeTargetPlayerId { get; set; } = 0;
+        public TradeState CurrentTradeState { get; set; } = TradeState.None;
+        public TradeSlot[] TradeBasket { get; set; } = new TradeSlot[5] { new(), new(), new(), new(), new() };
+        public long TradeMoney { get; set; } = 0;
+
+        public void ClearTrade()
+        {
+            TradeTargetPlayerId = 0;
+            CurrentTradeState = TradeState.None;
+            TradeMoney = 0;
+            for (int i = 0; i < TradeBasket.Length; i++)
+            {
+                TradeBasket[i].Clear();
+            }
+        }
 
         public Player()
         {

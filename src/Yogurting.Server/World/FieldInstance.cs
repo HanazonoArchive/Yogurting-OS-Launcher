@@ -93,6 +93,9 @@ namespace Yogurting.Server.World
                 await session.SendAsync(YogurtingPackets.MakeGameWarpGateSpawnNtf(
                     gate.Id, gate.X, gate.Y, gate.Shell, gate.CliId, gate.Dir, gate.DestFieldId));
             }
+
+            // 4. Field Monsters (0x796E + 0x7969)
+            await SpawnMonstersAsync(session, gameDb);
         }
 
         /// <summary>

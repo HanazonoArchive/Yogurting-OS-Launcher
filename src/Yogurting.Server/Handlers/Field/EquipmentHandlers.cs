@@ -593,6 +593,7 @@ namespace Yogurting.Server.Handlers.Field
                 if (weaponTypeId == 0)
                 {
                     weaponTypeId = YogurtingPackets.GetPlayerItemTypeId(player, (int)weaponUid, 4);
+                    // HARDCODED: Fallback default weapon type ID (Wooden Practice Blade 140001) when client passes 0
                     if (weaponTypeId == 0) weaponTypeId = 140001;
                 }
 
@@ -615,6 +616,177 @@ namespace Yogurting.Server.Handlers.Field
             catch (Exception ex)
             {
                 Logger.Error($"[FieldServer] WeaponFrameAns error: {ex.Message}");
+            }
+        }
+
+        /// <summary>
+        /// 0x79A2 (31138): MsgGameEquipTitleReq - Player equips a title
+        /// SRC: server_legacy/DELPHI PROJECT/_Unit67.pas:006C4290 & _Unit47.pas:005AED10
+        /// Payload: Int32 TitleId
+        /// </summary>
+        [PacketHandler(PacketOpcode.MsgGameEquipTitleReq)]
+        public async Task HandleEquipTitleAsync(PlayerSessionState state, PacketReader reader)
+        {
+            if (reader.Remaining < 4) return;
+            int titleId = reader.ReadInt32();
+
+            var player = state.Player;
+            player.TitleId = titleId;
+            if (!player.UnlockedTitles.Contains(titleId))
+            {
+                player.UnlockedTitles.Add(titleId);
+            }
+
+            Logger.Info($"[Title] '{player.CharacterName}' equipped Title #{titleId}.");
+
+            // Dispatch 0x79A3 (MsgGameEquipTitleAns) to player and surrounding area
+            byte[] titleAns = YogurtingPackets.MakeGameEquipTitleAns(player.CharacterId, titleId);
+            await state.Session.SendAsync(titleAns);
+            await _broadcastDelegate(state, titleAns);
+
+            // Persist
+            if (_repository != null)
+            {
+                _ = Task.Run(() => _repository.SaveAccountAsync(player));
+            }
+        }
+
+        /// <summary>
+        /// 0x79A4 (31140): MsgGameStripTitleReq - Player unequips active title
+        /// SRC: server_legacy/DELPHI PROJECT/_Unit67.pas:006C4320 & _Unit47.pas:005AED84
+        /// Payload: Int32 TitleId
+        /// </summary>
+        [PacketHandler(PacketOpcode.MsgGameStripTitleReq)]
+        public async Task HandleStripTitleAsync(PlayerSessionState state, PacketReader reader)
+        {
+            var player = state.Player;
+            int oldTitleId = player.TitleId;
+            player.TitleId = 0;
+
+            Logger.Info($"[Title] '{player.CharacterName}' unequipped Title #{oldTitleId}.");
+
+            // Dispatch 0x79A5 (MsgGameStripTitleAns) to player and surrounding area
+            byte[] stripAns = YogurtingPackets.MakeGameStripTitleAns(player.CharacterId, 0);
+            await state.Session.SendAsync(stripAns);
+            await _broadcastDelegate(state, stripAns);
+
+            // Persist
+            if (_repository != null)
+            {
+                _ = Task.Run(() => _repository.SaveAccountAsync(player));
+            }
+        }
+
+        /// <summary>
+        /// 0x7A04 (31236): MsgGameItemDiscardReq - Player discards / trashes an item from inventory
+        /// Exact Delphi layout (_Unit67.pas:23418-23500 TSchoolSession.sub_006C427C / 31236.dms):
+        ///   ReadInt32(typeItem_typeNum)
+        ///   ReadWord(dim1Index)
+        ///   ReadWord(dim2Index)
+        ///   ReadInt32(itemId)
+        /// </summary>
+        [PacketHandler(PacketOpcode.MsgGameItemDiscardReq)]
+        public async Task HandleItemDiscardAsync(PlayerSessionState state, PacketReader reader)
+        {
+            try
+            {
+                if (reader.Remaining < 12) return;
+
+                int rawType = reader.ReadInt32();
+                ushort dim1 = reader.ReadUInt16();
+                ushort dim2 = reader.ReadUInt16();
+                int itemId = reader.ReadInt32();
+
+                int itemTypeId = rawType & 0x00FFFFFF;
+                var player = state.Player;
+
+                Logger.Info($"[FieldServer] '{player.CharacterName}' discarding Item (RawType=0x{rawType:X8}, TypeId={itemTypeId}, Dim1={dim1}, Dim2={dim2}, ItemId={itemId})");
+
+                Item? targetItem = null;
+                // 1. Try finding by slot/dim1 index
+                if (dim1 < player.Inventory.Count)
+                {
+                    targetItem = player.Inventory[dim1];
+                }
+
+                // 2. Fallback: match by ItemId or TypeId
+                if (targetItem == null && itemId > 0)
+                {
+                    targetItem = player.Inventory.FirstOrDefault(i => i.Id == itemId || i.SerialId == itemId);
+                }
+                if (targetItem == null && itemTypeId > 0)
+                {
+                    targetItem = player.Inventory.FirstOrDefault(i => i.TypeId == itemTypeId);
+                }
+
+                if (targetItem != null)
+                {
+                    if (targetItem.Quantity > 1)
+                    {
+                        targetItem.Quantity--;
+                        Logger.Info($"[FieldServer] Decremented '{targetItem.Name}' (#{targetItem.TypeId}) quantity to {targetItem.Quantity} for '{player.CharacterName}'.");
+                    }
+                    else
+                    {
+                        player.Inventory.Remove(targetItem);
+                        Logger.Info($"[FieldServer] Removed '{targetItem.Name}' (#{targetItem.TypeId}) from inventory for '{player.CharacterName}'.");
+                    }
+
+                    // Save account state
+                    if (_repository != null)
+                    {
+                        await _repository.SaveAccountAsync(player);
+                    }
+                }
+                else
+                {
+                    Logger.Warn($"[FieldServer] Discard failed: Item not found in inventory for '{player.CharacterName}'.");
+                }
+            }
+            catch (Exception ex)
+            {
+                Logger.Error($"[FieldServer] ItemDiscard error: {ex.Message}");
+            }
+        }
+
+        /// <summary>
+        /// 0x7937 (31031): MsgGameItemDropReq - Drop Item to Floor
+        /// SRC: server_legacy/DELPHI PROJECT/_Unit67.pas:006C21FC (TSchoolSession.sub_006C21FC)
+        /// Payload: ReadInt32(typeId), ReadInt32(count)
+        /// </summary>
+        [PacketHandler(PacketOpcode.MsgGameItemDropReq)]
+        public async Task HandleItemDropAsync(PlayerSessionState state, PacketReader reader)
+        {
+            try
+            {
+                if (reader.Remaining < 8) return;
+                int typeId = reader.ReadInt32();
+                int count = Math.Max(1, reader.ReadInt32());
+                var player = state.Player;
+
+                var targetItem = player.Inventory.FirstOrDefault(i => i.TypeId == typeId);
+                if (targetItem != null)
+                {
+                    if (targetItem.Quantity > count)
+                    {
+                        targetItem.Quantity -= count;
+                        Logger.Info($"[FieldServer] '{player.CharacterName}' dropped {count}x '{targetItem.Name}' (Remaining: {targetItem.Quantity}).");
+                    }
+                    else
+                    {
+                        player.Inventory.Remove(targetItem);
+                        Logger.Info($"[FieldServer] '{player.CharacterName}' dropped all '{targetItem.Name}' to floor.");
+                    }
+
+                    if (_repository != null)
+                    {
+                        await _repository.SaveAccountAsync(player);
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                Logger.Error($"[FieldServer] ItemDrop error: {ex.Message}");
             }
         }
 

@@ -18,7 +18,6 @@ namespace Yogurting.Server.Handlers.Field
         private readonly Func<PlayerSessionState, byte[], Task> _broadcastDelegate;
         private readonly IAccountRepository? _repository;
         private readonly GameDatabase? _gameDb;
-        private readonly Random _random = new();
 
         public CombatHandlers(Func<PlayerSessionState, byte[], Task> broadcastDelegate, IAccountRepository? repository = null, GameDatabase? gameDb = null)
         {
@@ -221,9 +220,9 @@ namespace Yogurting.Server.Handlers.Field
                     foreach (var targetMonster in hitMonsters)
                     {
                         int scaledAtk = (int)((fAtk * (long)atkRatio) / 10000);
-                        int levelVariance = _random.Next(0, varianceMax);
+                        int levelVariance = Random.Shared.Next(0, varianceMax);
                         int damage = Math.Max(1, (int)((scaledAtk + levelVariance) * dmgMultiplier));
-                        bool isCrit = _random.Next(0, 113750) < fCritical;
+                        bool isCrit = Random.Shared.Next(0, 113750) < fCritical;
                         if (isCrit) damage = (int)(damage * 2.0);
 
                         // Apply damage to monster
@@ -356,7 +355,7 @@ namespace Yogurting.Server.Handlers.Field
             var lootList = new List<(int itemId, int count, bool isEquip)>();
 
             // Monster Drop Item / Material / Equipment from HuntMon.txt
-            if (monster.DropItemType > 0 && _random.Next(0, 1000) < monster.DropRate)
+            if (monster.DropItemType > 0 && Random.Shared.Next(0, 1000) < monster.DropRate)
             {
                 int dropCount = Math.Max(1, monster.DropCount);
                 bool isEquip = _gameDb != null && _gameDb.Items.TryGetValue(monster.DropItemType, out var idf) && idf.IsEquipment;
@@ -549,7 +548,7 @@ namespace Yogurting.Server.Handlers.Field
 
                     // Dynamic Skill damage calculation (Delphi _Unit49.pas:22478: ((FAtk + SkillPower * 100) * AtkRatio) / 10000 + variance)
                     int scaledDmg = (int)(((fAtk + (skillPower * 100)) * (long)skillAtkRatio) / 10000);
-                    int levelVariance = _random.Next(0, varianceMax);
+                    int levelVariance = Random.Shared.Next(0, varianceMax);
                     int dmg = Math.Max(1, (int)((scaledDmg + levelVariance) * player.GetDamageMultiplier()));
 
                     // Active combat skills in Quartet do not crit (hitType = 0 per Delphi 0060F6A6)
@@ -586,8 +585,8 @@ namespace Yogurting.Server.Handlers.Field
                 if (targetResults.Count == 0 && targetMainId > 0)
                 {
                     int baseAtk = player.Pow + (player.Level * 2);
-                    int dmg = Math.Max(10, (int)((baseAtk * (skillPower / 100.0f)) + _random.Next(-3, 8)));
-                    bool isCrit = _random.Next(0, 100) < 30;
+                    int dmg = Math.Max(10, (int)((baseAtk * (skillPower / 100.0f)) + Random.Shared.Next(-3, 8)));
+                    bool isCrit = Random.Shared.Next(0, 100) < 30;
                     if (isCrit) dmg = (int)(dmg * 1.5f);
 
                     targetResults.Add((targetMainType, targetMainId, targetMainX, targetMainY, dmg, isCrit ? (byte)1 : (byte)0));

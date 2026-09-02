@@ -38,25 +38,9 @@ namespace Yogurting.Server.Handlers
 
         public async Task HandlePacketAsync(ClientSession session, byte[] packetData)
         {
-            if (packetData == null || packetData.Length < 4) return;
+            if (packetData == null || packetData.Length < 6) return;
 
-            ushort opcode = packetData.Length >= 6 ? BitConverter.ToUInt16(packetData, 4) : (ushort)0;
-
-            // Handle World List & World Select standard queries
-            if (opcode == (ushort)PacketOpcode.MsgLoginWorldListReq)
-            {
-                await session.SendAsync(YogurtingPackets.MakeWorldListAns(1));
-                await session.SendAsync(YogurtingPackets.MakeWorldListNtf("Estiva", 91));
-                return;
-            }
-
-            if (opcode == (ushort)PacketOpcode.MsgLoginSelectWorldReq)
-            {
-                int worldId = packetData.Length >= 10 ? BitConverter.ToInt32(packetData, 6) : 91;
-                await session.SendAsync(YogurtingPackets.MakeLoginResumeNtf(1000));
-                await session.SendAsync(YogurtingPackets.MakeSchoolListNtf(worldId));
-                return;
-            }
+            ushort opcode = System.Buffers.Binary.BinaryPrimitives.ReadUInt16LittleEndian(packetData.AsSpan(4, 2));
 
             bool handled = await _dispatcher.DispatchAsync(session, opcode, packetData);
             if (!handled)

@@ -1,0 +1,7 @@
+﻿[03:32:12.455] [Logging] Server log initialized at 'C:\Users\Hanazono Archive\Desktop\Yogurting Game\server_modern\logs\server_20260903_033212.log'
+[03:32:12.487] [Server] [Config] Loaded configuration from 'C:\Users\Hanazono Archive\Desktop\Yogurting Game\server_modern\config\server.json'
+[03:32:12.731] [Server] [MapGridManager] Successfully loaded 376 map collision grids from map.db.
+[03:32:12.732] [Server] [MapGridManager] Linked 377 fields to active collision grids.
+[03:32:13.045] [Server] [System] 'Yogurting Online English Revival' is ONLINE on all ports (Login: 10000, Field: 10002, Episode: 10003, Comm: 10004)!
+[03:32:13.046] [Server] [System] Type 'help' for available server commands.
+

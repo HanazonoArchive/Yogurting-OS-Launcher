@@ -7,7 +7,7 @@
   "HasCharacter": true,
   "CharaId": 256,
   "CharacterId": 256,
-  "SessionKey": 224683,
+  "SessionKey": 915318,
   "School": 2,
   "Gender": 2,
   "FaceId": 11,
@@ -17,6 +17,8 @@
   "BirthDay": 29,
   "BloodType": 1,
   "NametagColor": 0,
+  "GuildName": "",
+  "GuildId": 0,
   "Level": 4,
   "Grade": 1,
   "Pow": 17,
@@ -39,41 +41,42 @@
     0,
     0
   ],
-  "ComboCount": 34,
-  "LastAttackTime": 142113031,
+  "ComboCount": 14,
+  "LastAttackTime": 163743562,
   "ChargePoint": 0,
   "GaugeMax": 70000,
-  "GaugeCurrent": 23055,
+  "GaugeCurrent": 0,
   "SkillPoint": 3,
   "Defense": 2,
-  "CurrentExp": 3,
-  "Exp": 3,
+  "CurrentExp": 5,
+  "Exp": 5,
   "MaxExp": 22,
-  "CurrentHp": 119,
-  "Hp": 119,
+  "CurrentHp": 323,
+  "Hp": 323,
   "MaxHp": 323,
   "CurrentMp": 195,
   "Sp": 195,
   "MaxMp": 195,
   "MaxSp": 195,
   "TaffPoints": 1000,
+  "Taff": 1000,
   "StarPoints": 0,
   "HpRegainAccumulator": 0,
-  "LastCombatTime": "2026-09-02T13:44:46.3643741Z",
+  "LastCombatTime": "2026-09-02T19:45:19.4533419Z",
   "AtkSpeedF": 1.002535,
   "MoveSpeedF": 1.002535,
   "TargetMonsterId": 0,
-  "FieldId": 91,
+  "FieldId": 90,
   "Position": {
-    "X": 220,
-    "Y": 99,
+    "X": 113,
+    "Y": 168,
     "Z": 0,
     "Heading": 0
   },
-  "SaveFieldId": 91,
+  "SaveFieldId": 90,
   "SavePosition": {
-    "X": 220,
-    "Y": 99,
+    "X": 76,
+    "Y": 175,
     "Z": 0,
     "Heading": 0
   },
@@ -750,89 +753,166 @@
   },
   "LearnedSkills": [],
   "CompletedEpisodes": [],
-  "EpisodeYoi": -1,
+  "EpisodeYoi": 0,
   "EpisodeEs": 0,
   "ScriptVariables": {
-    "peke.epi.yoi": -1,
+    "peke.epi.yoi": 0,
     "peke.epi.es": 0,
     "peke.ben.f001": 1,
     "peke.anna.f001": 0,
     "peke.sam.f001": 1,
     "peke.nana.f001": 0
   },
+  "TitleId": 0,
   "UnlockedTitles": [],
+  "FriendIds": [],
   "ActiveBuffs": [
     {
       "EffectType": 7300,
       "DurationSeconds": 2592000,
       "ActivatedAt": "2026-08-30T05:31:41.2797429Z",
-      "RemainingSeconds": 2303197
+      "RemainingSeconds": 2274942
     },
     {
       "EffectType": 7400,
       "DurationSeconds": 2592000,
       "ActivatedAt": "2026-08-30T05:31:42.3678492Z",
-      "RemainingSeconds": 2303198
+      "RemainingSeconds": 2274944
     },
     {
       "EffectType": 7000,
       "DurationSeconds": 5184000,
       "ActivatedAt": "2026-08-30T05:31:42.7958016Z",
-      "RemainingSeconds": 4895198
+      "RemainingSeconds": 4866944
     },
     {
       "EffectType": 7100,
       "DurationSeconds": 2592000,
       "ActivatedAt": "2026-08-30T05:31:43.1761469Z",
-      "RemainingSeconds": 2303198
+      "RemainingSeconds": 2274944
     },
     {
       "EffectType": 7200,
       "DurationSeconds": 2592000,
       "ActivatedAt": "2026-08-30T05:31:43.5516324Z",
-      "RemainingSeconds": 2303199
+      "RemainingSeconds": 2274945
     },
     {
       "EffectType": 7500,
       "DurationSeconds": 2592000,
       "ActivatedAt": "2026-08-30T05:31:43.9440198Z",
-      "RemainingSeconds": 2303199
+      "RemainingSeconds": 2274945
     },
     {
       "EffectType": 4100,
       "DurationSeconds": 2592000,
       "ActivatedAt": "2026-08-30T05:36:12.8163106Z",
-      "RemainingSeconds": 2303468
+      "RemainingSeconds": 2275214
     },
     {
       "EffectType": 4110,
       "DurationSeconds": 18144000,
       "ActivatedAt": "2026-08-30T05:36:14.9412779Z",
-      "RemainingSeconds": 17855470
+      "RemainingSeconds": 17827216
     },
     {
       "EffectType": 4200,
       "DurationSeconds": 2592000,
       "ActivatedAt": "2026-08-30T05:36:19.7023848Z",
-      "RemainingSeconds": 2303475
+      "RemainingSeconds": 2275221
     },
     {
       "EffectType": 6100,
       "DurationSeconds": 2592000,
       "ActivatedAt": "2026-08-30T05:36:20.6716723Z",
-      "RemainingSeconds": 2303476
+      "RemainingSeconds": 2275222
     },
     {
       "EffectType": 4300,
       "DurationSeconds": 2592000,
       "ActivatedAt": "2026-08-30T05:36:21.4892307Z",
-      "RemainingSeconds": 2303477
+      "RemainingSeconds": 2275223
     },
     {
       "EffectType": 2100,
       "DurationSeconds": 2592000,
       "ActivatedAt": "2026-08-30T05:36:22.2623351Z",
-      "RemainingSeconds": 2303478
+      "RemainingSeconds": 2275223
     }
-  ]
+  ],
+  "TradeTargetPlayerId": 0,
+  "CurrentTradeState": 0,
+  "TradeBasket": [
+    {
+      "ItemType": 0,
+      "Count": 0,
+      "Dim2Index": 0,
+      "ItemId": 0,
+      "ReinforceSlots": [
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "IsEmpty": true
+    },
+    {
+      "ItemType": 0,
+      "Count": 0,
+      "Dim2Index": 0,
+      "ItemId": 0,
+      "ReinforceSlots": [
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "IsEmpty": true
+    },
+    {
+      "ItemType": 0,
+      "Count": 0,
+      "Dim2Index": 0,
+      "ItemId": 0,
+      "ReinforceSlots": [
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "IsEmpty": true
+    },
+    {
+      "ItemType": 0,
+      "Count": 0,
+      "Dim2Index": 0,
+      "ItemId": 0,
+      "ReinforceSlots": [
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "IsEmpty": true
+    },
+    {
+      "ItemType": 0,
+      "Count": 0,
+      "Dim2Index": 0,
+      "ItemId": 0,
+      "ReinforceSlots": [
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "IsEmpty": true
+    }
+  ],
+  "TradeMoney": 0
 }

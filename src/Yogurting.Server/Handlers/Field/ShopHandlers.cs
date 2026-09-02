@@ -359,22 +359,25 @@ namespace Yogurting.Server.Handlers.Field
                 Logger.Info($"[Locker] '{player.CharacterName}' moving item Type #{typeId} Direct={direct} (0:Deposit, 1:Withdraw).");
 
                 Item? movedItem = null;
-                if (direct == 0) // Deposit
+                lock (player)
                 {
-                    movedItem = player.Inventory?.Find(i => i.TypeId == typeId);
-                    if (movedItem != null)
+                    if (direct == 0) // Deposit
                     {
-                        player.Inventory?.Remove(movedItem);
-                        player.LockerItems.Add(movedItem);
+                        movedItem = player.Inventory?.Find(i => i.TypeId == typeId);
+                        if (movedItem != null)
+                        {
+                            player.Inventory?.Remove(movedItem);
+                            player.LockerItems.Add(movedItem);
+                        }
                     }
-                }
-                else // Withdraw
-                {
-                    movedItem = player.LockerItems.Find(i => i.TypeId == typeId);
-                    if (movedItem != null)
+                    else // Withdraw
                     {
-                        player.LockerItems.Remove(movedItem);
-                        player.Inventory?.Add(movedItem);
+                        movedItem = player.LockerItems.Find(i => i.TypeId == typeId);
+                        if (movedItem != null)
+                        {
+                            player.LockerItems.Remove(movedItem);
+                            player.Inventory?.Add(movedItem);
+                        }
                     }
                 }
 
@@ -393,5 +396,389 @@ namespace Yogurting.Server.Handlers.Field
             }
         }
 
+        /// <summary>
+        /// 0x7939 (31033): MsgGameSellToNpcReq - Sell items to NPC shop for 50% value
+        /// Exact Delphi layout (_Unit67.pas:20642-20800 TSchoolSession.sub_006C2380):
+        ///   ReadInt32(idNpc)
+        ///   ReadBinary(0xF0 bytes) -> array of 20 entries (each 12B: int32 typeId, int32 count, int32 itemId)
+        /// </summary>
+        [PacketHandler(PacketOpcode.MsgGameSellToNpcReq)]
+        public async Task HandleSellToNpcAsync(PlayerSessionState state, PacketReader reader)
+        {
+            try
+            {
+                if (reader.Remaining < 4) return;
+                int npcId = reader.ReadInt32();
+                var player = state.Player;
+                if (player == null) return;
+
+                ushort soldCount = 0;
+                long totalGainedTaff = 0;
+                var soldBytes = new List<byte>();
+
+                while (reader.Remaining >= 12 && soldCount < 20)
+                {
+                    int rawType = reader.ReadInt32();
+                    if (rawType == 0) break;
+
+                    int count = reader.ReadInt32();
+                    int itemId = reader.ReadInt32();
+                    int typeId = rawType & 0x00FFFFFF;
+
+                    // Locate item in player inventory
+                    Item? targetItem = null;
+                    if (itemId > 0)
+                    {
+                        targetItem = player.Inventory.FirstOrDefault(i => i.Id == itemId || i.SerialId == itemId);
+                    }
+                    if (targetItem == null && typeId > 0)
+                    {
+                        targetItem = player.Inventory.FirstOrDefault(i => i.TypeId == typeId);
+                    }
+
+                    if (targetItem != null)
+                    {
+                        // Calculate 50% sell value from GameDatabase
+                        int buyPrice = 100;
+                        if (_gameDb != null && _gameDb.Items.TryGetValue(targetItem.TypeId, out var itemDef))
+                        {
+                            buyPrice = itemDef.Price > 0 ? itemDef.Price : 100;
+                        }
+                        int sellPrice = buyPrice / 2;
+                        int sellQty = Math.Clamp(count, 1, targetItem.Quantity);
+
+                        long itemTotalTaff = (long)sellPrice * sellQty;
+                        totalGainedTaff += itemTotalTaff;
+
+                        if (targetItem.Quantity > sellQty)
+                        {
+                            targetItem.Quantity -= sellQty;
+                        }
+                        else
+                        {
+                            player.Inventory.Remove(targetItem);
+                        }
+
+                        // Record 12-byte entry for answer packet
+                        soldBytes.AddRange(BitConverter.GetBytes(rawType));
+                        soldBytes.AddRange(BitConverter.GetBytes(sellQty));
+                        soldBytes.AddRange(BitConverter.GetBytes(itemId));
+                        soldCount++;
+                    }
+                }
+
+                if (soldCount > 0)
+                {
+                    player.Taff += totalGainedTaff;
+                    Logger.Info($"[Shop] '{player.CharacterName}' sold {soldCount} items to NPC #{npcId} for +{totalGainedTaff} Taff (Total: {player.Taff}).");
+
+                    // 1. Send Sell Answer (0x793A)
+                    await state.Session.SendAsync(YogurtingPackets.MakeGameSellToNpcAns(player.Taff, soldCount, soldBytes.ToArray(), 1));
+
+                    // 2. Persist
+                    if (_repository != null)
+                    {
+                        await _repository.SaveAccountAsync(player);
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                Logger.Error($"[Shop] HandleSellToNpcReq error: {ex.Message}");
+            }
+        }
+
+        /// <summary>
+        /// 0x7935 (31029): MsgGameBuyFromNpcReq - Batch buy items from NPC shop
+        /// Exact Delphi layout (_Unit67.pas:20268-20320 TSchoolSession.sub_006C1EF4):
+        ///   ReadInt32(idNpc)
+        ///   ReadBinary(0xF0 bytes) -> array of 20 entries (each 12B: int32 typeId, int32 count, int32 unknown)
+        /// </summary>
+        [PacketHandler(PacketOpcode.MsgGameBuyFromNpcReq)]
+        public async Task HandleBuyFromNpcAsync(PlayerSessionState state, PacketReader reader)
+        {
+            try
+            {
+                if (reader.Remaining < 4) return;
+                int npcId = reader.ReadInt32();
+                var player = state.Player;
+                if (player == null) return;
+
+                int boughtCount = 0;
+                while (reader.Remaining >= 12 && boughtCount < 20)
+                {
+                    int rawType = reader.ReadInt32();
+                    if (rawType == 0) break;
+
+                    int count = reader.ReadInt32();
+                    int unk = reader.ReadInt32();
+                    int typeId = rawType & 0x00FFFFFF;
+
+                    if (_gameDb != null && _gameDb.Items.TryGetValue(typeId, out var itemDef))
+                    {
+                        long totalCost = (long)itemDef.Price * Math.Max(1, count);
+                        if (player.Taff >= totalCost)
+                        {
+                            player.Taff -= totalCost;
+                            var newItem = new Item
+                            {
+                                Id = player.Inventory.Count + 1,
+                                TypeId = typeId,
+                                Name = itemDef.Name,
+                                Quantity = count > 0 ? count : 1,
+                                SlotIndex = (ushort)player.Inventory.Count
+                            };
+                            player.Inventory.Add(newItem);
+                            boughtCount++;
+                            Logger.Info($"[Shop] '{player.CharacterName}' bought {count}x '{itemDef.Name}' (#{typeId}) for {totalCost} Taff.");
+                        }
+                    }
+                }
+
+                await state.Session.SendAsync(YogurtingPackets.MakeGameBuyFromNpcAns(1));
+
+                if (boughtCount > 0 && _repository != null)
+                {
+                    await _repository.SaveAccountAsync(player);
+                }
+            }
+            catch (Exception ex)
+            {
+                Logger.Error($"[Shop] HandleBuyFromNpcReq error: {ex.Message}");
+            }
+        }
+
+        /// <summary>
+        /// 0x79CC (31180): MsgGameGuildChangeNameReq - Guild Creation or Name Change Request
+        /// SRC: server_legacy/DELPHI PROJECT/_Unit67.pas:006C317C (TSchoolSession.sub_006C317C)
+        /// Payload: ReadWStr(26, guildName), ReadSeek(2), ReadLongBool(bCreate)
+        /// </summary>
+        [PacketHandler(PacketOpcode.MsgGameGuildChangeNameReq)]
+        public async Task HandleGuildChangeNameReqAsync(PlayerSessionState state, PacketReader reader)
+        {
+            try
+            {
+                if (reader.Remaining < 52) return;
+                string guildName = reader.ReadUnicodeString(26).TrimEnd('\0');
+                if (reader.Remaining >= 2) reader.ReadInt16(); // 2-byte seek
+                int bCreate = reader.Remaining >= 4 ? reader.ReadInt32() : 1;
+
+                var player = state.Player;
+                if (player == null) return;
+
+                if (!string.IsNullOrWhiteSpace(guildName))
+                {
+                    long newGuildId = (long)player.CharacterId * 1000 + 1;
+                    player.GuildName = guildName;
+                    player.GuildId = newGuildId;
+
+                    Logger.Info($"[Guild] '{player.CharacterName}' registered Guild '{guildName}' (ID: {newGuildId}).");
+
+                    // 1. Broadcast overhead guild tag to surrounding field entities (0x79D8)
+                    byte[] guildNtf = YogurtingPackets.MakeGameGuildChangeNameNtf(player.CharacterId, newGuildId, guildName);
+                    await _broadcastDelegate(state, guildNtf);
+
+                    // 2. Persist
+                    if (_repository != null)
+                    {
+                        await _repository.SaveAccountAsync(player);
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                Logger.Error($"[Guild] HandleGuildChangeNameReq error: {ex.Message}");
+            }
+        }
+
+        /// <summary>
+        /// 0x5222 (21026): MsgGameShopLeaveReq - Close NPC Shop / Bulletin Board
+        /// SRC: server_legacy/DELPHI PROJECT/_Unit67.pas:006BF918 (TSchoolSession.sub_006BF918)
+        /// </summary>
+        [PacketHandler(PacketOpcode.MsgGameShopLeaveReq)]
+        public async Task HandleShopLeaveReqAsync(PlayerSessionState state, byte[] packetData)
+        {
+            state.ActiveNpcId = 0;
+            state.CurrentNpcDialogNode = string.Empty;
+            await state.Session.SendAsync(YogurtingPackets.MakeGameShopLeaveNtf());
+        }
+
+        /// <summary>
+        /// 0x5272 (21106): MsgGameLeaveHairShopNtf - Close Hair Salon Menu
+        /// SRC: server_legacy/DELPHI PROJECT/_Unit67.pas:006C0848 (TSchoolSession.sub_006C0848)
+        /// </summary>
+        [PacketHandler(PacketOpcode.MsgGameLeaveHairShopNtf)]
+        public async Task HandleHairShopLeaveReqAsync(PlayerSessionState state, byte[] packetData)
+        {
+            state.ActiveNpcId = 0;
+            state.CurrentNpcDialogNode = string.Empty;
+            await state.Session.SendAsync(YogurtingPackets.MakeGameLeaveHairShopNtf());
+        }
+
+        /// <summary>
+        /// 0x7940 (31040): MsgGameNpcDialogEndNtf - NPC Dialogue Action Finish / Close
+        /// SRC: server_legacy/DELPHI PROJECT/_Unit67.pas:006C26D8 (TSchoolSession.sub_006C26D8)
+        /// </summary>
+        [PacketHandler(PacketOpcode.MsgGameNpcDialogEndNtf)]
+        public Task HandleNpcDialogEndReqAsync(PlayerSessionState state, byte[] packetData)
+        {
+            state.ActiveNpcId = 0;
+            state.CurrentNpcDialogNode = string.Empty;
+            return Task.CompletedTask;
+        }
+
+        /// <summary>
+        /// 0x5270 (21104): MsgGameChangeHairReq - Change Character Hair Style
+        /// SRC: server_legacy/DELPHI PROJECT/_Unit67.pas:006C07A8 (TSchoolSession.sub_006C07A8)
+        /// Payload: ReadInt32(hairId)
+        /// </summary>
+        [PacketHandler(PacketOpcode.MsgGameChangeHairReq)]
+        public async Task HandleChangeHairReqAsync(PlayerSessionState state, PacketReader reader)
+        {
+            if (reader.Remaining < 4) return;
+            int hairId = reader.ReadInt32();
+            var player = state.Player;
+            if (player == null) return;
+
+            player.HairId = hairId;
+            Logger.Info($"[HairSalon] '{player.CharacterName}' changed hair style to #{hairId}.");
+
+            byte[] ans = YogurtingPackets.MakeGameChangeHairAns(1, player.CharacterId, player.HairId, 0, player.Taff);
+            await state.Session.SendAsync(ans);
+            await _broadcastDelegate(state, ans);
+
+            if (_repository != null)
+            {
+                await _repository.SaveAccountAsync(player);
+            }
+        }
+
+        /// <summary>
+        /// 0x525E (21086): MsgGamePicketStatusChangeReq - Open/Close Placard (ピケット)
+        /// SRC: server_legacy/DELPHI PROJECT/_Unit67.pas:006C05EC (TSchoolSession.sub_006C05EC)
+        /// Payload: ReadLongBool(isOpen)
+        /// </summary>
+        [PacketHandler(PacketOpcode.MsgGamePicketStatusChangeReq)]
+        public async Task HandlePicketStatusChangeAsync(PlayerSessionState state, PacketReader reader)
+        {
+            bool isOpen = reader.Remaining >= 4 ? reader.ReadInt32() != 0 : true;
+            byte[] ans = YogurtingPackets.MakeGamePicketStatusChangeAns(1, state.Player.CharacterId, isOpen);
+            await state.Session.SendAsync(ans);
+            await _broadcastDelegate(state, ans);
+        }
+
+        /// <summary>
+        /// 0x5260 (21088): MsgGamePicketContentsChangeReq - Set Placard Message
+        /// SRC: server_legacy/DELPHI PROJECT/_Unit67.pas:006C062C (TSchoolSession.sub_006C062C)
+        /// Payload: ReadWStr(picketText)
+        /// </summary>
+        [PacketHandler(PacketOpcode.MsgGamePicketContentsChangeReq)]
+        public async Task HandlePicketContentsChangeAsync(PlayerSessionState state, PacketReader reader)
+        {
+            string text = reader.Remaining >= 2 ? reader.ReadUnicodeString(37).TrimEnd('\0') : string.Empty;
+            byte[] ans = YogurtingPackets.MakeGamePicketContentsChangeAns(1, state.Player.CharacterId, text);
+            await state.Session.SendAsync(ans);
+            await _broadcastDelegate(state, ans);
+        }
+
+        /// <summary>
+        /// 0x524F (21071): MsgGameByulReceivedProductPresentNewReq
+        /// SRC: server_legacy/DELPHI PROJECT/_Unit67.pas:006C0580
+        /// </summary>
+        [PacketHandler(PacketOpcode.MsgGameByulReceivedProductPresentNewReq)]
+        public async Task HandleByulReceivedProductPresentNewReqAsync(PlayerSessionState state, byte[] packetData)
+        {
+            await state.Session.SendAsync(YogurtingPackets.MakeGameByulReceivedProductPresentNewAns());
+        }
+
+        /// <summary>
+        /// 0x5251 (21073): MsgGameByulReceivedProductPresentHistoryReq
+        /// SRC: server_legacy/DELPHI PROJECT/_Unit67.pas:006C05A4
+        /// </summary>
+        [PacketHandler(PacketOpcode.MsgGameByulReceivedProductPresentHistoryReq)]
+        public async Task HandleByulReceivedProductPresentHistoryReqAsync(PlayerSessionState state, byte[] packetData)
+        {
+            await state.Session.SendAsync(YogurtingPackets.MakeGameByulReceivedProductPresentHistoryAns());
+        }
+
+        /// <summary>
+        /// 0x5257 (21079): MsgGameByulHistoryReq
+        /// SRC: server_legacy/DELPHI PROJECT/_Unit67.pas:006C05C8
+        /// </summary>
+        [PacketHandler(PacketOpcode.MsgGameByulHistoryReq)]
+        public async Task HandleByulHistoryReqAsync(PlayerSessionState state, byte[] packetData)
+        {
+            await state.Session.SendAsync(YogurtingPackets.MakeGameByulHistoryAns());
+        }
+
+        /// <summary>
+        /// 0x5278 (21112): MsgGameRenewByulBeItemReq
+        /// SRC: server_legacy/DELPHI PROJECT/_Unit67.pas:006C0964
+        /// </summary>
+        [PacketHandler(PacketOpcode.MsgGameRenewByulBeItemReq)]
+        public async Task HandleRenewByulBeItemReqAsync(PlayerSessionState state, PacketReader reader)
+        {
+            await state.Session.SendAsync(YogurtingPackets.MakeGameRenewByulBeItemAns(0));
+        }
+
+        /// <summary>
+        /// 0x79EF (31215): MsgGameReinforceSocketResetReq
+        /// SRC: server_legacy/DELPHI PROJECT/_Unit67.pas:006C33B4
+        /// </summary>
+        [PacketHandler(PacketOpcode.MsgGameReinforceSocketResetReq)]
+        public Task HandleReinforceSocketResetReqAsync(PlayerSessionState state, PacketReader reader)
+        {
+            return Task.CompletedTask;
+        }
+
+        /// <summary>
+        /// 0x79F1 (31217): MsgGameReinforceSocketStoneReq
+        /// SRC: server_legacy/DELPHI PROJECT/_Unit67.pas:006C33BC
+        /// </summary>
+        [PacketHandler(PacketOpcode.MsgGameReinforceSocketStoneReq)]
+        public Task HandleReinforceSocketStoneReqAsync(PlayerSessionState state, PacketReader reader)
+        {
+            return Task.CompletedTask;
+        }
+
+        /// <summary>
+        /// 0x79F3 (31219): MsgGameReinforceResetReq
+        /// SRC: server_legacy/DELPHI PROJECT/_Unit67.pas:006C33C4
+        /// </summary>
+        [PacketHandler(PacketOpcode.MsgGameReinforceResetReq)]
+        public Task HandleReinforceResetReqAsync(PlayerSessionState state, PacketReader reader)
+        {
+            return Task.CompletedTask;
+        }
+
+        /// <summary>
+        /// 0x79F5 (31221): MsgGameExtractByulBeItemReq
+        /// SRC: server_legacy/DELPHI PROJECT/_Unit67.pas:006C37B4
+        /// </summary>
+        [PacketHandler(PacketOpcode.MsgGameExtractByulBeItemReq)]
+        public async Task HandleExtractByulBeItemReqAsync(PlayerSessionState state, PacketReader reader)
+        {
+            await state.Session.SendAsync(YogurtingPackets.MakeGameExtractByulBeItemAns(0));
+        }
+
+        /// <summary>
+        /// 0x79F7 (31223): MsgGameSkillDescReq
+        /// SRC: server_legacy/DELPHI PROJECT/_Unit67.pas:006C3A30
+        /// </summary>
+        [PacketHandler(PacketOpcode.MsgGameSkillDescReq)]
+        public Task HandleSkillDescReqAsync(PlayerSessionState state, PacketReader reader)
+        {
+            return Task.CompletedTask;
+        }
+
+        /// <summary>
+        /// 0x79F9 (31225): MsgGameSkillResetReq
+        /// SRC: server_legacy/DELPHI PROJECT/_Unit67.pas:006C3E30
+        /// </summary>
+        [PacketHandler(PacketOpcode.MsgGameSkillResetReq)]
+        public Task HandleSkillResetReqAsync(PlayerSessionState state, PacketReader reader)
+        {
+            return Task.CompletedTask;
+        }
     }
 }
