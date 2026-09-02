@@ -1,0 +1,8 @@
+﻿[19:52:22.947] [Logging] Server log initialized at 'C:\Users\Hanazono Archive\Desktop\Yogurting Game\server_modern\logs\server_20260902_195222.log'
+[19:52:22.998] [Server] [Config] Loaded configuration from 'C:\Users\Hanazono Archive\Desktop\Yogurting Game\server_modern\config\server.json'
+[19:52:22.999] [Server] [Config] Sniffer / Proxy Mode Enabled: Listening on internal ports (20000, 20002, 20003, 20004)
+[19:52:23.413] [Server] [MapGridManager] Successfully loaded 376 map collision grids from map.db.
+[19:52:23.414] [Server] [MapGridManager] Linked 377 fields to active collision grids.
+[19:52:25.340] [Server] [System] 'Yogurting Online English Revival' is ONLINE on all ports (Login: 20000, Field: 20002, Episode: 20003, Comm: 20004)!
+[19:52:25.341] [Server] [System] Type 'help' for available server commands.
+

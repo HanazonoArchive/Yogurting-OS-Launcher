@@ -6,8 +6,8 @@
     "MaxHp": 260,
     "CurrentMp": 195,
     "MaxMp": 195,
-    "TaffPoints": 1000,
-    "StarPoints": 0
+    "TaffPoints": 100000,
+    "StarPoints": 100000
   },
   "SpawnPoints": {
     "EstivaAcademy": {

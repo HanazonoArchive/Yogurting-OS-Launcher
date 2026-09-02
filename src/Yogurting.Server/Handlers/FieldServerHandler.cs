@@ -169,6 +169,8 @@ namespace Yogurting.Server.Handlers
 
             session.AccountId = player.AccountId;
             session.CharacterName = player.CharacterName;
+            player.GaugeCurrent = 0;
+            player.ChargePoint = 0;
 
             int entityId = System.Threading.Interlocked.Increment(ref _nextEntityId);
             var state = new PlayerSessionState(session, player, entityId);

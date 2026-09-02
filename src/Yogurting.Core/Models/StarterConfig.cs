@@ -260,6 +260,7 @@ namespace Yogurting.Core.Models
                 };
 
                 player.Inventory.Add(item);
+                player.Equips.Add(item);
                 if (eq.SlotIndex < player.EquippedSlotUids.Length)
                 {
                     player.EquippedSlotUids[eq.SlotIndex] = uid;
@@ -298,6 +299,10 @@ namespace Yogurting.Core.Models
             player.MaxMp = def.MaxMp;
             player.TaffPoints = def.TaffPoints;
             player.StarPoints = def.StarPoints;
+            player.CurrentExp = 0;
+            player.GaugeCurrent = 0;
+            player.ChargePoint = 0;
+            player.SkillPoint = 0;
 
             var spawn = GetSpawnPoint(player.School);
             player.FieldId = spawn.FieldId;
